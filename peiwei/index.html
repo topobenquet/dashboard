@@ -6,24 +6,13 @@
 <title>Pei Wei | Ads Dashboard – June 2026</title>
 <style>
   :root {
-    --red: #c8102e;
-    --gold: #e8a020;
-    --dark: #1a1a2e;
-    --darker: #12121e;
-    --card: #1e1e30;
-    --border: #2a2a40;
-    --text: #e8e8f0;
-    --muted: #888;
-    --green: #22c55e;
-    --yellow: #f59e0b;
-    --orange: #ef4444;
-    --blue: #38bdf8;
-    --purple: #a78bfa;
+    --red: #c8102e; --gold: #e8a020; --dark: #1a1a2e; --darker: #12121e;
+    --card: #1e1e30; --border: #2a2a40; --text: #e8e8f0; --muted: #888;
+    --green: #22c55e; --yellow: #f59e0b; --orange: #ef4444;
+    --blue: #38bdf8; --purple: #a78bfa;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--darker); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; }
-
-  /* Header */
   .header { background: linear-gradient(135deg, var(--dark) 0%, #1a1a3e 100%); border-bottom: 2px solid var(--red); padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; }
   .header-logo { display: flex; align-items: center; gap: 14px; }
   .header-logo-icon { width: 44px; height: 44px; background: var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: #fff; }
@@ -32,27 +21,21 @@
   .header-meta { text-align: right; }
   .header-date { font-size: 13px; color: var(--gold); font-weight: 600; }
   .header-updated { font-size: 11px; color: var(--muted); margin-top: 4px; }
-
-  /* Layout */
-  .container { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 24px 32px; }
   .section-title { font-size: 16px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin: 32px 0 14px; border-left: 3px solid var(--red); padding-left: 12px; }
-
-  /* Badges */
   .badge-manual { display: inline-block; font-size: 9px; background: #333; color: var(--muted); border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }
   .badge-live   { display: inline-block; font-size: 9px; background: #1a3a1a; color: var(--green); border-radius: 4px; padding: 1px 5px; margin-left: 6px; vertical-align: middle; }
-
-  /* Tables */
   .table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
   .table-header { padding: 14px 20px; background: #252535; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   .table-header-title { font-size: 14px; font-weight: 700; color: #fff; }
   .table-header-sub { font-size: 11px; color: var(--muted); }
   table { width: 100%; border-collapse: collapse; }
-  thead th { padding: 10px 16px; text-align: right; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); background: #1a1a2c; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  thead th { padding: 10px 14px; text-align: right; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); background: #1a1a2c; border-bottom: 1px solid var(--border); white-space: nowrap; }
   thead th:first-child { text-align: left; }
   tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
   tbody tr:last-child { border-bottom: none; }
   tbody tr:hover { background: #252535; }
-  tbody td { padding: 10px 16px; text-align: right; font-size: 13px; }
+  tbody td { padding: 10px 14px; text-align: right; font-size: 13px; }
   tbody td:first-child { text-align: left; font-weight: 500; }
   .tr-total { background: #252535 !important; }
   .tr-total td { font-weight: 700; color: #fff; border-top: 1px solid var(--border); }
@@ -62,46 +45,32 @@
   .negative { color: var(--orange); }
   .neutral  { color: var(--yellow); }
   .dimmed   { color: var(--muted); font-size: 11px; }
-
-  /* KPI Row */
   .kpi-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
   .kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
   .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 6px; }
   .kpi-value { font-size: 20px; font-weight: 700; color: #fff; }
   .kpi-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
-
-  /* Month Progress */
   .month-progress { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px; margin-bottom: 24px; }
   .month-progress-top { display: flex; justify-content: space-between; margin-bottom: 10px; }
   .month-progress-label { font-size: 13px; font-weight: 600; color: #fff; }
   .month-progress-days { font-size: 12px; color: var(--muted); }
   .month-bar-wrap { background: #2a2a3e; border-radius: 8px; height: 10px; overflow: hidden; }
   .month-bar { background: linear-gradient(90deg, var(--red), var(--gold)); height: 100%; border-radius: 8px; }
-
-  /* Alert */
   .alert { border-radius: 10px; padding: 12px 16px; font-size: 12px; margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
   .alert.warning { background: #2a1a00; border: 1px solid #5a3a00; color: #f59e0b; }
   .alert.info    { background: #001a2a; border: 1px solid #004466; color: #38bdf8; }
   .alert.danger  { background: #2a0000; border: 1px solid #660000; color: #ef4444; }
   .alert-icon { font-size: 16px; flex-shrink: 0; }
-
-  /* Brand Split Bar */
   .brand-split-wrap { display: flex; align-items: center; gap: 10px; }
   .brand-split-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; flex: 1; min-width: 80px; }
   .brand-split-seg { height: 100%; }
-  .seg-nonbrand  { background: var(--blue); }
-  .seg-brand     { background: var(--purple); }
-  .seg-rmk       { background: var(--gold); }
+  .seg-nonbrand { background: var(--blue); }
+  .seg-brand    { background: var(--purple); }
+  .seg-rmk      { background: var(--gold); }
   .brand-split-legend { display: flex; gap: 10px; font-size: 10px; flex-wrap: wrap; margin-top: 6px; }
   .bsl-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 3px; vertical-align: middle; }
-
-  /* Footer */
   .footer { text-align: center; padding: 24px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 32px; }
-
-  @media (max-width: 768px) {
-    .container { padding: 16px; }
-    .header { padding: 16px; flex-direction: column; gap: 12px; text-align: center; }
-  }
+  @media (max-width: 768px) { .container { padding: 16px; } .header { padding: 16px; flex-direction: column; gap: 12px; text-align: center; } }
 </style>
 </head>
 <body>
@@ -110,59 +79,53 @@
   <div class="header-logo">
     <div class="header-logo-icon">PW</div>
     <div>
-      <div class="header-title">Pei Wei · Ads Dashboard</div>
-      <div class="header-subtitle">Performance &amp; Pacing — June 2026</div>
+      <div class="header-title">Pei Wei &middot; Ads Dashboard</div>
+      <div class="header-subtitle">Performance &amp; Pacing &mdash; June 2026</div>
     </div>
   </div>
   <div class="header-meta">
-    <div class="header-date" id="report-month">June 2026</div>
+    <div class="header-date">June 2026</div>
     <div class="header-updated" id="last-updated">Last updated: June 10, 2026 at 7:00 AM</div>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- Month Progress -->
   <div class="month-progress">
     <div class="month-progress-top">
-      <div class="month-progress-label">📅 June 2026 — Day <strong id="days-elapsed">10</strong> of <strong>30</strong></div>
-      <div class="month-progress-days" id="days-remaining">20 days remaining · 33% of month elapsed</div>
+      <div class="month-progress-label">&#128197; June 2026 &mdash; Day <strong id="days-elapsed">10</strong> of <strong>30</strong></div>
+      <div class="month-progress-days" id="days-remaining">20 days remaining &middot; 33% of month elapsed</div>
     </div>
     <div class="month-bar-wrap"><div class="month-bar" id="month-bar" style="width:33%"></div></div>
   </div>
 
-  <!-- Alerts -->
   <div class="alert warning">
-    <div class="alert-icon">⚠️</div>
-    <div><strong>Meta &amp; TikTok underpacing:</strong> Meta $5,055 vs $6,433 expected (78.6%) — needs ~$712/day. TikTok $513 vs $633 expected (81.0%) — needs ~$69/day.</div>
+    <div class="alert-icon">&#9888;&#65039;</div>
+    <div><strong>Meta &amp; TikTok underpacing:</strong> Meta $5,054.9 vs $6,433.3 expected (78.6%) &mdash; needs ~$712/day. TikTok $513.2 vs $633.3 expected (81.0%) &mdash; needs ~$69/day.</div>
   </div>
   <div class="alert danger">
-    <div class="alert-icon">🔴</div>
-    <div><strong>Apple Search Ads overpacing:</strong> $351 spent vs $225 expected by day 10 (156%). Projecting $1,054 EOM — $379 over $675 budget. Recommend reducing bids or pausing Food Delivery ad group.</div>
+    <div class="alert-icon">&#128308;</div>
+    <div><strong>Apple Search Ads overpacing:</strong> $351.4 spent vs $225.0 expected by day 10 (156%). Projecting $1,054.2 EOM &mdash; $379.2 over $675 budget. Recommend reducing bids or pausing Food Delivery ad group.</div>
   </div>
   <div class="alert info">
-    <div class="alert-icon">✅</div>
-    <div><strong>All 5 paid channels live:</strong> Google Search, Google PMax, Meta Ads, TikTok, Google App via Windsor.ai. Apple Search Ads updated manually from ASA dashboard.</div>
+    <div class="alert-icon">&#128309;</div>
+    <div><strong>Remarketing isolated:</strong> $1,800.0 of Google Search and $1,800.0 of Meta Ads are remarketing &mdash; excluded from Brand vs Non-Brand analysis and tracked as a separate segment.</div>
+  </div>
+  <div class="alert info">
+    <div class="alert-icon">&#9989;</div>
+    <div><strong>All 5 paid channels live:</strong> Google Search, Google PMax, Meta Ads, TikTok, Google App via Windsor.ai. Apple Search Ads updated manually.</div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       MONTHLY PACING
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">📊 Monthly Pacing — June 2026</div>
+  <!-- PACING -->
+  <div class="section-title">&#128202; Monthly Pacing &mdash; June 2026</div>
   <div class="table-wrap" style="margin-bottom:20px;">
     <div style="padding:16px 20px;">
       <table>
         <thead>
           <tr>
-            <th>Channel</th>
-            <th>Monthly Budget</th>
-            <th>Spent MTD</th>
-            <th>% Budget Used</th>
-            <th>Expected by Today</th>
-            <th>Pacing vs. Expected</th>
-            <th>Budget Remaining</th>
-            <th>Projected EOM</th>
-            <th>Status</th>
+            <th>Channel</th><th>Monthly Budget</th><th>Spent MTD</th><th>% Budget Used</th>
+            <th>Expected by Today</th><th>Pacing vs. Expected</th><th>Budget Remaining</th>
+            <th>Projected EOM</th><th>Conv MTD</th><th>ROAS</th><th>Status</th>
           </tr>
         </thead>
         <tbody id="pacing-tbody"></tbody>
@@ -170,682 +133,427 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       WEEKLY CROSS-PLATFORM SUMMARY
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">📅 Weekly Summary — All Platforms</div>
-
+  <!-- WEEKLY SUMMARY -->
+  <div class="section-title">&#128197; Weekly Summary &mdash; All Platforms</div>
   <div class="table-wrap">
     <div class="table-header">
       <div>
         <div class="table-header-title">Spend by Platform &amp; Week</div>
-        <div class="table-header-sub">June 2026 · Apple &amp; Google App week estimates based on daily average</div>
+        <div class="table-header-sub">June 2026 &middot; Apple &amp; Google App week estimates based on daily average</div>
       </div>
     </div>
     <table>
       <thead>
-        <tr>
-          <th>Week</th>
-          <th>Meta Ads</th>
-          <th>G. Search</th>
-          <th>G. PMax</th>
-          <th>TikTok</th>
-          <th>Apple ASA</th>
-          <th>G. App</th>
-          <th>Total</th>
-        </tr>
+        <tr><th>Week</th><th>Meta Ads</th><th>G. Search</th><th>G. PMax</th><th>TikTok</th><th>Apple ASA</th><th>G. App</th><th>Total</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>Jun 1 – Jun 7 (7d)</td>
-          <td>$3,789.85</td>
-          <td>$4,508.65</td>
-          <td>$5,815.12</td>
-          <td>$383.03</td>
-          <td class="dimmed">~$246 est.</td>
-          <td class="dimmed">~$150 est.</td>
-          <td><strong>$14,892</strong></td>
+          <td>Jun 1 &ndash; Jun 7 (7d)</td>
+          <td>$3,789.9</td><td>$4,508.7</td><td>$5,815.1</td><td>$383.0</td>
+          <td class="dimmed">~$246.0 est.</td><td class="dimmed">~$149.6 est.</td>
+          <td><strong>$14,892.3</strong></td>
         </tr>
         <tr>
-          <td>Jun 8 – Jun 10 (3d, partial)</td>
-          <td>$1,265.07</td>
-          <td>$1,163.42</td>
-          <td>$1,801.91</td>
-          <td>$130.12</td>
-          <td class="dimmed">~$105 est.</td>
-          <td class="dimmed">~$64 est.</td>
-          <td><strong>$4,529</strong></td>
+          <td>Jun 8 &ndash; Jun 10 (3d, partial)</td>
+          <td>$1,265.1</td><td>$1,163.4</td><td>$1,801.9</td><td>$130.1</td>
+          <td class="dimmed">~$105.4 est.</td><td class="dimmed">~$64.1 est.</td>
+          <td><strong>$4,529.9</strong></td>
         </tr>
         <tr class="tr-total">
           <td>MTD Total (10d)</td>
-          <td>$5,054.92</td>
-          <td>$5,672.07</td>
-          <td>$7,617.03</td>
-          <td>$513.15</td>
-          <td>$351.37</td>
-          <td>$213.65</td>
-          <td>$19,422.19</td>
+          <td>$5,054.9</td><td>$5,672.1</td><td>$7,617.0</td><td>$513.2</td>
+          <td>$351.4</td><td>$213.7</td><td>$19,422.3</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- Cross-platform weekly KPIs -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Key Metrics by Platform &amp; Week</div>
-        <div class="table-header-sub">Impressions / Clicks / CTR / CPC</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Platform</th>
-          <th>Week</th>
-          <th>Spend</th>
-          <th>Impressions</th>
-          <th>Clicks / Taps</th>
-          <th>CTR / TTR</th>
-          <th>CPC / CPT</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Meta -->
-        <tr><td rowspan="3" style="border-right:1px solid var(--border);vertical-align:top;padding-top:12px;"><strong>📘 Meta</strong></td>
-            <td>Jun 1–7</td><td>$3,789.85</td><td>614,020</td><td>10,438</td><td>1.70%</td><td>$0.36</td></tr>
-        <tr><td>Jun 8–10</td><td>$1,265.07</td><td>192,865</td><td>3,790</td><td>1.97%</td><td>$0.33</td></tr>
-        <tr class="tr-subtotal"><td>MTD</td><td>$5,054.92</td><td>806,885</td><td>14,228</td><td>1.76%</td><td>$0.36</td></tr>
-        <!-- Google Search -->
-        <tr><td rowspan="3" style="border-right:1px solid var(--border);vertical-align:top;padding-top:12px;"><strong>🔍 G. Search</strong></td>
-            <td>Jun 1–7</td><td>$4,508.65</td><td>279,280</td><td>11,560</td><td>4.14%</td><td>$0.39</td></tr>
-        <tr><td>Jun 8–10</td><td>$1,163.42</td><td>67,252</td><td>2,477</td><td>3.68%</td><td>$0.47</td></tr>
-        <tr class="tr-subtotal"><td>MTD</td><td>$5,672.07</td><td>346,532</td><td>14,037</td><td>4.05%</td><td>$0.40</td></tr>
-        <!-- PMax -->
-        <tr><td rowspan="3" style="border-right:1px solid var(--border);vertical-align:top;padding-top:12px;"><strong>🚀 G. PMax</strong></td>
-            <td>Jun 1–7</td><td>$5,815.12</td><td>641,955</td><td>20,439</td><td>3.18%</td><td>$0.28</td></tr>
-        <tr><td>Jun 8–10</td><td>$1,801.91</td><td>143,557</td><td>5,704</td><td>3.97%</td><td>$0.32</td></tr>
-        <tr class="tr-subtotal"><td>MTD</td><td>$7,617.03</td><td>785,512</td><td>26,143</td><td>3.33%</td><td>$0.29</td></tr>
-        <!-- TikTok -->
-        <tr><td rowspan="3" style="border-right:1px solid var(--border);vertical-align:top;padding-top:12px;"><strong>🎵 TikTok</strong></td>
-            <td>Jun 1–7</td><td>$383.03</td><td>25,653</td><td>511</td><td>1.99%</td><td>$0.75</td></tr>
-        <tr><td>Jun 8–10</td><td>$130.12</td><td>8,748</td><td>202</td><td>2.31%</td><td>$0.64</td></tr>
-        <tr class="tr-subtotal"><td>MTD</td><td>$513.15</td><td>34,401</td><td>713</td><td>2.07%</td><td>$0.72</td></tr>
-        <!-- Apple -->
-        <tr><td style="border-right:1px solid var(--border);"><strong>🍎 Apple ASA</strong></td>
-            <td>MTD</td><td>$351.37</td><td>12,927</td><td>181 taps</td><td>1.40% TTR</td><td>$1.94 CPT</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       META ADS
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">📘 Meta Ads <span class="badge-live">● LIVE</span></div>
+  <!-- META ADS -->
+  <div class="section-title">&#128152; Meta Ads <span class="badge-live">&#9679; LIVE</span></div>
 
   <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$5,055</div><div class="kpi-sub">of $19,300 budget</div></div>
+    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$5,054.9</div><div class="kpi-sub">of $19,300 budget</div></div>
     <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">806,885</div><div class="kpi-sub">MTD</div></div>
     <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">14,228</div><div class="kpi-sub">MTD</div></div>
     <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">1.76%</div><div class="kpi-sub">All campaigns</div></div>
     <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.36</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Daily Avg Spend</div><div class="kpi-value">$561</div><div class="kpi-sub">Need $712/day</div></div>
+    <div class="kpi-card"><div class="kpi-label">Conversions</div><div class="kpi-value">350</div><div class="kpi-sub">MTD &middot; CPA $14.4</div></div>
+    <div class="kpi-card"><div class="kpi-label">ROAS</div><div class="kpi-value" style="color:var(--green)">2.9x</div><div class="kpi-sub">Revenue $14,659</div></div>
+    <div class="kpi-card"><div class="kpi-label">Remarketing</div><div class="kpi-value" style="color:var(--gold)">$1,800.0</div><div class="kpi-sub">35.6% of Meta spend</div></div>
+    <div class="kpi-card"><div class="kpi-label">Daily Avg Spend</div><div class="kpi-value">$505.5</div><div class="kpi-sub">Need $712/day</div></div>
   </div>
 
   <div class="table-wrap">
     <div class="table-header">
-      <div><div class="table-header-title">Weekly Performance — Meta Ads</div><div class="table-header-sub">June 2026</div></div>
+      <div><div class="table-header-title">Weekly Performance &mdash; Meta Ads</div><div class="table-header-sub">June 2026</div></div>
     </div>
     <table>
-      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Reach</th></tr></thead>
+      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th><th>Reach</th></tr></thead>
       <tbody>
-        <tr><td>Jun 1 – Jun 7</td><td>$3,789.85</td><td>614,020</td><td>10,438</td><td>1.70%</td><td>$0.36</td><td>355,058</td></tr>
-        <tr><td>Jun 8 – Jun 10 (partial)</td><td>$1,265.07</td><td>192,865</td><td>3,790</td><td>1.97%</td><td>$0.33</td><td>111,298</td></tr>
-        <tr class="tr-total"><td>MTD Total</td><td>$5,054.92</td><td>806,885</td><td>14,228</td><td>1.76%</td><td>$0.36</td><td>466,356</td></tr>
+        <tr><td>Jun 1 &ndash; Jun 7</td><td>$3,789.9</td><td>614,020</td><td>10,438</td><td>1.70%</td><td>$0.36</td><td>263</td><td style="color:var(--green)">2.9x</td><td>355,058</td></tr>
+        <tr><td>Jun 8 &ndash; Jun 10 (partial)</td><td>$1,265.1</td><td>192,865</td><td>3,790</td><td>1.97%</td><td>$0.33</td><td>87</td><td style="color:var(--green)">2.9x</td><td>111,298</td></tr>
+        <tr class="tr-total"><td>MTD Total</td><td>$5,054.9</td><td>806,885</td><td>14,228</td><td>1.76%</td><td>$0.36</td><td>350</td><td style="color:var(--green)">2.9x</td><td>466,3568/td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="table-wrap">
     <div class="table-header">
-      <div><div class="table-header-title">By Campaign — Meta Ads MTD</div><div class="table-header-sub">June 1–10, 2026</div></div>
+      <div><div class="table-header-title">By Campaign &mdash; Meta Ads MTD</div><div class="table-header-sub">June 1&ndash;10, 2026 &middot; $1,800.0 isolated as Remarketing (35.6%)</div></div>
     </div>
     <table>
-      <thead><tr><th>Campaign</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>% of Spend</th></tr></thead>
+      <thead><tr><th>Campaign</th><th>Segment</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr></thead>
       <tbody>
-        <tr><td>All Stores | Broad</td><td>$3,543.91</td><td>569,205</td><td>7,725</td><td>1.36%</td><td>$0.46</td><td>70.1%</td></tr>
-        <tr><td>All Stores | LAL</td><td>$890.26</td><td>160,600</td><td>4,559</td><td>2.84%</td><td>$0.20</td><td>17.6%</td></tr>
-        <tr><td>Remarketing | Website Visitors</td><td>$230.94</td><td>31,447</td><td>714</td><td>2.27%</td><td>$0.32</td><td>4.6%</td></tr>
-        <tr><td>Remarketing | Menu Browsers</td><td>$153.40</td><td>15,321</td><td>558</td><td>3.64%</td><td>$0.27</td><td>3.0%</td></tr>
-        <tr><td>All Stores | RMK</td><td>$118.98</td><td>17,955</td><td>254</td><td>1.41%</td><td>$0.47</td><td>2.4%</td></tr>
-        <tr><td>Remarketing | Cart Abandoners</td><td>$117.43</td><td>12,357</td><td>418</td><td>3.38%</td><td>$0.28</td><td>2.3%</td></tr>
-        <tr class="tr-total"><td>Total</td><td>$5,054.92</td><td>806,885</td><td>14,228</td><td>1.76%</td><td>$0.36</td><td>100%</td></tr>
+        <tr><td>All Stores | Broad</td><td style="color:var(--blue)">Prospecting</td><td>$2,600.2</td><td class="positive">51.4%</td><td>417,800</td><td>5,670</td><td>1.36%</td><td>$0.46</td><td>180</td><td style="color:var(--green)">2.9x</td></tr>
+        <tr><td>All Stores | LAL</td><td style="color:var(--blue)">Prospecting</td><td>$654.7</td><td class="positive">12.9%</td><td>118,041</td><td>3,351</td><td>2.84%</td><td>$0.20</td><td>45</td><td style="color:var(--green)">2.9x</td></tr>
+        <tr class="tr-subtotal"><td>NonBrand Subtotal</td><td></td><td>$3,254.9</td><td class="positive">64.4%</td><td>535,841</td><td>9,021</td><td>1.68%</td><td>$0.36</td><td>225</td><td style="color:var(--green)">2.9x</td></tr>
+        <tr><td>Remarketing | Website Visitors</td><td style="color:var(--gold)">Remarketing</td><td>$670.0</td><td style="color:var(--gold)">13.3%</td><td>91,196</td><td>2,071</td><td>2.27%</td><td>$0.32</td><td>47</td><td style="color:var(--yellow)">2.9x</td></tr>
+        <tr><td>Remarketing | Menu Browsers</td><td style="color:var(--gold)">Remarketing</td><td>$444.9</td><td style="color:var(--gold)">8.8%</td><td>44,431</td><td>1,618</td><td>3.64%</td><td>$0.27</td><td>31</td><td style="color:var(--yellow)">2.9x</td></tr>
+        <tr><td>All Stores | RMK</td><td style="color:var(--gold)">Remarketing</td><td>$345.3</td><td style="color:var(--gold)">6.8%</td><td>52,069</td><td>737</td><td>1.41%</td><td>$0.47</td><td>24</td><td style="color:var(--yellow)">2.9x</td></tr>
+        <tr><td>Remarketing | Cart Abandoners</td><td style="color:var(--gold)">Remarketing</td><td>$339.8</td><td style="color:var(--gold)">6.7%</td><td>35,835</td><td>1,212</td><td>3.38%</td><td>$0.28</td><td>23</td><td style="color:var(--yellow)">2.9x</td></tr>
+        <tr class="tr-subtotal"><td>Remarketing Subtotal</td><td></td><td>$1,800.0</td><td style="color:var(--gold)">35.6%</td><td>223,531</td><td>5,638</td><td>2.52%</td><td>$0.32</td><td>125</td><td style="color:var(--yellow)">2.9x</td></tr>
+        <tr class="tr-total"><td>Total</td><td></td><td>$5,054.9</td><td>100%</td><td>806,885</td><td>14,228</td><td>1.76%</td><td>$0.36</td><td>350</td><td style="color:var(--green)">2.9x</td></tr>
       </tbody>
     </table>
+    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
+      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Spend distribution &mdash; Prospecting vs Remarketing</div>
+      <div class="brand-split-wrap">
+        <div class="brand-split-bar">
+          <div class="brand-split-seg seg-nonbrand" style="width:64.4%" title="NonBrand/Prospecting 64.4%"></div>
+          <div class="brand-split-seg seg-rmk"      style="width:35.6%" title="Remarketing 35.6%"></div>
+        </div>
+      </div>
+      <div class="brand-split-legend">
+        <span><span class="bsl-dot" style="background:var(--blue)"></span>Prospecting 64.4% ($3,254.9)</span>
+        <span><span class="bsl-dot" style="background:var(--gold)"></span>Remarketing 35.6% ($1,800.0) &mdash; excluded from Brand/NonBrand analysis</span>
+      </div>
+    </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       GOOGLE SEARCH
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">🔍 Google Search <span class="badge-live">● LIVE</span></div>
+  <!-- GOOGLE SEARCH -->
+  <div class="section-title">&#128269; Google Search <span class="badge-live">&#9679; LIVE</span></div>
 
   <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$5,672</div><div class="kpi-sub">of $18,600 budget</div></div>
+    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$5,672.1</div><div class="kpi-sub">of $18,600 budget</div></div>
     <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">346,532</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">14,037</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">4.05%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.40</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">91.5%</div><div class="kpi-sub">ON PACE · proj $18,905</div></div>
-  </div>
+    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">14,037</div><div class="kpi-sub">MTD�]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH���
+IO�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH����]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[���۝�\��[ۜ��]��]��\��H��K]�[YH���]��]��\��H��K\�X���U	�ZY���H	LK��]���]���]��\��H��KX�\���]��\��H��K[X�[����T��]��]��\��H��K]�[YH��[OH���܎��\�KYܙY[�H��ˎ�]��]��\��H��K\�X����]�[�YH	�K
+MM�]���]���]��\��H��KX�\���]��\��H��K[X�[���[X\��][���]��]��\��H��K]�[YH��[OH���܎��\�KY��
+H��K��]��]��\��H��K\�X����K��Hو�X\���[��]���]���]��\��H��KX�\���]��\��H��K[X�[��X�[���]��]��\��H��K]�[YH��[OH���܎��\�KYܙY[�H��LK�IO�]��]��\��H��K\�X���ӈP�H	�ZY���ڈ	NL
+O�]���]����]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H���YZ�H	�Y\������H�X\��	�ZY����[���ې��[���[X\��][���]���]��\��H�X�KZXY\�\�X����R�\��]Y	�ZY����[����ې��[�^���RΈ��
+�ˎ	H���[�͋��O�]����]����]���X�O��XY�������YZ�����[�[������ې��[�	�����	O������[�	�����[�	O�����[X\��][��	����R�	O�����۝������T���������XY����O�������[�H	��\���[�
+����
+
+L������\��H���]]�H��KM���O���\��H���]]�H��ˍIO����[OH���܎��\�K\\�JH��KLMK����[OH���܎��\�K\\�JH�����O����[OH���܎��\�KY��
+H��K
+�����[OH���܎��\�KY��
+H���K��O�����
+���[OH���܎��\�KYܙY[�H��ˎ������������[�	��\���[�L
+\�X[
+O���KM�ˍ����\��H���]]�H��
+L
+��O���\��H���]]�H��ˍIO����[OH���܎��\�K\\�JH���
+ˎ���[OH���܎��\�K\\�JH�����O����[OH���܎��\�KY��
+H��͎K�O���[OH���܎��\�KY��
+H���K��O����M����[OH���܎��\�KYܙY[�H��ˎ���������\��H��]�[����U�[���
+K
+�̋�O����\��H���]]�H���
 
-  <!-- Search Weekly with Brand Split -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Weekly — Google Search · Branded vs Non-Branded</div>
-        <div class="table-header-sub">MTD actuals; weekly brand split estimated from MTD campaign proportions</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Total Spend</th>
-          <th>NonBrand Spend</th>
-          <th>NonBrand %</th>
-          <th>Brand Spend</th>
-          <th>Brand %</th>
-          <th>Remarketing</th>
-          <th>RMK %</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 – Jun 7</td>
-          <td>$4,508.65</td>
-          <td class="positive">$2,899</td>
-          <td class="positive">64.3%</td>
-          <td style="color:var(--purple)">$1,114</td>
-          <td style="color:var(--purple)">24.7%</td>
-          <td style="color:var(--gold)">$496</td>
-          <td style="color:var(--gold)">11.0%</td>
-        </tr>
-        <tr>
-          <td>Jun 8 – Jun 10 (partial)</td>
-          <td>$1,163.42</td>
-          <td class="positive">$748</td>
-          <td class="positive">64.3%</td>
-          <td style="color:var(--purple)">$287</td>
-          <td style="color:var(--purple)">24.7%</td>
-          <td style="color:var(--gold)">$128</td>
-          <td style="color:var(--gold)">11.0%</td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total</td>
-          <td>$5,672.07</td>
-          <td class="positive">$3,647.47</td>
-          <td class="positive">64.3%</td>
-          <td style="color:var(--purple)">$1,402.92</td>
-          <td style="color:var(--purple)">24.7%</td>
-          <td style="color:var(--gold)">$621.68</td>
-          <td style="color:var(--gold)">11.0%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+�K�����\��H���]]�H��ˍIO����[OH���܎��\�K\\�JH��K
+��O���[OH���܎��\�K\\�JH�����O����[OH���܎��\�KY��
+H��K����[OH���܎��\�KY��
+H���K��O�������[OH���܎��\�KYܙY[�H��ˎ����������O���X�O���]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H���[\ZYۈ��XZ��ۈ	�Y\������H�X\��U�]���]��\��H�X�KZXY\�\�X����[�HI��\��L���	�ZY���R�^�YY���H��[�ӛې��[��]�]����]����]���X�O��XY������[\ZYۏ���\O����[����Hو�X\�����[\�\��[ۜ�����X�����������������۝������T��������XY����O������X\���ې��[�[�ܙ\����[OH���܎��\�KX�YJH���ې��[�����
 
-  <!-- Search Brand Split Visual -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Campaign Breakdown — Google Search MTD</div>
-        <div class="table-header-sub">June 1–10, 2026 · Actual campaign-level data</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Campaign</th><th>Type</th><th>Spend</th><th>% of Search</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Search | NonBrand | All Stores</td><td style="color:var(--blue)">NonBrand</td><td>$3,647.47</td><td class="positive">64.3%</td><td>311,914</td><td>5,158</td><td>1.65%</td><td>$0.71</td></tr>
-        <tr><td>Search | Brand | All Stores</td><td style="color:var(--purple)">Brand</td><td>$1,402.92</td><td style="color:var(--purple)">24.7%</td><td>29,035</td><td>8,092</td><td>27.87%</td><td>$0.17</td></tr>
-        <tr><td>Search Remarketing | Visitors</td><td style="color:var(--gold)">Remarketing</td><td>$297.08</td><td style="color:var(--gold)">5.2%</td><td>4,187</td><td>472</td><td>11.27%</td><td>$0.63</td></tr>
-        <tr><td>Search Remarketing | Menu Browsers</td><td style="color:var(--gold)">Remarketing</td><td>$197.37</td><td style="color:var(--gold)">3.5%</td><td>588</td><td>176</td><td>29.93%</td><td>$1.12</td></tr>
-        <tr><td>Search Remarketing | Cart Abandoners</td><td style="color:var(--gold)">Remarketing</td><td>$127.23</td><td style="color:var(--gold)">2.2%</td><td>808</td><td>139</td><td>17.20%</td><td>$0.92</td></tr>
-        <tr class="tr-total"><td>Total</td><td></td><td>$5,672.07</td><td>100%</td><td>346,532</td><td>14,037</td><td>4.05%</td><td>$0.40</td></tr>
-      </tbody>
-    </table>
-    <!-- Visual brand split bar -->
-    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Spend distribution</div>
-      <div class="brand-split-wrap">
-        <div class="brand-split-bar">
-          <div class="brand-split-seg seg-nonbrand" style="width:64.3%" title="NonBrand 64.3%"></div>
-          <div class="brand-split-seg seg-brand"    style="width:24.7%" title="Brand 24.7%"></div>
-          <div class="brand-split-seg seg-rmk"      style="width:11.0%" title="Remarketing 11.0%"></div>
-        </div>
-      </div>
-      <div class="brand-split-legend">
-        <span><span class="bsl-dot" style="background:var(--blue)"></span>NonBrand 64.3% ($3,647)</span>
-        <span><span class="bsl-dot" style="background:var(--purple)"></span>Brand 24.7% ($1,403)</span>
-        <span><span class="bsl-dot" style="background:var(--gold)"></span>Remarketing 11.0% ($622)</span>
-      </div>
-    </div>
-  </div>
+�K�����\��H���]]�H��ˍIO����
+�����L���K�IO����N���NMO���[OH���܎��\�KYܙY[�H��ˍ�����������X\����[�[�ܙ\����[OH���܎��\�K\\�JH����[����K
+��O���[OH���܎��\�K\\�JH�����O����K�O���L�����ˎ
+�O����M�����
+O���[OH���܎��\�KYܙY[�H��ˎ^����������X\���R��\�]ܜ����[OH���܎��\�KY��
+H���[X\��][�����
+��O���[OH���܎��\�KY��
+H��MK��O���M�����K
+�����	O��������NO���[OH���܎��\�K^Y[��H��ˍ����������X\���R�Y[�H�����\�����[OH���܎��\�KY��
+H���[X\��][�����
+M�K�����[OH���܎��\�KY��
+H��L�IO���KL���LL����K���O���K�L����L����[OH���܎��\�K^Y[��H��ˌ�����������X\���R��\�X�[�ۙ\�����[OH���܎��\�KY��
+H���[X\��][�����͍ˎO���[OH���܎��\�KY��
+H����IO����
+����M����ˌ�IO�����M����O���[OH���܎��\�K^Y[��H��ˎ��������\��H��]�[����[������
+K
+�̋�O���L	O����
+�
+L̏���M������
+IO����������[OH���܎��\�KYܙY[�H��ˎ���������O���X�O��]��[OH�Y[�ΌL��M���ܙ\�]��\��Y�\�KX�ܙ\�Nȏ��]��[OH��۝\�^�N�L\���܎��\�K[]]Y
+N�X\��[�X���N��ȏ��[�\��X�][ۈ	�Y\���ې��[����[���[X\��][���]���]��\��H���[�\�]]ܘ\���]��\��H���[�\�]X�\����]��\��H���[�\�]\�Y��Y�[�ۘ��[���[OH��Y�ˍIH�]OH��ې��[�
+ˍIH���]���]��\��H���[�\�]\�Y��Y�X��[���[OH��Y����H�]OH���[����H���]���]��\��H���[�\�]\�Y��Y�\�ZȈ�[OH��Y��K��H�]OH��[X\��][���K��H���]����]����]���]��\��H���[�\�][Y�[�����[���[��\��H���Y���[OH��X��ܛ�[���\�KX�YJH����[���ې��[�
+ˍIH
+	�
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       GOOGLE PMAX
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">🚀 Google PMax <span class="badge-live">● LIVE</span></div>
+�K��O��[����[���[��\��H���Y���[OH��X��ܛ�[���\�K\\�JH����[����[����H
+	K
+��JO��[����[���[��\��H���Y���[OH��X��ܛ�[���\�KY��
+H����[���[X\��][���K��H
+	K�
+H	�Y\��\��]Y��[����[��[OH���܎��\�K[]]Y
+H���ZY��^���RΈ��
+�ˎ	H���[�͋��O��[����]����]����]����KKH����HPVKO��]��\��H��X�[ۋ]]H����L�
+������HX^�[��\��H��Y�K[]�H����M��N�U�O��[���]����]��\��H��K\��ȏ��]��\��H��KX�\���]��\��H��K[X�[���[�U�]��]��\��H��K]�[YH��
+�
+�Mˌ�]��]��\��H��K\�X���و	�K��Y�]�]���]���]��\��H��KX�\���]��\��H��K[X�[��[\�\��[ۜ��]��]��\��H��K]�[YH���
+K
+LL��]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[���X����]��]��\��H��K]�[YH����M��]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH��ˌ��O�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH����O�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[���۝�\��[ۜ��]��]��\��H��K]�[YH���L�]��]��\��H��K\�X���U	�ZY���H	LK���]���]���]��\��H��KX�\���]��\��H��K[X�[����T��]��]��\��H��K]�[YH��[OH���܎��\�KYܙY[�H��ˌ��]��]��\��H��K\�X����]�[�YH	�KL͏�]���]���]��\��H��KX�\���]��\��H��K[X�[��X�[���]��]��\��H��K]�[YH��[OH���܎��\�KYܙY[�H��L��O�]��]��\��H��K\�X���ӈP�H	�ZY���ڈ	�K�L�]���]����]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H���YZ�H	�Y\������HX^	�ZY����[�Y���ۋP��[�Y�]���]��\��H�X�KZXY\�\�X���UX�X[���YZ�H��[��]\�[X]Y���HU�[\ZYۈ��ܝ[ۜ��]����]����]���X�O��XY������YZ�����[�[�����ې��[�	�����	O�����[�	�����[�	O���[\�\��[ۜ�����X�����������������۝������T��������XY����O�������[�H	��\���[�
+����
+KMK�O����\��H���]]�H��
+NN�O���\��H���]]�H��̋��O����[OH���܎��\�K\\�JH��K
+�M������[OH���܎��\�K\\�JH���ˎ	O�����KMMO����
+�O���ˌN	O��������N���[OH���܎��\�KYܙY[�H��ˌ�������������[�	��\���[�L
+\�X[
+O���KK�O����\��H���]]�H��K��O���\��H���]]�H��̋��O����[OH���܎��\�K\\�JH��
+L�O���[OH���܎��\�K\\�JH���ˎ	O����M�
+MM����K
+�
+���ˎM�O����̏���ML����[OH���܎��\�KYܙY[�H��ˍ���������\��H��]�[����U�[���
+�
+�Mˌ����\��H���]]�H��
+K
+L������\��H���]]�H��̋��O����[OH���܎��\�K\\�JH���LM����[OH���܎��\�K\\�JH���ˎ	O�����
+K
+LL������M����ˌ��O�����O����L���[OH���܎��\�KYܙY[�H��ˌ�����������O���X�O���]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H���[\ZYۈ��XZ��ۈ	�Y\������HX^U�]���]��\��H�X�KZXY\�\�X����[�HI��\��L����]����]����]���X�O��XY������[\ZYۏ���\O����[����HوX^���[\�\��[ۜ�����X�����������������۝������T��������XY����O�����X^�ې��[�[�ܙ\����[OH���܎��\�KX�YJH���ې��[����
+K
+L������\��H���]]�H��̋��O����K
+L����L�ML����K�LIO������������[OH���܎��\�KYܙY[�H��ˍ^���������X^��[�[�ܙ\����[OH���܎��\�K\\�JH����[�����LM����[OH���܎��\�K\\�JH���ˎ	O���M�NO���L�NL���LˍL�O����M���������[OH���܎��\�KYܙY[�H������������\��H��]�[����[������
+�
+�Mˌ���L	O����
+K
+LL������M����ˌ��O�����O����L���[OH���܎��\�KYܙY[�H��ˌ����������O���X�O��]��[OH�Y[�ΌL��M���ܙ\�]��\��Y�\�KX�ܙ\�Nȏ��]��[OH��۝\�^�N�L\���܎��\�K[]]Y
+N�X\��[�X���N��ȏ��[�\��X�][ۏ�]���]��\��H���[�\�]]ܘ\���]��\��H���[�\�]X�\����]��\��H���[�\�]\�Y��Y�[�ۘ��[���[OH��Y�̋��H�]OH��ې��[�
+̋��H���]���]��\��H���[�\�]\�Y��Y�X��[���[OH��Y��ˎ	H�]OH���[��ˎ	H���]����]����]���]��\��H���[�\�][Y�[�����[���[��\��H���Y���[OH��X��ܛ�[���\�KX�YJH����[���ې��[�
+̋��H
+	
+K
+L���O��[����[���[��\��H���Y���[OH��X��ܛ�[���\�K\\�JH����[����[��ˎ	H
+	�LM�
+O��[����]����]����]����KKH��P�S�Q����HKO��]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H����X�[�Y����H��[����ۋP��[�	�Y\���X\��
+�X^U�]���]��\��H�X�KZXY\�\�X����[X\��][��\��]Y	�ZY��^�Y[��\�[\ZYۈ	�ZY���[�HI��\��L����]����]����]���X�O��XY������Y�Y[�����X\���[����X^�[������X�[�Y�[����Hو����H�[�����T��������XY����O������[OH���܎��\�KX�YJH����ۙϓ�ې��[����ۙϏ�����
 
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$7,617</div><div class="kpi-sub">of $25,200 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">785,512</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">26,143</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">3.33%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.29</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">90.7%</div><div class="kpi-sub">ON PACE · proj $25,390</div></div>
-  </div>
+�K�����
+K
+L�������\��H���]]�H����ۙω
+�M�K�O���ۙϏ����\��H���]]�H����ۙύ��	O���ۙϏ����[OH���܎��\�KYܙY[�H��ˍ������������[OH���܎��\�K\\�JH����ۙϐ��[����ۙϏ����K
+��O����LM�����[OH���܎��\�K\\�JH����ۙω�
+LMˌ����ۙϏ����[OH���܎��\�K\\�JH����ۙό���IO���ۙϏ����[OH���܎��\�KYܙY[�H���^�����������[OH���܎��\�KY��
+H����ۙϔ�[X\��][�����ۙϏ����K�����Y\������[OH���܎��\�KY��
+H����ۙωK����ۙϏ����[OH���܎��\�KY��
+H����ۙόLˍIO���ۙϏ����[OH���܎��\�K^Y[��H��ˍ^���������\��H��]�[��������H�[
+^��\
+O����
+K
+�̋�O���
+�
+�Mˌ����L��K�O���L	O����[OH���܎��\�KYܙY[�H��ˍ�����������O���X�O���]����KKHR���KO��]��\��H��X�[ۋ]]H����L��L�N�Z���Y��[��\��H��Y�K[]�H����M��N�U�O��[���]����]��\��H��K\��ȏ��]��\��H��KX�\���]��\��H��K[X�[���[�U�]��]��\��H��K]�[YH��
+LLˌ��]��]��\��H��K\�X���و	KL�Y�]�]���]���]��\��H��KX�\���]��\��H��K[X�[��[\�\��[ۜ��]��]��\��H��K]�[YH���
+O�]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[���X����]��]��\��H��K]�[YH���L��]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH����
+�O�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[��]�����]��]��\��H��K]�[YH���̏�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[���۝�\��[ۜ��]��]��\��H��K]�[YH����]��]��\��H��K\�X���U	�ZY���H	L����]���]���]��\��H��KX�\���]��\��H��K[X�[����T��]��]��\��H��K]�[YH��[OH���܎��\�K^Y[��H����^�]��]��\��H��K\�X����]�[�YH	K
+��]���]���]��\��H��KX�\���]��\��H��K[X�[��X�[���]��]��\��H��K]�[YH��[OH���܎��\�K^Y[��H��K�	O�]��]��\��H��K\�X���S�T�P�S��	�ZY���ڈ	K
+���]���]����]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]��]��\��H�X�KZXY\�]]H���YZ�H\��ܛX[��H	�Y\��Z���Y��]��]��\��H�X�KZXY\�\�X����[�H����]���]����]���X�O��XY�����YZ�����[����[\�\��[ۜ�����X�����������������۝������T�������XY����O������[�H	��\���[�
+�����ˌ����K
+�L����LLO���K�NIO�����O����O���[OH���܎��\�K^Y[��H����^����������[�	��\���[�L
+\�X[
+O���L��O���
+������������IO��������LO���[OH���܎��\�K^Y[��H�������������\��H��]�[���U�[���
+LLˌ�����
+O����L������
+�O����̏�������[OH���܎��\�K^Y[��H����^���������O���X�O���]����KKHTH�PT��Q�KO��]��\��H��X�[ۋ]]H����L�����\H�X\��Y��[��\��H��Y�K[X[�X[��PS�PS��[���]����]��\��H��K\��ȏ��]��\��H��KX�\���]��\��H��K[X�[���[�U�]��]��\��H��K]�[YH��[OH���܎��\�K[ܘ[��JH���LK��]��]��\��H��K\�X���و	
+��H�Y�]	�ZY��
+L��IO�]���]���]��\��H��KX�\���]��\��H��K[X�[��[\�\��[ۜ��]��]��\��H��K]�[YH��L�L���]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[��\��]��]��\��H��K]�[YH��NO�]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[��[��[��]��]��\��H��K]�[YH��M��]��]��\��H��K\�X���[[��[\\��]���]���]��\��H��KX�\���]��\��H��K[X�[��]����]��]��\��H��K]�[YH��K�O�]��]��\��H��K\�X������\�\�]���]���]��\��H��KX�\���]��\��H��K[X�[��]���O�]��]��\��H��K]�[YH��
+����]��]��\��H��K\�X������\�[��[�]���]���]��\��H��KX�\���]��\��H��K[X�[����]��]��\��H��K]�[YH��K�	O�]��]��\��H��K\�X���\]��Y��]O�]���]���]��\��H��KX�\���]��\��H��K[X�[��Ԉ
+�[
+O�]��]��\��H��K]�[YH����IO�]��]��\��H��K\�X���\�	��\���[��[��]���]���]��\��H��KX�\���]��\��H��K[X�[��X�[���]��]��\��H��K]�[YH��[OH���܎��\�K[ܘ[��JH��MM�O�]��]��\��H��K\�X�����LLM�ՑT�P�S��	�ZY���ڈ	K
+M�]���]����]����]��\��H�[\�[��\���[OH�X\��[�]��M�X\��[�X���N�M�ȏ��]��\��H�[\�ZX�ۈ����NɈ͍L�N��]���]��]�\��[�X�H
+	�K�K�^JK\HT�H�[�[���ۙωK
+M�����ۙψ[��[�H	�Y\����ۙω��K��ݙ\�H	
+��H�Y�]���ۙϋ����[]�\�H�]�\�NK��Hو�[���X��[Y[��YX�[���Y�܈�][��HZ[H�Y�]�\��]����]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]���]��\��H�X�KZXY\�]]H���YZ�H\��ܛX[��H	�Y\��\H�X\��Y��]���]��\��H�X�KZXY\�\�X����[\ZYێ��ۈ��[�Y�[����
+Q�M̌�M�
+H	�ZY���[�H���	�ZY���YZ�\�[X]\��\�YۈZ[H]�\�Y�O�]����]����]���X�O��XY������YZ�����[����[\�\��[ۜ����\����[��[��������Ԉ
+�[
+O���]������]���O�������XY����O�������[�H	��\���[�
+�
+\��O����\��H�[[YY����
+�����\��H�[[YY���K
+O���\��H�[[YY���L�����\��H�[[YY����O����K�	O������O���K�O���
+���������������[�	��\���[�L
+\��\�X[
+O����\��H�[[YY���L
+K����\��H�[[YY����
+����\��H�[[YY���M���\��H�[[YY���M�����K�	O����K�IO��������
+������������\��H��]�[����U�[�����LK����L�L�����NO���M�����K�	O�����IO���K�O���
+�������������O���X�O���]����KKH����HTKO��]��\��H��X�[ۋ]]H����L��N�����H\�[��\��H��Y�K[]�H����M��N�U�O��[���]����]��\��H��K\��ȏ��]��\��H��KX�\���]��\��H��K[X�[���[�U�]��]��\��H��K]�[YH���Lˍ��]��]��\��H��K\�X���و	
+��H�Y�]�]���]���]��\��H��KX�\���]��\��H��K[X�[��[\�\��[ۜ��]��]��\��H��K]�[YH������O�]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[���X����]��]��\��H��K]�[YH��͍��]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[�����]��]��\��H��K]�[YH��K�N	O�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[�����]��]��\��H��K]�[YH���N�]��]��\��H��K\�X���[�[\ZYۜ��]���]���]��\��H��KX�\���]��\��H��K[X�[��[��[��]��]��\��H��K]�[YH����]��]��\��H��K\�X���U�]���]���]��\��H��KX�\���]��\��H��K[X�[��]���O�]��]��\��H��K]�[YH��
+ˍ��]��]��\��H��K\�X������\�[��[�]���]���]��\��H��KX�\���]��\��H��K[X�[��X�[���]��]��\��H��K]�[YH��[OH���܎��\�KYܙY[�H��MK�	O�]��]��\��H��K\�X���ӈP�H	�ZY���ڈ	
+�O�]���]����]����]��\��H�X�K]ܘ\���]��\��H�X�KZXY\����]��]��\��H�X�KZXY\�]]H���YZ�H\��ܛX[��H	�Y\������H\�]��]��\��H�X�KZXY\�\�X����[�H����]���]����]���X�O��XY�����YZ�����[����[\�\��[ۜ�����X����������������[��[����]���O������XY����O������[�H	��\���[�
+����MK�����M��M�����M����K�N	O����N�������
+ˍO����������[�	��\���[�L
+\�X[
+O���
+��O����M����LL���K�N	O����N���������������\��H��]�[���U�[����Lˍ��������O���͍����K�N	O����N�������
+ˍ����������O���X�O���]�����]����]��\��H����\����ZH�ZHY�\���\�	�ZY��]]�Y�[�\�]YZ[H]
+ΌSH	�ZY��]N�Y]K����HY�Z���
+�[��܋�ZJH	�ZY��\HT�H
+X[�X[
+O�����[�YH����\�Y]H����[����]�����ܚ\���ۜ�UHH�[�\�]Y]�����L
+�LL
+Ό���^\�[\�Y�L�^\�[�[۝���[۝���[�H������[��[Έ��[YN������H�X\����Y�]�N
+��[��
+M�̋�K�۝��
+��\Έˎ]�N��YK�۝�X�[���۝��K���[YN������HX^��Y�]��L��[��
+͌Mˌ�۝��
+�L��\Έˌ�]�N��YK�۝�X�[���۝��K���[YN��Y]HYȋ�Y�]�NL��[��
+L
+M�K�۝���L��\Έ��K]�N��YK�۝�X�[���۝��K���[YN��Z��ȋ�Y�]�NL�[��
+LLˌ��۝��
+���\Έ��K]�N��YK�۝�X�[���۝��K���[YN��\HT�H��Y�]�
+��K�[���LK��۝��
+M���\Έ�[]�N��[�K�۝�X�[��[��[ȈK���[YN������H\��Y�]�
+��K�[���Lˍ��۝�����\Έ�[]�N��YK�۝�X�[��[��[ȈK�B�N��[��[ۈ�]
+�HY�
+�OOH�[�OOH[�Y�[�Y
+H�]\��	��[��[OH���܎��MMH�����L����[����]\��	�	�
+������[T��[��	�[�UT���Z[�[][Q��X�[ۑY�]ΈX^[][Q��X�[ۑY�]ΈHJNB��[��[ۈ�]�
+�HY�
+�OOH�[
+H�]\��	��[��[OH���܎��MMH�����L����[����]\��
+�
+�L
+K�њ^Y
+JH
+�	�I�B��[��[ۈ�]��\��HY�
+\�H�]\��	��[��[OH���܎��MMH�����L����[����]\����њ^Y
+JH
+�	�	�B��[��[ۈ���HY�
+�OOH�[
+H�]\��	��Y�
+��H�H	���HK�JH�]\��	���]]�I�Y�
+��H��H	����JH�]\��	ۙ]]�[	��]\��	ۙY�]]�I�B��[��[ۈ�Y�J�]�JHY�
+[]�JH�]\��	��[��[OH��X��ܛ�[��̘L�����܎�ٍNYL�؛ܙ\�\�Y]\΍�Y[�Ό�ٛ۝\�^�N�L\ȏ�PS�PS��[���Y�
+��H�H	���HK�JH�]\��	��[��[OH��X��ܛ�[���XL�LXN���܎�̌��MYN؛ܙ\�\�Y]\΍�Y[�Ό�ٛ۝\�^�N�L\ȏ���L��ۈX�O��[���Y�
+��K�JH�]\��	��[��[OH��X��ܛ�[����L���܎��Y�
 
-  <!-- PMax Weekly with Brand Split -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Weekly — Google PMax · Branded vs Non-Branded</div>
-        <div class="table-header-sub">MTD actuals; weekly brand split estimated from MTD campaign proportions</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Total Spend</th>
-          <th>NonBrand Spend</th>
-          <th>NonBrand %</th>
-          <th>Brand Spend</th>
-          <th>Brand %</th>
-          <th>Impressions</th>
-          <th>Clicks</th>
-          <th>CTR</th>
-          <th>CPC</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 – Jun 7</td>
-          <td>$5,815.12</td>
-          <td class="positive">$4,199</td>
-          <td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$1,617</td>
-          <td style="color:var(--purple)">27.8%</td>
-          <td>641,955</td>
-          <td>20,439</td>
-          <td>3.18%</td>
-          <td>$0.28</td>
-        </tr>
-        <tr>
-          <td>Jun 8 – Jun 10 (partial)</td>
-          <td>$1,801.91</td>
-          <td class="positive">$1,301</td>
-          <td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$501</td>
-          <td style="color:var(--purple)">27.8%</td>
-          <td>143,557</td>
-          <td>5,704</td>
-          <td>3.97%</td>
-          <td>$0.32</td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total</td>
-          <td>$7,617.03</td>
-          <td class="positive">$5,502.67</td>
-          <td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$2,114.35</td>
-          <td style="color:var(--purple)">27.8%</td>
-          <td>785,512</td>
-          <td>26,143</td>
-          <td>3.33%</td>
-          <td>$0.29</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
-  <!-- PMax Brand Split Visual -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Campaign Breakdown — Google PMax MTD</div>
-        <div class="table-header-sub">June 1–10, 2026 · Actual campaign-level data</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Campaign</th><th>Type</th><th>Spend</th><th>% of PMax</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>PMax | NonBrand | All Stores</td><td style="color:var(--blue)">NonBrand</td><td>$5,502.67</td><td class="positive">72.2%</td><td>689,493</td><td>13,153</td><td>1.91%</td><td>$0.42</td></tr>
-        <tr><td>PMax | Brand | All Stores</td><td style="color:var(--purple)">Brand</td><td>$2,114.35</td><td style="color:var(--purple)">27.8%</td><td>96,019</td><td>12,990</td><td>13.53%</td><td>$0.16</td></tr>
-        <tr class="tr-total"><td>Total</td><td></td><td>$7,617.03</td><td>100%</td><td>785,512</td><td>26,143</td><td>3.33%</td><td>$0.29</td></tr>
-      </tbody>
-    </table>
-    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Spend distribution</div>
-      <div class="brand-split-wrap">
-        <div class="brand-split-bar">
-          <div class="brand-split-seg seg-nonbrand" style="width:72.2%" title="NonBrand 72.2%"></div>
-          <div class="brand-split-seg seg-brand"    style="width:27.8%" title="Brand 27.8%"></div>
-        </div>
-      </div>
-      <div class="brand-split-legend">
-        <span><span class="bsl-dot" style="background:var(--blue)"></span>NonBrand 72.2% ($5,503)</span>
-        <span><span class="bsl-dot" style="background:var(--purple)"></span>Brand 27.8% ($2,114)</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Combined Google (Search + PMax) Brand Split Summary -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Combined Google Brand vs Non-Brand — Search + PMax MTD</div>
-        <div class="table-header-sub">Excluding App campaign · June 1–10, 2026</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Segment</th><th>Search Spend</th><th>PMax Spend</th><th>Combined Spend</th><th>% of Google Total</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="color:var(--blue)"><strong>NonBrand</strong></td>
-          <td>$3,647.47</td>
-          <td>$5,502.67</td>
-          <td class="positive"><strong>$9,150.14</strong></td>
-          <td class="positive"><strong>69.4%</strong></td>
-        </tr>
-        <tr>
-          <td style="color:var(--purple)"><strong>Brand</strong></td>
-          <td>$1,402.92</td>
-          <td>$2,114.35</td>
-          <td style="color:var(--purple)"><strong>$3,517.27</strong></td>
-          <td style="color:var(--purple)"><strong>26.6%</strong></td>
-        </tr>
-        <tr>
-          <td style="color:var(--gold)"><strong>Remarketing</strong></td>
-          <td>$621.68</td>
-          <td>—</td>
-          <td style="color:var(--gold)"><strong>$621.68</strong></td>
-          <td style="color:var(--gold)"><strong>4.7%</strong></td>
-        </tr>
-        <tr>
-          <td>App</td>
-          <td>—</td>
-          <td>$213.65</td>
-          <td>$213.65</td>
-          <td class="dimmed">—</td>
-        </tr>
-        <tr class="tr-total">
-          <td>Google Total</td>
-          <td>$5,672.07</td>
-          <td>$7,617.03</td>
-          <td>$13,289.10</td>
-          <td>100%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       TIKTOK ADS
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">🎵 TikTok Ads <span class="badge-live">● LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$513</div><div class="kpi-sub">of $1,900 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">34,401</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">713</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">2.07%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.72</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--yellow)">81.0%</div><div class="kpi-sub">UNDERPACING · proj $1,664</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div><div class="table-header-title">Weekly Performance — TikTok Ads</div><div class="table-header-sub">June 2026</div></div>
-    </div>
-    <table>
-      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr></thead>
-      <tbody>
-        <tr><td>Jun 1 – Jun 7</td><td>$383.03</td><td>25,653</td><td>511</td><td>1.99%</td><td>$0.75</td></tr>
-        <tr><td>Jun 8 – Jun 10 (partial)</td><td>$130.12</td><td>8,748</td><td>202</td><td>2.31%</td><td>$0.64</td></tr>
-        <tr class="tr-total"><td>MTD Total</td><td>$513.15</td><td>34,401</td><td>713</td><td>2.07%</td><td>$0.72</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       APPLE SEARCH ADS
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">🍎 Apple Search Ads <span class="badge-manual">MANUAL</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value" style="color:var(--orange)">$351</div><div class="kpi-sub">of $675 budget · 52.1%</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">12,927</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Taps</div><div class="kpi-value">181</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Installs (Total)</div><div class="kpi-value">56</div><div class="kpi-sub">All install types</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPT</div><div class="kpi-value">$1.94</div><div class="kpi-sub">Cost per tap</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPA</div><div class="kpi-value">$6.27</div><div class="kpi-sub">Cost per install</div></div>
-    <div class="kpi-card"><div class="kpi-label">TTR</div><div class="kpi-value">1.40%</div><div class="kpi-sub">Tap-through rate</div></div>
-    <div class="kpi-card"><div class="kpi-label">CR (Total)</div><div class="kpi-value">30.94%</div><div class="kpi-sub">Taps → installs</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--orange)">156%</div><div class="kpi-sub">⬆ OVERPACING · proj $1,054</div></div>
-  </div>
-
-  <div class="alert danger" style="margin-top:-4px; margin-bottom:16px;">
-    <div class="alert-icon">⚠️</div>
-    <div>At current pace ($35/day), Apple ASA will spend <strong>$1,054</strong> in June — <strong>$379 over the $675 budget</strong>. The Food Delivery ad group is driving 99.2% of spend. Recommend reducing bids or setting a daily budget cap.</div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">By Ad Group — Apple Search Ads MTD</div>
-        <div class="table-header-sub">Campaign: Non Branded Jan 2026 (ID 2143202560) · June 2026</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Ad Group</th>
-          <th>Status</th>
-          <th>Search Match</th>
-          <th>Spend</th>
-          <th>% of Total</th>
-          <th>Impressions</th>
-          <th>Taps</th>
-          <th>Installs</th>
-          <th>TTR</th>
-          <th>CR (Total)</th>
-          <th>CR (Tap-Through)</th>
-          <th>Avg CPT</th>
-          <th>Avg CPA</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Food Delivery</strong></td>
-          <td><span style="color:var(--green)">● Running</span></td>
-          <td>On</td>
-          <td>$348.49</td>
-          <td class="positive">99.2%</td>
-          <td>12,907</td>
-          <td>174</td>
-          <td>44</td>
-          <td>1.35%</td>
-          <td>25.29%</td>
-          <td>11.49%</td>
-          <td>$2.00</td>
-          <td>$7.92</td>
-        </tr>
-        <tr>
-          <td><strong>Branded</strong></td>
-          <td><span style="color:var(--green)">● Running</span></td>
-          <td>Off</td>
-          <td>$2.88</td>
-          <td>0.8%</td>
-          <td>20</td>
-          <td>7</td>
-          <td>12</td>
-          <td>35.00%</td>
-          <td>171.43%</td>
-          <td>57.14%</td>
-          <td>$0.41</td>
-          <td>$0.24</td>
-        </tr>
-        <tr>
-          <td><strong>Chinese</strong></td>
-          <td><span style="color:var(--muted)">⏸ Paused</span></td>
-          <td>On</td>
-          <td>$0.00</td>
-          <td class="dimmed">0%</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-        <tr class="tr-total">
-          <td>Total</td>
-          <td></td>
-          <td></td>
-          <td>$351.37</td>
-          <td>100%</td>
-          <td>12,927</td>
-          <td>181</td>
-          <td>56</td>
-          <td>1.40%</td>
-          <td>30.94%</td>
-          <td>13.26%</td>
-          <td>$1.94</td>
-          <td>$6.27</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       GOOGLE APP
-  ═══════════════════════════════════════════════════════════════ -->
-  <div class="section-title">📱 Google App <span class="badge-live">● LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$214</div><div class="kpi-sub">of $675 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">23,225</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">367</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">CTR</div><div class="kpi-value">1.58%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">CPC</div><div class="kpi-value">$0.58</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">95.0%</div><div class="kpi-sub">ON PACE · proj $641</div></div>
-  </div>
-
-</div><!-- /container -->
-
-<div class="footer">
-  Pei Wei Ads Dashboard · Auto-generated daily at 7:00 AM · Data: Meta, Google Ads, TikTok (Windsor.ai) · Apple ASA (manual)<br>
-  <span id="footer-date"></span>
-</div>
-
-<script>
-// ═══════════════════════════════════════════════════════
-// DATA — updated daily by scheduled task
-// ═══════════════════════════════════════════════════════
-const DATA = {
-  generatedAt: "2026-06-10T07:00:00",
-  daysElapsed: 10,
-  daysInMonth: 30,
-  month: "June 2026",
-  channels: [
-    { name: "Google Search", budget: 18600, spent: 5672.07,  live: true  },
-    { name: "Google PMax",   budget: 25200, spent: 7617.03,  live: true  },
-    { name: "Meta Ads",      budget: 19300, spent: 5054.92,  live: true  },
-    { name: "TikTok",        budget: 1900,  spent: 513.15,   live: true  },
-    { name: "Apple ASA",     budget: 675,   spent: 351.37,   live: false },
-    { name: "Google App",    budget: 675,   spent: 213.65,   live: true  },
-  ]
-};
-
-function fmt(n) {
-  if (n === null || n === undefined) return '<span style="color:#555">—</span>';
-  return '$' + n.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
-}
-function fmtPct(n) {
-  if (n === null) return '<span style="color:#555">—</span>';
-  return (n * 100).toFixed(1) + '%';
-}
-function cls(r) {
-  if (r === null) return '';
-  if (r >= 0.9 && r <= 1.1) return 'positive';
-  if (r >= 0.75 && r < 0.9) return 'neutral';
-  return 'negative';
-}
-function badge(r, live) {
-  if (!live) return '<span style="background:#2a2020;color:#f59e0b;border-radius:4px;padding:2px 8px;font-size:11px;">MANUAL</span>';
-  if (r === null) return '<span style="background:#2a2a2a;color:#666;border-radius:4px;padding:2px 8px;font-size:11px;">No data</span>';
-  if (r >= 0.9 && r <= 1.1) return '<span style="background:#1a3a1a;color:#22c55e;border-radius:4px;padding:2px 8px;font-size:11px;">✓ On pace</span>';
-  if (r > 1.1) return '<span style="background:#3a0000;color:#ef4444;border-radius:4px;padding:2px 8px;font-size:11px;">⬆ Overpacing</span>';
-  return '<span style="background:#3a2a00;color:#f59e0b;border-radius:4px;padding:2px 8px;font-size:11px;">⬇ Underpacing</span>';
-}
-
-const tbody = document.getElementById('pacing-tbody');
-let totalBudget = 0, totalSpent = 0;
-
-DATA.channels.forEach(ch => {
-  const exp = ch.budget * (DATA.daysElapsed / DATA.daysInMonth);
-  const sPct = ch.spent !== null ? ch.spent / ch.budget : null;
-  const vE   = ch.spent !== null ? ch.spent / exp : null;
-  const rem  = ch.spent !== null ? ch.budget - ch.spent : null;
-  const proj = ch.spent !== null ? (ch.spent / DATA.daysElapsed) * DATA.daysInMonth : null;
-  totalBudget += ch.budget;
-  if (ch.spent !== null) totalSpent += ch.spent;
-
-  const c = cls(vE);
-  tbody.innerHTML += `<tr>
-    <td><strong>${ch.name}</strong>${ch.live ? '<span class="badge-live" style="margin-left:6px">● LIVE</span>' : '<span class="badge-manual" style="margin-left:6px">MANUAL</span>'}</td>
-    <td>${fmt(ch.budget)}</td>
-    <td>${fmt(ch.spent)}</td>
-    <td class="${c}">${fmtPct(sPct)}</td>
-    <td>${fmt(exp)}</td>
-    <td class="${c}">${fmtPct(vE)}</td>
-    <td>${fmt(rem)}</td>
-    <td>${fmt(proj)}</td>
-    <td>${badge(vE, ch.live)}</td>
-  </tr>`;
-});
-
-tbody.innerHTML += `<tr class="tr-total">
-  <td>TOTAL</td>
-  <td>${fmt(totalBudget)}</td>
-  <td>${fmt(totalSpent)}</td>
-  <td>—</td>
-  <td>${fmt(totalBudget * DATA.daysElapsed / DATA.daysInMonth)}</td>
-  <td>—</td><td>—</td><td>—</td><td>—</td>
-</tr>`;
-
-// Month bar
-const mPct = (DATA.daysElapsed / DATA.daysInMonth * 100).toFixed(0);
-document.getElementById('month-bar').style.width = mPct + '%';
-document.getElementById('days-elapsed').textContent = DATA.daysElapsed;
-document.getElementById('days-remaining').textContent =
-  `${DATA.daysInMonth - DATA.daysElapsed} days remaining · ${mPct}% of month elapsed`;
-
-// Dates
-const d = new Date(DATA.generatedAt).toLocaleString('en-US', {
-  month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
-});
-document.getElementById('footer-date').textContent = 'Generated: ' + d;
-document.getElementById('last-updated').textContent = 'Last updated: ' + d;
-</script>
-</body>
-</html>
+؛ܙ\�\�Y]\΍�Y[�Ό�ٛ۝\�^�N�L\ȏ���LLM�ݙ\�X�[����[����]\��	��[��[OH��X��ܛ�[����L�L���܎�ٍNYL�؛ܙ\�\�Y]\΍�Y[�Ό�ٛ۝\�^�N�L\ȏ���LLMN�[�\�X�[����[���B���ۜ���HH��[Y[���][[Y[��RY
+	�X�[��]��I�N]�[�Y�]H�[�[�H�[�۝�H�UK��[��[˙�ܑXX�
+�O��ۜ�^H���Y�]
+�
+UK�^\�[\�Y�UK�^\�[�[۝
+N�ۜ���H���[�����Y�]�ۜ��HH���[��^�ۜ��[HH���Y�]H���[��ۜ��ڈH
+���[��UK�^\�[\�Y
+H
+�UK�^\�[�[۝�[�Y�]
+�H���Y�]�[�[�
+�H���[��[�۝�
+�H
+���۝�
+N�ۜ��H���JN��K�[��\�S
+�H	����
+	����ۙω�
+����[YH
+�	����ۙω�
+�
+��]�H�	��[��\��H��Y�K[]�H��[OH�X\��[�[Y�������M��N�U�O��[����	��[��\��H��Y�K[X[�X[��[OH�X\��[�[Y�����PS�PS��[���H
+�	����
+	���
+��]
+���Y�]
+H
+�	����
+	���
+��]
+���[�
+H
+�	����
+	��\��H��
+��
+�	ȏ��
+��]�
+��
+H
+�	����
+	���
+��]
+^
+H
+�	����
+	��\��H��
+��
+�	ȏ��
+��]�
+�JH
+�	����
+	���
+��]
+�[JH
+�	����
+	���
+��]
+�ڊH
+�	����
+	���
+����۝�����[T��[��
+H
+�	�	�
+����۝�X�[
+�	����
+	���
+�
+����\��	���ۙω�
+��]��\�����\�H
+�	����ۙω��	Ɉ��L���H
+�	����
+	���
+��Y�J�K��]�JH
+�	����
+	�����JN���K�[��\�S
+�H	���\��H��]�[���
+	���S���
+	���
+��]
+�[�Y�]
+H
+�	����
+	���
+��]
+�[�[�
+H
+�	����
+	�����L�����
+	���
+��]
+�[�Y�]
+�UK�^\�[\�Y�UK�^\�[�[۝
+H
+�	����
+	�����L��������L��������L�����
+	���
+��[�۝�����[T��[��
+H
+�	����
+	�����L��������L�����
+	�������ۜ�T�H
+UK�^\�[\�Y�UK�^\�[�[۝
+�L
+K�њ^Y
+
+N��[Y[���][[Y[��RY
+	�[۝X�\��K��[K��YHT�
+�	�I���[Y[���][[Y[��RY
+	�^\�Y[\�Y	�K�^�۝[�HUK�^\�[\�Y��[Y[���][[Y[��RY
+	�^\�\�[XZ[�[���K�^�۝[�B�
+UK�^\�[�[۝HUK�^\�[\�Y
+H
+�	�^\��[XZ[�[��0��	�
+�T�
+�	�Hو[۝[\�Y	���ۜ�H�]�]JUK��[�\�]Y]
+K����[T��[��	�[�UT��[۝�	�ۙ��^N�	۝[Y\�X��YX\��	۝[Y\�X���\��	̋YY�]	�Z[�]N�	̋YY�]	JN��[Y[���][[Y[��RY
+	ٛ��\�Y]I�K�^�۝[�H	��[�\�]Y�	�
+���[Y[���][[Y[��RY
+	�\�]\]Y	�K�^�۝[�H	�\�\]Y�	�
+���ܚ\��؛�O���[�
