@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Dashboard — US Immigration Consultants</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #e6edf3; padding: 20px 24px 40px; min-height: 100vh; }
+.dash-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid #21262d; flex-wrap:wrap; gap:12px; }
+.dash-title { font-size:20px; font-weight:700; color:#f0f6fc; }
+.dash-subtitle { font-size:12px; color:#8b949e; margin-top:3px; }
+.header-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.last-updated { font-size:11px; color:#6e7681; }
+.btn { background:#21262d; color:#e6edf3; border:1px solid #30363d; border-radius:6px; padding:6px 14px; cursor:pointer; font-size:12px; transition:all 0.15s; }
+.btn:hover { background:#30363d; }
+
+.date-bar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; background:#161b22; border:1px solid #21262d; border-radius:10px; padding:10px 14px; margin-bottom:20px; }
+.date-bar-label { font-size:11px; color:#6e7681; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-right:4px; }
+.date-preset-btn { background:#0d1117; color:#8b949e; border:1px solid #30363d; border-radius:6px; padding:5px 12px; cursor:pointer; font-size:12px; transition:all 0.15s; white-space:nowrap; }
+.date-preset-btn:hover { background:#21262d; color:#e6edf3; }
+.date-preset-btn.active { background:#1f3a5f; border-color:#1f6feb88; color:#58a6ff; font-weight:600; }
+.date-custom-wrap { display:none; align-items:center; gap:6px; border-left:1px solid #30363d; padding-left:10px; margin-left:2px; }
+.date-custom-wrap.visible { display:flex; }
+.date-input { background:#0d1117; color:#e6edf3; border:1px solid #30363d; border-radius:6px; padding:4px 8px; font-size:12px; color-scheme:dark; }
+.date-input:focus { outline:none; border-color:#1f6feb; }
+.date-sep { font-size:11px; color:#6e7681; }
+.date-apply { background:#238636!important; border-color:#2ea043!important; color:#fff!important; font-weight:600; }
+.date-apply:hover { background:#2ea043!important; }
+.date-range-display { font-size:11px; color:#58a6ff; margin-left:auto; white-space:nowrap; }
+
+.section { margin-bottom:28px; }
+.section-header { display:flex; align-items:center; gap:8px; margin-bottom:14px; }
+.section-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.section-title { font-size:15px; font-weight:600; color:#f0f6fc; }
+.divider { border:none; border-top:1px solid #21262d; margin:24px 0; }
+
+.kpi-row { display:grid; gap:12px; margin-bottom:16px; }
+.kpi-6 { grid-template-columns:repeat(6,1fr); }
+.kpi-4 { grid-template-columns:repeat(4,1fr); }
+.kpi-3 { grid-template-columns:repeat(3,1fr); }
+@media(max-width:900px){.kpi-6{grid-template-columns:repeat(3,1fr)}.kpi-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.kpi-6,.kpi-4,.kpi-3{grid-template-columns:repeat(2,1fr)}}
+.kpi { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:14px 16px; transition:border-color 0.2s; }
+.kpi:hover { border-color:#388bfd55; }
+.kpi-label { font-size:10px; color:#8b949e; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:7px; }
+.kpi-val { font-size:22px; font-weight:700; color:#f0f6fc; line-height:1; }
+.kpi-sub { font-size:10px; color:#6e7681; margin-top:5px; }
+.c-blue{color:#58a6ff} .c-green{color:#3fb950} .c-red{color:#f85149} .c-yellow{color:#e3b341} .c-purple{color:#d2a8ff} .c-gray{color:#8b949e} .c-orange{color:#f0883e}
+
+.chart-row { display:grid; gap:14px; margin-bottom:14px; }
+.chart-2 { grid-template-columns:2fr 1fr; }
+.chart-11 { grid-template-columns:1fr 1fr; }
+@media(max-width:700px){.chart-2,.chart-11{grid-template-columns:1fr}}
+.chart-card { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:16px; }
+.chart-card-title { font-size:12px; font-weight:600; color:#e6edf3; margin-bottom:12px; }
+.chart-wrap { position:relative; height:200px; }
+.chart-wrap-tall { position:relative; height:260px; }
+
+.tbl-card { background:#161b22; border:1px solid #21262d; border-radius:10px; padding:16px; overflow-x:auto; margin-bottom:14px; }
+table { width:100%; border-collapse:collapse; font-size:11px; }
+thead th { background:#0d1117; color:#6e7681; text-align:right; padding:7px 10px; border-bottom:1px solid #21262d; text-transform:uppercase; font-size:10px; letter-spacing:0.5px; font-weight:600; white-space:nowrap; }
+thead th:first-child { text-align:left; }
+tbody td { padding:7px 10px; border-bottom:1px solid #21262d; text-align:right; color:#e6edf3; white-space:nowrap; }
+tbody td:first-child { text-align:left; color:#f0f6fc; max-width:200px; overflow:hidden; text-overflow:ellipsis; }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover td { background:#1c2128; }
+thead th.sortable { cursor:pointer; user-select:none; }
+thead th.sortable:hover { color:#e6edf3; background:#1c2128; }
+thead th.sort-desc::after { content:" ↓"; color:#58a6ff; }
+thead th.sort-asc::after  { content:" ↑"; color:#58a6ff; }
+
+.roas-pill { display:inline-block; padding:1px 7px; border-radius:8px; font-size:10px; font-weight:700; }
+.roas-low  { background:#f8514922; color:#f85149; }
+.roas-mid  { background:#e3b34122; color:#e3b341; }
+.roas-high { background:#3fb95022; color:#3fb950; }
+
+.team-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+@media(max-width:700px){ .team-grid { grid-template-columns:1fr; } }
+
+.insights-card { background:#161b22; border:1px solid #1f6feb44; border-radius:10px; padding:4px 16px; }
+.insight-item { display:flex; gap:10px; padding:12px 0; border-bottom:1px solid #21262d; align-items:flex-start; }
+.insight-item:last-child { border-bottom:none; }
+.insight-icon { font-size:15px; flex-shrink:0; margin-top:1px; }
+.insight-text { font-size:12px; color:#c9d1d9; line-height:1.55; }
+.insight-text strong { color:#f0f6fc; }
+
+.center-box { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:400px; gap:14px; }
+.spinner { width:38px; height:38px; border:3px solid #21262d; border-top-color:#58a6ff; border-radius:50%; animation:spin 0.75s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.loading-label { color:#8b949e; font-size:13px; }
+.error-box { background:#f8514922; border:1px solid #f8514955; border-radius:8px; padding:12px 18px; color:#ffa198; font-size:12px; text-align:center; max-width:480px; }
+.kw-badge { display:inline-block; padding:2px 7px; border-radius:10px; font-size:10px; font-weight:600; background:#1f3a5f; color:#58a6ff; border:1px solid #1f6feb44; }
+.data-source-badge { font-size:10px; color:#6e7681; margin-left:8px; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="center-box"><div class="spinner"></div><div class="loading-label" id="load-msg">Loading…</div></div>
+</div>
+<script>
+/* ── CONFIG ── */
+const WINDSOR_KEY = 'fcfb6b6412b361cec3e773facf01b656b06d';
+const GHL_ACC     = 'cDflRENlp3PnNAba1tYW';
+const GADS_ACC    = '370-923-9676';
+const GA4_ACC     = '396222340';
+const BASE        = 'https://connectors.windsor.ai';
+const SALES_JSON  = './sales-data.json';
+
+Chart.defaults.color = '#6e7681';
+Chart.defaults.borderColor = '#21262d';
+Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+Chart.defaults.font.size = 11;
+
+const CHARTS = {};
+function destroyCharts() {
+  Object.values(CHARTS).forEach(c => { try { c.destroy(); } catch(_){} });
+  Object.keys(CHARTS).forEach(k => delete CHARTS[k]);
+}
+
+/* ── DATE HELPERS ── */
+function toISO(d) { return d.toISOString().slice(0,10); }
+function today()     { return toISO(new Date()); }
+function yesterday() { const d=new Date(); d.setDate(d.getDate()-1); return toISO(d); }
+function daysAgo(n)  { const d=new Date(); d.setDate(d.getDate()-n); return toISO(d); }
+
+let dateConfig = { preset:'yesterday', from:yesterday(), to:yesterday() };
+
+function dateLabel() {
+  const p=dateConfig.preset;
+  if (p==='today')     return 'Today';
+  if (p==='yesterday') return 'Yesterday (' + yesterday() + ')';
+  if (p==='last_7d')   return 'Last 7 days';
+  if (p==='last_30d')  return 'Last 30 days';
+  return dateConfig.from + ' → ' + dateConfig.to;
+}
+
+/* ── FILL DATE RANGE ── */
+function fillDateRange(obj, defaultVal) {
+  const result={};
+  const cur=new Date(dateConfig.from), end=new Date(dateConfig.to);
+  while(cur<=end){
+    const d=cur.toISOString().slice(0,10);
+    result[d]=obj[d]!==undefined?obj[d]:(typeof defaultVal==='object'?{...defaultVal}:defaultVal);
+    cur.setDate(cur.getDate()+1);
+  }
+  return result;
+}
+
+/* ── WINDSOR FETCH ── */
+async function windsorFetch(connector, accountId, fields, from, to) {
+  const f=from||dateConfig.from, t=to||dateConfig.to;
+  const params=new URLSearchParams({ api_key:WINDSOR_KEY, date_from:f, date_to:t, fields:fields.join(','), account_id:accountId });
+  const res=await fetch(`${BASE}/${connector}?${params}`);
+  if(!res.ok) throw new Error(`Windsor ${connector} HTTP ${res.status}`);
+  const json=await res.json();
+  return Array.isArray(json)?json:(json.data||json.result||[]);
+}
+
+/* ── SALES DATA FETCH ── */
+async function fetchSalesData() {
+  try {
+    const res = await fetch(SALES_JSON + '?t=' + Date.now());
+    if (!res.ok) return { transactions:[], lastUpdated:'—', source:'unavailable' };
+    const data = await res.json();
+    return { ...data, source:'file' };
+  } catch(e) {
+    return { transactions:[], lastUpdated:'—', source:'error' };
+  }
+}
+
+/* ── FETCH ALL ── */
+async function fetchAll() {
+  setMsg('Connecting to Windsor…');
+  await new Promise(r => {
+    const check = () => window.fetch ? r() : setTimeout(check, 100);
+    check();
+  });
+  setMsg('Loading data…');
+  // Fixed 12-week window for Weekly KPIs section (always latest 84 days)
+  const wkFrom = daysAgo(84), wkTo = yesterday();
+  const [ghlR, gadsR, ga4R, kwR, salesR, ghlWkR, gadsWkR] = await Promise.allSettled([
+    windsorFetch('gohighlevel', GHL_ACC,  ['contact_date_added','contact_source','contact_id']),
+    windsorFetch('google_ads',  GADS_ACC, ['date','campaign','spend','clicks','impressions','conversions','ctr','cpc','account_id']),
+    windsorFetch('googleanalytics4', GA4_ACC, ['date','sessions','users','session_default_channel_group','country']),
+    windsorFetch('google_ads',  GADS_ACC, ['keyword','match_type','clicks','impressions','ctr','cpc','conversions','spend','account_id']),
+    fetchSalesData(),
+    windsorFetch('gohighlevel', GHL_ACC,  ['contact_date_added','contact_source','contact_id'], wkFrom, wkTo),
+    windsorFetch('google_ads',  GADS_ACC, ['date','spend','account_id'], wkFrom, wkTo)
+  ]);
+  const filterGAds = rows => rows.filter(r => !r.account_id || r.account_id===GADS_ACC);
+  return {
+    ghl:        ghlR.status==='fulfilled'    ? ghlR.value                 : [],
+    gads:       gadsR.status==='fulfilled'   ? filterGAds(gadsR.value)    : [],
+    ga4:        ga4R.status==='fulfilled'    ? ga4R.value                 : [],
+    keywords:   kwR.status==='fulfilled'     ? filterGAds(kwR.value)      : [],
+    salesData:  salesR.status==='fulfilled'  ? salesR.value               : { transactions:[], lastUpdated:'—', source:'error' },
+    ghlWeekly:  ghlWkR.status==='fulfilled'  ? ghlWkR.value               : [],
+    gadsWeekly: gadsWkR.status==='fulfilled' ? filterGAds(gadsWkR.value)  : []
+  };
+}
+
+/* ── PROCESS ── */
+function classifySource(src) {
+  if (!src) return 'call';
+  const s=src.toLowerCase();
+  if (s.includes('pool')||s.includes('number pool')||s.includes('call')) return 'call';
+  if (s.includes('landing')||s.includes('survey')||s.includes('form')||s.includes('quiz')||s.includes('external')) return 'form';
+  return 'unknown';
+}
+
+function processGHL(rows) {
+  const minBkt={};
+  rows.forEach(r=>{ if(!r.contact_source){const m=(r.contact_date_added||'').slice(0,16);minBkt[m]=(minBkt[m]||0)+1;}});
+  const bulkMins=new Set(Object.keys(minBkt).filter(m=>minBkt[m]>=5));
+  const daily={},sources={};
+  let calls=0,forms=0,unknown=0;
+  rows.forEach(r=>{
+    const m=(r.contact_date_added||'').slice(0,16);
+    if(!r.contact_source&&bulkMins.has(m)) return;
+    const day=(r.contact_date_added||'').slice(0,10);
+    if(!day) return;
+    if(!daily[day]) daily[day]={call:0,form:0,unknown:0};
+    const t=classifySource(r.contact_source);
+    daily[day][t]++;
+    sources[r.contact_source||'Inbound Call']=(sources[r.contact_source||'Inbound Call']||0)+1;
+    if(t==='call') calls++; else if(t==='form') forms++; else unknown++;
+  });
+  return {daily,sources,calls,forms,unknown,total:calls+forms+unknown};
+}
+
+function processGAds(rows) {
+  const daily={},campaigns={};
+  let spend=0,clicks=0,impr=0,conv=0;
+  rows.forEach(r=>{
+    const d=r.date;
+    if(!daily[d]) daily[d]={spend:0,clicks:0,impr:0,conv:0};
+    daily[d].spend+=+r.spend||0; daily[d].clicks+=+r.clicks||0;
+    daily[d].impr+=+r.impressions||0; daily[d].conv+=+r.conversions||0;
+    const c=r.campaign;
+    if(!campaigns[c]) campaigns[c]={spend:0,clicks:0,impr:0,conv:0};
+    campaigns[c].spend+=+r.spend||0; campaigns[c].clicks+=+r.clicks||0;
+    campaigns[c].impr+=+r.impressions||0; campaigns[c].conv+=+r.conversions||0;
+    spend+=+r.spend||0; clicks+=+r.clicks||0; impr+=+r.impressions||0; conv+=+r.conversions||0;
+  });
+  return {daily,campaigns,spend,clicks,impr,conv,ctr:impr>0?clicks/impr:0,cpc:clicks>0?spend/clicks:0,cpa:conv>0?spend/conv:0};
+}
+
+function processGA4(rows) {
+  const channels={},countries={},daily={};
+  let sessions=0,users=0;
+  rows.forEach(r=>{
+    const ch=r.session_default_channel_group||'Other';
+    channels[ch]=(channels[ch]||0)+(+r.sessions||0);
+    countries[r.country]=(countries[r.country]||0)+(+r.sessions||0);
+    daily[r.date]=(daily[r.date]||0)+(+r.sessions||0);
+    sessions+=+r.sessions||0; users+=+r.users||0;
+  });
+  return {channels,countries,daily,sessions,users};
+}
+
+function processKeywords(rows) {
+  const kw={};
+  rows.forEach(r=>{
+    if(!r.keyword) return;
+    if(!kw[r.keyword]) kw[r.keyword]={clicks:0,impr:0,conv:0,spend:0,matchType:r.match_type};
+    kw[r.keyword].clicks+=+r.clicks||0; kw[r.keyword].impr+=+r.impressions||0;
+    kw[r.keyword].conv+=+r.conversions||0; kw[r.keyword].spend+=+r.spend||0;
+  });
+  return Object.entries(kw).sort((a,b)=>b[1].conv-a[1].conv);
+}
+
+function processSales(transactions, from, to) {
+  const daily={}, byService={}, byFinder={}, byCloser={};
+  let totalRevenue=0, totalDeals=0, totalPending=0, pendingDeals=0;
+
+  // Filter to date range
+  const filtered = transactions.filter(t => t.date >= from && t.date <= to);
+
+  filtered.forEach(t => {
+    if (!t.date) return;
+    if (!daily[t.date]) daily[t.date]={revenue:0,pending:0,deals:0};
+    const svc = t.service || categorizeService(t.product);
+    if (!byService[svc]) byService[svc]={revenue:0,deals:0,pending:0,pendingDeals:0};
+
+    if (t.isPaid) {
+      daily[t.date].revenue += t.amount;
+      daily[t.date].deals++;
+      totalRevenue += t.amount;
+      totalDeals++;
+      byService[svc].revenue += t.amount;
+      byService[svc].deals++;
+      if (t.finder) { if(!byFinder[t.finder]) byFinder[t.finder]={revenue:0,deals:0}; byFinder[t.finder].revenue+=t.amount; byFinder[t.finder].deals++; }
+      if (t.closer) { if(!byCloser[t.closer]) byCloser[t.closer]={revenue:0,deals:0}; byCloser[t.closer].revenue+=t.amount; byCloser[t.closer].deals++; }
+    } else {
+      daily[t.date].pending += t.amount;
+      totalPending += t.amount;
+      pendingDeals++;
+      byService[svc].pending += t.amount;
+      byService[svc].pendingDeals++;
+    }
+  });
+
+  const avgDeal = totalDeals>0 ? totalRevenue/totalDeals : 0;
+  return {daily, byService, byFinder, byCloser, totalRevenue, totalDeals, totalPending, pendingDeals, avgDeal};
+}
+
+/* ── WEEKLY KPIs ── */
+function getWeeks(n) {
+  const weeks=[];
+  const now=new Date();
+  const dow=now.getDay(); // 0=Sun
+  const toMon=dow===0?-6:1-dow;
+  const thisMon=new Date(now);
+  thisMon.setDate(now.getDate()+toMon);
+  thisMon.setHours(0,0,0,0);
+  for(let w=0;w<n;w++){
+    const mon=new Date(thisMon); mon.setDate(thisMon.getDate()-(7*w));
+    const sun=new Date(mon); sun.setDate(mon.getDate()+6);
+    const from=toISO(mon), to=toISO(sun);
+    const lbl=mon.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' – '+sun.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    weeks.push({from,to,label:lbl});
+  }
+  return weeks.reverse(); // oldest → newest
+}
+
+function processWeeklyKPIs(ghlWeeklyRows, gadsWeeklyRows, allTransactions) {
+  const weeks=getWeeks(12);
+  // GHL: apply bulk-import filter, get daily totals
+  const ghlProc=processGHL(ghlWeeklyRows);
+  // GAds: get daily spend
+  const gadsProc=processGAds(gadsWeeklyRows);
+
+  return weeks.map(w=>{
+    let leads=0, spend=0;
+    const cur=new Date(w.from), end=new Date(w.to);
+    while(cur<=end){
+      const d=toISO(cur);
+      const dl=ghlProc.daily[d]||{call:0,form:0,unknown:0};
+      leads+=dl.call+dl.form+dl.unknown;
+      spend+=gadsProc.daily[d]?.spend||0;
+      cur.setDate(cur.getDate()+1);
+    }
+    const weekTxns=allTransactions.filter(t=>t.isPaid&&t.date>=w.from&&t.date<=w.to);
+    const revenue=weekTxns.reduce((s,t)=>s+t.amount,0);
+    const deals=weekTxns.length;
+    const cpl=(leads>0&&spend>0)?spend/leads:null;
+    const cps=(deals>0&&spend>0)?spend/deals:null;
+    const roas=spend>0?revenue/spend:null;
+    return {...w,leads,spend,revenue,deals,cpl,cps,roas};
+  }).reverse(); // newest first for the table
+}
+
+function categorizeService(p) {
+  if (!p) return 'Other';
+  const s=p.toLowerCase();
+  if (/n-?400/.test(s)) return 'N-400 Citizenship';
+  if (/i-?130/.test(s)) return 'I-130 Family Sponsorship';
+  if (/i-?90/.test(s))  return 'I-90 Green Card Renewal';
+  if (s.includes('all at once')) return 'All at Once Bundle';
+  if (s.includes('nvc')) return 'NVC Processing';
+  if (s.includes('daca')) return 'DACA';
+  if (/i-?601/.test(s)||s.includes('waiver')) return 'I-601A Waiver';
+  if (/i-?751/.test(s)) return 'I-751 Removal of Conditions';
+  if (s.includes('crba')) return 'CRBA';
+  if (/n-?600/.test(s)) return 'N-600 Certificate';
+  if (s.includes('foia')) return 'FOIA';
+  if (/i-?485/.test(s)) return 'I-485 Adjustment';
+  if (s.includes('eb-5')||s.includes('eb5')) return 'EB-5 Investor Visa';
+  if (s.includes('parole')) return 'Parole in Place';
+  if (/i-?131/.test(s)) return 'I-131 Travel Doc';
+  if (/n-?565/.test(s)) return 'N-565';
+  if (s.includes('k1')||s.includes('fiance')||/i-?129f/.test(s)) return 'K-1 Fiancé Visa';
+  if (s.includes('translation')) return 'Translation';
+  if (s.includes('visa fee')) return 'Visa Fees';
+  if (s.includes('appeal')||s.includes('rfe')) return 'Appeals/RFE';
+  return 'Other';
+}
+
+function roasPill(roas) {
+  if (roas===null||roas===undefined) return '<span class="roas-pill roas-mid">—</span>';
+  if (roas >= 5) return `<span class="roas-pill roas-high">${roas.toFixed(1)}x</span>`;
+  if (roas >= 2) return `<span class="roas-pill roas-mid">${roas.toFixed(1)}x</span>`;
+  return `<span class="roas-pill roas-low">${roas.toFixed(1)}x</span>`;
+}
+
+/* ── FORMAT ── */
+const fmt = {
+  $:   v => '$'+Number(v).toLocaleString('en-US',{maximumFractionDigits:0}),
+  $2:  v => '$'+Number(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
+  $1:  v => '$'+Number(v).toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1}),
+  n:   (v,d=0) => Number(v).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}),
+  pct: v => (v*100).toFixed(1)+'%',
+  pct0:v => (v*100).toFixed(0)+'%',
+  x:   v => v!=null ? v.toFixed(2)+'x' : '—'
+};
+
+/* ── INSIGHTS ── */
+function makeInsights(ghl, gads, ga4, sales, avgRoas) {
+  const out=[];
+  if (sales.totalRevenue>0) {
+    out.push({icon:'💰',text:`Revenue: <strong>${fmt.$(sales.totalRevenue)}</strong> across <strong>${sales.totalDeals} deals</strong> (avg ${fmt.$(sales.avgDeal)}/deal). Pipeline: <strong>${fmt.$(sales.totalPending)}</strong> pending.`});
+  }
+  if (avgRoas>0) {
+    const q=avgRoas>=5?'excellent — strong signal to scale spend':avgRoas>=3?'solid — room to scale profitable campaigns':'below target — optimize before scaling';
+    out.push({icon:'📈',text:`Overall ROAS: <strong>${fmt.x(avgRoas)}</strong> — ${q}.`});
+  }
+  const topSvc=Object.entries(sales.byService).sort((a,b)=>b[1].revenue-a[1].revenue)[0];
+  if(topSvc){
+    const pct=sales.totalRevenue>0?(topSvc[1].revenue/sales.totalRevenue*100).toFixed(0):0;
+    out.push({icon:'🏆',text:`Top service: <strong>${topSvc[0]}</strong> — ${fmt.$(topSvc[1].revenue)} (${pct}% of revenue, ${topSvc[1].deals} deals, avg ${fmt.$(topSvc[1].deals>0?topSvc[1].revenue/topSvc[1].deals:0)}/deal).`});
+  }
+  const topCloser=Object.entries(sales.byCloser).sort((a,b)=>b[1].revenue-a[1].revenue)[0];
+  if(topCloser) out.push({icon:'🤝',text:`Top closer: <strong>${topCloser[0]}</strong> — ${fmt.$(topCloser[1].revenue)} across ${topCloser[1].deals} deals.`});
+  if (gads.conv>0) out.push({icon:'📊',text:`Google Ads: <strong>${fmt.n(gads.conv,0)} conversions</strong> · CPA ${fmt.$1(gads.cpa)} · Spend ${fmt.$(gads.spend)} · CTR ${fmt.pct(gads.ctr)}.`});
+  if (ghl.total>0){const cp=(ghl.calls/ghl.total*100).toFixed(0);out.push({icon:'📞',text:`GHL: <strong>${ghl.total} leads</strong> — ${ghl.calls} calls (${cp}%) · ${ghl.forms} form submissions.`});}
+  if (out.length===0) out.push({icon:'ℹ️',text:'No data available for the selected date range.'});
+  return out;
+}
+
+/* ── RENDER ── */
+function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
+  const ghl   = processGHL(ghlR);
+  const gads  = processGAds(gadsR);
+  const ga4   = processGA4(ga4R);
+  const kws   = processKeywords(kwR);
+  const sales = processSales(salesData.transactions||[], dateConfig.from, dateConfig.to);
+  const weeklyKPIs = processWeeklyKPIs(ghlWeeklyR||[], gadsWeeklyR||[], salesData.transactions||[]);
+  const now   = new Date().toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
+
+  // Filled date arrays
+  const ghlDailyFull  = fillDateRange(ghl.daily,  {call:0,form:0,unknown:0});
+  const gadsDailyFull = fillDateRange(gads.daily, {spend:0,clicks:0,impr:0,conv:0});
+  const ga4DailyFull  = fillDateRange(ga4.daily,  0);
+  const salesDailyFull= fillDateRange(sales.daily, {revenue:0,pending:0,deals:0});
+
+  const allDates=[...Object.keys(gadsDailyFull)].sort();
+  const ghlDates=[...Object.keys(ghlDailyFull)].sort();
+  const ga4Dates=[...Object.keys(ga4DailyFull)].sort();
+
+  // ROAS per day
+  let totalSpend=0, totalRevForRoas=0;
+  allDates.forEach(d=>{
+    totalSpend += gadsDailyFull[d]?.spend||0;
+    totalRevForRoas += salesDailyFull[d]?.revenue||0;
+  });
+  const avgRoas = totalSpend>0 ? totalRevForRoas/totalSpend : null;
+
+  // Tables
+  const campRows=Object.entries(gads.campaigns).sort((a,b)=>b[1].spend-a[1].spend).map(([name,m])=>{
+    const ctr=m.impr>0?m.clicks/m.impr:0,cpc=m.clicks>0?m.spend/m.clicks:0,cpa=m.conv>0?m.spend/m.conv:0;
+    return `<tr><td>${name}</td><td>${fmt.$(m.spend)}</td><td>${fmt.n(m.clicks)}</td><td>${fmt.n(m.impr)}</td><td>${fmt.pct(ctr)}</td><td>${fmt.$1(cpc)}</td><td>${fmt.n(m.conv,0)}</td><td>${fmt.$1(cpa)}</td></tr>`;
+  }).join('');
+
+  const kwRows=kws.slice(0,10).map(([kw,m])=>{
+    const ctr=m.impr>0?m.clicks/m.impr:0,cpa=m.conv>0?m.spend/m.conv:0;
+    return `<tr><td><span class="kw-badge">${m.matchType||'—'}</span> ${kw}</td><td>${fmt.n(m.clicks)}</td><td>${fmt.pct(ctr)}</td><td>${fmt.$(m.spend)}</td><td>${fmt.n(m.conv,0)}</td><td>${fmt.$1(cpa)}</td></tr>`;
+  }).join('');
+
+  const svcRows=Object.entries(sales.byService).sort((a,b)=>b[1].revenue-a[1].revenue).map(([svc,m])=>{
+    const avg=m.deals>0?m.revenue/m.deals:0;
+    const pct=sales.totalRevenue>0?(m.revenue/sales.totalRevenue*100).toFixed(0):0;
+    // Find matching ad spend (rough: look for related campaigns)
+    const relatedSpend=Object.entries(gads.campaigns)
+      .filter(([k])=>k.toLowerCase().includes(svc.split(' ')[0].toLowerCase()))
+      .reduce((s,[,v])=>s+v.spend,0);
+    const svcRoas=relatedSpend>0?m.revenue/relatedSpend:null;
+    return `<tr><td>${svc}</td><td class="c-green">${fmt.$(m.revenue)}</td><td>${m.deals}</td><td>${fmt.$(avg)}</td><td>${fmt.$(m.pending)}</td><td>${pct}%</td><td>${svcRoas?roasPill(svcRoas):'—'}</td></tr>`;
+  }).join('');
+
+  const finderRows=Object.entries(sales.byFinder).sort((a,b)=>b[1].revenue-a[1].revenue).map(([n,m])=>{
+    const avg=m.deals>0?m.revenue/m.deals:0;
+    return `<tr><td>${n}</td><td class="c-green">${fmt.$(m.revenue)}</td><td>${m.deals}</td><td>${fmt.$(avg)}</td></tr>`;
+  }).join('');
+
+  const closerRows=Object.entries(sales.byCloser).sort((a,b)=>b[1].revenue-a[1].revenue).map(([n,m])=>{
+    const avg=m.deals>0?m.revenue/m.deals:0;
+    return `<tr><td>${n}</td><td class="c-green">${fmt.$(m.revenue)}</td><td>${m.deals}</td><td>${fmt.$(avg)}</td></tr>`;
+  }).join('');
+
+  const ins=makeInsights(ghl,gads,ga4,sales,avgRoas);
+
+  document.getElementById('app').innerHTML = `
+  <div class="dash-header">
+    <div>
+      <div class="dash-title">🏛️ US Immigration Consultants</div>
+      <div class="dash-subtitle">Marketing Dashboard · Sales + GHL + Google Ads + GA4</div>
+    </div>
+    <div class="header-right">
+      <span class="last-updated">Updated: ${now} · Sales data: ${salesData.lastUpdated||'—'}</span>
+      <button class="btn" onclick="reload()">↻ Refresh</button>
+    </div>
+  </div>
+
+  <div class="date-bar">
+    <span class="date-bar-label">Period:</span>
+    <button class="date-preset-btn ${dateConfig.preset==='today'?'active':''}"     onclick="setPreset('today')">Today</button>
+    <button class="date-preset-btn ${dateConfig.preset==='yesterday'?'active':''}" onclick="setPreset('yesterday')">Yesterday</button>
+    <button class="date-preset-btn ${dateConfig.preset==='last_7d'?'active':''}"   onclick="setPreset('last_7d')">Last 7 days</button>
+    <button class="date-preset-btn ${dateConfig.preset==='last_30d'?'active':''}"  onclick="setPreset('last_30d')">Last 30 days</button>
+    <button class="date-preset-btn ${dateConfig.preset==='custom'?'active':''}"    onclick="setPreset('custom')">Custom range</button>
+    <div class="date-custom-wrap ${dateConfig.preset==='custom'?'visible':''}" id="custom-wrap">
+      <input type="date" class="date-input" id="date-from" value="${dateConfig.from}" max="${today()}">
+      <span class="date-sep">→</span>
+      <input type="date" class="date-input" id="date-to" value="${dateConfig.to}" max="${today()}">
+      <button class="btn date-apply" onclick="applyCustom()">Apply</button>
+    </div>
+    <span class="date-range-display">📅 ${dateLabel()}</span>
+  </div>
+
+  <!-- ── WEEKLY KPIs ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#58a6ff"></div>
+      <div class="section-title">📅 Weekly KPIs <span style="font-size:12px;font-weight:400;color:var(--muted);margin-left:8px">last 12 weeks · newest first</span></div>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="data-table" style="min-width:700px">
+        <thead><tr>
+          <th>Week</th>
+          <th style="text-align:right">Sales $</th>
+          <th style="text-align:right">Deals</th>
+          <th style="text-align:right">Leads</th>
+          <th style="text-align:right">Ad Spend</th>
+          <th style="text-align:right">Cost/Lead</th>
+          <th style="text-align:right">Cost/Sale</th>
+          <th style="text-align:right">ROAS</th>
+        </tr></thead>
+        <tbody>
+          ${weeklyKPIs.map(w=>{
+            const rStyle=w.roas===null?'':w.roas>=5?'color:var(--green)':w.roas>=2?'color:var(--yellow)':'color:var(--red)';
+            return `<tr>
+              <td style="white-space:nowrap" data-sort="${w.from}">${w.label}</td>
+              <td style="text-align:right" class="c-green">${w.revenue>0?fmt.$(w.revenue):'—'}</td>
+              <td style="text-align:right">${w.deals||'—'}</td>
+              <td style="text-align:right">${w.leads||'—'}</td>
+              <td style="text-align:right">${w.spend>0?fmt.$(w.spend):'—'}</td>
+              <td style="text-align:right">${w.cpl!==null?fmt.$2(w.cpl):'—'}</td>
+              <td style="text-align:right">${w.cps!==null?fmt.$2(w.cps):'—'}</td>
+              <td style="text-align:right;${rStyle}">${w.roas!==null?fmt.x(w.roas):'—'}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── SALES & ROAS ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#3fb950"></div>
+      <div class="section-title">💰 Sales & ROAS</div>
+    </div>
+    <div class="kpi-row kpi-6">
+      <div class="kpi"><div class="kpi-label">Revenue (Paid)</div><div class="kpi-val c-green">${fmt.$(sales.totalRevenue)}</div><div class="kpi-sub">${sales.totalDeals} deals closed</div></div>
+      <div class="kpi"><div class="kpi-label">ROAS</div><div class="kpi-val ${avgRoas===null?'c-gray':avgRoas>=5?'c-green':avgRoas>=2?'c-yellow':'c-red'}">${avgRoas!=null?fmt.x(avgRoas):'—'}</div><div class="kpi-sub">Revenue ÷ Ad Spend</div></div>
+      <div class="kpi"><div class="kpi-label">Avg. Deal Size</div><div class="kpi-val c-blue">${fmt.$(sales.avgDeal)}</div><div class="kpi-sub">Paid deals</div></div>
+      <div class="kpi"><div class="kpi-label">Pipeline</div><div class="kpi-val c-yellow">${fmt.$(sales.totalPending)}</div><div class="kpi-sub">${sales.pendingDeals} pending deals</div></div>
+      <div class="kpi"><div class="kpi-label">Ad Spend</div><div class="kpi-val c-red">${fmt.$(gads.spend)}</div><div class="kpi-sub">Google Ads</div></div>
+      <div class="kpi"><div class="kpi-label">Ad Conversions</div><div class="kpi-val">${fmt.n(gads.conv,0)}</div><div class="kpi-sub">CPA ${fmt.$1(gads.cpa)}</div></div>
+    </div>
+    <div class="chart-row" style="grid-template-columns:1fr">
+      <div class="chart-card">
+        <div class="chart-card-title">Daily Revenue vs. Ad Spend · ROAS</div>
+        <div class="chart-wrap-tall"><canvas id="c-roas-daily"></canvas></div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── SERVICE PERFORMANCE ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#d2a8ff"></div>
+      <div class="section-title">📊 Service Performance</div>
+    </div>
+    <div class="chart-row chart-2">
+      <div class="chart-card"><div class="chart-card-title">Revenue by Service</div><div class="chart-wrap-tall"><canvas id="c-svc-rev"></canvas></div></div>
+      <div class="chart-card"><div class="chart-card-title">Deals by Service</div><div class="chart-wrap-tall"><canvas id="c-svc-deals"></canvas></div></div>
+    </div>
+    <div class="tbl-card">
+      <div style="font-size:12px;font-weight:600;color:#e6edf3;margin-bottom:10px;">Full Service Breakdown — What to Scale</div>
+      <table><thead><tr><th>Service</th><th>Revenue</th><th>Deals</th><th>Avg Deal</th><th>Pipeline</th><th>% Total</th><th>Campaign ROAS</th></tr></thead>
+      <tbody>${svcRows||'<tr><td colspan="7" style="text-align:center;color:#6e7681">No data for this period</td></tr>'}</tbody></table>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── TEAM PERFORMANCE ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#f0883e"></div>
+      <div class="section-title">👥 Team Performance</div>
+    </div>
+    <div class="team-grid">
+      <div class="tbl-card">
+        <div style="font-size:12px;font-weight:600;color:#e6edf3;margin-bottom:10px;">🔍 Deal Finders</div>
+        <table><thead><tr><th>Name</th><th>Revenue</th><th>Deals</th><th>Avg Deal</th></tr></thead>
+        <tbody>${finderRows||'<tr><td colspan="4" style="text-align:center;color:#6e7681">No data</td></tr>'}</tbody></table>
+      </div>
+      <div class="tbl-card">
+        <div style="font-size:12px;font-weight:600;color:#e6edf3;margin-bottom:10px;">🤝 Deal Closers</div>
+        <table><thead><tr><th>Name</th><th>Revenue</th><th>Deals</th><th>Avg Deal</th></tr></thead>
+        <tbody>${closerRows||'<tr><td colspan="4" style="text-align:center;color:#6e7681">No data</td></tr>'}</tbody></table>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── GHL ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#58a6ff"></div>
+      <div class="section-title">📱 GHL — Leads</div>
+    </div>
+    <div class="kpi-row kpi-3">
+      <div class="kpi"><div class="kpi-label">Total Leads</div><div class="kpi-val c-blue">${fmt.n(ghl.total)}</div><div class="kpi-sub">Excl. bulk imports</div></div>
+      <div class="kpi"><div class="kpi-label">📞 Calls</div><div class="kpi-val c-blue">${fmt.n(ghl.calls)}</div><div class="kpi-sub">${ghl.total>0?fmt.pct0(ghl.calls/ghl.total):'—'} of total</div></div>
+      <div class="kpi"><div class="kpi-label">📋 Form Submissions</div><div class="kpi-val c-green">${fmt.n(ghl.forms)}</div><div class="kpi-sub">${ghl.total>0?fmt.pct0(ghl.forms/ghl.total):'—'} of total</div></div>
+    </div>
+    <div class="chart-row chart-2">
+      <div class="chart-card"><div class="chart-card-title">Daily Leads — Calls vs. Form Submissions</div><div class="chart-wrap"><canvas id="c-ghl-daily"></canvas></div></div>
+      <div class="chart-card"><div class="chart-card-title">Lead Sources</div><div class="chart-wrap"><canvas id="c-ghl-sources"></canvas></div></div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── GOOGLE ADS ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#58a6ff"></div>
+      <div class="section-title">📈 Google Ads — Performance</div>
+    </div>
+    <div class="kpi-row kpi-6">
+      <div class="kpi"><div class="kpi-label">💰 Total Spend</div><div class="kpi-val c-red">${fmt.$(gads.spend)}</div><div class="kpi-sub">${dateLabel()}</div></div>
+      <div class="kpi"><div class="kpi-label">🖱️ Clicks</div><div class="kpi-val c-blue">${fmt.n(gads.clicks)}</div><div class="kpi-sub">CTR ${fmt.pct(gads.ctr)}</div></div>
+      <div class="kpi"><div class="kpi-label">👁️ Impressions</div><div class="kpi-val">${fmt.n(gads.impr)}</div><div class="kpi-sub">Total reach</div></div>
+      <div class="kpi"><div class="kpi-label">✅ Conversions</div><div class="kpi-val c-green">${fmt.n(gads.conv,0)}</div><div class="kpi-sub">Total period</div></div>
+      <div class="kpi"><div class="kpi-label">💵 Avg. CPC</div><div class="kpi-val">${fmt.$1(gads.cpc)}</div><div class="kpi-sub">Per click</div></div>
+      <div class="kpi"><div class="kpi-label">🎯 CPA</div><div class="kpi-val c-yellow">${fmt.$1(gads.cpa)}</div><div class="kpi-sub">Per conversion</div></div>
+    </div>
+    <div class="chart-row chart-2">
+      <div class="chart-card"><div class="chart-card-title">Daily Spend + Conversions</div><div class="chart-wrap"><canvas id="c-gads-daily"></canvas></div></div>
+      <div class="chart-card"><div class="chart-card-title">Conversions by Campaign</div><div class="chart-wrap"><canvas id="c-gads-camp"></canvas></div></div>
+    </div>
+    <div class="tbl-card">
+      <div style="font-size:12px;font-weight:600;color:#e6edf3;margin-bottom:10px;">Campaign Performance</div>
+      <table><thead><tr><th>Campaign</th><th>Spend</th><th>Clicks</th><th>Impr.</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead>
+      <tbody>${campRows||'<tr><td colspan="8" style="text-align:center;color:#6e7681">No data</td></tr>'}</tbody></table>
+    </div>
+    ${kwRows?`<div class="tbl-card"><div style="font-size:12px;font-weight:600;color:#e6edf3;margin-bottom:10px;">🔑 Top Keywords — by Conversions</div><table><thead><tr><th>Keyword</th><th>Clicks</th><th>CTR</th><th>Spend</th><th>Conv.</th><th>CPA</th></tr></thead><tbody>${kwRows}</tbody></table></div>`:''}
+  </div>
+  <hr class="divider">
+
+  <!-- ── GA4 ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#e3b341"></div>
+      <div class="section-title">🌐 Google Analytics 4 — Traffic</div>
+    </div>
+    <div class="kpi-row kpi-4">
+      <div class="kpi"><div class="kpi-label">Sessions</div><div class="kpi-val c-blue">${fmt.n(ga4.sessions)}</div><div class="kpi-sub">${dateLabel()}</div></div>
+      <div class="kpi"><div class="kpi-label">Users</div><div class="kpi-val c-blue">${fmt.n(ga4.users)}</div><div class="kpi-sub">Unique visitors</div></div>
+      <div class="kpi"><div class="kpi-label">🔵 Paid Search</div><div class="kpi-val c-blue">${fmt.n(ga4.channels['Paid Search']||0)}</div><div class="kpi-sub">${ga4.sessions>0?fmt.pct0((ga4.channels['Paid Search']||0)/ga4.sessions):'—'} of total</div></div>
+      <div class="kpi"><div class="kpi-label">🟢 Organic</div><div class="kpi-val c-green">${fmt.n(ga4.channels['Organic Search']||0)}</div><div class="kpi-sub">${ga4.sessions>0?fmt.pct0((ga4.channels['Organic Search']||0)/ga4.sessions):'—'} of total</div></div>
+    </div>
+    <div class="chart-row chart-11">
+      <div class="chart-card"><div class="chart-card-title">Sessions by Channel</div><div class="chart-wrap"><canvas id="c-ga4-ch"></canvas></div></div>
+      <div class="chart-card"><div class="chart-card-title">Top Countries</div><div class="chart-wrap"><canvas id="c-ga4-ct"></canvas></div></div>
+    </div>
+    <div class="chart-row" style="grid-template-columns:1fr">
+      <div class="chart-card"><div class="chart-card-title">Daily Sessions</div><div class="chart-wrap"><canvas id="c-ga4-daily"></canvas></div></div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <!-- ── INSIGHTS ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#d2a8ff"></div>
+      <div class="section-title">💡 Insights & Recommendations</div>
+    </div>
+    <div class="insights-card">
+      ${ins.map(i=>`<div class="insight-item"><span class="insight-icon">${i.icon}</span><div class="insight-text">${i.text}</div></div>`).join('')}
+    </div>
+  </div>`;
+
+  makeAllTablesSortable();
+
+  /* ── CHARTS ── */
+  const C={blue:'#58a6ff',green:'#3fb950',purple:'#d2a8ff',yellow:'#e3b341',red:'#f85149',teal:'#39d353',orange:'#f0883e',pink:'#ff7b72',cyan:'#79c0ff'};
+  const PAL=[C.blue,C.green,C.purple,C.yellow,C.orange,C.teal,C.red,C.pink,C.cyan];
+  const OPTS = { responsive:true, maintainAspectRatio:false };
+
+  // ROAS daily chart
+  if (allDates.length) {
+    const roasVals = allDates.map(d=>{
+      const sp=gadsDailyFull[d]?.spend||0;
+      const rv=salesDailyFull[d]?.revenue||0;
+      return sp>0?+(rv/sp).toFixed(2):null;
+    });
+    CHARTS['roas-d']=new Chart(document.getElementById('c-roas-daily'),{
+      data:{labels:allDates.map(d=>d.slice(5)),datasets:[
+        {type:'bar',label:'Revenue ($)',data:allDates.map(d=>+(salesDailyFull[d]?.revenue||0).toFixed(0)),backgroundColor:'#3fb95055',borderColor:C.green,borderWidth:1,yAxisID:'y'},
+        {type:'bar',label:'Ad Spend ($)',data:allDates.map(d=>+(gadsDailyFull[d]?.spend||0).toFixed(0)),backgroundColor:'#f8514944',borderColor:C.red,borderWidth:1,yAxisID:'y'},
+        {type:'line',label:'ROAS',data:roasVals,borderColor:C.yellow,backgroundColor:'transparent',borderWidth:2,pointRadius:3,tension:0.3,yAxisID:'y2',spanGaps:false}
+      ]},
+      options:{...OPTS,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',labels:{boxWidth:10}}},
+        scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:45}},y:{grid:{color:'#21262d'},ticks:{callback:v=>'$'+v},stacked:false},y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'x'},suggestedMin:0}}}
+    });
+  }
+
+  // Service charts
+  const svcSorted=Object.entries(sales.byService).sort((a,b)=>b[1].revenue-a[1].revenue).slice(0,8);
+  if(svcSorted.length){
+    CHARTS['svc-r']=new Chart(document.getElementById('c-svc-rev'),{type:'bar',data:{labels:svcSorted.map(([k])=>k.length>24?k.slice(0,24)+'…':k),datasets:[{label:'Revenue',data:svcSorted.map(([,v])=>v.revenue),backgroundColor:PAL.map(c=>c+'88'),borderColor:PAL,borderWidth:1}]},options:{indexAxis:'y',...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'},ticks:{callback:v=>'$'+v}},y:{grid:{color:'#21262d'},ticks:{font:{size:10}}}}}});
+    CHARTS['svc-d']=new Chart(document.getElementById('c-svc-deals'),{type:'bar',data:{labels:svcSorted.map(([k])=>k.length>24?k.slice(0,24)+'…':k),datasets:[{label:'Deals',data:svcSorted.map(([,v])=>v.deals),backgroundColor:C.purple+'88',borderColor:C.purple,borderWidth:1}]},options:{indexAxis:'y',...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'}},y:{grid:{color:'#21262d'},ticks:{font:{size:10}}}}}});
+  }
+
+  // GHL
+  if(ghlDates.length){
+    CHARTS['ghl-d']=new Chart(document.getElementById('c-ghl-daily'),{type:'bar',data:{labels:ghlDates.map(d=>d.slice(5)),datasets:[
+      {label:'Calls',data:ghlDates.map(d=>ghlDailyFull[d]?.call||0),backgroundColor:'#1f6feb66',borderColor:C.blue,borderWidth:1,stack:'s'},
+      {label:'Forms',data:ghlDates.map(d=>ghlDailyFull[d]?.form||0),backgroundColor:'#23863666',borderColor:C.green,borderWidth:1,stack:'s'}
+    ]},options:{...OPTS,plugins:{legend:{position:'top',labels:{boxWidth:10}}},scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:45}},y:{grid:{color:'#21262d'},stacked:true}}}});
+  }
+  const srcTop=Object.entries(ghl.sources).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  if(srcTop.length){
+    CHARTS['ghl-s']=new Chart(document.getElementById('c-ghl-sources'),{type:'doughnut',data:{labels:srcTop.map(([k])=>k.length>28?k.slice(0,28)+'…':k),datasets:[{data:srcTop.map(([,v])=>v),backgroundColor:PAL,borderWidth:2,borderColor:'#161b22'}]},options:{...OPTS,plugins:{legend:{position:'right',labels:{boxWidth:10,font:{size:9},color:'#8b949e'}}}}});
+  }
+
+  // Google Ads
+  if(allDates.length){
+    CHARTS['gads-d']=new Chart(document.getElementById('c-gads-daily'),{data:{labels:allDates.map(d=>d.slice(5)),datasets:[
+      {type:'bar',label:'Spend ($)',data:allDates.map(d=>+(gadsDailyFull[d]?.spend||0).toFixed(0)),backgroundColor:'#1f6feb44',borderColor:C.blue,borderWidth:1,yAxisID:'y'},
+      {type:'line',label:'Conversions',data:allDates.map(d=>+(gadsDailyFull[d]?.conv||0).toFixed(1)),borderColor:C.green,backgroundColor:'#23863622',borderWidth:2,pointRadius:2,tension:0.35,fill:true,yAxisID:'y2'}
+    ]},options:{...OPTS,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',labels:{boxWidth:10}}},scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:45}},y:{grid:{color:'#21262d'},ticks:{callback:v=>'$'+v}},y2:{position:'right',grid:{display:false}}}}});
+  }
+  const cSort=Object.entries(gads.campaigns).sort((a,b)=>b[1].conv-a[1].conv).slice(0,8);
+  if(cSort.length){
+    CHARTS['gads-c']=new Chart(document.getElementById('c-gads-camp'),{type:'bar',data:{labels:cSort.map(([k])=>k.length>22?k.slice(0,22)+'…':k),datasets:[{label:'Conv.',data:cSort.map(([,v])=>+v.conv.toFixed(1)),backgroundColor:C.green+'88',borderColor:C.green,borderWidth:1}]},options:{indexAxis:'y',...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'}},y:{grid:{color:'#21262d'},ticks:{font:{size:10}}}}}});
+  }
+
+  // GA4
+  const chSort=Object.entries(ga4.channels).sort((a,b)=>b[1]-a[1]);
+  if(chSort.length){
+    CHARTS['ga4-ch']=new Chart(document.getElementById('c-ga4-ch'),{type:'bar',data:{labels:chSort.map(([k])=>k),datasets:[{data:chSort.map(([,v])=>v),backgroundColor:PAL.map(c=>c+'88'),borderColor:PAL,borderWidth:1}]},options:{...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:30}},y:{grid:{color:'#21262d'}}}}});
+  }
+  const ctSort=Object.entries(ga4.countries).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  if(ctSort.length){
+    CHARTS['ga4-ct']=new Chart(document.getElementById('c-ga4-ct'),{type:'bar',data:{labels:ctSort.map(([k])=>k),datasets:[{data:ctSort.map(([,v])=>v),backgroundColor:C.purple+'88',borderColor:C.purple,borderWidth:1}]},options:{indexAxis:'y',...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'}},y:{grid:{color:'#21262d'},ticks:{font:{size:10}}}}}});
+  }
+  if(ga4Dates.length){
+    CHARTS['ga4-d']=new Chart(document.getElementById('c-ga4-daily'),{type:'line',data:{labels:ga4Dates.map(d=>d.slice(5)),datasets:[{label:'Sessions',data:ga4Dates.map(d=>ga4DailyFull[d]||0),borderColor:C.yellow,backgroundColor:C.yellow+'22',borderWidth:2,pointRadius:2,tension:0.35,fill:true}]},options:{...OPTS,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:45}},y:{grid:{color:'#21262d'}}}}});
+  }
+}
+
+
+/* ── TABLE SORTING ── */
+function parseCell(cell) {
+  if (cell.dataset && cell.dataset.sort) return cell.dataset.sort;
+  let t = cell.textContent.trim().replace(/[$,]/g, '');
+  if (t === '—' || t === '') return null;
+  t = t.replace(/%$/, '').replace(/x$/, '');
+  const n = parseFloat(t);
+  return isNaN(n) ? t.toLowerCase() : n;
+}
+
+function makeTableSortable(table) {
+  const ths = table.querySelectorAll('thead th');
+  ths.forEach((th, ci) => {
+    th.classList.add('sortable');
+    let descending = true;
+    th.addEventListener('click', () => {
+      ths.forEach(t => t.classList.remove('sort-asc', 'sort-desc'));
+      th.classList.add(descending ? 'sort-desc' : 'sort-asc');
+      const tbody = table.querySelector('tbody');
+      if (!tbody) return;
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      rows.sort((a, b) => {
+        const av = parseCell(a.cells[ci]);
+        const bv = parseCell(b.cells[ci]);
+        if (av === null) return 1;
+        if (bv === null) return -1;
+        if (typeof av === 'string' && typeof bv === 'string')
+          return descending ? bv.localeCompare(av) : av.localeCompare(bv);
+        return descending ? bv - av : av - bv;
+      });
+      rows.forEach(r => tbody.appendChild(r));
+      descending = !descending;
+    });
+  });
+}
+
+function makeAllTablesSortable() {
+  document.querySelectorAll('table').forEach(t => makeTableSortable(t));
+}
+
+/* ── DATE CONTROLS ── */
+function setPreset(p) {
+  dateConfig.preset=p;
+  if(p==='yesterday')      {dateConfig.from=yesterday();dateConfig.to=yesterday();}
+  else if(p==='today')     {dateConfig.from=today();    dateConfig.to=today();}
+  else if(p==='last_7d')   {dateConfig.from=daysAgo(7); dateConfig.to=yesterday();}
+  else if(p==='last_30d')  {dateConfig.from=daysAgo(30);dateConfig.to=yesterday();}
+  if(p!=='custom') reload();
+  else {
+    document.querySelectorAll('.date-preset-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.date-preset-btn')[4].classList.add('active');
+    const w=document.getElementById('custom-wrap');
+    if(w) w.classList.add('visible');
+  }
+}
+function applyCustom() {
+  const f=document.getElementById('date-from')?.value;
+  const t=document.getElementById('date-to')?.value;
+  if(!f||!t) return;
+  dateConfig.from=f; dateConfig.to=t; dateConfig.preset='custom';
+  reload();
+}
+
+/* ── INIT ── */
+function setMsg(t){const e=document.getElementById('load-msg');if(e)e.textContent=t;}
+
+async function reload() {
+  destroyCharts();
+  document.getElementById('app').innerHTML=`<div class="center-box"><div class="spinner"></div><div class="loading-label" id="load-msg">Loading…</div></div>`;
+  try {
+    const {ghl,gads,ga4,keywords,salesData,ghlWeekly,gadsWeekly}=await fetchAll();
+    renderApp(ghl,gads,ga4,keywords,salesData,ghlWeekly,gadsWeekly);
+  } catch(e) {
+    document.getElementById('app').innerHTML=`<div class="center-box"><div class="error-box">❌ Error: <strong>${e.message}</strong></div><button class="btn" onclick="reload()" style="margin-top:16px">↻ Retry</button></div>`;
+  }
+}
+
+window.addEventListener('load', reload);
+</script>
+</body>
+</html>
