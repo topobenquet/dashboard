@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10",
+  "lastUpdated": "2026-06-11",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -5432,6 +5432,72 @@
       "finder": "Fernando",
       "closer": "Fernando",
       "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "Lisseth",
+      "product": "I-601A",
+      "service": "I-601A Waiver",
+      "finder": "Fernando",
+      "closer": "Tony",
+      "amount": 1300.0,
+      "paidStatus": "Pending",
+      "isPaid": false
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "Omar",
+      "product": "I-130 1st Step",
+      "service": "I-130 Family Sponsorship",
+      "finder": "Hector",
+      "closer": "Laura",
+      "amount": 500.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "Khaled",
+      "product": "NVC",
+      "service": "NVC Processing",
+      "finder": "Hector",
+      "closer": "Laura",
+      "amount": 350.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "Consuelo Sawali",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "MIchael Washington",
+      "product": "Special",
+      "service": "Other",
+      "finder": "Fernando",
+      "closer": "Hector",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-10",
+      "customer": "Maria Maya",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 100.0,
       "paidStatus": "Paid",
       "isPaid": true
     },
