@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paraguay Transfers — Dashboard Live</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #F0F4F8; color: #1F2937; padding: 20px; line-height: 1.5; font-size: 13px;
+}
+.page-header { display:flex; align-items:baseline; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+.page-header h1 { font-size:20px; font-weight:700; color:#1F4E78; }
+.page-header .subtitle { font-size:12px; color:#6B7280; }
+.section { margin-bottom:24px; }
+.section-title { font-size:11px; font-weight:700; color:#1F4E78; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:10px; }
+
+/* KPI CARDS */
+.kpi-row { display:grid; gap:10px; margin-bottom:14px; }
+.kpi-row-5 { grid-template-columns:repeat(5,1fr); }
+.kpi-row-4 { grid-template-columns:repeat(4,1fr); }
+.kpi-row-3 { grid-template-columns:repeat(3,1fr); }
+@media(max-width:800px){ .kpi-row-5,.kpi-row-4,.kpi-row-3{ grid-template-columns:repeat(2,1fr); } }
+.kpi { background:white; border-radius:10px; padding:13px 15px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.kpi-label { font-size:10px; color:#6B7280; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:3px; }
+.kpi-value { font-size:21px; font-weight:700; color:#1F4E78; font-variant-numeric:tabular-nums; }
+.kpi-compare { font-size:11px; margin-top:3px; color:#9CA3AF; }
+.kpi-sub { font-size:10px; color:#9CA3AF; margin-top:1px; }
+.kpi-blue { background:linear-gradient(135deg,#2E75B6,#1F4E78); border:none; }
+.kpi-blue .kpi-label { color:rgba(255,255,255,.8); }
+.kpi-blue .kpi-value { color:white; font-size:24px; }
+.kpi-blue .kpi-compare { color:rgba(255,255,255,.7); }
+.kpi-green { background:linear-gradient(135deg,#059669,#047857); border:none; }
+.kpi-green .kpi-label { color:rgba(255,255,255,.8); }
+.kpi-green .kpi-value { color:white; font-size:24px; }
+.kpi-green .kpi-compare { color:rgba(255,255,255,.7); }
+
+/* UP/DOWN */
+.up   { color:#059669; font-weight:700; }
+.down { color:#DC2626; font-weight:700; }
+.neu  { color:#9CA3AF; }
+
+/* CARDS */
+.card { background:white; border-radius:10px; padding:16px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.card-title { font-size:12px; font-weight:600; color:#374151; margin-bottom:12px; }
+.chart-box { height:200px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:700px){ .grid-2{ grid-template-columns:1fr; } }
+
+/* FIXED TABLES */
+.ft-wrap { overflow-x:auto; }
+table.ft { table-layout:fixed; width:100%; border-collapse:collapse; font-size:11.5px; min-width:680px; }
+table.ft thead tr { background:#1F4E78; }
+table.ft th { color:white; font-size:10px; font-weight:600; padding:8px 5px; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+table.ft th:first-child { text-align:left; }
+table.ft td { padding:6px 5px; border-bottom:1px solid #F3F4F6; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+table.ft td:first-child { text-align:left; }
+table.ft tbody tr:hover { background:#F8FAFC; }
+table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDBFE; }
+.pos { color:#059669; font-weight:600; }
+.neg { color:#DC2626; font-weight:600; }
+
+/* INFO BOXES */
+.info-box { border-radius:8px; padding:11px 14px; font-size:12px; margin-bottom:10px; }
+.info-green { background:#F0FDF4; border:1px solid #BBF7D0; color:#166534; }
+.info-blue  { background:#EFF6FF; border:1px solid #BFDBFE; color:#1E40AF; }
+.info-amber { background:#FFFBEB; border:1px solid #FDE68A; color:#92400E; }
+.info-gray  { background:#F9FAFB; border:1px solid #E5E7EB; color:#6B7280; }
+
+/* PILLS */
+.pill { display:inline-block; border-radius:999px; padding:2px 7px; font-size:9px; font-weight:600; }
+.pill-na{background:#DBEAFE;color:#1D4ED8;} .pill-sa{background:#D1FAE5;color:#065F46;}
+.pill-eu{background:#FEF3C7;color:#92400E;} .pill-as{background:#FCE7F3;color:#9D174D;}
+.pill-ot{background:#F3F4F6;color:#6B7280;}
+
+/* LOADING */
+.loading-spin { display:inline-block; width:11px; height:11px; border:2px solid #E5E7EB; border-top-color:#2E75B6; border-radius:50%; animation:spin .8s linear infinite; vertical-align:middle; margin-right:4px; }
+@keyframes spin { to{ transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>🚗 Paraguay Transfers</h1>
+  <span class="subtitle">Dashboard Live · 12 Jun 2026</span>
+</div>
+
+<!-- ══ SECTION 1: KPIs MAYO vs ABRIL ══ -->
+<div class="section">
+  <div class="section-title">Junio 2026 — mes actual vs Mayo</div>
+  <div class="kpi-row kpi-row-5" id="kpiMain"></div>
+  <div class="kpi-row kpi-row-4" id="kpiAds"></div>
+</div>
+
+<!-- ══ SECTION 2: COMPARACIÓN PERIODO (Windsor.ai live) ══ -->
+<div class="section">
+  <div class="section-title">Google Ads — Junio 1-12 vs Mayo 1-12 (live)</div>
+  <div class="info-box info-gray" id="liveStatus">
+    <span class="loading-spin"></span> Cargando datos en vivo…
+  </div>
+  <div id="livePeriodSection"></div>
+</div>
+
+<!-- ══ SECTION 3: TABLA MENSUAL ══ -->
+<div class="section">
+  <div class="section-title">Operacional mensual 2026</div>
+  <div class="ft-wrap">
+    <table class="ft">
+      <colgroup>
+        <col style="width:7%">  <!-- Mes -->
+        <col style="width:5%">  <!-- Leads -->
+        <col style="width:5%">  <!-- Ventas -->
+        <col style="width:7%">  <!-- Revenue -->
+        <col style="width:7%">  <!-- %Cierre -->
+        <col style="width:7%">  <!-- Chofer -->
+        <col style="width:6%">  <!-- Comb -->
+        <col style="width:5%">  <!-- Peaj -->
+        <col style="width:6%">  <!-- Com -->
+        <col style="width:6%">  <!-- G.Ads -->
+        <col style="width:6%">  <!-- Meta -->
+        <col style="width:5%">  <!-- Otros -->
+        <col style="width:7%">  <!-- Ganancia -->
+        <col style="width:6%">  <!-- Margen -->
+        <col style="width:7%">  <!-- $/trip -->
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Mes</th><th>Leads</th><th>Ventas</th>
+          <th>Revenue</th><th>%Cierre</th>
+          <th>Chofer</th><th>Comb.</th><th>Peaj.</th><th>Com.</th>
+          <th>G.Ads</th><th>Meta</th><th>Otros</th>
+          <th>Ganancia</th><th>Margen</th><th>$/trip</th>
+        </tr>
+      </thead>
+      <tbody id="monthlyBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ SECTION 4: CHARTS ══ -->
+<div class="section grid-2">
+  <div class="card">
+    <div class="card-title">Revenue · Ganancia · Ventas por mes</div>
+    <div class="chart-box"><canvas id="chartMonthly"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">Ads Spend — Google Ads vs Meta por mes</div>
+    <div class="chart-box"><canvas id="chartAds"></canvas></div>
+  </div>
+</div>
+
+<!-- ══ SECTION 5: GOOGLE ADS HISTÓRICO ══ -->
+<div class="section">
+  <div class="section-title">Google Ads — histórico mensual 2026</div>
+  <div class="ft-wrap">
+    <table class="ft">
+      <colgroup>
+        <col style="width:10%"><col style="width:9%"><col style="width:9%">
+        <col style="width:9%"><col style="width:8%"><col style="width:8%">
+        <col style="width:9%"><col style="width:8%">
+        <col style="width:20%"><col style="width:10%">
+      </colgroup>
+      <thead>
+        <tr><th>Mes</th><th>Spend</th><th>Clicks</th><th>Impr.</th>
+          <th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th>
+          <th>Campaña top</th><th>CPA top</th></tr>
+      </thead>
+      <tbody id="adsBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ SECTION 6: % CIERRE DÍA A DÍA ══ -->
+<div class="section">
+  <div class="section-title">% Cierre — Junio 2026 día a día (al 12 Jun)</div>
+  <div class="kpi-row kpi-row-4" id="closingKPIs"></div>
+  <div class="info-box info-green">
+    ✅ <strong>GHL conectado</strong> — Leads = contactos nuevos por día.
+    Ventas = fecha de reserva (Balance Traslados). Datos al 12 Jun 2026.
+  </div>
+  <div class="ft-wrap" style="margin-top:10px;">
+    <table class="ft" id="dailyTable">
+      <colgroup>
+        <col style="width:10%"><col style="width:10%"><col style="width:9%">
+        <col style="width:11%"><col style="width:11%"><col style="width:11%">
+        <col style="width:12%"><col style="width:13%"><col style="width:13%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Fecha</th><th>Leads GHL</th><th>Ventas</th>
+          <th>Conv. G.Ads</th><th>Spend G.Ads</th><th>Spend Meta</th>
+          <th>% Cierre</th><th>Leads acum.</th><th>Ventas acum.</th>
+        </tr>
+      </thead>
+      <tbody id="dailyBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ SECTION 7: PAÍSES ══ -->
+<div class="section">
+  <div class="section-title">Clientes por país — YTD 2026</div>
+  <div class="kpi-row kpi-row-4" id="countryKPIs" style="margin-bottom:12px;"></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Top 10 países — Revenue</div>
+      <div class="chart-box"><canvas id="chartCountry"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Detalle por país (top 15)</div>
+      <div class="ft-wrap" style="max-height:240px;overflow-y:auto;">
+        <table class="ft">
+          <colgroup>
+            <col style="width:28%"><col style="width:14%">
+            <col style="width:22%"><col style="width:18%"><col style="width:18%">
+          </colgroup>
+          <thead><tr><th>País</th><th>Trips</th><th>Revenue</th><th>Ticket</th><th>Región</th></tr></thead>
+          <tbody id="countryBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
+  Paraguay Transfers · Dashboard Live · Google Ads + Meta (Windsor.ai) · GHL · Balance Traslados (Google Drive)
+</div>
+
+<script>
+/* ════════════════════════════════════════════
+   STATIC DATA — synced daily 7am
+   Last sync: 2026-06-12
+   ════════════════════════════════════════════ */
+const monthly = [
+  { mes:"Enero",  leads:211, reservas:11, revenue:2915, chofer:799,  comb:150, peajes:29,  comision:87,  gAds:153, meta:0,   otros:73  },
+  { mes:"Febrero",leads:135, reservas:23, revenue:9189, chofer:5292, comb:490, peajes:93,  comision:261, gAds:292, meta:22,  otros:115 },
+  { mes:"Marzo",  leads:220, reservas:20, revenue:7311, chofer:4722, comb:92,  peajes:10,  comision:218, gAds:367, meta:156, otros:5   },
+  { mes:"Abril",  leads:149, reservas:15, revenue:5487, chofer:3177, comb:82,  peajes:10,  comision:126, gAds:535, meta:115, otros:5   },
+  { mes:"Mayo",   leads:182, reservas:20, revenue:5443, chofer:2543, comb:170, peajes:22,  comision:154, gAds:464, meta:90,  otros:8   },
+  { mes:"Junio*", leads:51,  reservas:11, revenue:1598, chofer:437,  comb:253, peajes:8,   comision:48,  gAds:53,  meta:0,   otros:0   },
+];
+monthly.forEach(m => {
+  m.costos   = m.chofer + m.comb + m.peajes + m.comision + m.gAds + m.meta + m.otros;
+  m.ganancia = m.revenue - m.costos;
+  m.margen   = m.revenue > 0 ? m.ganancia / m.revenue : 0;
+  m.perTrip  = m.reservas > 0 ? m.ganancia / m.reservas : 0;
+  m.cierre   = m.leads > 0 ? m.reservas / m.leads : 0;
+});
+
+const googleAdsMonthly = [
+  { mes:"Enero",   spend:384.57, clicks:430,  impr:4241,  conv:24.0  },
+  { mes:"Febrero", spend:238.71, clicks:214,  impr:2047,  conv:15.6  },
+  { mes:"Marzo",   spend:368.17, clicks:174,  impr:1297,  conv:10.4  },
+  { mes:"Abril",   spend:430.94, clicks:902,  impr:23985, conv:121.0 },
+  { mes:"Mayo",    spend:352.88, clicks:3837, impr:80189, conv:573.0 },
+  { mes:"Junio*",  spend:52.92,  clicks:29,   impr:272,   conv:7.0   },
+];
+googleAdsMonthly.forEach(m => {
+  m.ctr = m.impr>0 ? m.clicks/m.impr : 0;
+  m.cpc = m.clicks>0 ? m.spend/m.clicks : 0;
+  m.cpa = m.conv>0  ? m.spend/m.conv  : 0;
+  m.campTop = (m.mes.startsWith("Abril")||m.mes.startsWith("Mayo")||m.mes.startsWith("Junio")) ? "PMax Iguazu ASU" : "Search PT/ES";
+  m.cpaTop  = m.cpa;
+});
+
+// Mayo 1-11 reference (mes anterior día N)
+const MAY123_GADS  = 174.21;
+const MAY123_META  = 38.42;
+
+// GHL contacts per day — Junio 2026
+const ghlDailyJun = {
+  "2026-06-01":6,"2026-06-02":8,"2026-06-03":7,"2026-06-05":4,"2026-06-06":3,"2026-06-07":4,"2026-06-08":3,"2026-06-09":5,"2026-06-10":6,"2026-06-11":5,
+};
+
+// Ventas (bookings) per day from Google Sheets — Fecha de Reserva Junio 2026
+const sheetDailyJunVentas = {"2026-06-04":2,"2026-06-07":2,"2026-06-08":1,"2026-06-10":1};
+
+// Meta Ads daily spend Junio (Windsor.ai)
+const metaDailyJun = {};
+
+// Trips by country
+const trips = [
+  {p:"USA",r:397},{p:"USA",r:307},{p:"USA",r:467},{p:"USA",r:39},
+  {p:"Rusia",r:297},{p:"Paraguay",r:39},{p:"Argentina",r:994},{p:"Paraguay",r:297},
+  {p:"Otros",r:39},{p:"USA",r:39},{p:"Brasil",r:297},{p:"Francia",r:397},
+  {p:"Bolivia",r:597},{p:"USA",r:39},{p:"China",r:327},{p:"Brasil",r:39},
+  {p:"Rusia",r:347},{p:"USA",r:78},{p:"Holanda",r:157},{p:"USA",r:49},
+  {p:"USA",r:734},{p:"Perú",r:1127},{p:"Chile",r:454},{p:"Chile",r:1127},
+  {p:"China",r:39},{p:"Chile",r:217},{p:"Paraguay",r:49},{p:"USA",r:237},
+  {p:"USA",r:347},{p:"USA",r:1318},{p:"Brasil",r:1047},{p:"Ecuador",r:49},
+  {p:"Uruguay",r:117},{p:"Paraguay",r:49},{p:"Alemania",r:118},{p:"Paraguay",r:137},
+  {p:"Paraguay",r:137},{p:"Brasil",r:87},{p:"UK",r:447},{p:"Argentina",r:454},
+  {p:"Brasil",r:1407},{p:"UK",r:69},{p:"USA",r:544},{p:"UK",r:69},
+  {p:"Filipinas",r:214},{p:"España",r:347},{p:"Suiza",r:40},{p:"Italia",r:1327},
+  {p:"UK",r:637},{p:"Suiza",r:407},{p:"USA",r:49},{p:"Brasil",r:39},
+  {p:"España",r:460},{p:"Argentina",r:297},{p:"Brasil",r:315},{p:"Brasil",r:39},
+  {p:"USA",r:497},{p:"USA",r:69},{p:"USA",r:69},{p:"USA",r:69},
+  {p:"Italia",r:30},{p:"Brasil",r:107},{p:"Brasil",r:397},{p:"México",r:1547},
+  {p:"Panamá",r:945},{p:"Argentina",r:210},{p:"Paraguay",r:49},{p:"UK",r:49},
+  {p:"Suiza",r:377},{p:"Argentina",r:267},{p:"Paraguay",r:49},{p:"Brasil",r:347},
+  {p:"Argentina",r:83},{p:"USA",r:49},{p:"Chile",r:597},{p:"Paraguay",r:627},
+  {p:"USA",r:424},{p:"España",r:197},{p:"Brasil",r:544},{p:"Paraguay",r:49},
+  {p:"Italia",r:98},{p:"Japón",r:257},{p:"Brasil",r:694},
+  {p:"Canadá",r:97},{p:"China",r:39},
+];
+
+const regionMap = {
+  "USA":"Norteamérica","México":"Norteamérica","Panamá":"Norteamérica","Canadá":"Norteamérica",
+  "Paraguay":"Sudamérica","Brasil":"Sudamérica","Argentina":"Sudamérica","Chile":"Sudamérica",
+  "Uruguay":"Sudamérica","Bolivia":"Sudamérica","Ecuador":"Sudamérica","Perú":"Sudamérica",
+  "España":"Europa","UK":"Europa","Francia":"Europa","Italia":"Europa",
+  "Alemania":"Europa","Suiza":"Europa","Holanda":"Europa","Rusia":"Europa",
+  "China":"Asia/Pacífico","Filipinas":"Asia/Pacífico","Japón":"Asia/Pacífico",
+};
+const rClass = {"Norteamérica":"pill-na","Sudamérica":"pill-sa","Europa":"pill-eu","Asia/Pacífico":"pill-as"};
+
+/* ════════════════════════════════════════════
+   HELPERS
+   ════════════════════════════════════════════ */
+const f$ = n => (n<0?"-$":"$")+Math.abs(Math.round(n)).toLocaleString("en-US");
+const fp = n => (n*100).toFixed(1)+"%";
+const fn = n => Math.round(n).toLocaleString("en-US");
+const fd2 = n => n.toFixed(2);
+
+function badge(cur, prev, lowerIsBetter=false) {
+  if(!prev||prev===0) return `<span class="neu">–</span>`;
+  const diff=cur-prev, pct=diff/Math.abs(prev);
+  const good = lowerIsBetter ? diff<=0 : diff>=0;
+  return `<span class="${good?"up":"down"}">${diff>=0?"▲":"▼"} ${fp(Math.abs(pct))}</span>`;
+}
+
+function kpi(label, val, compareHtml, sub="", cls="") {
+  return `<div class="kpi${cls?" "+cls:""}">
+    <div class="kpi-label">${label}</div>
+    <div class="kpi-value">${val}</div>
+    <div class="kpi-compare">${compareHtml}</div>
+    ${sub?`<div class="kpi-sub">${sub}</div>`:""}
+  </div>`;
+}
+
+/* ════════════════════════════════════════════
+   MAIN KPIs
+   ════════════════════════════════════════════ */
+function renderKPIs() {
+  const m = monthly[5], p = monthly[4];
+  document.getElementById("kpiMain").innerHTML = [
+    kpi("Revenue Junio*", f$(m.revenue),
+      badge(m.revenue,p.revenue)+` vs May`, `May: ${f$(p.revenue)}`, "kpi-blue"),
+    kpi("Ganancia Junio*", f$(m.ganancia),
+      badge(m.ganancia,p.ganancia)+` vs May`, `May: ${f$(p.ganancia)}`),
+    kpi("Ventas Junio*", m.reservas,
+      badge(m.reservas,p.reservas)+` vs May`, `May: ${p.reservas}`, "kpi-green"),
+    kpi("Margen Junio*", fp(m.margen),
+      badge(m.margen,p.margen)+` vs May`, `May: ${fp(p.margen)}`),
+    kpi("% Cierre Junio*", fp(m.cierre),
+      badge(m.cierre,p.cierre)+` vs May`, `${m.leads} leads · ${m.reservas} ventas`),
+  ].join("");
+
+  document.getElementById("kpiAds").innerHTML = [
+    kpi("G.Ads Spend Junio*", f$(m.gAds),
+      badge(m.gAds,p.gAds,true)+` vs May`, `May: ${f$(p.gAds)}`),
+    kpi("Meta Spend Junio*", f$(m.meta),
+      badge(m.meta,p.meta,true)+` vs May`, `May: ${f$(p.meta)}`),
+    kpi("Total Ads Junio*", f$(m.gAds+m.meta),
+      badge(m.gAds+m.meta,p.gAds+p.meta,true)+` vs May`, `May: ${f$(p.gAds+p.meta)}`),
+    kpi("CPA G.Ads Junio*", f$(googleAdsMonthly[5].cpa),
+      badge(googleAdsMonthly[5].cpa,googleAdsMonthly[4].cpa,true)+` vs May`,
+      `May: ${f$(googleAdsMonthly[4].cpa)}`),
+  ].join("");
+}
+
+/* ════════════════════════════════════════════
+   MONTHLY TABLE
+   ════════════════════════════════════════════ */
+function renderMonthly() {
+  let rows = "";
+  monthly.forEach((m,i) => {
+    rows += `<tr>
+      <td><strong>${m.mes}</strong></td>
+      <td>${m.leads}</td>
+      <td>${m.reservas}</td>
+      <td>${f$(m.revenue)}</td>
+      <td class="${m.cierre>=0.12?"pos":"neu"}">${fp(m.cierre)}</td>
+      <td>${f$(m.chofer)}</td>
+      <td>${f$(m.comb)}</td>
+      <td>${f$(m.peajes)}</td>
+      <td>${f$(m.comision)}</td>
+      <td>${f$(m.gAds)}</td>
+      <td>${m.meta>0?f$(m.meta):"–"}</td>
+      <td>${m.otros>0?f$(m.otros):"–"}</td>
+      <td class="${m.ganancia>=0?"pos":"neg"}">${f$(m.ganancia)}</td>
+      <td>${fp(m.margen)}</td>
+      <td>${f$(m.perTrip)}</td>
+    </tr>`;
+  });
+  const y = monthly.reduce((a,m)=>({
+    leads:a.leads+m.leads, reservas:a.reservas+m.reservas,
+    revenue:a.revenue+m.revenue, chofer:a.chofer+m.chofer,
+    comb:a.comb+m.comb, peajes:a.peajes+m.peajes,
+    comision:a.comision+m.comision, gAds:a.gAds+m.gAds,
+    meta:a.meta+m.meta, otros:a.otros+m.otros, ganancia:a.ganancia+m.ganancia,
+  }),{leads:0,reservas:0,revenue:0,chofer:0,comb:0,peajes:0,comision:0,gAds:0,meta:0,otros:0,ganancia:0});
+  rows += `<tr class="hi">
+    <td>YTD</td><td>${y.leads}</td><td>${y.reservas}</td>
+    <td>${f$(y.revenue)}</td>
+    <td class="pos">${fp(y.reservas/y.leads)}</td>
+    <td>${f$(y.chofer)}</td><td>${f$(y.comb)}</td>
+    <td>${f$(y.peajes)}</td><td>${f$(y.comision)}</td>
+    <td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td><td>${f$(y.otros)}</td>
+    <td class="pos">${f$(y.ganancia)}</td>
+    <td>${fp(y.ganancia/y.revenue)}</td>
+    <td>${f$(y.ganancia/y.reservas)}</td>
+  </tr>`;
+  document.getElementById("monthlyBody").innerHTML = rows;
+}
+
+/* ════════════════════════════════════════════
+   GOOGLE ADS HISTORY TABLE
+   ════════════════════════════════════════════ */
+function renderAdsTable() {
+  let rows = "";
+  googleAdsMonthly.forEach(m => {
+    rows += `<tr>
+      <td><strong>${m.mes}</strong></td>
+      <td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td><td>${fn(m.impr)}</td>
+      <td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td>
+      <td>${m.conv.toFixed(1)}</td><td>${f$(m.cpa)}</td>
+      <td style="font-size:10px;">${m.campTop}</td><td>${f$(m.cpaTop)}</td>
+    </tr>`;
+  });
+  const yt = googleAdsMonthly.reduce((a,m)=>({spend:a.spend+m.spend,clicks:a.clicks+m.clicks,impr:a.impr+m.impr,conv:a.conv+m.conv}),{spend:0,clicks:0,impr:0,conv:0});
+  rows += `<tr class="hi">
+    <td>YTD</td><td>${f$(yt.spend)}</td><td>${fn(yt.clicks)}</td>
+    <td>${fn(yt.impr)}</td><td>${fp(yt.clicks/yt.impr)}</td>
+    <td>$${fd2(yt.spend/yt.clicks)}</td><td>${yt.conv.toFixed(1)}</td>
+    <td>${f$(yt.spend/yt.conv)}</td><td>–</td><td>–</td>
+  </tr>`;
+  document.getElementById("adsBody").innerHTML = rows;
+}
+
+/* ════════════════════════════════════════════
+   CHARTS
+   ════════════════════════════════════════════ */
+function renderCharts() {
+  new Chart(document.getElementById("chartMonthly"),{
+    type:"bar",
+    data:{labels:monthly.map(m=>m.mes),datasets:[
+      {label:"Revenue",data:monthly.map(m=>m.revenue),backgroundColor:"#2E75B6",yAxisID:"y",order:2},
+      {label:"Ganancia",data:monthly.map(m=>m.ganancia),backgroundColor:"#10B981",yAxisID:"y",order:1},
+      {label:"Ventas",data:monthly.map(m=>m.reservas),type:"line",borderColor:"#F59E0B",
+       backgroundColor:"transparent",yAxisID:"y2",tension:0.3,order:0,pointRadius:4,borderWidth:2},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      scales:{
+        y:{beginAtZero:true,ticks:{callback:v=>"$"+(v/1000).toFixed(0)+"k"},grid:{color:"#F3F4F6"}},
+        y2:{position:"right",beginAtZero:true,grid:{drawOnChartArea:false},ticks:{color:"#F59E0B",font:{size:10}}}
+      },
+      plugins:{legend:{labels:{boxWidth:12,font:{size:11}}},
+        tooltip:{callbacks:{label:ctx=>ctx.dataset.label==="Ventas"?`Ventas: ${ctx.parsed.y}`:`${ctx.dataset.label}: ${f$(ctx.parsed.y)}`}}}
+    }
+  });
+  new Chart(document.getElementById("chartAds"),{
+    type:"bar",
+    data:{labels:monthly.map(m=>m.mes),datasets:[
+      {label:"Google Ads",data:monthly.map(m=>m.gAds),backgroundColor:"#2E75B6",stack:"s"},
+      {label:"Meta Ads",  data:monthly.map(m=>m.meta),backgroundColor:"#7C3AED",stack:"s"},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      scales:{y:{beginAtZero:true,stacked:true,ticks:{callback:v=>"$"+v},grid:{color:"#F3F4F6"}},x:{stacked:true}},
+      plugins:{legend:{labels:{boxWidth:12,font:{size:11}}},
+        tooltip:{callbacks:{footer:items=>`Total: $${items.reduce((s,i)=>s+i.parsed.y,0).toFixed(0)}`}}}
+    }
+  });
+}
+
+/* ════════════════════════════════════════════
+   CLOSING RATE TABLE
+   ════════════════════════════════════════════ */
+function renderClosingRate(gAdsDaily) {
+  const m = monthly[5], p = monthly[4];
+  document.getElementById("closingKPIs").innerHTML = [
+    kpi("Leads Junio* (GHL)", m.leads, badge(m.leads,p.leads)+` vs May (${p.leads})`),
+    kpi("% Cierre Junio*", fp(m.cierre), badge(m.cierre,p.cierre)+` vs May (${fp(p.cierre)})`),
+    kpi("% Cierre YTD", fp(monthly.reduce((s,x)=>s+x.reservas,0)/monthly.reduce((s,x)=>s+x.leads,0)), "Ene–Jun 2026"),
+    kpi("Leads por venta", m.reservas>0?(m.leads/m.reservas).toFixed(1):"–", `${m.reservas} ventas · ${m.leads} leads`),
+  ].join("");
+
+  const allDates = Object.keys(ghlDailyJun).sort();
+  let rows = "", cumLeads=0, cumVentas=0;
+  allDates.forEach(d => {
+    const dayFmt = d.substring(5).replace("-","/");
+    const leads  = ghlDailyJun[d] || 0;
+    const ventas = sheetDailyJunVentas[d] || 0;
+    const conv   = gAdsDaily[d]?.conv  || 0;
+    const gSpend = gAdsDaily[d]?.spend || 0;
+    const mSpend = metaDailyJun[d] || 0;
+    cumLeads  += leads;
+    cumVentas += ventas;
+    const cierreDay = leads>0 ? ventas/leads : null;
+    const cierre7   = cumLeads>0 ? cumVentas/cumLeads : null;
+    rows += `<tr>
+      <td>${dayFmt}</td>
+      <td><strong>${leads}</strong></td>
+      <td class="${ventas>0?"pos":""}">${ventas>0?ventas:"–"}</td>
+      <td>${conv>0?conv.toFixed(1):"–"}</td>
+      <td>${gSpend>0?f$(gSpend):"–"}</td>
+      <td>${mSpend>0?f$(mSpend):"–"}</td>
+      <td class="${cierreDay!==null&&cierreDay>=0.12?"pos":"neu"}">${cierreDay!==null?fp(cierreDay):"–"}</td>
+      <td>${cumLeads}</td>
+      <td class="${cumVentas>0?"pos":""}">${cumVentas}</td>
+    </tr>`;
+  });
+  document.getElementById("dailyBody").innerHTML = rows;
+}
+
+/* ════════════════════════════════════════════
+   COUNTRIES
+   ════════════════════════════════════════════ */
+function renderCountries() {
+  const byC={};
+  trips.forEach(t=>{
+    if(!byC[t.p]) byC[t.p]={p:t.p,trips:0,rev:0,reg:regionMap[t.p]||"Otros"};
+    byC[t.p].trips++; byC[t.p].rev+=t.r;
+  });
+  const arr=Object.values(byC).map(c=>({...c,ticket:c.rev/c.trips})).sort((a,b)=>b.rev-a.rev);
+  const topV=arr.slice().sort((a,b)=>b.trips-a.trips)[0], topR=arr[0];
+  const topT=arr.filter(c=>c.trips>=2).sort((a,b)=>b.ticket-a.ticket)[0];
+  document.getElementById("countryKPIs").innerHTML=[
+    {l:"Países",v:arr.length,s:`de ${[...new Set(arr.map(c=>c.reg))].length} regiones`},
+    {l:"Top volumen",v:topV.p,s:`${topV.trips} traslados`},
+    {l:"Top revenue",v:topR.p,s:f$(topR.rev)},
+    {l:"Mejor ticket",v:topT.p,s:`${f$(topT.ticket)}/trip`},
+  ].map(k=>`<div class="kpi"><div class="kpi-label">${k.l}</div>
+    <div class="kpi-value" style="font-size:18px;">${k.v}</div>
+    <div class="kpi-compare">${k.s}</div></div>`).join("");
+  document.getElementById("countryBody").innerHTML=arr.slice(0,15).map(c=>
+    `<tr><td><strong>${c.p}</strong></td><td>${c.trips}</td><td>${f$(c.rev)}</td>
+     <td>${f$(c.ticket)}</td>
+     <td><span class="pill ${rClass[c.reg]||"pill-ot"}">${c.reg||"Otros"}</span></td></tr>`
+  ).join("");
+  const top10=arr.slice(0,10);
+  const rc={"Norteamérica":"#2E75B6","Sudamérica":"#10B981","Europa":"#F59E0B","Asia/Pacífico":"#EF4444","Otros":"#9CA3AF"};
+  new Chart(document.getElementById("chartCountry"),{
+    type:"bar",
+    data:{labels:top10.map(c=>c.p),datasets:[{label:"Revenue",data:top10.map(c=>c.rev),
+      backgroundColor:top10.map(c=>rc[c.reg]||"#9CA3AF"),borderRadius:4}]},
+    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${f$(ctx.parsed.x)} · ${top10[ctx.dataIndex].trips} trips`}}},
+      scales:{x:{beginAtZero:true,ticks:{callback:v=>f$(v),font:{size:10}}}}}
+  });
+}
+
+/* ════════════════════════════════════════════
+   STATIC PERIOD COMPARISON (Jun 1-11 datos al 11/6)
+   ════════════════════════════════════════════ */
+// Google Ads daily Junio data (de Windsor.ai, sync 12/6)
+const gAdsDailyJunStatic = {
+  "2026-06-01":{spend:3.66,conv:0},"2026-06-02":{spend:0.43,conv:0},"2026-06-03":{spend:1.99,conv:0},
+  "2026-06-04":{spend:3.85,conv:0},"2026-06-05":{spend:3.83,conv:2},"2026-06-06":{spend:9.69,conv:1},"2026-06-07":{spend:0,conv:0},"2026-06-08":{spend:5.81,conv:0},
+  "2026-06-09":{spend:1.99,conv:0},"2026-06-10":{spend:14.46,conv:3},"2026-06-11":{spend:7.20,conv:1},"2026-06-12":{spend:0,conv:0},
+};
+
+function renderPeriodStatic() {
+  const dayOfMonth = 12;
+  const JUN_GADS = monthly[5].gAds;
+  const JUN_META = monthly[5].meta;
+  const JUN_CONV = googleAdsMonthly[5].conv;
+  const totalJunAds = JUN_GADS + JUN_META;
+  const totalMayAds = MAY123_GADS + MAY123_META;
+  const mayConvEst  = googleAdsMonthly[4].conv*(dayOfMonth/31);
+  const cpaJun = JUN_CONV>0 ? JUN_GADS/JUN_CONV : 0;
+
+  document.getElementById("liveStatus").style.display="none";
+  document.getElementById("livePeriodSection").innerHTML = `
+    <div class="info-box info-blue" style="margin-bottom:12px;">
+      📊 Junio 1-12 vs Mayo 1-12 · Datos estáticos al 12/6/2026
+    </div>
+    <div class="kpi-row kpi-row-4">
+      ${kpi(`G.Ads Spend Jun 1-11`, f$(JUN_GADS),
+        badge(JUN_GADS,MAY123_GADS,true)+` vs May 1-11`,`May: ${f$(MAY123_GADS)}`)}
+      ${kpi(`Meta Spend Jun 1-11`, f$(JUN_META),
+        badge(JUN_META,MAY123_META,true)+` vs May 1-11`,`May: ${f$(MAY123_META)}`)}
+      ${kpi(`Total Ads Jun 1-11`, f$(totalJunAds),
+        badge(totalJunAds,totalMayAds,true)+` vs May 1-11`,`May: ${f$(totalMayAds)}`)}
+      ${kpi(`Conv. G.Ads Jun 1-11`, JUN_CONV.toFixed(1),
+        badge(JUN_CONV,mayConvEst)+` vs May 1-11`,`CPA: ${cpaJun>0?f$(cpaJun):"–"}`)}
+    </div>`;
+
+  renderClosingRate(gAdsDailyJunStatic);
+}
+
+/* ════════════════════════════════════════════
+   INIT
+   ════════════════════════════════════════════ */
+function init() {
+  renderKPIs();
+  renderMonthly();
+  renderAdsTable();
+  renderCharts();
+  renderCountries();
+  renderPeriodStatic();
+}
+
+
+init();
+</script>
+</body>
+</html>
