@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11",
+  "lastUpdated": "2026-06-12",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -5443,8 +5443,8 @@
       "finder": "Fernando",
       "closer": "Tony",
       "amount": 1300.0,
-      "paidStatus": "Pending",
-      "isPaid": false
+      "paidStatus": "Paid",
+      "isPaid": true
     },
     {
       "date": "2026-06-10",
@@ -5502,15 +5502,70 @@
       "isPaid": true
     },
     {
-      "date": "2026-06-12",
-      "customer": "Eloisa Ruiz",
-      "product": "I-90/912",
+      "date": "2026-06-11",
+      "customer": "Michael Ciorcari",
+      "product": "I-90",
       "service": "I-90 Green Card Renewal",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 100.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-11",
+      "customer": "Hycanth Wallace",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
       "finder": "David",
+      "closer": "David",
+      "amount": 400.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-11",
+      "customer": "Julio Vargas",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "Hector",
       "closer": "Hector",
       "amount": 100.0,
-      "paidStatus": "Pending",
-      "isPaid": false
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-11",
+      "customer": "Consuelo Sawali",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 150.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-11",
+      "customer": "John Kong",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-11",
+      "customer": "Liliana Ramirez",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
     },
     {
       "date": "2026-06-18",
