@@ -71,10 +71,10 @@
   .bsl-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 3px; vertical-align: middle; }
   .footer { text-align: center; padding: 24px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); margin-top: 32px; }
   @media (max-width: 768px) { .container { padding: 16px; } .header { padding: 16px; flex-direction: column; gap: 12px; text-align: center; } }
+
 </style>
 </head>
 <body>
-
 <div class="header">
   <div class="header-logo">
     <div class="header-logo-icon">PW</div>
@@ -84,13 +84,11 @@
     </div>
   </div>
   <div class="header-meta">
-    <div class="header-date">June 2026</div>
+    <div class="header-date">Range: 2026-06-01 → 2026-06-16 (MTD)</div>
     <div class="header-updated" id="last-updated">Last updated: June 16, 2026 at 7:00 AM</div>
   </div>
 </div>
-
 <div class="container">
-
   <div class="month-progress">
     <div class="month-progress-top">
       <div class="month-progress-label">June 2026 &mdash; Day <strong id="days-elapsed">16</strong> of <strong>30</strong></div>
@@ -99,488 +97,50 @@
     <div class="month-bar-wrap"><div class="month-bar" id="month-bar" style="width:53%"></div></div>
   </div>
 
-  <!-- PACING -->
   <div class="section-title">Monthly Pacing &mdash; June 2026</div>
   <div class="table-wrap" style="margin-bottom:20px;">
     <div style="padding:16px 20px;">
       <table>
-        <thead>
-          <tr>
-            <th>Channel</th><th>Monthly Budget</th><th>Spent MTD</th><th>% Budget Used</th>
-            <th>Pacing vs. Expected</th><th>Budget Remaining</th>
-            <th>Projected EOM</th><th>Conv MTD</th><th>ROAS</th><th>Status</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th>Channel</th><th>Monthly Budget</th><th>Spent MTD</th><th>% Budget Used</th>
+          <th>Pacing vs. Expected</th><th>Budget Remaining</th><th>Projected EOM</th><th>Conv MTD</th><th>ROAS</th><th>Status</th>
+        </tr></thead>
         <tbody id="pacing-tbody"></tbody>
       </table>
     </div>
   </div>
 
-  <!-- WEEKLY SUMMARY -->
-  <div class="section-title">Weekly Summary &mdash; All Platforms</div>
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Spend by Platform &amp; Week</div>
-        <div class="table-header-sub">June 2026 &middot; Apple &amp; Google App week estimates based on daily average</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Week</th><th>Meta Ads</th><th>G. Search</th><th>G. PMax</th><th>TikTok</th><th>Apple ASA</th><th>G. App</th><th>Total</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 &ndash; Jun 7 (7d)</td>
-          <td>$3,789.9</td><td>$4,508.3</td><td>$5,814.9</td><td>$383.0</td>
-          <td class="dimmed">~$246.0 est.</td><td>$164.7</td>
-          <td><strong>$14,906.7</strong></td>
-        </tr>
-        <tr>
-          <td>Jun 8 &ndash; Jun 14 (7d)</td>
-          <td>$4,467.8</td><td>$4,607.2</td><td>$6,078.1</td><td>$440.4</td>
-          <td class="dimmed">~$105.4 est. (thru Jun 10)</td><td>$158.2</td>
-          <td><strong>$15,857.1</strong></td>
-        </tr>
-        <tr>
-          <td>Jun 15 &ndash; Jun 16 (2d, partial)</td>
-          <td>$646.6</td><td>$561.1</td><td>$772.1</td><td>$67.9</td>
-          <td class="dimmed">&mdash;</td><td>$26.5</td>
-          <td><strong>$2,074.1</strong></td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total (16d)</td>
-          <td>$8,904.3</td><td>$9,676.5</td><td>$12,665.1</td><td>$891.3</td>
-          <td>$351.4</td><td>$349.4</td><td>$32,837.9</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- META ADS -->
-  <div class="section-title">Meta Ads <span class="badge-live">&#9679; LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$8,904.3</div><div class="kpi-sub">of $19,300 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">1,429,057</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">21,233</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">1.49%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.42</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Conversions</div><div class="kpi-value">618</div><div class="kpi-sub">MTD est. &middot; CPA $14.4</div></div>
-    <div class="kpi-card"><div class="kpi-label">ROAS</div><div class="kpi-value" style="color:var(--green)">14.9x</div><div class="kpi-sub">Purchase value $132,812</div></div>
-    <div class="kpi-card"><div class="kpi-label">Remarketing</div><div class="kpi-value" style="color:var(--gold)">$981.3</div><div class="kpi-sub">11.0% of Meta spend</div></div>
-    <div class="kpi-card"><div class="kpi-label">Daily Avg Spend</div><div class="kpi-value">$556.5</div><div class="kpi-sub">Need $743/day</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div><div class="table-header-title">Weekly Performance &mdash; Meta Ads</div><div class="table-header-sub">June 2026</div></div>
-    </div>
-    <table>
-      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th><th>Reach</th></tr></thead>
-      <tbody>
-        <tr><td>Jun 1 &ndash; Jun 7</td><td>$3,789.9</td><td>614,020</td><td>10,438</td><td>1.70%</td><td>$0.36</td><td>263</td><td style="color:var(--green)">15.4x</td><td>355,120</td></tr>
-        <tr><td>Jun 8 &ndash; Jun 14</td><td>$4,467.8</td><td>708,385</td><td>9,469</td><td>1.34%</td><td>$0.47</td><td>310</td><td style="color:var(--green)">14.9x</td><td>359,900</td></tr>
-        <tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$646.6</td><td>106,652</td><td>1,326</td><td>1.24%</td><td>$0.49</td><td>45</td><td style="color:var(--green)">12.1x</td><td>49,507</td></tr>
-        <tr class="tr-total"><td>MTD Total</td><td>$8,904.3</td><td>1,429,057</td><td>21,233</td><td>1.49%</td><td>$0.42</td><td>618</td><td style="color:var(--green)">14.9x</td><td>764,527</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div><div class="table-header-title">By Campaign &mdash; Meta Ads MTD</div><div class="table-header-sub">June 1&ndash;16, 2026 &middot; $981.3 isolated as Remarketing (11.0%)</div></div>
-    </div>
-    <table>
-      <thead><tr><th>Campaign</th><th>Segment</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr></thead>
-      <tbody>
-        <tr><td>All Stores | Broad</td><td style="color:var(--blue)">Prospecting</td><td>$6,340.0</td><td class="positive">71.2%</td><td>1,028,022</td><td>11,933</td><td>1.16%</td><td>$0.53</td><td>440</td><td style="color:var(--green)">14.6x</td></tr>
-        <tr><td>All Stores | LAL</td><td style="color:var(--blue)">Prospecting</td><td>$1,583.0</td><td class="positive">17.8%</td><td>273,424</td><td>6,152</td><td>2.25%</td><td>$0.26</td><td>110</td><td style="color:var(--green)">12.2x</td></tr>
-        <tr class="tr-subtotal"><td>NonBrand Subtotal</td><td></td><td>$7,923.0</td><td class="positive">89.0%</td><td>1,301,446</td><td>18,085</td><td>1.39%</td><td>$0.44</td><td>550</td><td style="color:var(--green)">14.1x</td></tr>
-        <tr><td>Remarketing | Website Visitors</td><td style="color:var(--gold)">Remarketing</td><td>$380.7</td><td style="color:var(--gold)">4.3%</td><td>56,178</td><td>1,149</td><td>2.05%</td><td>$0.33</td><td>26</td><td style="color:var(--green)">13.1x</td></tr>
-        <tr><td>Remarketing | Menu Browsers</td><td style="color:var(--gold)">Remarketing</td><td>$245.3</td><td style="color:var(--gold)">2.8%</td><td>24,846</td><td>887</td><td>3.57%</td><td>$0.28</td><td>17</td><td style="color:var(--green)">31.8x</td></tr>
-        <tr><td>All Stores | RMK</td><td style="color:var(--gold)">Remarketing</td><td>$179.8</td><td style="color:var(--gold)">2.0%</td><td>27,257</td><td>331</td><td>1.21%</td><td>$0.54</td><td>12</td><td style="color:var(--green)">32.3x</td></tr>
-        <tr><td>Remarketing | Cart Abandoners</td><td style="color:var(--gold)">Remarketing</td><td>$175.5</td><td style="color:var(--gold)">2.0%</td><td>19,330</td><td>781</td><td>4.04%</td><td>$0.22</td><td>12</td><td style="color:var(--green)">13.1x</td></tr>
-        <tr class="tr-subtotal"><td>Remarketing Subtotal</td><td></td><td>$981.3</td><td style="color:var(--gold)">11.0%</td><td>127,611</td><td>3,148</td><td>2.47%</td><td>$0.31</td><td>67</td><td style="color:var(--green)">21.3x</td></tr>
-        <tr class="tr-total"><td>Total</td><td></td><td>$8,904.3</td><td>100%</td><td>1,429,057</td><td>21,233</td><td>1.49%</td><td>$0.42</td><td>618</td><td style="color:var(--green)">14.9x</td></tr>
-      </tbody>
-    </table>
-    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Spend distribution &mdash; Prospecting vs Remarketing</div>
-      <div class="brand-split-wrap">
-        <div class="brand-split-bar">
-          <div class="brand-split-seg seg-nonbrand" style="width:89.0%" title="NonBrand/Prospecting 89.0%"></div>
-          <div class="brand-split-seg seg-rmk"      style="width:11.0%" title="Remarketing 11.0%"></div>
-        </div>
-      </div>
-      <div class="brand-split-legend">
-        <span><span class="bsl-dot" style="background:var(--blue)"></span>Prospecting 89.0% ($7,923.0)</span>
-        <span><span class="bsl-dot" style="background:var(--gold)"></span>Remarketing 11.0% ($981.3) &mdash; excluded from Brand/NonBrand analysis</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- GOOGLE SEARCH -->
-  <div class="section-title">Google Search <span class="badge-live">&#9679; LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$9,676.5</div><div class="kpi-sub">of $18,600 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">578,972</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">23,833</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">4.12%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.41</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Conversions</div><div class="kpi-value">820</div><div class="kpi-sub">MTD est. &middot; CPA $11.8</div></div>
-    <div class="kpi-card"><div class="kpi-label">ROAS</div><div class="kpi-value" style="color:var(--green)">9.1x</div><div class="kpi-sub">Conv. value $88,373</div></div>
-    <div class="kpi-card"><div class="kpi-label">Remarketing</div><div class="kpi-value" style="color:var(--gold)">$970.9</div><div class="kpi-sub">10.0% of Search spend</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">97.5%</div><div class="kpi-sub">ON PACE &middot; proj $18,144</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Weekly &mdash; Google Search &middot; Brand / NonBrand / Remarketing</div>
-        <div class="table-header-sub">Brand/NonBrand % calculated excluding RMK &middot; RMK % shown vs total Search &middot; weekly $ estimated from MTD proportions</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Week</th><th>Total Spend</th>
-          <th>NonBrand $</th><th>NB %</th>
-          <th>Brand $</th><th>Brand %</th>
-          <th>Remarketing $</th><th>RMK %</th>
-          <th>Conv</th><th>ROAS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 &ndash; Jun 7</td><td>$4,508.3</td>
-          <td class="positive">$2,928.5</td><td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$1,127.6</td><td style="color:var(--purple)">27.8%</td>
-          <td style="color:var(--gold)">$452.2</td><td style="color:var(--gold)">10.0%</td>
-          <td>382</td><td style="color:var(--green)">10.2x</td>
-        </tr>
-        <tr>
-          <td>Jun 8 &ndash; Jun 14</td><td>$4,607.2</td>
-          <td class="positive">$2,992.8</td><td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$1,152.3</td><td style="color:var(--purple)">27.8%</td>
-          <td style="color:var(--gold)">$462.1</td><td style="color:var(--gold)">10.0%</td>
-          <td>390</td><td style="color:var(--green)">8.7x</td>
-        </tr>
-        <tr>
-          <td>Jun 15 &ndash; Jun 16 (partial)</td><td>$561.1</td>
-          <td class="positive">$364.4</td><td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$140.3</td><td style="color:var(--purple)">27.8%</td>
-          <td style="color:var(--gold)">$56.3</td><td style="color:var(--gold)">10.0%</td>
-          <td>48</td><td style="color:var(--green)">4.0x</td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total</td><td>$9,676.5</td>
-          <td class="positive">$6,283.7</td><td class="positive">72.2%</td>
-          <td style="color:var(--purple)">$2,421.9</td><td style="color:var(--purple)">27.8%</td>
-          <td style="color:var(--gold)">$970.9</td><td style="color:var(--gold)">10.0%</td>
-          <td>820</td><td style="color:var(--green)">9.1x</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Campaign Breakdown &mdash; Google Search MTD</div>
-        <div class="table-header-sub">June 1&ndash;16, 2026 &middot; RMK excluded from Brand/NonBrand split</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Campaign</th><th>Type</th><th>Spend</th><th>Split % (excl. RMK)</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Search | NonBrand | All Stores</td><td style="color:var(--blue)">NonBrand</td><td>$6,283.7</td><td class="positive">72.2%</td><td>518,325</td><td>8,663</td><td>1.67%</td><td>$0.73</td><td>532</td><td style="color:var(--yellow)">2.9x</td></tr>
-        <tr><td>Search | Brand | All Stores</td><td style="color:var(--purple)">Brand</td><td>$2,421.9</td><td style="color:var(--purple)">27.8%</td><td>51,935</td><td>13,969</td><td>26.90%</td><td>$0.17</td><td>205</td><td style="color:var(--green)">24.7x</td></tr>
-        <tr><td>Search RMK | Visitors</td><td style="color:var(--gold)">Remarketing</td><td>$477.2</td><td style="color:var(--gold)">&mdash;</td><td>6,520</td><td>711</td><td>10.90%</td><td>$0.67</td><td>40</td><td style="color:var(--green)">10.6x</td></tr>
-        <tr><td>Search RMK | Menu Browsers</td><td style="color:var(--gold)">Remarketing</td><td>$303.9</td><td style="color:var(--gold)">&mdash;</td><td>895</td><td>269</td><td>30.06%</td><td>$1.13</td><td>26</td><td style="color:var(--green)">10.7x</td></tr>
-        <tr><td>Search RMK | Cart Abandoners</td><td style="color:var(--gold)">Remarketing</td><td>$189.8</td><td style="color:var(--gold)">&mdash;</td><td>1,297</td><td>221</td><td>17.04%</td><td>$0.86</td><td>16</td><td style="color:var(--green)">11.2x</td></tr>
-        <tr class="tr-total"><td>Total</td><td></td><td>$9,676.5</td><td>&mdash;</td><td>578,972</td><td>23,833</td><td>4.12%</td><td>$0.41</td><td>820</td><td style="color:var(--green)">9.1x</td></tr>
-      </tbody>
-    </table>
-    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Brand vs NonBrand split &mdash; calculated excluding Remarketing</div>
-      <div class="brand-split-wrap">
-        <div class="brand-split-bar">
-          <div class="brand-split-seg seg-nonbrand" style="width:72.2%" title="NonBrand 72.2%"></div>
-          <div class="brand-split-seg seg-brand"    style="width:27.8%" title="Brand 27.8%"></div>
-        </div>
-      </div>
-      <div class="brand-split-legend">
-        <span><span class="bsl-dot" style="background:var(--blue)"></span>NonBrand 72.2% ($6,283.7)</span>
-        <span><span class="bsl-dot" style="background:var(--purple)"></span>Brand 27.8% ($2,421.9)</span>
-        <span><span class="bsl-dot" style="background:var(--gold)"></span>Remarketing $970.9 (10.0% of total Search) &mdash; isolated, not part of split</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- GOOGLE PMAX -->
-  <div class="section-title">Google PMax <span class="badge-live">&#9679; LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$12,665.1</div><div class="kpi-sub">of $25,200 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">1,213,020</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">42,320</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">3.49%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.30</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Conversions</div><div class="kpi-value">1,082</div><div class="kpi-sub">MTD est. &middot; CPA $11.7</div></div>
-    <div class="kpi-card"><div class="kpi-label">ROAS</div><div class="kpi-value" style="color:var(--green)">19.5x</div><div class="kpi-sub">Conv. value $246,303</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">94.2%</div><div class="kpi-sub">ON PACE &middot; proj $23,747</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Weekly &mdash; Google PMax &middot; Branded vs Non-Branded</div>
-        <div class="table-header-sub">MTD actuals; weekly brand split estimated from MTD campaign proportions</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Week</th><th>Total Spend</th><th>NonBrand $</th><th>NB %</th><th>Brand $</th><th>Brand %</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 &ndash; Jun 7</td><td>$5,814.9</td>
-          <td class="positive">$4,175.1</td><td class="positive">71.8%</td>
-          <td style="color:var(--purple)">$1,639.8</td><td style="color:var(--purple)">28.2%</td>
-          <td>641,953</td><td>20,438</td><td>3.18%</td><td>$0.28</td><td>497</td><td style="color:var(--green)">20.0x</td>
-        </tr>
-        <tr>
-          <td>Jun 8 &ndash; Jun 14</td><td>$6,078.1</td>
-          <td class="positive">$4,364.0</td><td class="positive">71.8%</td>
-          <td style="color:var(--purple)">$1,714.0</td><td style="color:var(--purple)">28.2%</td>
-          <td>513,500</td><td>19,516</td><td>3.80%</td><td>$0.31</td><td>519</td><td style="color:var(--green)">19.8x</td>
-        </tr>
-        <tr>
-          <td>Jun 15 &ndash; Jun 16 (partial)</td><td>$772.1</td>
-          <td class="positive">$554.4</td><td class="positive">71.8%</td>
-          <td style="color:var(--purple)">$217.7</td><td style="color:var(--purple)">28.2%</td>
-          <td>57,567</td><td>2,366</td><td>4.11%</td><td>$0.33</td><td>66</td><td style="color:var(--green)">12.7x</td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total</td><td>$12,665.1</td>
-          <td class="positive">$9,094.2</td><td class="positive">71.8%</td>
-          <td style="color:var(--purple)">$3,570.9</td><td style="color:var(--purple)">28.2%</td>
-          <td>1,213,020</td><td>42,320</td><td>3.49%</td><td>$0.30</td><td>1,082</td><td style="color:var(--green)">19.5x</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Campaign Breakdown &mdash; Google PMax MTD</div>
-        <div class="table-header-sub">June 1&ndash;16, 2026</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Campaign</th><th>Type</th><th>Spend</th><th>% of PMax</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>PMax | NonBrand | All Stores</td><td style="color:var(--blue)">NonBrand</td><td>$9,094.2</td><td class="positive">71.8%</td><td>1,056,151</td><td>21,081</td><td>2.00%</td><td>$0.43</td><td>777</td><td style="color:var(--green)">5.7x</td></tr>
-        <tr><td>PMax | Brand | All Stores</td><td style="color:var(--purple)">Brand</td><td>$3,570.9</td><td style="color:var(--purple)">28.2%</td><td>156,869</td><td>21,239</td><td>13.54%</td><td>$0.17</td><td>305</td><td style="color:var(--green)">54.4x</td></tr>
-        <tr class="tr-total"><td>Total</td><td></td><td>$12,665.1</td><td>100%</td><td>1,213,020</td><td>42,320</td><td>3.49%</td><td>$0.30</td><td>1,082</td><td style="color:var(--green)">19.5x</td></tr>
-      </tbody>
-    </table>
-    <div style="padding:12px 20px 16px; border-top:1px solid var(--border);">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">Spend distribution</div>
-      <div class="brand-split-wrap">
-        <div class="brand-split-bar">
-          <div class="brand-split-seg seg-nonbrand" style="width:71.8%" title="NonBrand 71.8%"></div>
-          <div class="brand-split-seg seg-brand"    style="width:28.2%" title="Brand 28.2%"></div>
-        </div>
-      </div>
-      <div class="brand-split-legend">
-        <span><span class="bsl-dot" style="background:var(--blue)"></span>NonBrand 71.8% ($9,094.2)</span>
-        <span><span class="bsl-dot" style="background:var(--purple)"></span>Brand 28.2% ($3,570.9)</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- COMBINED GOOGLE -->
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Combined Google Brand vs Non-Brand &mdash; Search + PMax MTD</div>
-        <div class="table-header-sub">Split % calculated excluding Remarketing &middot; Excluding App campaign &middot; June 1&ndash;16, 2026</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Segment</th><th>Search Spend</th><th>PMax Spend</th><th>Combined Spend</th><th>Split % (excl. RMK)</th><th>ROAS</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="color:var(--blue)"><strong>NonBrand</strong></td>
-          <td>$6,283.7</td><td>$9,094.2</td>
-          <td class="positive"><strong>$15,377.9</strong></td>
-          <td class="positive"><strong>72.0%</strong></td>
-          <td style="color:var(--yellow)">4.6x</td>
-        </tr>
-        <tr>
-          <td style="color:var(--purple)"><strong>Brand</strong></td>
-          <td>$2,421.9</td><td>$3,570.9</td>
-          <td style="color:var(--purple)"><strong>$5,992.8</strong></td>
-          <td style="color:var(--purple)"><strong>28.0%</strong></td>
-          <td style="color:var(--green)">42.4x</td>
-        </tr>
-        <tr>
-          <td style="color:var(--gold)"><strong>Remarketing</strong></td>
-          <td>$970.9</td><td>&mdash;</td>
-          <td style="color:var(--gold)"><strong>$970.9</strong></td>
-          <td style="color:var(--gold)">&mdash; isolated</td>
-          <td style="color:var(--green)">10.7x</td>
-        </tr>
-        <tr class="tr-total">
-          <td>Google Total (excl. App)</td>
-          <td>$9,676.5</td><td>$12,665.1</td>
-          <td>$22,341.6</td><td>&mdash;</td>
-          <td style="color:var(--green)">15.0x</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- TIKTOK -->
-  <div class="section-title">TikTok Ads <span class="badge-live">&#9679; LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$891.3</div><div class="kpi-sub">of $1,900 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">63,779</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">1,101</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CTR</div><div class="kpi-value">1.73%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPC</div><div class="kpi-value">$0.81</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Conversions</div><div class="kpi-value">73</div><div class="kpi-sub">MTD est. &middot; CPA $12.2</div></div>
-    <div class="kpi-card"><div class="kpi-label">ROAS</div><div class="kpi-value" style="color:var(--yellow)">2.1x</div><div class="kpi-sub">Revenue ~$1,872</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--yellow)">88.0%</div><div class="kpi-sub">UNDERPACING &middot; proj $1,671</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div><div class="table-header-title">Weekly Performance &mdash; TikTok Ads</div><div class="table-header-sub">June 2026</div></div>
-    </div>
-    <table>
-      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv</th><th>ROAS</th></tr></thead>
-      <tbody>
-        <tr><td>Jun 1 &ndash; Jun 7</td><td>$383.0</td><td>25,653</td><td>511</td><td>1.99%</td><td>$0.75</td><td>31</td><td style="color:var(--yellow)">2.1x</td></tr>
-        <tr><td>Jun 8 &ndash; Jun 14</td><td>$440.4</td><td>32,558</td><td>515</td><td>1.58%</td><td>$0.86</td><td>36</td><td style="color:var(--yellow)">2.1x</td></tr>
-        <tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$67.9</td><td>5,568</td><td>75</td><td>1.35%</td><td>$0.90</td><td>6</td><td style="color:var(--yellow)">2.1x</td></tr>
-        <tr class="tr-total"><td>MTD Total</td><td>$891.3</td><td>63,779</td><td>1,101</td><td>1.73%</td><td>$0.81</td><td>73</td><td style="color:var(--yellow)">2.1x</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- APPLE SEARCH ADS -->
-  <div class="section-title">Apple Search Ads <span class="badge-manual">MANUAL</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value" style="color:var(--orange)">$351.4</div><div class="kpi-sub">of $675 budget &middot; 52.1%</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">12,927</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Taps</div><div class="kpi-value">181</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Installs</div><div class="kpi-value">56</div><div class="kpi-sub">All install types</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPT</div><div class="kpi-value">$1.9</div><div class="kpi-sub">Cost per tap</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPA</div><div class="kpi-value">$6.3</div><div class="kpi-sub">Cost per install</div></div>
-    <div class="kpi-card"><div class="kpi-label">TTR</div><div class="kpi-value">1.4%</div><div class="kpi-sub">Tap-through rate</div></div>
-    <div class="kpi-card"><div class="kpi-label">CR (Total)</div><div class="kpi-value">30.9%</div><div class="kpi-sub">Taps &rarr; installs</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--orange)">156%</div><div class="kpi-sub">OVERPACING &middot; proj ~$1,054 &middot; data thru Jun 10</div></div>
-  </div>
-
-  <div class="alert danger" style="margin-top:-4px; margin-bottom:16px;">
-    <div>At current pace ($35.1/day, manual data thru Jun 10), Apple ASA will spend <strong>~$1,054</strong> in June &mdash; <strong>~$379 over the $675 budget</strong>. Food Delivery drives 99.2% of spend. Recommend reducing bids or setting a daily budget cap.</div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div>
-        <div class="table-header-title">Weekly Performance &mdash; Apple Search Ads</div>
-        <div class="table-header-sub">Campaign: Non Branded Jan 2026 (ID 2143202560) &middot; June 2026 &middot; Week estimates based on daily average</div>
-      </div>
-    </div>
-    <table>
-      <thead>
-        <tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Taps</th><th>Installs</th><th>TTR</th><th>CR (Total)</th><th>Avg CPT</th><th>Avg CPA</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Jun 1 &ndash; Jun 7 (est.)</td>
-          <td class="dimmed">~$246.0</td><td class="dimmed">~9,049</td><td class="dimmed">~127</td><td class="dimmed">~39</td>
-          <td>1.4%</td><td>30.7%</td><td>$1.9</td><td>$6.3</td>
-        </tr>
-        <tr>
-          <td>Jun 8 &ndash; Jun 10 (est., partial)</td>
-          <td class="dimmed">~$105.4</td><td class="dimmed">~3,878</td><td class="dimmed">~54</td><td class="dimmed">~17</td>
-          <td>1.4%</td><td>31.5%</td><td>$2.0</td><td>$6.2</td>
-        </tr>
-        <tr class="tr-total">
-          <td>MTD Total</td>
-          <td>$351.4</td><td>12,927</td><td>181</td><td>56</td>
-          <td>1.4%</td><td>30.9%</td><td>$1.9</td><td>$6.3</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- GOOGLE APP -->
-  <div class="section-title">Google App <span class="badge-live">&#9679; LIVE</span></div>
-
-  <div class="kpi-row">
-    <div class="kpi-card"><div class="kpi-label">Spend MTD</div><div class="kpi-value">$349.4</div><div class="kpi-sub">of $675 budget</div></div>
-    <div class="kpi-card"><div class="kpi-label">Impressions</div><div class="kpi-value">34,528</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">Clicks</div><div class="kpi-value">575</div><div class="kpi-sub">MTD</div></div>
-    <div class="kpi-card"><div class="kpi-label">CTR</div><div class="kpi-value">1.67%</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">CPC</div><div class="kpi-value">$0.61</div><div class="kpi-sub">All campaigns</div></div>
-    <div class="kpi-card"><div class="kpi-label">Installs</div><div class="kpi-value">46</div><div class="kpi-sub">MTD est.</div></div>
-    <div class="kpi-card"><div class="kpi-label">Avg CPI</div><div class="kpi-value">$7.6</div><div class="kpi-sub">Cost per install</div></div>
-    <div class="kpi-card"><div class="kpi-label">Pacing</div><div class="kpi-value" style="color:var(--green)">97.0%</div><div class="kpi-sub">ON PACE &middot; proj $655</div></div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-header">
-      <div><div class="table-header-title">Weekly Performance &mdash; Google App</div><div class="table-header-sub">June 2026</div></div>
-    </div>
-    <table>
-      <thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Installs</th><th>Avg CPI</th></tr></thead>
-      <tbody>
-        <tr><td>Jun 1 &ndash; Jun 7</td><td>$164.7</td><td>18,791</td><td>277</td><td>1.47%</td><td>$0.59</td><td>22</td><td>$7.5</td></tr>
-        <tr><td>Jun 8 &ndash; Jun 14</td><td>$158.2</td><td>13,359</td><td>263</td><td>1.97%</td><td>$0.60</td><td>21</td><td>$7.5</td></tr>
-        <tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$26.5</td><td>2,378</td><td>35</td><td>1.47%</td><td>$0.76</td><td>3</td><td>$8.8</td></tr>
-        <tr class="tr-total"><td>MTD Total</td><td>$349.4</td><td>34,528</td><td>575</td><td>1.67%</td><td>$0.61</td><td>46</td><td>$7.6</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- ALERTS -->
-  <div class="section-title">Alerts</div>
-  <div class="alert warning">
-    <div><strong>Meta &amp; TikTok underpacing:</strong> Meta $8,904.3 vs $10,293.3 expected (86.5%) &mdash; needs ~$743/day for remaining 14 days to hit budget. TikTok $891.3 vs $1,013.3 expected (88.0%) &mdash; needs ~$72/day.</div>
-  </div>
-  <div class="alert danger">
-    <div><strong>Apple Search Ads overpacing:</strong> $351.4 spent (manual, data thru Jun 10) vs $225.0 expected by Jun 10 (156%). At ~$35.1/day, projecting ~$1,054 EOM &mdash; ~$379 over $675 budget. Recommend reducing bids or pausing Food Delivery ad group. Awaiting manual refresh past Jun 10.</div>
-  </div>
-  <div class="alert info">
-    <div><strong>Remarketing isolated:</strong> $970.9 of Google Search (10.0%) and $981.3 of Meta Ads (11.0%) are remarketing &mdash; excluded from Brand vs Non-Brand analysis and tracked as a separate segment.</div>
-  </div>
-  <div class="alert info">
-    <div><strong>All 5 paid channels live:</strong> Google Search, Google PMax, Meta Ads, TikTok, Google App via Windsor.ai. Apple Search Ads updated manually.</div>
-  </div>
-
+  <div class='section-title'>Weekly Summary &mdash; All Platforms</div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Spend by Platform &amp; Week</div><div class='table-header-sub'>June 2026 &middot; Apple manual (data thru Jun 10), weekly estimates</div></div></div>
+<table><thead><tr><th>Week</th><th>Meta</th><th>Meta RMK</th><th>G.Search</th><th>G.RMK</th><th>G.PMax</th><th>TikTok</th><th>Apple</th><th>G.App</th><th>Total</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$3,288.0</td><td>$501.8</td><td>$4,040.4</td><td>$467.9</td><td>$5,814.9</td><td>$383.0</td><td class='dimmed'>~$246.0 est.</td><td>$164.7</td><td><strong>$14,906.7</strong></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$4,051.9</td><td>$415.9</td><td>$4,162.1</td><td>$445.1</td><td>$6,078.1</td><td>$440.4</td><td class='dimmed'>~$105.4 est.</td><td>$158.2</td><td><strong>$15,857.1</strong></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$713.1</td><td>$74.2</td><td>$519.9</td><td>$84.2</td><td>$833.4</td><td>$81.6</td><td class='dimmed'>&mdash;</td><td>$27.2</td><td><strong>$2,333.5</strong></td></tr><tr class='tr-total'><td>MTD Total (16d)</td><td>$8,053.0</td><td>$992.0</td><td>$8,722.4</td><td>$997.2</td><td>$12,726.4</td><td>$905.0</td><td>$351.4</td><td>$350.0</td><td>$33,097.3</td></tr></tbody></table></div>
+  <div class='section-title'>Meta Ads <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$8,053.0</div><div class='kpi-sub'>of $17,500.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>1,319,353</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>18,429</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>1.4%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.44</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>559</div><div class='kpi-sub'>MTD est. &middot; CPA $14.4</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--green)'>13.9x</div><div class='kpi-sub'>Revenue $112,287.2</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--yellow)'>86%</div><div class='kpi-sub'>UNDERPACING &middot; proj $15,099.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Meta Ads</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$3,288.0</td><td>552,194</td><td>8,967</td><td>1.6%</td><td>$0.37</td><td><span style='color:var(--green)'>13.9x</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$4,051.9</td><td>651,915</td><td>8,071</td><td>1.2%</td><td>$0.50</td><td><span style='color:var(--green)'>14.6x</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$713.1</td><td>115,244</td><td>1,391</td><td>1.2%</td><td>$0.51</td><td><span style='color:var(--green)'>10.4x</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$8,053.0</td><td>1,319,353</td><td>18,429</td><td>1.4%</td><td>$0.44</td><td><span style='color:var(--green)'>13.9x</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Meta Ads MTD</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>All Stores | Broad</td><td>$6,457.0</td><td>80.2%</td><td>1,044,322</td><td>12,220</td><td>1.2%</td><td>$0.53</td><td><span style='color:var(--green)'>14.4x</span></td></tr><tr><td>All Stores | LAL</td><td>$1,596.0</td><td>19.8%</td><td>275,031</td><td>6,209</td><td>2.3%</td><td>$0.26</td><td><span style='color:var(--green)'>12.1x</span></td></tr><tr class='tr-total'><td>Total</td><td>$8,053.0</td><td>100%</td><td>1,319,353</td><td>18,429</td><td>1.4%</td><td>$0.44</td><td><span style='color:var(--green)'>13.9x</span></td></tr></tbody></table></div>
+  <div class='section-title'>Meta Remarketing <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$992.0</div><div class='kpi-sub'>of $1,800.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>128,873</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>3,196</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>2.5%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.31</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>104</div><div class='kpi-sub'>MTD est. &middot; CPA $9.5</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--green)'>21.1x</div><div class='kpi-sub'>Revenue $20,881.3</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--green)'>103%</div><div class='kpi-sub'>ON PACE &middot; proj $1,860.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Meta Remarketing</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$501.8</td><td>61,826</td><td>1,471</td><td>2.4%</td><td>$0.34</td><td><span style='color:var(--green)'>24.9x</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$415.9</td><td>56,472</td><td>1,398</td><td>2.5%</td><td>$0.30</td><td><span style='color:var(--green)'>18.3x</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$74.2</td><td>10,575</td><td>327</td><td>3.1%</td><td>$0.23</td><td><span style='color:var(--green)'>10.4x</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$992.0</td><td>128,873</td><td>3,196</td><td>2.5%</td><td>$0.31</td><td><span style='color:var(--green)'>21.1x</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Meta Remarketing MTD</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Remarketing | Website Visitors</td><td>$384.1</td><td>38.7%</td><td>56,604</td><td>1,163</td><td>2.1%</td><td>$0.33</td><td><span style='color:var(--green)'>13.0x</span></td></tr><tr><td>Remarketing | Menu Browsers</td><td>$248.2</td><td>25.0%</td><td>25,146</td><td>909</td><td>3.6%</td><td>$0.27</td><td><span style='color:var(--green)'>31.4x</span></td></tr><tr><td>All Stores | RMK</td><td>$181.3</td><td>18.3%</td><td>27,469</td><td>331</td><td>1.2%</td><td>$0.55</td><td><span style='color:var(--green)'>32.0x</span></td></tr><tr><td>Remarketing | Cart Abandoners</td><td>$178.3</td><td>18.0%</td><td>19,654</td><td>793</td><td>4.0%</td><td>$0.22</td><td><span style='color:var(--green)'>12.9x</span></td></tr><tr class='tr-total'><td>Total</td><td>$992.0</td><td>100%</td><td>128,873</td><td>3,196</td><td>2.5%</td><td>$0.31</td><td><span style='color:var(--green)'>21.1x</span></td></tr></tbody></table></div>
+  <div class='section-title'>Google Search <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$8,722.4</div><div class='kpi-sub'>of $16,800.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>571,112</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>22,675</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>4.0%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.38</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>739</div><div class='kpi-sub'>MTD est. &middot; CPA $11.8</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--green)'>9.0x</div><div class='kpi-sub'>Revenue $78,201.6</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--green)'>97%</div><div class='kpi-sub'>ON PACE &middot; proj $16,354.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Google Search</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$4,040.4</td><td>274,598</td><td>10,972</td><td>4.0%</td><td>$0.37</td><td><span style='color:var(--green)'>10.1x</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$4,162.1</td><td>266,665</td><td>10,820</td><td>4.1%</td><td>$0.38</td><td><span style='color:var(--green)'>8.5x</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$519.9</td><td>29,849</td><td>883</td><td>3.0%</td><td>$0.59</td><td><span style='color:var(--green)'>3.4x</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$8,722.4</td><td>571,112</td><td>22,675</td><td>4.0%</td><td>$0.38</td><td><span style='color:var(--green)'>9.0x</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Google Search MTD</div><div class='table-header-sub'>June 1–16, 2026 &middot; Brand vs NonBrand</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Search | NonBrand | All Stores</td><td>$6,292.9</td><td>72.1%</td><td>519,017</td><td>8,671</td><td>1.7%</td><td>$0.73</td><td><span style='color:var(--green)'>2.9x</span></td></tr><tr><td>Search | Brand | All Stores</td><td>$2,429.5</td><td>27.9%</td><td>52,095</td><td>14,004</td><td>26.9%</td><td>$0.17</td><td><span style='color:var(--green)'>24.6x</span></td></tr><tr class='tr-total'><td>Total</td><td>$8,722.4</td><td>100%</td><td>571,112</td><td>22,675</td><td>4.0%</td><td>$0.38</td><td><span style='color:var(--green)'>9.0x</span></td></tr></tbody></table><div style='padding:12px 20px 16px;border-top:1px solid var(--border);'><div style='font-size:11px;color:var(--muted);margin-bottom:6px;'>Spend distribution</div><div class='brand-split-wrap'><div class='brand-split-bar'><div class='brand-split-seg seg-nonbrand' style='width:72.1%' title='NonBrand 72.1%'></div><div class='brand-split-seg seg-brand' style='width:27.9%' title='Brand 27.9%'></div></div></div><div class='brand-split-legend'><span><span class='bsl-dot' style='background:var(--blue)'></span>NonBrand 72.1% ($6,292.9)</span><span><span class='bsl-dot' style='background:var(--purple)'></span>Brand 27.9% ($2,429.5)</span></div></div></div>
+  <div class='section-title'>Google Remarketing <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$997.2</div><div class='kpi-sub'>of $1,800.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>8,908</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>1,227</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>13.8%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.81</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>125</div><div class='kpi-sub'>MTD est. &middot; CPA $8.0</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--green)'>10.5x</div><div class='kpi-sub'>Revenue $10,501.5</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--green)'>104%</div><div class='kpi-sub'>ON PACE &middot; proj $1,870.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Google Remarketing</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$467.9</td><td>4,682</td><td>587</td><td>12.5%</td><td>$0.80</td><td><span style='color:var(--green)'>11.2x</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$445.1</td><td>3,669</td><td>546</td><td>14.9%</td><td>$0.82</td><td><span style='color:var(--green)'>10.5x</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$84.2</td><td>557</td><td>94</td><td>16.9%</td><td>$0.90</td><td><span style='color:var(--green)'>6.8x</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$997.2</td><td>8,908</td><td>1,227</td><td>13.8%</td><td>$0.81</td><td><span style='color:var(--green)'>10.5x</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Google Remarketing MTD</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Search Remarketing | Visitors</td><td>$501.8</td><td>50.3%</td><td>6,694</td><td>732</td><td>10.9%</td><td>$0.69</td><td><span style='color:var(--green)'>10.2x</span></td></tr><tr><td>Search Remarketing | Menu Browsers</td><td>$303.9</td><td>30.5%</td><td>898</td><td>269</td><td>30.0%</td><td>$1.13</td><td><span style='color:var(--green)'>10.7x</span></td></tr><tr><td>Search Remarketing | Cart Abandoners</td><td>$191.6</td><td>19.2%</td><td>1,316</td><td>226</td><td>17.2%</td><td>$0.85</td><td><span style='color:var(--green)'>11.1x</span></td></tr><tr class='tr-total'><td>Total</td><td>$997.2</td><td>100%</td><td>8,908</td><td>1,227</td><td>13.8%</td><td>$0.81</td><td><span style='color:var(--green)'>10.5x</span></td></tr></tbody></table></div>
+  <div class='section-title'>Google PMax <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$12,726.4</div><div class='kpi-sub'>of $25,200.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>1,218,469</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>42,478</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>3.5%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.30</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>1,088</div><div class='kpi-sub'>MTD est. &middot; CPA $11.7</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--green)'>19.8x</div><div class='kpi-sub'>Revenue $251,431.8</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--green)'>95%</div><div class='kpi-sub'>ON PACE &middot; proj $23,862.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Google PMax</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$5,814.9</td><td>641,953</td><td>20,438</td><td>3.2%</td><td>$0.28</td><td><span style='color:var(--green)'>20.0x</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$6,078.1</td><td>513,500</td><td>19,516</td><td>3.8%</td><td>$0.31</td><td><span style='color:var(--green)'>20.6x</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$833.4</td><td>63,016</td><td>2,524</td><td>4.0%</td><td>$0.33</td><td><span style='color:var(--green)'>12.0x</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$12,726.4</td><td>1,218,469</td><td>42,478</td><td>3.5%</td><td>$0.30</td><td><span style='color:var(--green)'>19.8x</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Google PMax MTD</div><div class='table-header-sub'>June 1–16, 2026 &middot; Brand vs NonBrand</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>PMax | NonBrand  | All Stores</td><td>$9,133.4</td><td>71.8%</td><td>1,060,869</td><td>21,151</td><td>2.0%</td><td>$0.43</td><td><span style='color:var(--green)'>5.9x</span></td></tr><tr><td>PMax | Brand | All Stores</td><td>$3,593.0</td><td>28.2%</td><td>157,600</td><td>21,327</td><td>13.5%</td><td>$0.17</td><td><span style='color:var(--green)'>55.1x</span></td></tr><tr class='tr-total'><td>Total</td><td>$12,726.4</td><td>100%</td><td>1,218,469</td><td>42,478</td><td>3.5%</td><td>$0.30</td><td><span style='color:var(--green)'>19.8x</span></td></tr></tbody></table><div style='padding:12px 20px 16px;border-top:1px solid var(--border);'><div style='font-size:11px;color:var(--muted);margin-bottom:6px;'>Spend distribution</div><div class='brand-split-wrap'><div class='brand-split-bar'><div class='brand-split-seg seg-nonbrand' style='width:71.8%' title='NonBrand 71.8%'></div><div class='brand-split-seg seg-brand' style='width:28.2%' title='Brand 28.2%'></div></div></div><div class='brand-split-legend'><span><span class='bsl-dot' style='background:var(--blue)'></span>NonBrand 71.8% ($9,133.4)</span><span><span class='bsl-dot' style='background:var(--purple)'></span>Brand 28.2% ($3,593.0)</span></div></div></div>
+  <div class='section-title'>TikTok Ads <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$905.0</div><div class='kpi-sub'>of $1,900.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>65,787</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>1,111</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>1.7%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.81</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Conversions</div><div class='kpi-value'>74</div><div class='kpi-sub'>MTD est. &middot; CPA $12.2</div></div><div class='kpi-card'><div class='kpi-label'>ROAS</div><div class='kpi-value' style='color:var(--muted)'>&mdash;</div><div class='kpi-sub'>No revenue signal</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--yellow)'>89%</div><div class='kpi-sub'>UNDERPACING &middot; proj $1,697.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; TikTok</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$383.0</td><td>25,653</td><td>511</td><td>2.0%</td><td>$0.75</td><td><span class='dimmed'>&mdash;</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$440.4</td><td>32,558</td><td>515</td><td>1.6%</td><td>$0.86</td><td><span class='dimmed'>&mdash;</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$81.6</td><td>7,576</td><td>85</td><td>1.1%</td><td>$0.96</td><td><span class='dimmed'>&mdash;</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$905.0</td><td>65,787</td><td>1,111</td><td>1.7%</td><td>$0.81</td><td><span class='dimmed'>&mdash;</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; TikTok MTD</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Tik Tok - Sales Campaign - US</td><td>$905.0</td><td>100.0%</td><td>65,787</td><td>1,111</td><td>1.7%</td><td>$0.81</td><td><span class='dimmed'>&mdash;</span></td></tr><tr class='tr-total'><td>Total</td><td>$905.0</td><td>100%</td><td>65,787</td><td>1,111</td><td>1.7%</td><td>$0.81</td><td><span class='dimmed'>&mdash;</span></td></tr></tbody></table></div>
+  <div class='section-title'>Apple Search Ads <span class='badge-manual'>MANUAL</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value' style='color:var(--orange)'>$351.4</div><div class='kpi-sub'>of $675 budget &middot; data thru Jun 10</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>12,927</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Taps</div><div class='kpi-value'>181</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Installs</div><div class='kpi-value'>56</div><div class='kpi-sub'>All install types</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPT</div><div class='kpi-value'>$1.9</div><div class='kpi-sub'>Cost per tap</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPA</div><div class='kpi-value'>$6.3</div><div class='kpi-sub'>Cost per install</div></div><div class='kpi-card'><div class='kpi-label'>TTR</div><div class='kpi-value'>1.4%</div><div class='kpi-sub'>Tap-through rate</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--orange)'>156%</div><div class='kpi-sub'>OVERPACING &middot; proj ~$1,054 &middot; thru Jun 10</div></div></div>
+<div class='alert danger' style='margin-bottom:16px;'><div>At current pace (~$35.1/day, manual data thru Jun 10), Apple ASA projects <strong>~$1,054</strong> in June &mdash; <strong>~$379 over the $675 budget</strong>. Recommend reducing bids or setting a daily budget cap. Awaiting manual refresh past Jun 10.</div></div>
+  <div class='section-title'>Google App <span class='badge-live'>&#9679; LIVE</span></div><div class='kpi-row'><div class='kpi-card'><div class='kpi-label'>Spend MTD</div><div class='kpi-value'>$350.0</div><div class='kpi-sub'>of $675.0 budget</div></div><div class='kpi-card'><div class='kpi-label'>Impressions</div><div class='kpi-value'>34,816</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Clicks</div><div class='kpi-value'>577</div><div class='kpi-sub'>MTD</div></div><div class='kpi-card'><div class='kpi-label'>Avg CTR</div><div class='kpi-value'>1.7%</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPC</div><div class='kpi-value'>$0.61</div><div class='kpi-sub'>All campaigns</div></div><div class='kpi-card'><div class='kpi-label'>Installs</div><div class='kpi-value'>46</div><div class='kpi-sub'>MTD est. &middot; CPI $7.6</div></div><div class='kpi-card'><div class='kpi-label'>Avg CPI</div><div class='kpi-value'>$7.6</div><div class='kpi-sub'>Cost per install</div></div><div class='kpi-card'><div class='kpi-label'>Pacing</div><div class='kpi-value' style='color:var(--green)'>97%</div><div class='kpi-sub'>ON PACE &middot; proj $656.0</div></div></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>Weekly Performance &mdash; Google App</div><div class='table-header-sub'>June 2026</div></div></div>
+<table><thead><tr><th>Week</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>Jun 1 &ndash; Jun 7</td><td>$164.7</td><td>18,791</td><td>277</td><td>1.5%</td><td>$0.59</td><td><span class='dimmed'>&mdash;</span></td></tr><tr><td>Jun 8 &ndash; Jun 14</td><td>$158.2</td><td>13,359</td><td>263</td><td>2.0%</td><td>$0.60</td><td><span class='dimmed'>&mdash;</span></td></tr><tr><td>Jun 15 &ndash; Jun 16 (partial)</td><td>$27.2</td><td>2,666</td><td>37</td><td>1.4%</td><td>$0.73</td><td><span class='dimmed'>&mdash;</span></td></tr><tr class='tr-total'><td>MTD Total</td><td>$350.0</td><td>34,816</td><td>577</td><td>1.7%</td><td>$0.61</td><td><span class='dimmed'>&mdash;</span></td></tr></tbody></table></div><div class='table-wrap'><div class='table-header'><div><div class='table-header-title'>By Campaign &mdash; Google App MTD</div></div></div>
+<table><thead><tr><th>Campaign</th><th>Spend</th><th>% of Spend</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>ROAS</th></tr></thead><tbody><tr><td>App promotion</td><td>$350.0</td><td>100.0%</td><td>34,816</td><td>577</td><td>1.7%</td><td>$0.61</td><td><span class='dimmed'>&mdash;</span></td></tr><tr class='tr-total'><td>Total</td><td>$350.0</td><td>100%</td><td>34,816</td><td>577</td><td>1.7%</td><td>$0.61</td><td><span class='dimmed'>&mdash;</span></td></tr></tbody></table></div>
+  <div class='section-title'>Alerts</div><div class='alert warning'><div><strong>Meta Ads &amp; TikTok underpacing:</strong> Meta Ads $8,053.0 vs $9,333.0 expected (86%) &mdash; needs ~$674.8/day for 14 remaining days. TikTok $905.0 vs $1,013.0 expected (89%) &mdash; needs ~$71.1/day.</div></div><div class='alert danger'><div><strong>Apple Search Ads overpacing:</strong> $351.4 spent (manual, data thru Jun 10) vs ~$225 expected by Jun 10 (156%). Projecting ~$1,054 EOM &mdash; ~$379 over $675 budget.</div></div><div class='alert info'><div><strong>Remarketing tracked independently:</strong> Meta Remarketing ($992.0, ROAS 21.1x) and Google Remarketing ($997.2, ROAS 10.5x) are reported as their own channels with their own $1,800 budgets &mdash; never blended into Meta Ads or Google Search.</div></div><div class='alert info'><div><strong>TikTok &amp; Google App ROAS:</strong> No purchase-revenue signal in Windsor.ai for these channels, so ROAS is shown as &mdash; rather than estimated.</div></div>
 </div>
-
 <div class="footer">
   Pei Wei Ads Dashboard &middot; Auto-generated daily at 7:00 AM &middot; Data: Meta, Google Ads, TikTok (Windsor.ai) &middot; Apple ASA (manual)<br>
   <span id="footer-date"></span>
 </div>
-
 <script>
 const DATA = {
   generatedAt: "2026-06-16T07:00:00",
@@ -588,88 +148,50 @@ const DATA = {
   daysInMonth: 30,
   month: "June 2026",
   channels: [
-    { name: "Google Search", budget: 18600, spent: 9676.53, conv: 820,  roas: 9.1, live: true,  convLabel: "conv"     },
-    { name: "Google PMax",   budget: 25200, spent: 12665.06,conv: 1082, roas: 19.5,live: true,  convLabel: "conv"     },
-    { name: "Meta Ads",      budget: 19300, spent: 8904.26, conv: 618,  roas: 14.9,live: true,  convLabel: "conv"     },
-    { name: "TikTok",        budget: 1900,  spent: 891.29,  conv: 73,   roas: 2.1, live: true,  convLabel: "conv"     },
-    { name: "Apple ASA",     budget: 675,   spent: 351.4,   conv: 56,   roas: null,live: false, convLabel: "installs" },
-    { name: "Google App",    budget: 675,   spent: 349.36,  conv: 46,   roas: null,live: true,  convLabel: "installs" },
+    { name: "Google Search", budget: 16800, spent: 8722.35, conv: 739, roas: 9.0, live: true, convLabel: "conv" },
+    { name: "Google Remarketing", budget: 1800, spent: 997.2, conv: 125, roas: 10.5, live: true, convLabel: "conv" },
+    { name: "Google PMax", budget: 25200, spent: 12726.37, conv: 1088, roas: 19.8, live: true, convLabel: "conv" },
+    { name: "Meta Ads", budget: 17500, spent: 8053.0, conv: 559, roas: 13.9, live: true, convLabel: "conv" },
+    { name: "Meta Remarketing", budget: 1800, spent: 991.95, conv: 104, roas: 21.1, live: true, convLabel: "conv" },
+    { name: "TikTok", budget: 1900, spent: 905.01, conv: 74, roas: null, live: true, convLabel: "conv" },
+    { name: "Apple ASA", budget: 675, spent: 351.4, conv: 56, roas: null, live: false, convLabel: "installs" },
+    { name: "Google App", budget: 675, spent: 350.02, conv: 46, roas: null, live: true, convLabel: "installs" }
   ]
 };
-
-function fmt(n) {
-  if (n === null || n === undefined) return '<span style="color:#555">&#8212;</span>';
-  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 1 });
-}
-function fmtPct(n) {
-  if (n === null) return '<span style="color:#555">&#8212;</span>';
-  return (n * 100).toFixed(1) + '%';
-}
-function fmtRoas(r) {
-  if (!r) return '<span style="color:#555">&#8212;</span>';
-  return r.toFixed(1) + 'x';
-}
-function cls(r) {
-  if (r === null) return '';
-  if (r >= 0.9 && r <= 1.1) return 'positive';
-  if (r >= 0.75 && r < 0.9) return 'neutral';
-  return 'negative';
-}
+function fmt(n) { if (n===null||n===undefined) return '<span style="color:#555">&#8212;</span>'; return '$'+n.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:1}); }
+function fmtPct(n) { if (n===null) return '<span style="color:#555">&#8212;</span>'; return (n*100).toFixed(1)+'%'; }
+function fmtRoas(r) { if (!r) return '<span style="color:#555">&#8212;</span>'; return r.toFixed(1)+'x'; }
+function cls(r) { if (r===null) return ''; if (r>=0.9&&r<=1.1) return 'positive'; if (r>=0.75&&r<0.9) return 'neutral'; return 'negative'; }
 function badge(r, live) {
   if (!live) return '<span style="background:#2a2020;color:#f59e0b;border-radius:4px;padding:2px 8px;font-size:11px;">MANUAL</span>';
-  if (r >= 0.9 && r <= 1.1) return '<span style="background:#1a3a1a;color:#22c55e;border-radius:4px;padding:2px 8px;font-size:11px;">On pace</span>';
-  if (r > 1.1) return '<span style="background:#3a0000;color:#ef4444;border-radius:4px;padding:2px 8px;font-size:11px;">Overpacing</span>';
+  if (r>=0.9&&r<=1.1) return '<span style="background:#1a3a1a;color:#22c55e;border-radius:4px;padding:2px 8px;font-size:11px;">On pace</span>';
+  if (r>1.1) return '<span style="background:#3a0000;color:#ef4444;border-radius:4px;padding:2px 8px;font-size:11px;">Overpacing</span>';
   return '<span style="background:#3a2a00;color:#f59e0b;border-radius:4px;padding:2px 8px;font-size:11px;">Underpacing</span>';
 }
-
-const tbody = document.getElementById('pacing-tbody');
-let totalBudget = 0, totalSpent = 0, totalConv = 0;
-
-DATA.channels.forEach(ch => {
-  const exp  = ch.budget * (DATA.daysElapsed / DATA.daysInMonth);
-  const sPct = ch.spent / ch.budget;
-  const vE   = ch.spent / exp;
-  const rem  = ch.budget - ch.spent;
-  const proj = (ch.spent / DATA.daysElapsed) * DATA.daysInMonth;
-  totalBudget += ch.budget;
-  totalSpent  += ch.spent;
-  totalConv   += (ch.conv || 0);
-  const c = cls(vE);
-  tbody.innerHTML += '<tr>' +
-    '<td><strong>' + ch.name + '</strong>' + (ch.live ? '<span class="badge-live" style="margin-left:6px">&#9679; LIVE</span>' : '<span class="badge-manual" style="margin-left:6px">MANUAL</span>') + '</td>' +
-    '<td>' + fmt(ch.budget) + '</td>' +
-    '<td>' + fmt(ch.spent) + '</td>' +
-    '<td class="' + c + '">' + fmtPct(sPct) + '</td>' +
-    '<td class="' + c + '">' + fmtPct(vE) + '</td>' +
-    '<td>' + fmt(rem) + '</td>' +
-    '<td>' + fmt(proj) + '</td>' +
-    '<td>' + ch.conv.toLocaleString() + ' ' + ch.convLabel + '</td>' +
-    '<td>' + (ch.roas ? '<strong>' + fmtRoas(ch.roas) + '</strong>' : '&#8212;') + '</td>' +
-    '<td>' + badge(vE, ch.live) + '</td>' +
-    '</tr>';
+const tbody=document.getElementById('pacing-tbody');
+let tB=0,tS=0,tC=0;
+DATA.channels.forEach(ch=>{
+  const exp=ch.budget*(DATA.daysElapsed/DATA.daysInMonth);
+  const sPct=ch.spent/ch.budget, vE=ch.spent/exp, rem=ch.budget-ch.spent, proj=(ch.spent/DATA.daysElapsed)*DATA.daysInMonth;
+  tB+=ch.budget; tS+=ch.spent; tC+=(ch.conv||0);
+  const c=cls(vE);
+  tbody.innerHTML+='<tr>'+
+    '<td><strong>'+ch.name+'</strong>'+(ch.live?'<span class="badge-live" style="margin-left:6px">&#9679; LIVE</span>':'<span class="badge-manual" style="margin-left:6px">MANUAL</span>')+'</td>'+
+    '<td>'+fmt(ch.budget)+'</td><td>'+fmt(ch.spent)+'</td>'+
+    '<td class="'+c+'">'+fmtPct(sPct)+'</td><td class="'+c+'">'+fmtPct(vE)+'</td>'+
+    '<td>'+fmt(rem)+'</td><td>'+fmt(proj)+'</td>'+
+    '<td>'+ch.conv.toLocaleString()+' '+ch.convLabel+'</td>'+
+    '<td>'+(ch.roas?'<strong>'+fmtRoas(ch.roas)+'</strong>':'&#8212;')+'</td>'+
+    '<td>'+badge(vE,ch.live)+'</td></tr>';
 });
-
-tbody.innerHTML += '<tr class="tr-total">' +
-  '<td>TOTAL</td>' +
-  '<td>' + fmt(totalBudget) + '</td>' +
-  '<td>' + fmt(totalSpent) + '</td>' +
-  '<td>&#8212;</td>' +
-  '<td>&#8212;</td><td>&#8212;</td><td>&#8212;</td>' +
-  '<td>' + totalConv.toLocaleString() + '</td>' +
-  '<td>&#8212;</td><td>&#8212;</td>' +
-  '</tr>';
-
-const mPct = (DATA.daysElapsed / DATA.daysInMonth * 100).toFixed(0);
-document.getElementById('month-bar').style.width = mPct + '%';
-document.getElementById('days-elapsed').textContent = DATA.daysElapsed;
-document.getElementById('days-remaining').textContent =
-  (DATA.daysInMonth - DATA.daysElapsed) + ' days remaining · ' + mPct + '% of month elapsed';
-
-const d = new Date(DATA.generatedAt).toLocaleString('en-US', {
-  month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
-});
-document.getElementById('footer-date').textContent = 'Generated: ' + d;
-document.getElementById('last-updated').textContent = 'Last updated: ' + d;
+tbody.innerHTML+='<tr class="tr-total"><td>TOTAL</td><td>'+fmt(tB)+'</td><td>'+fmt(tS)+'</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>'+tC.toLocaleString()+'</td><td>&#8212;</td><td>&#8212;</td></tr>';
+const mPct=(DATA.daysElapsed/DATA.daysInMonth*100).toFixed(0);
+document.getElementById('month-bar').style.width=mPct+'%';
+document.getElementById('days-elapsed').textContent=DATA.daysElapsed;
+document.getElementById('days-remaining').textContent=(DATA.daysInMonth-DATA.daysElapsed)+' days remaining · '+mPct+'% of month elapsed';
+const dd=new Date(DATA.generatedAt).toLocaleString('en-US',{month:'long',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'});
+document.getElementById('footer-date').textContent='Generated: '+dd;
+document.getElementById('last-updated').textContent='Last updated: '+dd;
 </script>
 </body>
 </html>
