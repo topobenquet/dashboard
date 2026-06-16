@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-06-16",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -5652,8 +5652,8 @@
       "finder": "Hector",
       "closer": "Hector",
       "amount": 200.0,
-      "paidStatus": "Pending",
-      "isPaid": false
+      "paidStatus": "Paid",
+      "isPaid": true
     },
     {
       "date": "2026-06-15",
@@ -5663,6 +5663,83 @@
       "finder": "Hector",
       "closer": "Laura",
       "amount": 100.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Alfredo Villegas",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "David",
+      "closer": "David",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Thasha Wright",
+      "product": "All at Once",
+      "service": "All at Once Bundle",
+      "finder": "Fernando",
+      "closer": "Laura",
+      "amount": 1000.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Biel Deieng",
+      "product": "I-90 Online",
+      "service": "I-90 Green Card Renewal",
+      "finder": "David",
+      "closer": "David",
+      "amount": 250.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Abraham Ayo",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Nicole Charles",
+      "product": "Special",
+      "service": "Other",
+      "finder": "Fernando",
+      "closer": "Jesus",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-15",
+      "customer": "Alfredo Villegas",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "David",
+      "closer": "David",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-16",
+      "customer": "Maria Aguirre",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Hector",
+      "closer": "Hector",
+      "amount": 200.0,
       "paidStatus": "Pending",
       "isPaid": false
     },
@@ -5678,13 +5755,35 @@
       "isPaid": false
     },
     {
+      "date": "2026-06-18",
+      "customer": "Omar",
+      "product": "I-130 1st Step",
+      "service": "I-130 Family Sponsorship",
+      "finder": "Hector",
+      "closer": "Laura",
+      "amount": 200.0,
+      "paidStatus": "Pending",
+      "isPaid": false
+    },
+    {
+      "date": "2026-06-19",
+      "customer": "Janette for Petra",
+      "product": "All at Once",
+      "service": "All at Once Bundle",
+      "finder": "Hector",
+      "closer": "Laura",
+      "amount": 500.0,
+      "paidStatus": "Pending",
+      "isPaid": false
+    },
+    {
       "date": "2026-06-29",
       "customer": "Janette for Petra",
       "product": "All at Once",
       "service": "All at Once Bundle",
       "finder": "Hector",
       "closer": "Laura",
-      "amount": 1500.0,
+      "amount": 1000.0,
       "paidStatus": "Pending",
       "isPaid": false
     },
