@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16",
+  "lastUpdated": "2026-06-17",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -5740,8 +5740,30 @@
       "finder": "Hector",
       "closer": "Hector",
       "amount": 200.0,
-      "paidStatus": "Pending",
-      "isPaid": false
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-16",
+      "customer": "Mark Matheson",
+      "product": "I-130",
+      "service": "I-130 Family Sponsorship",
+      "finder": "Fernando",
+      "closer": "Laura",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
+    },
+    {
+      "date": "2026-06-16",
+      "customer": "Mark Matheson",
+      "product": "I-130",
+      "service": "I-130 Family Sponsorship",
+      "finder": "Fernando",
+      "closer": "Laura",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true
     },
     {
       "date": "2026-06-18",
