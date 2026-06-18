@@ -306,6 +306,30 @@ function processSales(transactions, from, to) {
   return {daily, byService, byFinder, byCloser, totalRevenue, totalDeals, totalPending, pendingDeals, avgDeal};
 }
 
+/* ── MONTH-TO-MONTH SALES (New Deal only) ── */
+function processMonthly(transactions) {
+  // All transactions in sales-data.json are New Deal (filtered upstream).
+  // Group by calendar month, independent of the date-range picker.
+  const MNAMES=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const byMonth={};
+  (transactions||[]).forEach(t=>{
+    if(!t.date) return;
+    const ym=t.date.slice(0,7); // YYYY-MM
+    if(!byMonth[ym]) byMonth[ym]={revenue:0,deals:0,pending:0};
+    if(t.isPaid){ byMonth[ym].revenue+=t.amount; byMonth[ym].deals++; }
+    else { byMonth[ym].pending+=t.amount; }
+  });
+  const keys=Object.keys(byMonth).sort();
+  return {
+    labels: keys.map(k=>{const[y,m]=k.split('-');return MNAMES[+m-1]+' '+y.slice(2);}),
+    revenue: keys.map(k=>+byMonth[k].revenue.toFixed(0)),
+    deals: keys.map(k=>byMonth[k].deals),
+    pending: keys.map(k=>+byMonth[k].pending.toFixed(0)),
+    totalRevenue: keys.reduce((s,k)=>s+byMonth[k].revenue,0),
+    totalDeals: keys.reduce((s,k)=>s+byMonth[k].deals,0)
+  };
+}
+
 /* ── WEEKLY KPIs ── */
 function getWeeks(n) {
   const weeks=[];
@@ -426,6 +450,7 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
   const ga4   = processGA4(ga4R);
   const kws   = processKeywords(kwR);
   const sales = processSales(salesData.transactions||[], dateConfig.from, dateConfig.to);
+  const monthly = processMonthly(salesData.transactions||[]);
   const weeklyKPIs = processWeeklyKPIs(ghlWeeklyR||[], gadsWeeklyR||[], salesData.transactions||[]);
   const now   = new Date().toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
 
@@ -570,6 +595,21 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
   </div>
   <hr class="divider">
 
+  <!-- ── MONTH-TO-MONTH SALES (New Deal) ── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-dot" style="background:#3fb950"></div>
+      <div class="section-title">📅 Month-to-Month Sales <span style="font-size:12px;font-weight:400;color:#8b949e;margin-left:8px">New Deal only · full year</span></div>
+    </div>
+    <div class="chart-row" style="grid-template-columns:1fr">
+      <div class="chart-card">
+        <div class="chart-card-title">Monthly Paid Revenue & Deals — New Deal (${fmt.$(monthly.totalRevenue)} · ${monthly.totalDeals} deals YTD)</div>
+        <div class="chart-wrap-tall"><canvas id="c-monthly-sales"></canvas></div>
+      </div>
+    </div>
+  </div>
+  <hr class="divider">
+
   <!-- ── SERVICE PERFORMANCE ── -->
   <div class="section">
     <div class="section-header">
@@ -709,6 +749,18 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
       ]},
       options:{...OPTS,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',labels:{boxWidth:10}}},
         scales:{x:{grid:{color:'#21262d'},ticks:{maxRotation:45}},y:{grid:{color:'#21262d'},ticks:{callback:v=>'$'+v},stacked:false},y2:{position:'right',grid:{display:false},ticks:{callback:v=>v+'x'},suggestedMin:0}}}
+    });
+  }
+
+  // Month-to-month sales chart (New Deal only)
+  if (monthly.labels.length) {
+    CHARTS['monthly']=new Chart(document.getElementById('c-monthly-sales'),{
+      data:{labels:monthly.labels,datasets:[
+        {type:'bar',label:'Paid Revenue ($)',data:monthly.revenue,backgroundColor:'#3fb95066',borderColor:C.green,borderWidth:1,yAxisID:'y',order:2},
+        {type:'line',label:'Deals',data:monthly.deals,borderColor:C.blue,backgroundColor:'#1f6feb22',borderWidth:2,pointRadius:3,tension:0.3,yAxisID:'y2',order:1}
+      ]},
+      options:{...OPTS,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',labels:{boxWidth:10}}},
+        scales:{x:{grid:{color:'#21262d'}},y:{grid:{color:'#21262d'},ticks:{callback:v=>'$'+v},title:{display:true,text:'Revenue',color:'#8b949e'}},y2:{position:'right',grid:{display:false},suggestedMin:0,title:{display:true,text:'Deals',color:'#8b949e'}}}}
     });
   }
 
