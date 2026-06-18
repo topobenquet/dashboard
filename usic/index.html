@@ -452,6 +452,9 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
   const sales = processSales(salesData.transactions||[], dateConfig.from, dateConfig.to);
   const monthly = processMonthly(salesData.transactions||[]);
   const weeklyKPIs = processWeeklyKPIs(ghlWeeklyR||[], gadsWeeklyR||[], salesData.transactions||[]);
+  // Hide week rows overlapping the excluded window (Apr 5 – May 10, 2026)
+  const WK_HIDE_FROM='2026-04-05', WK_HIDE_TO='2026-05-10';
+  const weeklyKPIsShown = weeklyKPIs.filter(w => !(w.from <= WK_HIDE_TO && w.to >= WK_HIDE_FROM));
   const now   = new Date().toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
 
   // Filled date arrays
@@ -538,7 +541,7 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
   <div class="section">
     <div class="section-header">
       <div class="section-dot" style="background:#58a6ff"></div>
-      <div class="section-title">📅 Weekly KPIs <span style="font-size:12px;font-weight:400;color:var(--muted);margin-left:8px">last 12 weeks · newest first</span></div>
+      <div class="section-title">📅 Weekly KPIs <span style="font-size:12px;font-weight:400;color:#8b949e;margin-left:8px">last 12 weeks · newest first · Apr 5 – May 10 excluded</span></div>
     </div>
     <div style="overflow-x:auto">
       <table class="data-table" style="min-width:700px">
@@ -553,7 +556,7 @@ function renderApp(ghlR, gadsR, ga4R, kwR, salesData, ghlWeeklyR, gadsWeeklyR) {
           <th style="text-align:right">ROAS</th>
         </tr></thead>
         <tbody>
-          ${weeklyKPIs.map(w=>{
+          ${weeklyKPIsShown.map(w=>{
             const rStyle=w.roas===null?'':w.roas>=5?'color:var(--green)':w.roas>=2?'color:var(--yellow)':'color:var(--red)';
             return `<tr>
               <td style="white-space:nowrap" data-sort="${w.from}">${w.label}</td>
