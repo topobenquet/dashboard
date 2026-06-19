@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18",
+  "lastUpdated": "2026-06-19",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -4280,6 +4280,18 @@
       "service": "N-400 Citizenship",
       "finder": "Fernando",
       "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-18",
+      "customer": "Wendy Fraser",
+      "product": "N-565",
+      "service": "N-565",
+      "finder": "David",
+      "closer": "David",
       "amount": 200.0,
       "paidStatus": "Paid",
       "isPaid": true,
