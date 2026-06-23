@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22",
+  "lastUpdated": "2026-06-23",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -4331,6 +4331,54 @@
       "amount": 125.0,
       "paidStatus": "Paid",
       "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-22",
+      "customer": "Apolinar Hernandez",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-22",
+      "customer": "Richarda Cavling",
+      "product": "I-90 Online",
+      "service": "I-90 Green Card Renewal",
+      "finder": "David",
+      "closer": "David",
+      "amount": 250.0,
+      "paidStatus": "Paid",
+      "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-22",
+      "customer": "Susan George",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
+      "paidStatus": "Paid",
+      "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-24",
+      "customer": "Emma Maria Telido",
+      "product": "I-90",
+      "service": "I-90 Green Card Renewal",
+      "finder": "David",
+      "closer": "David",
+      "amount": 250.0,
+      "paidStatus": "Pending",
+      "isPaid": false,
       "dealType": "New Deal"
     }
   ]
