@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25",
+  "lastUpdated": "2026-06-26",
   "transactions": [
     {
       "date": "2026-01-01",
@@ -3741,6 +3741,18 @@
       "finder": "Fernando",
       "closer": "Fernando",
       "amount": 150.0,
+      "paidStatus": "Paid",
+      "isPaid": true,
+      "dealType": "New Deal"
+    },
+    {
+      "date": "2026-06-25",
+      "customer": "Alendra Backer",
+      "product": "N-400",
+      "service": "N-400 Citizenship",
+      "finder": "Fernando",
+      "closer": "Fernando",
+      "amount": 200.0,
       "paidStatus": "Paid",
       "isPaid": true,
       "dealType": "New Deal"
