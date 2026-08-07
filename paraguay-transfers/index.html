@@ -134,29 +134,39 @@ function enrich(months) {
 
 let DATA;
 
+/* ════ MISMOS DÍAS (month-to-date por fecha de reserva) ════ */
+function firstDMY(s){ const m=String(s||"").match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); return m?{d:+m[1],mo:+m[2]}:null; }
+function mtdTrips(monthNum, dayCut){ let rev=0,gan=0,ven=0; for(const t of DATA.trips){ const r=firstDMY(t.fechaReserva); if(!r||r.mo!==monthNum||r.d>dayCut) continue; rev+=t.pago||0; gan+=t.neto||0; ven++; } return {rev,gan,ven}; }
+function sumDays(map, dayCut){ let s=0; for(const k in (map||{})){ if(+k.slice(8,10)<=dayCut) s+=map[k]; } return s; }
+function sumGads(monthNum, dayCut){ const g=DATA.daily?.gads||{}; let s=0; for(const k in g){ if(+k.slice(5,7)===monthNum && +k.slice(8,10)<=dayCut) s+=g[k]; } return s; }
+function deriveKPI(o){ o.margen=o.rev>0?o.gan/o.rev:0; o.ticket=o.ven>0?o.rev/o.ven:0; o.cierre=o.leads>0?o.ven/o.leads:0; o.cac=o.ven>0?o.ads/o.ven:0; o.roas=o.ads>0?o.rev/o.ads:0; return o; }
+
 /* ════ SECCIONES ════ */
 function renderCurrentKPIs(root) {
-  const M = DATA.months, m = M[M.length-1], p = M[M.length-2];
-  const genDate = new Date(DATA.generated);
-  const idx = MESIDX[m.mes] ?? genDate.getMonth();
-  const dom = genDate.getDate();
-  const dim = DAYS_IN[idx];
-  const proj = dom>0 ? m.revenue/dom*dim : m.revenue;
-
+  const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
+  const gen = new Date(DATA.generated);
+  const curIdx = MESIDX[curM.mes] ?? gen.getMonth(), prevIdx = MESIDX[prevM.mes];
+  const curNum = curIdx+1, prevNum = prevIdx+1;
+  const dom = gen.getDate(), dim = DAYS_IN[curIdx];
+  const c = mtdTrips(curNum, dom), p = mtdTrips(prevNum, dom);
+  const cm = deriveKPI({ rev:c.rev, gan:c.gan, ven:c.ven, leads:sumDays(DATA.daily?.leads,dom), ads:sumGads(curNum,dom) });
+  const pm = deriveKPI({ rev:p.rev, gan:p.gan, ven:p.ven, leads:sumDays(DATA.daily?.leadsPrev,dom), ads:sumGads(prevNum,dom) });
+  const proj = dom>0 ? cm.rev/dom*dim : cm.rev;
+  const per = `${prevM.mes} 1-${dom}`;
   root.innerHTML += `<div class="section">
-    <div class="section-title">${m.mes} 2026 — mes en curso vs ${p.mes}</div>
+    <div class="section-title">${curM.mes} 2026 — al día ${dom} vs ${prevM.mes} (mismos días)</div>
     <div class="kpi-row kpi-row-5">
-      ${kpi(`Revenue ${m.mes}`, f$(m.revenue), badge(m.revenue,p.revenue)+" vs "+p.mes, `${p.mes}: ${f$(p.revenue)}`, "kpi-blue")}
-      ${kpi(`Ganancia ${m.mes}`, f$(m.ganancia), badge(m.ganancia,p.ganancia)+" vs "+p.mes, `${p.mes}: ${f$(p.ganancia)}`)}
-      ${kpi(`Ventas ${m.mes}`, m.reservas, badge(m.reservas,p.reservas)+" vs "+p.mes, `${p.mes}: ${p.reservas}`, "kpi-green")}
-      ${kpi(`Margen ${m.mes}`, fp(m.margen), badge(m.margen,p.margen)+" vs "+p.mes, `${p.mes}: ${fp(p.margen)}`)}
-      ${kpi(`Proyección ${m.mes}`, f$(proj), `al día ${dom}/${dim}`, `ritmo actual · real: ${f$(m.revenue)}`)}
+      ${kpi(`Revenue 1-${dom}`, f$(cm.rev), badge(cm.rev,pm.rev)+" vs "+prevM.mes, `${per}: ${f$(pm.rev)}`, "kpi-blue")}
+      ${kpi(`Ganancia 1-${dom}`, f$(cm.gan), badge(cm.gan,pm.gan)+" vs "+prevM.mes, `${per}: ${f$(pm.gan)}`)}
+      ${kpi(`Ventas 1-${dom}`, cm.ven, badge(cm.ven,pm.ven)+" vs "+prevM.mes, `${per}: ${pm.ven}`, "kpi-green")}
+      ${kpi(`Margen 1-${dom}`, fp(cm.margen), badge(cm.margen,pm.margen)+" vs "+prevM.mes, `${per}: ${fp(pm.margen)}`)}
+      ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo de ventas actual`)}
     </div>
     <div class="kpi-row kpi-row-4">
-      ${kpi(`Ticket promedio`, f$(m.ticket), badge(m.ticket,p.ticket)+" vs "+p.mes, `${p.mes}: ${f$(p.ticket)}`)}
-      ${kpi(`% Cierre ${m.mes}`, fp(m.cierre), badge(m.cierre,p.cierre)+" vs "+p.mes, `${m.leads} leads · ${m.reservas} ventas`)}
-      ${kpi(`CAC ${m.mes}`, m.cac>0?f$(m.cac):"–", m.cac>0?badge(m.cac,p.cac,true)+" vs "+p.mes:"", `ads / venta`)}
-      ${kpi(`ROAS ${m.mes}`, m.roas>0?m.roas.toFixed(1)+"x":"–", "", `revenue / ads · ${p.mes}: ${p.roas>0?p.roas.toFixed(1)+"x":"–"}`)}
+      ${kpi(`Ticket 1-${dom}`, cm.ven>0?f$(cm.ticket):"–", badge(cm.ticket,pm.ticket)+" vs "+prevM.mes, `${per}: ${pm.ven>0?f$(pm.ticket):"–"}`)}
+      ${kpi(`% Cierre 1-${dom}`, cm.leads>0?fp(cm.cierre):"–", badge(cm.cierre,pm.cierre)+" vs "+prevM.mes, `${cm.leads} leads · ${cm.ven} ventas`)}
+      ${kpi(`CAC 1-${dom}`, cm.cac>0?f$(cm.cac):"–", (cm.cac>0&&pm.cac>0)?badge(cm.cac,pm.cac,true)+" vs "+prevM.mes:"", `ads/venta · ${per}: ${pm.cac>0?f$(pm.cac):"–"}`)}
+      ${kpi(`ROAS 1-${dom}`, cm.roas>0?cm.roas.toFixed(1)+"x":"–", "", `revenue/ads · ${per}: ${pm.roas>0?pm.roas.toFixed(1)+"x":"–"}`)}
     </div>
   </div>`;
 }
@@ -281,22 +291,12 @@ function renderCountries(root) {
     <td><span class="pill ${rClass[c.reg]||"pill-ot"}">${c.reg}</span></td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">Clientes por país — YTD 2026</div>
     <div class="kpi-row kpi-row-4" style="margin-bottom:12px;">${kpis}</div>
-    <div class="grid-2">
-      <div class="card"><div class="card-title">Top 10 países — Revenue</div><div class="chart-box"><canvas id="chartCountry"></canvas></div></div>
-      <div class="card"><div class="card-title">Detalle por país (top 15)</div>
-        <div class="ft-wrap" style="max-height:250px;overflow-y:auto;"><table class="ft" style="min-width:0;">
-          <colgroup><col style="width:28%"><col style="width:14%"><col style="width:22%"><col style="width:18%"><col style="width:18%"></colgroup>
-          <thead><tr><th>País</th><th>Trips</th><th>Revenue</th><th>Ticket</th><th>Región</th></tr></thead>
-          <tbody>${body}</tbody></table></div></div>
-    </div></div>`;
-  const top10=arr.slice(0,10);
-  const rc={"Norteamérica":"#2E75B6","Sudamérica":"#10B981","Europa":"#F59E0B","Asia/Pacífico":"#EF4444","Otros":"#9CA3AF"};
-  new Chart(document.getElementById("chartCountry"),{ type:"bar",
-    data:{labels:top10.map(c=>c.p),datasets:[{label:"Revenue",data:top10.map(c=>c.rev),backgroundColor:top10.map(c=>rc[c.reg]||"#9CA3AF"),borderRadius:4}]},
-    options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${f$(ctx.parsed.x)} · ${top10[ctx.dataIndex].trips} trips`}}},
-      scales:{x:{beginAtZero:true,ticks:{callback:v=>f$(v),font:{size:10}}}}}
-  });
+    <div class="card"><div class="card-title">Detalle por país (top 15 · YTD)</div>
+      <div class="ft-wrap"><table class="ft" style="min-width:520px;">
+        <colgroup><col style="width:28%"><col style="width:14%"><col style="width:22%"><col style="width:18%"><col style="width:18%"></colgroup>
+        <thead><tr><th>País</th><th>Trips</th><th>Revenue</th><th>Ticket</th><th>Región</th></tr></thead>
+        <tbody>${body}</tbody></table></div></div>
+  </div>`;
 }
 
 function renderRoutes(root) {
@@ -316,6 +316,49 @@ function renderRoutes(root) {
       <thead><tr><th>#</th><th>Ruta</th><th>Viajes</th><th>Precio prom.</th><th>Revenue total</th><th>Frecuencia</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
     <div class="info-box info-gray" style="margin-top:8px;">Ruta según lo cargado en la planilla. Ida y vuelta se cuentan por separado.</div></div>`;
+}
+
+/* ════ CHOFERES ════ */
+function renderDrivers(root) {
+  const byD = {};
+  DATA.trips.forEach(t => {
+    if (!t.conductor) return;
+    const name = t.conductor.split(",")[0].trim().replace(/\s+/g, " ");
+    if (name.replace(/[^\p{L}]/gu, "").length < 2) return;
+    if (!byD[name]) byD[name] = { name, trips: 0, fact: 0, gan: 0 };
+    byD[name].trips++; byD[name].fact += (t.pago || 0); byD[name].gan += (t.neto || 0);
+  });
+  const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.gan / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
+  if (!arr.length) return;
+  const rows = arr.map((d, i) => `<tr${i === 0 ? ' class="hi"' : ''}>
+    <td style="color:#6B7280;">${i + 1}</td><td><strong>${d.name}</strong></td>
+    <td style="color:#1F4E78;font-weight:600;">${d.trips}</td><td>${f$(d.fact)}</td>
+    <td class="pos">${f$(d.gan)}</td><td>${f$(d.avg)}</td></tr>`).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">Choferes — YTD 2026</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:560px;">
+      <colgroup><col style="width:5%"><col style="width:30%"><col style="width:14%"><col style="width:18%"><col style="width:16%"><col style="width:17%"></colgroup>
+      <thead><tr><th>#</th><th>Chofer</th><th>Traslados</th><th>Facturación</th><th>Ganancia total</th><th>Gan. prom/traslado</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;">La planilla registra chofer desde Febrero. En traslados con más de un chofer se cuenta al primero.</div></div>`;
+}
+
+/* ════ PRÓXIMOS TRASLADOS ════ */
+function renderUpcoming(root) {
+  const gen = new Date(DATA.generated), todayKey = (gen.getMonth() + 1) * 100 + gen.getDate();
+  const up = [];
+  for (const t of DATA.trips) { const s = firstDMY(t.fechaSalida); if (!s) continue; const key = s.mo * 100 + s.d; if (key < todayKey) continue; up.push({ ...t, s, key }); }
+  up.sort((a, b) => a.key - b.key);
+  if (!up.length) return;
+  const rows = up.slice(0, 15).map(t => `<tr>
+    <td>${String(t.s.d).padStart(2, "0")}/${String(t.s.mo).padStart(2, "0")}</td>
+    <td><strong>${t.route || "-"}</strong></td><td>${t.cliente || "-"}</td>
+    <td>${t.conductor ? t.conductor.split(",")[0].trim() : '<span class="neu">sin asignar</span>'}</td>
+    <td>${f$(t.pago || 0)}</td></tr>`).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">Próximos traslados</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
+      <colgroup><col style="width:12%"><col style="width:34%"><col style="width:26%"><col style="width:16%"><col style="width:12%"></colgroup>
+      <thead><tr><th>Fecha</th><th>Ruta</th><th>Cliente</th><th>Chofer</th><th>Monto</th></tr></thead>
+      <tbody>${rows}</tbody></table></div></div>`;
 }
 
 /* ════ INIT ════ */
@@ -339,7 +382,9 @@ async function init() {
   renderCharts(root);
   renderAdsTable(root);
   renderDaily(root);
+  renderUpcoming(root);
   renderCountries(root);
+  renderDrivers(root);
   renderRoutes(root);
 }
 init();
