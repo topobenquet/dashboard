@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paraguay Transfers — Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
 <style>
 :root { color-scheme: light; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,15 +24,18 @@ body {
 .kpi-row-4 { grid-template-columns:repeat(4,1fr); }
 .kpi-row-3 { grid-template-columns:repeat(3,1fr); }
 @media(max-width:800px){ .kpi-row-5,.kpi-row-4,.kpi-row-3{ grid-template-columns:repeat(2,1fr); } }
-.kpi { background:white; border-radius:10px; padding:13px 15px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
-.kpi-label { font-size:10px; color:#6B7280; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:3px; }
-.kpi-value { font-size:21px; font-weight:700; color:#1F4E78; font-variant-numeric:tabular-nums; }
-.kpi-compare { font-size:11px; margin-top:3px; color:#9CA3AF; }
-.kpi-sub { font-size:10px; color:#9CA3AF; margin-top:1px; }
+.kpi-grid { display:grid; gap:9px; margin-bottom:14px; grid-template-columns:repeat(3,1fr); }
+@media(max-width:600px){ .kpi-grid{ grid-template-columns:repeat(3,1fr); gap:6px; } }
+.kpi { background:white; border-radius:9px; padding:9px 11px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.kpi-label { font-size:9px; color:#6B7280; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:2px; line-height:1.25; }
+.kpi-value { font-size:18px; font-weight:700; color:#1F4E78; font-variant-numeric:tabular-nums; }
+.kpi-compare { font-size:10px; margin-top:2px; color:#9CA3AF; }
+.kpi-sub { font-size:9px; color:#9CA3AF; margin-top:1px; }
+@media(max-width:600px){ .kpi-value{ font-size:15px; } .kpi-label{ font-size:8px; } .kpi-compare,.kpi-sub{ font-size:8.5px; } }
 .kpi-blue { background:linear-gradient(135deg,#2E75B6,#1F4E78); border:none; }
-.kpi-blue .kpi-label { color:rgba(255,255,255,.8); } .kpi-blue .kpi-value { color:white; font-size:24px; } .kpi-blue .kpi-compare { color:rgba(255,255,255,.7); }
+.kpi-blue .kpi-label { color:rgba(255,255,255,.8); } .kpi-blue .kpi-value { color:white; font-size:19px; } .kpi-blue .kpi-compare { color:rgba(255,255,255,.7); }
 .kpi-green { background:linear-gradient(135deg,#059669,#047857); border:none; }
-.kpi-green .kpi-label { color:rgba(255,255,255,.8); } .kpi-green .kpi-value { color:white; font-size:24px; } .kpi-green .kpi-compare { color:rgba(255,255,255,.7); }
+.kpi-green .kpi-label { color:rgba(255,255,255,.8); } .kpi-green .kpi-value { color:white; font-size:19px; } .kpi-green .kpi-compare { color:rgba(255,255,255,.7); }
 
 .up{ color:#059669; font-weight:700; } .down{ color:#DC2626; font-weight:700; } .neu{ color:#9CA3AF; }
 .card { background:white; border-radius:10px; padding:16px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
@@ -49,6 +51,7 @@ table.ft th { color:white; font-size:10px; font-weight:600; padding:8px 5px; tex
 table.ft th:first-child { text-align:left; }
 table.ft td { padding:6px 5px; border-bottom:1px solid #F3F4F6; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 table.ft td:first-child { text-align:left; }
+table.ft th.tl, table.ft td.tl { text-align:left; }
 table.ft tbody tr:hover { background:#F8FAFC; }
 table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDBFE; }
 .pos{ color:#059669; font-weight:600; } .neg{ color:#DC2626; font-weight:600; }
@@ -155,18 +158,16 @@ function renderCurrentKPIs(root) {
   const per = `${prevM.mes} 1-${dom}`;
   root.innerHTML += `<div class="section">
     <div class="section-title">${curM.mes} 2026 — al día ${dom} vs ${prevM.mes} (mismos días)</div>
-    <div class="kpi-row kpi-row-5">
+    <div class="kpi-grid">
       ${kpi(`Revenue 1-${dom}`, f$(cm.rev), badge(cm.rev,pm.rev)+" vs "+prevM.mes, `${per}: ${f$(pm.rev)}`, "kpi-blue")}
       ${kpi(`Ganancia 1-${dom}`, f$(cm.gan), badge(cm.gan,pm.gan)+" vs "+prevM.mes, `${per}: ${f$(pm.gan)}`)}
       ${kpi(`Ventas 1-${dom}`, cm.ven, badge(cm.ven,pm.ven)+" vs "+prevM.mes, `${per}: ${pm.ven}`, "kpi-green")}
       ${kpi(`Margen 1-${dom}`, fp(cm.margen), badge(cm.margen,pm.margen)+" vs "+prevM.mes, `${per}: ${fp(pm.margen)}`)}
-      ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo de ventas actual`)}
-    </div>
-    <div class="kpi-row kpi-row-4">
       ${kpi(`Ticket 1-${dom}`, cm.ven>0?f$(cm.ticket):"–", badge(cm.ticket,pm.ticket)+" vs "+prevM.mes, `${per}: ${pm.ven>0?f$(pm.ticket):"–"}`)}
       ${kpi(`% Cierre 1-${dom}`, cm.leads>0?fp(cm.cierre):"–", badge(cm.cierre,pm.cierre)+" vs "+prevM.mes, `${cm.leads} leads · ${cm.ven} ventas`)}
       ${kpi(`CAC 1-${dom}`, cm.cac>0?f$(cm.cac):"–", (cm.cac>0&&pm.cac>0)?badge(cm.cac,pm.cac,true)+" vs "+prevM.mes:"", `ads/venta · ${per}: ${pm.cac>0?f$(pm.cac):"–"}`)}
       ${kpi(`ROAS 1-${dom}`, cm.roas>0?cm.roas.toFixed(1)+"x":"–", "", `revenue/ads · ${per}: ${pm.roas>0?pm.roas.toFixed(1)+"x":"–"}`)}
+      ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo actual`)}
     </div>
   </div>`;
 }
@@ -206,36 +207,6 @@ function renderMonthly(root) {
         <th>Chofer</th><th>Comb.</th><th>Peaj.</th><th>Com.</th><th>G.Ads</th><th>Meta</th><th>Otros</th>
         <th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
-}
-
-function renderCharts(root) {
-  root.innerHTML += `<div class="section grid-2">
-    <div class="card"><div class="card-title">Revenue · Ganancia · Ventas por mes</div><div class="chart-box"><canvas id="chartMonthly"></canvas></div></div>
-    <div class="card"><div class="card-title">Ads Spend — Google vs Meta por mes</div><div class="chart-box"><canvas id="chartAds"></canvas></div></div>
-  </div>`;
-  const M = DATA.months;
-  new Chart(document.getElementById("chartMonthly"),{ type:"bar",
-    data:{labels:M.map(m=>m.mes),datasets:[
-      {label:"Revenue",data:M.map(m=>m.revenue),backgroundColor:"#2E75B6",yAxisID:"y",order:2},
-      {label:"Ganancia",data:M.map(m=>m.ganancia),backgroundColor:"#10B981",yAxisID:"y",order:1},
-      {label:"Ventas",data:M.map(m=>m.reservas),type:"line",borderColor:"#F59E0B",backgroundColor:"transparent",yAxisID:"y2",tension:0.3,order:0,pointRadius:4,borderWidth:2},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,
-      scales:{y:{beginAtZero:true,ticks:{callback:v=>"$"+(v/1000).toFixed(0)+"k"},grid:{color:"#F3F4F6"}},
-        y2:{position:"right",beginAtZero:true,grid:{drawOnChartArea:false},ticks:{color:"#F59E0B",font:{size:10}}}},
-      plugins:{legend:{labels:{boxWidth:12,font:{size:11}}},
-        tooltip:{callbacks:{label:ctx=>ctx.dataset.label==="Ventas"?`Ventas: ${ctx.parsed.y}`:`${ctx.dataset.label}: ${f$(ctx.parsed.y)}`}}}}
-  });
-  new Chart(document.getElementById("chartAds"),{ type:"bar",
-    data:{labels:M.map(m=>m.mes),datasets:[
-      {label:"Google Ads",data:M.map(m=>m.gAds),backgroundColor:"#2E75B6",stack:"s"},
-      {label:"Meta Ads",data:M.map(m=>m.meta),backgroundColor:"#7C3AED",stack:"s"},
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,
-      scales:{y:{beginAtZero:true,stacked:true,ticks:{callback:v=>"$"+v},grid:{color:"#F3F4F6"}},x:{stacked:true}},
-      plugins:{legend:{labels:{boxWidth:12,font:{size:11}}},
-        tooltip:{callbacks:{footer:items=>`Total: $${items.reduce((s,i)=>s+i.parsed.y,0).toFixed(0)}`}}}}
-  });
 }
 
 function renderAdsTable(root) {
@@ -301,21 +272,18 @@ function renderCountries(root) {
 
 function renderRoutes(root) {
   const byR={};
-  DATA.trips.forEach(t=>{ const r=(t.route||"").trim(); if(!r) return; if(!byR[r]) byR[r]={route:r,count:0,rev:0}; byR[r].count++; byR[r].rev+=(t.pago||0); });
-  const arr=Object.values(byR).map(r=>({...r,avg:r.count>0?r.rev/r.count:0})).sort((a,b)=>b.count-a.count).slice(0,12);
-  const max=arr.length?arr[0].count:1;
-  const rows=arr.map((r,i)=>{
-    const pct=Math.round(r.count/max*100);
-    const bar=`<div style="background:#E5E7EB;border-radius:4px;height:8px;width:100%;overflow:hidden;"><div style="background:linear-gradient(90deg,#2E75B6,#1F4E78);height:100%;width:${pct}%;border-radius:4px;"></div></div>`;
-    return `<tr${i===0?' class="hi"':''}><td style="color:#6B7280;">${i+1}</td><td><strong>${r.route}</strong></td>
-      <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.avg)}</td><td class="pos">${f$(r.rev)}</td><td>${bar}</td></tr>`;
-  }).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">Rutas más frecuentes — YTD 2026</div>
-    <div class="ft-wrap"><table class="ft">
-      <colgroup><col style="width:4%"><col style="width:34%"><col style="width:9%"><col style="width:12%"><col style="width:13%"><col style="width:28%"></colgroup>
-      <thead><tr><th>#</th><th>Ruta</th><th>Viajes</th><th>Precio prom.</th><th>Revenue total</th><th>Frecuencia</th></tr></thead>
+  DATA.trips.forEach(t=>{ const r=(t.route||"").trim(); if(!r) return; if(!byR[r]) byR[r]={route:r,count:0,rev:0,gan:0}; byR[r].count++; byR[r].rev+=(t.pago||0); byR[r].gan+=(t.neto||0); });
+  const arr=Object.values(byR).map(r=>({...r,avg:r.count>0?r.rev/r.count:0,margen:r.rev>0?r.gan/r.rev:0})).sort((a,b)=>b.count-a.count).slice(0,12);
+  const rows=arr.map((r,i)=>`<tr${i===0?' class="hi"':''}>
+    <td style="color:#6B7280;">${i+1}</td><td class="tl"><strong>${r.route}</strong></td>
+    <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.avg)}</td>
+    <td>${f$(r.rev)}</td><td class="pos">${f$(r.gan)}</td><td>${fp(r.margen)}</td></tr>`).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">Rutas — frecuencia y rentabilidad (YTD 2026)</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:600px;">
+      <colgroup><col style="width:5%"><col style="width:33%"><col style="width:10%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"></colgroup>
+      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Viajes</th><th>Precio prom.</th><th>Revenue</th><th>Ganancia</th><th>Margen</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">Ruta según lo cargado en la planilla. Ida y vuelta se cuentan por separado.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">Ordenado por volumen. Ida y vuelta se cuentan por separado.</div></div>`;
 }
 
 /* ════ CHOFERES ════ */
@@ -331,13 +299,13 @@ function renderDrivers(root) {
   const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.gan / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
   if (!arr.length) return;
   const rows = arr.map((d, i) => `<tr${i === 0 ? ' class="hi"' : ''}>
-    <td style="color:#6B7280;">${i + 1}</td><td><strong>${d.name}</strong></td>
+    <td style="color:#6B7280;">${i + 1}</td><td class="tl"><strong>${d.name}</strong></td>
     <td style="color:#1F4E78;font-weight:600;">${d.trips}</td><td>${f$(d.fact)}</td>
     <td class="pos">${f$(d.gan)}</td><td>${f$(d.avg)}</td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">Choferes — YTD 2026</div>
     <div class="ft-wrap"><table class="ft" style="min-width:560px;">
       <colgroup><col style="width:5%"><col style="width:30%"><col style="width:14%"><col style="width:18%"><col style="width:16%"><col style="width:17%"></colgroup>
-      <thead><tr><th>#</th><th>Chofer</th><th>Traslados</th><th>Facturación</th><th>Ganancia total</th><th>Gan. prom/traslado</th></tr></thead>
+      <thead><tr><th>#</th><th class="tl">Chofer</th><th>Traslados</th><th>Facturación</th><th>Ganancia total</th><th>Gan. prom/traslado</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
     <div class="info-box info-gray" style="margin-top:8px;">La planilla registra chofer desde Febrero. En traslados con más de un chofer se cuenta al primero.</div></div>`;
 }
@@ -349,15 +317,18 @@ function renderUpcoming(root) {
   for (const t of DATA.trips) { const s = firstDMY(t.fechaSalida); if (!s) continue; const key = s.mo * 100 + s.d; if (key < todayKey) continue; up.push({ ...t, s, key }); }
   up.sort((a, b) => a.key - b.key);
   if (!up.length) return;
+  const saldo = up.reduce((s, t) => s + (t.restante > 0 ? t.restante : 0), 0);
+  const nSaldo = up.filter(t => t.restante > 0).length;
   const rows = up.slice(0, 15).map(t => `<tr>
     <td>${String(t.s.d).padStart(2, "0")}/${String(t.s.mo).padStart(2, "0")}</td>
-    <td><strong>${t.route || "-"}</strong></td><td>${t.cliente || "-"}</td>
-    <td>${t.conductor ? t.conductor.split(",")[0].trim() : '<span class="neu">sin asignar</span>'}</td>
+    <td class="tl"><strong>${t.route || "-"}</strong></td><td class="tl">${t.cliente || "-"}</td>
+    <td class="tl">${t.conductor ? t.conductor.split(",")[0].trim() : '<span class="neu">sin asignar</span>'}</td>
     <td>${f$(t.pago || 0)}</td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">Próximos traslados</div>
+    ${saldo > 0 ? `<div class="info-box info-amber" style="margin-bottom:10px;">💰 <strong>Saldo pendiente por cobrar: ${f$(saldo)}</strong> · ${nSaldo} traslado${nSaldo !== 1 ? "s" : ""} próximo${nSaldo !== 1 ? "s" : ""} con saldo</div>` : ""}
     <div class="ft-wrap"><table class="ft" style="min-width:520px;">
       <colgroup><col style="width:12%"><col style="width:34%"><col style="width:26%"><col style="width:16%"><col style="width:12%"></colgroup>
-      <thead><tr><th>Fecha</th><th>Ruta</th><th>Cliente</th><th>Chofer</th><th>Monto</th></tr></thead>
+      <thead><tr><th>Fecha</th><th class="tl">Ruta</th><th class="tl">Cliente</th><th class="tl">Chofer</th><th>Monto</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
@@ -376,10 +347,9 @@ async function init() {
   enrich(DATA.months);
   const gen = new Date(DATA.generated);
   document.getElementById("updated").innerHTML =
-    `<span class="dot"></span> Última actualización: <strong>${DATA.lastSyncLabel||gen.toLocaleString("es")}</strong> · datos reales de Balance Traslados + GHL`;
+    `<span class="dot"></span> Última actualización: <strong>${DATA.lastSyncLabel||gen.toLocaleString("es")}</strong>`;
   renderCurrentKPIs(root);
   renderMonthly(root);
-  renderCharts(root);
   renderAdsTable(root);
   renderDaily(root);
   renderUpcoming(root);
