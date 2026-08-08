@@ -293,15 +293,24 @@ function renderRoutes() {
 
 /* ════ CHOFERES (retorna HTML para grid-2) ════ */
 function renderDrivers() {
+  const stripAcc = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const keyOf = (s) => stripAcc(s).toLowerCase().replace(/\s+/g, " ").trim();     // une variantes con tilde/typo
+  const accScore = (s) => /[áéíóúñ]/i.test(s) ? 1 : 0;
   const byD = {};
   DATA.trips.forEach(t => {
     if (!t.conductor) return;
-    const name = t.conductor.split(",")[0].trim().replace(/\s+/g, " ");
-    if (name.replace(/[^\p{L}]/gu, "").length < 2) return;
-    if (!byD[name]) byD[name] = { name, trips: 0, fact: 0 };
-    byD[name].trips++; byD[name].fact += (t.choferCost || 0);
+    const raw = t.conductor.split(",")[0].trim().replace(/\s+/g, " ");
+    if (raw.replace(/[^\p{L}]/gu, "").length < 2) return;
+    const k = keyOf(raw);
+    if (!byD[k]) byD[k] = { trips: 0, fact: 0, variants: {} };
+    byD[k].trips++; byD[k].fact += (t.choferCost || 0);
+    byD[k].variants[raw] = (byD[k].variants[raw] || 0) + 1;
   });
-  const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.fact / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
+  const arr = Object.values(byD).map(d => {
+    // display = variante más usada; desempate: la que tenga tildes
+    const name = Object.entries(d.variants).sort((a, b) => (b[1] - a[1]) || (accScore(b[0]) - accScore(a[0])))[0][0];
+    return { name, trips: d.trips, fact: d.fact, avg: d.trips > 0 ? d.fact / d.trips : 0 };
+  }).sort((a, b) => b.trips - a.trips);
   if (!arr.length) return "";
   const rows = arr.map((d, i) => `<tr${i === 0 ? ' class="hi"' : ''}>
     <td style="color:#6B7280;">${i + 1}</td><td class="tl"><strong>${d.name}</strong></td>
