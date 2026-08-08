@@ -298,10 +298,10 @@ function renderDrivers() {
     if (!t.conductor) return;
     const name = t.conductor.split(",")[0].trim().replace(/\s+/g, " ");
     if (name.replace(/[^\p{L}]/gu, "").length < 2) return;
-    if (!byD[name]) byD[name] = { name, trips: 0, fact: 0, gan: 0 };
-    byD[name].trips++; byD[name].fact += (t.choferCost || 0); byD[name].gan += (t.neto || 0);
+    if (!byD[name]) byD[name] = { name, trips: 0, fact: 0 };
+    byD[name].trips++; byD[name].fact += (t.choferCost || 0);
   });
-  const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.gan / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
+  const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.fact / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
   if (!arr.length) return "";
   const rows = arr.map((d, i) => `<tr${i === 0 ? ' class="hi"' : ''}>
     <td style="color:#6B7280;">${i + 1}</td><td class="tl"><strong>${d.name}</strong></td>
