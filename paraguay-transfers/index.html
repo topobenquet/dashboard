@@ -55,6 +55,13 @@ table.ft th.tl, table.ft td.tl { text-align:left; }
 table.ft tbody tr:hover { background:#F8FAFC; }
 table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDBFE; }
 .pos{ color:#059669; font-weight:600; } .neg{ color:#DC2626; font-weight:600; }
+/* Mobile: la tabla entra completa sin scroll horizontal (achica todo y aprieta la 1ª columna) */
+@media(max-width:600px){
+  table.ft { min-width:0 !important; font-size:9.5px; }
+  table.ft th, table.ft td { padding:4px 3px; }
+  table.ft th { font-size:8.5px; }
+  table.ft th:first-child, table.ft td:first-child { white-space:normal; word-break:break-word; }
+}
 
 .info-box { border-radius:8px; padding:11px 14px; font-size:12px; margin-bottom:10px; }
 .info-green{ background:#F0FDF4; border:1px solid #BBF7D0; color:#166534; }
@@ -180,32 +187,28 @@ function renderMonthly(root) {
       <td>${m.leads||"–"}</td><td>${m.reservas}</td>
       <td>${f$(m.revenue)}</td>
       <td class="${m.cierre>=0.12?"pos":"neu"}">${m.leads?fp(m.cierre):"–"}</td>
-      <td>${f$(m.chofer)}</td><td>${f$(m.comb)}</td><td>${f$(m.peajes)}</td><td>${f$(m.comision)}</td>
-      <td>${f$(m.gAds)}</td><td>${m.meta>0?f$(m.meta):"–"}</td><td>${m.otros>0?f$(m.otros):"–"}</td>
+      <td>${f$(m.comision)}</td>
+      <td>${f$(m.gAds)}</td><td>${m.meta>0?f$(m.meta):"–"}</td>
       <td class="${m.ganancia>=0?"pos":"neg"}">${f$(m.ganancia)}</td>
       <td>${fp(m.margen)}</td><td>${f$(m.perTrip)}</td>
     </tr>`;
   });
   const y = DATA.months.reduce((a,m)=>({
     leads:a.leads+m.leads, reservas:a.reservas+m.reservas, revenue:a.revenue+m.revenue,
-    chofer:a.chofer+m.chofer, comb:a.comb+m.comb, peajes:a.peajes+m.peajes, comision:a.comision+m.comision,
-    gAds:a.gAds+m.gAds, meta:a.meta+m.meta, otros:a.otros+m.otros, ganancia:a.ganancia+m.ganancia,
-  }),{leads:0,reservas:0,revenue:0,chofer:0,comb:0,peajes:0,comision:0,gAds:0,meta:0,otros:0,ganancia:0});
+    comision:a.comision+m.comision, gAds:a.gAds+m.gAds, meta:a.meta+m.meta, ganancia:a.ganancia+m.ganancia,
+  }),{leads:0,reservas:0,revenue:0,comision:0,gAds:0,meta:0,ganancia:0});
   rows += `<tr class="hi">
     <td>YTD</td><td>${y.leads}</td><td>${y.reservas}</td><td>${f$(y.revenue)}</td>
     <td class="pos">${fp(y.reservas/y.leads)}</td>
-    <td>${f$(y.chofer)}</td><td>${f$(y.comb)}</td><td>${f$(y.peajes)}</td><td>${f$(y.comision)}</td>
-    <td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td><td>${f$(y.otros)}</td>
+    <td>${f$(y.comision)}</td><td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td>
     <td class="pos">${f$(y.ganancia)}</td><td>${fp(y.ganancia/y.revenue)}</td><td>${f$(y.ganancia/y.reservas)}</td>
   </tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Operacional mensual 2026</div>
-    <div class="ft-wrap"><table class="ft">
-      <colgroup><col style="width:7%"><col style="width:5%"><col style="width:5%"><col style="width:7%"><col style="width:7%">
-        <col style="width:7%"><col style="width:6%"><col style="width:5%"><col style="width:6%"><col style="width:6%">
-        <col style="width:6%"><col style="width:5%"><col style="width:7%"><col style="width:6%"><col style="width:7%"></colgroup>
+    <div class="ft-wrap"><table class="ft" style="min-width:540px;">
+      <colgroup><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:9%">
+        <col style="width:9%"><col style="width:9%"><col style="width:8%"><col style="width:11%"><col style="width:9%"><col style="width:11%"></colgroup>
       <thead><tr><th>Mes</th><th>Leads</th><th>Ventas</th><th>Revenue</th><th>%Cierre</th>
-        <th>Chofer</th><th>Comb.</th><th>Peaj.</th><th>Com.</th><th>G.Ads</th><th>Meta</th><th>Otros</th>
-        <th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
+        <th>Com.</th><th>G.Ads</th><th>Meta</th><th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
@@ -215,14 +218,14 @@ function renderAdsTable(root) {
   A.forEach(m=>{ m.ctr=m.impr>0?m.clicks/m.impr:0; m.cpc=m.clicks>0?m.spend/m.clicks:0; m.cpa=m.conv>0?m.spend/m.conv:0; });
   let rows="";
   A.forEach(m=>{ rows+=`<tr><td><strong>${m.mes}</strong></td><td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td>
-    <td>${fn(m.impr)}</td><td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td><td>${m.conv.toFixed(1)}</td><td>${f$(m.cpa)}</td></tr>`; });
+    <td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td><td>${m.conv.toFixed(1)}</td><td>${f$(m.cpa)}</td></tr>`; });
   const yt=A.reduce((a,m)=>({spend:a.spend+m.spend,clicks:a.clicks+m.clicks,impr:a.impr+m.impr,conv:a.conv+m.conv}),{spend:0,clicks:0,impr:0,conv:0});
-  rows+=`<tr class="hi"><td>YTD</td><td>${f$(yt.spend)}</td><td>${fn(yt.clicks)}</td><td>${fn(yt.impr)}</td>
+  rows+=`<tr class="hi"><td>YTD</td><td>${f$(yt.spend)}</td><td>${fn(yt.clicks)}</td>
     <td>${fp(yt.clicks/yt.impr)}</td><td>$${fd2(yt.spend/yt.clicks)}</td><td>${yt.conv.toFixed(1)}</td><td>${f$(yt.spend/yt.conv)}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Google Ads — histórico mensual 2026</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:560px;">
-      <colgroup><col style="width:14%"><col style="width:13%"><col style="width:12%"><col style="width:13%"><col style="width:11%"><col style="width:11%"><col style="width:12%"><col style="width:14%"></colgroup>
-      <thead><tr><th>Mes</th><th>Spend</th><th>Clicks</th><th>Impr.</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead>
+    <div class="ft-wrap"><table class="ft" style="min-width:440px;">
+      <colgroup><col style="width:10%"><col style="width:16%"><col style="width:14%"><col style="width:13%"><col style="width:15%"><col style="width:15%"><col style="width:17%"></colgroup>
+      <thead><tr><th>Mes</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
@@ -241,8 +244,8 @@ function renderDaily(root) {
       <td>${cumL}</td><td class="${cumV>0?"pos":""}">${cumV}</td><td>${c7!==null?fp(c7):"–"}</td></tr>`;
   });
   root.innerHTML += `<div class="section"><div class="section-title">${m.mes} 2026 — día a día (leads y cierre)</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
-      <colgroup><col style="width:14%"><col style="width:14%"><col style="width:13%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:14%"></colgroup>
+    <div class="ft-wrap"><table class="ft" style="min-width:460px;">
+      <colgroup><col style="width:8%"><col style="width:15%"><col style="width:14%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:15%"></colgroup>
       <thead><tr><th>Fecha</th><th>Leads</th><th>Ventas</th><th>%Cierre día</th><th>Leads acum.</th><th>Ventas acum.</th><th>%Cierre acum.</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
@@ -270,44 +273,46 @@ function renderCountries(root) {
   </div>`;
 }
 
-function renderRoutes(root) {
+/* ════ RUTAS (retorna HTML para grid-2) ════ */
+function renderRoutes() {
   const byR={};
   DATA.trips.forEach(t=>{ const r=(t.route||"").trim(); if(!r) return; if(!byR[r]) byR[r]={route:r,count:0,rev:0,gan:0}; byR[r].count++; byR[r].rev+=(t.pago||0); byR[r].gan+=(t.neto||0); });
-  const arr=Object.values(byR).map(r=>({...r,avg:r.count>0?r.rev/r.count:0,margen:r.rev>0?r.gan/r.rev:0})).sort((a,b)=>b.count-a.count).slice(0,12);
+  const arr=Object.values(byR).map(r=>({...r,margen:r.rev>0?r.gan/r.rev:0})).sort((a,b)=>b.count-a.count).slice(0,12);
+  if(!arr.length) return "";
   const rows=arr.map((r,i)=>`<tr${i===0?' class="hi"':''}>
     <td style="color:#6B7280;">${i+1}</td><td class="tl"><strong>${r.route}</strong></td>
-    <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.avg)}</td>
-    <td>${f$(r.rev)}</td><td class="pos">${f$(r.gan)}</td><td>${fp(r.margen)}</td></tr>`).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">Rutas — frecuencia y rentabilidad (YTD 2026)</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:600px;">
-      <colgroup><col style="width:5%"><col style="width:33%"><col style="width:10%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"></colgroup>
-      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Viajes</th><th>Precio prom.</th><th>Revenue</th><th>Ganancia</th><th>Margen</th></tr></thead>
+    <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.rev)}</td>
+    <td class="pos">${f$(r.gan)}</td><td>${fp(r.margen)}</td></tr>`).join("");
+  return `<div><div class="section-title">Rutas — rentabilidad (YTD 2026)</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:330px;">
+      <colgroup><col style="width:6%"><col style="width:38%"><col style="width:13%"><col style="width:16%"><col style="width:15%"><col style="width:12%"></colgroup>
+      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Viajes</th><th>Revenue</th><th>Ganancia</th><th>Margen</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">Ordenado por volumen. Ida y vuelta se cuentan por separado.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">Ordenado por volumen. Ida y vuelta por separado.</div></div>`;
 }
 
-/* ════ CHOFERES ════ */
-function renderDrivers(root) {
+/* ════ CHOFERES (retorna HTML para grid-2) ════ */
+function renderDrivers() {
   const byD = {};
   DATA.trips.forEach(t => {
     if (!t.conductor) return;
     const name = t.conductor.split(",")[0].trim().replace(/\s+/g, " ");
     if (name.replace(/[^\p{L}]/gu, "").length < 2) return;
     if (!byD[name]) byD[name] = { name, trips: 0, fact: 0, gan: 0 };
-    byD[name].trips++; byD[name].fact += (t.pago || 0); byD[name].gan += (t.neto || 0);
+    byD[name].trips++; byD[name].fact += (t.choferCost || 0); byD[name].gan += (t.neto || 0);
   });
   const arr = Object.values(byD).map(d => ({ ...d, avg: d.trips > 0 ? d.gan / d.trips : 0 })).sort((a, b) => b.trips - a.trips);
-  if (!arr.length) return;
+  if (!arr.length) return "";
   const rows = arr.map((d, i) => `<tr${i === 0 ? ' class="hi"' : ''}>
     <td style="color:#6B7280;">${i + 1}</td><td class="tl"><strong>${d.name}</strong></td>
     <td style="color:#1F4E78;font-weight:600;">${d.trips}</td><td>${f$(d.fact)}</td>
-    <td class="pos">${f$(d.gan)}</td><td>${f$(d.avg)}</td></tr>`).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">Choferes — YTD 2026</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:560px;">
-      <colgroup><col style="width:5%"><col style="width:30%"><col style="width:14%"><col style="width:18%"><col style="width:16%"><col style="width:17%"></colgroup>
-      <thead><tr><th>#</th><th class="tl">Chofer</th><th>Traslados</th><th>Facturación</th><th>Ganancia total</th><th>Gan. prom/traslado</th></tr></thead>
+    <td class="pos">${f$(d.avg)}</td></tr>`).join("");
+  return `<div><div class="section-title">Choferes — YTD 2026</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:320px;">
+      <colgroup><col style="width:7%"><col style="width:40%"><col style="width:19%"><col style="width:19%"><col style="width:15%"></colgroup>
+      <thead><tr><th>#</th><th class="tl">Chofer</th><th>Traslados</th><th>Facturación</th><th>Gan/traslado</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">La planilla registra chofer desde Febrero. En traslados con más de un chofer se cuenta al primero.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">Facturación = costo del chofer. Registrado desde Febrero. Multi-chofer: se cuenta al primero.</div></div>`;
 }
 
 /* ════ PRÓXIMOS TRASLADOS ════ */
@@ -354,8 +359,7 @@ async function init() {
   renderDaily(root);
   renderUpcoming(root);
   renderCountries(root);
-  renderDrivers(root);
-  renderRoutes(root);
+  root.innerHTML += `<div class="section grid-2">${renderRoutes()}${renderDrivers()}</div>`;
 }
 init();
 </script>
