@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-11T10:20:16.138Z",
-  "lastSyncLabel": "11 Ago 2026",
+  "generated": "2026-08-12T10:20:14.231Z",
+  "lastSyncLabel": "12 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,8 +117,8 @@
     },
     {
       "mes": "Agosto",
-      "leads": 109,
-      "reservas": 11,
+      "leads": 120,
+      "reservas": 13,
       "revenue": 1471,
       "chofer": 224,
       "comb": 334,
@@ -126,7 +126,7 @@
       "comision": 42,
       "reembolsos": 0,
       "otros": 17,
-      "gAds": 116,
+      "gAds": 125,
       "meta": 0,
       "costoSheet": 644,
       "gananciaSheet": 827
@@ -184,10 +184,10 @@
     },
     {
       "mes": "Agosto",
-      "spend": 115.64,
-      "clicks": 87,
-      "impr": 582,
-      "conv": 8
+      "spend": 124.53,
+      "clicks": 92,
+      "impr": 608,
+      "conv": 10
     }
   ],
   "trips": [
@@ -2517,6 +2517,34 @@
     },
     {
       "mes": "Agosto",
+      "route": "Aero-AeroFormosa",
+      "cliente": "",
+      "pais": "",
+      "conductor": "Alejandro Mouchard",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "11/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-Encarnacion",
+      "cliente": "",
+      "pais": "",
+      "conductor": "Luis Vásquez",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "11/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
       "route": "Foz-Asu",
       "cliente": "Thomas Kirby 447507524869",
       "pais": "UK",
@@ -2546,7 +2574,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-11": 2,
+      "2026-08-12": 2,
+      "2026-08-11": 11,
       "2026-08-10": 9,
       "2026-08-09": 11,
       "2026-08-08": 7,
@@ -2597,7 +2626,8 @@
       "2026-08-07": 2,
       "2026-08-06": 3,
       "2026-08-09": 2,
-      "2026-08-10": 1
+      "2026-08-10": 1,
+      "2026-08-11": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -2809,7 +2839,8 @@
       "2026-08-08": 13.02,
       "2026-08-09": 8.27,
       "2026-08-10": 19.8,
-      "2026-08-11": 1.5
+      "2026-08-11": 10.39,
+      "2026-08-12": 0
     }
   }
 }
