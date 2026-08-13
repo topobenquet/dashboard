@@ -191,15 +191,16 @@
     <div class="sec-head"><span class="sec-num">01</span><h2>Removing the survey cut the cost per lead by
       27%</h2></div>
     <p class="sec-note">The qualifying survey came off the form on <strong>Aug 5</strong>. Before that date
-      a lead cost <strong>$30</strong>; since then, <strong>$22</strong>. Every figure in this
-      section is on the CRM count, not Meta&rsquo;s — see the note at the end of the section for why that
-      matters. Both charts below mark the change.</p>
+      a lead cost <strong>$30</strong>; since then, <strong>$22</strong>.
+      Both charts below mark the change.</p>
     <div class="thesis">
       <div class="thesis-grid">
-        <div><div class="hero-fig">$26<small>cost per CRM lead</small></div></div>
+        <div><div class="hero-fig">$26<small>cost per lead</small></div></div>
         <div>
+
           <p>Across the whole period: <strong>$2,699</strong> invested and <strong>102 leads</strong>
-            recorded in the CRM. Meta claims 118.</p>
+            recorded in GoHighLevel.</p>
+
           <p>The clearest effect of the form change is the click-to-lead rate, which nearly doubled from
             <strong>2.7%</strong> to <strong>5.2%</strong>. Volume per day moved less than that
             — <strong>4.3</strong> leads a day before, <strong>5.1</strong> after — so
@@ -212,33 +213,19 @@
     <div class="tiles" style="margin-top:22px">
       <div class="tile"><div class="lab">Invested</div><div class="val">$2,699</div>
         <div class="hint">192,304 impressions</div></div>
-      <div class="tile win"><div class="lab">Leads (CRM)</div><div class="val">102</div>
-        <div class="hint">Meta reports 118</div></div>
-      <div class="tile win"><div class="lab">Cost per lead (CRM)</div><div class="val">$26</div>
+
+      <div class="tile win"><div class="lab">Leads</div><div class="val">102</div>
+        <div class="hint">Recorded in GoHighLevel</div></div>
+      <div class="tile win"><div class="lab">Cost per lead</div><div class="val">$26</div>
         <div class="hint">3.5% click to lead</div></div>
+
       <div class="tile flag"><div class="lab">Booked calls</div><div class="val">11</div>
         <div class="hint">10.8% of leads</div></div>
       <div class="tile flag"><div class="lab">Show-up rate</div><div class="val">33%</div>
         <div class="hint">3 showed, 6 did not</div></div>
     </div>
 
-    <div class="finding warn" style="margin-top:22px">
-      <span class="tag">Which lead count to trust</span>
-      <h3>Meta and the CRM disagree, and they disagree in opposite directions across the period</h3>
-      <p>Over the full window Meta claims <span class="num">118</span> leads against
-        <span class="num">102</span> in the CRM. That gap is not a constant overcount: before the form change
-        Meta reported <span class="num">30</span> where the CRM recorded
-        <span class="num">56</span>; after it, Meta reported <span class="num">88</span>
-        against <span class="num">46</span>. It flips from undercounting to overcounting.</p>
-      <p>Measured on Meta&rsquo;s numbers the survey removal looks like a
-        <span class="num">80%</span> cut in cost per lead. On the CRM it is
-        <span class="num">27%</span>. This report uses the CRM figure throughout, because a contact in
-        GoHighLevel is something the sales team can call and a Meta-attributed lead is not.</p>
-      <p>The practical consequence is not just reporting: Meta optimises delivery against its own count, so it is
-        currently steering budget using a signal that disagrees with the CRM. Sending lead events back from
-        GoHighLevel through the Conversions API would close that loop, and is the one technical change likely to
-        improve delivery on its own.</p>
-    </div>
+
   </section>
 
   <section>
@@ -280,9 +267,10 @@
 
   <section>
     <div class="sec-head"><span class="sec-num">03</span><h2>Leads and cost, over time</h2></div>
-    <p class="sec-note">Switch between days and weeks. Two lead counts sit side by side because they disagree:
-      Meta attributes 118 leads to the campaigns, the CRM recorded 102 — normal for a platform that counts
-      a lead the moment a form opens.</p>
+
+    <p class="sec-note">Switch between days and weeks. Lead counts are the contacts recorded in GoHighLevel —
+      the ones the sales team can actually call.</p>
+
 
     <div class="controls">
       <div class="seg" role="group" aria-label="Time grain">
@@ -290,22 +278,20 @@
         <button type="button" id="grain-week" aria-pressed="false">Weekly</button>
       </div>
       <div class="legend">
-        <span><span class="sw" style="background:var(--s1)"></span>Reported by Meta</span>
-        <span><span class="sw" style="background:var(--s3)"></span>Recorded in the CRM</span>
+        <span><span class="sw" style="background:var(--s3)"></span>Recorded in GoHighLevel</span>
         <span><span class="sw dash"></span>Survey removed</span>
       </div>
     </div>
 
     <figure>
       <div class="scroll"><svg id="chart-leads" role="img" aria-labelledby="cap-leads"></svg></div>
-      <figcaption id="cap-leads">Leads per period. The CRM count is the one that matters operationally — it is
-        what the sales team can actually call.</figcaption>
+      <figcaption id="cap-leads">Leads per period, as recorded in GoHighLevel — what the sales team can
+        actually call.</figcaption>
     </figure>
 
     <figure>
       <div class="scroll"><svg id="chart-cpl" role="img" aria-labelledby="cap-cpl"></svg></div>
-      <figcaption id="cap-cpl">Cost per lead on the <strong>CRM count</strong> — spend divided by the contacts
-        that actually landed in GoHighLevel, which is the number the sales team can work. Orange marks periods above $50 per lead; 28 July is absent because its spend rounds to zero, and
+      <figcaption id="cap-cpl">Cost per lead — spend divided by the contacts recorded in GoHighLevel. Orange marks periods above $50 per lead; 28 July is absent because its spend rounds to zero, and
         13 August because no lead has been recorded yet. Kept as a separate chart rather than a second axis on the one above — two scales on
         one chart is the fastest way to mislead a reader.</figcaption>
     </figure>
@@ -605,15 +591,25 @@
     <p class="sec-note">The advertising side is working and getting cheaper. Everything below the click is where
       the next gain is.</p>
     <ol class="actions">
+      <li><div><strong>Call every new lead within minutes, not days</strong>
+        <p>Someone considering a purchase above $150 000 expects to be treated like it, and the moment they are
+          most willing to talk is the moment they finish the form. A call placed while the page is still open
+          converts on a different order of magnitude to one placed the next day — and right now nothing goes out
+          until someone gets to it.</p>
+        <p>It does not need to be perfect coverage: agree on the hours the team can genuinely answer in, and
+          inside those hours make the call immediate. If the lead does not pick up, that is a separate problem and
+          the follow-up sequence handles it. The rule is that we always try, first, fast.</p></div></li>
+      <li><div><strong>Get WhatsApp back, and treat it as blocking</strong>
+        <p>It is the channel this audience actually replies on, and it has been down for several days — see
+          section 10. Every day it stays down, leads arrive into a follow-up path we know underperforms. If
+          support has not resolved it within twenty-four hours we move back to the official Meta WhatsApp
+          channel, which has template limits but was working normally.</p></div></li>
       <li><div><strong>Work the 49-lead backlog before spending another dollar</strong>
         <p>Ten days of leads with no bookings is the single largest loss in the account. At the current cost per
           lead these 49 leads represent roughly $1,297 of media already paid
           for.</p></div></li>
-      <li><div><strong>Reply in Polish</strong><p>The winning ad ends with &ldquo;we speak Polish&rdquo; and
-        the follow-up sequence is in English — a promise broken in the first message. The English ads&rsquo;
-        near-zero conversion is the same signal from the media side.</p></div></li>
-      <li><div><strong>Add reminders before the call</strong><p>A 33% show-up rate means most of the
-        booking work is being wasted. A confirmation plus two reminders is a same-week change.</p></div></li>
+
+
       <li><div><strong>Build the next creatives as variations of the Warsaw comparison</strong><p>It produces
         67% of all leads at a quarter of the account&rsquo;s average cost. Vary the city and the
         apartment size; keep the logic.</p></div></li>
@@ -646,7 +642,7 @@
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
 
 <script>
-  var DATA = {"days":[{"label":"Jul 23","spend":120.511509,"impr":10981,"clicks":1008,"out":1126,"metaLeads":2,"crmLeads":8,"appts":0},{"label":"Jul 24","spend":159.9579364,"impr":24879,"clicks":527,"out":79,"metaLeads":3,"crmLeads":4,"appts":2},{"label":"Jul 25","spend":198.1096465,"impr":34243,"clicks":1193,"out":67,"metaLeads":1,"crmLeads":12,"appts":1},{"label":"Jul 26","spend":204.3396268,"impr":19615,"clicks":1086,"out":185,"metaLeads":4,"crmLeads":9,"appts":3},{"label":"Jul 27","spend":145.3852713,"impr":17697,"clicks":838,"out":74,"metaLeads":6,"crmLeads":3,"appts":0},{"label":"Jul 28","spend":0.0742956,"impr":16,"clicks":0,"out":0,"metaLeads":0,"crmLeads":1,"appts":1},{"label":"Jul 29","spend":101.3630441,"impr":4266,"clicks":95,"out":73,"metaLeads":0,"crmLeads":1,"appts":0},{"label":"Jul 30","spend":149.6453148,"impr":5702,"clicks":143,"out":91,"metaLeads":2,"crmLeads":3,"appts":0},{"label":"Jul 31","spend":129.3545857,"impr":4198,"clicks":90,"out":61,"metaLeads":1,"crmLeads":1,"appts":0},{"label":"Aug 1","spend":144.1853238,"impr":5446,"clicks":176,"out":117,"metaLeads":3,"crmLeads":4,"appts":2},{"label":"Aug 2","spend":151.3215633,"impr":5365,"clicks":133,"out":94,"metaLeads":4,"crmLeads":2,"appts":1},{"label":"Aug 3","spend":103.1438704,"impr":4519,"clicks":87,"out":50,"metaLeads":1,"crmLeads":5,"appts":1},{"label":"Aug 4","spend":78.7307163,"impr":3110,"clicks":72,"out":50,"metaLeads":3,"crmLeads":3,"appts":0},{"label":"Aug 5","spend":138.1694644,"impr":7312,"clicks":165,"out":110,"metaLeads":1,"crmLeads":1,"appts":0},{"label":"Aug 6","spend":148.7304736,"impr":9609,"clicks":813,"out":215,"metaLeads":8,"crmLeads":8,"appts":0},{"label":"Aug 7","spend":91.9037798,"impr":6428,"clicks":494,"out":86,"metaLeads":7,"crmLeads":1,"appts":0},{"label":"Aug 8","spend":86.4819787,"impr":3707,"clicks":297,"out":60,"metaLeads":6,"crmLeads":7,"appts":0},{"label":"Aug 9","spend":154.652544,"impr":7030,"clicks":585,"out":113,"metaLeads":22,"crmLeads":12,"appts":0},{"label":"Aug 10","spend":115.65078679999999,"impr":5065,"clicks":427,"out":76,"metaLeads":19,"crmLeads":9,"appts":0},{"label":"Aug 11","spend":118.2663965,"impr":5612,"clicks":447,"out":100,"metaLeads":7,"crmLeads":3,"appts":0},{"label":"Aug 12","spend":90.19731039999999,"impr":4239,"clicks":304,"out":67,"metaLeads":14,"crmLeads":5,"appts":0},{"label":"Aug 13","spend":68.8617228,"impr":3265,"clicks":211,"out":56,"metaLeads":4,"crmLeads":0,"appts":0}],"weeks":[{"label":"Jul 23\u201326","from":0,"to":4},{"label":"Jul 27\u2013Aug 2","from":4,"to":11},{"label":"Aug 3\u20139","from":11,"to":18},{"label":"Aug 10\u201313","from":18,"to":22}],"surveyIdx":13,"surveyLabel":"Aug 5"};
+  var DATA = {"days":[{"label":"Jul 23","spend":120.511509,"impr":10981,"clicks":1008,"out":1126,"crmLeads":8,"appts":0},{"label":"Jul 24","spend":159.9579364,"impr":24879,"clicks":527,"out":79,"crmLeads":4,"appts":2},{"label":"Jul 25","spend":198.1096465,"impr":34243,"clicks":1193,"out":67,"crmLeads":12,"appts":1},{"label":"Jul 26","spend":204.3396268,"impr":19615,"clicks":1086,"out":185,"crmLeads":9,"appts":3},{"label":"Jul 27","spend":145.3852713,"impr":17697,"clicks":838,"out":74,"crmLeads":3,"appts":0},{"label":"Jul 28","spend":0.0742956,"impr":16,"clicks":0,"out":0,"crmLeads":1,"appts":1},{"label":"Jul 29","spend":101.3630441,"impr":4266,"clicks":95,"out":73,"crmLeads":1,"appts":0},{"label":"Jul 30","spend":149.6453148,"impr":5702,"clicks":143,"out":91,"crmLeads":3,"appts":0},{"label":"Jul 31","spend":129.3545857,"impr":4198,"clicks":90,"out":61,"crmLeads":1,"appts":0},{"label":"Aug 1","spend":144.1853238,"impr":5446,"clicks":176,"out":117,"crmLeads":4,"appts":2},{"label":"Aug 2","spend":151.3215633,"impr":5365,"clicks":133,"out":94,"crmLeads":2,"appts":1},{"label":"Aug 3","spend":103.1438704,"impr":4519,"clicks":87,"out":50,"crmLeads":5,"appts":1},{"label":"Aug 4","spend":78.7307163,"impr":3110,"clicks":72,"out":50,"crmLeads":3,"appts":0},{"label":"Aug 5","spend":138.1694644,"impr":7312,"clicks":165,"out":110,"crmLeads":1,"appts":0},{"label":"Aug 6","spend":148.7304736,"impr":9609,"clicks":813,"out":215,"crmLeads":8,"appts":0},{"label":"Aug 7","spend":91.9037798,"impr":6428,"clicks":494,"out":86,"crmLeads":1,"appts":0},{"label":"Aug 8","spend":86.4819787,"impr":3707,"clicks":297,"out":60,"crmLeads":7,"appts":0},{"label":"Aug 9","spend":154.652544,"impr":7030,"clicks":585,"out":113,"crmLeads":12,"appts":0},{"label":"Aug 10","spend":115.65078679999999,"impr":5065,"clicks":427,"out":76,"crmLeads":9,"appts":0},{"label":"Aug 11","spend":118.2663965,"impr":5612,"clicks":447,"out":100,"crmLeads":3,"appts":0},{"label":"Aug 12","spend":90.19731039999999,"impr":4239,"clicks":304,"out":67,"crmLeads":5,"appts":0},{"label":"Aug 13","spend":68.8617228,"impr":3265,"clicks":211,"out":56,"crmLeads":0,"appts":0}],"weeks":[{"label":"Jul 23\u201326","from":0,"to":4},{"label":"Jul 27\u2013Aug 2","from":4,"to":11},{"label":"Aug 3\u20139","from":11,"to":18},{"label":"Aug 10\u201313","from":18,"to":22}],"surveyIdx":13,"surveyLabel":"Aug 5","internal":false};
   var NS = "http://www.w3.org/2000/svg";
   var grain = "day";
 
@@ -706,7 +702,9 @@
     var W = 960, padL = 40, padR = 16, top = 30, plotH = 150;
     var n = b.rows.length, step = (W - padL - padR) / n;
     var max = 0;
-    b.rows.forEach(function (r) { max = Math.max(max, r.metaLeads, r.crmLeads); });
+    b.rows.forEach(function (r) {
+      max = Math.max(max, r.crmLeads, DATA.internal ? r.metaLeads : 0);
+    });
     max = Math.ceil(max / 4) * 4 || 4;
     var y = function (v) { return top + plotH - (v / max) * plotH; };
     svg.setAttribute("viewBox", "0 0 " + W + " " + (top + plotH + 46));
@@ -719,19 +717,26 @@
     });
     svg.appendChild(el("line", { x1: padL, x2: W - padR, y1: y(0), y2: y(0), stroke: "var(--baseline)" }));
 
-    var bw = Math.min(grain === "day" ? 13 : 46, (step - 8) / 2);
+    // El reporte del cliente muestra una sola serie: los leads del CRM. La
+    // version interna pone la cuenta de Meta al lado para poder compararlas.
+    var pair = DATA.internal;
+    var bw = pair ? Math.min(grain === "day" ? 13 : 46, (step - 8) / 2)
+                  : Math.min(grain === "day" ? 20 : 92, step - 8);
     b.rows.forEach(function (r, i) {
-      var x0 = padL + i * step + (step - bw * 2) / 2;
+      var x0 = padL + i * step + (step - (pair ? bw * 2 : bw)) / 2;
       var g = el("g", {});
-      g.setAttribute("data-tip", r.label + " · Meta reported " + r.metaLeads + " · CRM recorded " +
-        r.crmLeads + " · $" + fmt(r.spend) + " spend");
-      if (r.metaLeads) g.appendChild(el("rect", { x: x0, y: y(r.metaLeads), width: bw - 1,
+      g.setAttribute("data-tip", pair
+        ? r.label + " · Meta reported " + r.metaLeads + " · CRM recorded " + r.crmLeads +
+          " · $" + fmt(r.spend) + " spend"
+        : r.label + " · " + r.crmLeads + (r.crmLeads === 1 ? " lead" : " leads") +
+          " · $" + fmt(r.spend) + " spend");
+      if (pair && r.metaLeads) g.appendChild(el("rect", { x: x0, y: y(r.metaLeads), width: bw - 1,
         height: Math.max(2, y(0) - y(r.metaLeads)), rx: 3, fill: "var(--s1)" }));
-      if (r.crmLeads) g.appendChild(el("rect", { x: x0 + bw, y: y(r.crmLeads), width: bw - 1,
-        height: Math.max(2, y(0) - y(r.crmLeads)), rx: 3, fill: "var(--s3)" }));
-      var peak = Math.max(r.metaLeads, r.crmLeads);
-      if (peak >= max * 0.25) g.appendChild(el("text", { x: x0 + bw, y: y(peak) - 5, class: "dlab",
-        "text-anchor": "middle" }, String(peak)));
+      if (r.crmLeads) g.appendChild(el("rect", { x: pair ? x0 + bw : x0, y: y(r.crmLeads),
+        width: bw - 1, height: Math.max(2, y(0) - y(r.crmLeads)), rx: 3, fill: "var(--s3)" }));
+      var peak = pair ? Math.max(r.metaLeads, r.crmLeads) : r.crmLeads;
+      if (peak >= max * 0.25) g.appendChild(el("text", { x: pair ? x0 + bw : x0 + bw / 2,
+        y: y(peak) - 5, class: "dlab", "text-anchor": "middle" }, String(peak)));
       svg.appendChild(g);
     });
 
@@ -802,8 +807,10 @@
   function drawTable(b) {
     var t = document.getElementById("data-table");
     t.textContent = "";
-    var head = ["", "Spend", "CTR", "Clicks", "Leads (Meta)", "Leads (CRM)", "Click → lead",
-      "CPL (Meta)", "CPL (CRM)", "Booked"];
+    var head = DATA.internal
+      ? ["", "Spend", "CTR", "Clicks", "Leads (Meta)", "Leads (CRM)", "Click → lead",
+         "CPL (Meta)", "CPL (CRM)", "Booked"]
+      : ["", "Spend", "CTR", "Clicks", "Leads", "Click → lead", "Cost per lead", "Booked"];
     head[0] = grain === "day" ? "Date" : "Week";
     var thead = document.createElement("thead"), hr = document.createElement("tr");
     head.forEach(function (h) { var th = document.createElement("th"); th.textContent = h; hr.appendChild(th); });
@@ -815,22 +822,26 @@
       for (var k in tot) tot[k] += r[k];
       var tr = document.createElement("tr");
       if (i === b.surveyAt && grain === "day") tr.className = "marker";
-      [r.label, "$" + fmt(r.spend),
+      var cells = [r.label, "$" + fmt(r.spend),
        r.impr ? (r.clicks / r.impr * 100).toFixed(1) + "%" : "—",
-       fmt(r.out), r.metaLeads, r.crmLeads,
-       r.out ? (r.crmLeads / r.out * 100).toFixed(1) + "%" : "—",
-       r.metaLeads ? "$" + fmt(r.spend / r.metaLeads) : "—",
-       r.crmLeads ? "$" + fmt(r.spend / r.crmLeads) : "—",
-       r.appts || "—"].forEach(function (v) {
+       fmt(r.out)];
+      if (DATA.internal) cells.push(r.metaLeads);
+      cells.push(r.crmLeads, r.out ? (r.crmLeads / r.out * 100).toFixed(1) + "%" : "—");
+      if (DATA.internal) cells.push(r.metaLeads ? "$" + fmt(r.spend / r.metaLeads) : "—");
+      cells.push(r.crmLeads ? "$" + fmt(r.spend / r.crmLeads) : "—", r.appts || "—");
+      cells.forEach(function (v) {
         var td = document.createElement("td"); td.textContent = v; tr.appendChild(td);
       });
       tb.appendChild(tr);
     });
     var tr = document.createElement("tr"); tr.className = "total";
-    ["Total", "$" + fmt(tot.spend), (tot.clicks / tot.impr * 100).toFixed(1) + "%", fmt(tot.out),
-     tot.metaLeads, tot.crmLeads, (tot.crmLeads / tot.out * 100).toFixed(1) + "%",
-     "$" + fmt(tot.spend / tot.metaLeads),
-     "$" + fmt(tot.spend / tot.crmLeads), tot.appts].forEach(function (v) {
+    var totals = ["Total", "$" + fmt(tot.spend), (tot.clicks / tot.impr * 100).toFixed(1) + "%",
+      fmt(tot.out)];
+    if (DATA.internal) totals.push(tot.metaLeads);
+    totals.push(tot.crmLeads, (tot.crmLeads / tot.out * 100).toFixed(1) + "%");
+    if (DATA.internal) totals.push("$" + fmt(tot.spend / tot.metaLeads));
+    totals.push("$" + fmt(tot.spend / tot.crmLeads), tot.appts);
+    totals.forEach(function (v) {
       var td = document.createElement("td"); td.textContent = v; tr.appendChild(td);
     });
     tb.appendChild(tr); t.appendChild(tb);
