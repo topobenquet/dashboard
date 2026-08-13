@@ -44,9 +44,9 @@
   header.top { padding:54px 0 38px; border-bottom:2px solid var(--ink); }
   .eyebrow { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; letter-spacing:.16em;
     text-transform:uppercase; color:var(--jade); margin:0 0 18px; }
-  h1 { margin:0; font-size:clamp(2.1rem,5.5vw,3.4rem); line-height:1.02; letter-spacing:-.03em;
+  h1 { margin:0; font-size:clamp(1.5rem,4vw,2.7rem); line-height:1.06; letter-spacing:-.03em;
     font-weight:750; text-wrap:balance; }
-  .sub { margin:14px 0 0; max-width:62ch; color:var(--ink-2); font-size:1.02rem; }
+  .sub { margin:14px 0 0; color:var(--ink-2); font-size:1.02rem; }
   .meta-row { display:flex; flex-wrap:wrap; gap:8px 28px; margin-top:24px; font-size:12px; letter-spacing:.06em;
     text-transform:uppercase; color:var(--ink-3); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
   section { padding:50px 0 0; }
@@ -54,7 +54,7 @@
   .sec-num { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; color:var(--jade);
     letter-spacing:.1em; padding-top:6px; }
   h2 { margin:0; font-size:1.4rem; letter-spacing:-.02em; font-weight:700; text-wrap:balance; }
-  .sec-note { margin:8px 0 24px; color:var(--ink-2); max-width:70ch; }
+  .sec-note { margin:8px 0 24px; color:var(--ink-2); }
   .tiles { display:grid; gap:2px; grid-template-columns:repeat(auto-fit,minmax(176px,1fr));
     background:var(--hair); border:1px solid var(--hair); }
   .tile { background:var(--surface); padding:20px 18px; }
@@ -167,7 +167,7 @@
   ol.actions p { margin:0; color:var(--ink-2); font-size:15px; }
   footer.end { margin-top:56px; padding-top:20px; border-top:1px solid var(--rule); font-size:13px;
     color:var(--ink-3); }
-  footer.end p { margin:0 0 6px; max-width:92ch; }
+  footer.end p { margin:0 0 6px; }
   .tip { position:fixed; z-index:20; pointer-events:none; opacity:0; transition:opacity .12s;
     background:var(--ink); color:var(--surface); padding:8px 11px; font-size:13px; line-height:1.4;
     border-radius:4px; max-width:280px; }
@@ -178,7 +178,7 @@
 <div class="wrap">
   <header class="top">
     <p class="eyebrow">Prepared by JB Systems · refreshed 13 August 2026</p>
-    <h1>Sawana Developments<br>Acquisition Performance</h1>
+    <h1>Sawana Developments Acquisition Performance</h1>
     <p class="sub">Every campaign day since launch — 23 July to 13 August 2026. All figures pulled from the
       Meta and GoHighLevel APIs; nothing is estimated. Amounts are rounded to whole dollars.</p>
     <div class="meta-row">
@@ -220,8 +220,6 @@
         <div class="hint">10.8% of leads</div></div>
       <div class="tile flag"><div class="lab">Show-up rate</div><div class="val">33%</div>
         <div class="hint">3 showed, 6 did not</div></div>
-      <div class="tile flag"><div class="lab">Closed</div><div class="val">0</div>
-        <div class="hint">81 still untouched</div></div>
     </div>
 
     <div class="finding warn" style="margin-top:22px">
@@ -319,7 +317,7 @@
       and what it cost per lead on both counts.</p>
     <figure>
       <div class="scroll"><table id="data-table"></table></div>
-      <figcaption>Currency converted at 1 IDR = 6.13e-05 USD and rounded to whole dollars. &ldquo;Clicks to
+      <figcaption>Currency converted at 1 IDR = 0.0000613 USD and rounded to whole dollars. &ldquo;Clicks to
         site&rdquo; are outbound clicks, which exclude reactions and profile taps. The dashed rule marks the
         removal of the survey.</figcaption>
     </figure>
@@ -637,7 +635,7 @@
       the sum of the rows by a dollar or two. Cost per lead is reported on the CRM count throughout; Meta&rsquo;s own
       attribution is shown alongside it in the daily table for comparison, and the two disagree in both
       directions across the period. &ldquo;Clicks&rdquo; are outbound clicks. Show and no-show outcomes come from the sales pipeline stages, not the calendar status field; the show-up rate is calculated over the 9 appointments that have an outcome recorded, while the funnel divides by all 11 booked.
-      Currency converted at 1 IDR = 6.13e-05 USD. Weekly buckets run Monday to Sunday; the first and last are
+      Currency converted at 1 IDR = 0.0000613 USD. Weekly buckets run Monday to Sunday; the first and last are
       partial. Lead source labels in the CRM are inconsistent — 66 of 102 are recorded only as
       &ldquo;external form&rdquo; with no channel, so per-channel lead counts should be read as indicative
       rather than exact. Total contacts in the CRM: 185.</p>
