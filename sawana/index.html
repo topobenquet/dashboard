@@ -651,7 +651,9 @@
   var grain = "day";
 
   // Mismo criterio que el generador: separador de miles, redondeo al mostrar.
-  function n(v) { return Math.round(v).toLocaleString("en-US"); }
+  // Ojo: no llamarlo fmt() — las funciones de dibujo usan `var n` para el conteo
+  // de filas y lo taparian.
+  function fmt(v) { return Math.round(v).toLocaleString("en-US"); }
 
   function el(name, attrs, text) {
     var n = document.createElementNS(NS, name);
@@ -722,7 +724,7 @@
       var x0 = padL + i * step + (step - bw * 2) / 2;
       var g = el("g", {});
       g.setAttribute("data-tip", r.label + " · Meta reported " + r.metaLeads + " · CRM recorded " +
-        r.crmLeads + " · $" + n(r.spend) + " spend");
+        r.crmLeads + " · $" + fmt(r.spend) + " spend");
       if (r.metaLeads) g.appendChild(el("rect", { x: x0, y: y(r.metaLeads), width: bw - 1,
         height: Math.max(2, y(0) - y(r.metaLeads)), rx: 3, fill: "var(--s1)" }));
       if (r.crmLeads) g.appendChild(el("rect", { x: x0 + bw, y: y(r.crmLeads), width: bw - 1,
@@ -775,7 +777,7 @@
       if (!v) return;
       var x0 = padL + i * step + (step - bw) / 2;
       var g = el("g", {});
-      g.setAttribute("data-tip", r.label + " · $" + Math.round(v) + " per CRM lead · $" + n(r.spend) + " ÷ " +
+      g.setAttribute("data-tip", r.label + " · $" + Math.round(v) + " per CRM lead · $" + fmt(r.spend) + " ÷ " +
         r.crmLeads + " leads");
       g.appendChild(el("rect", { x: x0, y: y(v), width: bw, height: Math.max(2, y(0) - y(v)), rx: 3,
         fill: v > 50 ? "var(--s2)" : "var(--s3)" }));
@@ -813,22 +815,22 @@
       for (var k in tot) tot[k] += r[k];
       var tr = document.createElement("tr");
       if (i === b.surveyAt && grain === "day") tr.className = "marker";
-      [r.label, "$" + n(r.spend),
+      [r.label, "$" + fmt(r.spend),
        r.impr ? (r.clicks / r.impr * 100).toFixed(1) + "%" : "—",
-       n(r.out), r.metaLeads, r.crmLeads,
+       fmt(r.out), r.metaLeads, r.crmLeads,
        r.out ? (r.crmLeads / r.out * 100).toFixed(1) + "%" : "—",
-       r.metaLeads ? "$" + n(r.spend / r.metaLeads) : "—",
-       r.crmLeads ? "$" + n(r.spend / r.crmLeads) : "—",
+       r.metaLeads ? "$" + fmt(r.spend / r.metaLeads) : "—",
+       r.crmLeads ? "$" + fmt(r.spend / r.crmLeads) : "—",
        r.appts || "—"].forEach(function (v) {
         var td = document.createElement("td"); td.textContent = v; tr.appendChild(td);
       });
       tb.appendChild(tr);
     });
     var tr = document.createElement("tr"); tr.className = "total";
-    ["Total", "$" + n(tot.spend), (tot.clicks / tot.impr * 100).toFixed(1) + "%", n(tot.out),
+    ["Total", "$" + fmt(tot.spend), (tot.clicks / tot.impr * 100).toFixed(1) + "%", fmt(tot.out),
      tot.metaLeads, tot.crmLeads, (tot.crmLeads / tot.out * 100).toFixed(1) + "%",
-     "$" + n(tot.spend / tot.metaLeads),
-     "$" + n(tot.spend / tot.crmLeads), tot.appts].forEach(function (v) {
+     "$" + fmt(tot.spend / tot.metaLeads),
+     "$" + fmt(tot.spend / tot.crmLeads), tot.appts].forEach(function (v) {
       var td = document.createElement("td"); td.textContent = v; tr.appendChild(td);
     });
     tb.appendChild(tr); t.appendChild(tb);
