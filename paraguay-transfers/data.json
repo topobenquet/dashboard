@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-12T10:20:14.231Z",
-  "lastSyncLabel": "12 Ago 2026",
+  "generated": "2026-08-13T10:20:17.561Z",
+  "lastSyncLabel": "13 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 120,
-      "reservas": 13,
-      "revenue": 1471,
-      "chofer": 224,
-      "comb": 334,
-      "peajes": 23,
-      "comision": 42,
+      "leads": 131,
+      "reservas": 15,
+      "revenue": 2327,
+      "chofer": 506,
+      "comb": 651,
+      "peajes": 52,
+      "comision": 72,
       "reembolsos": 0,
-      "otros": 17,
-      "gAds": 125,
+      "otros": 118,
+      "gAds": 132,
       "meta": 0,
-      "costoSheet": 644,
-      "gananciaSheet": 827
+      "costoSheet": 1402,
+      "gananciaSheet": 925
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 124.53,
-      "clicks": 92,
-      "impr": 608,
+      "spend": 131.99,
+      "clicks": 95,
+      "impr": 656,
       "conv": 10
     }
   ],
@@ -2475,6 +2475,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "Aero-AeroFormosa",
+      "cliente": "Nadia",
+      "pais": "Argentina",
+      "conductor": "Alejandro Mouchard",
+      "pago": 147,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 100,
+      "neto": 43,
+      "fechaReserva": "11/08/26",
+      "fechaSalida": "12/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Aero-EdifGomez",
       "cliente": "José Clemente",
       "pais": "PY",
@@ -2489,6 +2503,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "Asu-Encarnacion",
+      "cliente": "Roberta Melo",
+      "pais": "Brasil",
+      "conductor": "Luis Vásquez",
+      "pago": 366,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 83,
+      "neto": 176,
+      "fechaReserva": "11/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
       "route": "Asu-Foz",
       "cliente": "Silvio Tiago",
       "pais": "Brasil",
@@ -2497,8 +2525,22 @@
       "sena": 150,
       "restante": 297,
       "choferCost": 50,
-      "neto": 217,
+      "neto": 175,
       "fechaReserva": "07/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "Aero-HomePalace",
+      "cliente": "Dorian",
+      "pais": "Francia",
+      "conductor": "Luis Vásquez",
+      "pago": 59,
+      "sena": 59,
+      "restante": 0,
+      "choferCost": 12,
+      "neto": 44,
+      "fechaReserva": "12/08/26",
       "fechaSalida": ""
     },
     {
@@ -2506,41 +2548,27 @@
       "route": "Aero-DrFelipeMolas",
       "cliente": "John Vicent Sturgeon",
       "pais": "USA",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "Hugo Fernández",
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 13,
-      "neto": 0,
+      "choferCost": 17,
+      "neto": 31,
       "fechaReserva": "06/08/26",
       "fechaSalida": ""
     },
     {
       "mes": "Agosto",
-      "route": "Aero-AeroFormosa",
-      "cliente": "",
-      "pais": "",
-      "conductor": "Alejandro Mouchard",
-      "pago": 0,
-      "sena": 0,
+      "route": "Asu-Foz-CDE-Asu",
+      "cliente": "Dorian",
+      "pais": "Francia",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 797,
+      "sena": 797,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "11/08/26",
-      "fechaSalida": ""
-    },
-    {
-      "mes": "Agosto",
-      "route": "Asu-Encarnacion",
-      "cliente": "",
-      "pais": "",
-      "conductor": "Luis Vásquez",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "11/08/26",
+      "choferCost": 83,
+      "neto": 393,
+      "fechaReserva": "12/08/26",
       "fechaSalida": ""
     },
     {
@@ -2574,7 +2602,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-12": 2,
+      "2026-08-13": 2,
+      "2026-08-12": 11,
       "2026-08-11": 11,
       "2026-08-10": 9,
       "2026-08-09": 11,
@@ -2626,8 +2655,9 @@
       "2026-08-07": 2,
       "2026-08-06": 3,
       "2026-08-09": 2,
+      "2026-08-11": 2,
       "2026-08-10": 1,
-      "2026-08-11": 2
+      "2026-08-12": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -2840,7 +2870,7 @@
       "2026-08-09": 8.27,
       "2026-08-10": 19.8,
       "2026-08-11": 10.39,
-      "2026-08-12": 0
+      "2026-08-12": 7.46
     }
   }
 }
