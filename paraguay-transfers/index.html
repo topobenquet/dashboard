@@ -55,12 +55,16 @@ table.ft th.tl, table.ft td.tl { text-align:left; }
 table.ft tbody tr:hover { background:#F8FAFC; }
 table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDBFE; }
 .pos{ color:#059669; font-weight:600; } .neg{ color:#DC2626; font-weight:600; }
+/* La 1ª columna (Mes / Fecha) se muestra entera: ni recortada ni partida */
+table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overflow:clip; }
 /* Mobile: la tabla entra completa sin scroll horizontal (achica todo y aprieta la 1ª columna) */
 @media(max-width:600px){
   table.ft { min-width:0 !important; font-size:9.5px; }
   table.ft th, table.ft td { padding:4px 3px; }
   table.ft th { font-size:8.5px; }
   table.ft th:first-child, table.ft td:first-child { white-space:normal; word-break:break-word; }
+  /* salvo donde la 1ª columna es una fecha: tiene que ir en una sola línea */
+  table.ft.nowrap1 th:first-child, table.ft.nowrap1 td:first-child { white-space:nowrap; word-break:normal; }
 }
 
 .info-box { border-radius:8px; padding:11px 14px; font-size:12px; margin-bottom:10px; }
@@ -93,6 +97,7 @@ table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDB
 /* ════ HELPERS ════ */
 const f$ = n => (n<0?"-$":"$")+Math.abs(Math.round(n)).toLocaleString("en-US");
 const fp = n => (n*100).toFixed(1)+"%";
+const fp0 = n => Math.round(n*100)+"%";          // margen: sin decimales
 const fn = n => Math.round(n).toLocaleString("en-US");
 const fd2 = n => n.toFixed(2);
 const MESIDX = { Enero:0,Febrero:1,Marzo:2,Abril:3,Mayo:4,Junio:5,Julio:6,Agosto:7,Septiembre:8,Octubre:9,Noviembre:10,Diciembre:11 };
@@ -146,6 +151,14 @@ let DATA;
 
 /* ════ MISMOS DÍAS (month-to-date por fecha de reserva) ════ */
 function firstDMY(s){ const m=String(s||"").match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); return m?{d:+m[1],mo:+m[2]}:null; }
+// Fecha de salida completa (con año) a partir del texto de la planilla: día/mes/año.
+function salidaDate(s){
+  const m=String(s||"").match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if(!m) return null;
+  const y=+m[3]; const yy=y<100?2000+y:y;
+  const d=new Date(yy,+m[2]-1,+m[1]);
+  return isNaN(d) ? null : d;
+}
 function mtdTrips(monthNum, dayCut){ let rev=0,gan=0,ven=0; for(const t of DATA.trips){ const r=firstDMY(t.fechaReserva); if(!r||r.mo!==monthNum||r.d>dayCut) continue; rev+=t.pago||0; gan+=t.neto||0; ven++; } return {rev,gan,ven}; }
 function sumDays(map, dayCut){ let s=0; for(const k in (map||{})){ if(+k.slice(8,10)<=dayCut) s+=map[k]; } return s; }
 function sumGads(monthNum, dayCut){ const g=DATA.daily?.gads||{}; let s=0; for(const k in g){ if(+k.slice(5,7)===monthNum && +k.slice(8,10)<=dayCut) s+=g[k]; } return s; }
@@ -187,10 +200,9 @@ function renderMonthly(root) {
       <td>${m.leads||"–"}</td><td>${m.reservas}</td>
       <td>${f$(m.revenue)}</td>
       <td class="${m.cierre>=0.12?"pos":"neu"}">${m.leads?fp(m.cierre):"–"}</td>
-      <td>${f$(m.comision)}</td>
       <td>${f$(m.gAds)}</td><td>${m.meta>0?f$(m.meta):"–"}</td>
       <td class="${m.ganancia>=0?"pos":"neg"}">${f$(m.ganancia)}</td>
-      <td>${fp(m.margen)}</td><td>${f$(m.perTrip)}</td>
+      <td>${fp0(m.margen)}</td><td>${f$(m.perTrip)}</td>
     </tr>`;
   });
   const y = DATA.months.reduce((a,m)=>({
@@ -200,15 +212,15 @@ function renderMonthly(root) {
   rows += `<tr class="hi">
     <td>YTD</td><td>${y.leads}</td><td>${y.reservas}</td><td>${f$(y.revenue)}</td>
     <td class="pos">${fp(y.reservas/y.leads)}</td>
-    <td>${f$(y.comision)}</td><td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td>
-    <td class="pos">${f$(y.ganancia)}</td><td>${fp(y.ganancia/y.revenue)}</td><td>${f$(y.ganancia/y.reservas)}</td>
+    <td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td>
+    <td class="pos">${f$(y.ganancia)}</td><td>${fp0(y.ganancia/y.revenue)}</td><td>${f$(y.ganancia/y.reservas)}</td>
   </tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Operacional mensual 2026</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:540px;">
-      <colgroup><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:11%"><col style="width:9%">
-        <col style="width:9%"><col style="width:9%"><col style="width:8%"><col style="width:11%"><col style="width:9%"><col style="width:11%"></colgroup>
+    <div class="ft-wrap"><table class="ft" style="min-width:500px;">
+      <colgroup><col style="width:13%"><col style="width:9%"><col style="width:9%"><col style="width:12%"><col style="width:10%">
+        <col style="width:10%"><col style="width:8%"><col style="width:12%"><col style="width:9%"><col style="width:12%"></colgroup>
       <thead><tr><th>Mes</th><th>Leads</th><th>Ventas</th><th>Revenue</th><th>%Cierre</th>
-        <th>Com.</th><th>G.Ads</th><th>Meta</th><th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
+        <th>G.Ads</th><th>Meta</th><th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
@@ -224,7 +236,7 @@ function renderAdsTable(root) {
     <td>${fp(yt.clicks/yt.impr)}</td><td>$${fd2(yt.spend/yt.clicks)}</td><td>${yt.conv.toFixed(1)}</td><td>${f$(yt.spend/yt.conv)}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Google Ads — histórico mensual 2026</div>
     <div class="ft-wrap"><table class="ft" style="min-width:440px;">
-      <colgroup><col style="width:10%"><col style="width:16%"><col style="width:14%"><col style="width:13%"><col style="width:15%"><col style="width:15%"><col style="width:17%"></colgroup>
+      <colgroup><col style="width:16%"><col style="width:15%"><col style="width:13%"><col style="width:12%"><col style="width:14%"><col style="width:14%"><col style="width:16%"></colgroup>
       <thead><tr><th>Mes</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>CPA</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
@@ -234,19 +246,22 @@ function renderDaily(root) {
   const leads=DATA.daily?.leads||{}, ventas=DATA.daily?.ventas||{};
   const dates=Object.keys(leads).sort();
   if(!dates.length) return;
-  let rows="", cumL=0, cumV=0;
+  let rows="", totL=0, totV=0;
   dates.forEach(d=>{
-    const l=leads[d]||0, v=ventas[d]||0; cumL+=l; cumV+=v;
-    const cd=l>0?v/l:null, c7=cumL>0?cumV/cumL:null;
-    rows+=`<tr><td>${d.substring(5).replace("-","/")}</td><td><strong>${l}</strong></td>
+    const l=leads[d]||0, v=ventas[d]||0; totL+=l; totV+=v;
+    const cd=l>0?v/l:null;
+    rows+=`<tr><td>${d.slice(8,10)}/${d.slice(5,7)}</td><td><strong>${l}</strong></td>
       <td class="${v>0?"pos":""}">${v>0?v:"–"}</td>
-      <td class="${cd!==null&&cd>=0.12?"pos":"neu"}">${cd!==null?fp(cd):"–"}</td>
-      <td>${cumL}</td><td class="${cumV>0?"pos":""}">${cumV}</td><td>${c7!==null?fp(c7):"–"}</td></tr>`;
+      <td class="${cd!==null&&cd>=0.12?"pos":"neu"}">${cd!==null?fp(cd):"–"}</td></tr>`;
   });
+  // Total del mes: suma en leads y ventas; en %Cierre, el promedio (ventas/leads).
+  rows+=`<tr class="hi"><td>Total</td><td>${totL}</td>
+    <td class="${totV>0?"pos":""}">${totV}</td>
+    <td class="${totL>0&&totV/totL>=0.12?"pos":"neu"}">${totL>0?fp(totV/totL):"–"}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">${m.mes} 2026 — día a día (leads y cierre)</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:460px;">
-      <colgroup><col style="width:8%"><col style="width:15%"><col style="width:14%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:15%"></colgroup>
-      <thead><tr><th>Fecha</th><th>Leads</th><th>Ventas</th><th>%Cierre día</th><th>Leads acum.</th><th>Ventas acum.</th><th>%Cierre acum.</th></tr></thead>
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:300px;">
+      <colgroup><col style="width:22%"><col style="width:26%"><col style="width:24%"><col style="width:28%"></colgroup>
+      <thead><tr><th>Fecha</th><th>Leads</th><th>Ventas</th><th>%Cierre día</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
@@ -282,7 +297,7 @@ function renderRoutes() {
   const rows=arr.map((r,i)=>`<tr${i===0?' class="hi"':''}>
     <td style="color:#6B7280;">${i+1}</td><td class="tl"><strong>${r.route}</strong></td>
     <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.rev)}</td>
-    <td class="pos">${f$(r.gan)}</td><td>${fp(r.margen)}</td></tr>`).join("");
+    <td class="pos">${f$(r.gan)}</td><td>${fp0(r.margen)}</td></tr>`).join("");
   return `<div><div class="section-title">Rutas — rentabilidad (YTD 2026)</div>
     <div class="ft-wrap"><table class="ft" style="min-width:330px;">
       <colgroup><col style="width:6%"><col style="width:38%"><col style="width:13%"><col style="width:16%"><col style="width:15%"><col style="width:12%"></colgroup>
@@ -326,24 +341,40 @@ function renderDrivers() {
 
 /* ════ PRÓXIMOS TRASLADOS ════ */
 function renderUpcoming(root) {
-  const gen = new Date(DATA.generated), todayKey = (gen.getMonth() + 1) * 100 + gen.getDate();
+  // La planilla escribe la fecha de salida como día/mes/año ("14/08/26") y a
+  // veces como rango ("15/08/26 - 16/08/26"): vale la primera fecha. Se compara
+  // con el día de HOY (no con la fecha del último sync) y con el año incluido,
+  // porque si no, las salidas de 2027 quedaban afuera.
+  const now = new Date();
+  const hoy = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const up = [];
-  for (const t of DATA.trips) { const s = firstDMY(t.fechaSalida); if (!s) continue; const key = s.mo * 100 + s.d; if (key < todayKey) continue; up.push({ ...t, s, key }); }
-  up.sort((a, b) => a.key - b.key);
+  for (const t of DATA.trips) {
+    const s = salidaDate(t.fechaSalida);
+    if (!s || s < hoy) continue;
+    up.push({ ...t, s, dias: Math.round((s - hoy) / 86400000) });
+  }
+  up.sort((a, b) => a.s - b.s);
   if (!up.length) return;
   const saldo = up.reduce((s, t) => s + (t.restante > 0 ? t.restante : 0), 0);
   const nSaldo = up.filter(t => t.restante > 0).length;
-  const rows = up.slice(0, 15).map(t => `<tr>
-    <td>${String(t.s.d).padStart(2, "0")}/${String(t.s.mo).padStart(2, "0")}</td>
+  const en30 = up.filter(t => t.dias <= 30).length;
+  const rows = up.slice(0, 15).map(t => {
+    const cuando = t.dias === 0 ? "HOY" : t.dias === 1 ? "mañana" : `${t.dias} días`;
+    return `<tr${t.dias <= 1 ? ' class="hi"' : ''}>
+    <td>${String(t.s.getDate()).padStart(2, "0")}/${String(t.s.getMonth() + 1).padStart(2, "0")}/${String(t.s.getFullYear()).slice(2)}</td>
+    <td class="${t.dias <= 1 ? "pos" : "neu"}">${cuando}</td>
     <td class="tl"><strong>${t.route || "-"}</strong></td><td class="tl">${t.cliente || "-"}</td>
     <td class="tl">${t.conductor ? t.conductor.split(",")[0].trim() : '<span class="neu">sin asignar</span>'}</td>
-    <td>${f$(t.pago || 0)}</td></tr>`).join("");
+    <td>${f$(t.pago || 0)}</td>
+    <td class="${t.restante > 0 ? "neg" : ""}">${t.restante > 0 ? f$(t.restante) : "–"}</td></tr>`;
+  }).join("");
   root.innerHTML += `<div class="section"><div class="section-title">Próximos traslados</div>
-    ${saldo > 0 ? `<div class="info-box info-amber" style="margin-bottom:10px;">💰 <strong>Saldo pendiente por cobrar: ${f$(saldo)}</strong> · ${nSaldo} traslado${nSaldo !== 1 ? "s" : ""} próximo${nSaldo !== 1 ? "s" : ""} con saldo</div>` : ""}
-    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
-      <colgroup><col style="width:12%"><col style="width:34%"><col style="width:26%"><col style="width:16%"><col style="width:12%"></colgroup>
-      <thead><tr><th>Fecha</th><th class="tl">Ruta</th><th class="tl">Cliente</th><th class="tl">Chofer</th><th>Monto</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+    ${saldo > 0 ? `<div class="info-box info-amber" style="margin-bottom:10px;">💰 <strong>Saldo pendiente por cobrar: ${f$(saldo)}</strong> · ${nSaldo} traslado${nSaldo !== 1 ? "s" : ""} con saldo · ${up.length} salidas agendadas (${en30} en los próximos 30 días)</div>` : ""}
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:560px;">
+      <colgroup><col style="width:11%"><col style="width:10%"><col style="width:27%"><col style="width:20%"><col style="width:14%"><col style="width:9%"><col style="width:9%"></colgroup>
+      <thead><tr><th>Salida</th><th>Faltan</th><th class="tl">Ruta</th><th class="tl">Cliente</th><th class="tl">Chofer</th><th>Monto</th><th>Saldo</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;">Del Balance Traslados, por fecha de salida real (día/mes/año). Sólo salidas de hoy en adelante.</div></div>`;
 }
 
 /* ════ INIT ════ */
