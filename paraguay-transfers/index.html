@@ -32,10 +32,8 @@ body {
 .kpi-compare { font-size:10px; margin-top:2px; color:#9CA3AF; }
 .kpi-sub { font-size:9px; color:#9CA3AF; margin-top:1px; }
 @media(max-width:600px){ .kpi-value{ font-size:15px; } .kpi-label{ font-size:8px; } .kpi-compare,.kpi-sub{ font-size:8.5px; } }
-.kpi-blue { background:linear-gradient(135deg,#2E75B6,#1F4E78); border:none; }
-.kpi-blue .kpi-label { color:rgba(255,255,255,.8); } .kpi-blue .kpi-value { color:white; font-size:19px; } .kpi-blue .kpi-compare { color:rgba(255,255,255,.7); }
-.kpi-green { background:linear-gradient(135deg,#059669,#047857); border:none; }
-.kpi-green .kpi-label { color:rgba(255,255,255,.8); } .kpi-green .kpi-value { color:white; font-size:19px; } .kpi-green .kpi-compare { color:rgba(255,255,255,.7); }
+/* Revenue y Ventas iban con fondo azul/verde: ahora todas las tarjetas son iguales. */
+.kpi-blue, .kpi-green { background:white; border:1px solid #E5E7EB; }
 
 .up{ color:#059669; font-weight:700; } .down{ color:#DC2626; font-weight:700; } .neu{ color:#9CA3AF; }
 .card { background:white; border-radius:10px; padding:16px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
