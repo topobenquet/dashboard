@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-14T19:19:38.790Z",
-  "lastSyncLabel": "14 Ago 2026",
+  "generated": "2026-08-15T10:25:36.631Z",
+  "lastSyncLabel": "15 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 152,
-      "reservas": 19,
-      "revenue": 4273,
-      "chofer": 1438,
-      "comb": 684,
+      "leads": 154,
+      "reservas": 20,
+      "revenue": 4690,
+      "chofer": 1497,
+      "comb": 759,
       "peajes": 52,
-      "comision": 110,
+      "comision": 123,
       "reembolsos": 0,
       "otros": 118,
-      "gAds": 141,
+      "gAds": 152,
       "meta": 0,
-      "costoSheet": 2405,
-      "gananciaSheet": 1868
+      "costoSheet": 2551,
+      "gananciaSheet": 2139
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 140.51,
-      "clicks": 101,
-      "impr": 700,
+      "spend": 151.76,
+      "clicks": 106,
+      "impr": 718,
       "conv": 11
     }
   ],
@@ -2580,8 +2580,8 @@
       "pago": 797,
       "sena": 797,
       "restante": 0,
-      "choferCost": 83,
-      "neto": 394,
+      "choferCost": 100,
+      "neto": 427,
       "fechaReserva": "12/08/26",
       "fechaSalida": "15/08/26-16/08/26"
     },
@@ -2598,6 +2598,20 @@
       "neto": 124,
       "fechaReserva": "13/08/26",
       "fechaSalida": "14/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-CDE",
+      "cliente": "Karla Rezende",
+      "pais": "Suiza",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 417,
+      "sena": 100,
+      "restante": 317,
+      "choferCost": 42,
+      "neto": 363,
+      "fechaReserva": "14/08/26",
+      "fechaSalida": "17/08/26"
     },
     {
       "mes": "Agosto",
@@ -2658,7 +2672,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-14": 7,
+      "2026-08-14": 9,
       "2026-08-13": 16,
       "2026-08-12": 11,
       "2026-08-11": 11,
@@ -2716,7 +2730,7 @@
       "2026-08-10": 1,
       "2026-08-12": 3,
       "2026-08-13": 1,
-      "2026-08-14": 1
+      "2026-08-14": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -2931,7 +2945,7 @@
       "2026-08-11": 10.39,
       "2026-08-12": 7.46,
       "2026-08-13": 1.38,
-      "2026-08-14": 7.14
+      "2026-08-14": 18.39
     }
   }
 }
