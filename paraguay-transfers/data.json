@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T19:04:12.157Z",
+  "generated": "2026-08-17T19:32:57.379Z",
   "lastSyncLabel": "17 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -118,18 +118,18 @@
     {
       "mes": "Agosto",
       "leads": 169,
-      "reservas": 27,
-      "revenue": 5554,
+      "reservas": 28,
+      "revenue": 5654,
       "chofer": 1546,
       "comb": 759,
       "peajes": 75,
-      "comision": 152,
+      "comision": 155,
       "reembolsos": 0,
       "otros": 118,
       "gAds": 186,
       "meta": 0,
-      "costoSheet": 2652,
-      "gananciaSheet": 2903
+      "costoSheet": 2655,
+      "gananciaSheet": 3000
     }
   ],
   "adsMonthly": [
@@ -2679,28 +2679,42 @@
       "sena": 300,
       "restante": 647,
       "choferCost": 697,
-      "neto": -425,
+      "neto": 300,
       "fechaReserva": "12/08/26",
       "fechaSalida": "24/08/26"
     },
     {
       "mes": "Agosto",
-      "route": "",
+      "route": "Asu-Foz",
       "cliente": "Clara Fiol",
-      "pais": "",
+      "pais": "USA",
       "conductor": "",
       "pago": 697,
       "sena": 150,
       "restante": 0,
       "choferCost": 0,
-      "neto": 676,
+      "neto": 150,
       "fechaReserva": "08/08/26",
-      "fechaSalida": ""
+      "fechaSalida": "15/07/27"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-PuertoIguazu",
+      "cliente": "Philipp Siemes",
+      "pais": "Peru",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 100,
+      "fechaReserva": "16/08/26",
+      "fechaSalida": "16/08/26"
     },
     {
       "mes": "Agosto",
       "route": "",
-      "cliente": "Philipp Siemes",
+      "cliente": "Deisy Ortega",
       "pais": "",
       "conductor": "",
       "pago": 100,
@@ -2708,8 +2722,8 @@
       "restante": 0,
       "choferCost": 0,
       "neto": 97,
-      "fechaReserva": "16/08/26",
-      "fechaSalida": ""
+      "fechaReserva": "17/08/26",
+      "fechaSalida": "29/08/26"
     },
     {
       "mes": "Agosto",
@@ -2721,7 +2735,7 @@
       "sena": 100,
       "restante": 317,
       "choferCost": 50,
-      "neto": -153,
+      "neto": 100,
       "fechaReserva": "06/08/26",
       "fechaSalida": "02/10/26"
     },
@@ -2735,7 +2749,7 @@
       "sena": 100,
       "restante": 94,
       "choferCost": 40,
-      "neto": 41,
+      "neto": 100,
       "fechaReserva": "09/08/26",
       "fechaSalida": "23/09/26 - 26/09/26"
     },
@@ -2860,7 +2874,7 @@
       "2026-08-12": 3,
       "2026-08-13": 1,
       "2026-08-14": 3,
-      "2026-08-17": 1,
+      "2026-08-17": 2,
       "2026-08-08": 1,
       "2026-08-16": 1
     },
