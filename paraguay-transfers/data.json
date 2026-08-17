@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T19:02:55.722Z",
+  "generated": "2026-08-17T19:04:12.157Z",
   "lastSyncLabel": "17 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -118,12 +118,12 @@
     {
       "mes": "Agosto",
       "leads": 169,
-      "reservas": 26,
+      "reservas": 27,
       "revenue": 5554,
       "chofer": 1546,
       "comb": 759,
       "peajes": 75,
-      "comision": 149,
+      "comision": 152,
       "reembolsos": 0,
       "otros": 118,
       "gAds": 186,
@@ -2699,6 +2699,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "",
+      "cliente": "Philipp Siemes",
+      "pais": "",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "16/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
       "route": "Foz-Asu",
       "cliente": "Thomas Kirby 447507524869",
       "pais": "UK",
@@ -2847,7 +2861,8 @@
       "2026-08-13": 1,
       "2026-08-14": 3,
       "2026-08-17": 1,
-      "2026-08-08": 1
+      "2026-08-08": 1,
+      "2026-08-16": 1
     },
     "gads": {
       "2026-01-01": 19.99,
