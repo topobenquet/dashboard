@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T17:14:09.242Z",
+  "generated": "2026-08-17T18:10:41.580Z",
   "lastSyncLabel": "17 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 168,
-      "reservas": 23,
-      "revenue": 4757,
+      "leads": 169,
+      "reservas": 25,
+      "revenue": 5007,
       "chofer": 1546,
       "comb": 759,
       "peajes": 75,
       "comision": 128,
       "reembolsos": 0,
       "otros": 118,
-      "gAds": 184,
+      "gAds": 189,
       "meta": 0,
-      "costoSheet": 2628,
-      "gananciaSheet": 2130
+      "costoSheet": 2635,
+      "gananciaSheet": 2372
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 184.43,
-      "clicks": 131,
-      "impr": 850,
+      "spend": 188.54,
+      "clicks": 134,
+      "impr": 855,
       "conv": 16
     }
   ],
@@ -2710,11 +2710,67 @@
       "neto": 135,
       "fechaReserva": "09/08/26",
       "fechaSalida": "23/09/26 - 26/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Aero-Dazzler-Aero",
+      "cliente": "Rafa 5215591984468",
+      "pais": "México",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "09/08/26",
+      "fechaSalida": "23/09/26 - 26/09/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Foz-Asu",
+      "cliente": "Thomas Kirby 447507524869",
+      "pais": "UK",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "06/08/26",
+      "fechaSalida": "02/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Asu-Foz",
+      "cliente": "Angela",
+      "pais": "España",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "07/07/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Tour personalizado",
+      "cliente": "Natalie M",
+      "pais": "USA",
+      "conductor": "Daniel Sánchez",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "09/07/26",
+      "fechaSalida": "24/10/26 - 31/10/26"
     }
   ],
   "daily": {
     "leads": {
-      "2026-08-17": 5,
+      "2026-08-17": 6,
       "2026-08-16": 7,
       "2026-08-15": 2,
       "2026-08-14": 9,
@@ -2994,7 +3050,7 @@
       "2026-08-14": 18.39,
       "2026-08-15": 4.06,
       "2026-08-16": 15.21,
-      "2026-08-17": 13.4
+      "2026-08-17": 17.51
     }
   }
 }
