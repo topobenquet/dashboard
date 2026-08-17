@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T18:12:52.085Z",
+  "generated": "2026-08-17T19:02:55.722Z",
   "lastSyncLabel": "17 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -118,18 +118,18 @@
     {
       "mes": "Agosto",
       "leads": 169,
-      "reservas": 27,
-      "revenue": 5007,
+      "reservas": 26,
+      "revenue": 5554,
       "chofer": 1546,
       "comb": 759,
       "peajes": 75,
-      "comision": 136,
+      "comision": 149,
       "reembolsos": 0,
       "otros": 118,
-      "gAds": 189,
+      "gAds": 186,
       "meta": 0,
-      "costoSheet": 2635,
-      "gananciaSheet": 2372
+      "costoSheet": 2652,
+      "gananciaSheet": 2903
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 188.54,
-      "clicks": 134,
-      "impr": 855,
+      "spend": 185.8,
+      "clicks": 132,
+      "impr": 860,
       "conv": 16
     }
   ],
@@ -2679,7 +2679,7 @@
       "sena": 300,
       "restante": 647,
       "choferCost": 697,
-      "neto": 222,
+      "neto": -425,
       "fechaReserva": "12/08/26",
       "fechaSalida": "24/08/26"
     },
@@ -2689,26 +2689,12 @@
       "cliente": "Clara Fiol",
       "pais": "",
       "conductor": "",
-      "pago": 150,
+      "pago": 697,
       "sena": 150,
       "restante": 0,
       "choferCost": 0,
-      "neto": 146,
+      "neto": 676,
       "fechaReserva": "08/08/26",
-      "fechaSalida": ""
-    },
-    {
-      "mes": "Agosto",
-      "route": "",
-      "cliente": "Philipp Siemes",
-      "pais": "",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "16/08/26",
       "fechaSalida": ""
     },
     {
@@ -2721,7 +2707,7 @@
       "sena": 100,
       "restante": 317,
       "choferCost": 50,
-      "neto": 164,
+      "neto": -153,
       "fechaReserva": "06/08/26",
       "fechaSalida": "02/10/26"
     },
@@ -2735,7 +2721,7 @@
       "sena": 100,
       "restante": 94,
       "choferCost": 40,
-      "neto": 135,
+      "neto": 41,
       "fechaReserva": "09/08/26",
       "fechaSalida": "23/09/26 - 26/09/26"
     },
@@ -2861,8 +2847,7 @@
       "2026-08-13": 1,
       "2026-08-14": 3,
       "2026-08-17": 1,
-      "2026-08-08": 1,
-      "2026-08-16": 1
+      "2026-08-08": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -3080,7 +3065,7 @@
       "2026-08-14": 18.39,
       "2026-08-15": 4.06,
       "2026-08-16": 15.21,
-      "2026-08-17": 17.51
+      "2026-08-17": 14.77
     }
   }
 }
