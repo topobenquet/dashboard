@@ -108,8 +108,10 @@
 
   .insight { background:var(--wash-answered); border:1px solid var(--hair); border-radius:12px;
     padding:17px 19px; }
-  .insight #insight { display:grid; gap:14px; grid-template-columns:1fr; }
-  @media (min-width:900px) { .insight #insight { grid-template-columns:repeat(3,1fr); } }
+  .insight #insight { display:grid; gap:9px; }
+  .insight #insight p { position:relative; padding-left:19px; }
+  .insight #insight p::before { content:""; position:absolute; left:5px; top:8px; width:6px; height:6px;
+    border-radius:50%; background:var(--brand); }
   .insight h3 { margin:0 0 6px; font-size:13px; font-weight:700; display:flex; align-items:center; gap:7px; }
   .insight p { margin:0; font-size:13px; color:var(--ink-2); }
   .insight b { color:var(--ink); }
@@ -130,13 +132,21 @@
   .pill.voicemail i { background:var(--voicemail); }
   .pill.no_answer { color:var(--missed); background:var(--wash-missed); }
   .pill.no_answer i { background:var(--missed); }
+  .rec { display:inline-flex; align-items:center; gap:8px; }
+  .recbtn { width:34px; height:34px; flex:none; display:grid; place-items:center; padding:0;
+    border:1px solid var(--rule); border-radius:9px; background:var(--card); color:var(--ink-2);
+    cursor:pointer; }
+  .recbtn svg { width:20px; height:20px; }
+  .recbtn:hover { color:var(--brand); border-color:var(--brand); }
+  .recbtn:focus-visible { outline:2px solid var(--brand); outline-offset:2px; }
+  .recbtn:disabled { opacity:.45; cursor:default; }
+  .rectime { font-size:11.5px; color:var(--ink-3); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .norec { color:var(--ink-3); }
   .sum { color:var(--ink-2); font-size:12.5px; max-width:52ch; }
   .sum summary { cursor:pointer; color:var(--ink-2); }
   .sum summary::marker { color:var(--ink-3); }
   .muted { color:var(--ink-3); }
   .empty { padding:40px 20px; text-align:center; color:var(--ink-2); }
-  footer.end { margin-top:26px; font-size:12px; color:var(--ink-3); }
-  footer.end p { margin:0 0 5px; }
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
 </style>
 
@@ -221,18 +231,12 @@
     <div id="insight"></div>
   </div>
 
-  <footer class="end">
-    <p><strong>Source.</strong> GoHighLevel location s4nqDuXGLKo0n3HD9KB9 — call records, contact notes written by the
-      voice agent, and the service calendar. Pulled 18 August 2026 and frozen into this page.</p>
-    <p>This period covers 7 calls from 2 distinct phone numbers, so several are repeat attempts by the same caller rather than separate leads. Call recording and transcription are not enabled on this location, so no audio is available; turning them on in GoHighLevel will populate a Recording column here automatically.</p>
-    <p>This page is served at a public URL and shows full phone numbers. Times are shown in your own timezone. Call reasons are derived from the agent&rsquo;s own written summary by keyword.</p>
-  </footer>
 </div>
 
 <script>
 var CALLS = [{"id":"wsHZOPSWQD1YOwdGQxDX","ts":1787006779437,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":192,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to schedule a technician visit for a completely down AC unit at their home in San Juan. The agent confirmed the user's details and provided available appointment slots, explaining the fees for after-hours and business hours visits. The user inquired about a 9 AM slot the next day, but the agent informed them that only 6 AM and 11 AM were available.","rec":"","cost":0},{"id":"Fn74zlO4rH9hseZAvjDT","ts":1787003251122,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":245,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request a technician for a non-working air conditioning unit. The agent confirmed the user's details and explained that no same-day appointments were available, offering the earliest slots for the next day and placing the user on a priority waitlist for any cancellations. The user expressed frustration about the lack of immediate emergency service but agreed to book the earliest available appointment for the next day.","rec":"","cost":0},{"id":"0UZOZGYXkoUE5oABYeVT","ts":1786473844454,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Thermostat issue","dur":130,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning about a thermostat issue with their HVAC system. The agent clarified the problem and attempted to schedule a service visit, but the conversation was partially unintelligible and incomplete by the end of the call.","rec":"","cost":0},{"id":"j1dnQFzWx4FDmX3IeIiR","ts":1786473792927,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":46,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request an AC check due to the hot weather. The agent began gathering the user's name and service address to schedule a service visit. The call ended shortly after confirming the address details.","rec":"","cost":0},{"id":"tg1xdkYNFmkuPjTTGFze","ts":1786472285800,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":117,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an appointment for an air conditioner check. The agent confirmed the user's details and offered available time slots, ultimately booking the user for 9 PM on August 11th. The user was satisfied and the call ended successfully with a confirmation text to be sent. Fetched info: 1. phone_number: +19562122958","rec":"","cost":0},{"id":"XKMC3YW16WEN8VdrsMje","ts":1786467340134,"name":"","place":"Ny","phone":"(646) 906-8015","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":190,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an emergency appointment for a completely non-working AC unit. The agent confirmed the user's details, offered available time slots, and successfully booked an appointment for 7 PM the same day. The user also inquired about the company's location and maintenance plans, which the agent clarified. Fetched info: 1. email: john@gmail.com 2. phone_number: +16469068015","rec":"","cost":0},{"id":"7oqAkr6vLg4MckID458e","ts":1786467219950,"name":"","place":"Ny","phone":"(646) 906-8015","dir":"inbound","demo":false,"outcome":"no_answer","reason":"No summary","dur":0,"sentiment":"","summary":"","rec":"","cost":0}];
 var APPTS = [{"ts":"2026-08-11T18:00:00-05:00","title":"","status":"confirmed","contactId":"IUEaIhQm12GvVf2cliav","test":false},{"ts":"2026-08-11T20:00:00-05:00","title":"","status":"confirmed","contactId":"YiuVFXLLZ7ExgjXVH6EU","test":false},{"ts":"2026-08-13T14:00:00-05:00","title":"- TEST","status":"confirmed","contactId":"IUEaIhQm12GvVf2cliav","test":true}];
-var HAS_REC = false;
+var HAS_REC = true;
 var NS = "http://www.w3.org/2000/svg";
 var range = "thisMonth", custom = null, grain = "day";
 var LABELS = { thisMonth:"This month", last7:"Last 7 days", thisWeek:"This week", lastWeek:"Last week",
@@ -431,12 +435,11 @@ function insight(rows,r){
   host.innerHTML=bits.join("");
 }
 
-var COLS=["Date & time","Caller","Location","Status","Duration","Reason","Summary"];
+var COLS=["Date & time","Caller","Location","Status","Duration","Recording","Reason","Summary"];
 
 function log(rows){
   var head=document.getElementById("loghead"), tb=document.querySelector("#log tbody");
   var cols=COLS.slice();
-  if(HAS_REC) cols.splice(6,0,"Recording");
   head.innerHTML=cols.map(function(c){return "<th"+(c==="Duration"?' style="text-align:right"':"")+">"+c+"</th>";}).join("");
   tb.textContent="";
   document.getElementById("empty").hidden=rows.length>0;
@@ -454,12 +457,11 @@ function log(rows){
     p.appendChild(document.createTextNode(o.label));
     td().appendChild(p);
     td("num").textContent=c.dur?mmss(c.dur):"\u2014";
-    if(HAS_REC){
-      var rc=td();
-      if(c.rec){var au=document.createElement("audio");au.controls=true;au.preload="none";au.src=c.rec;
-        au.style.height="30px";au.style.maxWidth="180px";rc.appendChild(au);}
-      else rc.textContent="\u2014";
-    }
+    var rc=td();
+    if(c.rec) rc.appendChild(player(c));
+    else { var no=document.createElement("span"); no.className="norec";
+      no.title="Recording was not enabled when this call came in";
+      no.textContent="\u2014"; rc.appendChild(no); }
     td().textContent=c.reason||"\u2014";
     var sm=td("sum");
     if(c.summary&&c.summary.length>140){
@@ -469,6 +471,47 @@ function log(rows){
     } else sm.textContent=c.summary||"\u2014";
     tb.appendChild(tr);
   });
+}
+
+var WAVE='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" '+
+  'stroke="currentColor" stroke-width="1.7"/><g stroke="currentColor" stroke-width="1.7" '+
+  'stroke-linecap="round"><path d="M8 10.4v3.2"/><path d="M10.7 8.4v7.2"/><path d="M13.3 9.6v4.8"/>'+
+  '<path d="M16 11v2"/></g></svg>';
+var PAUSE='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.2" fill="none" '+
+  'stroke="currentColor" stroke-width="1.7"/><g fill="currentColor"><rect x="9.2" y="8.4" width="2.2" '+
+  'height="7.2" rx="1"/><rect x="12.6" y="8.4" width="2.2" height="7.2" rx="1"/></g></svg>';
+
+/* Un solo audio a la vez: si suena otro, se corta el anterior. */
+var playing=null;
+function player(c){
+  var wrap=document.createElement("span"); wrap.className="rec";
+  var btn=document.createElement("button");
+  btn.type="button"; btn.className="recbtn"; btn.innerHTML=WAVE;
+  btn.setAttribute("aria-label","Play call recording");
+  var time=document.createElement("span"); time.className="rectime";
+  time.textContent=c.dur?mmss(c.dur):"";
+  var audio=null;
+  btn.addEventListener("click",function(){
+    if(!audio){
+      audio=new Audio(c.rec); audio.preload="none";
+      audio.addEventListener("timeupdate",function(){
+        if(audio.duration) time.textContent=mmss(audio.currentTime)+" / "+mmss(audio.duration);});
+      audio.addEventListener("ended",function(){
+        btn.innerHTML=WAVE; btn.setAttribute("aria-label","Play call recording");
+        time.textContent=c.dur?mmss(c.dur):""; playing=null;});
+      audio.addEventListener("error",function(){
+        time.textContent="unavailable"; btn.disabled=true;});
+    }
+    if(audio.paused){
+      if(playing&&playing!==audio) playing.pause();
+      playing=audio; audio.play();
+      btn.innerHTML=PAUSE; btn.setAttribute("aria-label","Pause call recording");
+    } else {
+      audio.pause(); btn.innerHTML=WAVE; btn.setAttribute("aria-label","Play call recording");
+    }
+  });
+  wrap.appendChild(btn); wrap.appendChild(time);
+  return wrap;
 }
 
 function csv(rows){
