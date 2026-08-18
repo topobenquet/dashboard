@@ -73,6 +73,7 @@
   @media (max-width: 768px) { .container { padding: 16px; } .header { padding: 16px; flex-direction: column; gap: 12px; text-align: center; } }
 </style><style>
 .sec-title{font-size:15px;font-weight:600;margin:28px 0 10px;color:var(--text);letter-spacing:.2px}
+.sub-title{font-size:13px;font-weight:600;margin:22px 0 8px;color:var(--gold);letter-spacing:.3px}
 .sec-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
 .tbl-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--border);border-radius:8px}
 .tbl-wrap table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}
@@ -119,6 +120,12 @@
     </table>
   </div>
   <div class="sec-note" id="weekly-note"></div>
+
+  <h2 class="sec-title">Spend por plataforma y semana</h2>
+  <div class="tbl-wrap"><table><thead id="matrix-thead"></thead><tbody id="matrix-tbody"></tbody></table></div>
+
+  <h2 class="sec-title">Detalle por canal</h2>
+  <div id="canales"></div>
 
   <div class="footer">Pei Wei &middot; <span id="footer-date"></span></div>
 </div>
@@ -197,6 +204,53 @@ function renderSemanal(d) {
     + (parcial ? ' La última semana está en curso: Meta todavía no reporta conversiones ni revenue de esos días, la atribución llega con retraso.' : '');
 }
 
+// Matriz spend canal x semana. Es la vista que responde "donde se fue la plata
+// esta semana" de un vistazo, sin abrir canal por canal.
+function renderMatriz(d) {
+  const w = d.weekly;
+  if (!w || !w.semanas) return;
+  const canales = [...new Set(w.semanas.flatMap((s) => Object.keys(s.canales || {})))];
+  document.getElementById('matrix-thead').innerHTML =
+    '<tr><th>Semana</th>' + canales.map((c) => `<th>${c}</th>`).join('') + '<th>Total</th></tr>';
+  const dia = (x) => { const [, m, y] = x.split('-'); return `${y}/${m}`; };
+  const filas = w.semanas.map((s) => {
+    let tot = 0;
+    const celdas = canales.map((c) => { const v = s.canales?.[c]?.spend || 0; tot += v; return `<td>${fmtUSD(v)}</td>`; });
+    return `<tr><td><strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}</td>${celdas.join('')}<td><strong>${fmtUSD(tot)}</strong></td></tr>`;
+  });
+  const totCol = canales.map((c) => w.semanas.reduce((a, s) => a + (s.canales?.[c]?.spend || 0), 0));
+  filas.push(`<tr class="tr-total"><td>TOTAL MTD</td>${totCol.map((v) => `<td>${fmtUSD(v)}</td>`).join('')}<td>${fmtUSD(totCol.reduce((a, b) => a + b, 0))}</td></tr>`);
+  document.getElementById('matrix-tbody').innerHTML = filas.join('');
+}
+
+// Por cada canal: su evolucion semanal y sus campanas. Es el nivel donde se ve
+// que campana esta traccionando y cual esta quemando presupuesto.
+function renderCanales(d) {
+  const w = d.weekly;
+  if (!w || !w.semanas) return;
+  const canales = [...new Set(w.semanas.flatMap((s) => Object.keys(s.canales || {})))];
+  const dia = (x) => { const [, m, y] = x.split('-'); return `${y}/${m}`; };
+  const fila = (o, etiqueta, extra) => {
+    const roas = o.spend && o.revenue != null ? (o.revenue / o.spend).toFixed(1) + 'x' : '&mdash;';
+    return `<tr><td>${etiqueta}</td>${extra || ''}<td>${fmtUSD(o.spend)}</td><td>${fmtNum(o.impr)}</td><td>${fmtNum(o.clicks)}</td>
+      <td>${o.impr ? ((o.clicks / o.impr) * 100).toFixed(2) + '%' : '&mdash;'}</td>
+      <td>${o.clicks ? '$' + (o.spend / o.clicks).toFixed(2) : '&mdash;'}</td>
+      <td>${fmtNum(o.conv)}</td><td>${fmtUSD(o.revenue)}</td><td><strong>${roas}</strong></td></tr>`;
+  };
+  const cab = '<tr><th>Semana</th><th>Spend</th><th>Impr.</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>Revenue</th><th>ROAS</th></tr>';
+  const cabC = '<tr><th>Campaña</th><th>% del canal</th><th>Spend</th><th>Impr.</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>Revenue</th><th>ROAS</th></tr>';
+  document.getElementById('canales').innerHTML = canales.map((c) => {
+    const semanas = w.semanas.filter((s) => s.canales?.[c]).map((s) =>
+      fila(s.canales[c], `<strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}`));
+    const camps = (w.campanas?.[c] || []);
+    const totC = camps.reduce((a, x) => a + x.spend, 0);
+    const filasC = camps.map((x) => fila(x, x.name, `<td>${totC ? ((x.spend / totC) * 100).toFixed(1) + '%' : '&mdash;'}</td>`));
+    return `<h3 class="sub-title">${c}</h3>
+      <div class="tbl-wrap"><table><thead>${cab}</thead><tbody>${semanas.join('')}</tbody></table></div>
+      ${camps.length ? `<div class="tbl-wrap" style="margin-top:8px"><table><thead>${cabC}</thead><tbody>${filasC.join('')}</tbody></table></div>` : ''}`;
+  }).join('');
+}
+
 fetch('data.json?v=' + Date.now())
   .then((r) => r.json())
   .then((d) => {
@@ -213,6 +267,8 @@ fetch('data.json?v=' + Date.now())
     document.title = `Pei Wei | Ads Dashboard – ${d.monthLabel}`;
     renderPacing(d);
     renderSemanal(d);
+    renderMatriz(d);
+    renderCanales(d);
     document.getElementById('footer-date').textContent = gen.toLocaleDateString('en-US');
   })
   .catch((e) => {

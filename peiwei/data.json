@@ -317,66 +317,282 @@
     "Apple Search Ads"
   ],
   "weekly": {
-    "_comentario": "M\u00e9tricas semanales de agosto 2026. Google sale de la API (segments.date agregado por semana). Meta sale del MCP de Meta con time_increment=7, que fija los cortes: 1-7, 8-14, 15-18 (la \u00faltima es parcial). Meta no devuelve conversiones ni revenue de la semana en curso todav\u00eda \u2014 la atribuci\u00f3n llega con retraso, por eso van en null y no en cero.",
+    "_comentario": "Semanal por canal. Google: API de Google Ads con el mismo clasificador que peiwei-update.mjs, para que los totales cuadren con la tabla de pacing. Meta: MCP con time_increment=7, que fija los cortes. La semana en curso va con conv/revenue en null porque la atribucion de Meta llega con retraso \u2014 null, no cero, para no dibujar una caida que no existe.",
     "generadoEl": "2026-08-18",
     "semanas": [
       {
         "desde": "2026-08-01",
         "hasta": "2026-08-07",
         "parcial": false,
-        "google": {
-          "spend": 10239.33,
-          "impr": 640076,
-          "clicks": 28263,
-          "conv": 4186.6,
-          "revenue": 157246.39
-        },
-        "meta": {
-          "spend": 4922.74,
-          "impr": 912853,
-          "clicks": 8170,
-          "conv": 2153,
-          "revenue": 68168.75
+        "canales": {
+          "Google Search": {
+            "spend": 4406.76,
+            "impr": 222679,
+            "clicks": 11119,
+            "conv": 1450.0,
+            "revenue": 48481.35
+          },
+          "Google PMax": {
+            "spend": 5368.13,
+            "impr": 405601,
+            "clicks": 16387,
+            "conv": 2419.6,
+            "revenue": 104768.84
+          },
+          "Google App": {
+            "spend": 160.27,
+            "impr": 10075,
+            "clicks": 299,
+            "conv": 179,
+            "revenue": 0
+          },
+          "Google Remarketing": {
+            "spend": 304.17,
+            "impr": 1721,
+            "clicks": 458,
+            "conv": 138,
+            "revenue": 3996.2
+          },
+          "Meta Ads": {
+            "spend": 4520.64,
+            "impr": 852598,
+            "clicks": 7307,
+            "conv": 1937,
+            "revenue": 60468.51
+          },
+          "Meta Remarketing": {
+            "spend": 402.1,
+            "impr": 60255,
+            "clicks": 863,
+            "conv": 216,
+            "revenue": 7700.24
+          }
         }
       },
       {
         "desde": "2026-08-08",
         "hasta": "2026-08-14",
         "parcial": false,
-        "google": {
-          "spend": 10867.67,
-          "impr": 572870,
-          "clicks": 26719,
-          "conv": 4007.0,
-          "revenue": 156908.9
-        },
-        "meta": {
-          "spend": 4586.32,
-          "impr": 897273,
-          "clicks": 7475,
-          "conv": 1233,
-          "revenue": 37963.03
+        "canales": {
+          "Google Search": {
+            "spend": 4644.33,
+            "impr": 202607,
+            "clicks": 10275,
+            "conv": 1241.3,
+            "revenue": 43238.77
+          },
+          "Google PMax": {
+            "spend": 5643.28,
+            "impr": 355181,
+            "clicks": 15635,
+            "conv": 2425.7,
+            "revenue": 107733.45
+          },
+          "Google App": {
+            "spend": 155.18,
+            "impr": 12760,
+            "clicks": 273,
+            "conv": 172,
+            "revenue": 0
+          },
+          "Google Remarketing": {
+            "spend": 424.87,
+            "impr": 2322,
+            "clicks": 536,
+            "conv": 168,
+            "revenue": 5936.69
+          },
+          "Meta Ads": {
+            "spend": 4211.95,
+            "impr": 839721,
+            "clicks": 6374,
+            "conv": 1096,
+            "revenue": 33076.28
+          },
+          "Meta Remarketing": {
+            "spend": 374.37,
+            "impr": 57552,
+            "clicks": 1101,
+            "conv": 137,
+            "revenue": 4886.75
+          }
         }
       },
       {
         "desde": "2026-08-15",
         "hasta": "2026-08-18",
         "parcial": true,
-        "google": {
-          "spend": 4354.85,
-          "impr": 234477,
-          "clicks": 10627,
-          "conv": 1243.2,
-          "revenue": 48973.81
-        },
-        "meta": {
-          "spend": 2087.92,
-          "impr": 355466,
-          "clicks": 3799,
-          "conv": null,
-          "revenue": null
+        "canales": {
+          "Google Search": {
+            "spend": 1894.67,
+            "impr": 82589,
+            "clicks": 4339,
+            "conv": 460.8,
+            "revenue": 16804.92
+          },
+          "Google PMax": {
+            "spend": 2170.43,
+            "impr": 146794,
+            "clicks": 5968,
+            "conv": 659.4,
+            "revenue": 30551.45
+          },
+          "Google App": {
+            "spend": 74.19,
+            "impr": 4377,
+            "clicks": 107,
+            "conv": 67,
+            "revenue": 0
+          },
+          "Google Remarketing": {
+            "spend": 219.51,
+            "impr": 1034,
+            "clicks": 229,
+            "conv": 56,
+            "revenue": 1617.44
+          },
+          "Meta Ads": {
+            "spend": 1908.05,
+            "impr": 330661,
+            "clicks": 3239,
+            "conv": null,
+            "revenue": null
+          },
+          "Meta Remarketing": {
+            "spend": 185.76,
+            "impr": 25475,
+            "clicks": 565,
+            "conv": null,
+            "revenue": null
+          }
         }
       }
-    ]
+    ],
+    "campanas": {
+      "Google Search": [
+        {
+          "name": "Search | NonBrand | All Stores",
+          "spend": 7715.58,
+          "impr": 458190,
+          "clicks": 8741,
+          "conv": 625.1,
+          "revenue": 24238.6
+        },
+        {
+          "name": "Search | Brand | All Stores",
+          "spend": 3230.19,
+          "impr": 49685,
+          "clicks": 16992,
+          "conv": 2527,
+          "revenue": 84286.43
+        }
+      ],
+      "Google PMax": [
+        {
+          "name": "PMax | NonBrand  | All Stores",
+          "spend": 10297.58,
+          "impr": 833041,
+          "clicks": 19901,
+          "conv": 1311.9,
+          "revenue": 64438.89
+        },
+        {
+          "name": "PMax | Brand | All Stores",
+          "spend": 2884.26,
+          "impr": 74535,
+          "clicks": 18089,
+          "conv": 4192.8,
+          "revenue": 178614.84
+        }
+      ],
+      "Google App": [
+        {
+          "name": "App promotion",
+          "spend": 389.64,
+          "impr": 27212,
+          "clicks": 679,
+          "conv": 418,
+          "revenue": 0
+        }
+      ],
+      "Google Remarketing": [
+        {
+          "name": "Search Remarketing | Visitors",
+          "spend": 467.78,
+          "impr": 3332,
+          "clicks": 734,
+          "conv": 192,
+          "revenue": 6226.98
+        },
+        {
+          "name": "Search Remarketing | Menu Browsers",
+          "spend": 285.34,
+          "impr": 913,
+          "clicks": 291,
+          "conv": 111,
+          "revenue": 3380.91
+        },
+        {
+          "name": "Search Remarketing | Cart Abandoners",
+          "spend": 195.43,
+          "impr": 832,
+          "clicks": 198,
+          "conv": 59,
+          "revenue": 1942.44
+        }
+      ],
+      "Meta Ads": [
+        {
+          "name": "All Stores | Broad",
+          "spend": 8291.25,
+          "impr": 1594827,
+          "clicks": 11994,
+          "conv": 2409,
+          "revenue": 71712.03
+        },
+        {
+          "name": "All Stores | LAL",
+          "spend": 1528.75,
+          "impr": 334598,
+          "clicks": 3766,
+          "conv": 334,
+          "revenue": 12775.16
+        },
+        {
+          "name": "All Stores | RMK",
+          "spend": 820.64,
+          "impr": 93555,
+          "clicks": 1160,
+          "conv": 290,
+          "revenue": 9057.6
+        }
+      ],
+      "Meta Remarketing": [
+        {
+          "name": "Remarketing | Website Visitors",
+          "spend": 470.28,
+          "impr": 83035,
+          "clicks": 1258,
+          "conv": 82,
+          "revenue": 2991.46
+        },
+        {
+          "name": "Remarketing | Menu Browsers",
+          "spend": 302.3,
+          "impr": 35703,
+          "clicks": 439,
+          "conv": 162,
+          "revenue": 5677.04
+        },
+        {
+          "name": "Remarketing | Cart Abandoners",
+          "spend": 189.65,
+          "impr": 24544,
+          "clicks": 832,
+          "conv": 109,
+          "revenue": 3918.49
+        }
+      ]
+    }
   }
 }
