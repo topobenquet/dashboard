@@ -1,0 +1,71 @@
+name: Refresh Voice AI dashboards
+
+# Regenera los dashboards de Voice AI desde GoHighLevel y los commitea.
+# Pages reconstruye solo al recibir el push, asi que el sitio queda al dia sin
+# que nadie encienda una computadora.
+#
+# El disparo es solo por horario y a mano: NO por pull_request. Eso importa
+# porque este repo es publico y un PR desde un fork no debe poder leer el token.
+
+on:
+  schedule:
+    # 11:00 UTC = 6am en Texas (CDT), antes de que el cliente abra el dashboard.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Un refresco a la vez.
+concurrency:
+  group: refresh-voice-ai
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar jsdom para el chequeo de render
+        run: npm install --no-save --no-fund --no-audit jsdom
+
+      - name: Refrescar Alpha HVAC
+        env:
+          GHL_TOKEN_s4nqDuXGLKo0n3HD9KB9: ${{ secrets.GHL_TOKEN_ALPHAHVAC }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GHL_TOKEN_s4nqDuXGLKo0n3HD9KB9}" ]; then
+            echo "::error::Falta el secret GHL_TOKEN_ALPHAHVAC"
+            exit 1
+          fi
+          mkdir -p alphahvac _data
+          python3 _tools/voice-ai/fetch_ghl.py s4nqDuXGLKo0n3HD9KB9 alphahvac _data/alphahvac-calls.json
+          python3 _tools/voice-ai/build.py "Alpha HVAC" alphahvac/index.html _data/alphahvac-calls.json
+
+      - name: Verificar que la pagina realmente dibuje
+        # node --check solo valida sintaxis; esto corre el HTML en un DOM real y
+        # falla si los graficos o la tabla quedan vacios. Sin esto, un error de
+        # runtime se publicaria como una pagina en blanco.
+        run: node _tools/voice-ai/check.js alphahvac/index.html
+
+      - name: Commitear si cambio algo
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add alphahvac _data
+          if git diff --cached --quiet; then
+            echo "Sin cambios; nada que publicar."
+            exit 0
+          fi
+          git commit -m "Refresh Voice AI dashboards ($(date -u +%Y-%m-%d))"
+          git push
