@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pei Wei | Ads Dashboard – July 2026</title>
+<title>Pei Wei | Ads Dashboard</title>
 <style>
   :root {
     --red: #c8102e; --gold: #e8a020; --dark: #1a1a2e; --darker: #12121e;
@@ -85,7 +85,7 @@
 <body>
 <div class="container">
   <div class="header">
-    <div class="header-logo"><span class="header-logo-icon">&#127838;</span></div>
+    <div class="header-logo"><span class="header-logo-icon">PW</span></div>
     <div class="header-title">Pei Wei &mdash; Paid Media</div>
     <div class="header-subtitle">Monthly pacing &amp; performance</div>
     <div class="header-updated" id="last-updated">Cargando&hellip;</div>
@@ -208,6 +208,9 @@ fetch('data.json?v=' + Date.now())
     document.getElementById('days-remaining').textContent =
       `${d.daysInMonth - d.daysElapsed} días restantes`;
     document.getElementById('month-bar').style.width = (d.daysElapsed / d.daysInMonth * 100).toFixed(0) + '%';
+    // El titulo se arma desde los datos: hardcodearlo es como quedo clavado en
+    // "July 2026" mientras el dashboard ya mostraba agosto.
+    document.title = `Pei Wei | Ads Dashboard – ${d.monthLabel}`;
     renderPacing(d);
     renderSemanal(d);
     document.getElementById('footer-date').textContent = gen.toLocaleDateString('en-US');
