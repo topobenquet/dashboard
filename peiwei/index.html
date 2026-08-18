@@ -181,14 +181,15 @@ function renderSemanal(d) {
   }
   const dia = (s) => { const [, m, x] = s.split('-'); return `${x}/${m}`; };
   tb.innerHTML = w.semanas.map((s) => {
-    const g = s.google || {}, m = s.meta || {};
-    const spend = (g.spend || 0) + (m.spend || 0);
-    const impr  = (g.impr || 0) + (m.impr || 0);
-    const clicks = (g.clicks || 0) + (m.clicks || 0);
-    // conv y revenue pueden venir en null cuando la atribución todavía no cerró:
-    // se suma solo lo que existe y la celda queda vacía si no hay nada.
-    const conv = [g.conv, m.conv].some((x) => x != null) ? (g.conv || 0) + (m.conv || 0) : null;
-    const rev  = [g.revenue, m.revenue].some((x) => x != null) ? (g.revenue || 0) + (m.revenue || 0) : null;
+    // Se suma sobre los canales de la semana. conv y revenue pueden venir en
+    // null cuando la atribucion todavia no cerro: si NINGUN canal reporto, la
+    // celda queda vacia en vez de mostrar un cero que se lee como caida.
+    const ch = Object.values(s.canales || {});
+    const spend  = ch.reduce((a, c) => a + (c.spend || 0), 0);
+    const impr   = ch.reduce((a, c) => a + (c.impr || 0), 0);
+    const clicks = ch.reduce((a, c) => a + (c.clicks || 0), 0);
+    const conv = ch.some((c) => c.conv != null) ? ch.reduce((a, c) => a + (c.conv || 0), 0) : null;
+    const rev  = ch.some((c) => c.revenue != null) ? ch.reduce((a, c) => a + (c.revenue || 0), 0) : null;
     return `<tr>
       <td><strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}</td>
       <td>${fmtUSD(spend)}</td><td>${fmtNum(impr)}</td><td>${fmtNum(clicks)}</td>
