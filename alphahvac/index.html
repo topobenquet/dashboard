@@ -404,8 +404,9 @@ function volume(rows,r){
   });
   var every=Math.max(1,Math.ceil(n/7));
   pts.forEach(function(p,i){
-    if(i%every===0||i===n-1)
-      svg.appendChild(el("text",{x:x(i),y:H-8,class:"axis","text-anchor":"middle"},p.lab));
+    if(i%every!==0&&i!==n-1) return;
+    var anchor=i===0?"start":(i===n-1?"end":"middle");
+    svg.appendChild(el("text",{x:x(i),y:H-8,class:"axis","text-anchor":anchor},p.lab));
   });
 }
 
