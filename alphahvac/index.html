@@ -98,12 +98,6 @@
   svg text { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; }
   .axis { font-size:11px; fill:var(--ink-3); }
 
-  .donutwrap { display:flex; flex-wrap:wrap; gap:18px; align-items:center; }
-  .legend { display:grid; gap:12px; flex:1; min-width:150px; }
-  .legend .li { display:grid; grid-template-columns:11px 1fr; gap:9px; align-items:start; font-size:13px; }
-  .legend .dot { width:11px; height:11px; border-radius:50%; margin-top:4px; }
-  .legend .k { color:var(--ink); font-weight:600; }
-  .legend .v { color:var(--ink-2); font-size:12.5px; }
 
   .reasons { display:grid; gap:15px; }
   .reason .rt { display:flex; justify-content:space-between; gap:10px; font-size:13px; margin-bottom:6px; }
@@ -112,11 +106,12 @@
   .reason .bar { height:7px; border-radius:4px; background:var(--hair); overflow:hidden; }
   .reason .bar i { display:block; height:100%; border-radius:4px; background:var(--brand); }
 
-  .insight { margin-top:14px; background:var(--wash-answered); border:1px solid var(--hair); border-radius:12px;
-    padding:15px 16px; }
+  .insight { background:var(--wash-answered); border:1px solid var(--hair); border-radius:12px;
+    padding:17px 19px; }
+  .insight #insight { display:grid; gap:14px; grid-template-columns:1fr; }
+  @media (min-width:900px) { .insight #insight { grid-template-columns:repeat(3,1fr); } }
   .insight h3 { margin:0 0 6px; font-size:13px; font-weight:700; display:flex; align-items:center; gap:7px; }
-  .insight p { margin:0 0 8px; font-size:13px; color:var(--ink-2); }
-  .insight p:last-child { margin-bottom:0; }
+  .insight p { margin:0; font-size:13px; color:var(--ink-2); }
   .insight b { color:var(--ink); }
 
   table { border-collapse:collapse; width:100%; font-size:13px; }
@@ -204,50 +199,38 @@
       <div class="scroll"><svg id="chart-vol" role="img" aria-label="Call volume over time"></svg></div>
     </div>
     <div class="panel">
-      <div class="ph"><h2>Call Outcomes</h2></div>
-      <div class="donutwrap">
-        <svg id="donut" width="176" height="176" viewBox="0 0 176 176" role="img"
-             aria-label="Breakdown of call outcomes"></svg>
-        <div class="legend" id="donutlegend"></div>
-      </div>
+      <div class="ph"><h2>Top Call Reasons</h2></div>
+      <div class="reasons" id="reasons"></div>
     </div>
   </div>
 
-  <div class="grid3">
-    <div class="panel" style="padding-bottom:8px">
-      <div class="ph"><h2>Call Log</h2><span class="muted" id="logcount"></span></div>
-      <div class="scroll" style="max-height:560px; overflow-y:auto">
-        <table id="log"><thead><tr id="loghead"></tr></thead><tbody></tbody></table>
-      </div>
-      <div class="empty" id="empty" hidden>No calls in the selected range.</div>
+  <div class="panel" style="padding-bottom:8px; margin-bottom:14px">
+    <div class="ph"><h2>Call Log</h2><span class="muted" id="logcount"></span></div>
+    <div class="scroll" style="max-height:620px; overflow-y:auto">
+      <table id="log"><thead><tr id="loghead"></tr></thead><tbody></tbody></table>
     </div>
-    <div>
-      <div class="panel">
-        <div class="ph"><h2>Top Call Reasons</h2></div>
-        <div class="reasons" id="reasons"></div>
-      </div>
-      <div class="insight">
-        <h3>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--brand)" aria-hidden="true">
-            <path d="M8 0l1.6 4.6L14 6l-4.4 1.4L8 12l-1.6-4.6L2 6l4.4-1.4z"/></svg>
-          Insight
-        </h3>
-        <div id="insight"></div>
-      </div>
-    </div>
+    <div class="empty" id="empty" hidden>No calls in the selected range.</div>
+  </div>
+
+  <div class="insight">
+    <h3>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="var(--brand)" aria-hidden="true">
+        <path d="M8 0l1.6 4.6L14 6l-4.4 1.4L8 12l-1.6-4.6L2 6l4.4-1.4z"/></svg>
+      Insight
+    </h3>
+    <div id="insight"></div>
   </div>
 
   <footer class="end">
     <p><strong>Source.</strong> GoHighLevel location s4nqDuXGLKo0n3HD9KB9 — call records, contact notes written by the
       voice agent, and the service calendar. Pulled 18 August 2026 and frozen into this page.</p>
     <p>This period covers 7 calls from 2 distinct phone numbers, so several are repeat attempts by the same caller rather than separate leads. Call recording and transcription are not enabled on this location, so no audio is available; turning them on in GoHighLevel will populate a Recording column here automatically.</p>
-    <p>Phone numbers are partially masked because this page is served at a public URL. Times are shown in your
-      own timezone. Call reasons are derived from the agent&rsquo;s own written summary by keyword.</p>
+    <p>This page is served at a public URL and shows full phone numbers. Times are shown in your own timezone. Call reasons are derived from the agent&rsquo;s own written summary by keyword.</p>
   </footer>
 </div>
 
 <script>
-var CALLS = [{"id":"wsHZOPSWQD1YOwdGQxDX","ts":1787006779437,"name":"","place":"Mcallen, Tx","phone":"+19562\u2022\u2022\u2022958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":192,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to schedule a technician visit for a completely down AC unit at their home in San Juan. The agent confirmed the user's details and provided available appointment slots, explaining the fees for after-hours and business hours visits. The user inquired about a 9 AM slot the next day, but the agent informed them that only 6 AM and 11 AM were available.","rec":"","cost":0},{"id":"Fn74zlO4rH9hseZAvjDT","ts":1787003251122,"name":"","place":"Mcallen, Tx","phone":"+19562\u2022\u2022\u2022958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":245,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request a technician for a non-working air conditioning unit. The agent confirmed the user's details and explained that no same-day appointments were available, offering the earliest slots for the next day and placing the user on a priority waitlist for any cancellations. The user expressed frustration about the lack of immediate emergency service but agreed to book the earliest available appointment for the next day.","rec":"","cost":0},{"id":"0UZOZGYXkoUE5oABYeVT","ts":1786473844454,"name":"","place":"Mcallen, Tx","phone":"+19562\u2022\u2022\u2022958","dir":"inbound","demo":false,"outcome":"connected","reason":"Thermostat issue","dur":130,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning about a thermostat issue with their HVAC system. The agent clarified the problem and attempted to schedule a service visit, but the conversation was partially unintelligible and incomplete by the end of the call.","rec":"","cost":0},{"id":"j1dnQFzWx4FDmX3IeIiR","ts":1786473792927,"name":"","place":"Mcallen, Tx","phone":"+19562\u2022\u2022\u2022958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":46,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request an AC check due to the hot weather. The agent began gathering the user's name and service address to schedule a service visit. The call ended shortly after confirming the address details.","rec":"","cost":0},{"id":"tg1xdkYNFmkuPjTTGFze","ts":1786472285800,"name":"","place":"Mcallen, Tx","phone":"+19562\u2022\u2022\u2022958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":117,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an appointment for an air conditioner check. The agent confirmed the user's details and offered available time slots, ultimately booking the user for 9 PM on August 11th. The user was satisfied and the call ended successfully with a confirmation text to be sent. Fetched info: 1. phone_number: +19562122958","rec":"","cost":0},{"id":"XKMC3YW16WEN8VdrsMje","ts":1786467340134,"name":"","place":"Ny","phone":"+16469\u2022\u2022\u2022015","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":190,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an emergency appointment for a completely non-working AC unit. The agent confirmed the user's details, offered available time slots, and successfully booked an appointment for 7 PM the same day. The user also inquired about the company's location and maintenance plans, which the agent clarified. Fetched info: 1. email: john@gmail.com 2. phone_number: +16469068015","rec":"","cost":0},{"id":"7oqAkr6vLg4MckID458e","ts":1786467219950,"name":"","place":"Ny","phone":"+16469\u2022\u2022\u2022015","dir":"inbound","demo":false,"outcome":"no_answer","reason":"No summary","dur":0,"sentiment":"","summary":"","rec":"","cost":0}];
+var CALLS = [{"id":"wsHZOPSWQD1YOwdGQxDX","ts":1787006779437,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":192,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to schedule a technician visit for a completely down AC unit at their home in San Juan. The agent confirmed the user's details and provided available appointment slots, explaining the fees for after-hours and business hours visits. The user inquired about a 9 AM slot the next day, but the agent informed them that only 6 AM and 11 AM were available.","rec":"","cost":0},{"id":"Fn74zlO4rH9hseZAvjDT","ts":1787003251122,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":245,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request a technician for a non-working air conditioning unit. The agent confirmed the user's details and explained that no same-day appointments were available, offering the earliest slots for the next day and placing the user on a priority waitlist for any cancellations. The user expressed frustration about the lack of immediate emergency service but agreed to book the earliest available appointment for the next day.","rec":"","cost":0},{"id":"0UZOZGYXkoUE5oABYeVT","ts":1786473844454,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Thermostat issue","dur":130,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning about a thermostat issue with their HVAC system. The agent clarified the problem and attempted to schedule a service visit, but the conversation was partially unintelligible and incomplete by the end of the call.","rec":"","cost":0},{"id":"j1dnQFzWx4FDmX3IeIiR","ts":1786473792927,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":46,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to request an AC check due to the hot weather. The agent began gathering the user's name and service address to schedule a service visit. The call ended shortly after confirming the address details.","rec":"","cost":0},{"id":"tg1xdkYNFmkuPjTTGFze","ts":1786472285800,"name":"","place":"Mcallen, Tx","phone":"(956) 212-2958","dir":"inbound","demo":false,"outcome":"connected","reason":"Maintenance or AC check","dur":117,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an appointment for an air conditioner check. The agent confirmed the user's details and offered available time slots, ultimately booking the user for 9 PM on August 11th. The user was satisfied and the call ended successfully with a confirmation text to be sent. Fetched info: 1. phone_number: +19562122958","rec":"","cost":0},{"id":"XKMC3YW16WEN8VdrsMje","ts":1786467340134,"name":"","place":"Ny","phone":"(646) 906-8015","dir":"inbound","demo":false,"outcome":"connected","reason":"No cooling / emergency repair","dur":190,"sentiment":"","summary":"The user called Alpha Heating and Air Conditioning to book an emergency appointment for a completely non-working AC unit. The agent confirmed the user's details, offered available time slots, and successfully booked an appointment for 7 PM the same day. The user also inquired about the company's location and maintenance plans, which the agent clarified. Fetched info: 1. email: john@gmail.com 2. phone_number: +16469068015","rec":"","cost":0},{"id":"7oqAkr6vLg4MckID458e","ts":1786467219950,"name":"","place":"Ny","phone":"(646) 906-8015","dir":"inbound","demo":false,"outcome":"no_answer","reason":"No summary","dur":0,"sentiment":"","summary":"","rec":"","cost":0}];
 var APPTS = [{"ts":"2026-08-11T18:00:00-05:00","title":"","status":"confirmed","contactId":"IUEaIhQm12GvVf2cliav","test":false},{"ts":"2026-08-11T20:00:00-05:00","title":"","status":"confirmed","contactId":"YiuVFXLLZ7ExgjXVH6EU","test":false},{"ts":"2026-08-13T14:00:00-05:00","title":"- TEST","status":"confirmed","contactId":"IUEaIhQm12GvVf2cliav","test":true}];
 var HAS_REC = false;
 var NS = "http://www.w3.org/2000/svg";
@@ -410,44 +393,6 @@ function volume(rows,r){
   });
 }
 
-function donut(rows){
-  var svg=document.getElementById("donut");
-  svg.textContent="";
-  var order=["connected","voicemail","no_answer"];
-  var counts=order.map(function(k){return rows.filter(function(c){return c.outcome===k;}).length;});
-  var total=counts.reduce(function(a,b){return a+b;},0);
-  var cx=88,cy=88,rO=72,rI=48,start=-Math.PI/2;
-  if(!total){
-    svg.appendChild(el("circle",{cx:cx,cy:cy,r:(rO+rI)/2,fill:"none",stroke:"var(--hair)",
-      "stroke-width":rO-rI}));
-  }
-  counts.forEach(function(v,i){
-    if(!v) return;
-    var frac=v/total, end=start+frac*Math.PI*2;
-    if(frac>0.999){
-      svg.appendChild(el("circle",{cx:cx,cy:cy,r:(rO+rI)/2,fill:"none",
-        stroke:OUTCOME[order[i]].color,"stroke-width":rO-rI}));
-    } else {
-      var p=function(a,r){return [cx+Math.cos(a)*r,cy+Math.sin(a)*r];};
-      var a1=p(start,rO),a2=p(end,rO),b1=p(end,rI),b2=p(start,rI);
-      var big=frac>0.5?1:0;
-      svg.appendChild(el("path",{d:"M"+a1+" A"+rO+" "+rO+" 0 "+big+" 1 "+a2+" L"+b1+
-        " A"+rI+" "+rI+" 0 "+big+" 0 "+b2+" Z",fill:OUTCOME[order[i]].color}));
-    }
-    start=end;
-  });
-  svg.appendChild(el("text",{x:cx,y:cy-2,"text-anchor":"middle",
-    style:"font-size:26px;font-weight:750;fill:var(--ink)"},String(total)));
-  svg.appendChild(el("text",{x:cx,y:cy+17,"text-anchor":"middle",
-    style:"font-size:11px;fill:var(--ink-3)"},"Total Calls"));
-  document.getElementById("donutlegend").innerHTML=order.map(function(k,i){
-    var pct=total?(counts[i]/total*100).toFixed(1):"0.0";
-    return '<div class="li"><span class="dot" style="background:'+OUTCOME[k].color+'"></span>'+
-      '<span><span class="k">'+OUTCOME[k].label+'</span><br>'+
-      '<span class="v">'+counts[i]+" ("+pct+'%)</span></span></div>';
-  }).join("");
-}
-
 function reasons(rows){
   var m={};
   rows.forEach(function(c){ if(c.outcome!=="connected") return; m[c.reason]=(m[c.reason]||0)+1; });
@@ -472,7 +417,11 @@ function insight(rows,r){
   var urgent=rows.filter(function(c){return c.outcome==="connected"&&
     c.reason==="No cooling / emergency repair";}).length;
   var bits=[];
-  bits.push("<p><b>"+s.answered+" of "+s.calls+"</b> calls were answered, averaging <b>"+
+  var miss=rows.filter(function(c){return c.outcome==="no_answer";}).length;
+  var vm=rows.filter(function(c){return c.outcome==="voicemail";}).length;
+  bits.push("<p><b>"+s.answered+" of "+s.calls+"</b> calls were answered"+
+    (miss||vm?" ("+[miss?miss+" missed":"",vm?vm+" to voicemail":""].filter(Boolean).join(", ")+")":"")+
+    ", averaging <b>"+
     (s.avg?mmss(s.avg):"\u2014")+"</b> of conversation. <b>"+s.appts+"</b> turned into a booked appointment"+
     (s.answered?" \u2014 "+Math.round(s.appts/s.answered*100)+"% of answered calls":"")+".</p>");
   if(urgent) bits.push("<p><b>"+urgent+"</b> of the answered calls were a completely non-working unit \u2014 the "+
@@ -539,7 +488,7 @@ function render(){
   document.getElementById("picklabel").textContent=custom?fmtRange(r):LABELS[range];
   document.querySelectorAll("#pickmenu [data-range]").forEach(function(b){
     b.setAttribute("aria-pressed",String(!custom&&b.dataset.range===range));});
-  kpis(rows,r);volume(rows,r);donut(rows);reasons(rows);insight(rows,r);log(rows);
+  kpis(rows,r);volume(rows,r);reasons(rows);insight(rows,r);log(rows);
 }
 
 var menu=document.getElementById("pickmenu"),pickbtn=document.getElementById("pickbtn");
