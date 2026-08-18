@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-18T10:49:37.495Z",
+  "generated": "2026-08-18T11:26:30.100Z",
   "lastSyncLabel": "18 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -119,7 +119,7 @@
       "mes": "Agosto",
       "leads": 171,
       "reservas": 29,
-      "revenue": 6675,
+      "revenue": 5397,
       "chofer": 1546,
       "comb": 759,
       "peajes": 75,
@@ -129,7 +129,7 @@
       "gAds": 196,
       "meta": 0,
       "costoSheet": 2685,
-      "gananciaSheet": 3794
+      "gananciaSheet": 2516
     }
   ],
   "adsMonthly": [
@@ -186,7 +186,7 @@
       "mes": "Agosto",
       "spend": 195.68,
       "clicks": 139,
-      "impr": 896,
+      "impr": 900,
       "conv": 16
     }
   ],
@@ -2713,31 +2713,17 @@
     },
     {
       "mes": "Agosto",
-      "route": "Asu-Foz",
-      "cliente": "Clara Fiol",
-      "pais": "USA",
-      "conductor": "",
-      "pago": 697,
-      "sena": 150,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 150,
-      "fechaReserva": "08/08/26",
-      "fechaSalida": "15/07/27"
-    },
-    {
-      "mes": "Agosto",
-      "route": "Aero-PtoIguazu",
-      "cliente": "Philipp Siemes",
-      "pais": "Peru",
-      "conductor": "",
-      "pago": 457,
+      "route": "Aero-Dazzler-Aero",
+      "cliente": "Rafa 5215591984468",
+      "pais": "México",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 194,
       "sena": 100,
-      "restante": 357,
-      "choferCost": 0,
+      "restante": 94,
+      "choferCost": 40,
       "neto": 100,
-      "fechaReserva": "16/08/26",
-      "fechaSalida": "03/10/26"
+      "fechaReserva": "09/08/26",
+      "fechaSalida": "23/09/26 - 26/09/26"
     },
     {
       "mes": "Agosto",
@@ -2755,17 +2741,31 @@
     },
     {
       "mes": "Agosto",
-      "route": "Aero-Dazzler-Aero",
-      "cliente": "Rafa 5215591984468",
-      "pais": "México",
-      "conductor": "Alfredo Sánchez PT",
-      "pago": 194,
+      "route": "Aero-PtoIguazu",
+      "cliente": "Philipp Siemes",
+      "pais": "Peru",
+      "conductor": "",
+      "pago": 457,
       "sena": 100,
-      "restante": 94,
-      "choferCost": 40,
+      "restante": 357,
+      "choferCost": 0,
       "neto": 100,
-      "fechaReserva": "09/08/26",
-      "fechaSalida": "23/09/26 - 26/09/26"
+      "fechaReserva": "16/08/26",
+      "fechaSalida": "03/10/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-Foz",
+      "cliente": "Clara Fiol",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 697,
+      "sena": 150,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 150,
+      "fechaReserva": "08/08/26",
+      "fechaSalida": "15/07/27"
     },
     {
       "mes": "Septiembre",
@@ -2890,8 +2890,8 @@
       "2026-08-13": 1,
       "2026-08-14": 3,
       "2026-08-17": 3,
-      "2026-08-08": 1,
-      "2026-08-16": 1
+      "2026-08-16": 1,
+      "2026-08-08": 1
     },
     "gads": {
       "2026-01-01": 19.99,
