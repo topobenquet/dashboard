@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-18T11:26:30.100Z",
-  "lastSyncLabel": "18 Ago 2026",
+  "generated": "2026-08-19T10:20:26.762Z",
+  "lastSyncLabel": "19 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 171,
-      "reservas": 29,
-      "revenue": 5397,
-      "chofer": 1546,
-      "comb": 759,
+      "leads": 176,
+      "reservas": 39,
+      "revenue": 5377,
+      "chofer": 1596,
+      "comb": 776,
       "peajes": 75,
-      "comision": 186,
+      "comision": 278,
       "reembolsos": 0,
       "otros": 118,
-      "gAds": 196,
+      "gAds": 200,
       "meta": 0,
-      "costoSheet": 2685,
-      "gananciaSheet": 2516
+      "costoSheet": 2773,
+      "gananciaSheet": 2405
     }
   ],
   "adsMonthly": [
@@ -184,10 +184,10 @@
     },
     {
       "mes": "Agosto",
-      "spend": 195.68,
-      "clicks": 139,
-      "impr": 900,
-      "conv": 16
+      "spend": 200.18,
+      "clicks": 142,
+      "impr": 932,
+      "conv": 17
     }
   ],
   "trips": [
@@ -2321,6 +2321,132 @@
     },
     {
       "mes": "Agosto",
+      "route": "Aero-CDE",
+      "cliente": "Deisy Ortega",
+      "pais": "USA/Canada",
+      "conductor": "",
+      "pago": 347,
+      "sena": 100,
+      "restante": 247,
+      "choferCost": 0,
+      "neto": 337,
+      "fechaReserva": "17/08/26",
+      "fechaSalida": "29/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-Foz",
+      "cliente": "dorian",
+      "pais": "Francia",
+      "conductor": "",
+      "pago": 707,
+      "sena": 707,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 686,
+      "fechaReserva": "17/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "Aero-Formosa",
+      "cliente": "nadia",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 147,
+      "sena": 147,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 143,
+      "fechaReserva": "17/08/26",
+      "fechaSalida": "13/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "silvio tiago de lima",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "17/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "ben nelson",
+      "pais": "USA/Canada",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "17/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-Aero",
+      "cliente": "rodrigo arce cortés",
+      "pais": "Chile",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 67,
+      "fechaReserva": "18/08/26",
+      "fechaSalida": "17/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "karla rezende",
+      "pais": "Suiza",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "18/08/26",
+      "fechaSalida": "17/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu-CDE",
+      "cliente": "in",
+      "pais": "Tailandia",
+      "conductor": "",
+      "pago": 417,
+      "sena": 417,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 404,
+      "fechaReserva": "18/08/26",
+      "fechaSalida": "09/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "isela d. celis",
+      "pais": "Belgica",
+      "conductor": "",
+      "pago": 697,
+      "sena": 697,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 676,
+      "fechaReserva": "18/08/26",
+      "fechaSalida": "24/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Aero-Centro",
       "cliente": "Richard",
       "pais": "Noruega",
@@ -2587,7 +2713,7 @@
     },
     {
       "mes": "Agosto",
-      "route": "Asu-Foz-CDE-Asu",
+      "route": "Tour Foz",
       "cliente": "Dorian",
       "pais": "Francia",
       "conductor": "Alfredo Sánchez PT",
@@ -2674,12 +2800,12 @@
       "route": "Foz-Asu",
       "cliente": "Yao",
       "pais": "Tailandia",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 417,
       "sena": 197,
-      "restante": 220,
-      "choferCost": 0,
-      "neto": 404,
+      "restante": 0,
+      "choferCost": 50,
+      "neto": 338,
       "fechaReserva": "17/08/26",
       "fechaSalida": "18/08/26"
     },
@@ -2693,9 +2819,23 @@
       "sena": 100,
       "restante": 247,
       "choferCost": 0,
-      "neto": 337,
+      "neto": 100,
       "fechaReserva": "17/08/26",
       "fechaSalida": "29/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Tour Foz",
+      "cliente": "isela d. celis",
+      "pais": "Belgica",
+      "conductor": "",
+      "pago": 697,
+      "sena": 200,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 200,
+      "fechaReserva": "18/08/26",
+      "fechaSalida": "24/08/26"
     },
     {
       "mes": "Agosto",
@@ -2826,7 +2966,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-18": 1,
+      "2026-08-19": 1,
+      "2026-08-18": 5,
       "2026-08-17": 7,
       "2026-08-16": 7,
       "2026-08-15": 2,
@@ -2878,6 +3019,8 @@
       "2026-07-02": 7
     },
     "ventas": {
+      "2026-08-17": 8,
+      "2026-08-18": 5,
       "2026-08-02": 2,
       "2026-08-03": 1,
       "2026-08-04": 1,
@@ -2889,7 +3032,6 @@
       "2026-08-12": 3,
       "2026-08-13": 1,
       "2026-08-14": 3,
-      "2026-08-17": 3,
       "2026-08-16": 1,
       "2026-08-08": 1
     },
@@ -3110,7 +3252,8 @@
       "2026-08-15": 4.06,
       "2026-08-16": 15.21,
       "2026-08-17": 24.65,
-      "2026-08-18": 0
+      "2026-08-18": 3,
+      "2026-08-19": 1.5
     }
   }
 }
