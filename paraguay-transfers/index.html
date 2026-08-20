@@ -345,12 +345,26 @@ function renderUpcoming(root) {
   // porque si no, las salidas de 2027 quedaban afuera.
   const now = new Date();
   const hoy = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const up = [];
+  let up = [];
   for (const t of DATA.trips) {
     const s = salidaDate(t.fechaSalida);
     if (!s || s < hoy) continue;
     up.push({ ...t, s, dias: Math.round((s - hoy) / 86400000) });
   }
+  // Un mismo traslado figura en DOS pestañas cuando se cobra en un mes y sale en
+  // otro: una copia en el mes del cobro (bloque rojo, para la caja) y otra en el
+  // mes de la salida (para operarlo). Es una sola salida, no dos. Se deduplica
+  // por fecha + cliente + ruta, conservando la fila más completa (la que ya
+  // tiene chofer asignado gana, que es la operativa).
+  const porClave = new Map();
+  const puntaje = (x) => (x.conductor ? 2 : 0) + (x.pago > 0 ? 1 : 0) + (x.restante > 0 ? 1 : 0);
+  for (const t of up) {
+    const k = t.s.getTime() + "|" + String(t.cliente || "").trim().toLowerCase()
+            + "|" + String(t.route || "").trim().toLowerCase();
+    const prev = porClave.get(k);
+    if (!prev || puntaje(t) > puntaje(prev)) porClave.set(k, t);
+  }
+  up = [...porClave.values()];
   up.sort((a, b) => a.s - b.s);
   if (!up.length) return;
   const saldo = up.reduce((s, t) => s + (t.restante > 0 ? t.restante : 0), 0);
