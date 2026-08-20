@@ -42,6 +42,21 @@ body {
 .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 @media(max-width:700px){ .grid-2{ grid-template-columns:1fr; } }
 
+/* ── Gráficas ── */
+.chart-card { background:white; border:1px solid #E5E7EB; border-radius:10px; padding:12px 14px 8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:10px; }
+.chart-card svg { width:100%; height:auto; display:block; overflow:visible; }
+.chart-legend { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+.mbtn { font:inherit; font-size:10.5px; font-weight:600; padding:4px 9px; border-radius:999px; cursor:pointer;
+  border:1px solid #E5E7EB; background:#F9FAFB; color:#6B7280; transition:all .12s; user-select:none; }
+.mbtn:hover { border-color:#CBD5E1; }
+.mbtn[aria-pressed="true"] { color:#fff; border-color:transparent; }
+.mbtn .dotc { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+.mbtn[aria-pressed="true"] .dotc { background:rgba(255,255,255,.85) !important; }
+.chart-hint { font-size:9.5px; color:#9CA3AF; margin-top:2px; }
+.chart-empty { font-size:11px; color:#9CA3AF; padding:26px 0; text-align:center; }
+@media(max-width:600px){ .mbtn{ font-size:9.5px; padding:3px 7px; } }
+
 .ft-wrap { overflow-x:auto; }
 table.ft { table-layout:fixed; width:100%; border-collapse:collapse; font-size:11.5px; min-width:680px; }
 table.ft thead tr { background:#1F4E78; }
@@ -214,6 +229,7 @@ function renderMonthly(root) {
     <td class="pos">${f$(y.ganancia)}</td><td>${fp0(y.ganancia/y.revenue)}</td><td>${f$(y.ganancia/y.reservas)}</td>
   </tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Operacional mensual 2026</div>
+    ${chartMensual()}
     <div class="ft-wrap"><table class="ft" style="min-width:500px;">
       <colgroup><col style="width:13%"><col style="width:9%"><col style="width:9%"><col style="width:12%"><col style="width:10%">
         <col style="width:10%"><col style="width:8%"><col style="width:12%"><col style="width:9%"><col style="width:12%"></colgroup>
@@ -257,6 +273,7 @@ function renderDaily(root) {
     <td class="${totV>0?"pos":""}">${totV}</td>
     <td class="${totL>0&&totV/totL>=0.12?"pos":"neu"}">${totL>0?fp(totV/totL):"–"}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">${m.mes} 2026 — día a día (leads y cierre)</div>
+    ${chartDaily(leads, ventas, dates)}
     <div class="ft-wrap"><table class="ft nowrap1" style="min-width:300px;">
       <colgroup><col style="width:22%"><col style="width:26%"><col style="width:24%"><col style="width:28%"></colgroup>
       <thead><tr><th>Fecha</th><th>Leads</th><th>Ventas</th><th>%Cierre día</th></tr></thead>
@@ -337,6 +354,133 @@ function renderDrivers() {
     <div class="info-box info-gray" style="margin-top:8px;">Facturación = costo del chofer. Registrado desde Febrero. Multi-chofer: se cuenta al primero.</div></div>`;
 }
 
+/* ════ GRÁFICAS ════ */
+// SVG inline y a mano: la página es estática y se sirve desde GitHub Pages, así
+// que no se le suma ninguna librería externa. viewBox fijo + width:100% para que
+// escale sola en mobile.
+const CW = 760, CH = 250, CM = { t: 14, r: 46, b: 26, l: 46 };
+const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const nice = (v) => { // techo redondo para el eje
+  if (v <= 0) return 1;
+  const e = Math.pow(10, Math.floor(Math.log10(v)));
+  return Math.ceil(v / e) * e;
+};
+const fmtEje = (v, money) => money ? (v >= 1000 ? "$" + (v / 1000) + "k" : "$" + v) : String(v);
+
+function ejeY(max, money, x, anclaje) {
+  let out = "";
+  for (let i = 0; i <= 4; i++) {
+    const val = (max / 4) * i, y = CH - CM.b - ((CH - CM.t - CM.b) * i) / 4;
+    if (anclaje === "start") out += `<line x1="${CM.l}" y1="${y}" x2="${CW - CM.r}" y2="${y}" stroke="#F1F5F9" stroke-width="1"/>`;
+    out += `<text x="${x}" y="${y + 3.5}" text-anchor="${anclaje === "start" ? "end" : "start"}" font-size="9" fill="#9CA3AF">${fmtEje(Math.round(val), money)}</text>`;
+  }
+  return out;
+}
+
+/* ── Día a día: leads y ventas juntos ── */
+function chartDaily(leads, ventas, dates) {
+  const maxV = nice(Math.max(1, ...dates.map((d) => Math.max(leads[d] || 0, ventas[d] || 0))));
+  const W = CW - CM.l - CM.r, H = CH - CM.t - CM.b;
+  const paso = W / dates.length, ancho = Math.max(2, Math.min(11, paso / 2 - 1.5));
+  const y = (v) => CH - CM.b - (v / maxV) * H;
+  let barras = "", ejeX = "";
+  dates.forEach((d, i) => {
+    const cx = CM.l + paso * i + paso / 2;
+    const l = leads[d] || 0, v = ventas[d] || 0;
+    const dia = d.slice(8, 10) + "/" + d.slice(5, 7);
+    if (l > 0) barras += `<rect x="${(cx - ancho - 0.8).toFixed(1)}" y="${y(l).toFixed(1)}" width="${ancho.toFixed(1)}" height="${(CH - CM.b - y(l)).toFixed(1)}" fill="#1F4E78" rx="1.5"><title>${dia} · ${l} leads</title></rect>`;
+    if (v > 0) barras += `<rect x="${(cx + 0.8).toFixed(1)}" y="${y(v).toFixed(1)}" width="${ancho.toFixed(1)}" height="${(CH - CM.b - y(v)).toFixed(1)}" fill="#059669" rx="1.5"><title>${dia} · ${v} venta${v !== 1 ? "s" : ""}</title></rect>`;
+    // Con muchos días se etiqueta uno de cada tres para que no se encimen.
+    if (dates.length <= 16 || i % 3 === 0 || i === dates.length - 1)
+      ejeX += `<text x="${cx.toFixed(1)}" y="${CH - CM.b + 13}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8, 10)}</text>`;
+  });
+  return `<div class="chart-card">
+    <div class="chart-legend">
+      <span class="mbtn" aria-pressed="true" style="background:#1F4E78;"><span class="dotc"></span>Leads</span>
+      <span class="mbtn" aria-pressed="true" style="background:#059669;"><span class="dotc"></span>Ventas</span>
+    </div>
+    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Leads y ventas por día">
+      ${ejeY(maxV, false, CM.l - 6, "start")}
+      <line x1="${CM.l}" y1="${CH - CM.b}" x2="${CW - CM.r}" y2="${CH - CM.b}" stroke="#E5E7EB"/>
+      ${barras}${ejeX}
+    </svg>
+    <div class="chart-hint">Pasá el mouse sobre una barra para ver el detalle del día.</div>
+  </div>`;
+}
+
+/* ── Operacional mensual: elegís qué métricas ver ── */
+const METRICAS = [
+  { k: "revenue",  lbl: "Revenue",       color: "#1F4E78", money: true  },
+  { k: "ganancia", lbl: "Ganancia",      color: "#059669", money: true  },
+  { k: "chofer",   lbl: "Costo chofer",  color: "#DC2626", money: true  },
+  { k: "comb",     lbl: "Combustible",   color: "#D97706", money: true  },
+  { k: "totalAds", lbl: "Ads",           color: "#7C3AED", money: true  },
+  { k: "reservas", lbl: "Ventas",        color: "#0891B2", money: false },
+  { k: "leads",    lbl: "Leads",         color: "#DB2777", money: false },
+];
+let MSEL = new Set(["revenue", "ganancia"]);   // arranca con lo que más se mira
+
+function dibujarMensual() {
+  const cont = document.getElementById("chart-mensual");
+  if (!cont) return;
+  const M = DATA.months, sel = METRICAS.filter((m) => MSEL.has(m.k));
+  if (!sel.length) { cont.innerHTML = `<div class="chart-empty">Elegí al menos una métrica.</div>`; return; }
+  const W = CW - CM.l - CM.r, H = CH - CM.t - CM.b;
+  const hayMoney = sel.some((m) => m.money), hayCount = sel.some((m) => !m.money);
+  // Dos escalas: la plata a la izquierda y las cantidades a la derecha. Mezclar
+  // revenue (miles) con leads (cientos) en un solo eje aplasta la serie chica.
+  const maxMoney = nice(Math.max(1, ...sel.filter((m) => m.money).flatMap((m) => M.map((x) => x[m.k] || 0))));
+  const maxCount = nice(Math.max(1, ...sel.filter((m) => !m.money).flatMap((m) => M.map((x) => x[m.k] || 0))));
+  const paso = W / Math.max(1, M.length - 1);
+  const px = (i) => CM.l + paso * i;
+  const py = (v, money) => CH - CM.b - (v / (money ? maxMoney : maxCount)) * H;
+
+  let series = "";
+  sel.forEach((m) => {
+    const pts = M.map((x, i) => [px(i), py(x[m.k] || 0, m.money)]);
+    series += `<polyline fill="none" stroke="${m.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ")}"/>`;
+    pts.forEach((p, i) => {
+      const v = M[i][m.k] || 0;
+      series += `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.2" fill="#fff" stroke="${m.color}" stroke-width="2"><title>${esc(M[i].mes)} · ${esc(m.lbl)}: ${m.money ? f$(v) : v}</title></circle>`;
+    });
+  });
+  let ejeX = "";
+  M.forEach((x, i) => { ejeX += `<text x="${px(i).toFixed(1)}" y="${CH - CM.b + 14}" text-anchor="middle" font-size="9" fill="#9CA3AF">${esc(x.mes.slice(0, 3))}</text>`; });
+
+  cont.innerHTML = `<svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Evolución mensual">
+    ${hayMoney ? ejeY(maxMoney, true, CM.l - 6, "start") : `<line x1="${CM.l}" y1="${CM.t}" x2="${CM.l}" y2="${CH - CM.b}" stroke="#F1F5F9"/>`}
+    ${hayCount ? ejeY(maxCount, false, CW - CM.r + 6, "end") : ""}
+    <line x1="${CM.l}" y1="${CH - CM.b}" x2="${CW - CM.r}" y2="${CH - CM.b}" stroke="#E5E7EB"/>
+    ${series}${ejeX}
+  </svg>
+  <div class="chart-hint">${hayMoney ? "Eje izquierdo: dólares." : ""} ${hayCount ? "Eje derecho: cantidad." : ""} Pasá el mouse sobre un punto para ver el valor.</div>`;
+}
+
+function chartMensual() {
+  const botones = METRICAS.map((m) =>
+    `<button type="button" class="mbtn" data-k="${m.k}" aria-pressed="${MSEL.has(m.k)}" style="${MSEL.has(m.k) ? `background:${m.color};` : ""}">
+      <span class="dotc" style="background:${m.color}"></span>${esc(m.lbl)}</button>`).join("");
+  return `<div class="chart-card">
+    <div class="chart-legend" id="chart-mensual-btns">${botones}</div>
+    <div id="chart-mensual"></div>
+  </div>`;
+}
+
+// Delegación: los botones se redibujan, así que el listener va en el contenedor.
+function activarMensual() {
+  const cont = document.getElementById("chart-mensual-btns");
+  if (!cont) return;
+  cont.addEventListener("click", (e) => {
+    const b = e.target.closest(".mbtn"); if (!b) return;
+    const k = b.dataset.k, m = METRICAS.find((x) => x.k === k);
+    if (MSEL.has(k)) MSEL.delete(k); else MSEL.add(k);
+    b.setAttribute("aria-pressed", MSEL.has(k));
+    b.style.background = MSEL.has(k) ? m.color : "";
+    dibujarMensual();
+  });
+  dibujarMensual();
+}
+
 /* ════ PRÓXIMOS TRASLADOS ════ */
 function renderUpcoming(root) {
   // La planilla escribe la fecha de salida como día/mes/año ("14/08/26") y a
@@ -412,6 +556,9 @@ async function init() {
   renderUpcoming(root);
   renderCountries(root);
   root.innerHTML += `<div class="section grid-2">${renderRoutes()}${renderDrivers()}</div>`;
+  // Va ÚLTIMO a propósito: cada `root.innerHTML +=` reserializa y reconstruye
+  // todo el árbol, y se lleva puestos los listeners ya enganchados.
+  activarMensual();
 }
 init();
 </script>
