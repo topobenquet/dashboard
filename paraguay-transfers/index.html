@@ -11,6 +11,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   background: #F0F4F8; color: #1F2937; padding: 20px; line-height: 1.5; font-size: 13px;
 }
+/* En pantallas grandes el contenido se centra en vez de estirarse de punta a
+   punta: a ancho completo las tablas quedan larguísimas y cuesta seguir la fila. */
+body > * { max-width: 1320px; margin-left: auto; margin-right: auto; }
+@media(max-width:600px){ body { padding: 12px; } }
 .page-header { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
 .page-header h1 { font-size:20px; font-weight:700; color:#1F4E78; }
 .page-header .subtitle { font-size:12px; color:#6B7280; }
@@ -307,18 +311,20 @@ function renderCountries(root) {
 function renderRoutes() {
   const byR={};
   DATA.trips.forEach(t=>{ const r=(t.route||"").trim(); if(!r) return; if(!byR[r]) byR[r]={route:r,count:0,rev:0,gan:0}; byR[r].count++; byR[r].rev+=(t.pago||0); byR[r].gan+=(t.neto||0); });
-  const arr=Object.values(byR).map(r=>({...r,margen:r.rev>0?r.gan/r.rev:0})).sort((a,b)=>b.count-a.count).slice(0,12);
+  const arr=Object.values(byR).map(r=>({...r,margen:r.rev>0?r.gan/r.rev:0,
+    ganProm:r.count>0?r.gan/r.count:0})).sort((a,b)=>b.count-a.count).slice(0,12);
   if(!arr.length) return "";
   const rows=arr.map((r,i)=>`<tr${i===0?' class="hi"':''}>
     <td style="color:#6B7280;">${i+1}</td><td class="tl"><strong>${r.route}</strong></td>
     <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${f$(r.rev)}</td>
-    <td class="pos">${f$(r.gan)}</td><td>${fp0(r.margen)}</td></tr>`).join("");
+    <td class="pos">${f$(r.gan)}</td><td class="${r.ganProm>=0?"pos":"neg"}">${f$(r.ganProm)}</td>
+    <td>${fp0(r.margen)}</td></tr>`).join("");
   return `<div><div class="section-title">Rutas — rentabilidad (YTD 2026)</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:330px;">
-      <colgroup><col style="width:6%"><col style="width:38%"><col style="width:13%"><col style="width:16%"><col style="width:15%"><col style="width:12%"></colgroup>
-      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Viajes</th><th>Revenue</th><th>Ganancia</th><th>Margen</th></tr></thead>
+    <div class="ft-wrap"><table class="ft" style="min-width:400px;">
+      <colgroup><col style="width:5%"><col style="width:31%"><col style="width:11%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:11%"></colgroup>
+      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Viajes</th><th>Revenue</th><th>Ganancia</th><th>Gan./viaje</th><th>Margen</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">Ordenado por volumen. Ida y vuelta por separado.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">Ordenado por volumen. Gan./viaje es la ganancia promedio de cada viaje de esa ruta. Ida y vuelta por separado.</div></div>`;
 }
 
 /* ════ CHOFERES (retorna HTML para grid-2) ════ */
@@ -378,21 +384,33 @@ function ejeY(max, money, x, anclaje) {
 }
 
 /* ── Día a día: leads y ventas juntos ── */
+// Mismo lenguaje visual que la mensual: líneas con puntos y tooltip. Comparten
+// eje porque leads y ventas están en el mismo orden de magnitud (decenas contra
+// unidades); separarlos en dos escalas exageraría la serie chica.
 function chartDaily(leads, ventas, dates) {
+  if (!dates.length) return "";
   const maxV = nice(Math.max(1, ...dates.map((d) => Math.max(leads[d] || 0, ventas[d] || 0))));
   const W = CW - CM.l - CM.r, H = CH - CM.t - CM.b;
-  const paso = W / dates.length, ancho = Math.max(2, Math.min(11, paso / 2 - 1.5));
-  const y = (v) => CH - CM.b - (v / maxV) * H;
-  let barras = "", ejeX = "";
+  const paso = dates.length > 1 ? W / (dates.length - 1) : 0;
+  const px = (i) => CM.l + paso * i;
+  const py = (v) => CH - CM.b - (v / maxV) * H;
+  const SERIES = [
+    { datos: leads,  lbl: "Leads",  color: "#1F4E78" },
+    { datos: ventas, lbl: "Ventas", color: "#059669" },
+  ];
+  let series = "";
+  SERIES.forEach((se) => {
+    const pts = dates.map((d, i) => [px(i), py(se.datos[d] || 0)]);
+    series += `<polyline fill="none" stroke="${se.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map((q) => q[0].toFixed(1) + "," + q[1].toFixed(1)).join(" ")}"/>`;
+    pts.forEach((q, i) => {
+      const d = dates[i], v = se.datos[d] || 0;
+      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${d.slice(8, 10)}/${d.slice(5, 7)} · ${v} ${esc(se.lbl.toLowerCase())}</title></circle>`;
+    });
+  });
+  let ejeX = "";
   dates.forEach((d, i) => {
-    const cx = CM.l + paso * i + paso / 2;
-    const l = leads[d] || 0, v = ventas[d] || 0;
-    const dia = d.slice(8, 10) + "/" + d.slice(5, 7);
-    if (l > 0) barras += `<rect x="${(cx - ancho - 0.8).toFixed(1)}" y="${y(l).toFixed(1)}" width="${ancho.toFixed(1)}" height="${(CH - CM.b - y(l)).toFixed(1)}" fill="#1F4E78" rx="1.5"><title>${dia} · ${l} leads</title></rect>`;
-    if (v > 0) barras += `<rect x="${(cx + 0.8).toFixed(1)}" y="${y(v).toFixed(1)}" width="${ancho.toFixed(1)}" height="${(CH - CM.b - y(v)).toFixed(1)}" fill="#059669" rx="1.5"><title>${dia} · ${v} venta${v !== 1 ? "s" : ""}</title></rect>`;
-    // Con muchos días se etiqueta uno de cada tres para que no se encimen.
     if (dates.length <= 16 || i % 3 === 0 || i === dates.length - 1)
-      ejeX += `<text x="${cx.toFixed(1)}" y="${CH - CM.b + 13}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8, 10)}</text>`;
+      ejeX += `<text x="${px(i).toFixed(1)}" y="${CH - CM.b + 14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8, 10)}</text>`;
   });
   return `<div class="chart-card">
     <div class="chart-legend">
@@ -402,9 +420,9 @@ function chartDaily(leads, ventas, dates) {
     <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Leads y ventas por día">
       ${ejeY(maxV, false, CM.l - 6, "start")}
       <line x1="${CM.l}" y1="${CH - CM.b}" x2="${CW - CM.r}" y2="${CH - CM.b}" stroke="#E5E7EB"/>
-      ${barras}${ejeX}
+      ${series}${ejeX}
     </svg>
-    <div class="chart-hint">Pasá el mouse sobre una barra para ver el detalle del día.</div>
+    <div class="chart-hint">Pasá el mouse sobre un punto para ver el detalle del día.</div>
   </div>`;
 }
 
