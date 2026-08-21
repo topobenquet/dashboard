@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-21T10:20:23.331Z",
+  "generated": "2026-08-21T11:02:07.548Z",
   "lastSyncLabel": "21 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
@@ -38,7 +38,7 @@
     {
       "mes": "Marzo",
       "leads": 220,
-      "reservas": 21,
+      "reservas": 25,
       "revenue": 7311,
       "chofer": 4724,
       "comb": 92,
@@ -102,7 +102,7 @@
     {
       "mes": "Julio",
       "leads": 205,
-      "reservas": 24,
+      "reservas": 23,
       "revenue": 7437,
       "chofer": 3660,
       "comb": 626,
@@ -118,18 +118,18 @@
     {
       "mes": "Agosto",
       "leads": 200,
-      "reservas": 40,
-      "revenue": 9180,
+      "reservas": 35,
+      "revenue": 9229,
       "chofer": 2151,
       "comb": 1035,
       "peajes": 141,
-      "comision": 250,
+      "comision": 251,
       "reembolsos": 0,
       "otros": 222,
       "gAds": 215,
       "meta": 0,
-      "costoSheet": 3799,
-      "gananciaSheet": 3631
+      "costoSheet": 3800,
+      "gananciaSheet": 3679
     }
   ],
   "adsMonthly": [
@@ -2811,6 +2811,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "Aero-Asu",
+      "cliente": "Khushroo Tavadia",
+      "pais": "",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 48,
+      "fechaReserva": "21/08/26",
+      "fechaSalida": "30/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Aero-Yacht",
       "cliente": "ailin medrano",
       "pais": "Ecuador",
@@ -3043,13 +3057,14 @@
       "2026-08-09": 2,
       "2026-08-10": 2,
       "2026-08-11": 2,
-      "2026-08-12": 3,
+      "2026-08-12": 2,
       "2026-08-13": 1,
-      "2026-08-14": 4,
+      "2026-08-14": 3,
       "2026-08-17": 3,
       "2026-08-19": 2,
-      "2026-08-20": 6,
+      "2026-08-20": 4,
       "2026-08-18": 1,
+      "2026-08-21": 1,
       "2026-08-16": 1,
       "2026-08-08": 1
     },
