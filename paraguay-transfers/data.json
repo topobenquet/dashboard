@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-20T22:05:41.988Z",
-  "lastSyncLabel": "20 Ago 2026",
+  "generated": "2026-08-21T10:20:23.331Z",
+  "lastSyncLabel": "21 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 198,
-      "reservas": 39,
-      "revenue": 9140,
+      "leads": 200,
+      "reservas": 40,
+      "revenue": 9180,
       "chofer": 2151,
       "comb": 1035,
       "peajes": 141,
-      "comision": 249,
+      "comision": 250,
       "reembolsos": 0,
       "otros": 222,
       "gAds": 215,
       "meta": 0,
-      "costoSheet": 3798,
-      "gananciaSheet": 3632
+      "costoSheet": 3799,
+      "gananciaSheet": 3631
     }
   ],
   "adsMonthly": [
@@ -186,7 +186,7 @@
       "mes": "Agosto",
       "spend": 214.91,
       "clicks": 152,
-      "impr": 992,
+      "impr": 999,
       "conv": 19
     }
   ],
@@ -2717,11 +2717,25 @@
       "cliente": "fernando gevu",
       "pais": "Brasil",
       "conductor": "Elizabeth, Hugo Segovia",
-      "pago": 417,
+      "pago": 457,
       "sena": 136,
       "restante": 0,
       "choferCost": 311,
-      "neto": 93,
+      "neto": 132,
+      "fechaReserva": "20/08/26",
+      "fechaSalida": "21/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "sam",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
       "fechaReserva": "20/08/26",
       "fechaSalida": "21/08/26"
     },
@@ -2966,6 +2980,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-08-21": 2,
       "2026-08-20": 11,
       "2026-08-19": 12,
       "2026-08-18": 5,
@@ -3033,7 +3048,7 @@
       "2026-08-14": 4,
       "2026-08-17": 3,
       "2026-08-19": 2,
-      "2026-08-20": 5,
+      "2026-08-20": 6,
       "2026-08-18": 1,
       "2026-08-16": 1,
       "2026-08-08": 1
@@ -3257,7 +3272,8 @@
       "2026-08-17": 24.65,
       "2026-08-18": 3,
       "2026-08-19": 10.38,
-      "2026-08-20": 5.85
+      "2026-08-20": 5.85,
+      "2026-08-21": 0
     }
   }
 }
