@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-21T11:03:39.013Z",
-  "lastSyncLabel": "21 Ago 2026",
+  "generated": "2026-08-22T10:20:28.153Z",
+  "lastSyncLabel": "22 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 200,
-      "reservas": 35,
-      "revenue": 9229,
-      "chofer": 2151,
+      "leads": 214,
+      "reservas": 38,
+      "revenue": 10076,
+      "chofer": 2409,
       "comb": 1035,
       "peajes": 141,
-      "comision": 251,
+      "comision": 270,
       "reembolsos": 0,
-      "otros": 222,
-      "gAds": 215,
+      "otros": 224,
+      "gAds": 219,
       "meta": 0,
-      "costoSheet": 3800,
-      "gananciaSheet": 3679
+      "costoSheet": 4079,
+      "gananciaSheet": 4088
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 214.91,
-      "clicks": 152,
-      "impr": 999,
+      "spend": 219.29,
+      "clicks": 155,
+      "impr": 1028,
       "conv": 19
     }
   ],
@@ -2672,7 +2672,7 @@
     {
       "mes": "Agosto",
       "route": "Estadio / Aeropuerto",
-      "cliente": "luciano penteado",
+      "cliente": "Luciano Penteado",
       "pais": "Brasil",
       "conductor": "Luis Vásquez",
       "pago": 138,
@@ -2686,14 +2686,14 @@
     {
       "mes": "Agosto",
       "route": "Chofer ASU",
-      "cliente": "deise souza",
+      "cliente": "Deise Souza",
       "pais": "Brasil",
-      "conductor": "Arturo Sanchez",
+      "conductor": "Gustavo Sanchez",
       "pago": 394,
       "sena": 394,
       "restante": 0,
       "choferCost": 49,
-      "neto": 320,
+      "neto": 319,
       "fechaReserva": "19/08/26",
       "fechaSalida": "20/08/26"
     },
@@ -2714,7 +2714,7 @@
     {
       "mes": "Agosto",
       "route": "Asu-Foz",
-      "cliente": "fernando gevu",
+      "cliente": "Fernando Gevu",
       "pais": "Brasil",
       "conductor": "Elizabeth, Hugo Segovia",
       "pago": 457,
@@ -2727,16 +2727,30 @@
     },
     {
       "mes": "Agosto",
-      "route": "",
-      "cliente": "sam",
+      "route": "Asu - Satori Zen",
+      "cliente": "Sam",
       "pais": "Australia",
-      "conductor": "",
-      "pago": 0,
-      "sena": 0,
+      "conductor": "Hugo Segovia",
+      "pago": 197,
+      "sena": 50,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "choferCost": 90,
+      "neto": 101,
       "fechaReserva": "20/08/26",
+      "fechaSalida": "21/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu - Airport",
+      "cliente": "Dorian",
+      "pais": "Francia",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 59,
+      "sena": 59,
+      "restante": 0,
+      "choferCost": 20,
+      "neto": 37,
+      "fechaReserva": "19/08/26",
       "fechaSalida": "21/08/26"
     },
     {
@@ -2755,17 +2769,73 @@
     },
     {
       "mes": "Agosto",
+      "route": "Satori Zen - Asu",
+      "cliente": "Sam",
+      "pais": "Australia",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 197,
+      "sena": 197,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 197,
+      "fechaReserva": "20/08/26",
+      "fechaSalida": "23/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Tour Foz",
       "cliente": "Isela D. Celis",
       "pais": "Belgica",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 697,
-      "sena": 200,
+      "sena": 197,
       "restante": 0,
       "choferCost": 98,
-      "neto": 200,
+      "neto": 263,
       "fechaReserva": "18/08/26",
       "fechaSalida": "24/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu - a disposición",
+      "cliente": "Travel Line",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 197,
+      "sena": 197,
+      "restante": 0,
+      "choferCost": 74,
+      "neto": 117,
+      "fechaReserva": "20/08/26",
+      "fechaSalida": "24/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Asu - a disposición",
+      "cliente": "Travel Line",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 197,
+      "sena": 197,
+      "restante": 0,
+      "choferCost": 74,
+      "neto": 117,
+      "fechaReserva": "20/08/26",
+      "fechaSalida": "25/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Aero-Hub",
+      "cliente": "Shane Liu",
+      "pais": "Australia",
+      "conductor": "Luis Vásquez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 48,
+      "fechaReserva": "21/08/26",
+      "fechaSalida": "25/08/26"
     },
     {
       "mes": "Agosto",
@@ -2813,7 +2883,7 @@
       "mes": "Agosto",
       "route": "Aero-Asu",
       "cliente": "Khushroo Tavadia",
-      "pais": "",
+      "pais": "Emiratos Árabes",
       "conductor": "",
       "pago": 49,
       "sena": 49,
@@ -2826,7 +2896,7 @@
     {
       "mes": "Agosto",
       "route": "Aero-Yacht",
-      "cliente": "ailin medrano",
+      "cliente": "Ailin Medrano",
       "pais": "Ecuador",
       "conductor": "",
       "pago": 49,
@@ -2840,21 +2910,21 @@
     {
       "mes": "Agosto",
       "route": "Aero-Yacht",
-      "cliente": "ailin medrano",
+      "cliente": "Ailin Medrano",
       "pais": "Ecuador",
       "conductor": "",
-      "pago": 98,
-      "sena": 98,
+      "pago": 49,
+      "sena": 49,
       "restante": 0,
       "choferCost": 0,
-      "neto": 95,
+      "neto": 48,
       "fechaReserva": "20/08/26",
       "fechaSalida": "09/09/26"
     },
     {
       "mes": "Agosto",
       "route": "Yacht-Aero",
-      "cliente": "ailin medrano",
+      "cliente": "Ailin Medrano",
       "pais": "Ecuador",
       "conductor": "",
       "pago": 98,
@@ -2994,7 +3064,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-21": 2,
+      "2026-08-22": 3,
+      "2026-08-21": 13,
       "2026-08-20": 11,
       "2026-08-19": 12,
       "2026-08-18": 5,
@@ -3061,10 +3132,10 @@
       "2026-08-13": 1,
       "2026-08-14": 3,
       "2026-08-17": 3,
-      "2026-08-19": 2,
-      "2026-08-20": 4,
+      "2026-08-19": 3,
+      "2026-08-20": 5,
       "2026-08-18": 1,
-      "2026-08-21": 1,
+      "2026-08-21": 2,
       "2026-08-16": 1,
       "2026-08-08": 1
     },
@@ -3288,7 +3359,8 @@
       "2026-08-18": 3,
       "2026-08-19": 10.38,
       "2026-08-20": 5.85,
-      "2026-08-21": 0
+      "2026-08-21": 2.94,
+      "2026-08-22": 1.44
     }
   }
 }
