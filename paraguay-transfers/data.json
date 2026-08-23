@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-22T10:20:28.153Z",
-  "lastSyncLabel": "22 Ago 2026",
+  "generated": "2026-08-23T10:20:27.285Z",
+  "lastSyncLabel": "23 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 214,
-      "reservas": 38,
-      "revenue": 10076,
-      "chofer": 2409,
-      "comb": 1035,
-      "peajes": 141,
-      "comision": 270,
+      "leads": 220,
+      "reservas": 39,
+      "revenue": 10423,
+      "chofer": 2491,
+      "comb": 1150,
+      "peajes": 163,
+      "comision": 280,
       "reembolsos": 0,
       "otros": 224,
-      "gAds": 219,
+      "gAds": 225,
       "meta": 0,
-      "costoSheet": 4079,
-      "gananciaSheet": 4088
+      "costoSheet": 4308,
+      "gananciaSheet": 4200
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 219.29,
-      "clicks": 155,
-      "impr": 1028,
+      "spend": 225.15,
+      "clicks": 159,
+      "impr": 1052,
       "conv": 19
     }
   ],
@@ -2601,6 +2601,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "CDE-Aero",
+      "cliente": "Kalinichenko Yuliia",
+      "pais": "Ucrania",
+      "conductor": "Luis Vásquez",
+      "pago": 347,
+      "sena": 347,
+      "restante": 0,
+      "choferCost": 82,
+      "neto": 118,
+      "fechaReserva": "22/08/26",
+      "fechaSalida": "14/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Tour Foz",
       "cliente": "Dorian",
       "pais": "Francia",
@@ -3064,7 +3078,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-22": 3,
+      "2026-08-23": 1,
+      "2026-08-22": 8,
       "2026-08-21": 13,
       "2026-08-20": 11,
       "2026-08-19": 12,
@@ -3130,6 +3145,7 @@
       "2026-08-11": 2,
       "2026-08-12": 2,
       "2026-08-13": 1,
+      "2026-08-22": 1,
       "2026-08-14": 3,
       "2026-08-17": 3,
       "2026-08-19": 3,
@@ -3360,7 +3376,8 @@
       "2026-08-19": 10.38,
       "2026-08-20": 5.85,
       "2026-08-21": 2.94,
-      "2026-08-22": 1.44
+      "2026-08-22": 5.8,
+      "2026-08-23": 1.5
     }
   }
 }
