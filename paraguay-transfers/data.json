@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-23T10:20:27.285Z",
-  "lastSyncLabel": "23 Ago 2026",
+  "generated": "2026-08-24T10:20:37.541Z",
+  "lastSyncLabel": "24 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 220,
-      "reservas": 39,
-      "revenue": 10423,
-      "chofer": 2491,
+      "leads": 222,
+      "reservas": 40,
+      "revenue": 10523,
+      "chofer": 2516,
       "comb": 1150,
       "peajes": 163,
-      "comision": 280,
+      "comision": 283,
       "reembolsos": 0,
       "otros": 224,
-      "gAds": 225,
+      "gAds": 230,
       "meta": 0,
-      "costoSheet": 4308,
-      "gananciaSheet": 4200
+      "costoSheet": 4336,
+      "gananciaSheet": 4267
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 225.15,
-      "clicks": 159,
-      "impr": 1052,
+      "spend": 229.52,
+      "clicks": 161,
+      "impr": 1069,
       "conv": 19
     }
   ],
@@ -2790,8 +2790,8 @@
       "pago": 197,
       "sena": 197,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 197,
+      "choferCost": 25,
+      "neto": 172,
       "fechaReserva": "20/08/26",
       "fechaSalida": "23/08/26"
     },
@@ -2814,7 +2814,7 @@
       "route": "Asu - a disposición",
       "cliente": "Travel Line",
       "pais": "Argentina",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 197,
       "sena": 197,
       "restante": 0,
@@ -2828,7 +2828,7 @@
       "route": "Asu - a disposición",
       "cliente": "Travel Line",
       "pais": "Argentina",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 197,
       "sena": 197,
       "restante": 0,
@@ -2993,6 +2993,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "",
+      "cliente": "Michael O’Regan",
+      "pais": "Irlanda",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "23/08/26",
+      "fechaSalida": "17/11/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Asu-Foz",
       "cliente": "Clara Fiol",
       "pais": "USA",
@@ -3078,7 +3092,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-23": 1,
+      "2026-08-23": 3,
       "2026-08-22": 8,
       "2026-08-21": 13,
       "2026-08-20": 11,
@@ -3153,6 +3167,7 @@
       "2026-08-18": 1,
       "2026-08-21": 2,
       "2026-08-16": 1,
+      "2026-08-23": 1,
       "2026-08-08": 1
     },
     "gads": {
@@ -3377,7 +3392,7 @@
       "2026-08-20": 5.85,
       "2026-08-21": 2.94,
       "2026-08-22": 5.8,
-      "2026-08-23": 1.5
+      "2026-08-23": 5.87
     }
   }
 }
