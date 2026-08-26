@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-25T10:20:43.024Z",
-  "lastSyncLabel": "25 Ago 2026",
+  "generated": "2026-08-26T10:20:29.367Z",
+  "lastSyncLabel": "26 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 238,
-      "reservas": 47,
-      "revenue": 13469,
-      "chofer": 4352,
-      "comb": 1152,
-      "peajes": 163,
-      "comision": 375,
+      "leads": 250,
+      "reservas": 49,
+      "revenue": 13636,
+      "chofer": 4633,
+      "comb": 1267,
+      "peajes": 185,
+      "comision": 377,
       "reembolsos": 0,
-      "otros": 226,
-      "gAds": 236,
+      "otros": 231,
+      "gAds": 243,
       "meta": 0,
-      "costoSheet": 6268,
-      "gananciaSheet": 6094
+      "costoSheet": 6693,
+      "gananciaSheet": 5909
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 235.84,
-      "clicks": 166,
-      "impr": 1095,
+      "spend": 243.28,
+      "clicks": 171,
+      "impr": 1137,
       "conv": 19
     }
   ],
@@ -2839,6 +2839,34 @@
     },
     {
       "mes": "Agosto",
+      "route": "Hangar-Hotel",
+      "cliente": "Marcos Alves Da Silva",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 24,
+      "neto": 25,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": "25/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Interpol - Hangar",
+      "cliente": "Marcos Alves Da Silva",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 24,
+      "neto": 25,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": "25/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Asu - a disposición",
       "cliente": "Travel Line",
       "pais": "Argentina",
@@ -2860,8 +2888,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 11,
+      "neto": 35,
       "fechaReserva": "21/08/26",
       "fechaSalida": "25/08/26"
     },
@@ -2884,12 +2912,12 @@
       "route": "Palmaroga-aero",
       "cliente": "Travel Line",
       "pais": "Argentina",
-      "conductor": "Luis Vásquez",
+      "conductor": "Gustavo Sanchez",
       "pago": 60,
       "sena": 60,
       "restante": 0,
-      "choferCost": 11,
-      "neto": 45,
+      "choferCost": 16,
+      "neto": 40,
       "fechaReserva": "14/08/26",
       "fechaSalida": "26/08/26"
     },
@@ -2905,6 +2933,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "22/08/26",
+      "fechaSalida": "26/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "AERO-HotelNobile",
+      "cliente": "Tamara Molinas",
+      "pais": "Paraguay",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 20,
+      "neto": 46,
+      "fechaReserva": "25/08/26",
       "fechaSalida": "26/08/26"
     },
     {
@@ -2926,11 +2968,11 @@
       "route": "CDE-Aero",
       "cliente": "Deisy Ortega",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 347,
       "sena": 100,
       "restante": 247,
-      "choferCost": 0,
+      "choferCost": 197,
       "neto": 100,
       "fechaReserva": "17/08/26",
       "fechaSalida": "29/08/26"
@@ -2976,6 +3018,34 @@
       "neto": 0,
       "fechaReserva": "24/08/26",
       "fechaSalida": "02/09/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Aero-Dazzler CDE",
+      "cliente": "Seohyun Cho",
+      "pais": "Corea del Sur",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": -60,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": "04/09/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "CDE-Hotel Hub ASU",
+      "cliente": "Seohyun Cho",
+      "pais": "Corea del Sur",
+      "conductor": "",
+      "pago": 0,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": "07/09/26"
     },
     {
       "mes": "Agosto",
@@ -3119,16 +3189,16 @@
     },
     {
       "mes": "Agosto",
-      "route": "Aero-CDE",
-      "cliente": "Seohyun Cho",
-      "pais": "Corea del Sur",
+      "route": "HERNAN",
+      "cliente": "5491139316146",
+      "pais": "Argentina",
       "conductor": "",
-      "pago": 100,
-      "sena": 100,
+      "pago": 0,
+      "sena": 0,
       "restante": 0,
       "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "24/08/26",
+      "neto": 0,
+      "fechaReserva": "25/08/26",
       "fechaSalida": ""
     },
     {
@@ -3204,7 +3274,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-25": 3,
+      "2026-08-26": 1,
+      "2026-08-25": 14,
       "2026-08-24": 13,
       "2026-08-23": 3,
       "2026-08-22": 8,
@@ -3281,6 +3352,7 @@
       "2026-08-18": 1,
       "2026-08-24": 6,
       "2026-08-21": 2,
+      "2026-08-25": 2,
       "2026-08-16": 1,
       "2026-08-23": 1,
       "2026-08-08": 1
@@ -3508,7 +3580,9 @@
       "2026-08-21": 2.94,
       "2026-08-22": 5.8,
       "2026-08-23": 5.87,
-      "2026-08-24": 6.32
+      "2026-08-24": 6.32,
+      "2026-08-25": 7.44,
+      "2026-08-26": 0
     }
   }
 }
