@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-26T10:20:29.367Z",
-  "lastSyncLabel": "26 Ago 2026",
+  "generated": "2026-08-27T10:20:29.902Z",
+  "lastSyncLabel": "27 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 250,
-      "reservas": 49,
-      "revenue": 13636,
-      "chofer": 4633,
+      "leads": 265,
+      "reservas": 51,
+      "revenue": 14177,
+      "chofer": 4690,
       "comb": 1267,
-      "peajes": 185,
-      "comision": 377,
-      "reembolsos": 0,
+      "peajes": 229,
+      "comision": 388,
+      "reembolsos": 10,
       "otros": 231,
-      "gAds": 243,
+      "gAds": 257,
       "meta": 0,
-      "costoSheet": 6693,
-      "gananciaSheet": 5909
+      "costoSheet": 6795,
+      "gananciaSheet": 6171
     }
   ],
   "adsMonthly": [
@@ -184,10 +184,10 @@
     },
     {
       "mes": "Agosto",
-      "spend": 243.28,
-      "clicks": 171,
-      "impr": 1137,
-      "conv": 19
+      "spend": 257.05,
+      "clicks": 183,
+      "impr": 1260,
+      "conv": 20
     }
   ],
   "trips": [
@@ -2573,6 +2573,20 @@
     },
     {
       "mes": "Agosto",
+      "route": "",
+      "cliente": "louis inglesfield",
+      "pais": "UK",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "26/08/26",
+      "fechaSalida": "13/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Asu-Encarnacion",
       "cliente": "Roberta Melo",
       "pais": "Brasil",
@@ -2665,7 +2679,7 @@
       "sena": 417,
       "restante": 0,
       "choferCost": 50,
-      "neto": 338,
+      "neto": 316,
       "fechaReserva": "17/08/26",
       "fechaSalida": "18/08/26"
     },
@@ -2721,7 +2735,7 @@
       "sena": 457,
       "restante": 0,
       "choferCost": 311,
-      "neto": 123,
+      "neto": 101,
       "fechaReserva": "20/08/26",
       "fechaSalida": "21/08/26"
     },
@@ -2805,7 +2819,7 @@
       "sena": 197,
       "restante": 0,
       "choferCost": 98,
-      "neto": 263,
+      "neto": 253,
       "fechaReserva": "18/08/26",
       "fechaSalida": "24/08/26"
     },
@@ -2895,20 +2909,6 @@
     },
     {
       "mes": "Agosto",
-      "route": "Sheraton- Aero Formosa",
-      "cliente": "Hernán",
-      "pais": "Argentina",
-      "conductor": "",
-      "pago": 147,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 100,
-      "neto": 0,
-      "fechaReserva": "24/08/26",
-      "fechaSalida": "26/08/26"
-    },
-    {
-      "mes": "Agosto",
       "route": "Palmaroga-aero",
       "cliente": "Travel Line",
       "pais": "Argentina",
@@ -2927,12 +2927,26 @@
       "cliente": "Johannes Olof Vorster",
       "pais": "Australia",
       "conductor": "Juan Vera CDE",
-      "pago": 0,
-      "sena": 200,
+      "pago": 159,
+      "sena": 159,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "choferCost": 41,
+      "neto": 118,
       "fechaReserva": "22/08/26",
+      "fechaSalida": "26/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Sheraton- Aero Formosa",
+      "cliente": "Hernán",
+      "pais": "Argentina",
+      "conductor": "Alejandro Mouchard",
+      "pago": 147,
+      "sena": 147,
+      "restante": 0,
+      "choferCost": 105,
+      "neto": 41,
+      "fechaReserva": "24/08/26",
       "fechaSalida": "26/08/26"
     },
     {
@@ -2955,12 +2969,26 @@
       "cliente": "Shane Liu",
       "pais": "Australia",
       "conductor": "Luis Vásquez",
-      "pago": 0,
-      "sena": 0,
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 11,
+      "neto": 37,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": "27/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "CDE-FOZ",
+      "cliente": "michael hackl",
+      "pais": "Alemania",
+      "conductor": "",
+      "pago": 184,
+      "sena": 184,
       "restante": 0,
       "choferCost": 0,
-      "neto": -1,
-      "fechaReserva": "24/08/26",
+      "neto": 174,
+      "fechaReserva": "26/08/26",
       "fechaSalida": "27/08/26"
     },
     {
@@ -3015,7 +3043,7 @@
       "sena": 200,
       "restante": 0,
       "choferCost": 0,
-      "neto": 0,
+      "neto": 200,
       "fechaReserva": "24/08/26",
       "fechaSalida": "02/09/26"
     },
@@ -3029,7 +3057,7 @@
       "sena": 100,
       "restante": 0,
       "choferCost": 0,
-      "neto": -60,
+      "neto": 100,
       "fechaReserva": "24/08/26",
       "fechaSalida": "04/09/26"
     },
@@ -3039,11 +3067,11 @@
       "cliente": "Seohyun Cho",
       "pais": "Corea del Sur",
       "conductor": "",
-      "pago": 0,
+      "pago": 100,
       "sena": 100,
       "restante": 0,
       "choferCost": 0,
-      "neto": 0,
+      "neto": 100,
       "fechaReserva": "24/08/26",
       "fechaSalida": "07/09/26"
     },
@@ -3189,7 +3217,7 @@
     },
     {
       "mes": "Agosto",
-      "route": "HERNAN",
+      "route": "",
       "cliente": "5491139316146",
       "pais": "Argentina",
       "conductor": "",
@@ -3198,7 +3226,7 @@
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
-      "fechaReserva": "25/08/26",
+      "fechaReserva": "26/08/26",
       "fechaSalida": ""
     },
     {
@@ -3274,7 +3302,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-26": 1,
+      "2026-08-27": 3,
+      "2026-08-26": 13,
       "2026-08-25": 14,
       "2026-08-24": 13,
       "2026-08-23": 3,
@@ -3343,6 +3372,7 @@
       "2026-08-10": 2,
       "2026-08-11": 2,
       "2026-08-12": 2,
+      "2026-08-26": 3,
       "2026-08-13": 1,
       "2026-08-14": 3,
       "2026-08-17": 3,
@@ -3352,7 +3382,7 @@
       "2026-08-18": 1,
       "2026-08-24": 6,
       "2026-08-21": 2,
-      "2026-08-25": 2,
+      "2026-08-25": 1,
       "2026-08-16": 1,
       "2026-08-23": 1,
       "2026-08-08": 1
@@ -3582,7 +3612,8 @@
       "2026-08-23": 5.87,
       "2026-08-24": 6.32,
       "2026-08-25": 7.44,
-      "2026-08-26": 0
+      "2026-08-26": 13.77,
+      "2026-08-27": 0
     }
   }
 }
