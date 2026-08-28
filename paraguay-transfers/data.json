@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-27T10:20:29.902Z",
-  "lastSyncLabel": "27 Ago 2026",
+  "generated": "2026-08-28T10:20:29.753Z",
+  "lastSyncLabel": "28 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 265,
-      "reservas": 51,
-      "revenue": 14177,
-      "chofer": 4690,
+      "leads": 275,
+      "reservas": 54,
+      "revenue": 14685,
+      "chofer": 4788,
       "comb": 1267,
       "peajes": 229,
-      "comision": 388,
+      "comision": 396,
       "reembolsos": 10,
-      "otros": 231,
-      "gAds": 257,
+      "otros": 232,
+      "gAds": 274,
       "meta": 0,
-      "costoSheet": 6795,
-      "gananciaSheet": 6171
+      "costoSheet": 6902,
+      "gananciaSheet": 5981
     }
   ],
   "adsMonthly": [
@@ -184,9 +184,9 @@
     },
     {
       "mes": "Agosto",
-      "spend": 257.05,
-      "clicks": 183,
-      "impr": 1260,
+      "spend": 274.41,
+      "clicks": 198,
+      "impr": 1396,
       "conv": 20
     }
   ],
@@ -2702,7 +2702,7 @@
       "route": "Chofer ASU",
       "cliente": "Deise Souza",
       "pais": "Brasil",
-      "conductor": "Gustavo Sanchez",
+      "conductor": "Gustavo Pereira",
       "pago": 394,
       "sena": 394,
       "restante": 0,
@@ -2912,7 +2912,7 @@
       "route": "Palmaroga-aero",
       "cliente": "Travel Line",
       "pais": "Argentina",
-      "conductor": "Gustavo Sanchez",
+      "conductor": "Gustavo Pereira",
       "pago": 60,
       "sena": 60,
       "restante": 0,
@@ -2982,14 +2982,28 @@
       "route": "CDE-FOZ",
       "cliente": "michael hackl",
       "pais": "Alemania",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 184,
       "sena": 184,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 174,
+      "choferCost": 82,
+      "neto": 92,
       "fechaReserva": "26/08/26",
       "fechaSalida": "27/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "ASU-AERO",
+      "cliente": "Dilan Algur",
+      "pais": "Países Bajos",
+      "conductor": "Gustavo Pereira",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 16,
+      "neto": 30,
+      "fechaReserva": "27/08/26",
+      "fechaSalida": "28/08/26"
     },
     {
       "mes": "Agosto",
@@ -3003,6 +3017,20 @@
       "choferCost": 197,
       "neto": 100,
       "fechaReserva": "17/08/26",
+      "fechaSalida": "29/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "Tour ASU",
+      "cliente": "Tamara Molinas",
+      "pais": "Paraguay",
+      "conductor": "Gustavo Pereira",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "27/08/26",
       "fechaSalida": "29/08/26"
     },
     {
@@ -3027,7 +3055,7 @@
       "conductor": "",
       "pago": 157,
       "sena": 100,
-      "restante": 0,
+      "restante": 57,
       "choferCost": 0,
       "neto": 100,
       "fechaReserva": "07/08/26",
@@ -3067,9 +3095,9 @@
       "cliente": "Seohyun Cho",
       "pais": "Corea del Sur",
       "conductor": "",
-      "pago": 100,
+      "pago": 310,
       "sena": 100,
-      "restante": 0,
+      "restante": 210,
       "choferCost": 0,
       "neto": 100,
       "fechaReserva": "24/08/26",
@@ -3189,6 +3217,34 @@
     },
     {
       "mes": "Agosto",
+      "route": "Asu-Rosario",
+      "cliente": "",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 947,
+      "sena": 300,
+      "restante": 647,
+      "choferCost": 697,
+      "neto": 300,
+      "fechaReserva": "12/08/26",
+      "fechaSalida": "minimo 10 sept"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "paolo ortiz",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 249,
+      "sena": 249,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 242,
+      "fechaReserva": "27/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
       "route": "",
       "cliente": "Marcos Antônio Alves da silva",
       "pais": "Brasil",
@@ -3228,20 +3284,6 @@
       "neto": 0,
       "fechaReserva": "26/08/26",
       "fechaSalida": ""
-    },
-    {
-      "mes": "Agosto",
-      "route": "Asu-Rosario",
-      "cliente": "",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 947,
-      "sena": 300,
-      "restante": 647,
-      "choferCost": 697,
-      "neto": 300,
-      "fechaReserva": "12/08/26",
-      "fechaSalida": "minimo 10 sept"
     },
     {
       "mes": "Septiembre",
@@ -3302,7 +3344,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-27": 3,
+      "2026-08-28": 3,
+      "2026-08-27": 10,
       "2026-08-26": 13,
       "2026-08-25": 14,
       "2026-08-24": 13,
@@ -3383,6 +3426,7 @@
       "2026-08-24": 6,
       "2026-08-21": 2,
       "2026-08-25": 1,
+      "2026-08-27": 3,
       "2026-08-16": 1,
       "2026-08-23": 1,
       "2026-08-08": 1
@@ -3613,7 +3657,8 @@
       "2026-08-24": 6.32,
       "2026-08-25": 7.44,
       "2026-08-26": 13.77,
-      "2026-08-27": 0
+      "2026-08-27": 17.36,
+      "2026-08-28": 0
     }
   }
 }
