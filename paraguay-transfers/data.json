@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-29T10:20:31.045Z",
-  "lastSyncLabel": "29 Ago 2026",
+  "generated": "2026-08-30T10:20:27.078Z",
+  "lastSyncLabel": "30 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 292,
-      "reservas": 56,
-      "revenue": 16496,
-      "chofer": 4849,
+      "leads": 300,
+      "reservas": 58,
+      "revenue": 17410,
+      "chofer": 5232,
       "comb": 1284,
       "peajes": 229,
-      "comision": 418,
+      "comision": 446,
       "reembolsos": 10,
       "otros": 233,
-      "gAds": 291,
+      "gAds": 301,
       "meta": 0,
-      "costoSheet": 7003,
-      "gananciaSheet": 8222
+      "costoSheet": 7414,
+      "gananciaSheet": 8726
     }
   ],
   "adsMonthly": [
@@ -184,10 +184,10 @@
     },
     {
       "mes": "Agosto",
-      "spend": 291.28,
-      "clicks": 213,
-      "impr": 1478,
-      "conv": 22
+      "spend": 300.74,
+      "clicks": 222,
+      "impr": 1557,
+      "conv": 23
     }
   ],
   "trips": [
@@ -3063,6 +3063,34 @@
     },
     {
       "mes": "Agosto",
+      "route": "Encarnacion-ASU",
+      "cliente": "alex gergely",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 497,
+      "sena": 497,
+      "restante": 0,
+      "choferCost": 383,
+      "neto": 99,
+      "fechaReserva": "29/08/26",
+      "fechaSalida": "31/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "ASU-FOZ",
+      "cliente": "andrés lópez",
+      "pais": "Chile",
+      "conductor": "",
+      "pago": 417,
+      "sena": 100,
+      "restante": 317,
+      "choferCost": 0,
+      "neto": 404,
+      "fechaReserva": "29/08/26",
+      "fechaSalida": "31/08/26"
+    },
+    {
+      "mes": "Agosto",
       "route": "Foz-Asu",
       "cliente": "Johannes Olof Vorster",
       "pais": "Australia",
@@ -3077,10 +3105,10 @@
     },
     {
       "mes": "Agosto",
-      "route": "",
-      "cliente": "stuart brander",
+      "route": "Asu - Pto Iguazu",
+      "cliente": "Stuart Brander",
       "pais": "Nueva Zelanda",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 761,
       "sena": 200,
       "restante": 561,
@@ -3442,7 +3470,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-08-29": 2,
+      "2026-08-29": 10,
       "2026-08-28": 18,
       "2026-08-27": 10,
       "2026-08-26": 13,
@@ -3526,6 +3554,7 @@
       "2026-08-21": 2,
       "2026-08-25": 1,
       "2026-08-27": 3,
+      "2026-08-29": 2,
       "2026-08-28": 2,
       "2026-08-16": 1,
       "2026-08-23": 1,
@@ -3759,7 +3788,7 @@
       "2026-08-26": 13.77,
       "2026-08-27": 17.36,
       "2026-08-28": 15.37,
-      "2026-08-29": 1.5
+      "2026-08-29": 10.96
     }
   }
 }
