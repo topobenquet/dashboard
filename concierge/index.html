@@ -231,21 +231,25 @@ function renderStages(root) {
   const M = DATA.months, m = M[M.length-1];
   const st = (DATA.crm?.stages||{})[m.ym];
   if(!st) return;
-  const order = (DATA.crm.stageOrder||[]).filter(s=>st[s]!==undefined);
+  // Se listan TODAS las etapas del pipeline, tengan leads o no: una etapa en
+  // cero es información (nadie quedó ahí), y esconderla hace que parezca que no
+  // existe. Las que aparecen en los datos pero no en el pipeline van al final.
+  const order = DATA.crm.stageOrder || [];
   const rest = Object.keys(st).filter(s=>!order.includes(s));
   const list = [...order, ...rest];
-  const total = list.reduce((a,s)=>a+st[s],0) || 1;
-  const max = Math.max(1, ...list.map(s=>st[s]));
-  const rows = list.map(s=>`<tr>
+  const n = s => st[s] || 0;
+  const total = list.reduce((a,s)=>a+n(s),0) || 1;
+  const max = Math.max(1, ...list.map(n));
+  const rows = list.map(s=>`<tr${n(s)?"":' style="opacity:.55"'}>
     <td class="tl"><strong>${esc(s)}</strong></td>
     <td style="width:40%"><div style="background:#EFF6FF;border-radius:4px;height:16px;">
-      <div style="background:${/not qualified|not interested/i.test(s)?"#DC2626":"#1F4E78"};height:16px;border-radius:4px;width:${(st[s]/max*100).toFixed(1)}%"></div></div></td>
-    <td><strong>${fn(st[s])}</strong></td><td>${fp(st[s]/total)}</td></tr>`).join("");
+      <div style="background:${/not qualified|not interested/i.test(s)?"#DC2626":"#1F4E78"};height:16px;border-radius:4px;width:${(n(s)/max*100).toFixed(1)}%"></div></div></td>
+    <td><strong>${n(s)?fn(n(s)):"–"}</strong></td><td>${n(s)?fp(n(s)/total):"–"}</td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — where those leads stand today</div>
     <div class="ft-wrap"><table class="ft" style="min-width:440px;">
       <thead><tr><th class="tl">Pipeline stage</th><th></th><th>Leads</th><th>% of month</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">The same leads as everywhere else on this page — paid-search only — grouped by the stage they sit in today. It is a snapshot, not a funnel: a lead that passed through a stage and moved on is only counted where it sits now.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">The same leads as everywhere else on this page — paid-search only — grouped by the stage they sit in <strong>today</strong>. It is a snapshot, not a funnel: a lead that passed through a stage and moved on is only counted where it sits now, which is why a stage nobody rests in reads zero all year.</div></div>`;
 }
 
 /* ════ 05 · MONTHLY ════ */
