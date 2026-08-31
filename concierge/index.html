@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,12 +101,12 @@ table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overfl
   <h1>🏠 Concierge Home Care of Maryland</h1>
   <span class="subtitle">Google Ads · 2026</span>
 </div>
-<div class="updated" id="updated"><span class="dot"></span> Cargando…</div>
+<div class="updated" id="updated"><span class="dot"></span> Loading…</div>
 
 <div id="root"></div>
 
 <div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
-  Concierge Home Care of Maryland · Se actualiza solo cada día · Fuente: Google Ads API (cuenta 786-945-2872)
+  Concierge Home Care of Maryland · Updates daily · Source: Google Ads API (account 786-945-2872)
 </div>
 
 <script>
@@ -116,8 +116,13 @@ const fp = n => (n*100).toFixed(1)+"%";
 const fn = n => Math.round(n).toLocaleString("en-US");
 const fd2 = n => n.toFixed(2);
 const esc = x => String(x).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const MESIDX = { Enero:0,Febrero:1,Marzo:2,Abril:3,Mayo:4,Junio:5,Julio:6,Agosto:7,Septiembre:8,Octubre:9,Noviembre:10,Diciembre:11 };
 const DAYS_IN = [31,28,31,30,31,30,31,31,30,31,30,31];
+// El data.json trae los meses como "2026-08" y el nombre en español (lo usa el
+// log del updater). La etiqueta que se muestra se arma acá, así el dashboard
+// queda en inglés sin tocar el updater.
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const mIdx = ym => parseInt(ym.slice(5,7),10)-1;
+const mName = ym => MONTHS[mIdx(ym)];
 
 function badge(cur, prev, lowerIsBetter=false) {
   if(!prev||prev===0) return `<span class="neu">–</span>`;
@@ -138,7 +143,7 @@ let DATA;
 // Todo sale del mismo lugar: sumar días. Así el mes en curso, el mes cerrado y
 // el "mismos días del mes pasado" se calculan con una sola función y no hay
 // forma de que dos secciones muestren números distintos para lo mismo.
-function sumDias(ym, dayCut) {
+function sumDays(ym, dayCut) {
   const o = { spend:0, clicks:0, impr:0, contacto:0, leads:0, descartados:0, assessment:0, pipeline:0, admit:0, dias:0 };
   for (const k in (DATA.daily||{})) {
     if (k.slice(0,7) !== ym) continue;
@@ -153,74 +158,102 @@ function sumDias(ym, dayCut) {
 function derive(o) {
   o.ctr = o.impr>0 ? o.clicks/o.impr : 0;
   o.cpc = o.clicks>0 ? o.spend/o.clicks : 0;
-  o.cpContacto = o.contacto>0 ? o.spend/o.contacto : 0;
+  o.cpContact = o.contacto>0 ? o.spend/o.contacto : 0;
   o.cpl = o.leads>0 ? o.spend/o.leads : 0;
   o.cpAssess = o.assessment>0 ? o.spend/o.assessment : 0;
-  o.calif = o.leads>0 ? o.assessment/o.leads : 0;   // de los leads triageados, cuántos llegan a assessment
-  o.crClick = o.clicks>0 ? o.contacto/o.clicks : 0;
+  o.qualRate = o.leads>0 ? o.assessment/o.leads : 0;
   return o;
 }
 
-/* ════ 01 · MES EN CURSO ════ */
-function renderCurrent(root) {
-  const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
-  const gen = new Date(DATA.generated);
-  const curIdx = MESIDX[curM.mes], dom = gen.getDate(), dim = DAYS_IN[curIdx];
-  const c = sumDias(curM.ym, dom), p = prevM ? sumDias(prevM.ym, dom) : derive({spend:0,clicks:0,impr:0,contacto:0,leads:0,descartados:0,assessment:0,pipeline:0,admit:0,dias:0});
-  const per = prevM ? `${prevM.mes} 1-${dom}` : "–";
-  const vs = prevM ? " vs "+prevM.mes : "";
-  const proj = dom>0 ? c.spend/dom*dim : c.spend;
-  const projL = dom>0 ? Math.round(c.contacto/dom*dim) : c.contacto;
-  root.innerHTML += `<div class="section">
-    <div class="section-title">${curM.mes} ${DATA.year} — al día ${dom} vs ${prevM?prevM.mes:"–"} (mismos días)</div>
-    <div class="kpi-grid">
-      ${kpi(`Inversión 1-${dom}`, f$(c.spend), badge(c.spend,p.spend)+vs, `${per}: ${f$(p.spend)}`)}
-      ${kpi(`Contactos 1-${dom}`, fn(c.contacto), badge(c.contacto,p.contacto)+vs, `${per}: ${fn(p.contacto)}`)}
-      ${kpi(`Costo/contacto`, c.contacto?f$(c.cpContacto):"–", badge(c.cpContacto,p.cpContacto,true)+vs, `${per}: ${p.contacto?f$(p.cpContacto):"–"}`)}
-      ${kpi(`Leads en CRM 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
-      ${kpi(`CPL (CRM)`, c.leads?f$(c.cpl):"–", badge(c.cpl,p.cpl,true)+vs, `${per}: ${p.leads?f$(p.cpl):"–"}`)}
-      ${kpi(`Assessments 1-${dom}`, fn(c.assessment), badge(c.assessment,p.assessment)+vs, `${per}: ${fn(p.assessment)}`)}
-      ${kpi(`Costo/assessment`, c.assessment?f$(c.cpAssess):"–", badge(c.cpAssess,p.cpAssess,true)+vs, `${per}: ${p.assessment?f$(p.cpAssess):"–"}`)}
-      ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `CTR ${fp(c.ctr)} · CPC $${fd2(c.cpc)}`)}
-      ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo actual · ~${fn(projL)} contactos`)}
-    </div>
-  </div>`;
-}
-
-/* ════ 01b · AVISO DE ATRASO DEL CRM ════ */
+/* ════ 01 · CRM UPLOAD LAG ════ */
 // Las etapas del CRM se suben a mano y a veces la subida se corta. Cuando eso
 // pasa, el CPL del mes en curso se dispara y parece un problema de la campaña
 // cuando en realidad faltan datos. Vale más avisarlo que dejarlo pasar.
 function renderLag(root) {
   const ks = Object.keys(DATA.daily||{}).sort();
   if(!ks.length) return;
-  const ultGasto = [...ks].reverse().find(k=>DATA.daily[k].spend>0);
-  const ultCRM = [...ks].reverse().find(k=>DATA.daily[k].leads>0||DATA.daily[k].assessment>0);
-  if(!ultGasto||!ultCRM) return;
-  const dias = Math.round((new Date(ultGasto)-new Date(ultCRM))/86400000);
-  if(dias < 3) return;
-  const fmt = k => k.slice(8,10)+"/"+k.slice(5,7);
+  const lastSpend = [...ks].reverse().find(k=>DATA.daily[k].spend>0);
+  const lastCRM = [...ks].reverse().find(k=>DATA.daily[k].leads>0||DATA.daily[k].assessment>0);
+  if(!lastSpend||!lastCRM) return;
+  const gap = Math.round((new Date(lastSpend)-new Date(lastCRM))/86400000);
+  if(gap < 3) return;
+  const fmt = k => k.slice(5,7)+"/"+k.slice(8,10);
   root.innerHTML += `<div class="info-box info-amber" style="margin-bottom:18px;">
-    ⚠️ <strong>Faltan ${dias} días de datos del CRM.</strong>
-    El último día con leads cargados es el ${fmt(ultCRM)} y la campaña sigue gastando hasta el ${fmt(ultGasto)}.
-    Hasta que se suban, el CPL y el costo por assessment del mes en curso se ven peores de lo que son.</div>`;
+    ⚠️ <strong>${gap} days of CRM data are missing.</strong>
+    The last day with leads uploaded is ${fmt(lastCRM)}, and the campaign kept spending through ${fmt(lastSpend)}.
+    Until those are uploaded, this month's CPL and cost per assessment look worse than they are.</div>`;
 }
 
-/* ════ 02 · EMBUDO DEL MES ════ */
+/* ════ 02 · MONTH TO DATE ════ */
+function renderCurrent(root) {
+  const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
+  const gen = new Date(DATA.generated);
+  const dom = gen.getDate(), dim = DAYS_IN[mIdx(curM.ym)];
+  const empty = () => derive({spend:0,clicks:0,impr:0,contacto:0,leads:0,descartados:0,assessment:0,pipeline:0,admit:0,dias:0});
+  const c = sumDays(curM.ym, dom), p = prevM ? sumDays(prevM.ym, dom) : empty();
+  const prevName = prevM ? mName(prevM.ym) : "–";
+  const per = prevM ? `${prevName} 1-${dom}` : "–";
+  const vs = prevM ? " vs "+prevName : "";
+  const proj = dom>0 ? c.spend/dom*dim : c.spend;
+  const projC = dom>0 ? c.contacto/dom*dim : c.contacto;
+  root.innerHTML += `<div class="section">
+    <div class="section-title">${mName(curM.ym)} ${DATA.year} — through day ${dom} vs ${prevName} (same days)</div>
+    <div class="kpi-grid">
+      ${kpi(`Spend 1-${dom}`, f$(c.spend), badge(c.spend,p.spend)+vs, `${per}: ${f$(p.spend)}`)}
+      ${kpi(`Contacts 1-${dom}`, fn(c.contacto), badge(c.contacto,p.contacto)+vs, `${per}: ${fn(p.contacto)}`)}
+      ${kpi(`Cost / contact`, c.contacto?f$(c.cpContact):"–", badge(c.cpContact,p.cpContact,true)+vs, `${per}: ${p.contacto?f$(p.cpContact):"–"}`)}
+      ${kpi(`Leads triaged 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
+      ${kpi(`Cost / lead`, c.leads?f$(c.cpl):"–", badge(c.cpl,p.cpl,true)+vs, `${per}: ${p.leads?f$(p.cpl):"–"}`)}
+      ${kpi(`Assessments 1-${dom}`, fn(c.assessment), badge(c.assessment,p.assessment)+vs, `${per}: ${fn(p.assessment)}`)}
+      ${kpi(`Cost / assessment`, c.assessment?f$(c.cpAssess):"–", badge(c.cpAssess,p.cpAssess,true)+vs, `${per}: ${p.assessment?f$(p.cpAssess):"–"}`)}
+      ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `CTR ${fp(c.ctr)} · CPC $${fd2(c.cpc)}`)}
+      ${kpi(`${mName(curM.ym)} pace`, f$(proj), `day ${dom} of ${dim}`, `at current pace · ~${fn(projC)} contacts`)}
+    </div>
+  </div>`;
+}
+
+/* ════ 03 · DAY BY DAY ════ */
+function renderDaily(root) {
+  const M = DATA.months, m = M[M.length-1];
+  const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
+  if(!dates.length) return;
+  let rows="", t={spend:0,clicks:0,contacto:0,leads:0,assessment:0};
+  dates.forEach(k=>{
+    const d = DATA.daily[k];
+    t.spend+=d.spend; t.clicks+=d.clicks; t.contacto+=d.contacto; t.leads+=d.leads; t.assessment+=d.assessment;
+    const cpc = d.contacto>0 ? d.spend/d.contacto : null;
+    rows += `<tr><td>${k.slice(5,7)}/${k.slice(8,10)}</td>
+      <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
+      <td><strong>${d.contacto>0?fn(d.contacto):"–"}</strong></td>
+      <td class="${cpc!==null&&cpc<=15?"pos":"neu"}">${cpc!==null?f$(cpc):"–"}</td>
+      <td class="${d.leads>0?"pos":""}">${d.leads>0?fn(d.leads):"–"}</td>
+      <td class="${d.assessment>0?"pos":""}">${d.assessment>0?fn(d.assessment):"–"}</td></tr>`;
+  });
+  rows += `<tr class="hi"><td>Total</td><td>${f$(t.spend)}</td><td>${fn(t.clicks)}</td>
+    <td>${fn(t.contacto)}</td><td>${t.contacto?f$(t.spend/t.contacto):"–"}</td>
+    <td>${fn(t.leads)}</td><td>${fn(t.assessment)}</td></tr>`;
+  root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — day by day</div>
+    ${chartDaily(dates)}
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:440px;">
+      <thead><tr><th>Date</th><th>Spend</th><th>Clicks</th><th>Contacts</th><th>$/contact</th><th>Leads</th><th>Assess.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div></div>`;
+}
+
+/* ════ 04 · FUNNEL ════ */
 function renderFunnel(root) {
   const M = DATA.months, curM = M[M.length-1];
-  const c = sumDias(curM.ym);
-  const pasos = [
-    { l:"Clicks",              v:c.clicks,     s:"gente que entró al sitio" },
-    { l:"Contactos",           v:c.contacto,   s:"chat, callback o llamada" },
-    { l:"Leads en CRM",        v:c.leads,      s:"clasificados por el equipo" },
-    { l:"Assessment agendado", v:c.assessment, s:"los que avanzaron" },
-    { l:"Admits",              v:c.admit,      s:"cerraron" },
+  const c = sumDays(curM.ym);
+  const steps = [
+    { l:"Clicks",            v:c.clicks,     s:"people who landed on the site" },
+    { l:"Contacts",          v:c.contacto,   s:"chat, callback or phone call" },
+    { l:"Leads triaged",     v:c.leads,      s:"worked by the team in the CRM" },
+    { l:"Assessment booked", v:c.assessment, s:"the ones that moved forward" },
+    { l:"Admits",            v:c.admit,      s:"closed" },
   ];
-  const max = Math.max(1, ...pasos.map(p=>p.v));
-  const filas = pasos.map((p,i)=>{
-    const prev = i>0 ? pasos[i-1].v : null;
-    const tasa = prev ? (prev>0 ? p.v/prev : 0) : null;
+  const max = Math.max(1, ...steps.map(p=>p.v));
+  const rows = steps.map((p,i)=>{
+    const prev = i>0 ? steps[i-1].v : null;
+    const rate = prev ? (prev>0 ? p.v/prev : 0) : null;
     return `<tr>
       <td class="tl"><strong>${p.l}</strong><div style="font-size:9.5px;color:#9CA3AF;">${p.s}</div></td>
       <td style="width:44%">
@@ -229,22 +262,22 @@ function renderFunnel(root) {
         </div>
       </td>
       <td><strong>${fn(p.v)}</strong></td>
-      <td class="${tasa!==null?(tasa>=0.1?"pos":"neu"):"neu"}">${tasa!==null?fp(tasa):"–"}</td>
+      <td class="${rate!==null?(rate>=0.1?"pos":"neu"):"neu"}">${rate!==null?fp(rate):"–"}</td>
       <td>${p.v>0?f$(c.spend/p.v):"–"}</td>
     </tr>`;
   }).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">${curM.mes} ${DATA.year} — embudo completo</div>
+  root.innerHTML += `<div class="section"><div class="section-title">${mName(curM.ym)} ${DATA.year} — full funnel</div>
     <div class="ft-wrap"><table class="ft" style="min-width:520px;">
-      <thead><tr><th class="tl">Etapa</th><th></th><th>Cantidad</th><th>% del paso anterior</th><th>Costo c/u</th></tr></thead>
-      <tbody>${filas}</tbody></table></div>
-    <div class="info-box info-amber" style="margin-top:8px;">Las etapas de CRM (leads, assessment, admits) se suben a Google Ads desde el CRM con días de atraso: los últimos días del mes siempre se ven más flojos de lo que terminan siendo.</div></div>`;
+      <thead><tr><th class="tl">Stage</th><th></th><th>Count</th><th>% of previous step</th><th>Cost each</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-amber" style="margin-top:8px;">The CRM stages (leads, assessments, admits) are uploaded into Google Ads from the CRM with a few days of delay, so the last days of the month always look weaker than they end up being.</div></div>`;
 }
 
-/* ════ 03 · MENSUAL ════ */
+/* ════ 05 · MONTHLY ════ */
 function renderMonthly(root) {
   const M = DATA.months.map(m=>derive({...m}));
   let rows = M.map(m=>`<tr>
-    <td><strong>${esc(m.mes)}</strong></td>
+    <td><strong>${mName(m.ym)}</strong></td>
     <td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td><td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td>
     <td>${fn(m.contacto)}</td><td>${fn(m.leads)}</td>
     <td class="${m.cpl>0&&m.cpl<=25?"pos":"neu"}">${m.leads?f$(m.cpl):"–"}</td>
@@ -257,42 +290,15 @@ function renderMonthly(root) {
   rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>${fp(y.ctr)}</td>
     <td>$${fd2(y.cpc)}</td><td>${fn(y.contacto)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td>
     <td>${fn(y.assessment)}</td><td>${f$(y.cpAssess)}</td></tr>`;
-  root.innerHTML += `<div class="section"><div class="section-title">Histórico mensual ${DATA.year}</div>
-    ${chartMensual()}
+  root.innerHTML += `<div class="section"><div class="section-title">Monthly history ${DATA.year}</div>
+    ${chartMonthly()}
     <div class="ft-wrap"><table class="ft" style="min-width:620px;">
-      <thead><tr><th>Mes</th><th>Inversión</th><th>Clicks</th><th>CTR</th><th>CPC</th>
-        <th>Contactos</th><th>Leads CRM</th><th>CPL</th><th>Assess.</th><th>$/assess.</th></tr></thead>
+      <thead><tr><th>Month</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th>
+        <th>Contacts</th><th>Leads</th><th>CPL</th><th>Assess.</th><th>$/assess.</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
-/* ════ 04 · DÍA A DÍA ════ */
-function renderDaily(root) {
-  const M = DATA.months, m = M[M.length-1];
-  const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
-  if(!dates.length) return;
-  let rows="", t={spend:0,clicks:0,contacto:0,leads:0,assessment:0};
-  dates.forEach(k=>{
-    const d = DATA.daily[k];
-    t.spend+=d.spend; t.clicks+=d.clicks; t.contacto+=d.contacto; t.leads+=d.leads; t.assessment+=d.assessment;
-    const cpc = d.contacto>0 ? d.spend/d.contacto : null;
-    rows += `<tr><td>${k.slice(8,10)}/${k.slice(5,7)}</td>
-      <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
-      <td><strong>${d.contacto||"–"}</strong></td>
-      <td class="${cpc!==null&&cpc<=15?"pos":"neu"}">${cpc!==null?f$(cpc):"–"}</td>
-      <td class="${d.leads>0?"pos":""}">${d.leads||"–"}</td>
-      <td class="${d.assessment>0?"pos":""}">${d.assessment||"–"}</td></tr>`;
-  });
-  rows += `<tr class="hi"><td>Total</td><td>${f$(t.spend)}</td><td>${fn(t.clicks)}</td>
-    <td>${fn(t.contacto)}</td><td>${t.contacto?f$(t.spend/t.contacto):"–"}</td>
-    <td>${fn(t.leads)}</td><td>${fn(t.assessment)}</td></tr>`;
-  root.innerHTML += `<div class="section"><div class="section-title">${m.mes} ${DATA.year} — día a día</div>
-    ${chartDaily(dates)}
-    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:440px;">
-      <thead><tr><th>Fecha</th><th>Inversión</th><th>Clicks</th><th>Contactos</th><th>$/contacto</th><th>Leads</th><th>Assess.</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
-}
-
-/* ════ 05 · CAMPAÑAS ════ */
+/* ════ 06 · CAMPAIGNS ════ */
 function renderCampaigns(root) {
   const C = (DATA.campaigns||[]).map(c=>derive({...c}));
   if(!C.length) return;
@@ -300,69 +306,71 @@ function renderCampaigns(root) {
   const rows = C.map(c=>`<tr>
     <td class="tl"><strong>${esc(c.name)}</strong>${c.status!=="ENABLED"?` <span class="pill pill-ot">${esc(c.status)}</span>`:""}</td>
     <td>${f$(c.spend)}</td><td>${fn(c.clicks)}</td><td>${fp(c.ctr)}</td><td>$${fd2(c.cpc)}</td>
-    <td>${fn(c.contacto)}</td><td>${c.contacto?f$(c.cpContacto):"–"}</td>
+    <td>${fn(c.contacto)}</td><td>${c.contacto?f$(c.cpContact):"–"}</td>
     <td>${fn(c.leads)}</td><td>${fn(c.assessment)}</td></tr>`).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">${m.mes} — por campaña</div>
+  root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} — by campaign</div>
     <div class="ft-wrap"><table class="ft" style="min-width:600px;">
-      <thead><tr><th class="tl">Campaña</th><th>Inversión</th><th>Clicks</th><th>CTR</th><th>CPC</th>
-        <th>Contactos</th><th>$/cont.</th><th>Leads</th><th>Assess.</th></tr></thead>
+      <thead><tr><th class="tl">Campaign</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th>
+        <th>Contacts</th><th>$/contact</th><th>Leads</th><th>Assess.</th></tr></thead>
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
-/* ════ 06 · CÓMO SE CUENTA ════ */
-function renderNota(root) {
+/* ════ 07 · METHODOLOGY ════ */
+function renderNote(root) {
   const g = DATA.groups||{};
   const li = (k,t) => `<li><strong>${t}:</strong> ${(g[k]||[]).map(esc).join(" + ")}</li>`;
-  root.innerHTML += `<div class="section"><div class="section-title">Cómo se cuenta</div>
+  root.innerHTML += `<div class="section"><div class="section-title">How these numbers are counted</div>
     <div class="info-box info-gray">
-      La cuenta tiene 19 acciones de conversión y sumarlas todas no dice nada: mezcla pedidos de contacto,
-      etapas del CRM y engagement del perfil de negocio. Acá cada una va a su nivel del embudo:
+      The account has 19 conversion actions, and adding them all up says nothing: it mixes contact requests,
+      CRM stages and Business Profile engagement. Here each one is mapped to its own step of the funnel:
       <ul style="margin:8px 0 0 18px;line-height:1.7;">
-        ${li("contacto","Contactos")}
-        ${li("descartados","Leads descartados")}
-        ${li("assessment","Assessment agendado")}
-        ${li("pipeline","En pipeline")}
+        ${li("contacto","Contacts")}
+        ${li("descartados","Leads disqualified")}
+        ${li("assessment","Assessment booked")}
+        ${li("pipeline","In pipeline")}
         ${li("admit","Admits")}
       </ul>
       <div style="margin-top:8px;">
-        <strong>Leads en CRM</strong> = descartados + con assessment: los que el equipo efectivamente clasificó.
-        Ese es el conteo honesto, y sobre ese va el CPL. Los <strong>contactos</strong> cuentan cada evento
-        (una misma persona que pide dos veces suma dos), así que sirven para ver el ritmo del día, no para contar personas.
-        Quedan afuera del embudo las <em>Local actions</em> (direcciones, visitas, menú) y la compra de GA4.
+        <strong>Leads triaged</strong> = disqualified + assessment booked. These come back from the CRM as
+        offline conversion uploads, so they count the leads the team has already worked — not every lead that
+        came in. That is the honest count, and CPL is calculated on it.
+        <strong>Contacts</strong> count every event (one person asking twice counts twice), so they show the
+        daily rhythm rather than a headcount. <em>Local actions</em> (directions, website visits, menu views)
+        and the GA4 purchase are left out of the funnel entirely.
       </div>
     </div></div>`;
 }
 
-/* ════ GRÁFICAS ════ */
+/* ════ CHARTS ════ */
 // SVG inline y a mano: la página es estática y se sirve desde GitHub Pages, así
 // que no se le suma ninguna librería externa.
 const CW = 760, CH = 250, CM = { t:14, r:46, b:26, l:46 };
 const nice = v => { if(v<=0) return 1; const e=Math.pow(10,Math.floor(Math.log10(v))); return Math.ceil(v/e)*e; };
-const fmtEje = (v,money) => money ? (v>=1000 ? "$"+(v/1000)+"k" : "$"+v) : String(v);
+const fmtAxis = (v,money) => money ? (v>=1000 ? "$"+(v/1000)+"k" : "$"+v) : String(v);
 
-function ejeY(max, money, x, anclaje) {
+function axisY(max, money, x, anchor) {
   let out="";
   for(let i=0;i<=4;i++){
     const val=(max/4)*i, y=CH-CM.b-((CH-CM.t-CM.b)*i)/4;
-    if(anclaje==="start") out += `<line x1="${CM.l}" y1="${y}" x2="${CW-CM.r}" y2="${y}" stroke="#F1F5F9" stroke-width="1"/>`;
-    out += `<text x="${x}" y="${y+3.5}" text-anchor="${anclaje==="start"?"end":"start"}" font-size="9" fill="#9CA3AF">${fmtEje(Math.round(val),money)}</text>`;
+    if(anchor==="start") out += `<line x1="${CM.l}" y1="${y}" x2="${CW-CM.r}" y2="${y}" stroke="#F1F5F9" stroke-width="1"/>`;
+    out += `<text x="${x}" y="${y+3.5}" text-anchor="${anchor==="start"?"end":"start"}" font-size="9" fill="#9CA3AF">${fmtAxis(Math.round(val),money)}</text>`;
   }
   return out;
 }
 
-/* ── Día a día: inversión (izquierda, $) contra contactos y leads (derecha) ── */
+/* ── Day by day: spend on the left ($), contacts and leads on the right ── */
 function chartDaily(dates) {
   const D = DATA.daily;
   const maxM = nice(Math.max(1, ...dates.map(d=>D[d].spend)));
   const maxC = nice(Math.max(1, ...dates.map(d=>Math.max(D[d].contacto, D[d].leads))));
   const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
-  const paso = dates.length>1 ? W/(dates.length-1) : 0;
-  const px = i => CM.l+paso*i;
+  const step = dates.length>1 ? W/(dates.length-1) : 0;
+  const px = i => CM.l+step*i;
   const py = (v,money) => CH-CM.b-(v/(money?maxM:maxC))*H;
   const SERIES = [
-    { k:"spend",    lbl:"Inversión", color:"#7C3AED", money:true  },
-    { k:"contacto", lbl:"Contactos", color:"#1F4E78", money:false },
-    { k:"leads",    lbl:"Leads CRM", color:"#059669", money:false },
+    { k:"spend",    lbl:"Spend",    color:"#7C3AED", money:true  },
+    { k:"contacto", lbl:"Contacts", color:"#1F4E78", money:false },
+    { k:"leads",    lbl:"Leads",    color:"#059669", money:false },
   ];
   let series="";
   SERIES.forEach(se=>{
@@ -370,86 +378,86 @@ function chartDaily(dates) {
     series += `<polyline fill="none" stroke="${se.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map(q=>q[0].toFixed(1)+","+q[1].toFixed(1)).join(" ")}"/>`;
     pts.forEach((q,i)=>{
       const d=dates[i], v=D[d][se.k]||0;
-      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${d.slice(8,10)}/${d.slice(5,7)} · ${se.lbl}: ${se.money?f$(v):v}</title></circle>`;
+      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${d.slice(5,7)}/${d.slice(8,10)} · ${se.lbl}: ${se.money?f$(v):fn(v)}</title></circle>`;
     });
   });
-  let ejeX="";
+  let axisX="";
   dates.forEach((d,i)=>{ if(dates.length<=16||i%3===0||i===dates.length-1)
-    ejeX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8,10)}</text>`; });
+    axisX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8,10)}</text>`; });
   return `<div class="chart-card">
     <div class="chart-legend">${SERIES.map(s=>`<span class="mbtn" aria-pressed="true" style="background:${s.color};"><span class="dotc"></span>${s.lbl}</span>`).join("")}</div>
-    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Inversión, contactos y leads por día">
-      ${ejeY(maxM,true,CM.l-6,"start")}
-      ${ejeY(maxC,false,CW-CM.r+6,"end")}
+    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Spend, contacts and leads by day">
+      ${axisY(maxM,true,CM.l-6,"start")}
+      ${axisY(maxC,false,CW-CM.r+6,"end")}
       <line x1="${CM.l}" y1="${CH-CM.b}" x2="${CW-CM.r}" y2="${CH-CM.b}" stroke="#E5E7EB"/>
-      ${series}${ejeX}
+      ${series}${axisX}
     </svg>
-    <div class="chart-hint">Eje izquierdo: dólares. Eje derecho: cantidad. Pasá el mouse sobre un punto para ver el detalle del día.</div>
+    <div class="chart-hint">Left axis: dollars. Right axis: count. Hover a point for that day's detail.</div>
   </div>`;
 }
 
-/* ── Mensual: elegís qué métricas ver ── */
-const METRICAS = [
-  { k:"spend",      lbl:"Inversión",  color:"#7C3AED", money:true  },
-  { k:"cpl",        lbl:"CPL",        color:"#DC2626", money:true  },
-  { k:"cpContacto", lbl:"$/contacto", color:"#D97706", money:true  },
-  { k:"contacto",   lbl:"Contactos",  color:"#1F4E78", money:false },
-  { k:"leads",      lbl:"Leads CRM",  color:"#059669", money:false },
-  { k:"assessment", lbl:"Assessments",color:"#0891B2", money:false },
-  { k:"clicks",     lbl:"Clicks",     color:"#DB2777", money:false },
+/* ── Monthly: pick which metrics to plot ── */
+const METRICS = [
+  { k:"spend",      lbl:"Spend",       color:"#7C3AED", money:true  },
+  { k:"cpl",        lbl:"CPL",         color:"#DC2626", money:true  },
+  { k:"cpContact",  lbl:"$/contact",   color:"#D97706", money:true  },
+  { k:"contacto",   lbl:"Contacts",    color:"#1F4E78", money:false },
+  { k:"leads",      lbl:"Leads",       color:"#059669", money:false },
+  { k:"assessment", lbl:"Assessments", color:"#0891B2", money:false },
+  { k:"clicks",     lbl:"Clicks",      color:"#DB2777", money:false },
 ];
 let MSEL = new Set(["spend","contacto"]);
 
-function dibujarMensual() {
-  const cont = document.getElementById("chart-mensual");
+function drawMonthly() {
+  const cont = document.getElementById("chart-monthly");
   if(!cont) return;
-  const M = DATA.months.map(m=>derive({...m})), sel = METRICAS.filter(m=>MSEL.has(m.k));
-  if(!sel.length){ cont.innerHTML = `<div class="chart-empty">Elegí al menos una métrica.</div>`; return; }
+  const M = DATA.months.map(m=>derive({...m})), sel = METRICS.filter(m=>MSEL.has(m.k));
+  if(!sel.length){ cont.innerHTML = `<div class="chart-empty">Pick at least one metric.</div>`; return; }
   const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
-  const hayMoney = sel.some(m=>m.money), hayCount = sel.some(m=>!m.money);
+  const anyMoney = sel.some(m=>m.money), anyCount = sel.some(m=>!m.money);
   const maxMoney = nice(Math.max(1, ...sel.filter(m=>m.money).flatMap(m=>M.map(x=>x[m.k]||0))));
   const maxCount = nice(Math.max(1, ...sel.filter(m=>!m.money).flatMap(m=>M.map(x=>x[m.k]||0))));
-  const paso = W/Math.max(1,M.length-1);
-  const px = i => CM.l+paso*i;
+  const step = W/Math.max(1,M.length-1);
+  const px = i => CM.l+step*i;
   const py = (v,money) => CH-CM.b-(v/(money?maxMoney:maxCount))*H;
   let series="";
   sel.forEach(m=>{
     const pts = M.map((x,i)=>[px(i), py(x[m.k]||0, m.money)]);
     series += `<polyline fill="none" stroke="${m.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join(" ")}"/>`;
     pts.forEach((p,i)=>{ const v=M[i][m.k]||0;
-      series += `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.2" fill="#fff" stroke="${m.color}" stroke-width="2"><title>${esc(M[i].mes)} · ${esc(m.lbl)}: ${m.money?f$(v):Math.round(v)}</title></circle>`; });
+      series += `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.2" fill="#fff" stroke="${m.color}" stroke-width="2"><title>${mName(M[i].ym)} · ${esc(m.lbl)}: ${m.money?f$(v):fn(v)}</title></circle>`; });
   });
-  let ejeX="";
-  M.forEach((x,i)=>{ ejeX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="9" fill="#9CA3AF">${esc(x.mes.slice(0,3))}</text>`; });
-  cont.innerHTML = `<svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Evolución mensual">
-    ${hayMoney?ejeY(maxMoney,true,CM.l-6,"start"):`<line x1="${CM.l}" y1="${CM.t}" x2="${CM.l}" y2="${CH-CM.b}" stroke="#F1F5F9"/>`}
-    ${hayCount?ejeY(maxCount,false,CW-CM.r+6,"end"):""}
+  let axisX="";
+  M.forEach((x,i)=>{ axisX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="9" fill="#9CA3AF">${mName(x.ym).slice(0,3)}</text>`; });
+  cont.innerHTML = `<svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Monthly trend">
+    ${anyMoney?axisY(maxMoney,true,CM.l-6,"start"):`<line x1="${CM.l}" y1="${CM.t}" x2="${CM.l}" y2="${CH-CM.b}" stroke="#F1F5F9"/>`}
+    ${anyCount?axisY(maxCount,false,CW-CM.r+6,"end"):""}
     <line x1="${CM.l}" y1="${CH-CM.b}" x2="${CW-CM.r}" y2="${CH-CM.b}" stroke="#E5E7EB"/>
-    ${series}${ejeX}
+    ${series}${axisX}
   </svg>
-  <div class="chart-hint">${hayMoney?"Eje izquierdo: dólares.":""} ${hayCount?"Eje derecho: cantidad.":""} Pasá el mouse sobre un punto para ver el valor.</div>`;
+  <div class="chart-hint">${anyMoney?"Left axis: dollars.":""} ${anyCount?"Right axis: count.":""} Hover a point for the value.</div>`;
 }
 
-function chartMensual() {
-  const botones = METRICAS.map(m=>
+function chartMonthly() {
+  const buttons = METRICS.map(m=>
     `<button type="button" class="mbtn" data-k="${m.k}" aria-pressed="${MSEL.has(m.k)}" style="${MSEL.has(m.k)?`background:${m.color};`:""}">
       <span class="dotc" style="background:${m.color}"></span>${esc(m.lbl)}</button>`).join("");
-  return `<div class="chart-card"><div class="chart-legend" id="chart-mensual-btns">${botones}</div><div id="chart-mensual"></div></div>`;
+  return `<div class="chart-card"><div class="chart-legend" id="chart-monthly-btns">${buttons}</div><div id="chart-monthly"></div></div>`;
 }
 
 // Delegación: los botones se redibujan, así que el listener va en el contenedor.
-function activarMensual() {
-  const cont = document.getElementById("chart-mensual-btns");
+function bindMonthly() {
+  const cont = document.getElementById("chart-monthly-btns");
   if(!cont) return;
   cont.addEventListener("click", e=>{
     const b = e.target.closest(".mbtn"); if(!b) return;
-    const k = b.dataset.k, m = METRICAS.find(x=>x.k===k);
+    const k = b.dataset.k, m = METRICS.find(x=>x.k===k);
     if(MSEL.has(k)) MSEL.delete(k); else MSEL.add(k);
     b.setAttribute("aria-pressed", MSEL.has(k));
     b.style.background = MSEL.has(k) ? m.color : "";
-    dibujarMensual();
+    drawMonthly();
   });
-  dibujarMensual();
+  drawMonthly();
 }
 
 /* ════ INIT ════ */
@@ -461,22 +469,23 @@ async function init() {
     DATA = await res.json();
   } catch(e) {
     document.getElementById("updated").innerHTML = "";
-    root.innerHTML = `<div class="err">No pude cargar los datos (data.json). ${esc(e.message)}</div>`;
+    root.innerHTML = `<div class="err">Could not load the data (data.json). ${esc(e.message)}</div>`;
     return;
   }
   const gen = new Date(DATA.generated);
+  const label = `${MONTHS[gen.getMonth()].slice(0,3)} ${gen.getDate()}, ${gen.getFullYear()}`;
   document.getElementById("updated").innerHTML =
-    `<span class="dot"></span> Última actualización: <strong>${esc(DATA.lastSyncLabel||gen.toLocaleString("es"))}</strong>`;
+    `<span class="dot"></span> Last updated: <strong>${label}</strong>`;
   renderLag(root);
   renderCurrent(root);
   renderDaily(root);
   renderFunnel(root);
   renderMonthly(root);
   renderCampaigns(root);
-  renderNota(root);
+  renderNote(root);
   // Va último: cada `root.innerHTML +=` reserializa el árbol y se lleva puestos
   // los listeners ya enganchados.
-  activarMensual();
+  bindMonthly();
 }
 init();
 </script>
