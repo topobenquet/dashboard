@@ -99,14 +99,14 @@ table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overfl
 <body>
 <div class="page-header">
   <h1>🏠 Concierge Home Care of Maryland</h1>
-  <span class="subtitle">Google Ads · 2026</span>
+  <span class="subtitle">Google Ads + CRM · 2026</span>
 </div>
 <div class="updated" id="updated"><span class="dot"></span> Loading…</div>
 
 <div id="root"></div>
 
 <div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
-  Concierge Home Care of Maryland · Updates daily · Source: Google Ads API (account 786-945-2872)
+  Concierge Home Care of Maryland · Updates daily · Sources: Google Ads API (account 786-945-2872) · CRM (GoHighLevel)
 </div>
 
 <script>
@@ -140,48 +140,52 @@ function kpi(label, val, compareHtml="", sub="") {
 let DATA;
 
 /* ════ DERIVACIONES ════ */
-// Todo sale del mismo lugar: sumar días. Así el mes en curso, el mes cerrado y
-// el "mismos días del mes pasado" se calculan con una sola función y no hay
-// forma de que dos secciones muestren números distintos para lo mismo.
+// Un lead es un contacto del CRM cuya primera atribución trae gclid: una
+// persona, una vez, y adjudicable a Google Ads. NO se usa el conteo de
+// conversiones de Google Ads, que cuenta eventos y desde junio cuenta de más.
 function sumDays(ym, dayCut) {
-  const o = { spend:0, clicks:0, impr:0, contacto:0, leads:0, descartados:0, assessment:0, pipeline:0, admit:0, dias:0 };
+  const o = { spend:0, clicks:0, impr:0, adsContacts:0, leads:0, crmAll:0, opps:0, days:0 };
   for (const k in (DATA.daily||{})) {
     if (k.slice(0,7) !== ym) continue;
     if (dayCut && +k.slice(8,10) > dayCut) continue;
     const d = DATA.daily[k];
-    o.spend+=d.spend; o.clicks+=d.clicks; o.impr+=d.impr;
-    o.contacto+=d.contacto; o.leads+=d.leads; o.descartados+=d.descartados;
-    o.assessment+=d.assessment; o.pipeline+=d.pipeline; o.admit+=d.admit; o.dias++;
+    o.spend+=d.spend; o.clicks+=d.clicks; o.impr+=d.impr; o.adsContacts+=d.contacto; o.days++;
+  }
+  for (const k in (DATA.crm?.daily||{})) {
+    if (k.slice(0,7) !== ym) continue;
+    if (dayCut && +k.slice(8,10) > dayCut) continue;
+    const c = DATA.crm.daily[k];
+    o.leads+=c.paid; o.crmAll+=c.contacts; o.opps+=c.opps;
   }
   return derive(o);
 }
 function derive(o) {
   o.ctr = o.impr>0 ? o.clicks/o.impr : 0;
   o.cpc = o.clicks>0 ? o.spend/o.clicks : 0;
-  o.cpContact = o.contacto>0 ? o.spend/o.contacto : 0;
   o.cpl = o.leads>0 ? o.spend/o.leads : 0;
-  o.cpAssess = o.assessment>0 ? o.spend/o.assessment : 0;
-  o.qualRate = o.leads>0 ? o.assessment/o.leads : 0;
+  o.cvr = o.clicks>0 ? o.leads/o.clicks : 0;
+  o.inflation = o.leads>0 ? o.adsContacts/o.leads : 0;   // cuántas conversiones registra Ads por cada lead real
   return o;
 }
+// Los meses de Google Ads y los del CRM se cruzan por "2026-08".
+function crmMonth(ym) { return (DATA.crm?.monthly||[]).find(m=>m.ym===ym) || {contacts:0,paid:0,opps:0}; }
+function monthRow(m) {
+  const c = crmMonth(m.ym);
+  return derive({ ...m, adsContacts:m.contacto, leads:c.paid, crmAll:c.contacts, opps:c.opps });
+}
 
-/* ════ 01 · CRM UPLOAD LAG ════ */
-// Las etapas del CRM se suben a mano y a veces la subida se corta. Cuando eso
-// pasa, el CPL del mes en curso se dispara y parece un problema de la campaña
-// cuando en realidad faltan datos. Vale más avisarlo que dejarlo pasar.
-function renderLag(root) {
-  const ks = Object.keys(DATA.daily||{}).sort();
-  if(!ks.length) return;
-  const lastSpend = [...ks].reverse().find(k=>DATA.daily[k].spend>0);
-  const lastCRM = [...ks].reverse().find(k=>DATA.daily[k].leads>0||DATA.daily[k].assessment>0);
-  if(!lastSpend||!lastCRM) return;
-  const gap = Math.round((new Date(lastSpend)-new Date(lastCRM))/86400000);
-  if(gap < 3) return;
-  const fmt = k => k.slice(5,7)+"/"+k.slice(8,10);
+/* ════ 01 · TRACKING WARNING ════ */
+// Desde junio Google Ads registra hasta 3 veces más conversiones de contacto que
+// leads reales entran al CRM. Como las campañas están en Maximize Conversions,
+// el bidding persigue esa señal inflada. Es lo primero que hay que ver.
+function renderWarning(root) {
+  const M = DATA.months; if(!M.length || !DATA.crm) return;
+  const cur = monthRow(M[M.length-1]);
+  if(cur.inflation < 1.8) return;
   root.innerHTML += `<div class="info-box info-amber" style="margin-bottom:18px;">
-    ⚠️ <strong>${gap} days of CRM data are missing.</strong>
-    The last day with leads uploaded is ${fmt(lastCRM)}, and the campaign kept spending through ${fmt(lastSpend)}.
-    Until those are uploaded, this month's CPL and cost per assessment look worse than they are.</div>`;
+    ⚠️ <strong>Google Ads is recording ${cur.inflation.toFixed(1)}× more conversions than the leads that actually reach the CRM.</strong>
+    ${mName(M[M.length-1].ym)}: ${fn(cur.adsContacts)} contact conversions in Google Ads against ${fn(cur.leads)} real paid-search leads in the CRM.
+    Both campaigns bid on Maximize Conversions, so they are optimising toward the inflated signal. Every lead number on this page comes from the CRM, not from Google Ads.</div>`;
 }
 
 /* ════ 02 · MONTH TO DATE ════ */
@@ -189,25 +193,25 @@ function renderCurrent(root) {
   const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
   const gen = new Date(DATA.generated);
   const dom = gen.getDate(), dim = DAYS_IN[mIdx(curM.ym)];
-  const empty = () => derive({spend:0,clicks:0,impr:0,contacto:0,leads:0,descartados:0,assessment:0,pipeline:0,admit:0,dias:0});
+  const empty = () => derive({spend:0,clicks:0,impr:0,adsContacts:0,leads:0,crmAll:0,opps:0,days:0});
   const c = sumDays(curM.ym, dom), p = prevM ? sumDays(prevM.ym, dom) : empty();
   const prevName = prevM ? mName(prevM.ym) : "–";
   const per = prevM ? `${prevName} 1-${dom}` : "–";
   const vs = prevM ? " vs "+prevName : "";
   const proj = dom>0 ? c.spend/dom*dim : c.spend;
-  const projC = dom>0 ? c.contacto/dom*dim : c.contacto;
+  const projL = dom>0 ? c.leads/dom*dim : c.leads;
   root.innerHTML += `<div class="section">
     <div class="section-title">${mName(curM.ym)} ${DATA.year} — through day ${dom} vs ${prevName} (same days)</div>
     <div class="kpi-grid">
       ${kpi(`Spend 1-${dom}`, f$(c.spend), badge(c.spend,p.spend)+vs, `${per}: ${f$(p.spend)}`)}
-      ${kpi(`Contacts 1-${dom}`, fn(c.contacto), badge(c.contacto,p.contacto)+vs, `${per}: ${fn(p.contacto)}`)}
-      ${kpi(`Cost / contact`, c.contacto?f$(c.cpContact):"–", badge(c.cpContact,p.cpContact,true)+vs, `${per}: ${p.contacto?f$(p.cpContact):"–"}`)}
-      ${kpi(`Leads triaged 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
+      ${kpi(`Leads 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
       ${kpi(`Cost / lead`, c.leads?f$(c.cpl):"–", badge(c.cpl,p.cpl,true)+vs, `${per}: ${p.leads?f$(p.cpl):"–"}`)}
-      ${kpi(`Assessments 1-${dom}`, fn(c.assessment), badge(c.assessment,p.assessment)+vs, `${per}: ${fn(p.assessment)}`)}
-      ${kpi(`Cost / assessment`, c.assessment?f$(c.cpAssess):"–", badge(c.cpAssess,p.cpAssess,true)+vs, `${per}: ${p.assessment?f$(p.cpAssess):"–"}`)}
-      ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `CTR ${fp(c.ctr)} · CPC $${fd2(c.cpc)}`)}
-      ${kpi(`${mName(curM.ym)} pace`, f$(proj), `day ${dom} of ${dim}`, `at current pace · ~${fn(projC)} contacts`)}
+      ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `${per}: ${fn(p.clicks)}`)}
+      ${kpi(`Click → lead`, fp(c.cvr), badge(c.cvr,p.cvr)+vs, `${per}: ${fp(p.cvr)}`)}
+      ${kpi(`CPC`, "$"+fd2(c.cpc), badge(c.cpc,p.cpc,true)+vs, `CTR ${fp(c.ctr)} · ${per}: $${fd2(p.cpc)}`)}
+      ${kpi(`All CRM leads 1-${dom}`, fn(c.crmAll), badge(c.crmAll,p.crmAll)+vs, `every source · ${fn(c.leads)} from paid search`)}
+      ${kpi(`Ads-recorded conv.`, fn(c.adsContacts), "", `${c.inflation?c.inflation.toFixed(1)+"× the real leads":"–"} · not used for CPL`)}
+      ${kpi(`${mName(curM.ym)} pace`, f$(proj), `day ${dom} of ${dim}`, `at current pace · ~${fn(projL)} leads`)}
     </div>
   </div>`;
 }
@@ -217,126 +221,113 @@ function renderDaily(root) {
   const M = DATA.months, m = M[M.length-1];
   const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
   if(!dates.length) return;
-  let rows="", t={spend:0,clicks:0,contacto:0,leads:0,assessment:0};
+  let rows="", t={spend:0,clicks:0,leads:0,crmAll:0,adsContacts:0};
   dates.forEach(k=>{
-    const d = DATA.daily[k];
-    t.spend+=d.spend; t.clicks+=d.clicks; t.contacto+=d.contacto; t.leads+=d.leads; t.assessment+=d.assessment;
-    const cpc = d.contacto>0 ? d.spend/d.contacto : null;
+    const d = DATA.daily[k], c = (DATA.crm?.daily||{})[k] || {contacts:0,paid:0};
+    t.spend+=d.spend; t.clicks+=d.clicks; t.leads+=c.paid; t.crmAll+=c.contacts; t.adsContacts+=d.contacto;
+    const cpl = c.paid>0 ? d.spend/c.paid : null;
     rows += `<tr><td>${k.slice(5,7)}/${k.slice(8,10)}</td>
       <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
-      <td><strong>${d.contacto>0?fn(d.contacto):"–"}</strong></td>
-      <td class="${cpc!==null&&cpc<=15?"pos":"neu"}">${cpc!==null?f$(cpc):"–"}</td>
-      <td class="${d.leads>0?"pos":""}">${d.leads>0?fn(d.leads):"–"}</td>
-      <td class="${d.assessment>0?"pos":""}">${d.assessment>0?fn(d.assessment):"–"}</td></tr>`;
+      <td><strong>${c.paid>0?fn(c.paid):"–"}</strong></td>
+      <td class="${cpl!==null&&cpl<=25?"pos":"neu"}">${cpl!==null?f$(cpl):"–"}</td>
+      <td>${c.contacts>0?fn(c.contacts):"–"}</td>
+      <td class="neu">${d.contacto>0?fn(d.contacto):"–"}</td></tr>`;
   });
   rows += `<tr class="hi"><td>Total</td><td>${f$(t.spend)}</td><td>${fn(t.clicks)}</td>
-    <td>${fn(t.contacto)}</td><td>${t.contacto?f$(t.spend/t.contacto):"–"}</td>
-    <td>${fn(t.leads)}</td><td>${fn(t.assessment)}</td></tr>`;
+    <td>${fn(t.leads)}</td><td>${t.leads?f$(t.spend/t.leads):"–"}</td>
+    <td>${fn(t.crmAll)}</td><td>${fn(t.adsContacts)}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — day by day</div>
     ${chartDaily(dates)}
-    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:440px;">
-      <thead><tr><th>Date</th><th>Spend</th><th>Clicks</th><th>Contacts</th><th>$/contact</th><th>Leads</th><th>Assess.</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:480px;">
+      <thead><tr><th>Date</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>$/lead</th><th>All CRM</th><th>Ads conv.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;"><strong>Leads</strong> are CRM contacts whose first attribution carries a gclid — one person, once, traceable to a paid click. <strong>All CRM</strong> adds every other source. <strong>Ads conv.</strong> is what Google Ads recorded that day, shown only for comparison.</div></div>`;
 }
 
-/* ════ 04 · FUNNEL ════ */
-function renderFunnel(root) {
-  const M = DATA.months, curM = M[M.length-1];
-  const c = sumDays(curM.ym);
-  const steps = [
-    { l:"Clicks",            v:c.clicks,     s:"people who landed on the site" },
-    { l:"Contacts",          v:c.contacto,   s:"chat, callback or phone call" },
-    { l:"Leads triaged",     v:c.leads,      s:"worked by the team in the CRM" },
-    { l:"Assessment booked", v:c.assessment, s:"the ones that moved forward" },
-    { l:"Admits",            v:c.admit,      s:"closed" },
-  ];
-  const max = Math.max(1, ...steps.map(p=>p.v));
-  const rows = steps.map((p,i)=>{
-    const prev = i>0 ? steps[i-1].v : null;
-    const rate = prev ? (prev>0 ? p.v/prev : 0) : null;
-    return `<tr>
-      <td class="tl"><strong>${p.l}</strong><div style="font-size:9.5px;color:#9CA3AF;">${p.s}</div></td>
-      <td style="width:44%">
-        <div style="background:#EFF6FF;border-radius:4px;height:16px;position:relative;">
-          <div style="background:#1F4E78;height:16px;border-radius:4px;width:${(p.v/max*100).toFixed(1)}%"></div>
-        </div>
-      </td>
-      <td><strong>${fn(p.v)}</strong></td>
-      <td class="${rate!==null?(rate>=0.1?"pos":"neu"):"neu"}">${rate!==null?fp(rate):"–"}</td>
-      <td>${p.v>0?f$(c.spend/p.v):"–"}</td>
-    </tr>`;
-  }).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">${mName(curM.ym)} ${DATA.year} — full funnel</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
-      <thead><tr><th class="tl">Stage</th><th></th><th>Count</th><th>% of previous step</th><th>Cost each</th></tr></thead>
+/* ════ 04 · WHERE THE LEADS STAND ════ */
+function renderStages(root) {
+  const M = DATA.months, m = M[M.length-1];
+  const st = (DATA.crm?.stages||{})[m.ym];
+  if(!st) return;
+  const order = (DATA.crm.stageOrder||[]).filter(s=>st[s]!==undefined);
+  const rest = Object.keys(st).filter(s=>!order.includes(s));
+  const list = [...order, ...rest];
+  const total = list.reduce((a,s)=>a+st[s],0) || 1;
+  const max = Math.max(1, ...list.map(s=>st[s]));
+  const rows = list.map(s=>`<tr>
+    <td class="tl"><strong>${esc(s)}</strong></td>
+    <td style="width:40%"><div style="background:#EFF6FF;border-radius:4px;height:16px;">
+      <div style="background:${/not qualified|not interested/i.test(s)?"#DC2626":"#1F4E78"};height:16px;border-radius:4px;width:${(st[s]/max*100).toFixed(1)}%"></div></div></td>
+    <td><strong>${fn(st[s])}</strong></td><td>${fp(st[s]/total)}</td></tr>`).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — where those leads stand today</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:440px;">
+      <thead><tr><th class="tl">Pipeline stage</th><th></th><th>Leads</th><th>% of month</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-amber" style="margin-top:8px;">The CRM stages (leads, assessments, admits) are uploaded into Google Ads from the CRM with a few days of delay, so the last days of the month always look weaker than they end up being.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">Current stage of every opportunity created this month, from all sources. It is a snapshot, not a funnel: a lead that passed through a stage and moved on is only counted where it sits now.</div></div>`;
 }
 
 /* ════ 05 · MONTHLY ════ */
 function renderMonthly(root) {
-  const M = DATA.months.map(m=>derive({...m}));
+  const M = DATA.months.map(monthRow);
   let rows = M.map(m=>`<tr>
     <td><strong>${mName(m.ym)}</strong></td>
-    <td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td><td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td>
-    <td>${fn(m.contacto)}</td><td>${fn(m.leads)}</td>
-    <td class="${m.cpl>0&&m.cpl<=25?"pos":"neu"}">${m.leads?f$(m.cpl):"–"}</td>
-    <td>${fn(m.assessment)}</td><td>${m.assessment?f$(m.cpAssess):"–"}</td>
+    <td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td><td>$${fd2(m.cpc)}</td>
+    <td><strong>${fn(m.leads)}</strong></td>
+    <td class="${m.cpl>0&&m.cpl<=15?"pos":"neu"}">${m.leads?f$(m.cpl):"–"}</td>
+    <td>${fp(m.cvr)}</td><td>${fn(m.crmAll)}</td>
+    <td class="neu">${fn(m.adsContacts)}</td>
+    <td class="${m.inflation>=1.8?"neg":"neu"}">${m.leads?m.inflation.toFixed(1)+"×":"–"}</td>
   </tr>`).join("");
   const y = derive(M.reduce((a,m)=>({
     spend:a.spend+m.spend, clicks:a.clicks+m.clicks, impr:a.impr+m.impr,
-    contacto:a.contacto+m.contacto, leads:a.leads+m.leads, assessment:a.assessment+m.assessment,
-  }),{spend:0,clicks:0,impr:0,contacto:0,leads:0,assessment:0}));
-  rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>${fp(y.ctr)}</td>
-    <td>$${fd2(y.cpc)}</td><td>${fn(y.contacto)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td>
-    <td>${fn(y.assessment)}</td><td>${f$(y.cpAssess)}</td></tr>`;
+    leads:a.leads+m.leads, crmAll:a.crmAll+m.crmAll, adsContacts:a.adsContacts+m.adsContacts,
+  }),{spend:0,clicks:0,impr:0,leads:0,crmAll:0,adsContacts:0}));
+  rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>$${fd2(y.cpc)}</td>
+    <td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td><td>${fp(y.cvr)}</td><td>${fn(y.crmAll)}</td>
+    <td>${fn(y.adsContacts)}</td><td>${y.inflation.toFixed(1)}×</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Monthly history ${DATA.year}</div>
     ${chartMonthly()}
-    <div class="ft-wrap"><table class="ft" style="min-width:620px;">
-      <thead><tr><th>Month</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th>
-        <th>Contacts</th><th>Leads</th><th>CPL</th><th>Assess.</th><th>$/assess.</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+    <div class="ft-wrap"><table class="ft" style="min-width:640px;">
+      <thead><tr><th>Month</th><th>Spend</th><th>Clicks</th><th>CPC</th>
+        <th>Leads</th><th>CPL</th><th>Click→lead</th><th>All CRM</th><th>Ads conv.</th><th>Over-count</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;"><strong>Over-count</strong> is Google Ads conversions divided by real paid leads in the CRM. It sat near 1.5× through May and jumped from June onward — that break is in the tracking, not in the demand: clicks stayed flat while recorded conversions doubled.</div></div>`;
 }
 
 /* ════ 06 · CAMPAIGNS ════ */
 function renderCampaigns(root) {
-  const C = (DATA.campaigns||[]).map(c=>derive({...c}));
+  const C = (DATA.campaigns||[]).map(c=>derive({...c, adsContacts:c.contacto, leads:0}));
   if(!C.length) return;
   const M = DATA.months, m = M[M.length-1];
   const rows = C.map(c=>`<tr>
     <td class="tl"><strong>${esc(c.name)}</strong>${c.status!=="ENABLED"?` <span class="pill pill-ot">${esc(c.status)}</span>`:""}</td>
     <td>${f$(c.spend)}</td><td>${fn(c.clicks)}</td><td>${fp(c.ctr)}</td><td>$${fd2(c.cpc)}</td>
-    <td>${fn(c.contacto)}</td><td>${c.contacto?f$(c.cpContact):"–"}</td>
-    <td>${fn(c.leads)}</td><td>${fn(c.assessment)}</td></tr>`).join("");
+    <td class="neu">${fn(c.adsContacts)}</td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} — by campaign</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:600px;">
-      <thead><tr><th class="tl">Campaign</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th>
-        <th>Contacts</th><th>$/contact</th><th>Leads</th><th>Assess.</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
+      <thead><tr><th class="tl">Campaign</th><th>Spend</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Ads conv.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;">Leads are not split by campaign: the CRM records the click that brought each lead in, not which campaign paid for it. Only spend and clicks are campaign-level truth here — the conversion column carries the same over-count as the rest of Google Ads.</div></div>`;
 }
 
 /* ════ 07 · METHODOLOGY ════ */
 function renderNote(root) {
   const g = DATA.groups||{};
-  const li = (k,t) => `<li><strong>${t}:</strong> ${(g[k]||[]).map(esc).join(" + ")}</li>`;
   root.innerHTML += `<div class="section"><div class="section-title">How these numbers are counted</div>
     <div class="info-box info-gray">
-      The account has 19 conversion actions, and adding them all up says nothing: it mixes contact requests,
-      CRM stages and Business Profile engagement. Here each one is mapped to its own step of the funnel:
-      <ul style="margin:8px 0 0 18px;line-height:1.7;">
-        ${li("contacto","Contacts")}
-        ${li("descartados","Leads disqualified")}
-        ${li("assessment","Assessment booked")}
-        ${li("pipeline","In pipeline")}
-        ${li("admit","Admits")}
-      </ul>
+      <strong>Leads come from the CRM, not from Google Ads.</strong> A lead is one CRM contact whose first
+      attribution carries a <code>gclid</code>: one person, counted once, traceable to a paid click. Cost per
+      lead is spend divided by that number.
       <div style="margin-top:8px;">
-        <strong>Leads triaged</strong> = disqualified + assessment booked. These come back from the CRM as
-        offline conversion uploads, so they count the leads the team has already worked — not every lead that
-        came in. That is the honest count, and CPL is calculated on it.
-        <strong>Contacts</strong> count every event (one person asking twice counts twice), so they show the
-        daily rhythm rather than a headcount. <em>Local actions</em> (directions, website visits, menu views)
-        and the GA4 purchase are left out of the funnel entirely.
+        Google Ads is not used as the lead source because it does not count people. Its contact actions
+        (${(g.contacto||[]).map(esc).join(", ")}) fire on every event, so one person asking twice counts twice.
+        The CRM stages it also receives (${(g.assessment||[]).concat(g.descartados||[]).map(esc).join(", ")}, and the rest of the
+        pipeline) are uploaded back by hand and arrive incomplete and days late. Both are shown on this page
+        for comparison only.
+      </div>
+      <div style="margin-top:8px;">
+        Spend, clicks, impressions, CTR and CPC do come from Google Ads — those it measures correctly.
+        <em>Local actions</em> (directions, website visits, menu views) and the GA4 purchase are ignored entirely.
       </div>
     </div></div>`;
 }
@@ -358,60 +349,60 @@ function axisY(max, money, x, anchor) {
   return out;
 }
 
-/* ── Day by day: spend on the left ($), contacts and leads on the right ── */
+/* ── Day by day: spend on the left ($), leads and Ads conversions on the right ── */
 function chartDaily(dates) {
-  const D = DATA.daily;
-  const maxM = nice(Math.max(1, ...dates.map(d=>D[d].spend)));
-  const maxC = nice(Math.max(1, ...dates.map(d=>Math.max(D[d].contacto, D[d].leads))));
+  const D = DATA.daily, C = DATA.crm?.daily || {};
+  const val = (k,which) => which==="spend" ? D[k].spend : which==="ads" ? D[k].contacto : (C[k]?.paid||0);
+  const maxM = nice(Math.max(1, ...dates.map(k=>D[k].spend)));
+  const maxC = nice(Math.max(1, ...dates.map(k=>Math.max(D[k].contacto, C[k]?.paid||0))));
   const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
   const step = dates.length>1 ? W/(dates.length-1) : 0;
   const px = i => CM.l+step*i;
   const py = (v,money) => CH-CM.b-(v/(money?maxM:maxC))*H;
   const SERIES = [
-    { k:"spend",    lbl:"Spend",    color:"#7C3AED", money:true  },
-    { k:"contacto", lbl:"Contacts", color:"#1F4E78", money:false },
-    { k:"leads",    lbl:"Leads",    color:"#059669", money:false },
+    { k:"spend", lbl:"Spend",     color:"#7C3AED", money:true  },
+    { k:"leads", lbl:"Leads",     color:"#059669", money:false },
+    { k:"ads",   lbl:"Ads conv.", color:"#9CA3AF", money:false, dash:"4 3" },
   ];
   let series="";
   SERIES.forEach(se=>{
-    const pts = dates.map((d,i)=>[px(i), py(D[d][se.k]||0, se.money)]);
-    series += `<polyline fill="none" stroke="${se.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map(q=>q[0].toFixed(1)+","+q[1].toFixed(1)).join(" ")}"/>`;
-    pts.forEach((q,i)=>{
-      const d=dates[i], v=D[d][se.k]||0;
-      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${d.slice(5,7)}/${d.slice(8,10)} · ${se.lbl}: ${se.money?f$(v):fn(v)}</title></circle>`;
+    const pts = dates.map((k,i)=>[px(i), py(val(k,se.k), se.money)]);
+    series += `<polyline fill="none" stroke="${se.color}" stroke-width="${se.dash?1.8:2.2}"${se.dash?` stroke-dasharray="${se.dash}"`:""} stroke-linejoin="round" stroke-linecap="round" points="${pts.map(q=>q[0].toFixed(1)+","+q[1].toFixed(1)).join(" ")}"/>`;
+    if(!se.dash) pts.forEach((q,i)=>{
+      const k=dates[i], v=val(k,se.k);
+      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${k.slice(5,7)}/${k.slice(8,10)} · ${se.lbl}: ${se.money?f$(v):fn(v)}</title></circle>`;
     });
   });
   let axisX="";
-  dates.forEach((d,i)=>{ if(dates.length<=16||i%3===0||i===dates.length-1)
-    axisX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8,10)}</text>`; });
+  dates.forEach((k,i)=>{ if(dates.length<=16||i%3===0||i===dates.length-1)
+    axisX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${k.slice(8,10)}</text>`; });
   return `<div class="chart-card">
     <div class="chart-legend">${SERIES.map(s=>`<span class="mbtn" aria-pressed="true" style="background:${s.color};"><span class="dotc"></span>${s.lbl}</span>`).join("")}</div>
-    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Spend, contacts and leads by day">
+    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Spend, real leads and Google Ads conversions by day">
       ${axisY(maxM,true,CM.l-6,"start")}
       ${axisY(maxC,false,CW-CM.r+6,"end")}
       <line x1="${CM.l}" y1="${CH-CM.b}" x2="${CW-CM.r}" y2="${CH-CM.b}" stroke="#E5E7EB"/>
       ${series}${axisX}
     </svg>
-    <div class="chart-hint">Left axis: dollars. Right axis: count. Hover a point for that day's detail.</div>
+    <div class="chart-hint">Left axis: dollars. Right axis: count. The dotted grey line is what Google Ads recorded — the gap against the green line is the over-count.</div>
   </div>`;
 }
 
 /* ── Monthly: pick which metrics to plot ── */
 const METRICS = [
-  { k:"spend",      lbl:"Spend",       color:"#7C3AED", money:true  },
-  { k:"cpl",        lbl:"CPL",         color:"#DC2626", money:true  },
-  { k:"cpContact",  lbl:"$/contact",   color:"#D97706", money:true  },
-  { k:"contacto",   lbl:"Contacts",    color:"#1F4E78", money:false },
-  { k:"leads",      lbl:"Leads",       color:"#059669", money:false },
-  { k:"assessment", lbl:"Assessments", color:"#0891B2", money:false },
-  { k:"clicks",     lbl:"Clicks",      color:"#DB2777", money:false },
+  { k:"spend",       lbl:"Spend",      color:"#7C3AED", money:true  },
+  { k:"cpl",         lbl:"CPL",        color:"#DC2626", money:true  },
+  { k:"leads",       lbl:"Leads",      color:"#059669", money:false },
+  { k:"crmAll",      lbl:"All CRM",    color:"#0891B2", money:false },
+  { k:"adsContacts", lbl:"Ads conv.",  color:"#9CA3AF", money:false },
+  { k:"clicks",      lbl:"Clicks",     color:"#DB2777", money:false },
 ];
-let MSEL = new Set(["spend","contacto"]);
+let MSEL = new Set(["leads","adsContacts"]);
 
 function drawMonthly() {
   const cont = document.getElementById("chart-monthly");
   if(!cont) return;
-  const M = DATA.months.map(m=>derive({...m})), sel = METRICS.filter(m=>MSEL.has(m.k));
+  const M = DATA.months.map(monthRow), sel = METRICS.filter(m=>MSEL.has(m.k));
   if(!sel.length){ cont.innerHTML = `<div class="chart-empty">Pick at least one metric.</div>`; return; }
   const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
   const anyMoney = sel.some(m=>m.money), anyCount = sel.some(m=>!m.money);
@@ -476,10 +467,10 @@ async function init() {
   const label = `${MONTHS[gen.getMonth()].slice(0,3)} ${gen.getDate()}, ${gen.getFullYear()}`;
   document.getElementById("updated").innerHTML =
     `<span class="dot"></span> Last updated: <strong>${label}</strong>`;
-  renderLag(root);
+  renderWarning(root);
   renderCurrent(root);
   renderDaily(root);
-  renderFunnel(root);
+  renderStages(root);
   renderMonthly(root);
   renderCampaigns(root);
   renderNote(root);
