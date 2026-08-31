@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-30T10:20:27.078Z",
-  "lastSyncLabel": "30 Ago 2026",
+  "generated": "2026-08-31T10:20:27.120Z",
+  "lastSyncLabel": "31 Ago 2026",
   "currentMonth": "Agosto",
   "months": [
     {
@@ -117,19 +117,19 @@
     },
     {
       "mes": "Agosto",
-      "leads": 300,
-      "reservas": 58,
-      "revenue": 17410,
-      "chofer": 5232,
+      "leads": 317,
+      "reservas": 59,
+      "revenue": 17459,
+      "chofer": 5248,
       "comb": 1284,
       "peajes": 229,
-      "comision": 446,
-      "reembolsos": 10,
-      "otros": 233,
-      "gAds": 301,
+      "comision": 447,
+      "reembolsos": 23,
+      "otros": 234,
+      "gAds": 315,
       "meta": 0,
-      "costoSheet": 7414,
-      "gananciaSheet": 8726
+      "costoSheet": 7419,
+      "gananciaSheet": 8755
     }
   ],
   "adsMonthly": [
@@ -184,10 +184,10 @@
     },
     {
       "mes": "Agosto",
-      "spend": 300.74,
-      "clicks": 222,
-      "impr": 1557,
-      "conv": 23
+      "spend": 314.53,
+      "clicks": 236,
+      "impr": 1674,
+      "conv": 24
     }
   ],
   "trips": [
@@ -3015,7 +3015,7 @@
       "sena": 100,
       "restante": 247,
       "choferCost": 197,
-      "neto": 100,
+      "neto": 139,
       "fechaReserva": "17/08/26",
       "fechaSalida": "29/08/26"
     },
@@ -3029,7 +3029,7 @@
       "sena": 0,
       "restante": 0,
       "choferCost": 25,
-      "neto": 0,
+      "neto": 224,
       "fechaReserva": "27/08/26",
       "fechaSalida": "29/08/26"
     },
@@ -3066,27 +3066,41 @@
       "route": "Encarnacion-ASU",
       "cliente": "alex gergely",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 497,
       "sena": 497,
       "restante": 0,
       "choferCost": 383,
       "neto": 99,
       "fechaReserva": "29/08/26",
-      "fechaSalida": "31/08/26"
+      "fechaSalida": "30/08/26"
     },
     {
       "mes": "Agosto",
       "route": "ASU-FOZ",
       "cliente": "andrés lópez",
       "pais": "Chile",
-      "conductor": "",
+      "conductor": "Gustavo Pereira",
       "pago": 417,
       "sena": 100,
       "restante": 317,
       "choferCost": 0,
       "neto": 404,
       "fechaReserva": "29/08/26",
+      "fechaSalida": "31/08/26"
+    },
+    {
+      "mes": "Agosto",
+      "route": "AERO-Hotel.Yatch",
+      "cliente": "Nuria Lanzagorta",
+      "pais": "México",
+      "conductor": "Luis Vásquez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 16,
+      "neto": 17,
+      "fechaReserva": "30/08/26",
       "fechaSalida": "31/08/26"
     },
     {
@@ -3316,48 +3330,6 @@
     {
       "mes": "Agosto",
       "route": "",
-      "cliente": "Michael O’Regan",
-      "pais": "Irlanda",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "23/08/26",
-      "fechaSalida": "17/11/26"
-    },
-    {
-      "mes": "Agosto",
-      "route": "Asu-Foz",
-      "cliente": "Clara Fiol",
-      "pais": "USA",
-      "conductor": "",
-      "pago": 697,
-      "sena": 150,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 150,
-      "fechaReserva": "08/08/26",
-      "fechaSalida": "15/07/27"
-    },
-    {
-      "mes": "Agosto",
-      "route": "",
-      "cliente": "Marcos Antônio Alves da silva",
-      "pais": "Brasil",
-      "conductor": "",
-      "pago": 300,
-      "sena": 300,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 291,
-      "fechaReserva": "24/08/26",
-      "fechaSalida": ""
-    },
-    {
-      "mes": "Agosto",
-      "route": "",
       "cliente": "JOHANNES OLOF VORSTER",
       "pais": "Uruguay",
       "conductor": "",
@@ -3385,6 +3357,34 @@
     },
     {
       "mes": "Agosto",
+      "route": "Asu-Foz",
+      "cliente": "Clara Fiol",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 697,
+      "sena": 150,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 150,
+      "fechaReserva": "08/08/26",
+      "fechaSalida": "15/07/27"
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 947,
+      "sena": 300,
+      "restante": 647,
+      "choferCost": 697,
+      "neto": 0,
+      "fechaReserva": "12/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
       "route": "",
       "cliente": "paolo ortiz",
       "pais": "Paraguay",
@@ -3399,17 +3399,31 @@
     },
     {
       "mes": "Agosto",
-      "route": "Asu-Rosario",
-      "cliente": "",
-      "pais": "Australia",
+      "route": "",
+      "cliente": "Marcos Antônio Alves da silva",
+      "pais": "Brasil",
       "conductor": "",
-      "pago": 947,
+      "pago": 300,
       "sena": 300,
-      "restante": 647,
-      "choferCost": 697,
-      "neto": 300,
-      "fechaReserva": "12/08/26",
-      "fechaSalida": "minimo 10 sept"
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 291,
+      "fechaReserva": "24/08/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Agosto",
+      "route": "",
+      "cliente": "Michael O’Regan",
+      "pais": "Irlanda",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "23/08/26",
+      "fechaSalida": "17/11/26"
     },
     {
       "mes": "Septiembre",
@@ -3470,6 +3484,8 @@
   ],
   "daily": {
     "leads": {
+      "2026-08-31": 11,
+      "2026-08-30": 6,
       "2026-08-29": 10,
       "2026-08-28": 18,
       "2026-08-27": 10,
@@ -3555,10 +3571,11 @@
       "2026-08-25": 1,
       "2026-08-27": 3,
       "2026-08-29": 2,
+      "2026-08-30": 1,
       "2026-08-28": 2,
       "2026-08-16": 1,
-      "2026-08-23": 1,
-      "2026-08-08": 1
+      "2026-08-08": 1,
+      "2026-08-23": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -3788,7 +3805,9 @@
       "2026-08-26": 13.77,
       "2026-08-27": 17.36,
       "2026-08-28": 15.37,
-      "2026-08-29": 10.96
+      "2026-08-29": 10.96,
+      "2026-08-30": 12.31,
+      "2026-08-31": 1.48
     }
   }
 }
