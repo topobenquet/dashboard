@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concierge Home Care — Dashboard</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #F0F4F8; color: #1F2937; padding: 20px; line-height: 1.5; font-size: 13px;
+}
+/* En pantallas grandes el contenido se centra en vez de estirarse de punta a
+   punta: a ancho completo las tablas quedan larguísimas y cuesta seguir la fila. */
+body > * { max-width: 1320px; margin-left: auto; margin-right: auto; }
+@media(max-width:600px){ body { padding: 12px; } }
+.page-header { display:flex; align-items:baseline; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+.page-header h1 { font-size:20px; font-weight:700; color:#1F4E78; }
+.page-header .subtitle { font-size:12px; color:#6B7280; }
+.updated { font-size:11px; color:#6B7280; margin-bottom:18px; }
+.updated .dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:#10B981; margin-right:5px; vertical-align:middle; }
+.section { margin-bottom:24px; }
+.section-title { font-size:11px; font-weight:700; color:#1F4E78; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:10px; }
+
+.kpi-row { display:grid; gap:10px; margin-bottom:14px; }
+.kpi-row-5 { grid-template-columns:repeat(5,1fr); }
+.kpi-row-4 { grid-template-columns:repeat(4,1fr); }
+.kpi-row-3 { grid-template-columns:repeat(3,1fr); }
+@media(max-width:800px){ .kpi-row-5,.kpi-row-4,.kpi-row-3{ grid-template-columns:repeat(2,1fr); } }
+.kpi-grid { display:grid; gap:9px; margin-bottom:14px; grid-template-columns:repeat(3,1fr); }
+@media(max-width:600px){ .kpi-grid{ grid-template-columns:repeat(3,1fr); gap:6px; } }
+.kpi { background:white; border-radius:9px; padding:9px 11px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.kpi-label { font-size:9px; color:#6B7280; text-transform:uppercase; letter-spacing:0.3px; margin-bottom:2px; line-height:1.25; }
+.kpi-value { font-size:18px; font-weight:700; color:#1F4E78; font-variant-numeric:tabular-nums; }
+.kpi-compare { font-size:10px; margin-top:2px; color:#9CA3AF; }
+.kpi-sub { font-size:9px; color:#9CA3AF; margin-top:1px; }
+@media(max-width:600px){ .kpi-value{ font-size:15px; } .kpi-label{ font-size:8px; } .kpi-compare,.kpi-sub{ font-size:8.5px; } }
+/* Revenue y Ventas iban con fondo azul/verde: ahora todas las tarjetas son iguales. */
+.kpi-blue, .kpi-green { background:white; border:1px solid #E5E7EB; }
+
+.up{ color:#059669; font-weight:700; } .down{ color:#DC2626; font-weight:700; } .neu{ color:#9CA3AF; }
+.card { background:white; border-radius:10px; padding:16px; border:1px solid #E5E7EB; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.card-title { font-size:12px; font-weight:600; color:#374151; margin-bottom:12px; }
+.chart-box { height:210px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:700px){ .grid-2{ grid-template-columns:1fr; } }
+
+/* ── Gráficas ── */
+.chart-card { background:white; border:1px solid #E5E7EB; border-radius:10px; padding:12px 14px 8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:10px; }
+.chart-card svg { width:100%; height:auto; display:block; overflow:visible; }
+.chart-legend { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+.mbtn { font:inherit; font-size:10.5px; font-weight:600; padding:4px 9px; border-radius:999px; cursor:pointer;
+  border:1px solid #E5E7EB; background:#F9FAFB; color:#6B7280; transition:all .12s; user-select:none; }
+.mbtn:hover { border-color:#CBD5E1; }
+.mbtn[aria-pressed="true"] { color:#fff; border-color:transparent; }
+.mbtn .dotc { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+.mbtn[aria-pressed="true"] .dotc { background:rgba(255,255,255,.85) !important; }
+.chart-hint { font-size:9.5px; color:#9CA3AF; margin-top:2px; }
+.chart-empty { font-size:11px; color:#9CA3AF; padding:26px 0; text-align:center; }
+@media(max-width:600px){ .mbtn{ font-size:9.5px; padding:3px 7px; } }
+
+.ft-wrap { overflow-x:auto; }
+table.ft { table-layout:fixed; width:100%; border-collapse:collapse; font-size:11.5px; min-width:680px; }
+table.ft thead tr { background:#1F4E78; }
+table.ft th { color:white; font-size:10px; font-weight:600; padding:8px 5px; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+table.ft th:first-child { text-align:left; }
+table.ft td { padding:6px 5px; border-bottom:1px solid #F3F4F6; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+table.ft td:first-child { text-align:left; }
+table.ft th.tl, table.ft td.tl { text-align:left; }
+table.ft tbody tr:hover { background:#F8FAFC; }
+table.ft tr.hi { background:#EFF6FF; font-weight:700; border-top:2px solid #BFDBFE; }
+.pos{ color:#059669; font-weight:600; } .neg{ color:#DC2626; font-weight:600; }
+/* La 1ª columna (Mes / Fecha) se muestra entera: ni recortada ni partida */
+table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overflow:clip; }
+/* Mobile: la tabla entra completa sin scroll horizontal (achica todo y aprieta la 1ª columna) */
+@media(max-width:600px){
+  table.ft { min-width:0 !important; font-size:9.5px; }
+  table.ft th, table.ft td { padding:4px 3px; }
+  table.ft th { font-size:8.5px; }
+  table.ft th:first-child, table.ft td:first-child { white-space:normal; word-break:break-word; }
+  /* salvo donde la 1ª columna es una fecha: tiene que ir en una sola línea */
+  table.ft.nowrap1 th:first-child, table.ft.nowrap1 td:first-child { white-space:nowrap; word-break:normal; }
+}
+
+.info-box { border-radius:8px; padding:11px 14px; font-size:12px; margin-bottom:10px; }
+.info-green{ background:#F0FDF4; border:1px solid #BBF7D0; color:#166534; }
+.info-blue { background:#EFF6FF; border:1px solid #BFDBFE; color:#1E40AF; }
+.info-amber{ background:#FFFBEB; border:1px solid #FDE68A; color:#92400E; }
+.info-gray { background:#F9FAFB; border:1px solid #E5E7EB; color:#6B7280; }
+
+.pill { display:inline-block; border-radius:999px; padding:2px 7px; font-size:9px; font-weight:600; }
+.pill-na{background:#DBEAFE;color:#1D4ED8;} .pill-sa{background:#D1FAE5;color:#065F46;}
+.pill-eu{background:#FEF3C7;color:#92400E;} .pill-as{background:#FCE7F3;color:#9D174D;} .pill-ot{background:#F3F4F6;color:#6B7280;}
+.err { background:#FEF2F2; border:1px solid #FECACA; color:#991B1B; padding:14px; border-radius:10px; }
+</style>
+</head>
+<body>
+<div class="page-header">
+  <h1>🏠 Concierge Home Care of Maryland</h1>
+  <span class="subtitle">Google Ads · 2026</span>
+</div>
+<div class="updated" id="updated"><span class="dot"></span> Cargando…</div>
+
+<div id="root"></div>
+
+<div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
+  Concierge Home Care of Maryland · Se actualiza solo cada día · Fuente: Google Ads API (cuenta 786-945-2872)
+</div>
+
+<script>
+/* ════ HELPERS ════ */
+const f$ = n => (n<0?"-$":"$")+Math.abs(Math.round(n)).toLocaleString("en-US");
+const fp = n => (n*100).toFixed(1)+"%";
+const fn = n => Math.round(n).toLocaleString("en-US");
+const fd2 = n => n.toFixed(2);
+const esc = x => String(x).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MESIDX = { Enero:0,Febrero:1,Marzo:2,Abril:3,Mayo:4,Junio:5,Julio:6,Agosto:7,Septiembre:8,Octubre:9,Noviembre:10,Diciembre:11 };
+const DAYS_IN = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+function badge(cur, prev, lowerIsBetter=false) {
+  if(!prev||prev===0) return `<span class="neu">–</span>`;
+  const diff=cur-prev, pct=diff/Math.abs(prev);
+  const good = lowerIsBetter ? diff<=0 : diff>=0;
+  return `<span class="${good?"up":"down"}">${diff>=0?"▲":"▼"} ${fp(Math.abs(pct))}</span>`;
+}
+function kpi(label, val, compareHtml="", sub="") {
+  return `<div class="kpi"><div class="kpi-label">${label}</div>
+    <div class="kpi-value">${val}</div>
+    ${compareHtml?`<div class="kpi-compare">${compareHtml}</div>`:""}
+    ${sub?`<div class="kpi-sub">${sub}</div>`:""}</div>`;
+}
+
+let DATA;
+
+/* ════ DERIVACIONES ════ */
+// Todo sale del mismo lugar: sumar días. Así el mes en curso, el mes cerrado y
+// el "mismos días del mes pasado" se calculan con una sola función y no hay
+// forma de que dos secciones muestren números distintos para lo mismo.
+function sumDias(ym, dayCut) {
+  const o = { spend:0, clicks:0, impr:0, contacto:0, leads:0, descartados:0, assessment:0, pipeline:0, admit:0, dias:0 };
+  for (const k in (DATA.daily||{})) {
+    if (k.slice(0,7) !== ym) continue;
+    if (dayCut && +k.slice(8,10) > dayCut) continue;
+    const d = DATA.daily[k];
+    o.spend+=d.spend; o.clicks+=d.clicks; o.impr+=d.impr;
+    o.contacto+=d.contacto; o.leads+=d.leads; o.descartados+=d.descartados;
+    o.assessment+=d.assessment; o.pipeline+=d.pipeline; o.admit+=d.admit; o.dias++;
+  }
+  return derive(o);
+}
+function derive(o) {
+  o.ctr = o.impr>0 ? o.clicks/o.impr : 0;
+  o.cpc = o.clicks>0 ? o.spend/o.clicks : 0;
+  o.cpContacto = o.contacto>0 ? o.spend/o.contacto : 0;
+  o.cpl = o.leads>0 ? o.spend/o.leads : 0;
+  o.cpAssess = o.assessment>0 ? o.spend/o.assessment : 0;
+  o.calif = o.leads>0 ? o.assessment/o.leads : 0;   // de los leads triageados, cuántos llegan a assessment
+  o.crClick = o.clicks>0 ? o.contacto/o.clicks : 0;
+  return o;
+}
+
+/* ════ 01 · MES EN CURSO ════ */
+function renderCurrent(root) {
+  const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
+  const gen = new Date(DATA.generated);
+  const curIdx = MESIDX[curM.mes], dom = gen.getDate(), dim = DAYS_IN[curIdx];
+  const c = sumDias(curM.ym, dom), p = prevM ? sumDias(prevM.ym, dom) : derive({spend:0,clicks:0,impr:0,contacto:0,leads:0,descartados:0,assessment:0,pipeline:0,admit:0,dias:0});
+  const per = prevM ? `${prevM.mes} 1-${dom}` : "–";
+  const vs = prevM ? " vs "+prevM.mes : "";
+  const proj = dom>0 ? c.spend/dom*dim : c.spend;
+  const projL = dom>0 ? Math.round(c.contacto/dom*dim) : c.contacto;
+  root.innerHTML += `<div class="section">
+    <div class="section-title">${curM.mes} ${DATA.year} — al día ${dom} vs ${prevM?prevM.mes:"–"} (mismos días)</div>
+    <div class="kpi-grid">
+      ${kpi(`Inversión 1-${dom}`, f$(c.spend), badge(c.spend,p.spend)+vs, `${per}: ${f$(p.spend)}`)}
+      ${kpi(`Contactos 1-${dom}`, fn(c.contacto), badge(c.contacto,p.contacto)+vs, `${per}: ${fn(p.contacto)}`)}
+      ${kpi(`Costo/contacto`, c.contacto?f$(c.cpContacto):"–", badge(c.cpContacto,p.cpContacto,true)+vs, `${per}: ${p.contacto?f$(p.cpContacto):"–"}`)}
+      ${kpi(`Leads en CRM 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
+      ${kpi(`CPL (CRM)`, c.leads?f$(c.cpl):"–", badge(c.cpl,p.cpl,true)+vs, `${per}: ${p.leads?f$(p.cpl):"–"}`)}
+      ${kpi(`Assessments 1-${dom}`, fn(c.assessment), badge(c.assessment,p.assessment)+vs, `${per}: ${fn(p.assessment)}`)}
+      ${kpi(`Costo/assessment`, c.assessment?f$(c.cpAssess):"–", badge(c.cpAssess,p.cpAssess,true)+vs, `${per}: ${p.assessment?f$(p.cpAssess):"–"}`)}
+      ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `CTR ${fp(c.ctr)} · CPC $${fd2(c.cpc)}`)}
+      ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo actual · ~${fn(projL)} contactos`)}
+    </div>
+  </div>`;
+}
+
+/* ════ 01b · AVISO DE ATRASO DEL CRM ════ */
+// Las etapas del CRM se suben a mano y a veces la subida se corta. Cuando eso
+// pasa, el CPL del mes en curso se dispara y parece un problema de la campaña
+// cuando en realidad faltan datos. Vale más avisarlo que dejarlo pasar.
+function renderLag(root) {
+  const ks = Object.keys(DATA.daily||{}).sort();
+  if(!ks.length) return;
+  const ultGasto = [...ks].reverse().find(k=>DATA.daily[k].spend>0);
+  const ultCRM = [...ks].reverse().find(k=>DATA.daily[k].leads>0||DATA.daily[k].assessment>0);
+  if(!ultGasto||!ultCRM) return;
+  const dias = Math.round((new Date(ultGasto)-new Date(ultCRM))/86400000);
+  if(dias < 3) return;
+  const fmt = k => k.slice(8,10)+"/"+k.slice(5,7);
+  root.innerHTML += `<div class="info-box info-amber" style="margin-bottom:18px;">
+    ⚠️ <strong>Faltan ${dias} días de datos del CRM.</strong>
+    El último día con leads cargados es el ${fmt(ultCRM)} y la campaña sigue gastando hasta el ${fmt(ultGasto)}.
+    Hasta que se suban, el CPL y el costo por assessment del mes en curso se ven peores de lo que son.</div>`;
+}
+
+/* ════ 02 · EMBUDO DEL MES ════ */
+function renderFunnel(root) {
+  const M = DATA.months, curM = M[M.length-1];
+  const c = sumDias(curM.ym);
+  const pasos = [
+    { l:"Clicks",              v:c.clicks,     s:"gente que entró al sitio" },
+    { l:"Contactos",           v:c.contacto,   s:"chat, callback o llamada" },
+    { l:"Leads en CRM",        v:c.leads,      s:"clasificados por el equipo" },
+    { l:"Assessment agendado", v:c.assessment, s:"los que avanzaron" },
+    { l:"Admits",              v:c.admit,      s:"cerraron" },
+  ];
+  const max = Math.max(1, ...pasos.map(p=>p.v));
+  const filas = pasos.map((p,i)=>{
+    const prev = i>0 ? pasos[i-1].v : null;
+    const tasa = prev ? (prev>0 ? p.v/prev : 0) : null;
+    return `<tr>
+      <td class="tl"><strong>${p.l}</strong><div style="font-size:9.5px;color:#9CA3AF;">${p.s}</div></td>
+      <td style="width:44%">
+        <div style="background:#EFF6FF;border-radius:4px;height:16px;position:relative;">
+          <div style="background:#1F4E78;height:16px;border-radius:4px;width:${(p.v/max*100).toFixed(1)}%"></div>
+        </div>
+      </td>
+      <td><strong>${fn(p.v)}</strong></td>
+      <td class="${tasa!==null?(tasa>=0.1?"pos":"neu"):"neu"}">${tasa!==null?fp(tasa):"–"}</td>
+      <td>${p.v>0?f$(c.spend/p.v):"–"}</td>
+    </tr>`;
+  }).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">${curM.mes} ${DATA.year} — embudo completo</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
+      <thead><tr><th class="tl">Etapa</th><th></th><th>Cantidad</th><th>% del paso anterior</th><th>Costo c/u</th></tr></thead>
+      <tbody>${filas}</tbody></table></div>
+    <div class="info-box info-amber" style="margin-top:8px;">Las etapas de CRM (leads, assessment, admits) se suben a Google Ads desde el CRM con días de atraso: los últimos días del mes siempre se ven más flojos de lo que terminan siendo.</div></div>`;
+}
+
+/* ════ 03 · MENSUAL ════ */
+function renderMonthly(root) {
+  const M = DATA.months.map(m=>derive({...m}));
+  let rows = M.map(m=>`<tr>
+    <td><strong>${esc(m.mes)}</strong></td>
+    <td>${f$(m.spend)}</td><td>${fn(m.clicks)}</td><td>${fp(m.ctr)}</td><td>$${fd2(m.cpc)}</td>
+    <td>${fn(m.contacto)}</td><td>${fn(m.leads)}</td>
+    <td class="${m.cpl>0&&m.cpl<=25?"pos":"neu"}">${m.leads?f$(m.cpl):"–"}</td>
+    <td>${fn(m.assessment)}</td><td>${m.assessment?f$(m.cpAssess):"–"}</td>
+  </tr>`).join("");
+  const y = derive(M.reduce((a,m)=>({
+    spend:a.spend+m.spend, clicks:a.clicks+m.clicks, impr:a.impr+m.impr,
+    contacto:a.contacto+m.contacto, leads:a.leads+m.leads, assessment:a.assessment+m.assessment,
+  }),{spend:0,clicks:0,impr:0,contacto:0,leads:0,assessment:0}));
+  rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>${fp(y.ctr)}</td>
+    <td>$${fd2(y.cpc)}</td><td>${fn(y.contacto)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td>
+    <td>${fn(y.assessment)}</td><td>${f$(y.cpAssess)}</td></tr>`;
+  root.innerHTML += `<div class="section"><div class="section-title">Histórico mensual ${DATA.year}</div>
+    ${chartMensual()}
+    <div class="ft-wrap"><table class="ft" style="min-width:620px;">
+      <thead><tr><th>Mes</th><th>Inversión</th><th>Clicks</th><th>CTR</th><th>CPC</th>
+        <th>Contactos</th><th>Leads CRM</th><th>CPL</th><th>Assess.</th><th>$/assess.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div></div>`;
+}
+
+/* ════ 04 · DÍA A DÍA ════ */
+function renderDaily(root) {
+  const M = DATA.months, m = M[M.length-1];
+  const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
+  if(!dates.length) return;
+  let rows="", t={spend:0,clicks:0,contacto:0,leads:0,assessment:0};
+  dates.forEach(k=>{
+    const d = DATA.daily[k];
+    t.spend+=d.spend; t.clicks+=d.clicks; t.contacto+=d.contacto; t.leads+=d.leads; t.assessment+=d.assessment;
+    const cpc = d.contacto>0 ? d.spend/d.contacto : null;
+    rows += `<tr><td>${k.slice(8,10)}/${k.slice(5,7)}</td>
+      <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
+      <td><strong>${d.contacto||"–"}</strong></td>
+      <td class="${cpc!==null&&cpc<=15?"pos":"neu"}">${cpc!==null?f$(cpc):"–"}</td>
+      <td class="${d.leads>0?"pos":""}">${d.leads||"–"}</td>
+      <td class="${d.assessment>0?"pos":""}">${d.assessment||"–"}</td></tr>`;
+  });
+  rows += `<tr class="hi"><td>Total</td><td>${f$(t.spend)}</td><td>${fn(t.clicks)}</td>
+    <td>${fn(t.contacto)}</td><td>${t.contacto?f$(t.spend/t.contacto):"–"}</td>
+    <td>${fn(t.leads)}</td><td>${fn(t.assessment)}</td></tr>`;
+  root.innerHTML += `<div class="section"><div class="section-title">${m.mes} ${DATA.year} — día a día</div>
+    ${chartDaily(dates)}
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:440px;">
+      <thead><tr><th>Fecha</th><th>Inversión</th><th>Clicks</th><th>Contactos</th><th>$/contacto</th><th>Leads</th><th>Assess.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div></div>`;
+}
+
+/* ════ 05 · CAMPAÑAS ════ */
+function renderCampaigns(root) {
+  const C = (DATA.campaigns||[]).map(c=>derive({...c}));
+  if(!C.length) return;
+  const M = DATA.months, m = M[M.length-1];
+  const rows = C.map(c=>`<tr>
+    <td class="tl"><strong>${esc(c.name)}</strong>${c.status!=="ENABLED"?` <span class="pill pill-ot">${esc(c.status)}</span>`:""}</td>
+    <td>${f$(c.spend)}</td><td>${fn(c.clicks)}</td><td>${fp(c.ctr)}</td><td>$${fd2(c.cpc)}</td>
+    <td>${fn(c.contacto)}</td><td>${c.contacto?f$(c.cpContacto):"–"}</td>
+    <td>${fn(c.leads)}</td><td>${fn(c.assessment)}</td></tr>`).join("");
+  root.innerHTML += `<div class="section"><div class="section-title">${m.mes} — por campaña</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:600px;">
+      <thead><tr><th class="tl">Campaña</th><th>Inversión</th><th>Clicks</th><th>CTR</th><th>CPC</th>
+        <th>Contactos</th><th>$/cont.</th><th>Leads</th><th>Assess.</th></tr></thead>
+      <tbody>${rows}</tbody></table></div></div>`;
+}
+
+/* ════ 06 · CÓMO SE CUENTA ════ */
+function renderNota(root) {
+  const g = DATA.groups||{};
+  const li = (k,t) => `<li><strong>${t}:</strong> ${(g[k]||[]).map(esc).join(" + ")}</li>`;
+  root.innerHTML += `<div class="section"><div class="section-title">Cómo se cuenta</div>
+    <div class="info-box info-gray">
+      La cuenta tiene 19 acciones de conversión y sumarlas todas no dice nada: mezcla pedidos de contacto,
+      etapas del CRM y engagement del perfil de negocio. Acá cada una va a su nivel del embudo:
+      <ul style="margin:8px 0 0 18px;line-height:1.7;">
+        ${li("contacto","Contactos")}
+        ${li("descartados","Leads descartados")}
+        ${li("assessment","Assessment agendado")}
+        ${li("pipeline","En pipeline")}
+        ${li("admit","Admits")}
+      </ul>
+      <div style="margin-top:8px;">
+        <strong>Leads en CRM</strong> = descartados + con assessment: los que el equipo efectivamente clasificó.
+        Ese es el conteo honesto, y sobre ese va el CPL. Los <strong>contactos</strong> cuentan cada evento
+        (una misma persona que pide dos veces suma dos), así que sirven para ver el ritmo del día, no para contar personas.
+        Quedan afuera del embudo las <em>Local actions</em> (direcciones, visitas, menú) y la compra de GA4.
+      </div>
+    </div></div>`;
+}
+
+/* ════ GRÁFICAS ════ */
+// SVG inline y a mano: la página es estática y se sirve desde GitHub Pages, así
+// que no se le suma ninguna librería externa.
+const CW = 760, CH = 250, CM = { t:14, r:46, b:26, l:46 };
+const nice = v => { if(v<=0) return 1; const e=Math.pow(10,Math.floor(Math.log10(v))); return Math.ceil(v/e)*e; };
+const fmtEje = (v,money) => money ? (v>=1000 ? "$"+(v/1000)+"k" : "$"+v) : String(v);
+
+function ejeY(max, money, x, anclaje) {
+  let out="";
+  for(let i=0;i<=4;i++){
+    const val=(max/4)*i, y=CH-CM.b-((CH-CM.t-CM.b)*i)/4;
+    if(anclaje==="start") out += `<line x1="${CM.l}" y1="${y}" x2="${CW-CM.r}" y2="${y}" stroke="#F1F5F9" stroke-width="1"/>`;
+    out += `<text x="${x}" y="${y+3.5}" text-anchor="${anclaje==="start"?"end":"start"}" font-size="9" fill="#9CA3AF">${fmtEje(Math.round(val),money)}</text>`;
+  }
+  return out;
+}
+
+/* ── Día a día: inversión (izquierda, $) contra contactos y leads (derecha) ── */
+function chartDaily(dates) {
+  const D = DATA.daily;
+  const maxM = nice(Math.max(1, ...dates.map(d=>D[d].spend)));
+  const maxC = nice(Math.max(1, ...dates.map(d=>Math.max(D[d].contacto, D[d].leads))));
+  const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
+  const paso = dates.length>1 ? W/(dates.length-1) : 0;
+  const px = i => CM.l+paso*i;
+  const py = (v,money) => CH-CM.b-(v/(money?maxM:maxC))*H;
+  const SERIES = [
+    { k:"spend",    lbl:"Inversión", color:"#7C3AED", money:true  },
+    { k:"contacto", lbl:"Contactos", color:"#1F4E78", money:false },
+    { k:"leads",    lbl:"Leads CRM", color:"#059669", money:false },
+  ];
+  let series="";
+  SERIES.forEach(se=>{
+    const pts = dates.map((d,i)=>[px(i), py(D[d][se.k]||0, se.money)]);
+    series += `<polyline fill="none" stroke="${se.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map(q=>q[0].toFixed(1)+","+q[1].toFixed(1)).join(" ")}"/>`;
+    pts.forEach((q,i)=>{
+      const d=dates[i], v=D[d][se.k]||0;
+      series += `<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="3" fill="#fff" stroke="${se.color}" stroke-width="2"><title>${d.slice(8,10)}/${d.slice(5,7)} · ${se.lbl}: ${se.money?f$(v):v}</title></circle>`;
+    });
+  });
+  let ejeX="";
+  dates.forEach((d,i)=>{ if(dates.length<=16||i%3===0||i===dates.length-1)
+    ejeX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="8.5" fill="#9CA3AF">${d.slice(8,10)}</text>`; });
+  return `<div class="chart-card">
+    <div class="chart-legend">${SERIES.map(s=>`<span class="mbtn" aria-pressed="true" style="background:${s.color};"><span class="dotc"></span>${s.lbl}</span>`).join("")}</div>
+    <svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Inversión, contactos y leads por día">
+      ${ejeY(maxM,true,CM.l-6,"start")}
+      ${ejeY(maxC,false,CW-CM.r+6,"end")}
+      <line x1="${CM.l}" y1="${CH-CM.b}" x2="${CW-CM.r}" y2="${CH-CM.b}" stroke="#E5E7EB"/>
+      ${series}${ejeX}
+    </svg>
+    <div class="chart-hint">Eje izquierdo: dólares. Eje derecho: cantidad. Pasá el mouse sobre un punto para ver el detalle del día.</div>
+  </div>`;
+}
+
+/* ── Mensual: elegís qué métricas ver ── */
+const METRICAS = [
+  { k:"spend",      lbl:"Inversión",  color:"#7C3AED", money:true  },
+  { k:"cpl",        lbl:"CPL",        color:"#DC2626", money:true  },
+  { k:"cpContacto", lbl:"$/contacto", color:"#D97706", money:true  },
+  { k:"contacto",   lbl:"Contactos",  color:"#1F4E78", money:false },
+  { k:"leads",      lbl:"Leads CRM",  color:"#059669", money:false },
+  { k:"assessment", lbl:"Assessments",color:"#0891B2", money:false },
+  { k:"clicks",     lbl:"Clicks",     color:"#DB2777", money:false },
+];
+let MSEL = new Set(["spend","contacto"]);
+
+function dibujarMensual() {
+  const cont = document.getElementById("chart-mensual");
+  if(!cont) return;
+  const M = DATA.months.map(m=>derive({...m})), sel = METRICAS.filter(m=>MSEL.has(m.k));
+  if(!sel.length){ cont.innerHTML = `<div class="chart-empty">Elegí al menos una métrica.</div>`; return; }
+  const W = CW-CM.l-CM.r, H = CH-CM.t-CM.b;
+  const hayMoney = sel.some(m=>m.money), hayCount = sel.some(m=>!m.money);
+  const maxMoney = nice(Math.max(1, ...sel.filter(m=>m.money).flatMap(m=>M.map(x=>x[m.k]||0))));
+  const maxCount = nice(Math.max(1, ...sel.filter(m=>!m.money).flatMap(m=>M.map(x=>x[m.k]||0))));
+  const paso = W/Math.max(1,M.length-1);
+  const px = i => CM.l+paso*i;
+  const py = (v,money) => CH-CM.b-(v/(money?maxMoney:maxCount))*H;
+  let series="";
+  sel.forEach(m=>{
+    const pts = M.map((x,i)=>[px(i), py(x[m.k]||0, m.money)]);
+    series += `<polyline fill="none" stroke="${m.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" points="${pts.map(p=>p[0].toFixed(1)+","+p[1].toFixed(1)).join(" ")}"/>`;
+    pts.forEach((p,i)=>{ const v=M[i][m.k]||0;
+      series += `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.2" fill="#fff" stroke="${m.color}" stroke-width="2"><title>${esc(M[i].mes)} · ${esc(m.lbl)}: ${m.money?f$(v):Math.round(v)}</title></circle>`; });
+  });
+  let ejeX="";
+  M.forEach((x,i)=>{ ejeX += `<text x="${px(i).toFixed(1)}" y="${CH-CM.b+14}" text-anchor="middle" font-size="9" fill="#9CA3AF">${esc(x.mes.slice(0,3))}</text>`; });
+  cont.innerHTML = `<svg viewBox="0 0 ${CW} ${CH}" role="img" aria-label="Evolución mensual">
+    ${hayMoney?ejeY(maxMoney,true,CM.l-6,"start"):`<line x1="${CM.l}" y1="${CM.t}" x2="${CM.l}" y2="${CH-CM.b}" stroke="#F1F5F9"/>`}
+    ${hayCount?ejeY(maxCount,false,CW-CM.r+6,"end"):""}
+    <line x1="${CM.l}" y1="${CH-CM.b}" x2="${CW-CM.r}" y2="${CH-CM.b}" stroke="#E5E7EB"/>
+    ${series}${ejeX}
+  </svg>
+  <div class="chart-hint">${hayMoney?"Eje izquierdo: dólares.":""} ${hayCount?"Eje derecho: cantidad.":""} Pasá el mouse sobre un punto para ver el valor.</div>`;
+}
+
+function chartMensual() {
+  const botones = METRICAS.map(m=>
+    `<button type="button" class="mbtn" data-k="${m.k}" aria-pressed="${MSEL.has(m.k)}" style="${MSEL.has(m.k)?`background:${m.color};`:""}">
+      <span class="dotc" style="background:${m.color}"></span>${esc(m.lbl)}</button>`).join("");
+  return `<div class="chart-card"><div class="chart-legend" id="chart-mensual-btns">${botones}</div><div id="chart-mensual"></div></div>`;
+}
+
+// Delegación: los botones se redibujan, así que el listener va en el contenedor.
+function activarMensual() {
+  const cont = document.getElementById("chart-mensual-btns");
+  if(!cont) return;
+  cont.addEventListener("click", e=>{
+    const b = e.target.closest(".mbtn"); if(!b) return;
+    const k = b.dataset.k, m = METRICAS.find(x=>x.k===k);
+    if(MSEL.has(k)) MSEL.delete(k); else MSEL.add(k);
+    b.setAttribute("aria-pressed", MSEL.has(k));
+    b.style.background = MSEL.has(k) ? m.color : "";
+    dibujarMensual();
+  });
+  dibujarMensual();
+}
+
+/* ════ INIT ════ */
+async function init() {
+  const root = document.getElementById("root");
+  try {
+    const res = await fetch("data.json?t="+Date.now());
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    DATA = await res.json();
+  } catch(e) {
+    document.getElementById("updated").innerHTML = "";
+    root.innerHTML = `<div class="err">No pude cargar los datos (data.json). ${esc(e.message)}</div>`;
+    return;
+  }
+  const gen = new Date(DATA.generated);
+  document.getElementById("updated").innerHTML =
+    `<span class="dot"></span> Última actualización: <strong>${esc(DATA.lastSyncLabel||gen.toLocaleString("es"))}</strong>`;
+  renderLag(root);
+  renderCurrent(root);
+  renderDaily(root);
+  renderFunnel(root);
+  renderMonthly(root);
+  renderCampaigns(root);
+  renderNota(root);
+  // Va último: cada `root.innerHTML +=` reserializa el árbol y se lleva puestos
+  // los listeners ya enganchados.
+  activarMensual();
+}
+init();
+</script>
+</body>
+</html>
