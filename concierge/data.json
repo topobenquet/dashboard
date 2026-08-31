@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T15:05:52.315Z",
+  "generated": "2026-08-31T16:36:47.570Z",
   "lastSyncLabel": "31 Ago 2026",
   "year": 2026,
   "currentMonth": "Agosto",
@@ -228,13 +228,13 @@
     {
       "mes": "Agosto",
       "ym": "2026-08",
-      "spend": 5162.41,
-      "clicks": 1576,
-      "impr": 12091,
+      "spend": 5256.09,
+      "clicks": 1599,
+      "impr": 12267,
       "actions": {
         "Chat Lead": 315,
-        "Get a Callback": 436.6,
-        "Not Qualified/Not Interested": 67.9,
+        "Get a Callback": 437.6,
+        "Not Qualified/Not Interested": 69.9,
         "Has assessment scheduled": 34,
         "Waiting EDD": 7,
         "Clicks to call": 2,
@@ -246,12 +246,12 @@
         "Deprecated - Admit": 1,
         "POS developed": 1
       },
-      "contacto": 767,
-      "descartados": 68,
+      "contacto": 768,
+      "descartados": 70,
       "assessment": 34,
       "pipeline": 9,
       "admit": 1,
-      "leads": 102
+      "leads": 104
     }
   ],
   "daily": {
@@ -3766,11 +3766,11 @@
       "impr": 322,
       "actions": {
         "Chat Lead": 14,
-        "Get a Callback": 15,
+        "Get a Callback": 15.02,
         "Has assessment scheduled": 2,
         "Not Qualified/Not Interested": 4
       },
-      "contacto": 29,
+      "contacto": 29.02,
       "descartados": 4,
       "assessment": 2,
       "pipeline": 0,
@@ -4177,14 +4177,15 @@
       "impr": 261,
       "actions": {
         "Chat Lead": 3,
-        "Get a Callback": 10
+        "Get a Callback": 10,
+        "Not Qualified/Not Interested": 1
       },
       "contacto": 13,
-      "descartados": 0,
+      "descartados": 1,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
-      "leads": 0
+      "leads": 1
     },
     "2026-08-10": {
       "spend": 242.48,
@@ -4280,14 +4281,14 @@
       "actions": {
         "Chat Lead": 6,
         "Get a Callback": 6.01,
-        "Not Qualified/Not Interested": 1.5
+        "Not Qualified/Not Interested": 2.5
       },
       "contacto": 12.01,
-      "descartados": 1.5,
+      "descartados": 2.5,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
-      "leads": 1.5
+      "leads": 2.5
     },
     "2026-08-16": {
       "spend": 64.61,
@@ -4542,14 +4543,14 @@
       "leads": 0
     },
     "2026-08-31": {
-      "spend": 50.54,
-      "clicks": 18,
-      "impr": 169,
+      "spend": 144.22,
+      "clicks": 41,
+      "impr": 345,
       "actions": {
         "Chat Lead": 1,
-        "Get a Callback": 1
+        "Get a Callback": 1.98
       },
-      "contacto": 2,
+      "contacto": 2.98,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4562,10 +4563,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 3450.05,
-      "clicks": 820,
-      "impr": 5832,
-      "contacto": 425,
+      "spend": 3543.72,
+      "clicks": 843,
+      "impr": 6011,
+      "contacto": 426,
       "descartados": 34,
       "assessment": 25,
       "pipeline": 7,
@@ -4580,20 +4581,20 @@
       "clicks": 756,
       "impr": 6256,
       "contacto": 343,
-      "descartados": 34,
+      "descartados": 36,
       "assessment": 9,
       "pipeline": 2,
       "admit": 0,
-      "leads": 43
+      "leads": 45
     }
   ],
   "crm": {
     "source": "GHL",
     "daily": {
       "2026-08-31": {
-        "contacts": 4,
-        "paid": 4,
-        "opps": 4
+        "contacts": 8,
+        "paid": 8,
+        "opps": 8
       },
       "2026-08-30": {
         "contacts": 11,
@@ -4608,12 +4609,12 @@
       "2026-08-28": {
         "contacts": 10,
         "paid": 8,
-        "opps": 9
+        "opps": 7
       },
       "2026-08-27": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-08-26": {
         "contacts": 6,
@@ -4623,7 +4624,7 @@
       "2026-08-25": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-08-24": {
         "contacts": 5,
@@ -4643,27 +4644,27 @@
       "2026-08-21": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-08-20": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-08-19": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-08-18": {
         "contacts": 13,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-08-17": {
         "contacts": 11,
         "paid": 10,
-        "opps": 11
+        "opps": 10
       },
       "2026-08-16": {
         "contacts": 6,
@@ -4683,7 +4684,7 @@
       "2026-08-13": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-08-12": {
         "contacts": 6,
@@ -4698,7 +4699,7 @@
       "2026-08-10": {
         "contacts": 11,
         "paid": 10,
-        "opps": 11
+        "opps": 10
       },
       "2026-08-09": {
         "contacts": 3,
@@ -4713,7 +4714,7 @@
       "2026-08-07": {
         "contacts": 8,
         "paid": 6,
-        "opps": 8
+        "opps": 6
       },
       "2026-08-06": {
         "contacts": 11,
@@ -4723,12 +4724,12 @@
       "2026-08-05": {
         "contacts": 15,
         "paid": 14,
-        "opps": 15
+        "opps": 14
       },
       "2026-08-04": {
         "contacts": 15,
         "paid": 15,
-        "opps": 16
+        "opps": 15
       },
       "2026-08-03": {
         "contacts": 13,
@@ -4748,12 +4749,12 @@
       "2026-07-31": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-07-30": {
         "contacts": 18,
         "paid": 16,
-        "opps": 18
+        "opps": 16
       },
       "2026-07-29": {
         "contacts": 18,
@@ -4793,12 +4794,12 @@
       "2026-07-22": {
         "contacts": 10,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-07-21": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-07-20": {
         "contacts": 9,
@@ -4808,7 +4809,7 @@
       "2026-07-18": {
         "contacts": 4,
         "paid": 3,
-        "opps": 4
+        "opps": 3
       },
       "2026-07-17": {
         "contacts": 10,
@@ -4823,22 +4824,22 @@
       "2026-07-15": {
         "contacts": 13,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-07-14": {
         "contacts": 9,
         "paid": 8,
-        "opps": 9
+        "opps": 8
       },
       "2026-07-13": {
         "contacts": 8,
         "paid": 6,
-        "opps": 8
+        "opps": 6
       },
       "2026-07-12": {
         "contacts": 3,
         "paid": 2,
-        "opps": 3
+        "opps": 2
       },
       "2026-07-11": {
         "contacts": 3,
@@ -4853,7 +4854,7 @@
       "2026-07-09": {
         "contacts": 10,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-07-08": {
         "contacts": 12,
@@ -4868,7 +4869,7 @@
       "2026-07-06": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-07-05": {
         "contacts": 5,
@@ -4888,12 +4889,12 @@
       "2026-07-02": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-07-01": {
         "contacts": 12,
         "paid": 11,
-        "opps": 12
+        "opps": 11
       },
       "2026-06-30": {
         "contacts": 11,
@@ -4918,12 +4919,12 @@
       "2026-06-26": {
         "contacts": 13,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-06-25": {
         "contacts": 11,
         "paid": 10,
-        "opps": 12
+        "opps": 10
       },
       "2026-06-24": {
         "contacts": 6,
@@ -4938,12 +4939,12 @@
       "2026-06-22": {
         "contacts": 8,
         "paid": 5,
-        "opps": 8
+        "opps": 5
       },
       "2026-06-20": {
         "contacts": 3,
         "paid": 2,
-        "opps": 3
+        "opps": 2
       },
       "2026-06-19": {
         "contacts": 4,
@@ -4963,7 +4964,7 @@
       "2026-06-16": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-06-15": {
         "contacts": 7,
@@ -4973,7 +4974,7 @@
       "2026-06-14": {
         "contacts": 4,
         "paid": 2,
-        "opps": 4
+        "opps": 2
       },
       "2026-06-13": {
         "contacts": 4,
@@ -4983,7 +4984,7 @@
       "2026-06-12": {
         "contacts": 7,
         "paid": 6,
-        "opps": 7
+        "opps": 6
       },
       "2026-06-11": {
         "contacts": 13,
@@ -4993,7 +4994,7 @@
       "2026-06-10": {
         "contacts": 11,
         "paid": 10,
-        "opps": 11
+        "opps": 10
       },
       "2026-06-09": {
         "contacts": 10,
@@ -5003,7 +5004,7 @@
       "2026-06-08": {
         "contacts": 7,
         "paid": 4,
-        "opps": 5
+        "opps": 4
       },
       "2026-06-07": {
         "contacts": 3,
@@ -5018,22 +5019,22 @@
       "2026-06-05": {
         "contacts": 5,
         "paid": 4,
-        "opps": 5
+        "opps": 4
       },
       "2026-06-04": {
         "contacts": 7,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-06-03": {
         "contacts": 11,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-06-02": {
         "contacts": 12,
         "paid": 10,
-        "opps": 12
+        "opps": 10
       },
       "2026-06-01": {
         "contacts": 10,
@@ -5048,17 +5049,17 @@
       "2026-05-30": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-05-29": {
         "contacts": 7,
         "paid": 6,
-        "opps": 7
+        "opps": 6
       },
       "2026-05-28": {
         "contacts": 5,
         "paid": 3,
-        "opps": 5
+        "opps": 3
       },
       "2026-05-27": {
         "contacts": 9,
@@ -5073,7 +5074,7 @@
       "2026-05-25": {
         "contacts": 5,
         "paid": 4,
-        "opps": 5
+        "opps": 4
       },
       "2026-05-24": {
         "contacts": 4,
@@ -5088,12 +5089,12 @@
       "2026-05-22": {
         "contacts": 7,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-05-21": {
         "contacts": 7,
         "paid": 5,
-        "opps": 7
+        "opps": 5
       },
       "2026-05-20": {
         "contacts": 6,
@@ -5108,7 +5109,7 @@
       "2026-05-18": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-05-17": {
         "contacts": 1,
@@ -5123,12 +5124,12 @@
       "2026-05-15": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-05-14": {
         "contacts": 7,
         "paid": 5,
-        "opps": 7
+        "opps": 5
       },
       "2026-05-13": {
         "contacts": 4,
@@ -5143,7 +5144,7 @@
       "2026-05-11": {
         "contacts": 7,
         "paid": 4,
-        "opps": 8
+        "opps": 4
       },
       "2026-05-10": {
         "contacts": 2,
@@ -5163,7 +5164,7 @@
       "2026-05-07": {
         "contacts": 5,
         "paid": 4,
-        "opps": 5
+        "opps": 4
       },
       "2026-05-06": {
         "contacts": 10,
@@ -5173,7 +5174,7 @@
       "2026-05-05": {
         "contacts": 11,
         "paid": 9,
-        "opps": 11
+        "opps": 9
       },
       "2026-05-04": {
         "contacts": 2,
@@ -5193,7 +5194,7 @@
       "2026-05-01": {
         "contacts": 10,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-04-30": {
         "contacts": 11,
@@ -5218,7 +5219,7 @@
       "2026-04-26": {
         "contacts": 4,
         "paid": 3,
-        "opps": 4
+        "opps": 3
       },
       "2026-04-25": {
         "contacts": 4,
@@ -5228,7 +5229,7 @@
       "2026-04-24": {
         "contacts": 9,
         "paid": 8,
-        "opps": 9
+        "opps": 8
       },
       "2026-04-23": {
         "contacts": 10,
@@ -5248,7 +5249,7 @@
       "2026-04-20": {
         "contacts": 14,
         "paid": 12,
-        "opps": 14
+        "opps": 12
       },
       "2026-04-19": {
         "contacts": 1,
@@ -5263,7 +5264,7 @@
       "2026-04-17": {
         "contacts": 4,
         "paid": 3,
-        "opps": 4
+        "opps": 3
       },
       "2026-04-16": {
         "contacts": 7,
@@ -5273,12 +5274,12 @@
       "2026-04-15": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-04-14": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-04-13": {
         "contacts": 4,
@@ -5298,7 +5299,7 @@
       "2026-04-10": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-04-09": {
         "contacts": 8,
@@ -5308,17 +5309,17 @@
       "2026-04-08": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-04-07": {
         "contacts": 14,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-04-06": {
         "contacts": 14,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-04-05": {
         "contacts": 8,
@@ -5373,17 +5374,17 @@
       "2026-03-26": {
         "contacts": 9,
         "paid": 7,
-        "opps": 9
+        "opps": 7
       },
       "2026-03-25": {
         "contacts": 10,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-03-24": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-03-23": {
         "contacts": 11,
@@ -5403,22 +5404,22 @@
       "2026-03-20": {
         "contacts": 10,
         "paid": 8,
-        "opps": 10
+        "opps": 9
       },
       "2026-03-19": {
         "contacts": 10,
         "paid": 8,
-        "opps": 11
+        "opps": 8
       },
       "2026-03-18": {
         "contacts": 10,
         "paid": 8,
-        "opps": 9
+        "opps": 7
       },
       "2026-03-17": {
         "contacts": 8,
         "paid": 6,
-        "opps": 8
+        "opps": 6
       },
       "2026-03-16": {
         "contacts": 7,
@@ -5438,7 +5439,7 @@
       "2026-03-13": {
         "contacts": 7,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-03-12": {
         "contacts": 6,
@@ -5458,7 +5459,7 @@
       "2026-03-09": {
         "contacts": 8,
         "paid": 6,
-        "opps": 9
+        "opps": 6
       },
       "2026-03-08": {
         "contacts": 2,
@@ -5493,7 +5494,7 @@
       "2026-03-02": {
         "contacts": 6,
         "paid": 5,
-        "opps": 6
+        "opps": 5
       },
       "2026-03-01": {
         "contacts": 5,
@@ -5508,7 +5509,7 @@
       "2026-02-27": {
         "contacts": 9,
         "paid": 8,
-        "opps": 10
+        "opps": 8
       },
       "2026-02-26": {
         "contacts": 8,
@@ -5528,12 +5529,12 @@
       "2026-02-23": {
         "contacts": 15,
         "paid": 14,
-        "opps": 15
+        "opps": 14
       },
       "2026-02-22": {
         "contacts": 4,
         "paid": 3,
-        "opps": 4
+        "opps": 3
       },
       "2026-02-21": {
         "contacts": 7,
@@ -5543,12 +5544,12 @@
       "2026-02-20": {
         "contacts": 11,
         "paid": 9,
-        "opps": 11
+        "opps": 9
       },
       "2026-02-19": {
         "contacts": 5,
         "paid": 4,
-        "opps": 6
+        "opps": 4
       },
       "2026-02-18": {
         "contacts": 9,
@@ -5558,7 +5559,7 @@
       "2026-02-17": {
         "contacts": 13,
         "paid": 11,
-        "opps": 13
+        "opps": 11
       },
       "2026-02-16": {
         "contacts": 12,
@@ -5578,12 +5579,12 @@
       "2026-02-13": {
         "contacts": 12,
         "paid": 11,
-        "opps": 12
+        "opps": 11
       },
       "2026-02-12": {
         "contacts": 11,
         "paid": 8,
-        "opps": 11
+        "opps": 8
       },
       "2026-02-11": {
         "contacts": 11,
@@ -5603,7 +5604,7 @@
       "2026-02-08": {
         "contacts": 3,
         "paid": 2,
-        "opps": 3
+        "opps": 2
       },
       "2026-02-07": {
         "contacts": 6,
@@ -5613,27 +5614,27 @@
       "2026-02-06": {
         "contacts": 23,
         "paid": 14,
-        "opps": 23
+        "opps": 14
       },
       "2026-02-05": {
         "contacts": 22,
         "paid": 6,
-        "opps": 22
+        "opps": 6
       },
       "2026-02-04": {
         "contacts": 16,
         "paid": 6,
-        "opps": 16
+        "opps": 6
       },
       "2026-02-03": {
         "contacts": 18,
         "paid": 6,
-        "opps": 18
+        "opps": 6
       },
       "2026-02-02": {
         "contacts": 18,
         "paid": 8,
-        "opps": 18
+        "opps": 8
       },
       "2026-02-01": {
         "contacts": 1,
@@ -5648,27 +5649,27 @@
       "2026-01-30": {
         "contacts": 10,
         "paid": 6,
-        "opps": 10
+        "opps": 6
       },
       "2026-01-29": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-01-28": {
         "contacts": 8,
         "paid": 6,
-        "opps": 8
+        "opps": 6
       },
       "2026-01-27": {
         "contacts": 5,
         "paid": 4,
-        "opps": 5
+        "opps": 4
       },
       "2026-01-26": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-01-25": {
         "contacts": 5,
@@ -5693,7 +5694,7 @@
       "2026-01-21": {
         "contacts": 11,
         "paid": 9,
-        "opps": 10
+        "opps": 9
       },
       "2026-01-20": {
         "contacts": 12,
@@ -5703,7 +5704,7 @@
       "2026-01-19": {
         "contacts": 8,
         "paid": 7,
-        "opps": 8
+        "opps": 7
       },
       "2026-01-18": {
         "contacts": 3,
@@ -5718,7 +5719,7 @@
       "2026-01-16": {
         "contacts": 12,
         "paid": 10,
-        "opps": 11
+        "opps": 10
       },
       "2026-01-15": {
         "contacts": 17,
@@ -5733,7 +5734,7 @@
       "2026-01-13": {
         "contacts": 14,
         "paid": 13,
-        "opps": 14
+        "opps": 13
       },
       "2026-01-12": {
         "contacts": 9,
@@ -5763,7 +5764,7 @@
       "2026-01-07": {
         "contacts": 14,
         "paid": 12,
-        "opps": 13
+        "opps": 12
       },
       "2026-01-06": {
         "contacts": 14,
@@ -5801,108 +5802,108 @@
         "ym": "2026-01",
         "contacts": 252,
         "paid": 228,
-        "opps": 242
+        "opps": 228
       },
       {
         "ym": "2026-02",
         "contacts": 276,
         "paid": 201,
-        "opps": 273
+        "opps": 201
       },
       {
         "ym": "2026-03",
         "contacts": 220,
         "paid": 203,
-        "opps": 220
+        "opps": 203
       },
       {
         "ym": "2026-04",
         "contacts": 256,
         "paid": 241,
-        "opps": 254
+        "opps": 241
       },
       {
         "ym": "2026-05",
         "contacts": 187,
         "paid": 168,
-        "opps": 188
+        "opps": 168
       },
       {
         "ym": "2026-06",
         "contacts": 208,
         "paid": 186,
-        "opps": 206
+        "opps": 188
       },
       {
         "ym": "2026-07",
         "contacts": 264,
         "paid": 246,
-        "opps": 263
+        "opps": 246
       },
       {
         "ym": "2026-08",
-        "contacts": 270,
-        "paid": 255,
-        "opps": 270
+        "contacts": 274,
+        "paid": 259,
+        "opps": 258
       }
     ],
     "stages": {
       "2026-08": {
-        "New Leads": 67,
-        "MAP Referral Pending": 36,
-        "Not Qualified/Not Interested": 76,
-        "Additional Information Needed": 82,
-        "Waiting EDD": 8,
+        "New Leads": 68,
+        "Additional Information Needed": 76,
+        "MAP Referral Pending": 34,
+        "Waiting EDD": 7,
+        "Not Qualified/Not Interested": 72,
         "POS Developed": 1
       },
       "2026-07": {
-        "MAP Referral Pending": 40,
-        "Additional Information Needed": 108,
-        "Not Qualified/Not Interested": 107,
-        "Waiting EDD": 8
+        "MAP Referral Pending": 37,
+        "Additional Information Needed": 102,
+        "Not Qualified/Not Interested": 100,
+        "Waiting EDD": 7
       },
       "2026-06": {
-        "Waiting EDD": 12,
-        "Not Qualified/Not Interested": 119,
-        "MAP Referral Pending": 37,
-        "Additional Information Needed": 34,
-        "POS Developed": 4
+        "Waiting EDD": 11,
+        "Not Qualified/Not Interested": 109,
+        "MAP Referral Pending": 33,
+        "Additional Information Needed": 32,
+        "POS Developed": 3
       },
       "2026-05": {
-        "Not Qualified/Not Interested": 148,
-        "MAP Referral Pending": 17,
-        "Additional Information Needed": 13,
+        "Not Qualified/Not Interested": 130,
+        "Additional Information Needed": 12,
+        "MAP Referral Pending": 16,
         "Waiting EDD": 7,
         "POS Developed": 3
       },
       "2026-04": {
-        "Not Qualified/Not Interested": 188,
+        "Not Qualified/Not Interested": 178,
         "Waiting EDD": 5,
-        "MAP Referral Pending": 30,
+        "MAP Referral Pending": 28,
         "POS Developed": 4,
-        "Additional Information Needed": 27
+        "Additional Information Needed": 26
       },
       "2026-03": {
-        "Not Qualified/Not Interested": 168,
-        "Additional Information Needed": 28,
+        "Not Qualified/Not Interested": 156,
+        "Additional Information Needed": 26,
         "Waiting EDD": 5,
-        "POS Developed": 5,
-        "MAP Referral Pending": 14
+        "POS Developed": 4,
+        "MAP Referral Pending": 12
       },
       "2026-02": {
-        "MAP Referral Pending": 13,
-        "Not Qualified/Not Interested": 232,
-        "Additional Information Needed": 17,
+        "MAP Referral Pending": 12,
+        "Not Qualified/Not Interested": 165,
+        "Additional Information Needed": 15,
         "Private/AVCC": 1,
         "POS Developed": 2,
-        "Waiting EDD": 8
+        "Waiting EDD": 6
       },
       "2026-01": {
-        "Not Qualified/Not Interested": 198,
-        "MAP Referral Pending": 18,
+        "Not Qualified/Not Interested": 186,
+        "MAP Referral Pending": 17,
         "Waiting EDD": 4,
         "Additional Information Needed": 15,
-        "POS Developed": 7
+        "POS Developed": 6
       }
     },
     "stageOrder": [
@@ -5918,7 +5919,8 @@
     "lastContact": "2026-08-31",
     "totals": {
       "contactos": 2000,
-      "opps": 2000
+      "opps": 2000,
+      "oppsPaid": 1791
     }
   }
 }
