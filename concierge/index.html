@@ -144,18 +144,18 @@ let DATA;
 // persona, una vez, y adjudicable a Google Ads. NO se usa el conteo de
 // conversiones de Google Ads, que cuenta eventos y desde junio cuenta de más.
 function sumDays(ym, dayCut) {
-  const o = { spend:0, clicks:0, impr:0, adsContacts:0, leads:0, crmAll:0, opps:0, days:0 };
+  const o = { spend:0, clicks:0, impr:0, leads:0, opps:0, days:0 };
   for (const k in (DATA.daily||{})) {
     if (k.slice(0,7) !== ym) continue;
     if (dayCut && +k.slice(8,10) > dayCut) continue;
     const d = DATA.daily[k];
-    o.spend+=d.spend; o.clicks+=d.clicks; o.impr+=d.impr; o.adsContacts+=d.contacto; o.days++;
+    o.spend+=d.spend; o.clicks+=d.clicks; o.impr+=d.impr; o.days++;
   }
   for (const k in (DATA.crm?.daily||{})) {
     if (k.slice(0,7) !== ym) continue;
     if (dayCut && +k.slice(8,10) > dayCut) continue;
     const c = DATA.crm.daily[k];
-    o.leads+=c.paid; o.crmAll+=c.contacts; o.opps+=c.opps;
+    o.leads+=c.paid; o.opps+=c.opps;
   }
   return derive(o);
 }
@@ -164,28 +164,13 @@ function derive(o) {
   o.cpc = o.clicks>0 ? o.spend/o.clicks : 0;
   o.cpl = o.leads>0 ? o.spend/o.leads : 0;
   o.cvr = o.clicks>0 ? o.leads/o.clicks : 0;
-  o.inflation = o.leads>0 ? o.adsContacts/o.leads : 0;   // cuántas conversiones registra Ads por cada lead real
   return o;
 }
 // Los meses de Google Ads y los del CRM se cruzan por "2026-08".
 function crmMonth(ym) { return (DATA.crm?.monthly||[]).find(m=>m.ym===ym) || {contacts:0,paid:0,opps:0}; }
 function monthRow(m) {
   const c = crmMonth(m.ym);
-  return derive({ ...m, adsContacts:m.contacto, leads:c.paid, crmAll:c.contacts, opps:c.opps });
-}
-
-/* ════ 01 · TRACKING WARNING ════ */
-// Desde junio Google Ads registra hasta 3 veces más conversiones de contacto que
-// leads reales entran al CRM. Como las campañas están en Maximize Conversions,
-// el bidding persigue esa señal inflada. Es lo primero que hay que ver.
-function renderWarning(root) {
-  const M = DATA.months; if(!M.length || !DATA.crm) return;
-  const cur = monthRow(M[M.length-1]);
-  if(cur.inflation < 1.8) return;
-  root.innerHTML += `<div class="info-box info-amber" style="margin-bottom:18px;">
-    ⚠️ <strong>Google Ads is recording ${cur.inflation.toFixed(1)}× more conversions than the leads that actually reach the CRM.</strong>
-    ${mName(M[M.length-1].ym)}: ${fn(cur.adsContacts)} contact conversions in Google Ads against ${fn(cur.leads)} real paid-search leads in the CRM.
-    Both campaigns bid on Maximize Conversions, so they are optimising toward the inflated signal. Every lead number on this page comes from the CRM, not from Google Ads.</div>`;
+  return derive({ ...m, leads:c.paid, opps:c.opps });
 }
 
 /* ════ 02 · MONTH TO DATE ════ */
@@ -193,7 +178,7 @@ function renderCurrent(root) {
   const M = DATA.months, curM = M[M.length-1], prevM = M[M.length-2];
   const gen = new Date(DATA.generated);
   const dom = gen.getDate(), dim = DAYS_IN[mIdx(curM.ym)];
-  const empty = () => derive({spend:0,clicks:0,impr:0,adsContacts:0,leads:0,crmAll:0,opps:0,days:0});
+  const empty = () => derive({spend:0,clicks:0,impr:0,leads:0,opps:0,days:0});
   const c = sumDays(curM.ym, dom), p = prevM ? sumDays(prevM.ym, dom) : empty();
   const prevName = prevM ? mName(prevM.ym) : "–";
   const per = prevM ? `${prevName} 1-${dom}` : "–";
@@ -221,10 +206,10 @@ function renderDaily(root) {
   const M = DATA.months, m = M[M.length-1];
   const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
   if(!dates.length) return;
-  let rows="", t={spend:0,clicks:0,leads:0,crmAll:0,adsContacts:0};
+  let rows="", t={spend:0,clicks:0,leads:0};
   dates.forEach(k=>{
     const d = DATA.daily[k], c = (DATA.crm?.daily||{})[k] || {contacts:0,paid:0};
-    t.spend+=d.spend; t.clicks+=d.clicks; t.leads+=c.paid; t.crmAll+=c.contacts; t.adsContacts+=d.contacto;
+    t.spend+=d.spend; t.clicks+=d.clicks; t.leads+=c.paid;
     const cpl = c.paid>0 ? d.spend/c.paid : null;
     rows += `<tr><td>${k.slice(5,7)}/${k.slice(8,10)}</td>
       <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
@@ -276,8 +261,8 @@ function renderMonthly(root) {
   </tr>`).join("");
   const y = derive(M.reduce((a,m)=>({
     spend:a.spend+m.spend, clicks:a.clicks+m.clicks, impr:a.impr+m.impr,
-    leads:a.leads+m.leads, crmAll:a.crmAll+m.crmAll, adsContacts:a.adsContacts+m.adsContacts,
-  }),{spend:0,clicks:0,impr:0,leads:0,crmAll:0,adsContacts:0}));
+    leads:a.leads+m.leads,
+  }),{spend:0,clicks:0,impr:0,leads:0}));
   rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>$${fd2(y.cpc)}</td>
     <td>${fp(y.ctr)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td><td>${fp(y.cvr)}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Monthly history ${DATA.year}</div>
@@ -290,7 +275,7 @@ function renderMonthly(root) {
 
 /* ════ 06 · CAMPAIGNS ════ */
 function renderCampaigns(root) {
-  const C = (DATA.campaigns||[]).map(c=>derive({...c, adsContacts:c.contacto, leads:0}));
+  const C = (DATA.campaigns||[]).map(c=>derive({...c, leads:0}));
   if(!C.length) return;
   const M = DATA.months, m = M[M.length-1];
   const rows = C.map(c=>`<tr>
@@ -458,7 +443,6 @@ async function init() {
   const label = `${MONTHS[gen.getMonth()].slice(0,3)} ${gen.getDate()}, ${gen.getFullYear()}`;
   document.getElementById("updated").innerHTML =
     `<span class="dot"></span> Last updated: <strong>${label}</strong>`;
-  renderWarning(root);
   renderCurrent(root);
   renderDaily(root);
   renderStages(root);

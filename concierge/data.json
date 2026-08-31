@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T16:53:14.282Z",
+  "generated": "2026-08-31T17:10:20.094Z",
   "lastSyncLabel": "31 Ago 2026",
   "year": 2026,
   "currentMonth": "Agosto",
@@ -228,13 +228,13 @@
     {
       "mes": "Agosto",
       "ym": "2026-08",
-      "spend": 5270.8,
-      "clicks": 1602,
-      "impr": 12291,
+      "spend": 5287.92,
+      "clicks": 1608,
+      "impr": 12325,
       "actions": {
-        "Chat Lead": 318,
+        "Chat Lead": 319,
         "Get a Callback": 440.6,
-        "Not Qualified/Not Interested": 70.4,
+        "Not Qualified/Not Interested": 70.9,
         "Has assessment scheduled": 34,
         "Waiting EDD": 7,
         "Clicks to call": 2,
@@ -246,12 +246,12 @@
         "Deprecated - Admit": 1,
         "POS developed": 1
       },
-      "contacto": 774,
-      "descartados": 70,
+      "contacto": 775,
+      "descartados": 71,
       "assessment": 34,
       "pipeline": 9,
       "admit": 1,
-      "leads": 104
+      "leads": 105
     }
   ],
   "daily": {
@@ -4298,14 +4298,14 @@
         "Chat Lead": 6,
         "Get a Callback": 13.99,
         "Has assessment scheduled": 1,
-        "Not Qualified/Not Interested": 3.5
+        "Not Qualified/Not Interested": 4
       },
       "contacto": 19.99,
-      "descartados": 3.5,
+      "descartados": 4,
       "assessment": 1,
       "pipeline": 0,
       "admit": 0,
-      "leads": 4.5
+      "leads": 5
     },
     "2026-08-17": {
       "spend": 231.52,
@@ -4543,14 +4543,14 @@
       "leads": 0
     },
     "2026-08-31": {
-      "spend": 158.93,
-      "clicks": 44,
-      "impr": 369,
+      "spend": 176.05,
+      "clicks": 50,
+      "impr": 403,
       "actions": {
-        "Chat Lead": 4,
+        "Chat Lead": 5,
         "Get a Callback": 4.98
       },
-      "contacto": 8.98,
+      "contacto": 9.98,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4563,10 +4563,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 3558.43,
-      "clicks": 846,
-      "impr": 6035,
-      "contacto": 432,
+      "spend": 3575.56,
+      "clicks": 852,
+      "impr": 6069,
+      "contacto": 433,
       "descartados": 34,
       "assessment": 25,
       "pipeline": 7,
@@ -4581,18 +4581,18 @@
       "clicks": 756,
       "impr": 6256,
       "contacto": 343,
-      "descartados": 36,
+      "descartados": 37,
       "assessment": 9,
       "pipeline": 2,
       "admit": 0,
-      "leads": 45
+      "leads": 46
     }
   ],
   "crm": {
     "source": "GHL",
     "daily": {
       "2026-08-31": {
-        "contacts": 8,
+        "contacts": 9,
         "paid": 8,
         "opps": 8
       },
@@ -5842,7 +5842,7 @@
       },
       {
         "ym": "2026-08",
-        "contacts": 274,
+        "contacts": 275,
         "paid": 259,
         "opps": 258
       }
@@ -5920,7 +5920,7 @@
     "totals": {
       "contactos": 2000,
       "opps": 2000,
-      "oppsPaid": 1791
+      "oppsPaid": 1790
     }
   }
 }
