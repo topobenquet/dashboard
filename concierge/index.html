@@ -342,7 +342,7 @@ function axisY(max, money, x, anchor) {
   return out;
 }
 
-/* ── Day by day: spend on the left ($), leads and Ads conversions on the right ── */
+/* ── Día a día: gasto sobre el eje izquierdo ($) y leads sobre el derecho ── */
 function chartDaily(dates) {
   const D = DATA.daily, C = DATA.crm?.daily || {};
   const val = (k,which) => which==="spend" ? D[k].spend : (C[k]?.paid||0);
