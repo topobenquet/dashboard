@@ -7,10 +7,10 @@
  "saldos": {
   "fecha": "2026-09-01",
   "itauGs": 43605,
-  "uenoGs": 294448,
+  "uenoGs": 4673836,
   "stripeDisponible": 5450.29,
   "stripePendiente": 905.82,
-  "pagoparPendienteUsd": 2249.37,
+  "pagoparPendienteUsd": 1512.1,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -1147,9 +1147,9 @@
    "riel": "Pagopar",
    "cobros": 13,
    "bruto": 2322,
-   "comision": null,
-   "pct": null,
-   "nota": "se mide cuando liquide"
+   "comision": 104.39,
+   "pct": 5.21,
+   "nota": "tarjeta 5,21% estimado con la primera liquidación; PIX casi gratis (0,29%)"
   },
   {
    "riel": "Binance",
@@ -1171,8 +1171,8 @@
  "pagopar": {
   "cobradoGs": 13792000,
   "cobradoUsd": 2321.9,
-  "acreditadoGs": 430734,
-  "liquida": "martes y viernes",
+  "acreditadoGs": 4810122,
+  "liquida": "martes y viernes, unos 3 a 4 días después del cobro",
   "diario": [
    {
     "fecha": "2026-08-25",
@@ -1223,12 +1223,19 @@
     "gs": 430734,
     "usd": 72.51,
     "nota": "PIX de Paolo Ortiz del 25/08"
+   },
+   {
+    "fecha": "2026-09-01",
+    "gs": 4379388,
+    "usd": 737.27,
+    "nota": "Cobros con tarjeta del jue 27 y vie 28 (₲4.620.000). Comisión ₲240.612 = 5,21%, estimado con una sola liquidación."
    }
   ],
   "pruebasExcluidas": 4,
-  "comision": null,
-  "pendienteGs": 13361266,
-  "pendienteUsd": 2249.37
+  "comision": 0.0521,
+  "pendienteGs": 8981878,
+  "pendienteUsd": 1512.1,
+  "comisionNota": "tarjeta ≈5,21% · PIX ≈0,29% (432.000 → 430.734)"
  },
  "giros": [
   {
@@ -1306,12 +1313,12 @@
  ],
  "alertas": [
   {
-   "nivel": "crit",
-   "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
+   "nivel": "warn",
+   "texto": "₲9,0 millones cobrados por Pagopar todavía sin acreditar (cobros del 29 al 31/08)."
   },
   {
-   "nivel": "warn",
-   "texto": "₲13,4 millones cobrados por Pagopar sin acreditar al 31/08."
+   "nivel": "crit",
+   "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
   },
   {
    "nivel": "warn",
