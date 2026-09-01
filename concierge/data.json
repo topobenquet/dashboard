@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-31T19:13:00.912Z",
-  "lastSyncLabel": "31 Ago 2026",
+  "generated": "2026-09-01T10:20:48.999Z",
+  "lastSyncLabel": "1 Sep 2026",
   "year": 2026,
-  "currentMonth": "Agosto",
+  "currentMonth": "Septiembre",
   "account": {
     "id": "7869452872",
     "name": "Concierge Home Care of Maryland",
@@ -182,7 +182,7 @@
         "Deprecated - Admit": 3.6,
         "Get a Callback": 263.3,
         "Has assessment scheduled": 45.6,
-        "Not Qualified/Not Interested": 103.7,
+        "Not Qualified/Not Interested": 104.7,
         "Waiting EDD": 12,
         "Calls from ads": 12,
         "Local actions - Directions": 7,
@@ -193,11 +193,11 @@
         "Clicks to call": 1
       },
       "contacto": 466,
-      "descartados": 104,
+      "descartados": 105,
       "assessment": 46,
       "pipeline": 16,
       "admit": 4,
-      "leads": 149
+      "leads": 150
     },
     {
       "mes": "Julio",
@@ -228,13 +228,13 @@
     {
       "mes": "Agosto",
       "ym": "2026-08",
-      "spend": 5364.86,
-      "clicks": 1628,
-      "impr": 12456,
+      "spend": 5446.74,
+      "clicks": 1661,
+      "impr": 12634,
       "actions": {
-        "Chat Lead": 325,
-        "Get a Callback": 443.6,
-        "Not Qualified/Not Interested": 70.9,
+        "Chat Lead": 333,
+        "Get a Callback": 452.6,
+        "Not Qualified/Not Interested": 71.9,
         "Has assessment scheduled": 34,
         "Waiting EDD": 7,
         "Clicks to call": 2,
@@ -246,12 +246,26 @@
         "Deprecated - Admit": 1,
         "POS developed": 1
       },
-      "contacto": 785,
-      "descartados": 71,
+      "contacto": 802,
+      "descartados": 72,
       "assessment": 34,
       "pipeline": 9,
       "admit": 1,
-      "leads": 105
+      "leads": 106
+    },
+    {
+      "mes": "Septiembre",
+      "ym": "2026-09",
+      "spend": 2,
+      "clicks": 1,
+      "impr": 11,
+      "actions": {},
+      "contacto": 0,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
     }
   ],
   "daily": {
@@ -3436,14 +3450,14 @@
         "Chat Lead": 6,
         "Get a Callback": 6.03,
         "Has assessment scheduled": 1,
-        "Not Qualified/Not Interested": 4.67
+        "Not Qualified/Not Interested": 5.67
       },
       "contacto": 12.03,
-      "descartados": 4.67,
+      "descartados": 5.67,
       "assessment": 1,
       "pipeline": 0,
       "admit": 0,
-      "leads": 5.67
+      "leads": 6.67
     },
     "2026-06-29": {
       "spend": 136.43,
@@ -4296,11 +4310,11 @@
       "impr": 283,
       "actions": {
         "Chat Lead": 6,
-        "Get a Callback": 13.99,
+        "Get a Callback": 14,
         "Has assessment scheduled": 1,
         "Not Qualified/Not Interested": 4
       },
-      "contacto": 19.99,
+      "contacto": 20,
       "descartados": 4,
       "assessment": 1,
       "pipeline": 0,
@@ -4372,13 +4386,13 @@
         "Calls from ads": 1,
         "Chat Lead": 12,
         "Deprecated - Admit": 0.5,
-        "Get a Callback": 20.5,
+        "Get a Callback": 21.5,
         "Has assessment scheduled": 2,
         "Not Qualified/Not Interested": 0.33,
         "POS developed": 0.6,
         "Waiting EDD": 2
       },
-      "contacto": 33.5,
+      "contacto": 34.5,
       "descartados": 0.33,
       "assessment": 2,
       "pipeline": 2.6,
@@ -4518,14 +4532,15 @@
       "impr": 334,
       "actions": {
         "Chat Lead": 8,
-        "Get a Callback": 5
+        "Get a Callback": 6,
+        "Not Qualified/Not Interested": 0.03
       },
-      "contacto": 13,
-      "descartados": 0,
+      "contacto": 14,
+      "descartados": 0.03,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
-      "leads": 0
+      "leads": 0.03
     },
     "2026-08-30": {
       "spend": 66.93,
@@ -4543,15 +4558,28 @@
       "leads": 0
     },
     "2026-08-31": {
-      "spend": 252.99,
-      "clicks": 70,
-      "impr": 534,
+      "spend": 334.87,
+      "clicks": 103,
+      "impr": 712,
       "actions": {
         "Calls from ads": 1,
-        "Chat Lead": 11,
-        "Get a Callback": 7.98
+        "Chat Lead": 19,
+        "Get a Callback": 14.96,
+        "Not Qualified/Not Interested": 0.97
       },
-      "contacto": 19.98,
+      "contacto": 34.96,
+      "descartados": 0.97,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0.97
+    },
+    "2026-09-01": {
+      "spend": 2,
+      "clicks": 1,
+      "impr": 11,
+      "actions": {},
+      "contacto": 0,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4561,41 +4589,27 @@
   },
   "campaigns": [
     {
-      "name": "Search Campaign Maryland",
-      "status": "ENABLED",
-      "tipo": "SEARCH",
-      "spend": 3652.49,
-      "clicks": 872,
-      "impr": 6200,
-      "contacto": 443,
-      "descartados": 34,
-      "assessment": 25,
-      "pipeline": 7,
-      "admit": 1,
-      "leads": 59
-    },
-    {
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1712.35,
-      "clicks": 756,
-      "impr": 6256,
-      "contacto": 343,
-      "descartados": 37,
-      "assessment": 9,
-      "pipeline": 2,
+      "spend": 2,
+      "clicks": 1,
+      "impr": 11,
+      "contacto": 0,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
       "admit": 0,
-      "leads": 46
+      "leads": 0
     }
   ],
   "crm": {
     "source": "GHL",
     "daily": {
       "2026-08-31": {
-        "contacts": 12,
-        "paid": 11,
-        "opps": 11
+        "contacts": 16,
+        "paid": 14,
+        "opps": 14
       },
       "2026-08-30": {
         "contacts": 11,
@@ -5843,18 +5857,18 @@
       },
       {
         "ym": "2026-08",
-        "contacts": 278,
-        "paid": 262,
-        "opps": 261
+        "contacts": 282,
+        "paid": 265,
+        "opps": 264
       }
     ],
     "stages": {
       "2026-08": {
-        "New Leads": 71,
+        "New Leads": 73,
+        "Not Qualified/Not Interested": 73,
         "Additional Information Needed": 76,
         "MAP Referral Pending": 34,
         "Waiting EDD": 7,
-        "Not Qualified/Not Interested": 72,
         "POS Developed": 1
       },
       "2026-07": {
@@ -5921,7 +5935,7 @@
     "totals": {
       "contactos": 2000,
       "opps": 2000,
-      "oppsPaid": 1790
+      "oppsPaid": 1789
     }
   }
 }
