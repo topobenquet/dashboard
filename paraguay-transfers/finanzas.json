@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-02T10:20:35.096Z",
+ "generated": "2026-09-02T10:37:03.705Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -18,14 +18,15 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 400,
+   "in": 973.06,
    "out": 0,
-   "n": 2,
+   "n": 6,
    "porFuente": {
-    "Stripe": 400
+    "Stripe": 400,
+    "Pagopar": 573.06
    },
-   "neto": 400,
-   "acum": 400
+   "neto": 973.06,
+   "acum": 973.06
   }
  ],
  "movimientos": [
@@ -42,6 +43,34 @@
    "usd": 300,
    "fuente": "Stripe",
    "det": "Hisaaki Takei"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 51.18,
+   "fuente": "Pagopar",
+   "det": "PIX · Pedro Henrique Camiloti"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 208.75,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Laura Donsbach"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 208.75,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lee Delicata"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 104.38,
+   "fuente": "Pagopar",
+   "det": "PIX · Isabela Zomer"
   }
  ],
  "pnl": [
@@ -124,11 +153,11 @@
    },
    "marketing": {
     "google": 19.47,
-    "meta": 0,
-    "total": 19.47
+    "meta": 42.27,
+    "total": 61.74
    },
    "impuestos": null,
-   "resultado": 1763.24,
+   "resultado": 1720.97,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -263,6 +292,10 @@
   }
  ],
  "alertas": [
+  {
+   "nivel": "crit",
+   "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
+  },
   {
    "nivel": "warn",
    "texto": "₲3.4 millones cobrados por Pagopar sin acreditar."
