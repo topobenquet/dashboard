@@ -1,16 +1,16 @@
 {
- "generated": "2026-09-01T21:42:00.914Z",
+ "generated": "2026-09-02T10:20:35.096Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-01",
+  "fecha": "2026-09-02",
   "itauGs": 43605,
   "uenoGs": 4673836,
-  "stripeDisponible": 450.29,
-  "stripePendiente": 905.82,
-  "pagoparPendienteUsd": 468.69,
+  "stripeDisponible": 587.07,
+  "stripePendiente": 862.38,
+  "pagoparPendienteUsd": 573.06,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -18,17 +18,24 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 300,
+   "in": 400,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Stripe": 300
+    "Stripe": 400
    },
-   "neto": 300,
-   "acum": 300
+   "neto": 400,
+   "acum": 400
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 100,
+   "fuente": "Stripe",
+   "det": "James B Simpson"
+  },
   {
    "d": "2026-09-01",
    "t": "in",
@@ -87,11 +94,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 15,
+   "traslados": 16,
    "ingresos": {
-    "planilla": 3002,
+    "planilla": 3419,
     "alohaSinFila": 0,
-    "total": 3002
+    "total": 3419
    },
    "directos": {
     "chofer": 1017,
@@ -101,12 +108,12 @@
     "otros": 28,
     "total": 1515
    },
-   "margenBruto": 1487,
+   "margenBruto": 1904,
    "cobro": {
-    "stripe": 13.5,
+    "stripe": 16.7,
     "aloha": null,
     "pagopar": null,
-    "total": 13.5
+    "total": 16.7
    },
    "estructura": {
     "seguro": 104.59,
@@ -116,12 +123,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 13.36,
+    "google": 19.47,
     "meta": 0,
-    "total": 13.36
+    "total": 19.47
    },
    "impuestos": null,
-   "resultado": 1355.55,
+   "resultado": 1763.24,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -133,16 +140,16 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 1,
-   "bruto": 300,
-   "comision": 13.5,
-   "pct": 4.5,
+   "cobros": 2,
+   "bruto": 400,
+   "comision": 16.7,
+   "pct": 4.18,
    "nota": "medido cobro por cobro"
   },
   {
    "riel": "Pagopar",
-   "cobros": 3,
-   "bruto": 468.68,
+   "cobros": 4,
+   "bruto": 573.06,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -157,14 +164,14 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 2784000,
-  "cobradoUsd": 468.68,
+  "cobradoGs": 3404000,
+  "cobradoUsd": 573.06,
   "diario": [
    {
     "fecha": "2026-09-01",
-    "cobros": 3,
-    "gs": 2784000,
-    "usd": 468.68
+    "cobros": 4,
+    "gs": 3404000,
+    "usd": 573.06
    }
   ],
   "pruebasExcluidas": 0,
@@ -172,8 +179,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 2784000,
-  "pendienteUsd": 468.69
+  "pendienteGs": 3404000,
+  "pendienteUsd": 573.06
  },
  "giros": [
   {
@@ -258,7 +265,7 @@
  "alertas": [
   {
    "nivel": "warn",
-   "texto": "₲2.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲3.4 millones cobrados por Pagopar sin acreditar."
   }
  ]
 }
