@@ -88,10 +88,10 @@
     "combustible": 1002,
     "peajes": 206,
     "viaticos": 126,
-    "otros": 229,
-    "total": 4332
+    "otros": 1979.84,
+    "total": 6082.84
    },
-   "margenBruto": 6311,
+   "margenBruto": 4560.16,
    "cobro": {
     "stripe": 395.3,
     "aloha": 99.95,
@@ -111,14 +111,15 @@
     "total": 448
    },
    "impuestos": null,
-   "resultado": 4620,
+   "resultado": 2869.16,
    "estado": {
     "interesPrestamo": "estimado",
     "depreciacion": "estimado",
     "pagopar": "falta",
     "impuestos": "falta"
    },
-   "frozen": true
+   "frozen": true,
+   "nota": " Corrección 2/9: costo del vuelo privado (Marcos Silva, 24/08) ₲10.400.000 pagado desde la cuenta personal, no estaba en la planilla."
   },
   {
    "mes": "2026-09",
