@@ -15,7 +15,9 @@ body {
    punta: a ancho completo las tablas quedan larguísimas y cuesta seguir la fila. */
 body > * { max-width: 1320px; margin-left: auto; margin-right: auto; }
 @media(max-width:600px){ body { padding: 12px; } }
-.tabs { display:flex; gap:6px; margin:0 0 14px; border-bottom:1px solid #E5E7EB; padding-bottom:0; }
+.tabs { display:flex; gap:6px; margin:0 0 14px; border-bottom:1px solid #E5E7EB; padding-bottom:0; justify-content:center; position:relative; }
+#fin-updated { position:absolute; right:0; top:50%; transform:translateY(-50%); }
+@media(max-width:600px){ #fin-updated { display:none; } }
 .tab { font:inherit; font-size:12px; font-weight:600; padding:7px 14px; border:1px solid transparent; border-bottom:none; border-radius:8px 8px 0 0; background:transparent; color:#6B7280; cursor:pointer; margin-bottom:-1px; }
 .tab[aria-pressed="true"] { background:white; color:#1F4E78; border-color:#E5E7EB; }
 .tab:hover { color:#1F4E78; }
@@ -112,7 +114,7 @@ table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overfl
 <div class="tabs" role="tablist">
   <button class="tab" data-tab="ops" aria-pressed="true">Operativo</button>
   <button class="tab" data-tab="fin" aria-pressed="false">Finanzas</button>
-  <span id="fin-updated" style="margin-left:auto;font-size:10.5px;color:#9CA3AF;align-self:center"></span>
+  <span id="fin-updated" style="font-size:10.5px;color:#9CA3AF"></span>
 </div>
 
 <div id="root"></div>
