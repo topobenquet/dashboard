@@ -95,8 +95,8 @@
    "cobro": {
     "stripe": 395.3,
     "aloha": 99.95,
-    "pagopar": null,
-    "total": 495
+    "pagopar": 104,
+    "total": 599.25
    },
    "estructura": {
     "seguro": 105,
@@ -111,11 +111,11 @@
     "total": 448
    },
    "impuestos": null,
-   "resultado": 2869.16,
+   "resultado": 2764.91,
    "estado": {
     "interesPrestamo": "estimado",
     "depreciacion": "estimado",
-    "pagopar": "falta",
+    "pagopar": "estimado",
     "impuestos": "falta"
    },
    "frozen": true,
