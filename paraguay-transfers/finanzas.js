@@ -161,6 +161,45 @@
       <div class="info-box ${feeTot > 0 ? "info-amber" : "info-green"}" style="margin-top:8px">Giros desde Stripe: ${F.giros.length} desde mayo, ${inst.length} instantáneos a tarjeta por ${f$(montoInst)} que costaron <strong>${f$(feeTot)}</strong> (1,5%). Los giros estándar son gratis y tardan dos días.</div></div>`;
   }
 
+
+  /* ── Log de movimientos: cada entrada y cada salida, ítem por ítem ── */
+  function logMovimientos() {
+    const M = (F.movimientos || []).slice().sort((a, b) => a.d.localeCompare(b.d) || (a.t === b.t ? 0 : a.t === "in" ? -1 : 1));
+    if (!M.length) return "";
+    const fuentes = [...new Set(M.map((m) => m.fuente))].sort();
+    const btn = (id, lbl, on) => `<button class="mbtn" data-f="${esc(id)}" aria-pressed="${on}" style="${on ? "background:#1F4E78" : ""}">${esc(lbl)}</button>`;
+    const filtros = `<div class="chart-legend" id="log-filtros">${btn("*", "Todo", true)}${btn("in", "Solo entradas", false)}${btn("out", "Solo salidas", false)}<span style="width:8px"></span>${fuentes.map((f) => btn("src:" + f, f, false)).join("")}</div>`;
+    let rows = "", dia = "", acum = 0;
+    for (const m of M) {
+      if (m.d !== dia) { dia = m.d; const tot = M.filter((x) => x.d === dia); const ti = tot.filter((x) => x.t === "in").reduce((s, x) => s + x.usd, 0), to = tot.filter((x) => x.t === "out").reduce((s, x) => s + x.usd, 0);
+        rows += `<tr class="log-dia" data-d="${dia}"><td class="tl" colspan="2"><strong>${dLbl(dia)}</strong></td><td class="pos">${ti ? f$(ti) : "–"}</td><td class="neg">${to ? f$(to) : "–"}</td><td colspan="2" class="tl" style="color:#6B7280">${tot.length} mov. · neto <strong class="${ti - to >= 0 ? "pos" : "neg"}">${f$(ti - to)}</strong></td></tr>`; }
+      acum += m.t === "in" ? m.usd : -m.usd;
+      rows += `<tr class="log-row" data-t="${m.t}" data-src="${esc(m.fuente)}" data-d="${m.d}"><td>${m.d.slice(8)}/${m.d.slice(5, 7)}</td><td><span class="pill ${m.t === "in" ? "pill-sa" : "pill-eu"}">${m.t === "in" ? "entra" : "sale"}</span></td>
+        <td class="pos">${m.t === "in" ? f$(m.usd) : ""}</td><td class="neg">${m.t === "out" ? f$(m.usd) : ""}</td>
+        <td class="tl" style="white-space:normal"><strong>${esc(m.fuente)}</strong>${m.gs ? ` <span style="color:#9CA3AF;font-size:10px">${fGs(m.gs)}</span>` : ""}</td>
+        <td class="tl" style="white-space:normal;color:#374151">${esc(m.det || "")}</td></tr>`;
+    }
+    const ti = M.filter((x) => x.t === "in").reduce((s, x) => s + x.usd, 0), to = M.filter((x) => x.t === "out").reduce((s, x) => s + x.usd, 0);
+    return `<div class="section"><div class="section-title">Movimientos · ${esc(F.mesLabel)} · ítem por ítem</div>
+      ${filtros}
+      <div class="ft-wrap"><table class="ft nowrap1" id="log-tabla" style="min-width:720px">
+        <colgroup><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:10%"><col style="width:22%"><col style="width:44%"></colgroup>
+        <thead><tr><th>Día</th><th></th><th>Entra</th><th>Sale</th><th class="tl">Fuente</th><th class="tl">Concepto</th></tr></thead>
+        <tbody>${rows}<tr class="hi"><td colspan="2">${esc(F.mesLabel)}</td><td class="pos">${f$(ti)}</td><td class="neg">${f$(to)}</td><td colspan="2" class="tl">${M.length} movimientos · neto <strong>${f$(ti - to)}</strong></td></tr></tbody></table></div>
+      <div class="info-box info-gray" style="margin-top:8px">Cada cobro aparece el día que el cliente pagó, con su riel y cliente. Cada salida trae de dónde se leyó (extracto del banco o el grupo de WhatsApp) y el monto original en guaraníes. Los traspasos entre cuentas propias no están.</div></div>`;
+  }
+  function activarLog() {
+    const box = $("log-filtros"), tabla = $("log-tabla"); if (!box || !tabla) return;
+    let tipo = "*", src = null;
+    const apply = () => {
+      tabla.querySelectorAll("tr.log-row").forEach((tr) => { tr.hidden = !((tipo === "*" || tr.dataset.t === tipo) && (!src || tr.dataset.src === src)); });
+      tabla.querySelectorAll("tr.log-dia").forEach((tr) => { const d = tr.dataset.d; tr.hidden = ![...tabla.querySelectorAll(`tr.log-row[data-d="${d}"]`)].some((r) => !r.hidden); });
+      box.querySelectorAll(".mbtn").forEach((b) => { const f = b.dataset.f, on = f === "*" ? (tipo === "*" && !src) : f.startsWith("src:") ? src === f.slice(4) : tipo === f; b.setAttribute("aria-pressed", String(on)); b.style.background = on ? "#1F4E78" : ""; });
+    };
+    box.addEventListener("click", (e) => { const b = e.target.closest(".mbtn"); if (!b) return; const f = b.dataset.f;
+      if (f === "*") { tipo = "*"; src = null; } else if (f.startsWith("src:")) { src = src === f.slice(4) ? null : f.slice(4); } else { tipo = tipo === f ? "*" : f; } apply(); });
+  }
+
   function alertas() {
     if (!F.alertas?.length) return "";
     return `<div class="section">${F.alertas.map((a) => `<div class="info-box ${a.nivel === "crit" ? "info-amber" : "info-blue"}" style="margin-bottom:6px">${a.nivel === "crit" ? "⚠️" : "•"} ${esc(a.texto)}</div>`).join("")}</div>`;
@@ -171,7 +210,8 @@
     fin.innerHTML = kpisHoy() + alertas()
       + `<div class="section"><div class="section-title">Libro de caja · ${esc(F.mesLabel)} · entradas y salidas día a día</div>${chartCaja()}${tablaCaja()}
          <div class="info-box info-gray" style="margin-top:8px">Todas las fuentes en una sola moneda (USD a ${F.tc.toLocaleString("es-PY")} ₲/USD, ${esc(F.fuenteTc)}). Las transferencias entre cuentas propias no cuentan. La publicidad se paga con una tarjeta fuera de este circuito y no aparece acá, sí en el P&amp;L.</div></div>`
-      + pagoparPanel() + pnlTabla() + rielesTabla();
+      + logMovimientos() + pagoparPanel() + pnlTabla() + rielesTabla();
+    activarLog();   // después del innerHTML, si no los listeners se pierden
   }
 
   async function init() {
