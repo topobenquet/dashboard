@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03T19:07:05.834Z",
+ "generated": "2026-09-03T19:16:56.545Z",
  "tc": 6000,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -19,38 +19,44 @@
   {
    "fecha": "2026-09-01",
    "in": 967.34,
-   "out": 0,
-   "n": 6,
+   "out": 143.13,
+   "n": 8,
    "porFuente": {
     "Stripe": 400,
-    "Pagopar": 567.34
+    "Pagopar": 567.34,
+    "WhatsApp · Gustavo": -50,
+    "WhatsApp · Luis": -93.13
    },
-   "neto": 967.34,
-   "acum": 967.34
+   "neto": 824.21,
+   "acum": 824.21
   },
   {
    "fecha": "2026-09-02",
    "in": 1618.17,
-   "out": 0,
-   "n": 4,
+   "out": 513.78,
+   "n": 14,
    "porFuente": {
     "Stripe": 897,
-    "Pagopar": 721.17
+    "Pagopar": 721.17,
+    "WhatsApp · Alfredo": -316,
+    "WhatsApp · Pagos (Majo)": -197.78
    },
-   "neto": 1618.17,
-   "acum": 2585.51
+   "neto": 1104.39,
+   "acum": 1928.6
   },
   {
    "fecha": "2026-09-03",
    "in": 453.51,
-   "out": 0,
-   "n": 4,
+   "out": 30,
+   "n": 6,
    "porFuente": {
     "Binance": 247,
-    "Pagopar": 206.51
+    "Pagopar": 206.51,
+    "WhatsApp · Alfredo": -8.33,
+    "WhatsApp · Pagos (Majo)": -21.67
    },
-   "neto": 453.51,
-   "acum": 3039.02
+   "neto": 423.51,
+   "acum": 2352.11
   }
  ],
  "movimientos": [
@@ -151,6 +157,104 @@
    "usd": 51.17,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Lourdes Mariela Amarilla Sanabria"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "out",
+   "usd": 50,
+   "fuente": "WhatsApp · Gustavo",
+   "det": "combustible (Si le cargué por)"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "out",
+   "usd": 93.13,
+   "fuente": "WhatsApp · Luis",
+   "det": "Combustible V-Power Diesel 53,73 L - Shell Madame Lynch"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 20,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "pago pendiente"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 100,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "viaje Pto Iguazu hoy"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 40,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "viático"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 133.33,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "combustible"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 22.67,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "peajes"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 49.44,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Confección de Factura Taxi Aéreo"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 83.33,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago viaje CDE 23/08"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 11.67,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago viaje Aero-Hub 25/08"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 11.67,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago viaje Hub-Aero 27/08"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "out",
+   "usd": 41.67,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago traslado Foz/CDE 02/sept PAX Johannes Vorster (MS. ANA)"
+  },
+  {
+   "d": "2026-09-03",
+   "t": "out",
+   "usd": 8.33,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Carga de combustible"
+  },
+  {
+   "d": "2026-09-03",
+   "t": "out",
+   "usd": 21.67,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver - Traslado Asu/Aeropuerto Pax: Lourdes Amarilla"
   }
  ],
  "pnl": [
@@ -233,12 +337,12 @@
     "total": 103.54
    },
    "marketing": {
-    "google": 54.41,
+    "google": 54.16,
     "meta": 42.27,
-    "total": 96.68
+    "total": 96.43
    },
    "impuestos": null,
-   "resultado": 153.31,
+   "resultado": 153.56,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
