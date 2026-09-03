@@ -1,16 +1,16 @@
 {
- "generated": "2026-09-02T10:37:03.705Z",
- "tc": 5940,
+ "generated": "2026-09-03T19:07:05.834Z",
+ "tc": 6000,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-02",
+  "fecha": "2026-09-03",
   "itauGs": 43605,
   "uenoGs": 4673836,
-  "stripeDisponible": 587.07,
-  "stripePendiente": 862.38,
-  "pagoparPendienteUsd": 573.06,
+  "stripeDisponible": 1449.45,
+  "stripePendiente": 1029.24,
+  "pagoparPendienteUsd": 1495,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -18,18 +18,56 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 973.06,
+   "in": 967.34,
    "out": 0,
    "n": 6,
    "porFuente": {
     "Stripe": 400,
-    "Pagopar": 573.06
+    "Pagopar": 567.34
    },
-   "neto": 973.06,
-   "acum": 973.06
+   "neto": 967.34,
+   "acum": 967.34
+  },
+  {
+   "fecha": "2026-09-02",
+   "in": 1618.17,
+   "out": 0,
+   "n": 4,
+   "porFuente": {
+    "Stripe": 897,
+    "Pagopar": 721.17
+   },
+   "neto": 1618.17,
+   "acum": 2585.51
+  },
+  {
+   "fecha": "2026-09-03",
+   "in": 453.51,
+   "out": 0,
+   "n": 4,
+   "porFuente": {
+    "Binance": 247,
+    "Pagopar": 206.51
+   },
+   "neto": 453.51,
+   "acum": 3039.02
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 97,
+   "fuente": "Stripe",
+   "det": "Stuart Brander"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 800,
+   "fuente": "Stripe",
+   "det": "Payment for invoice 000176"
+  },
   {
    "d": "2026-09-01",
    "t": "in",
@@ -45,32 +83,74 @@
    "det": "Hisaaki Takei"
   },
   {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 247,
+   "fuente": "Binance",
+   "det": "depósito USDT"
+  },
+  {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 51.18,
+   "usd": 50.67,
    "fuente": "Pagopar",
    "det": "PIX · Pedro Henrique Camiloti"
   },
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 208.75,
+   "usd": 206.67,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Laura Donsbach"
   },
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 208.75,
+   "usd": 206.67,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Lee Delicata"
   },
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 104.38,
+   "usd": 103.33,
    "fuente": "Pagopar",
    "det": "PIX · Isabela Zomer"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 617,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · James Stuart Brander"
+  },
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 104.17,
+   "fuente": "Pagopar",
+   "det": "PIX · simone zanella"
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 51.17,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Gonzalo Alberto Flores Portal"
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 104.17,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Gustavo Ferrari"
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 51.17,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lourdes Mariela Amarilla Sanabria"
   }
  ],
  "pnl": [
@@ -124,41 +204,41 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 16,
+   "traslados": 23,
    "ingresos": {
-    "planilla": 3419,
+    "planilla": 3911,
     "alohaSinFila": 0,
-    "total": 3419
+    "total": 3911
    },
    "directos": {
-    "chofer": 1017,
+    "chofer": 1086,
     "combustible": 360,
     "peajes": 110,
     "viaticos": 0,
-    "otros": 28,
-    "total": 1515
+    "otros": 29,
+    "total": 1585
    },
-   "margenBruto": 1904,
+   "margenBruto": 2326,
    "cobro": {
-    "stripe": 16.7,
-    "aloha": null,
+    "stripe": 61.9,
+    "aloha": 1910.57,
     "pagopar": null,
-    "total": 16.7
+    "total": 1972.47
    },
    "estructura": {
-    "seguro": 104.59,
+    "seguro": 103.54,
     "multaBanco": 0,
     "interesPrestamo": null,
     "depreciacion": null,
-    "total": 104.59
+    "total": 103.54
    },
    "marketing": {
-    "google": 19.47,
+    "google": 54.41,
     "meta": 42.27,
-    "total": 61.74
+    "total": 96.68
    },
    "impuestos": null,
-   "resultado": 1720.97,
+   "resultado": 153.31,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -170,38 +250,58 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 2,
-   "bruto": 400,
-   "comision": 16.7,
-   "pct": 4.18,
+   "cobros": 4,
+   "bruto": 1297,
+   "comision": 61.9,
+   "pct": 4.77,
    "nota": "medido cobro por cobro"
   },
   {
+   "riel": "Aloha",
+   "cobros": 9,
+   "bruto": 1910.57,
+   "comision": 1910.57,
+   "pct": 100,
+   "nota": "sin acreditaciones en el extracto"
+  },
+  {
    "riel": "Pagopar",
-   "cobros": 4,
-   "bruto": 573.06,
+   "cobros": 9,
+   "bruto": 1495.02,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
   },
   {
    "riel": "Binance",
-   "cobros": 0,
-   "bruto": 0,
+   "cobros": 1,
+   "bruto": 247,
    "comision": null,
    "pct": null,
    "nota": "sin medir"
   }
  ],
  "pagopar": {
-  "cobradoGs": 3404000,
-  "cobradoUsd": 573.06,
+  "cobradoGs": 8970000,
+  "cobradoUsd": 1495.02,
   "diario": [
    {
     "fecha": "2026-09-01",
     "cobros": 4,
     "gs": 3404000,
-    "usd": 573.06
+    "usd": 567.34
+   },
+   {
+    "fecha": "2026-09-02",
+    "cobros": 2,
+    "gs": 4327000,
+    "usd": 721.17
+   },
+   {
+    "fecha": "2026-09-03",
+    "cobros": 3,
+    "gs": 1239000,
+    "usd": 206.51
    }
   ],
   "pruebasExcluidas": 0,
@@ -209,8 +309,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 3404000,
-  "pendienteUsd": 573.06
+  "pendienteGs": 8970000,
+  "pendienteUsd": 1495
  },
  "giros": [
   {
@@ -299,7 +399,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲3.4 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲9 millones cobrados por Pagopar sin acreditar."
   }
  ]
 }
