@@ -1,16 +1,16 @@
 {
- "generated": "2026-09-03T19:22:18.215Z",
- "tc": 6000,
+ "generated": "2026-09-04T10:20:28.594Z",
+ "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-03",
+  "fecha": "2026-09-04",
   "itauGs": 43605,
   "uenoGs": 4673836,
-  "stripeDisponible": 1449.45,
-  "stripePendiente": 1029.24,
-  "pagoparPendienteUsd": 1495,
+  "stripeDisponible": 2289.72,
+  "stripePendiente": 23.97,
+  "pagoparPendienteUsd": 2173.24,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -18,45 +18,45 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 967.34,
-   "out": 143.13,
+   "in": 969.24,
+   "out": 143.61,
    "n": 8,
    "porFuente": {
     "Stripe": 400,
-    "Pagopar": 567.34,
-    "WhatsApp · Gustavo": -50,
-    "WhatsApp · Luis": -93.13
+    "Pagopar": 569.24,
+    "WhatsApp · Gustavo": -50.17,
+    "WhatsApp · Luis": -93.44
    },
-   "neto": 824.21,
-   "acum": 824.21
+   "neto": 825.63,
+   "acum": 825.63
   },
   {
    "fecha": "2026-09-02",
-   "in": 1618.17,
-   "out": 513.78,
+   "in": 1620.58,
+   "out": 515.5,
    "n": 14,
    "porFuente": {
     "Stripe": 897,
-    "Pagopar": 721.17,
-    "WhatsApp · Alfredo": -316,
-    "WhatsApp · Pagos (Majo)": -197.78
+    "Pagopar": 723.58,
+    "WhatsApp · Alfredo": -317.05,
+    "WhatsApp · Pagos (Majo)": -198.45
    },
-   "neto": 1104.39,
-   "acum": 1928.6
+   "neto": 1105.08,
+   "acum": 1930.71
   },
   {
    "fecha": "2026-09-03",
-   "in": 453.51,
-   "out": 30,
-   "n": 6,
+   "in": 1127.45,
+   "out": 473.24,
+   "n": 9,
    "porFuente": {
     "Binance": 247,
-    "Pagopar": 206.51,
-    "WhatsApp · Alfredo": -8.33,
-    "WhatsApp · Pagos (Majo)": -21.67
+    "Pagopar": 880.45,
+    "WhatsApp · Alfredo": -8.36,
+    "WhatsApp · Pagos (Majo)": -464.88
    },
-   "neto": 423.51,
-   "acum": 2352.11
+   "neto": 654.21,
+   "acum": 2584.92
   }
  ],
  "movimientos": [
@@ -98,7 +98,7 @@
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 50.67,
+   "usd": 50.84,
    "fuente": "Pagopar",
    "det": "PIX · Pedro Henrique Camiloti",
    "gs": 304000
@@ -106,7 +106,7 @@
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 206.67,
+   "usd": 207.36,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Laura Donsbach",
    "gs": 1240000
@@ -114,7 +114,7 @@
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 206.67,
+   "usd": 207.36,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Lee Delicata",
    "gs": 1240000
@@ -122,7 +122,7 @@
   {
    "d": "2026-09-01",
    "t": "in",
-   "usd": 103.33,
+   "usd": 103.68,
    "fuente": "Pagopar",
    "det": "PIX · Isabela Zomer",
    "gs": 620000
@@ -130,7 +130,7 @@
   {
    "d": "2026-09-02",
    "t": "in",
-   "usd": 617,
+   "usd": 619.06,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · James Stuart Brander",
    "gs": 3702000
@@ -138,7 +138,7 @@
   {
    "d": "2026-09-02",
    "t": "in",
-   "usd": 104.17,
+   "usd": 104.52,
    "fuente": "Pagopar",
    "det": "PIX · simone zanella",
    "gs": 625000
@@ -146,7 +146,7 @@
   {
    "d": "2026-09-03",
    "t": "in",
-   "usd": 51.17,
+   "usd": 51.34,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Gonzalo Alberto Flores Portal",
    "gs": 307000
@@ -154,7 +154,7 @@
   {
    "d": "2026-09-03",
    "t": "in",
-   "usd": 104.17,
+   "usd": 104.52,
    "fuente": "Pagopar",
    "det": "QR ueno · Gustavo Ferrari",
    "gs": 625000
@@ -162,15 +162,31 @@
   {
    "d": "2026-09-03",
    "t": "in",
-   "usd": 51.17,
+   "usd": 51.34,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Lourdes Mariela Amarilla Sanabria",
    "gs": 307000
   },
   {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 519.57,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lee Delicata",
+   "gs": 3107000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 153.68,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Nisla urrutia",
+   "gs": 919000
+  },
+  {
    "d": "2026-09-01",
    "t": "out",
-   "usd": 50,
+   "usd": 50.17,
    "fuente": "WhatsApp · Gustavo",
    "det": "combustible (Si le cargué por)",
    "gs": 300000
@@ -178,7 +194,7 @@
   {
    "d": "2026-09-01",
    "t": "out",
-   "usd": 93.13,
+   "usd": 93.44,
    "fuente": "WhatsApp · Luis",
    "det": "Combustible V-Power Diesel 53,73 L - Shell Madame Lynch",
    "gs": 558780
@@ -186,7 +202,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 20,
+   "usd": 20.07,
    "fuente": "WhatsApp · Alfredo",
    "det": "pago pendiente",
    "gs": 120000
@@ -194,7 +210,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 100,
+   "usd": 100.33,
    "fuente": "WhatsApp · Alfredo",
    "det": "viaje Pto Iguazu hoy",
    "gs": 600000
@@ -202,7 +218,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 40,
+   "usd": 40.13,
    "fuente": "WhatsApp · Alfredo",
    "det": "viático",
    "gs": 240000
@@ -210,7 +226,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 133.33,
+   "usd": 133.78,
    "fuente": "WhatsApp · Alfredo",
    "det": "combustible",
    "gs": 800000
@@ -218,7 +234,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 22.67,
+   "usd": 22.74,
    "fuente": "WhatsApp · Alfredo",
    "det": "peajes",
    "gs": 136000
@@ -226,7 +242,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 49.44,
+   "usd": 49.61,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Confección de Factura Taxi Aéreo",
    "gs": 296644
@@ -234,7 +250,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 83.33,
+   "usd": 83.61,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago viaje CDE 23/08",
    "gs": 500000
@@ -242,7 +258,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 11.67,
+   "usd": 11.71,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago viaje Aero-Hub 25/08",
    "gs": 70000
@@ -250,7 +266,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 11.67,
+   "usd": 11.71,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago viaje Hub-Aero 27/08",
    "gs": 70000
@@ -258,7 +274,7 @@
   {
    "d": "2026-09-02",
    "t": "out",
-   "usd": 41.67,
+   "usd": 41.81,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago traslado Foz/CDE 02/sept PAX Johannes Vorster (MS. ANA)",
    "gs": 250000
@@ -266,7 +282,7 @@
   {
    "d": "2026-09-03",
    "t": "out",
-   "usd": 8.33,
+   "usd": 8.36,
    "fuente": "WhatsApp · Alfredo",
    "det": "Carga de combustible",
    "gs": 50000
@@ -274,10 +290,18 @@
   {
    "d": "2026-09-03",
    "t": "out",
-   "usd": 21.67,
+   "usd": 21.74,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver - Traslado Asu/Aeropuerto Pax: Lourdes Amarilla",
    "gs": 130000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "out",
+   "usd": 443.14,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Traslado foz ida y vuelta",
+   "gs": 2650000
   }
  ],
  "pnl": [
@@ -331,21 +355,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 23,
+   "traslados": 25,
    "ingresos": {
-    "planilla": 3911,
+    "planilla": 4107,
     "alohaSinFila": 0,
-    "total": 3911
+    "total": 4107
    },
    "directos": {
-    "chofer": 1086,
+    "chofer": 1107,
     "combustible": 360,
     "peajes": 110,
     "viaticos": 0,
     "otros": 29,
-    "total": 1585
+    "total": 1606
    },
-   "margenBruto": 2326,
+   "margenBruto": 2501,
    "cobro": {
     "stripe": 61.9,
     "aloha": null,
@@ -353,19 +377,19 @@
     "total": 61.9
    },
    "estructura": {
-    "seguro": 103.54,
+    "seguro": 103.89,
     "multaBanco": 0,
     "interesPrestamo": null,
     "depreciacion": null,
-    "total": 103.54
+    "total": 103.89
    },
    "marketing": {
-    "google": 54.16,
+    "google": 66.42,
     "meta": 42.27,
-    "total": 96.43
+    "total": 108.69
    },
    "impuestos": null,
-   "resultado": 2064.13,
+   "resultado": 2226.52,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -385,8 +409,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 9,
-   "bruto": 1495.02,
+   "cobros": 11,
+   "bruto": 2173.27,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -401,26 +425,26 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 8970000,
-  "cobradoUsd": 1495.02,
+  "cobradoGs": 12996000,
+  "cobradoUsd": 2173.27,
   "diario": [
    {
     "fecha": "2026-09-01",
     "cobros": 4,
     "gs": 3404000,
-    "usd": 567.34
+    "usd": 569.24
    },
    {
     "fecha": "2026-09-02",
     "cobros": 2,
     "gs": 4327000,
-    "usd": 721.17
+    "usd": 723.58
    },
    {
     "fecha": "2026-09-03",
-    "cobros": 3,
-    "gs": 1239000,
-    "usd": 206.51
+    "cobros": 5,
+    "gs": 5265000,
+    "usd": 880.45
    }
   ],
   "pruebasExcluidas": 0,
@@ -428,8 +452,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 8970000,
-  "pendienteUsd": 1495
+  "pendienteGs": 12996000,
+  "pendienteUsd": 2173.24
  },
  "giros": [
   {
@@ -518,7 +542,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲9 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲13 millones cobrados por Pagopar sin acreditar."
   }
  ]
 }
