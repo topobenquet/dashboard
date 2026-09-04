@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-03T10:20:50.835Z",
-  "lastSyncLabel": "3 Sep 2026",
+  "generated": "2026-09-04T10:21:10.804Z",
+  "lastSyncLabel": "4 Sep 2026",
   "year": 2026,
   "currentMonth": "Septiembre",
   "account": {
@@ -234,7 +234,7 @@
       "actions": {
         "Chat Lead": 333,
         "Get a Callback": 493.6,
-        "Not Qualified/Not Interested": 87.9,
+        "Not Qualified/Not Interested": 89.9,
         "Has assessment scheduled": 38,
         "Waiting EDD": 7,
         "Clicks to call": 2,
@@ -247,30 +247,31 @@
         "POS developed": 1
       },
       "contacto": 843,
-      "descartados": 88,
+      "descartados": 90,
       "assessment": 38,
       "pipeline": 13,
       "admit": 1,
-      "leads": 126
+      "leads": 128
     },
     {
       "mes": "Septiembre",
       "ym": "2026-09",
-      "spend": 444.83,
-      "clicks": 136,
-      "impr": 1347,
+      "spend": 753.12,
+      "clicks": 222,
+      "impr": 2015,
       "actions": {
-        "Calls from ads": 6,
-        "Chat Lead": 27,
-        "Get a Callback": 32,
-        "Local actions - Directions": 2
+        "Calls from ads": 9,
+        "Chat Lead": 42,
+        "Get a Callback": 47.9,
+        "Local actions - Directions": 2,
+        "Not Qualified/Not Interested": 1
       },
-      "contacto": 65,
-      "descartados": 0,
+      "contacto": 99,
+      "descartados": 1,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
-      "leads": 0
+      "leads": 1
     }
   ],
   "daily": {
@@ -3522,12 +3523,12 @@
       "impr": 245,
       "actions": {
         "Chat Lead": 5,
-        "Get a Callback": 9.5,
+        "Get a Callback": 9.54,
         "Local actions - Directions": 3,
         "Not Qualified/Not Interested": 0.5,
         "Waiting EDD": 1
       },
-      "contacto": 14.5,
+      "contacto": 14.54,
       "descartados": 0.5,
       "assessment": 0,
       "pipeline": 1,
@@ -4393,16 +4394,16 @@
         "Deprecated - Admit": 0.5,
         "Get a Callback": 24.5,
         "Has assessment scheduled": 2,
-        "Not Qualified/Not Interested": 0.33,
+        "Not Qualified/Not Interested": 2.33,
         "POS developed": 0.6,
         "Waiting EDD": 2
       },
       "contacto": 37.5,
-      "descartados": 0.33,
+      "descartados": 2.33,
       "assessment": 2,
       "pipeline": 2.6,
       "admit": 0.5,
-      "leads": 2.33
+      "leads": 4.33
     },
     "2026-08-21": {
       "spend": 172.38,
@@ -4581,11 +4582,11 @@
       "actions": {
         "Calls from ads": 1,
         "Chat Lead": 19,
-        "Get a Callback": 21.96,
+        "Get a Callback": 21.98,
         "Local actions - Directions": 2,
         "Not Qualified/Not Interested": 0.97
       },
-      "contacto": 41.96,
+      "contacto": 41.98,
       "descartados": 0.97,
       "assessment": 0,
       "pipeline": 0,
@@ -4616,19 +4617,36 @@
       "actions": {
         "Calls from ads": 4,
         "Chat Lead": 12,
-        "Get a Callback": 16
+        "Get a Callback": 16,
+        "Not Qualified/Not Interested": 1
       },
       "contacto": 32,
+      "descartados": 1,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 1
+    },
+    "2026-09-03": {
+      "spend": 301.89,
+      "clicks": 82,
+      "impr": 674,
+      "actions": {
+        "Calls from ads": 3,
+        "Chat Lead": 15,
+        "Get a Callback": 15.94
+      },
+      "contacto": 33.94,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
       "leads": 0
     },
-    "2026-09-03": {
-      "spend": 0,
-      "clicks": 0,
-      "impr": 24,
+    "2026-09-04": {
+      "spend": 6.4,
+      "clicks": 4,
+      "impr": 18,
       "actions": {},
       "contacto": 0,
       "descartados": 0,
@@ -4643,10 +4661,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 312.73,
-      "clicks": 84,
-      "impr": 775,
-      "contacto": 46,
+      "spend": 552.89,
+      "clicks": 143,
+      "impr": 1251,
+      "contacto": 68,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4657,24 +4675,29 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 132.1,
-      "clicks": 52,
-      "impr": 572,
-      "contacto": 19,
-      "descartados": 0,
+      "spend": 200.23,
+      "clicks": 79,
+      "impr": 764,
+      "contacto": 31,
+      "descartados": 1,
       "assessment": 0,
       "pipeline": 0,
       "admit": 0,
-      "leads": 0
+      "leads": 1
     }
   ],
   "crm": {
     "source": "GHL",
     "daily": {
-      "2026-09-03": {
-        "contacts": 2,
+      "2026-09-04": {
+        "contacts": 1,
         "paid": 1,
         "opps": 1
+      },
+      "2026-09-03": {
+        "contacts": 10,
+        "paid": 9,
+        "opps": 9
       },
       "2026-09-02": {
         "contacts": 8,
@@ -5943,19 +5966,20 @@
       },
       {
         "ym": "2026-09",
-        "contacts": 22,
-        "paid": 20,
-        "opps": 20
+        "contacts": 31,
+        "paid": 29,
+        "opps": 29
       }
     ],
     "stages": {
       "2026-09": {
-        "New Leads": 20
+        "New Leads": 28,
+        "Not Qualified/Not Interested": 1
       },
       "2026-08": {
         "New Leads": 43,
-        "Not Qualified/Not Interested": 89,
-        "Additional Information Needed": 86,
+        "Not Qualified/Not Interested": 91,
+        "Additional Information Needed": 84,
         "MAP Referral Pending": 38,
         "Waiting EDD": 7,
         "POS Developed": 1
@@ -5974,9 +5998,9 @@
         "POS Developed": 3
       },
       "2026-05": {
-        "Not Qualified/Not Interested": 130,
+        "Not Qualified/Not Interested": 131,
         "Additional Information Needed": 12,
-        "MAP Referral Pending": 16,
+        "MAP Referral Pending": 15,
         "Waiting EDD": 7,
         "POS Developed": 3
       },
@@ -6020,7 +6044,7 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-09-03",
+    "lastContact": "2026-09-04",
     "totals": {
       "contactos": 2000,
       "opps": 2000,
