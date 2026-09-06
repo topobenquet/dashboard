@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-05T10:21:29.796Z",
-  "lastSyncLabel": "5 Sep 2026",
+  "generated": "2026-09-06T10:21:43.627Z",
+  "lastSyncLabel": "6 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,19 +133,19 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 64,
-      "reservas": 16,
-      "revenue": 8673,
+      "leads": 74,
+      "reservas": 17,
+      "revenue": 8748,
       "chofer": 2500,
       "comb": 491,
       "peajes": 110,
-      "comision": 236,
+      "comision": 238,
       "reembolsos": 13,
       "otros": 16,
-      "gAds": 78,
+      "gAds": 90,
       "meta": 42.27,
       "costoSheet": 556,
-      "gananciaSheet": 45620
+      "gananciaSheet": 45611
     }
   ],
   "adsMonthly": [
@@ -207,9 +207,9 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 78.38,
-      "clicks": 88,
-      "impr": 597,
+      "spend": 89.92,
+      "clicks": 97,
+      "impr": 641,
       "conv": 3
     }
   ],
@@ -3660,6 +3660,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "AERO-ASU",
+      "cliente": "aristida la mística",
+      "pais": "Argentina",
+      "conductor": "Alejandro Mouchard",
+      "pago": 75,
+      "sena": 75,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 73,
+      "fechaReserva": "05/09/26",
+      "fechaSalida": "05/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "CDE-Hotel Hub Asu",
       "cliente": "Seohyun Cho",
       "pais": "Corea del Sur",
@@ -3796,14 +3810,14 @@
       "choferCost": 0,
       "neto": 404,
       "fechaReserva": "01/09/26",
-      "fechaSalida": "20/09/26"
+      "fechaSalida": "22/09/26"
     },
     {
       "mes": "Septiembre",
       "route": "Aero-Dazzler",
       "cliente": "Rafa 5215591984468",
       "pais": "México",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "",
       "pago": 0,
       "sena": 100,
       "restante": 0,
@@ -3983,7 +3997,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-05": 1,
+      "2026-09-06": 1,
+      "2026-09-05": 10,
       "2026-09-04": 16,
       "2026-09-03": 21,
       "2026-09-02": 15,
@@ -4027,6 +4042,7 @@
       "2026-09-02": 3,
       "2026-09-01": 7,
       "2026-09-03": 4,
+      "2026-09-05": 1,
       "2026-09-04": 2
     },
     "gads": {
@@ -4264,7 +4280,8 @@
       "2026-09-02": 19.21,
       "2026-09-03": 30.77,
       "2026-09-04": 11.96,
-      "2026-09-05": 0
+      "2026-09-05": 8.54,
+      "2026-09-06": 3
     }
   }
 }

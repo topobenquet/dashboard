@@ -1,16 +1,16 @@
 {
- "generated": "2026-09-05T10:21:07.624Z",
+ "generated": "2026-09-06T10:21:20.560Z",
  "tc": 5960,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-05",
+  "fecha": "2026-09-06",
   "itauGs": 43605,
   "uenoGs": 4673836,
   "stripeDisponible": 2289.72,
-  "stripePendiente": 23.97,
-  "pagoparPendienteUsd": 2180.54,
+  "stripePendiente": 61.54,
+  "pagoparPendienteUsd": 2414.6,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -68,6 +68,17 @@
    },
    "neto": -1063.2,
    "acum": 1525.2
+  },
+  {
+   "fecha": "2026-09-05",
+   "in": 234.06,
+   "out": 0,
+   "n": 2,
+   "porFuente": {
+    "Pagopar": 234.06
+   },
+   "neto": 234.06,
+   "acum": 1759.26
   }
  ],
  "movimientos": [
@@ -193,6 +204,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Nisla urrutia",
    "gs": 919000
+  },
+  {
+   "d": "2026-09-05",
+   "t": "in",
+   "usd": 78.02,
+   "fuente": "Pagopar",
+   "det": "QR Argentina · Aristida Genez Alcaraz",
+   "gs": 465000
+  },
+  {
+   "d": "2026-09-05",
+   "t": "in",
+   "usd": 156.04,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Clara Fiol",
+   "gs": 930000
   },
   {
    "d": "2026-09-01",
@@ -398,11 +425,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 26,
+   "traslados": 27,
    "ingresos": {
-    "planilla": 4394,
+    "planilla": 4469,
     "alohaSinFila": 0,
-    "total": 4394
+    "total": 4469
    },
    "directos": {
     "chofer": 1189,
@@ -412,7 +439,7 @@
     "otros": 29,
     "total": 1819
    },
-   "margenBruto": 2575,
+   "margenBruto": 2650,
    "cobro": {
     "stripe": 61.9,
     "aloha": null,
@@ -427,12 +454,12 @@
     "total": 104.24
    },
    "marketing": {
-    "google": 78.38,
+    "google": 89.92,
     "meta": 42.27,
-    "total": 120.65
+    "total": 132.19
    },
    "impuestos": null,
-   "resultado": 2288.21,
+   "resultado": 2351.67,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -452,8 +479,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 11,
-   "bruto": 2180.54,
+   "cobros": 13,
+   "bruto": 2414.6,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -468,8 +495,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 12996000,
-  "cobradoUsd": 2180.54,
+  "cobradoGs": 14391000,
+  "cobradoUsd": 2414.6,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -488,6 +515,12 @@
     "cobros": 5,
     "gs": 5265000,
     "usd": 883.39
+   },
+   {
+    "fecha": "2026-09-05",
+    "cobros": 2,
+    "gs": 1395000,
+    "usd": 234.06
    }
   ],
   "pruebasExcluidas": 0,
@@ -495,8 +528,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 12996000,
-  "pendienteUsd": 2180.54
+  "pendienteGs": 14391000,
+  "pendienteUsd": 2414.6
  },
  "giros": [
   {
@@ -585,7 +618,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲13 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲14.4 millones cobrados por Pagopar sin acreditar."
   }
  ]
 }
