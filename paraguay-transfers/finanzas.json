@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-07T12:55:59.667Z",
+ "generated": "2026-09-07T21:17:37.915Z",
  "tc": 5960,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2289.72,
   "stripePendiente": 524.39,
-  "pagoparPendienteUsd": 2465.6,
+  "pagoparPendienteUsd": 3761.91,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -93,15 +93,16 @@
   },
   {
    "fecha": "2026-09-07",
-   "in": 485.01,
-   "out": 0,
-   "n": 2,
+   "in": 1781.32,
+   "out": 700,
+   "n": 5,
    "porFuente": {
     "Stripe": 434,
-    "Pagopar": 51.01
+    "Pagopar": 1347.32,
+    "Manual · efectivo": -700
    },
-   "neto": 485.01,
-   "acum": 2379.97
+   "neto": 1081.32,
+   "acum": 2976.28
   }
  ],
  "movimientos": [
@@ -260,6 +261,22 @@
    "gs": 304000
   },
   {
+   "d": "2026-09-07",
+   "t": "in",
+   "usd": 966.44,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · JOHANNES OLOF VORSTER",
+   "gs": 5760000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "in",
+   "usd": 329.87,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Gustavo Ferrari",
+   "gs": 1966000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 318.12,
@@ -346,6 +363,13 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Seña traslados Driver Elizabeth Arias",
    "gs": 100000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "out",
+   "usd": 700,
+   "fuente": "Manual · efectivo",
+   "det": "Pago al chofer, traslado Asunción–Rosario (cobrado por Pagopar $929, precio $947 menos sal"
   }
  ],
  "pnl": [
@@ -401,19 +425,19 @@
    "mesLabel": "Septiembre",
    "traslados": 28,
    "ingresos": {
-    "planilla": 4518,
+    "planilla": 4835,
     "alohaSinFila": 0,
-    "total": 4518
+    "total": 4835
    },
    "directos": {
-    "chofer": 1200,
+    "chofer": 1397,
     "combustible": 491,
-    "peajes": 110,
+    "peajes": 88,
     "viaticos": 0,
     "otros": 30,
-    "total": 1831
+    "total": 2006
    },
-   "margenBruto": 2687,
+   "margenBruto": 2829,
    "cobro": {
     "stripe": 81.3,
     "aloha": null,
@@ -428,12 +452,12 @@
     "total": 104.24
    },
    "marketing": {
-    "google": 99.06,
+    "google": 109.21,
     "meta": 42.27,
-    "total": 141.33
+    "total": 151.48
    },
    "impuestos": null,
-   "resultado": 2360.13,
+   "resultado": 2491.98,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -453,8 +477,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 14,
-   "bruto": 2465.61,
+   "cobros": 16,
+   "bruto": 3761.92,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -469,8 +493,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 14695000,
-  "cobradoUsd": 2465.61,
+  "cobradoGs": 22421000,
+  "cobradoUsd": 3761.92,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -498,9 +522,9 @@
    },
    {
     "fecha": "2026-09-07",
-    "cobros": 1,
-    "gs": 304000,
-    "usd": 51.01
+    "cobros": 3,
+    "gs": 8030000,
+    "usd": 1347.32
    }
   ],
   "pruebasExcluidas": 0,
@@ -508,8 +532,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 14695000,
-  "pendienteUsd": 2465.6
+  "pendienteGs": 22421000,
+  "pendienteUsd": 3761.91
  },
  "giros": [
   {
@@ -598,7 +622,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲14.7 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲22.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
