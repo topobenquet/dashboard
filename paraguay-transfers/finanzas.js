@@ -186,7 +186,7 @@
         <colgroup><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:10%"><col style="width:22%"><col style="width:44%"></colgroup>
         <thead><tr><th>Día</th><th></th><th>Entra</th><th>Sale</th><th class="tl">Fuente</th><th class="tl">Concepto</th></tr></thead>
         <tbody>${rows}<tr class="hi"><td colspan="2">${esc(F.mesLabel)}</td><td class="pos">${f$(ti)}</td><td class="neg">${f$(to)}</td><td colspan="2" class="tl">${M.length} movimientos · neto <strong>${f$(ti - to)}</strong></td></tr></tbody></table></div>
-      <div class="info-box info-gray" style="margin-top:8px">Cada cobro aparece el día que el cliente pagó, con su riel y cliente. Cada salida trae de dónde se leyó (extracto del banco o el grupo de WhatsApp) y el monto original en guaraníes. Los traspasos entre cuentas propias no están.</div></div>`;
+      <div class="info-box info-gray" style="margin-top:8px">Cada cobro viene del procesador de pago (Stripe, Pagopar, Binance) el día que el cliente pagó. Cada salida es un movimiento del extracto bancario o un comprobante de transferencia publicado en los grupos, con su monto original en guaraníes. Lo que alguien escribió sin comprobante no entra acá: va a la lista A definir. Los traspasos entre cuentas propias no están.</div></div>`;
   }
   function activarLog() {
     const box = $("log-filtros"), tabla = $("log-tabla"); if (!box || !tabla) return;
@@ -200,6 +200,18 @@
       if (f === "*") { tipo = "*"; src = null; } else if (f.startsWith("src:")) { src = src === f.slice(4) ? null : f.slice(4); } else { tipo = tipo === f ? "*" : f; } apply(); });
   }
 
+
+  /* ── A definir: mencionado en WhatsApp o rendido por un chofer, SIN comprobante de pago. No suma. ── */
+  function aDefinir() {
+    const A = F.aDefinir || []; if (!A.length) return "";
+    const rows = A.map((a) => `<tr><td>${a.fecha.slice(8)}/${a.fecha.slice(5, 7)}</td><td class="tl">${esc(a.grupo)}</td><td>${fGs(a.gs)}</td><td>${f$(a.usd)}</td><td class="tl" style="white-space:normal">${esc(a.concepto)}</td><td class="tl" style="white-space:normal;color:#6B7280;font-size:10.5px">${esc(a.motivo)}</td></tr>`).join("");
+    const tot = A.reduce((s, a) => s + a.gs, 0);
+    return `<div class="section"><div class="section-title">A definir · mencionado sin comprobante · no está en la caja</div>
+      <div class="info-box info-amber" style="margin-bottom:10px">${A.length} ítems por ${fGs(tot)}. Son montos que alguien escribió en un grupo o facturas que un chofer rindió después del viaje. Como a los choferes se les paga todo antes, esto documenta el prepago y <strong>no se suma</strong>. Si algo no estaba contemplado (un lavado, un extra), decidís vos y se paga con comprobante.</div>
+      <div class="ft-wrap"><table class="ft nowrap1" style="min-width:640px"><colgroup><col style="width:7%"><col style="width:12%"><col style="width:12%"><col style="width:8%"><col style="width:31%"><col style="width:30%"></colgroup>
+      <thead><tr><th>Día</th><th class="tl">Grupo</th><th>Guaraníes</th><th>USD</th><th class="tl">Qué</th><th class="tl">Por qué no cuenta</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  }
+
   function alertas() {
     if (!F.alertas?.length) return "";
     return `<div class="section">${F.alertas.map((a) => `<div class="info-box ${a.nivel === "crit" ? "info-amber" : "info-blue"}" style="margin-bottom:6px">${a.nivel === "crit" ? "⚠️" : "•"} ${esc(a.texto)}</div>`).join("")}</div>`;
@@ -210,7 +222,7 @@
     fin.innerHTML = kpisHoy() + alertas()
       + `<div class="section"><div class="section-title">Libro de caja · ${esc(F.mesLabel)} · entradas y salidas día a día</div>${chartCaja()}${tablaCaja()}
          <div class="info-box info-gray" style="margin-top:8px">Todas las fuentes en una sola moneda (USD a ${F.tc.toLocaleString("es-PY")} ₲/USD, ${esc(F.fuenteTc)}). Las transferencias entre cuentas propias no cuentan. La publicidad se paga con una tarjeta fuera de este circuito y no aparece acá, sí en el P&amp;L.</div></div>`
-      + logMovimientos() + pagoparPanel() + pnlTabla() + rielesTabla();
+      + logMovimientos() + aDefinir() + pagoparPanel() + pnlTabla() + rielesTabla();
     activarLog();   // después del innerHTML, si no los listeners se pierden
   }
 
