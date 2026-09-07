@@ -23,6 +23,12 @@
     const stripe = (s.stripeDisponible || 0) + (s.stripePendiente || 0);
     const p = F.pnl[F.pnl.length - 1];
     return `<div class="section"><div class="section-title">Caja hoy · ${esc(s.fecha)}</div>
+      <div class="kpi-row kpi-row-4" style="margin-bottom:10px">
+        ${kpi(`Entradas ${esc(p.mesLabel)}`, f$(F.caja.reduce((a, d) => a + d.in, 0)), `${F.movimientos.filter((m) => m.t === "in").length} cobros · Stripe, Pagopar, Binance`, "pos")}
+        ${kpi(`Salidas ${esc(p.mesLabel)}`, f$(F.caja.reduce((a, d) => a + d.out, 0)), `${F.movimientos.filter((m) => m.t === "out").length} pagos con comprobante · ${fGs(F.movimientos.filter((m) => m.t === "out").reduce((a, m) => a + (m.gs || 0), 0))}`, "neg")}
+        ${kpi(`Neto de caja ${esc(p.mesLabel)}`, f$(F.caja.length ? F.caja[F.caja.length - 1].acum : 0), "entradas menos salidas, acumulado del mes")}
+        ${kpi("A definir", (F.aDefinir || []).length ? fGs((F.aDefinir || []).reduce((a, x) => a + x.gs, 0)) : "–", `${(F.aDefinir || []).length} ítems mencionados sin comprobante, no suman`)}
+      </div>
       <div class="kpi-row kpi-row-5">
         ${kpi("En bancos de Paraguay", f$(cajaPY), `ueno ${fGs(s.uenoGs)}${s.uenoFecha ? " al " + s.uenoFecha.slice(8) + "/" + s.uenoFecha.slice(5, 7) + (s.uenoMomento === "inicio" ? " (inicio del día)" : s.uenoMomento === "cierre" ? " (cierre)" : "") : ""} · Itaú ${fGs(s.itauGs)}`, cajaPY < 500 ? "neg" : "")}
         ${kpi("Pagopar sin acreditar", f$(s.pagoparPendienteUsd), `${fGs(F.pagopar.pendienteGs)} · liquida ${esc(F.pagopar.liquida)}`)}
