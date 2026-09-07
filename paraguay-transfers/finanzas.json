@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-07T12:47:58.748Z",
+ "generated": "2026-09-07T12:55:59.667Z",
  "tc": 5960,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,7 +7,10 @@
  "saldos": {
   "fecha": "2026-09-07",
   "itauGs": 43605,
-  "uenoGs": 4673836,
+  "uenoGs": 10165029,
+  "uenoFecha": "2026-09-07",
+  "uenoMomento": "inicio",
+  "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2289.72,
   "stripePendiente": 524.39,
   "pagoparPendienteUsd": 2465.6,
@@ -686,6 +689,50 @@
    "usd": 105.7,
    "concepto": "combustible",
    "motivo": "mencionado en el chat, sin comprobante"
+  }
+ ],
+ "saldosHistorial": [
+  {
+   "fecha": "2026-09-01",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 4673836,
+   "usd": 784.2
+  },
+  {
+   "fecha": "2026-09-02",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 1841192,
+   "usd": 308.92
+  },
+  {
+   "fecha": "2026-09-02",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 1591192,
+   "usd": 266.98
+  },
+  {
+   "fecha": "2026-09-03",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 1591192,
+   "usd": 266.98
+  },
+  {
+   "fecha": "2026-09-04",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 16601695,
+   "usd": 2785.52
+  },
+  {
+   "fecha": "2026-09-07",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 10165029,
+   "usd": 1705.54
   }
  ]
 }

@@ -24,7 +24,7 @@
     const p = F.pnl[F.pnl.length - 1];
     return `<div class="section"><div class="section-title">Caja hoy · ${esc(s.fecha)}</div>
       <div class="kpi-row kpi-row-5">
-        ${kpi("En bancos de Paraguay", f$(cajaPY), `Itaú ${fGs(s.itauGs)} · ueno ${fGs(s.uenoGs)}`, cajaPY < 500 ? "neg" : "")}
+        ${kpi("En bancos de Paraguay", f$(cajaPY), `ueno ${fGs(s.uenoGs)}${s.uenoFecha ? " al " + s.uenoFecha.slice(8) + "/" + s.uenoFecha.slice(5, 7) + (s.uenoMomento === "inicio" ? " (inicio del día)" : s.uenoMomento === "cierre" ? " (cierre)" : "") : ""} · Itaú ${fGs(s.itauGs)}`, cajaPY < 500 ? "neg" : "")}
         ${kpi("Pagopar sin acreditar", f$(s.pagoparPendienteUsd), `${fGs(F.pagopar.pendienteGs)} · liquida ${esc(F.pagopar.liquida)}`)}
         ${kpi("Dormido en Stripe", f$(stripe), `${f$(s.stripeDisponible)} disponible · ${f$(s.stripePendiente)} pendiente`)}
         ${kpi(`Resultado ${esc(p.mesLabel)}`, f$(p.resultado), `${fp(p.resultado / p.ingresos.total)} sobre ingresos`, p.resultado >= 0 ? "pos" : "neg")}
@@ -212,6 +212,18 @@
       <thead><tr><th>Día</th><th class="tl">Grupo</th><th>Guaraníes</th><th>USD</th><th class="tl">Qué</th><th class="tl">Por qué no cuenta</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
   }
 
+
+  /* ── Saldo de ueno por día: capturas que Majo publica en ParaguayTransfers.Pagos ── */
+  function saldosHistorial() {
+    const H = (F.saldosHistorial || []).filter((h) => h.cuenta === "ueno"); if (!H.length) return "";
+    const rows = H.map((h, i) => { const prev = H[i - 1]; const d = prev ? h.gs - prev.gs : null;
+      return `<tr><td>${dLbl(h.fecha)}</td><td class="tl">${esc(h.momento)}</td><td><strong>${fGs(h.gs)}</strong></td><td>${f$(h.usd)}</td><td class="${d == null ? "neu" : d >= 0 ? "pos" : "neg"}">${d == null ? "–" : (d >= 0 ? "+" : "−") + fGs(Math.abs(d))}</td></tr>`; }).join("");
+    return `<div class="section"><div class="section-title">Saldo de ueno · capturas diarias de Majo</div>
+      <div class="ft-wrap"><table class="ft nowrap1" style="min-width:520px"><colgroup><col style="width:14%"><col style="width:14%"><col style="width:26%"><col style="width:18%"><col style="width:28%"></colgroup>
+      <thead><tr><th>Día</th><th class="tl">Momento</th><th>Saldo</th><th>USD</th><th>Variación</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <div class="info-box info-gray" style="margin-top:8px">Es el saldo real de la cuenta según la app de ueno, leído de la captura que Majo publica en el grupo de pagos. El KPI de arriba usa la última. La variación entre capturas debería explicarse con el libro de caja del mismo día: si no cierra, falta un movimiento.</div></div>`;
+  }
+
   function alertas() {
     if (!F.alertas?.length) return "";
     return `<div class="section">${F.alertas.map((a) => `<div class="info-box ${a.nivel === "crit" ? "info-amber" : "info-blue"}" style="margin-bottom:6px">${a.nivel === "crit" ? "⚠️" : "•"} ${esc(a.texto)}</div>`).join("")}</div>`;
@@ -222,7 +234,7 @@
     fin.innerHTML = kpisHoy() + alertas()
       + `<div class="section"><div class="section-title">Libro de caja · ${esc(F.mesLabel)} · entradas y salidas día a día</div>${chartCaja()}${tablaCaja()}
          <div class="info-box info-gray" style="margin-top:8px">Todas las fuentes en una sola moneda (USD a ${F.tc.toLocaleString("es-PY")} ₲/USD, ${esc(F.fuenteTc)}). Las transferencias entre cuentas propias no cuentan. La publicidad se paga con una tarjeta fuera de este circuito y no aparece acá, sí en el P&amp;L.</div></div>`
-      + logMovimientos() + aDefinir() + pagoparPanel() + pnlTabla() + rielesTabla();
+      + saldosHistorial() + logMovimientos() + aDefinir() + pagoparPanel() + pnlTabla() + rielesTabla();
     activarLog();   // después del innerHTML, si no los listeners se pierden
   }
 
