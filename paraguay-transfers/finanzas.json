@@ -1,15 +1,15 @@
 {
- "generated": "2026-09-06T10:21:20.560Z",
+ "generated": "2026-09-07T10:21:17.647Z",
  "tc": 5960,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-06",
+  "fecha": "2026-09-07",
   "itauGs": 43605,
   "uenoGs": 4673836,
   "stripeDisponible": 2289.72,
-  "stripePendiente": 61.54,
+  "stripePendiente": 109.79,
   "pagoparPendienteUsd": 2414.6,
   "relay": null,
   "binance": null,
@@ -79,6 +79,19 @@
    },
    "neto": 234.06,
    "acum": 1759.26
+  },
+  {
+   "fecha": "2026-09-06",
+   "in": 0,
+   "out": 663.25,
+   "n": 14,
+   "porFuente": {
+    "WhatsApp · Alfredo": -400,
+    "WhatsApp · Luis": -246.47,
+    "WhatsApp · Pagos (Majo)": -16.78
+   },
+   "neto": -663.25,
+   "acum": 1096.01
   }
  ],
  "movimientos": [
@@ -372,6 +385,118 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Transferencia ueno a Centyneg E.A.S. Unipersonal (comprobant",
    "gs": 1500000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 20.13,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago Pend.: Gs",
+   "gs": 120000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 22.82,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "1.- Gs. Peajes",
+   "gs": 136000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 18.46,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "4.- Gs Lavadero",
+   "gs": 110000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 20.47,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "6.- GS Interés por uso de ATM/Crédito Se carga Gasoil; Se re",
+   "gs": 122000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 20.13,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "pago pendiente",
+   "gs": 120000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 100.67,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "viaje Pto Iguazu hoy",
+   "gs": 600000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 40.27,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "viático",
+   "gs": 240000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 134.23,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "combustible",
+   "gs": 800000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 22.82,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "peajes",
+   "gs": 136000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 22.82,
+   "fuente": "WhatsApp · Luis",
+   "det": "peajes..",
+   "gs": 136000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 95.13,
+   "fuente": "WhatsApp · Luis",
+   "det": "combustible",
+   "gs": 567000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 22.82,
+   "fuente": "WhatsApp · Luis",
+   "det": "peaje.....",
+   "gs": 136000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 105.7,
+   "fuente": "WhatsApp · Luis",
+   "det": "combustible",
+   "gs": 630000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 16.78,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Seña traslados driver Elizabeth Arias",
+   "gs": 100000
   }
  ],
  "pnl": [
@@ -454,12 +579,12 @@
     "total": 104.24
    },
    "marketing": {
-    "google": 89.92,
+    "google": 96.07,
     "meta": 42.27,
-    "total": 132.19
+    "total": 138.34
    },
    "impuestos": null,
-   "resultado": 2351.67,
+   "resultado": 2345.52,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
