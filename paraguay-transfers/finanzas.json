@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-07T21:19:02.286Z",
+ "generated": "2026-09-07T21:29:02.781Z",
  "tc": 5960,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -94,15 +94,16 @@
   {
    "fecha": "2026-09-07",
    "in": 1781.32,
-   "out": 700,
-   "n": 5,
+   "out": 992.46,
+   "n": 8,
    "porFuente": {
     "Stripe": 434,
     "Pagopar": 1347.32,
+    "WhatsApp · Pagos (Majo)": -292.46,
     "Manual · efectivo": -700
    },
-   "neto": 1081.32,
-   "acum": 2976.28
+   "neto": 788.86,
+   "acum": 2683.82
   }
  ],
  "movimientos": [
@@ -363,6 +364,30 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Seña traslados Driver Elizabeth Arias",
    "gs": 100000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "out",
+   "usd": 41.95,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago transfer CDE-hotel Hub ASU PAX: Seohyun",
+   "gs": 250000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "out",
+   "usd": 159.4,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago transfer saldo CDE - HUB ASU PAX: Seohyun",
+   "gs": 950000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "out",
+   "usd": 91.11,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Gastos Drive Alfredo. Viaje Pto Iguazu 04/09",
+   "gs": 543000
   },
   {
    "d": "2026-09-07",
@@ -713,6 +738,22 @@
    "usd": 105.7,
    "concepto": "combustible",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-07",
+   "grupo": "Alfredo",
+   "gs": 528008,
+   "usd": 88.59,
+   "concepto": "Combustible Shell San Bernardino",
+   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+  },
+  {
+   "fecha": "2026-09-07",
+   "grupo": "Alfredo",
+   "gs": 520000,
+   "usd": 87.25,
+   "concepto": "Carga de combustible 50,77 Lt",
+   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
   }
  ],
  "saldosHistorial": [
