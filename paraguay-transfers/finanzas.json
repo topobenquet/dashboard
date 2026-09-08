@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T10:20:35.045Z",
+ "generated": "2026-09-08T12:30:37.899Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-09-08",
   "itauGs": 43605,
-  "uenoGs": 10165029,
-  "uenoFecha": "2026-09-07",
+  "uenoGs": 8422029,
+  "uenoFecha": "2026-09-08",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2313.69,
   "stripePendiente": 500.42,
-  "pagoparPendienteUsd": 3768.24,
+  "pagoparPendienteUsd": 3872.44,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -104,6 +104,18 @@
    },
    "neto": 790.64,
    "acum": 2686.14
+  },
+  {
+   "fecha": "2026-09-08",
+   "in": 104.2,
+   "out": 205.04,
+   "n": 2,
+   "porFuente": {
+    "Pagopar": 104.2,
+    "WhatsApp · Pagos (Majo)": -205.04
+   },
+   "neto": -100.84,
+   "acum": 2585.3
   }
  ],
  "movimientos": [
@@ -278,6 +290,14 @@
    "gs": 1966000
   },
   {
+   "d": "2026-09-08",
+   "t": "in",
+   "usd": 104.2,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sebastian Suhr",
+   "gs": 620000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 318.66,
@@ -390,6 +410,14 @@
    "gs": 543000
   },
   {
+   "d": "2026-09-08",
+   "t": "out",
+   "usd": 205.04,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "ASU-CDE 03/09 500.000",
+   "gs": 1220000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -448,21 +476,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 28,
+   "traslados": 29,
    "ingresos": {
     "planilla": 4835,
     "alohaSinFila": 0,
     "total": 4835
    },
    "directos": {
-    "chofer": 1397,
+    "chofer": 1385,
     "combustible": 491,
     "peajes": 88,
     "viaticos": 0,
     "otros": 30,
-    "total": 2006
+    "total": 1994
    },
-   "margenBruto": 2829,
+   "margenBruto": 2841,
    "cobro": {
     "stripe": 81.3,
     "aloha": null,
@@ -477,12 +505,12 @@
     "total": 104.41
    },
    "marketing": {
-    "google": 109.27,
+    "google": 110.21,
     "meta": 42.27,
-    "total": 151.54
+    "total": 152.48
    },
    "impuestos": null,
-   "resultado": 2491.75,
+   "resultado": 2502.81,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -502,8 +530,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 16,
-   "bruto": 3768.21,
+   "cobros": 17,
+   "bruto": 3872.41,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -518,8 +546,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 22421000,
-  "cobradoUsd": 3768.21,
+  "cobradoGs": 23041000,
+  "cobradoUsd": 3872.41,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -550,6 +578,12 @@
     "cobros": 3,
     "gs": 8030000,
     "usd": 1349.58
+   },
+   {
+    "fecha": "2026-09-08",
+    "cobros": 1,
+    "gs": 620000,
+    "usd": 104.2
    }
   ],
   "pruebasExcluidas": 0,
@@ -557,8 +591,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 22421000,
-  "pendienteUsd": 3768.24
+  "pendienteGs": 23041000,
+  "pendienteUsd": 3872.44
  },
  "giros": [
   {
@@ -647,7 +681,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲22.4 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲23 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -798,6 +832,13 @@
    "momento": "inicio",
    "gs": 10165029,
    "usd": 1708.41
+  },
+  {
+   "fecha": "2026-09-08",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 8422029,
+   "usd": 1415.47
   }
  ]
 }
