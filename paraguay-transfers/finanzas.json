@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T12:30:37.899Z",
+ "generated": "2026-09-08T14:30:18.957Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2313.69,
-  "stripePendiente": 500.42,
+  "stripePendiente": 509.89,
   "pagoparPendienteUsd": 3872.44,
   "relay": null,
   "binance": null,
@@ -108,14 +108,14 @@
   {
    "fecha": "2026-09-08",
    "in": 104.2,
-   "out": 205.04,
-   "n": 2,
+   "out": 221.51,
+   "n": 3,
    "porFuente": {
     "Pagopar": 104.2,
-    "WhatsApp · Pagos (Majo)": -205.04
+    "WhatsApp · Pagos (Majo)": -221.51
    },
-   "neto": -100.84,
-   "acum": 2585.3
+   "neto": -117.31,
+   "acum": 2568.83
   }
  ],
  "movimientos": [
@@ -416,6 +416,14 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "ASU-CDE 03/09 500.000",
    "gs": 1220000
+  },
+  {
+   "d": "2026-09-08",
+   "t": "out",
+   "usd": 16.47,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago traslado 07/09 pax: Ali Jamal (Khushroo)",
+   "gs": 98000
   },
   {
    "d": "2026-09-07",
