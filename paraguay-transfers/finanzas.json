@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T14:30:18.957Z",
+ "generated": "2026-09-08T16:38:03.669Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2313.69,
-  "stripePendiente": 509.89,
+  "stripePendiente": 895.08,
   "pagoparPendienteUsd": 3872.44,
   "relay": null,
   "binance": null,
@@ -107,18 +107,26 @@
   },
   {
    "fecha": "2026-09-08",
-   "in": 104.2,
+   "in": 501.2,
    "out": 221.51,
-   "n": 3,
+   "n": 4,
    "porFuente": {
+    "Stripe": 397,
     "Pagopar": 104.2,
     "WhatsApp · Pagos (Majo)": -221.51
    },
-   "neto": -117.31,
-   "acum": 2568.83
+   "neto": 279.69,
+   "acum": 2965.83
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-08",
+   "t": "in",
+   "usd": 397,
+   "fuente": "Stripe",
+   "det": "Silvio Lima"
+  },
   {
    "d": "2026-09-07",
    "t": "in",
@@ -500,10 +508,10 @@
    },
    "margenBruto": 2841,
    "cobro": {
-    "stripe": 81.3,
+    "stripe": 93.11,
     "aloha": null,
     "pagopar": null,
-    "total": 81.3
+    "total": 93.11
    },
    "estructura": {
     "seguro": 104.41,
@@ -513,12 +521,12 @@
     "total": 104.41
    },
    "marketing": {
-    "google": 110.21,
+    "google": 115.74,
     "meta": 42.27,
-    "total": 152.48
+    "total": 158.01
    },
    "impuestos": null,
-   "resultado": 2502.81,
+   "resultado": 2485.47,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -530,10 +538,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 5,
-   "bruto": 1731,
-   "comision": 81.3,
-   "pct": 4.7,
+   "cobros": 6,
+   "bruto": 2128,
+   "comision": 93.11,
+   "pct": 4.38,
    "nota": "medido cobro por cobro"
   },
   {
