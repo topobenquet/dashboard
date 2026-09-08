@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T18:30:05.945Z",
+ "generated": "2026-09-08T20:30:51.268Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-09-08",
   "itauGs": 43605,
-  "uenoGs": 8422029,
+  "uenoGs": 11390402,
   "uenoFecha": "2026-09-08",
-  "uenoMomento": "inicio",
+  "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2313.69,
   "stripePendiente": 895.08,
-  "pagoparPendienteUsd": 3872.44,
+  "pagoparPendienteUsd": 3976.64,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -107,16 +107,16 @@
   },
   {
    "fecha": "2026-09-08",
-   "in": 501.2,
-   "out": 221.51,
-   "n": 4,
+   "in": 605.4,
+   "out": 615.43,
+   "n": 7,
    "porFuente": {
     "Stripe": 397,
-    "Pagopar": 104.2,
-    "WhatsApp · Pagos (Majo)": -221.51
+    "Pagopar": 208.4,
+    "WhatsApp · Pagos (Majo)": -615.43
    },
-   "neto": 279.69,
-   "acum": 2965.83
+   "neto": -10.03,
+   "acum": 2676.11
   }
  ],
  "movimientos": [
@@ -306,6 +306,14 @@
    "gs": 620000
   },
   {
+   "d": "2026-09-08",
+   "t": "in",
+   "usd": 104.2,
+   "fuente": "Pagopar",
+   "det": "PIX · Gustavo Napoleão",
+   "gs": 620000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 318.66,
@@ -434,6 +442,22 @@
    "gs": 98000
   },
   {
+   "d": "2026-09-08",
+   "t": "out",
+   "usd": 220.81,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "- Pago viaje Foz 07/09 GUSTAVO Gs. 1.284.000 · Combustible 728.000 · Viático 120.000 · Pea",
+   "gs": 1313800
+  },
+  {
+   "d": "2026-09-08",
+   "t": "out",
+   "usd": 173.11,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Copipunto SA (Banco Atlas)",
+   "gs": 1030000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -492,7 +516,7 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 30,
+   "traslados": 31,
    "ingresos": {
     "planilla": 5282,
     "alohaSinFila": 0,
@@ -521,12 +545,12 @@
     "total": 104.41
    },
    "marketing": {
-    "google": 115.6,
+    "google": 117.1,
     "meta": 42.27,
-    "total": 157.87
+    "total": 159.37
    },
    "impuestos": null,
-   "resultado": 2719.61,
+   "resultado": 2718.11,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -546,8 +570,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 17,
-   "bruto": 3872.41,
+   "cobros": 18,
+   "bruto": 3976.61,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -562,8 +586,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 23041000,
-  "cobradoUsd": 3872.41,
+  "cobradoGs": 23661000,
+  "cobradoUsd": 3976.61,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -597,9 +621,9 @@
    },
    {
     "fecha": "2026-09-08",
-    "cobros": 1,
-    "gs": 620000,
-    "usd": 104.2
+    "cobros": 2,
+    "gs": 1240000,
+    "usd": 208.4
    }
   ],
   "pruebasExcluidas": 0,
@@ -607,8 +631,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 23041000,
-  "pendienteUsd": 3872.44
+  "pendienteGs": 23661000,
+  "pendienteUsd": 3976.64
  },
  "giros": [
   {
@@ -697,7 +721,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲23 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲23.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -855,6 +879,13 @@
    "momento": "inicio",
    "gs": 8422029,
    "usd": 1415.47
+  },
+  {
+   "fecha": "2026-09-08",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 11390402,
+   "usd": 1914.35
   }
  ]
 }
