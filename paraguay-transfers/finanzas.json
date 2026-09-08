@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T20:30:51.268Z",
+ "generated": "2026-09-08T22:30:58.160Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -518,9 +518,9 @@
    "mesLabel": "Septiembre",
    "traslados": 31,
    "ingresos": {
-    "planilla": 5282,
+    "planilla": 6226,
     "alohaSinFila": 0,
-    "total": 5282
+    "total": 6226
    },
    "directos": {
     "chofer": 1598,
@@ -530,7 +530,7 @@
     "otros": 30,
     "total": 2207
    },
-   "margenBruto": 3075,
+   "margenBruto": 4019,
    "cobro": {
     "stripe": 93.11,
     "aloha": null,
@@ -550,7 +550,7 @@
     "total": 159.37
    },
    "impuestos": null,
-   "resultado": 2718.11,
+   "resultado": 3662.11,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -828,6 +828,14 @@
    "usd": 87.39,
    "concepto": "Carga de combustible 50,77 Lt",
    "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+  },
+  {
+   "fecha": "2026-09-08",
+   "grupo": "Alfredo",
+   "gs": 50000,
+   "usd": 8.4,
+   "concepto": "Solo queda agregarle si me dejan entrar en el mismo parking ",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
