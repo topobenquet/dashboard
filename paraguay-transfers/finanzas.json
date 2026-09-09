@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T14:30:10.897Z",
+ "generated": "2026-09-09T16:30:29.688Z",
  "tc": 5910,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -117,6 +117,17 @@
    },
    "neto": -34.77,
    "acum": 2660.96
+  },
+  {
+   "fecha": "2026-09-09",
+   "in": 0,
+   "out": 33.84,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Gustavo": -33.84
+   },
+   "neto": -33.84,
+   "acum": 2627.12
   }
  ],
  "movimientos": [
@@ -466,6 +477,14 @@
    "gs": 130000
   },
   {
+   "d": "2026-09-09",
+   "t": "out",
+   "usd": 33.84,
+   "fuente": "WhatsApp · Gustavo",
+   "det": "Pago driver Gustavo / Tour SanBer Pax Simone 09/09",
+   "gs": 200000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -553,12 +572,12 @@
     "total": 105.12
    },
    "marketing": {
-    "google": 118.21,
+    "google": 119.94,
     "meta": 42.27,
-    "total": 160.48
+    "total": 162.21
    },
    "impuestos": null,
-   "resultado": 3646.29,
+   "resultado": 3644.56,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
