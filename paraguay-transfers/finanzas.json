@@ -1,15 +1,15 @@
 {
- "generated": "2026-09-09T00:41:38.841Z",
+ "generated": "2026-09-09T10:20:28.360Z",
  "tc": 5910,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-08",
+  "fecha": "2026-09-09",
   "itauGs": 43605,
-  "uenoGs": 11390402,
-  "uenoFecha": "2026-09-08",
-  "uenoMomento": "actual",
+  "uenoGs": 10230402,
+  "uenoFecha": "2026-09-09",
+  "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 2313.69,
   "stripePendiente": 895.08,
@@ -108,15 +108,15 @@
   {
    "fecha": "2026-09-08",
    "in": 606.82,
-   "out": 619.59,
-   "n": 7,
+   "out": 641.59,
+   "n": 8,
    "porFuente": {
     "Stripe": 397,
     "Pagopar": 209.82,
-    "WhatsApp · Pagos (Majo)": -619.59
+    "WhatsApp · Pagos (Majo)": -641.59
    },
-   "neto": -12.77,
-   "acum": 2682.96
+   "neto": -34.77,
+   "acum": 2660.96
   }
  ],
  "movimientos": [
@@ -458,6 +458,14 @@
    "gs": 1030000
   },
   {
+   "d": "2026-09-08",
+   "t": "out",
+   "usd": 22,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago traslado Aero-Yacht 09/09 04:40hs Pax : Johana",
+   "gs": 130000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -523,14 +531,14 @@
     "total": 6226
    },
    "directos": {
-    "chofer": 1598,
+    "chofer": 1611,
     "combustible": 491,
     "peajes": 88,
     "viaticos": 0,
-    "otros": 30,
-    "total": 2207
+    "otros": 31,
+    "total": 2221
    },
-   "margenBruto": 4019,
+   "margenBruto": 4005,
    "cobro": {
     "stripe": 93.11,
     "aloha": null,
@@ -545,12 +553,12 @@
     "total": 105.12
    },
    "marketing": {
-    "google": 117.1,
+    "google": 117.49,
     "meta": 42.27,
-    "total": 159.37
+    "total": 159.76
    },
    "impuestos": null,
-   "resultado": 3661.4,
+   "resultado": 3647.01,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -894,6 +902,13 @@
    "momento": "actual",
    "gs": 11390402,
    "usd": 1927.31
+  },
+  {
+   "fecha": "2026-09-09",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 10230402,
+   "usd": 1731.03
   }
  ]
 }
