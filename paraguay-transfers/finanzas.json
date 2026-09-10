@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T10:20:09.565Z",
+ "generated": "2026-09-10T12:30:25.519Z",
  "tc": 5910,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-09-10",
   "itauGs": 43605,
-  "uenoGs": 10230402,
-  "uenoFecha": "2026-09-09",
+  "uenoGs": 10000402,
+  "uenoFecha": "2026-09-10",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3208.77,
@@ -130,6 +130,17 @@
    },
    "neto": 62.1,
    "acum": 2723.06
+  },
+  {
+   "fecha": "2026-09-10",
+   "in": 0,
+   "out": 219.97,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -219.97
+   },
+   "neto": -219.97,
+   "acum": 2503.09
   }
  ],
  "movimientos": [
@@ -503,6 +514,14 @@
    "gs": 30000
   },
   {
+   "d": "2026-09-10",
+   "t": "out",
+   "usd": 219.97,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Juan Ramon Cristaldo Vera (Banco Familiar)",
+   "gs": 1300000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -563,19 +582,19 @@
    "mesLabel": "Septiembre",
    "traslados": 31,
    "ingresos": {
-    "planilla": 6923,
+    "planilla": 7117,
     "alohaSinFila": 0,
-    "total": 6923
+    "total": 7117
    },
    "directos": {
     "chofer": 2357,
     "combustible": 491,
     "peajes": 93,
     "viaticos": 0,
-    "otros": 32,
-    "total": 2973
+    "otros": 20,
+    "total": 2961
    },
-   "margenBruto": 3950,
+   "margenBruto": 4156,
    "cobro": {
     "stripe": 93.11,
     "aloha": null,
@@ -595,7 +614,7 @@
     "total": 170.95
    },
    "impuestos": null,
-   "resultado": 3580.82,
+   "resultado": 3786.82,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -956,6 +975,13 @@
    "momento": "inicio",
    "gs": 10230402,
    "usd": 1731.03
+  },
+  {
+   "fecha": "2026-09-10",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 10000402,
+   "usd": 1692.12
   }
  ]
 }
