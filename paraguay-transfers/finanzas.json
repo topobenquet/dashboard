@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T16:30:17.156Z",
+ "generated": "2026-09-10T18:30:06.335Z",
  "tc": 5970,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3208.77,
   "stripePendiente": 2936.67,
-  "pagoparPendienteUsd": 4115.08,
+  "pagoparPendienteUsd": 4187.94,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -133,15 +133,15 @@
   },
   {
    "fecha": "2026-09-10",
-   "in": 51.76,
+   "in": 124.62,
    "out": 217.76,
-   "n": 2,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 51.76,
+    "Pagopar": 124.62,
     "WhatsApp · Pagos (Majo)": -217.76
    },
-   "neto": -166,
-   "acum": 2546.45
+   "neto": -93.14,
+   "acum": 2619.31
   }
  ],
  "movimientos": [
@@ -353,6 +353,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sebastian Suhr",
    "gs": 309000
+  },
+  {
+   "d": "2026-09-10",
+   "t": "in",
+   "usd": 72.86,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · kalila Ferraz Coelho",
+   "gs": 435000
   },
   {
    "d": "2026-09-02",
@@ -589,11 +597,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 31,
+   "traslados": 32,
    "ingresos": {
-    "planilla": 7117,
+    "planilla": 7186,
     "alohaSinFila": 0,
-    "total": 7117
+    "total": 7186
    },
    "directos": {
     "chofer": 2362,
@@ -603,7 +611,7 @@
     "otros": 32,
     "total": 2978
    },
-   "margenBruto": 4139,
+   "margenBruto": 4208,
    "cobro": {
     "stripe": 93.11,
     "aloha": null,
@@ -618,12 +626,12 @@
     "total": 104.06
    },
    "marketing": {
-    "google": 128.68,
+    "google": 131.55,
     "meta": 42.27,
-    "total": 170.95
+    "total": 173.82
    },
    "impuestos": null,
-   "resultado": 3770.88,
+   "resultado": 3837.01,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -643,8 +651,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 20,
-   "bruto": 4115.07,
+   "cobros": 21,
+   "bruto": 4187.93,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -659,8 +667,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 24567000,
-  "cobradoUsd": 4115.07,
+  "cobradoGs": 25002000,
+  "cobradoUsd": 4187.93,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -706,9 +714,9 @@
    },
    {
     "fecha": "2026-09-10",
-    "cobros": 1,
-    "gs": 309000,
-    "usd": 51.76
+    "cobros": 2,
+    "gs": 744000,
+    "usd": 124.62
    }
   ],
   "pruebasExcluidas": 0,
@@ -716,8 +724,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 24567000,
-  "pendienteUsd": 4115.08
+  "pendienteGs": 25002000,
+  "pendienteUsd": 4187.94
  },
  "giros": [
   {
@@ -806,7 +814,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲24.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲25 millones cobrados por Pagopar sin acreditar."
   },
   {
    "nivel": "warn",
