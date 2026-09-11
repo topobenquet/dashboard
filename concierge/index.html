@@ -99,14 +99,14 @@ table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overfl
 <body>
 <div class="page-header">
   <h1>🏠 Concierge Home Care of Maryland</h1>
-  <span class="subtitle">Google Ads + CRM · 2026</span>
+  <span class="subtitle">Google Ads + CRM + Monday · 2026</span>
 </div>
 <div class="updated" id="updated"><span class="dot"></span> Loading…</div>
 
 <div id="root"></div>
 
 <div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
-  Concierge Home Care of Maryland · Updates daily · Sources: Google Ads API (account 786-945-2872) · CRM (GoHighLevel)
+  Concierge Home Care of Maryland · Updates daily · Sources: Google Ads API (account 786-945-2872) · CRM (GoHighLevel) · Pipeline (Monday)
 </div>
 
 <script>
@@ -168,9 +168,28 @@ function derive(o) {
 }
 // Los meses de Google Ads y los del CRM se cruzan por "2026-08".
 function crmMonth(ym) { return (DATA.crm?.monthly||[]).find(m=>m.ym===ym) || {contacts:0,paid:0,opps:0}; }
+// Monday arranca a mitad de febrero: antes de su primer mes completo no hay
+// dato, y se muestra "–" en vez de un cero que parecería real.
+function hasMonday(ym) {
+  const s = DATA.monday?.since; if(!s) return false;
+  return ym > s.slice(0,7) || (ym === s.slice(0,7) && s.slice(8,10) === "01");
+}
+function mdMonth(ym) { return (DATA.monday?.monthly||[]).find(m=>m.ym===ym) || {items:0,assessments:0,cohortAssessed:0}; }
+function sumAssess(ym, dayCut) {
+  let n = 0;
+  for (const k in (DATA.monday?.assessDaily||{})) {
+    if (k.slice(0,7) !== ym) continue;
+    if (dayCut && +k.slice(8,10) > dayCut) continue;
+    n += DATA.monday.assessDaily[k];
+  }
+  return n;
+}
 function monthRow(m) {
-  const c = crmMonth(m.ym);
-  return derive({ ...m, leads:c.paid, opps:c.opps });
+  const c = crmMonth(m.ym), md = hasMonday(m.ym) ? mdMonth(m.ym) : null;
+  const o = derive({ ...m, leads:c.paid, opps:c.opps });
+  o.assess = md ? md.assessments : null;
+  o.cpa = md && md.assessments ? o.spend/md.assessments : null;
+  return o;
 }
 
 /* ════ 02 · MONTH TO DATE ════ */
@@ -185,12 +204,20 @@ function renderCurrent(root) {
   const vs = prevM ? " vs "+prevName : "";
   const proj = dom>0 ? c.spend/dom*dim : c.spend;
   const projL = dom>0 ? c.leads/dom*dim : c.leads;
+  // Assessments: los agendados en el período, sin importar cuándo entró el lead.
+  const md = hasMonday(curM.ym);
+  const ca = sumAssess(curM.ym, dom), pa = prevM && hasMonday(prevM.ym) ? sumAssess(prevM.ym, dom) : 0;
+  const cpa = ca ? c.spend/ca : 0, ppa = pa ? p.spend/pa : 0;
+  const la = c.leads ? ca/c.leads : 0, pla = p.leads ? pa/p.leads : 0;
   root.innerHTML += `<div class="section">
     <div class="section-title">${mName(curM.ym)} ${DATA.year} — through day ${dom} vs ${prevName} (same days)</div>
     <div class="kpi-grid">
       ${kpi(`Spend 1-${dom}`, f$(c.spend), badge(c.spend,p.spend)+vs, `${per}: ${f$(p.spend)}`)}
       ${kpi(`Leads 1-${dom}`, fn(c.leads), badge(c.leads,p.leads)+vs, `${per}: ${fn(p.leads)}`)}
       ${kpi(`Cost / lead`, c.leads?f$(c.cpl):"–", badge(c.cpl,p.cpl,true)+vs, `${per}: ${p.leads?f$(p.cpl):"–"}`)}
+      ${md?`${kpi(`Assessments 1-${dom}`, fn(ca), badge(ca,pa)+vs, `${per}: ${fn(pa)}`)}
+      ${kpi(`Cost / assessment`, ca?f$(cpa):"–", badge(cpa,ppa,true)+vs, `${per}: ${pa?f$(ppa):"–"}`)}
+      ${kpi(`Assessments per lead`, c.leads?fp(la):"–", badge(la,pla)+vs, `${per}: ${p.leads?fp(pla):"–"}`)}`:""}
       ${kpi(`Clicks 1-${dom}`, fn(c.clicks), badge(c.clicks,p.clicks)+vs, `${per}: ${fn(p.clicks)}`)}
       ${kpi(`Click → lead`, fp(c.cvr), badge(c.cvr,p.cvr)+vs, `${per}: ${fp(p.cvr)}`)}
       ${kpi(`CPC`, "$"+fd2(c.cpc), badge(c.cpc,p.cpc,true)+vs, `${per}: $${fd2(p.cpc)}`)}
@@ -206,50 +233,61 @@ function renderDaily(root) {
   const M = DATA.months, m = M[M.length-1];
   const dates = Object.keys(DATA.daily||{}).filter(k=>k.slice(0,7)===m.ym).sort();
   if(!dates.length) return;
-  let rows="", t={spend:0,clicks:0,leads:0};
+  const AD = DATA.monday?.assessDaily || {}, md = hasMonday(m.ym);
+  let rows="", t={spend:0,clicks:0,leads:0,assess:0};
   dates.forEach(k=>{
     const d = DATA.daily[k], c = (DATA.crm?.daily||{})[k] || {contacts:0,paid:0};
-    t.spend+=d.spend; t.clicks+=d.clicks; t.leads+=c.paid;
+    t.spend+=d.spend; t.clicks+=d.clicks; t.leads+=c.paid; t.assess+=AD[k]||0;
     const cpl = c.paid>0 ? d.spend/c.paid : null;
     rows += `<tr><td>${k.slice(5,7)}/${k.slice(8,10)}</td>
       <td>${f$(d.spend)}</td><td>${fn(d.clicks)}</td>
       <td><strong>${c.paid>0?fn(c.paid):"–"}</strong></td>
-      <td class="${cpl!==null&&cpl<=25?"pos":"neu"}">${cpl!==null?f$(cpl):"–"}</td></tr>`;
+      <td class="${cpl!==null&&cpl<=25?"pos":"neu"}">${cpl!==null?f$(cpl):"–"}</td>
+      ${md?`<td>${AD[k]?fn(AD[k]):"–"}</td>`:""}</tr>`;
   });
   rows += `<tr class="hi"><td>Total</td><td>${f$(t.spend)}</td><td>${fn(t.clicks)}</td>
-    <td>${fn(t.leads)}</td><td>${t.leads?f$(t.spend/t.leads):"–"}</td></tr>`;
+    <td>${fn(t.leads)}</td><td>${t.leads?f$(t.spend/t.leads):"–"}</td>${md?`<td>${fn(t.assess)}</td>`:""}</tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — day by day</div>
     ${chartDaily(dates)}
     <div class="ft-wrap"><table class="ft nowrap1" style="min-width:360px;">
-      <thead><tr><th>Date</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>$/lead</th></tr></thead>
+      <thead><tr><th>Date</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>$/lead</th>${md?"<th>Assessments</th>":""}</tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;"><strong>Leads</strong> are CRM contacts whose first attribution carries a gclid — one person, counted once, traceable to a paid click.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;"><strong>Leads</strong> are CRM contacts whose first attribution carries a gclid — one person, counted once, traceable to a paid click.${md?` <strong>Assessments</strong> are counted on the day they were scheduled in Monday, whatever day the lead came in.`:""}</div></div>`;
 }
 
 /* ════ 04 · WHERE THE LEADS STAND ════ */
+// Con Monday: la etapa de hoy y, al lado, cuántos PASARON por cada etapa (sale
+// del historial de cambios del board). Sin Monday, vuelve a la foto de GHL.
 function renderStages(root) {
   const M = DATA.months, m = M[M.length-1];
-  const st = (DATA.crm?.stages||{})[m.ym];
+  const MD = DATA.monday && hasMonday(m.ym) ? DATA.monday : null;
+  const src = MD || DATA.crm;
+  const st = (src?.stages||{})[m.ym];
   if(!st) return;
+  const pas = MD ? (MD.passed||{})[m.ym] || {} : null;
   // Se listan TODAS las etapas del pipeline, tengan leads o no: una etapa en
   // cero es información (nadie quedó ahí), y esconderla hace que parezca que no
   // existe. Las que aparecen en los datos pero no en el pipeline van al final.
-  const order = DATA.crm.stageOrder || [];
+  const order = src.stageOrder || [];
   const rest = Object.keys(st).filter(s=>!order.includes(s));
   const list = [...order, ...rest];
-  const n = s => st[s] || 0;
+  const n = s => st[s] || 0, np = s => pas?.[s] || 0;
   const total = list.reduce((a,s)=>a+n(s),0) || 1;
   const max = Math.max(1, ...list.map(n));
-  const rows = list.map(s=>`<tr${n(s)?"":' style="opacity:.55"'}>
+  const rows = list.map(s=>`<tr${n(s)||np(s)?"":' style="opacity:.55"'}>
     <td class="tl"><strong>${esc(s)}</strong></td>
-    <td style="width:40%"><div style="background:#EFF6FF;border-radius:4px;height:16px;">
+    <td style="width:34%"><div style="background:#EFF6FF;border-radius:4px;height:16px;">
       <div style="background:${/not qualified|not interested/i.test(s)?"#DC2626":"#1F4E78"};height:16px;border-radius:4px;width:${(n(s)/max*100).toFixed(1)}%"></div></div></td>
-    <td><strong>${n(s)?fn(n(s)):"–"}</strong></td><td>${n(s)?fp(n(s)/total):"–"}</td></tr>`).join("");
-  root.innerHTML += `<div class="section"><div class="section-title">${mName(m.ym)} ${DATA.year} — where those leads stand today</div>
-    <div class="ft-wrap"><table class="ft" style="min-width:440px;">
-      <thead><tr><th class="tl">Pipeline stage</th><th></th><th>Leads</th><th>% of month</th></tr></thead>
+    <td><strong>${n(s)?fn(n(s)):"–"}</strong></td><td>${n(s)?fp(n(s)/total):"–"}</td>
+    ${pas?`<td>${np(s)?fn(np(s)):"–"}</td>`:""}</tr>`).join("");
+  const note = MD
+    ? `The same paid-search leads, as tracked on the Monday pipeline board, grouped by the stage they sit in <strong>today</strong>. <strong>Passed through</strong> counts every lead of the month that was ever in that stage, even if it has moved on since; that is why it can be higher than today's number. Leads take a while to get there: the median lead waits about three weeks before its assessment is scheduled, so the current month always looks light on the later stages.`
+    : `The same leads as everywhere else on this page, paid-search only, grouped by the stage they sit in <strong>today</strong>. It is a snapshot, not a funnel: a lead that passed through a stage and moved on is only counted where it sits now, which is why a stage nobody rests in reads zero all year.`;
+  root.innerHTML += `<div class="section"><div class="section-title">Leads that came in during ${mName(m.ym)} ${DATA.year}: where they stand today</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:${pas?520:440}px;">
+      <thead><tr><th class="tl">Pipeline stage</th><th></th><th>Today</th><th>% of month</th>${pas?"<th>Passed through</th>":""}</tr></thead>
       <tbody>${rows}</tbody></table></div>
-    <div class="info-box info-gray" style="margin-top:8px;">The same leads as everywhere else on this page — paid-search only — grouped by the stage they sit in <strong>today</strong>. It is a snapshot, not a funnel: a lead that passed through a stage and moved on is only counted where it sits now, which is why a stage nobody rests in reads zero all year.</div></div>`;
+    <div class="info-box info-gray" style="margin-top:8px;">${note}</div></div>`;
 }
 
 /* ════ 05 · MONTHLY ════ */
@@ -262,19 +300,25 @@ function renderMonthly(root) {
     <td><strong>${fn(m.leads)}</strong></td>
     <td class="${m.cpl>0&&m.cpl<=15?"pos":"neu"}">${m.leads?f$(m.cpl):"–"}</td>
     <td>${fp(m.cvr)}</td>
+    <td><strong>${m.assess!==null?fn(m.assess):"–"}</strong></td>
+    <td>${m.cpa!==null?f$(m.cpa):"–"}</td>
   </tr>`).join("");
   const y = derive(M.reduce((a,m)=>({
     spend:a.spend+m.spend, clicks:a.clicks+m.clicks, impr:a.impr+m.impr,
     leads:a.leads+m.leads,
-  }),{spend:0,clicks:0,impr:0,leads:0}));
+    // El costo por assessment del año solo cuenta el gasto de los meses con dato de Monday.
+    assess:a.assess+(m.assess||0), aspend:a.aspend+(m.assess!==null?m.spend:0),
+  }),{spend:0,clicks:0,impr:0,leads:0,assess:0,aspend:0}));
   rows += `<tr class="hi"><td>YTD</td><td>${f$(y.spend)}</td><td>${fn(y.clicks)}</td><td>$${fd2(y.cpc)}</td>
-    <td>${fp(y.ctr)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td><td>${fp(y.cvr)}</td></tr>`;
+    <td>${fp(y.ctr)}</td><td>${fn(y.leads)}</td><td>${f$(y.cpl)}</td><td>${fp(y.cvr)}</td>
+    <td>${fn(y.assess)}</td><td>${y.assess?f$(y.aspend/y.assess):"–"}</td></tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Monthly history ${DATA.year}</div>
     ${chartMonthly()}
-    <div class="ft-wrap"><table class="ft" style="min-width:520px;">
+    <div class="ft-wrap"><table class="ft" style="min-width:640px;">
       <thead><tr><th>Month</th><th>Spend</th><th>Clicks</th><th>CPC</th><th>CTR</th>
-        <th>Leads</th><th>CPL</th><th>Click→lead</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+        <th>Leads</th><th>CPL</th><th>Click→lead</th><th>Assessments</th><th>$/assessment</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    ${DATA.monday?`<div class="info-box info-gray" style="margin-top:8px;">The Monday pipeline board started on ${mName(DATA.monday.since)} ${+DATA.monday.since.slice(8,10)}, so assessments are counted from the first full month after that. Earlier months show "–" because there is no record to count from, not because there were none. Each assessment is counted in the month it was scheduled.</div>`:""}</div>`;
 }
 
 /* ════ 06 · CAMPAIGNS ════ */
@@ -311,6 +355,13 @@ function renderNote(root) {
         Spend, clicks, impressions, CTR and CPC do come from Google Ads — those it measures correctly.
         <em>Local actions</em> (directions, website visits, menu views) and the GA4 purchase are ignored entirely.
       </div>
+      ${DATA.monday?`<div style="margin-top:8px;">
+        <strong>Stages and assessments come from Monday</strong>, the pipeline board the team actually works in. The
+        board's change history shows when each lead was first moved to <em>Has assessment scheduled</em>, so an assessment is
+        counted on that day even if the lead has moved on since. Only paid-search leads are counted: each Monday item is matched
+        to its CRM contact by phone or email, and duplicates of the same person are counted once. Cost per assessment is that
+        month's spend divided by the assessments scheduled in it.
+      </div>`:""}
     </div></div>`;
 }
 
@@ -376,6 +427,8 @@ const METRICS = [
   { k:"cpc",    lbl:"CPC",    color:"#D97706", money:true  },
   { k:"leads",  lbl:"Leads",  color:"#059669", money:false },
   { k:"clicks", lbl:"Clicks", color:"#DB2777", money:false },
+  { k:"assess", lbl:"Assessments", color:"#0891B2", money:false },
+  { k:"cpa",    lbl:"$/assessment", color:"#1F4E78", money:true  },
 ];
 let MSEL = new Set(["spend","leads"]);
 
