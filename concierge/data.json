@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T14:30:57.073Z",
+  "generated": "2026-09-11T15:38:27.666Z",
   "lastSyncLabel": "11 Sep 2026",
   "year": 2026,
   "currentMonth": "Septiembre",
@@ -256,18 +256,18 @@
     {
       "mes": "Septiembre",
       "ym": "2026-09",
-      "spend": 2216.55,
-      "clicks": 689,
-      "impr": 6228,
+      "spend": 2256.1,
+      "clicks": 696,
+      "impr": 6315,
       "actions": {
         "Calls from ads": 18,
-        "Chat Lead": 131,
-        "Get a Callback": 141.8,
+        "Chat Lead": 134,
+        "Get a Callback": 149.8,
         "Local actions - Directions": 2,
         "Not Qualified/Not Interested": 5,
         "Local actions - Website visits": 2
       },
-      "contacto": 291,
+      "contacto": 302,
       "descartados": 5,
       "assessment": 0,
       "pipeline": 0,
@@ -4757,11 +4757,14 @@
       "leads": 0
     },
     "2026-09-11": {
-      "spend": 70.15,
-      "clicks": 15,
-      "impr": 154,
-      "actions": {},
-      "contacto": 0,
+      "spend": 109.7,
+      "clicks": 22,
+      "impr": 241,
+      "actions": {
+        "Chat Lead": 3,
+        "Get a Callback": 8
+      },
+      "contacto": 11,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4774,10 +4777,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1586.85,
-      "clicks": 420,
-      "impr": 3786,
-      "contacto": 180,
+      "spend": 1626.4,
+      "clicks": 427,
+      "impr": 3873,
+      "contacto": 188,
       "descartados": 3,
       "assessment": 0,
       "pipeline": 0,
@@ -4791,7 +4794,7 @@
       "spend": 629.7,
       "clicks": 269,
       "impr": 2442,
-      "contacto": 111,
+      "contacto": 114,
       "descartados": 2,
       "assessment": 0,
       "pipeline": 0,
@@ -4799,6 +4802,152 @@
       "leads": 2
     }
   ],
+  "campaignsByMonth": {
+    "2026-01": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1542.39,
+        "clicks": 690,
+        "impr": 4544
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 912.11,
+        "clicks": 658,
+        "impr": 5046
+      }
+    ],
+    "2026-02": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1399.73,
+        "clicks": 558,
+        "impr": 3548
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 912.08,
+        "clicks": 537,
+        "impr": 3753
+      }
+    ],
+    "2026-03": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1539.73,
+        "clicks": 556,
+        "impr": 3466
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 912.72,
+        "clicks": 547,
+        "impr": 4212
+      }
+    ],
+    "2026-04": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1540.55,
+        "clicks": 593,
+        "impr": 3694
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 910.31,
+        "clicks": 538,
+        "impr": 4278
+      }
+    ],
+    "2026-05": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1434.37,
+        "clicks": 510,
+        "impr": 3579
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 898.58,
+        "clicks": 495,
+        "impr": 4573
+      }
+    ],
+    "2026-06": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 2128.2,
+        "clicks": 631,
+        "impr": 4123
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 908.42,
+        "clicks": 470,
+        "impr": 3740
+      }
+    ],
+    "2026-07": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 2389.56,
+        "clicks": 704,
+        "impr": 4824
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 1145.3,
+        "clicks": 539,
+        "impr": 4347
+      }
+    ],
+    "2026-08": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 3701.2,
+        "clicks": 891,
+        "impr": 6277
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 1745.52,
+        "clicks": 770,
+        "impr": 6357
+      }
+    ],
+    "2026-09": [
+      {
+        "name": "Search Campaign Maryland",
+        "status": "ENABLED",
+        "spend": 1626.4,
+        "clicks": 427,
+        "impr": 3873
+      },
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 629.7,
+        "clicks": 269,
+        "impr": 2442
+      }
+    ]
+  },
   "crm": {
     "source": "GHL",
     "daily": {
