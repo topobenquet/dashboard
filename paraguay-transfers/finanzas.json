@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T20:31:16.621Z",
+ "generated": "2026-09-11T22:30:27.113Z",
  "tc": 6050,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -146,15 +146,15 @@
   {
    "fecha": "2026-09-11",
    "in": 1768.43,
-   "out": 330.58,
-   "n": 3,
+   "out": 528.93,
+   "n": 4,
    "porFuente": {
     "Binance": 100,
     "Pagopar": 1668.43,
-    "WhatsApp · Pagos (Majo)": -330.58
+    "WhatsApp · Pagos (Majo)": -528.93
    },
-   "neto": 1437.85,
-   "acum": 4044.73
+   "neto": 1239.5,
+   "acum": 3846.38
   }
  ],
  "movimientos": [
@@ -575,6 +575,14 @@
    "gs": 2000000
   },
   {
+   "d": "2026-09-11",
+   "t": "out",
+   "usd": 198.35,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Traslado Cde Asu/ Pax Yuliia",
+   "gs": 1200000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -662,12 +670,12 @@
     "total": 102.69
    },
    "marketing": {
-    "google": 146.23,
+    "google": 147.71,
     "meta": 42.27,
-    "total": 188.5
+    "total": 189.98
    },
    "impuestos": null,
-   "resultado": 3806.7,
+   "resultado": 3805.22,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
