@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T22:30:06.210Z",
+ "generated": "2026-09-11T00:30:34.467Z",
  "tc": 5970,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -11,8 +11,8 @@
   "uenoFecha": "2026-09-10",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 3208.77,
-  "stripePendiente": 3224.76,
+  "stripeDisponible": 6121.47,
+  "stripePendiente": 312.06,
   "pagoparPendienteUsd": 4187.94,
   "relay": null,
   "binance": null,
@@ -626,12 +626,12 @@
     "total": 104.06
    },
    "marketing": {
-    "google": 135.18,
+    "google": 136.54,
     "meta": 42.27,
-    "total": 177.45
+    "total": 178.81
    },
    "impuestos": null,
-   "resultado": 3833.38,
+   "resultado": 3832.02,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -818,7 +818,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "$3,209 disponibles en Stripe sin girar."
+   "texto": "$6,121 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
@@ -933,6 +933,30 @@
    "usd": 8.38,
    "concepto": "Solo queda agregarle si me dejan entrar en el mismo parking ",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-10",
+   "grupo": "Luis",
+   "gs": 487911,
+   "usd": 81.73,
+   "concepto": "Compra supermercado (alimentos y limpieza)",
+   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+  },
+  {
+   "fecha": "2026-09-10",
+   "grupo": "Luis",
+   "gs": 46000,
+   "usd": 7.71,
+   "concepto": "Lona 2x3m azul - Ferretería Ferrex",
+   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+  },
+  {
+   "fecha": "2026-09-10",
+   "grupo": "Luis",
+   "gs": 389154,
+   "usd": 65.18,
+   "concepto": "Combustible Nafta Aratiri 97 - Tecnifrost",
+   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
   }
  ],
  "saldosHistorial": [
