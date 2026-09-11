@@ -82,6 +82,19 @@
 .tbl-wrap td{padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap}
 .tbl-wrap tr:last-child td{border-bottom:none}
 .tbl-wrap tr.tr-total td{font-weight:600;background:rgba(255,255,255,.03)}
+.src-row{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.src{font-size:11px;border-radius:6px;padding:4px 9px;border:1px solid var(--border);background:var(--card)}
+.src.ok{color:var(--green)} .src.warn{color:var(--yellow)} .src.off{color:var(--muted)}
+.split-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:12px}
+.split-kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.split-kpi .v{font-size:26px;font-weight:700;margin-top:4px}
+.split-kpi .s{font-size:11px;color:var(--muted);margin-top:4px}
+.nb-cell{display:flex;align-items:center;gap:8px;min-width:170px}
+.nb-bar{position:relative;flex:1;height:8px;border-radius:4px;background:var(--purple);overflow:visible}
+.nb-bar i{display:block;height:100%;border-radius:4px 0 0 4px;background:var(--blue)}
+.nb-bar b{position:absolute;top:-3px;bottom:-3px;width:2px;background:#fff;opacity:.7}
+.nb-pct{font-weight:700;min-width:48px;text-align:right}
+.ok-t{color:var(--green)} .bad-t{color:var(--orange)}
 </style>
 <body>
 <div class="container">
@@ -98,6 +111,8 @@
     <div class="month-bar-wrap"><div class="month-bar" id="month-bar" style="width:0%"></div></div>
   </div>
 
+  <div class="src-row" id="sources"></div>
+
   <h2 class="sec-title">Pacing por canal</h2>
   <div class="tbl-wrap">
     <table>
@@ -109,7 +124,20 @@
     </table>
   </div>
 
-  <h2 class="sec-title">Métricas semanales &mdash; agosto</h2>
+  <h2 class="sec-title">Split Brand vs NonBrand &mdash; Search y PMax, semanal</h2>
+  <div class="split-kpis" id="split-kpis"></div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>Semana</th><th>Search NonBrand</th><th>Search $ NB / Brand</th>
+        <th>PMax NonBrand</th><th>PMax $ NB / Brand</th><th>Search + PMax</th>
+      </tr></thead>
+      <tbody id="split-tbody"></tbody>
+    </table>
+  </div>
+  <div class="sec-note" id="split-note"></div>
+
+  <h2 class="sec-title" id="weekly-title">Métricas semanales</h2>
   <div class="tbl-wrap">
     <table>
       <thead><tr>
@@ -158,8 +186,11 @@ function renderPacing(d) {
     if (sinDato) return `<tr><td><strong>${c.name}</strong><span class="badge-manual" style="margin-left:6px">SIN CONECTOR</span></td>
       <td>${fmtUSD(c.budget)}</td><td colspan="8" style="color:var(--muted)">sin datos &mdash; no hay conector para este canal</td></tr>`;
     const [txt, col, bg] = estado(ratio);
+    const badge = c.stale
+      ? `<span class="badge-manual" style="margin-left:6px;color:var(--yellow)">DATO AL ${d.sources?.meta?.asOf || '?'}</span>`
+      : '<span class="badge-live" style="margin-left:6px">&#9679; LIVE</span>';
     return `<tr>
-      <td><strong>${c.name}</strong><span class="badge-live" style="margin-left:6px">&#9679; LIVE</span></td>
+      <td><strong>${c.name}</strong>${badge}</td>
       <td>${fmtUSD(c.budget)}</td><td>${fmtUSD(c.spend)}</td>
       <td>${pct(pctB)}</td><td>${pct(ratio)}</td>
       <td>${fmtUSD((c.budget || 0) - (c.spend || 0))}</td><td>${fmtUSD(proy)}</td>
@@ -201,8 +232,56 @@ function renderSemanal(d) {
   }).join('');
   const parcial = w.semanas.some((s) => s.parcial);
   document.getElementById('weekly-note').innerHTML =
-    'Google + Meta combinados. Los cortes semanales son los de Meta (1&ndash;7, 8&ndash;14, 15&ndash;21&hellip;).'
-    + (parcial ? ' La última semana está en curso: Meta todavía no reporta conversiones ni revenue de esos días, la atribución llega con retraso.' : '');
+    'Google + Meta + TikTok combinados. Semanas de lunes a domingo, recortadas al mes; datos hasta ayer (días completos).'
+    + (parcial ? ' La última semana está en curso, y la atribución de conversiones de Meta y TikTok todavía puede subir.' : '');
+}
+
+// Split Brand/NonBrand. La proporción se mide sobre el spend: es lo que dice cuánta
+// plata va a captar demanda nueva y cuánta a cobrar a quien ya nos buscaba.
+function renderSplit(d) {
+  const b = d.brandSplit;
+  if (!b) return;
+  const T = b.target;
+  const nb = (x) => { const tot = x.brand.spend + x.nonbrand.spend; return tot ? x.nonbrand.spend / tot : null; };
+  const both = (s) => ({ brand: { spend: s.search.brand.spend + s.pmax.brand.spend }, nonbrand: { spend: s.search.nonbrand.spend + s.pmax.nonbrand.spend } });
+  const cls = (p) => p == null ? '' : p >= T ? 'ok-t' : 'bad-t';
+  const cell = (p) => p == null ? '<td>&mdash;</td>' : `<td><div class="nb-cell">
+      <div class="nb-bar"><i style="width:${(p * 100).toFixed(1)}%"></i><b style="left:${T * 100}%"></b></div>
+      <span class="nb-pct ${cls(p)}">${(p * 100).toFixed(1)}%</span></div></td>`;
+  const pesos = (x) => `<td>${fmtUSD(x.nonbrand.spend)} / ${fmtUSD(x.brand.spend)}</td>`;
+  const dia = (s) => { const [, m, x] = s.split('-'); return `${x}/${m}`; };
+
+  const kpi = (lbl, x) => {
+    const p = nb(x);
+    return `<div class="split-kpi"><div class="kpi-label">${lbl} &middot; ${d.monthLabel} MTD</div>
+      <div class="v ${cls(p)}">${p == null ? '&mdash;' : (p * 100).toFixed(1) + '%'}</div>
+      <div class="s">NonBrand ${fmtUSD(x.nonbrand.spend)} &middot; Brand ${fmtUSD(x.brand.spend)} &middot; piso ${T * 100}%</div></div>`;
+  };
+  document.getElementById('split-kpis').innerHTML =
+    kpi('Search NonBrand', b.mtd.search) + kpi('PMax NonBrand', b.mtd.pmax) + kpi('Search + PMax NonBrand', both(b.mtd));
+
+  document.getElementById('split-tbody').innerHTML = b.semanas.slice().reverse().map((s) => `<tr>
+      <td><strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}</td>
+      ${cell(nb(s.search))}${pesos(s.search)}${cell(nb(s.pmax))}${pesos(s.pmax)}${cell(nb(both(s)))}
+    </tr>`).join('');
+
+  const otras = [...new Set(b.semanas.flatMap((s) => s.otras || []))];
+  document.getElementById('split-note').innerHTML =
+    `Porcentaje de NonBrand sobre el spend de Search (sin Search Remarketing) y de PMax; la línea blanca es el piso de ${T * 100}%. `
+    + 'Brand/NonBrand sale del nombre de la campaña. Semanas de lunes a domingo, la más reciente arriba.'
+    + (otras.length ? ` <span style="color:var(--yellow)">Campañas sin Brand/NonBrand en el nombre, fuera del cálculo: ${otras.join(', ')}.</span>` : '');
+}
+
+function renderFuentes(d) {
+  const s = d.sources || {};
+  const item = (lbl, x) => {
+    if (!x) return '';
+    if (x.ok) return `<span class="src ok">&#9679; ${lbl} al ${x.asOf}</span>`;
+    if (x.stale && x.asOf) return `<span class="src warn">&#9679; ${lbl}: último dato bueno ${x.asOf}</span>`;
+    return `<span class="src off">&#9675; ${lbl}: ${x.error || 'sin datos'}</span>`;
+  };
+  document.getElementById('sources').innerHTML =
+    item('Google Ads', s.google) + item('Meta', s.meta) + item('TikTok', s.tiktok) + item('Apple Search Ads', s.apple);
 }
 
 // Matriz spend canal x semana. Es la vista que responde "donde se fue la plata
@@ -266,7 +345,10 @@ fetch('data.json?v=' + Date.now())
     // El titulo se arma desde los datos: hardcodearlo es como quedo clavado en
     // "July 2026" mientras el dashboard ya mostraba agosto.
     document.title = `Pei Wei | Ads Dashboard – ${d.monthLabel}`;
+    document.getElementById('weekly-title').innerHTML = `Métricas semanales &mdash; ${d.monthLabel}`;
+    renderFuentes(d);
     renderPacing(d);
+    renderSplit(d);
     renderSemanal(d);
     renderMatriz(d);
     renderCanales(d);
