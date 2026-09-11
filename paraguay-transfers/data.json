@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-10T10:20:32.019Z",
-  "lastSyncLabel": "10 Sep 2026",
+  "generated": "2026-09-11T10:20:28.746Z",
+  "lastSyncLabel": "11 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,19 +133,19 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 120,
-      "reservas": 25,
-      "revenue": 7586,
-      "chofer": 3668,
+      "leads": 138,
+      "reservas": 26,
+      "revenue": 7849,
+      "chofer": 3673,
       "comb": 491,
       "peajes": 93,
-      "comision": 139,
+      "comision": 147,
       "reembolsos": 13,
       "otros": 19,
-      "gAds": 129,
+      "gAds": 139,
       "meta": 42.27,
       "costoSheet": 317,
-      "gananciaSheet": 45810
+      "gananciaSheet": 45798
     }
   ],
   "adsMonthly": [
@@ -207,9 +207,9 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 128.68,
-      "clicks": 132,
-      "impr": 844,
+      "spend": 138.97,
+      "clicks": 143,
+      "impr": 915,
       "conv": 4
     }
   ],
@@ -3737,8 +3737,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 11,
-      "neto": 36,
+      "choferCost": 16,
+      "neto": 20,
       "fechaReserva": "07/09/26",
       "fechaSalida": "07/09/26"
     },
@@ -3814,10 +3814,24 @@
     },
     {
       "mes": "Septiembre",
+      "route": "Aero-Villa Morra",
+      "cliente": "Kalila Ferraz Coelho",
+      "pais": "Brasil",
+      "conductor": "Gustavo Pereira",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 67,
+      "fechaReserva": "10/09/26",
+      "fechaSalida": "11/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Yacht-Aero",
       "cliente": "Ailin Medrano",
       "pais": "Ecuador",
-      "conductor": "Luis Vásquez",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 98,
       "sena": 98,
       "restante": 0,
@@ -3845,7 +3859,7 @@
       "route": "FOZ-ASU",
       "cliente": "Isabela Zomer",
       "pais": "España",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 417,
       "sena": 100,
       "restante": 317,
@@ -3859,10 +3873,10 @@
       "route": "Aero-Dazzler",
       "cliente": "Rafa 5215591984468",
       "pais": "México",
-      "conductor": "",
-      "pago": 0,
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 194,
       "sena": 100,
-      "restante": 0,
+      "restante": 94,
       "choferCost": 40,
       "neto": 100,
       "fechaReserva": "09/08/26",
@@ -3886,8 +3900,8 @@
       "mes": "Septiembre",
       "route": "Dazzler-Aero",
       "cliente": "Rafa 5215591984468",
-      "pais": "",
-      "conductor": "",
+      "pais": "México",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 0,
       "sena": 0,
       "restante": 0,
@@ -3927,7 +3941,7 @@
     {
       "mes": "Septiembre",
       "route": "Foz-ASU",
-      "cliente": "Tom",
+      "cliente": "Tom (Thomas Kirby)",
       "pais": "Inglaterra",
       "conductor": "",
       "pago": 0,
@@ -4109,7 +4123,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-10": 1,
+      "2026-09-11": 1,
+      "2026-09-10": 18,
       "2026-09-09": 12,
       "2026-09-08": 15,
       "2026-09-07": 13,
@@ -4161,6 +4176,7 @@
       "2026-09-05": 1,
       "2026-09-07": 2,
       "2026-09-08": 3,
+      "2026-09-10": 1,
       "2026-09-04": 2,
       "2026-09-09": 3
     },
@@ -4404,7 +4420,7 @@
       "2026-09-07": 13.2,
       "2026-09-08": 8.22,
       "2026-09-09": 9.83,
-      "2026-09-10": 1.36
+      "2026-09-10": 11.65
     }
   }
 }
