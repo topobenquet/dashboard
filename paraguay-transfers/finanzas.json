@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T18:30:25.957Z",
+ "generated": "2026-09-11T20:31:16.621Z",
  "tc": 6050,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,9 +7,9 @@
  "saldos": {
   "fecha": "2026-09-11",
   "itauGs": 43605,
-  "uenoGs": 10000402,
-  "uenoFecha": "2026-09-10",
-  "uenoMomento": "inicio",
+  "uenoGs": 17445364,
+  "uenoFecha": "2026-09-11",
+  "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 119.39,
   "stripePendiente": 312.06,
@@ -145,15 +145,16 @@
   },
   {
    "fecha": "2026-09-11",
-   "in": 1668.43,
+   "in": 1768.43,
    "out": 330.58,
-   "n": 2,
+   "n": 3,
    "porFuente": {
+    "Binance": 100,
     "Pagopar": 1668.43,
     "WhatsApp · Pagos (Majo)": -330.58
    },
-   "neto": 1337.85,
-   "acum": 3944.73
+   "neto": 1437.85,
+   "acum": 4044.73
   }
  ],
  "movimientos": [
@@ -198,6 +199,13 @@
    "usd": 300,
    "fuente": "Stripe",
    "det": "Hisaaki Takei"
+  },
+  {
+   "d": "2026-09-11",
+   "t": "in",
+   "usd": 100,
+   "fuente": "Binance",
+   "det": "depósito USDT"
   },
   {
    "d": "2026-09-03",
@@ -654,12 +662,12 @@
     "total": 102.69
    },
    "marketing": {
-    "google": 143.28,
+    "google": 146.23,
     "meta": 42.27,
-    "total": 185.55
+    "total": 188.5
    },
    "impuestos": null,
-   "resultado": 3809.65,
+   "resultado": 3806.7,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -687,8 +695,8 @@
   },
   {
    "riel": "Binance",
-   "cobros": 1,
-   "bruto": 247,
+   "cobros": 2,
+   "bruto": 347,
    "comision": null,
    "pct": null,
    "nota": "sin medir"
@@ -1001,6 +1009,14 @@
    "usd": 115.68,
    "concepto": "Combustible V-Power Diesel 67,29 L (Combubar Company S.R.L.)",
    "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+  },
+  {
+   "fecha": "2026-09-11",
+   "grupo": "Pagos (Majo)",
+   "gs": 100000,
+   "usd": 16.53,
+   "concepto": "GUSTAVO + Estacionamiento Aerop?",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
@@ -1073,6 +1089,20 @@
    "momento": "inicio",
    "gs": 10000402,
    "usd": 1652.96
+  },
+  {
+   "fecha": "2026-09-11",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 17445364,
+   "usd": 2883.53
+  },
+  {
+   "fecha": "2026-09-11",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 17445364,
+   "usd": 2883.53
   }
  ]
 }
