@@ -100,7 +100,7 @@
 <div class="container">
   <div class="header">
     <div class="header-logo"><span class="header-logo-icon">PW</span></div>
-    <div class="header-title">Pei Wei &mdash; Paid Media</div>
+    <div class="header-title">Pei Wei · Paid Media</div>
     <div class="header-subtitle">Monthly pacing &amp; performance</div>
     <div class="header-updated" id="last-updated">Cargando&hellip;</div>
   </div>
@@ -124,7 +124,7 @@
     </table>
   </div>
 
-  <h2 class="sec-title">Split Brand vs NonBrand &mdash; Search y PMax, semanal</h2>
+  <h2 class="sec-title">Split Brand vs NonBrand: Search y PMax, semanal</h2>
   <div class="split-kpis" id="split-kpis"></div>
   <div class="tbl-wrap">
     <table>
@@ -159,15 +159,15 @@
 </div>
 
 <script>
-const fmtUSD = (n) => n == null ? '&mdash;' : '$' + Math.round(n).toLocaleString('en-US');
-const fmtNum = (n) => n == null ? '&mdash;' : Math.round(n).toLocaleString('en-US');
-const pct    = (n) => n == null ? '&mdash;' : (n * 100).toFixed(1) + '%';
+const fmtUSD = (n) => n == null ? '-' : '$' + Math.round(n).toLocaleString('en-US');
+const fmtNum = (n) => n == null ? '-' : Math.round(n).toLocaleString('en-US');
+const pct    = (n) => n == null ? '-' : (n * 100).toFixed(1) + '%';
 
 // Semáforo de pacing: se compara cuánto del budget se gastó contra cuánto del
 // mes transcurrió. Ese cociente es lo que dice si vas rápido o lento, no el
 // gasto absoluto.
 function estado(ratio) {
-  if (ratio == null) return ['&mdash;', 'var(--muted)', 'transparent'];
+  if (ratio == null) return ['-', 'var(--muted)', 'transparent'];
   if (ratio < 0.85) return ['UNDERPACING', 'var(--yellow)', '#3a2a00'];
   if (ratio > 1.15) return ['OVERPACING', 'var(--red)', '#3a1a1a'];
   return ['ON PACE', 'var(--green)', '#1a3a1a'];
@@ -184,7 +184,7 @@ function renderPacing(d) {
     const roas  = c.spend ? c.revenue / c.spend : null;
     totB += c.budget || 0; totS += c.spend || 0; totC += c.conv || 0;
     if (sinDato) return `<tr><td><strong>${c.name}</strong><span class="badge-manual" style="margin-left:6px">SIN CONECTOR</span></td>
-      <td>${fmtUSD(c.budget)}</td><td colspan="8" style="color:var(--muted)">sin datos &mdash; no hay conector para este canal</td></tr>`;
+      <td>${fmtUSD(c.budget)}</td><td colspan="8" style="color:var(--muted)">sin datos: no hay conector para este canal</td></tr>`;
     const [txt, col, bg] = estado(ratio);
     const badge = c.stale
       ? `<span class="badge-manual" style="margin-left:6px;color:var(--yellow)">DATO AL ${d.sources?.meta?.asOf || '?'}</span>`
@@ -194,12 +194,12 @@ function renderPacing(d) {
       <td>${fmtUSD(c.budget)}</td><td>${fmtUSD(c.spend)}</td>
       <td>${pct(pctB)}</td><td>${pct(ratio)}</td>
       <td>${fmtUSD((c.budget || 0) - (c.spend || 0))}</td><td>${fmtUSD(proy)}</td>
-      <td>${fmtNum(c.conv)}</td><td><strong>${roas ? roas.toFixed(1) + 'x' : '&mdash;'}</strong></td>
+      <td>${fmtNum(c.conv)}</td><td><strong>${roas ? roas.toFixed(1) + 'x' : '-'}</strong></td>
       <td><span style="background:${bg};color:${col};border-radius:4px;padding:2px 8px;font-size:11px;">${txt}</span></td>
     </tr>`;
   });
   filas.push(`<tr class="tr-total"><td>TOTAL</td><td>${fmtUSD(totB)}</td><td>${fmtUSD(totS)}</td>
-    <td>${pct(totB ? totS / totB : null)}</td><td colspan="3">&mdash;</td><td>${fmtNum(totC)}</td><td colspan="2">&mdash;</td></tr>`);
+    <td>${pct(totB ? totS / totB : null)}</td><td colspan="3">-</td><td>${fmtNum(totC)}</td><td colspan="2">-</td></tr>`);
   document.getElementById('pacing-tbody').innerHTML = filas.join('');
 }
 
@@ -224,10 +224,10 @@ function renderSemanal(d) {
     return `<tr>
       <td><strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}</td>
       <td>${fmtUSD(spend)}</td><td>${fmtNum(impr)}</td><td>${fmtNum(clicks)}</td>
-      <td>${impr ? ((clicks / impr) * 100).toFixed(2) + '%' : '&mdash;'}</td>
-      <td>${clicks ? '$' + (spend / clicks).toFixed(2) : '&mdash;'}</td>
+      <td>${impr ? ((clicks / impr) * 100).toFixed(2) + '%' : '-'}</td>
+      <td>${clicks ? '$' + (spend / clicks).toFixed(2) : '-'}</td>
       <td>${fmtNum(conv)}</td><td>${fmtUSD(rev)}</td>
-      <td><strong>${rev && spend ? (rev / spend).toFixed(1) + 'x' : '&mdash;'}</strong></td>
+      <td><strong>${rev && spend ? (rev / spend).toFixed(1) + 'x' : '-'}</strong></td>
     </tr>`;
   }).join('');
   const parcial = w.semanas.some((s) => s.parcial);
@@ -245,7 +245,7 @@ function renderSplit(d) {
   const nb = (x) => { const tot = x.brand.spend + x.nonbrand.spend; return tot ? x.nonbrand.spend / tot : null; };
   const both = (s) => ({ brand: { spend: s.search.brand.spend + s.pmax.brand.spend }, nonbrand: { spend: s.search.nonbrand.spend + s.pmax.nonbrand.spend } });
   const cls = (p) => p == null ? '' : p >= T ? 'ok-t' : 'bad-t';
-  const cell = (p) => p == null ? '<td>&mdash;</td>' : `<td><div class="nb-cell">
+  const cell = (p) => p == null ? '<td>-</td>' : `<td><div class="nb-cell">
       <div class="nb-bar"><i style="width:${(p * 100).toFixed(1)}%"></i><b style="left:${T * 100}%"></b></div>
       <span class="nb-pct ${cls(p)}">${(p * 100).toFixed(1)}%</span></div></td>`;
   const pesos = (x) => `<td>${fmtUSD(x.nonbrand.spend)} / ${fmtUSD(x.brand.spend)}</td>`;
@@ -254,7 +254,7 @@ function renderSplit(d) {
   const kpi = (lbl, x) => {
     const p = nb(x);
     return `<div class="split-kpi"><div class="kpi-label">${lbl} &middot; ${d.monthLabel} MTD</div>
-      <div class="v ${cls(p)}">${p == null ? '&mdash;' : (p * 100).toFixed(1) + '%'}</div>
+      <div class="v ${cls(p)}">${p == null ? '-' : (p * 100).toFixed(1) + '%'}</div>
       <div class="s">NonBrand ${fmtUSD(x.nonbrand.spend)} &middot; Brand ${fmtUSD(x.brand.spend)} &middot; piso ${T * 100}%</div></div>`;
   };
   document.getElementById('split-kpis').innerHTML =
@@ -311,10 +311,10 @@ function renderCanales(d) {
   const canales = [...new Set(w.semanas.flatMap((s) => Object.keys(s.canales || {})))];
   const dia = (x) => { const [, m, y] = x.split('-'); return `${y}/${m}`; };
   const fila = (o, etiqueta, extra) => {
-    const roas = o.spend && o.revenue != null ? (o.revenue / o.spend).toFixed(1) + 'x' : '&mdash;';
+    const roas = o.spend && o.revenue != null ? (o.revenue / o.spend).toFixed(1) + 'x' : '-';
     return `<tr><td>${etiqueta}</td>${extra || ''}<td>${fmtUSD(o.spend)}</td><td>${fmtNum(o.impr)}</td><td>${fmtNum(o.clicks)}</td>
-      <td>${o.impr ? ((o.clicks / o.impr) * 100).toFixed(2) + '%' : '&mdash;'}</td>
-      <td>${o.clicks ? '$' + (o.spend / o.clicks).toFixed(2) : '&mdash;'}</td>
+      <td>${o.impr ? ((o.clicks / o.impr) * 100).toFixed(2) + '%' : '-'}</td>
+      <td>${o.clicks ? '$' + (o.spend / o.clicks).toFixed(2) : '-'}</td>
       <td>${fmtNum(o.conv)}</td><td>${fmtUSD(o.revenue)}</td><td><strong>${roas}</strong></td></tr>`;
   };
   const cab = '<tr><th>Semana</th><th>Spend</th><th>Impr.</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Conv.</th><th>Revenue</th><th>ROAS</th></tr>';
@@ -324,7 +324,7 @@ function renderCanales(d) {
       fila(s.canales[c], `<strong>${dia(s.desde)} &ndash; ${dia(s.hasta)}</strong>${s.parcial ? ' <span class="badge-manual">PARCIAL</span>' : ''}`));
     const camps = (w.campanas?.[c] || []);
     const totC = camps.reduce((a, x) => a + x.spend, 0);
-    const filasC = camps.map((x) => fila(x, x.name, `<td>${totC ? ((x.spend / totC) * 100).toFixed(1) + '%' : '&mdash;'}</td>`));
+    const filasC = camps.map((x) => fila(x, x.name, `<td>${totC ? ((x.spend / totC) * 100).toFixed(1) + '%' : '-'}</td>`));
     return `<h3 class="sub-title">${c}</h3>
       <div class="tbl-wrap"><table><thead>${cab}</thead><tbody>${semanas.join('')}</tbody></table></div>
       ${camps.length ? `<div class="tbl-wrap" style="margin-top:8px"><table><thead>${cabC}</thead><tbody>${filasC.join('')}</tbody></table></div>` : ''}`;
@@ -338,14 +338,14 @@ fetch('data.json?v=' + Date.now())
     document.getElementById('last-updated').textContent =
       'Actualizado: ' + gen.toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
     document.getElementById('month-label').innerHTML =
-      `${d.monthLabel} &mdash; día <strong>${d.daysElapsed}</strong> de <strong>${d.daysInMonth}</strong>`;
+      `${d.monthLabel} · día <strong>${d.daysElapsed}</strong> de <strong>${d.daysInMonth}</strong>`;
     document.getElementById('days-remaining').textContent =
       `${d.daysInMonth - d.daysElapsed} días restantes`;
     document.getElementById('month-bar').style.width = (d.daysElapsed / d.daysInMonth * 100).toFixed(0) + '%';
     // El titulo se arma desde los datos: hardcodearlo es como quedo clavado en
     // "July 2026" mientras el dashboard ya mostraba agosto.
-    document.title = `Pei Wei | Ads Dashboard – ${d.monthLabel}`;
-    document.getElementById('weekly-title').innerHTML = `Métricas semanales &mdash; ${d.monthLabel}`;
+    document.title = `Pei Wei | Ads Dashboard · ${d.monthLabel}`;
+    document.getElementById('weekly-title').innerHTML = `Métricas semanales: ${d.monthLabel}`;
     renderFuentes(d);
     renderPacing(d);
     renderSplit(d);
