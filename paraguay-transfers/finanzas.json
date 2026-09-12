@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-12T12:30:09.671Z",
+ "generated": "2026-09-12T13:52:50.104Z",
  "tc": 6020,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -22,14 +22,16 @@
   {
    "fecha": "2026-09-01",
    "in": 965.45,
-   "out": 0,
-   "n": 6,
+   "out": 142.65,
+   "n": 8,
    "porFuente": {
     "Stripe": 400,
-    "Pagopar": 565.45
+    "Pagopar": 565.45,
+    "WhatsApp · Gustavo": -49.83,
+    "WhatsApp · Luis (factura)": -92.82
    },
-   "neto": 965.45,
-   "acum": 965.45
+   "neto": 822.8,
+   "acum": 822.8
   },
   {
    "fecha": "2026-09-02",
@@ -43,7 +45,7 @@
     "WhatsApp · Pagos (Majo)": -197.12
    },
    "neto": 1103.7,
-   "acum": 2069.15
+   "acum": 1926.5
   },
   {
    "fecha": "2026-09-03",
@@ -56,7 +58,7 @@
     "WhatsApp · Pagos (Majo)": -461.79
    },
    "neto": 659.8,
-   "acum": 2728.95
+   "acum": 2586.3
   },
   {
    "fecha": "2026-09-04",
@@ -67,7 +69,7 @@
     "WhatsApp · Pagos (Majo)": -1052.6
    },
    "neto": -1052.6,
-   "acum": 1676.35
+   "acum": 1533.7
   },
   {
    "fecha": "2026-09-05",
@@ -78,18 +80,19 @@
     "Pagopar": 231.73
    },
    "neto": 231.73,
-   "acum": 1908.08
+   "acum": 1765.43
   },
   {
    "fecha": "2026-09-06",
    "in": 0,
-   "out": 16.61,
-   "n": 1,
+   "out": 143.85,
+   "n": 3,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -16.61
+    "WhatsApp · Pagos (Majo)": -16.61,
+    "WhatsApp · Luis": -127.24
    },
-   "neto": -16.61,
-   "acum": 1891.47
+   "neto": -143.85,
+   "acum": 1621.58
   },
   {
    "fecha": "2026-09-07",
@@ -103,7 +106,7 @@
     "Manual · efectivo": -700
    },
    "neto": 778.35,
-   "acum": 2669.82
+   "acum": 2399.93
   },
   {
    "fecha": "2026-09-08",
@@ -116,7 +119,7 @@
     "WhatsApp · Pagos (Majo)": -629.87
    },
    "neto": -26.89,
-   "acum": 2642.93
+   "acum": 2373.04
   },
   {
    "fecha": "2026-09-09",
@@ -129,33 +132,35 @@
     "WhatsApp · Pagos (Majo)": -4.98
    },
    "neto": 60.97,
-   "acum": 2703.9
+   "acum": 2434.01
   },
   {
    "fecha": "2026-09-10",
    "in": 123.59,
-   "out": 215.95,
-   "n": 3,
+   "out": 304.64,
+   "n": 5,
    "porFuente": {
     "Pagopar": 123.59,
-    "WhatsApp · Pagos (Majo)": -215.95
+    "WhatsApp · Pagos (Majo)": -215.95,
+    "WhatsApp · Luis (factura)": -88.69
    },
-   "neto": -92.36,
-   "acum": 2611.54
+   "neto": -181.05,
+   "acum": 2252.96
   },
   {
    "fecha": "2026-09-11",
    "in": 1776.74,
-   "out": 796.18,
-   "n": 6,
+   "out": 929.04,
+   "n": 8,
    "porFuente": {
     "Binance": 100,
     "Pagopar": 1676.74,
-    "WhatsApp · Pagos (Majo)": -778.41,
-    "WhatsApp · Gustavo": -17.77
+    "WhatsApp · Pagos (Majo)": -795.02,
+    "WhatsApp · Gustavo": -17.77,
+    "WhatsApp · Luis (factura)": -116.25
    },
-   "neto": 980.56,
-   "acum": 3592.1
+   "neto": 847.7,
+   "acum": 3100.66
   },
   {
    "fecha": "2026-09-12",
@@ -167,7 +172,7 @@
     "Pagopar": 105.48
    },
    "neto": 352.48,
-   "acum": 3944.58
+   "acum": 3453.14
   }
  ],
  "movimientos": [
@@ -627,6 +632,70 @@
    "gs": 107000
   },
   {
+   "d": "2026-09-01",
+   "t": "out",
+   "usd": 49.83,
+   "fuente": "WhatsApp · Gustavo",
+   "det": "combustible (Si le cargué por)",
+   "gs": 300000
+  },
+  {
+   "d": "2026-09-01",
+   "t": "out",
+   "usd": 92.82,
+   "fuente": "WhatsApp · Luis (factura)",
+   "det": "Combustible V-Power Diesel 53,73 L - Shell Madame Lynch",
+   "gs": 558780
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 22.59,
+   "fuente": "WhatsApp · Luis",
+   "det": "peaje.....",
+   "gs": 136000
+  },
+  {
+   "d": "2026-09-06",
+   "t": "out",
+   "usd": 104.65,
+   "fuente": "WhatsApp · Luis",
+   "det": "combustible",
+   "gs": 630000
+  },
+  {
+   "d": "2026-09-10",
+   "t": "out",
+   "usd": 81.05,
+   "fuente": "WhatsApp · Luis (factura)",
+   "det": "Compra supermercado (alimentos y limpieza)",
+   "gs": 487911
+  },
+  {
+   "d": "2026-09-10",
+   "t": "out",
+   "usd": 7.64,
+   "fuente": "WhatsApp · Luis (factura)",
+   "det": "Lona 2x3m azul - Ferretería Ferrex",
+   "gs": 46000
+  },
+  {
+   "d": "2026-09-11",
+   "t": "out",
+   "usd": 116.25,
+   "fuente": "WhatsApp · Luis (factura)",
+   "det": "Combustible V-Power Diesel 67,29 L (Combubar Company S.R.L.)",
+   "gs": 699850
+  },
+  {
+   "d": "2026-09-11",
+   "t": "out",
+   "usd": 16.61,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "GUSTAVO + Estacionamiento Aerop?",
+   "gs": 100000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -715,11 +784,11 @@
    },
    "marketing": {
     "google": 153.23,
-    "meta": 42.27,
-    "total": 195.5
+    "meta": 279.12,
+    "total": 432.35
    },
    "impuestos": null,
-   "resultado": 3899.19,
+   "resultado": 3662.34,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -925,68 +994,12 @@
  ],
  "aDefinir": [
   {
-   "fecha": "2026-09-01",
-   "grupo": "Gustavo",
-   "gs": 300000,
-   "usd": 49.83,
-   "concepto": "combustible (Si le cargué por)",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-01",
-   "grupo": "Luis",
-   "gs": 558780,
-   "usd": 92.82,
-   "concepto": "Combustible V-Power Diesel 53,73 L - Shell Madame Lynch",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-03",
-   "grupo": "Alfredo",
-   "gs": 50000,
-   "usd": 8.31,
-   "concepto": "Carga de combustible",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Alfredo",
-   "gs": 120000,
-   "usd": 19.93,
-   "concepto": "Pago Pend.: Gs",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Alfredo",
-   "gs": 136000,
-   "usd": 22.59,
-   "concepto": "1.- Gs. Peajes",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Alfredo",
-   "gs": 110000,
-   "usd": 18.27,
-   "concepto": "4.- Gs Lavadero",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Alfredo",
-   "gs": 122000,
-   "usd": 20.27,
-   "concepto": "6.- GS Interés por uso de ATM/Crédito Se carga Gasoil; Se re",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
    "fecha": "2026-09-06",
    "grupo": "Luis",
    "gs": 136000,
    "usd": 22.59,
    "concepto": "peajes..",
-   "motivo": "mencionado en el chat, sin comprobante"
+   "motivo": "posible duplicado: la transferencia a Luis del 08/09 (Gs 1.220.000, 'ASU-CDE 03/09 500.000') deja Gs 720.000 sin explicar, casi igual a peaje 136.000 + combustible 567.000 + parqueo 8.000 de ese viaje"
   },
   {
    "fecha": "2026-09-06",
@@ -994,23 +1007,7 @@
    "gs": 567000,
    "usd": 94.19,
    "concepto": "combustible",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Luis",
-   "gs": 136000,
-   "usd": 22.59,
-   "concepto": "peaje.....",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-06",
-   "grupo": "Luis",
-   "gs": 630000,
-   "usd": 104.65,
-   "concepto": "combustible",
-   "motivo": "mencionado en el chat, sin comprobante"
+   "motivo": "posible duplicado: ver peajes del mismo viaje CDE 03/09, la transferencia del 08/09 a Luis ya lo cubriría"
   },
   {
    "fecha": "2026-09-07",
@@ -1018,7 +1015,7 @@
    "gs": 528008,
    "usd": 87.71,
    "concepto": "Combustible Shell San Bernardino",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 02/09 ya trae combustible"
   },
   {
    "fecha": "2026-09-07",
@@ -1026,7 +1023,7 @@
    "gs": 520000,
    "usd": 86.38,
    "concepto": "Carga de combustible 50,77 Lt",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
+   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 02/09 ya trae combustible"
   },
   {
    "fecha": "2026-09-08",
@@ -1034,47 +1031,7 @@
    "gs": 50000,
    "usd": 8.31,
    "concepto": "Solo queda agregarle si me dejan entrar en el mismo parking ",
-   "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-10",
-   "grupo": "Luis",
-   "gs": 487911,
-   "usd": 81.05,
-   "concepto": "Compra supermercado (alimentos y limpieza)",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-10",
-   "grupo": "Luis",
-   "gs": 46000,
-   "usd": 7.64,
-   "concepto": "Lona 2x3m azul - Ferretería Ferrex",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-10",
-   "grupo": "Luis",
-   "gs": 389154,
-   "usd": 64.64,
-   "concepto": "Combustible Nafta Aratiri 97 - Tecnifrost",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-11",
-   "grupo": "Luis",
-   "gs": 699850,
-   "usd": 116.25,
-   "concepto": "Combustible V-Power Diesel 67,29 L (Combubar Company S.R.L.)",
-   "motivo": "factura rendida por el chofer (prepago); solo cuenta si no estaba contemplado"
-  },
-  {
-   "fecha": "2026-09-11",
-   "grupo": "Pagos (Majo)",
-   "gs": 100000,
-   "usd": 16.61,
-   "concepto": "GUSTAVO + Estacionamiento Aerop?",
-   "motivo": "mencionado en el chat, sin comprobante"
+   "motivo": "posible duplicado: la transferencia a Alfredo del 11/09 ya trae 'parking 50.000'"
   }
  ],
  "saldosHistorial": [
