@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-12T00:30:47.405Z",
+ "generated": "2026-09-12T10:20:29.578Z",
  "tc": 6020,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-11",
+  "fecha": "2026-09-12",
   "itauGs": 43605,
   "uenoGs": 17445364,
   "uenoFecha": "2026-09-11",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 119.39,
   "stripePendiente": 312.06,
-  "pagoparPendienteUsd": 5829.9,
+  "pagoparPendienteUsd": 5935.38,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -156,6 +156,18 @@
    },
    "neto": 980.56,
    "acum": 3592.1
+  },
+  {
+   "fecha": "2026-09-12",
+   "in": 352.48,
+   "out": 0,
+   "n": 2,
+   "porFuente": {
+    "Binance": 247,
+    "Pagopar": 105.48
+   },
+   "neto": 352.48,
+   "acum": 3944.58
   }
  ],
  "movimientos": [
@@ -200,6 +212,13 @@
    "usd": 300,
    "fuente": "Stripe",
    "det": "Hisaaki Takei"
+  },
+  {
+   "d": "2026-09-12",
+   "t": "in",
+   "usd": 247,
+   "fuente": "Binance",
+   "det": "depósito USDT"
   },
   {
    "d": "2026-09-11",
@@ -390,6 +409,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Stephanie B B Barbieri",
    "gs": 10094000
+  },
+  {
+   "d": "2026-09-12",
+   "t": "in",
+   "usd": 105.48,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Philip and Linda staley",
+   "gs": 635000
   },
   {
    "d": "2026-09-02",
@@ -658,11 +685,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 38,
+   "traslados": 39,
    "ingresos": {
-    "planilla": 7186,
+    "planilla": 7286,
     "alohaSinFila": 0,
-    "total": 7186
+    "total": 7286
    },
    "directos": {
     "chofer": 2378,
@@ -672,7 +699,7 @@
     "otros": 33,
     "total": 2995
    },
-   "margenBruto": 4191,
+   "margenBruto": 4291,
    "cobro": {
     "stripe": 93.11,
     "aloha": null,
@@ -687,12 +714,12 @@
     "total": 103.2
    },
    "marketing": {
-    "google": 149.36,
+    "google": 152.19,
     "meta": 42.27,
-    "total": 191.63
+    "total": 194.46
    },
    "impuestos": null,
-   "resultado": 3803.06,
+   "resultado": 3900.23,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -712,24 +739,24 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 22,
-   "bruto": 5829.91,
+   "cobros": 23,
+   "bruto": 5935.39,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
   },
   {
    "riel": "Binance",
-   "cobros": 2,
-   "bruto": 347,
+   "cobros": 3,
+   "bruto": 594,
    "comision": null,
    "pct": null,
    "nota": "sin medir"
   }
  ],
  "pagopar": {
-  "cobradoGs": 35096000,
-  "cobradoUsd": 5829.91,
+  "cobradoGs": 35731000,
+  "cobradoUsd": 5935.39,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -784,6 +811,12 @@
     "cobros": 1,
     "gs": 10094000,
     "usd": 1676.74
+   },
+   {
+    "fecha": "2026-09-12",
+    "cobros": 1,
+    "gs": 635000,
+    "usd": 105.48
    }
   ],
   "pruebasExcluidas": 0,
@@ -791,8 +824,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 35096000,
-  "pendienteUsd": 5829.9
+  "pendienteGs": 35731000,
+  "pendienteUsd": 5935.38
  },
  "giros": [
   {
@@ -887,7 +920,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲35.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲35.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
