@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-13T16:30:06.583Z",
+ "generated": "2026-09-13T18:30:10.406Z",
  "tc": 6000,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 117.17,
-  "stripePendiente": 619.17,
+  "stripePendiente": 684.83,
   "pagoparPendienteUsd": 6481.17,
   "relay": null,
   "binance": null,
@@ -173,9 +173,27 @@
    },
    "neto": 878.83,
    "acum": 3983.88
+  },
+  {
+   "fecha": "2026-09-13",
+   "in": 69,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Stripe": 69
+   },
+   "neto": 69,
+   "acum": 4052.88
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-13",
+   "t": "in",
+   "usd": 69,
+   "fuente": "Stripe",
+   "det": "Payment for invoice 000180"
+  },
   {
    "d": "2026-09-08",
    "t": "in",
@@ -762,11 +780,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 39,
+   "traslados": 40,
    "ingresos": {
-    "planilla": 7286,
+    "planilla": 7783,
     "alohaSinFila": 0,
-    "total": 7286
+    "total": 7783
    },
    "directos": {
     "chofer": 2378,
@@ -776,12 +794,12 @@
     "otros": 33,
     "total": 2995
    },
-   "margenBruto": 4291,
+   "margenBruto": 4788,
    "cobro": {
-    "stripe": 93.11,
+    "stripe": 96.45,
     "aloha": null,
     "pagopar": null,
-    "total": 93.11
+    "total": 96.45
    },
    "estructura": {
     "seguro": 103.54,
@@ -791,12 +809,12 @@
     "total": 103.54
    },
    "marketing": {
-    "google": 161.29,
+    "google": 163.39,
     "meta": 279.12,
-    "total": 440.41
+    "total": 442.51
    },
    "impuestos": null,
-   "resultado": 3653.94,
+   "resultado": 4145.5,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -808,10 +826,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 6,
-   "bruto": 2128,
-   "comision": 93.11,
-   "pct": 4.38,
+   "cobros": 7,
+   "bruto": 2197,
+   "comision": 96.45,
+   "pct": 4.39,
    "nota": "medido cobro por cobro"
   },
   {
