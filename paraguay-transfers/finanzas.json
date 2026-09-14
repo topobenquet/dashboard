@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T16:30:06.904Z",
+ "generated": "2026-09-14T18:30:26.769Z",
  "tc": 6000,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -188,13 +188,14 @@
   {
    "fecha": "2026-09-14",
    "in": 105,
-   "out": 0,
-   "n": 1,
+   "out": 566.67,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 105
+    "Pagopar": 105,
+    "WhatsApp · Pagos (Majo)": -566.67
    },
-   "neto": 105,
-   "acum": 4157.88
+   "neto": -461.67,
+   "acum": 3591.21
   }
  ],
  "movimientos": [
@@ -677,6 +678,22 @@
    "gs": 107000
   },
   {
+   "d": "2026-09-14",
+   "t": "out",
+   "usd": 150,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago traslado Paseo La Galería - vehículo a disposición 14/sept",
+   "gs": 900000
+  },
+  {
+   "d": "2026-09-14",
+   "t": "out",
+   "usd": 416.67,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Seña Bus a disposición",
+   "gs": 2500000
+  },
+  {
    "d": "2026-09-01",
    "t": "out",
    "usd": 50,
@@ -828,12 +845,12 @@
     "total": 103.54
    },
    "marketing": {
-    "google": 169.62,
+    "google": 169.76,
     "meta": 279.12,
-    "total": 448.74
+    "total": 448.88
    },
    "impuestos": null,
-   "resultado": 4008.27,
+   "resultado": 4008.13,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
