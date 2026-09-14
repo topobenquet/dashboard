@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-13T10:21:18.184Z",
-  "lastSyncLabel": "13 Sep 2026",
+  "generated": "2026-09-14T10:20:42.975Z",
+  "lastSyncLabel": "14 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,19 +133,19 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 467,
-      "reservas": 29,
-      "revenue": 7949,
+      "leads": 480,
+      "reservas": 30,
+      "revenue": 8446,
       "chofer": 3689,
       "comb": 491,
       "peajes": 93,
-      "comision": 150,
+      "comision": 165,
       "reembolsos": 13,
       "otros": 20,
-      "gAds": 159,
+      "gAds": 167,
       "meta": 279.12,
       "costoSheet": 317,
-      "gananciaSheet": 45778
+      "gananciaSheet": 45770
     }
   ],
   "adsMonthly": [
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 158.81,
-      "clicks": 162,
-      "impr": 1002,
-      "conv": 5
+      "spend": 166.62,
+      "clicks": 175,
+      "impr": 1057,
+      "conv": 6
     }
   ],
   "trips": [
@@ -3996,6 +3996,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "",
+      "cliente": "alex",
+      "pais": "Alemania",
+      "conductor": "",
+      "pago": 497,
+      "sena": 497,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 482,
+      "fechaReserva": "13/09/26",
+      "fechaSalida": "23/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Aeropuerto de Foz- Luque",
       "cliente": "Gustavo",
       "pais": "Brasil",
@@ -4235,7 +4249,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-13": 1,
+      "2026-09-14": 6,
+      "2026-09-13": 8,
       "2026-09-12": 313,
       "2026-09-11": 16,
       "2026-09-10": 18,
@@ -4293,6 +4308,7 @@
       "2026-09-08": 3,
       "2026-09-10": 2,
       "2026-09-12": 1,
+      "2026-09-13": 1,
       "2026-09-04": 2,
       "2026-09-09": 3
     },
@@ -4539,7 +4555,7 @@
       "2026-09-10": 11.65,
       "2026-09-11": 11.61,
       "2026-09-12": 8.23,
-      "2026-09-13": 0
+      "2026-09-13": 7.81
     }
   }
 }
