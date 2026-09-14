@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T10:20:42.975Z",
+  "generated": "2026-09-14T21:59:04.172Z",
   "lastSyncLabel": "14 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 480,
-      "reservas": 30,
-      "revenue": 8446,
-      "chofer": 3689,
-      "comb": 491,
-      "peajes": 93,
-      "comision": 165,
+      "leads": 197,
+      "reservas": 32,
+      "revenue": 9536,
+      "chofer": 3808,
+      "comb": 622,
+      "peajes": 115,
+      "comision": 189,
       "reembolsos": 13,
-      "otros": 20,
-      "gAds": 167,
+      "otros": 36,
+      "gAds": 174,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 166.62,
-      "clicks": 175,
-      "impr": 1057,
-      "conv": 6
+      "spend": 174.28,
+      "clicks": 182,
+      "impr": 1102,
+      "conv": 7
     }
   ],
   "trips": [
@@ -3722,8 +3722,8 @@
       "conductor": "Alfredo Sánchez PT",
       "pago": 417,
       "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
+      "restante": 317,
+      "choferCost": 98,
       "neto": 0,
       "fechaReserva": "03/09/26",
       "fechaSalida": "07/09/26"
@@ -3765,8 +3765,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 21,
+      "neto": 26,
       "fechaReserva": "",
       "fechaSalida": "09/09/26"
     },
@@ -3792,7 +3792,7 @@
       "conductor": "Gustavo Pereira",
       "pago": 197,
       "sena": 100,
-      "restante": 0,
+      "restante": 97,
       "choferCost": 33,
       "neto": 153,
       "fechaReserva": "02/09/26",
@@ -3864,7 +3864,7 @@
       "sena": 200,
       "restante": 497,
       "choferCost": 98,
-      "neto": 445,
+      "neto": 417,
       "fechaReserva": "01/09/26",
       "fechaSalida": "13/09/26"
     },
@@ -3912,6 +3912,34 @@
     },
     {
       "mes": "Septiembre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "tania storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 99,
+      "sena": 33,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "14/09/26",
+      "fechaSalida": "16/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "tania storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 99,
+      "sena": 33,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "14/09/26",
+      "fechaSalida": "17/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Vehiculo a disposición",
       "cliente": "Pedro Goede",
       "pais": "Brasil",
@@ -3923,6 +3951,20 @@
       "neto": 0,
       "fechaReserva": "10/09/26",
       "fechaSalida": "17/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "tania storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 99,
+      "sena": 33,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "14/09/26",
+      "fechaSalida": "18/09/26"
     },
     {
       "mes": "Septiembre",
@@ -3968,16 +4010,16 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "philip",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
+      "route": "Aero-Yacht",
+      "cliente": "Alex",
+      "pais": "Alemania",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 497,
+      "sena": 497,
       "restante": 0,
       "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "12/09/26",
+      "neto": 482,
+      "fechaReserva": "13/09/26",
       "fechaSalida": "22/09/26"
     },
     {
@@ -3992,20 +4034,6 @@
       "choferCost": 40,
       "neto": 100,
       "fechaReserva": "09/08/26",
-      "fechaSalida": "23/09/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "",
-      "cliente": "alex",
-      "pais": "Alemania",
-      "conductor": "",
-      "pago": 497,
-      "sena": 497,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 482,
-      "fechaReserva": "13/09/26",
       "fechaSalida": "23/09/26"
     },
     {
@@ -4066,9 +4094,9 @@
     },
     {
       "mes": "Septiembre",
-      "route": "Foz-ASU",
-      "cliente": "Tom (Thomas Kirby)",
-      "pais": "Inglaterra",
+      "route": "FOZ-ASU",
+      "cliente": "thomas kirby",
+      "pais": "UK",
       "conductor": "",
       "pago": 0,
       "sena": 0,
@@ -4080,9 +4108,9 @@
     },
     {
       "mes": "Septiembre",
-      "route": "FOZ-ASU",
-      "cliente": "thomas kirby",
-      "pais": "UK",
+      "route": "Foz-ASU",
+      "cliente": "Tom (Thomas Kirby)",
+      "pais": "Inglaterra",
       "conductor": "",
       "pago": 0,
       "sena": 0,
@@ -4136,6 +4164,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "ASU-FOZ",
+      "cliente": "Sílvia Almeida",
+      "pais": "Portugal",
+      "conductor": "",
+      "pago": 0,
+      "sena": 2399,
+      "restante": 0,
+      "choferCost": 1311,
+      "neto": 0,
+      "fechaReserva": "02/09/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "ASU-PtoIguazu",
       "cliente": "Hisaaki Takei",
       "pais": "Japón",
@@ -4150,17 +4192,17 @@
     },
     {
       "mes": "Septiembre",
-      "route": "ASU-FOZ",
-      "cliente": "Sílvia Almeida",
-      "pais": "Portugal",
+      "route": "",
+      "cliente": "philip",
+      "pais": "Australia",
       "conductor": "",
-      "pago": 0,
-      "sena": 2399,
+      "pago": 100,
+      "sena": 100,
       "restante": 0,
-      "choferCost": 1311,
-      "neto": 0,
-      "fechaReserva": "02/09/26",
-      "fechaSalida": "18/10/26"
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "12/09/26",
+      "fechaSalida": "22/10/26"
     },
     {
       "mes": "Septiembre",
@@ -4202,6 +4244,20 @@
       "choferCost": 0,
       "neto": 94,
       "fechaReserva": "09/09/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Septiembre",
+      "route": "",
+      "cliente": "samuel pruczanski",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 793,
+      "sena": 793,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 769,
+      "fechaReserva": "14/09/26",
       "fechaSalida": ""
     },
     {
@@ -4249,9 +4305,9 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-14": 6,
+      "2026-09-14": 24,
       "2026-09-13": 8,
-      "2026-09-12": 313,
+      "2026-09-12": 12,
       "2026-09-11": 16,
       "2026-09-10": 18,
       "2026-09-09": 12,
@@ -4307,10 +4363,11 @@
       "2026-09-07": 2,
       "2026-09-08": 3,
       "2026-09-10": 2,
-      "2026-09-12": 1,
+      "2026-09-14": 2,
       "2026-09-13": 1,
       "2026-09-04": 2,
-      "2026-09-09": 3
+      "2026-09-09": 3,
+      "2026-09-12": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -4555,7 +4612,8 @@
       "2026-09-10": 11.65,
       "2026-09-11": 11.61,
       "2026-09-12": 8.23,
-      "2026-09-13": 7.81
+      "2026-09-13": 7.81,
+      "2026-09-14": 7.66
     }
   }
 }
