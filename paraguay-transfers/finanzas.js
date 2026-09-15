@@ -24,7 +24,7 @@
     const p = F.pnl[F.pnl.length - 1];
     return `<div class="section"><div class="section-title">Caja hoy · ${esc(s.fecha)}</div>
       <div class="kpi-row kpi-row-4" style="margin-bottom:10px">
-        ${kpi(`Entradas ${esc(p.mesLabel)}`, f$(F.caja.reduce((a, d) => a + d.in, 0)), `${F.movimientos.filter((m) => m.t === "in").length} cobros · Stripe, Pagopar, Binance`, "pos")}
+        ${kpi(`Entradas ${esc(p.mesLabel)}`, f$(F.caja.reduce((a, d) => a + d.in, 0)), `${F.movimientos.filter((m) => m.t === "in").length} cobros · Stripe, Pagopar, Binance, transferencias`, "pos")}
         ${kpi(`Salidas ${esc(p.mesLabel)}`, f$(F.caja.reduce((a, d) => a + d.out, 0)), `${F.movimientos.filter((m) => m.t === "out").length} pagos con comprobante · ${fGs(F.movimientos.filter((m) => m.t === "out").reduce((a, m) => a + (m.gs || 0), 0))}`, "neg")}
         ${kpi(`Neto de caja ${esc(p.mesLabel)}`, f$(F.caja.length ? F.caja[F.caja.length - 1].acum : 0), "entradas menos salidas, acumulado del mes")}
         ${kpi("A definir", (F.aDefinir || []).length ? fGs((F.aDefinir || []).reduce((a, x) => a + x.gs, 0)) : "–", `${(F.aDefinir || []).length} ítems mencionados sin comprobante, no suman`)}
@@ -192,7 +192,7 @@
         <colgroup><col style="width:7%"><col style="width:7%"><col style="width:10%"><col style="width:10%"><col style="width:22%"><col style="width:44%"></colgroup>
         <thead><tr><th>Día</th><th></th><th>Entra</th><th>Sale</th><th class="tl">Fuente</th><th class="tl">Concepto</th></tr></thead>
         <tbody>${rows}<tr class="hi"><td colspan="2">${esc(F.mesLabel)}</td><td class="pos">${f$(ti)}</td><td class="neg">${f$(to)}</td><td colspan="2" class="tl">${M.length} movimientos · neto <strong>${f$(ti - to)}</strong></td></tr></tbody></table></div>
-      <div class="info-box info-gray" style="margin-top:8px">Cada cobro viene del procesador de pago (Stripe, Pagopar, Binance) el día que el cliente pagó. Cada salida es un movimiento del extracto bancario o un comprobante de transferencia publicado en los grupos, con su monto original en guaraníes. Lo que alguien escribió sin comprobante no entra acá: va a la lista A definir. Los traspasos entre cuentas propias no están.</div></div>`;
+      <div class="info-box info-gray" style="margin-top:8px">Cada cobro viene del procesador de pago (Stripe, Pagopar, Binance) el día que el cliente pagó, o del comprobante de una transferencia directa a la cuenta publicado en los grupos. Cada salida es un movimiento del extracto bancario o un comprobante de transferencia publicado en los grupos, con su monto original en guaraníes. Lo que alguien escribió sin comprobante no entra acá: va a la lista A definir. Los traspasos entre cuentas propias no están.</div></div>`;
   }
   function activarLog() {
     const box = $("log-filtros"), tabla = $("log-tabla"); if (!box || !tabla) return;
