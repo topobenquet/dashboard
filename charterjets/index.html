@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Charter Jets Inc · Performance Dashboard</title>
+<style>
+:root{
+  --navy:#0D1928; --navy2:#16263B; --gold:#B9914B; --gold2:#E9DCC4; --bg:#F4F2ED; --card:#FFFFFF;
+  --ink:#1B2430; --mut:#6B7483; --line:#E4E1DA; --fl:#B9914B; --ny:#2F5D8A; --br:#8A94A3;
+  --good:#2E8B57; --warn:#C98A1B; --bad:#C0392B; color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:13px;line-height:1.45}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px 40px}
+header.top{background:var(--navy);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+header.top img{height:26px;display:block}
+header.top .ttl{font-family:Georgia,"Times New Roman",serif;font-size:19px;color:#fff}
+header.top .meta{font-size:11.5px;color:#C9D1DC;text-align:right}
+header.top .meta b{color:#fff;font-weight:600}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3CCB7F;margin-right:5px;vertical-align:middle}
+.hero-band{background:linear-gradient(180deg,var(--navy) 0,var(--navy) 58px,var(--bg) 58px)}
+.section{margin-top:22px}
+.sec-t{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.sec-t h2{font-family:Georgia,"Times New Roman",serif;font-size:17px;font-weight:600;color:var(--navy)}
+.sec-t .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.sec-t .note{font-size:11.5px;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 3px rgba(13,25,40,.05)}
+.pad{padding:14px 16px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.g-73{grid-template-columns:1.7fr 1fr}
+@media(max-width:900px){.g2,.g3,.g4,.g-73{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:11px 13px;box-shadow:0 2px 6px rgba(13,25,40,.06)}
+.kpi .l{font-size:9.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.kpi .v{font-family:Georgia,"Times New Roman",serif;font-size:24px;color:var(--navy);margin-top:2px;font-variant-numeric:tabular-nums;line-height:1.15}
+.kpi .s{font-size:10.5px;color:var(--mut);margin-top:3px}
+.bar{height:6px;background:#EEE9DF;border-radius:4px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--gold);border-radius:4px}
+/* test */
+.test{display:grid;grid-template-columns:1fr 210px 1fr;gap:12px;align-items:stretch}
+@media(max-width:900px){.test{grid-template-columns:1fr}}
+.mkt{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.mkt .hd{padding:12px 16px;color:#fff;display:flex;justify-content:space-between;align-items:baseline}
+.mkt .hd b{font-family:Georgia,serif;font-size:17px;font-weight:600}
+.mkt .hd span{font-size:11px;opacity:.85}
+.mkt.fl .hd{background:var(--fl)} .mkt.ny .hd{background:var(--ny)}
+.mkt table{width:100%;border-collapse:collapse}
+.mkt td{padding:7px 16px;border-bottom:1px solid #F0EDE6;font-size:12.5px}
+.mkt td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--navy)}
+.mkt tr.big td{font-size:14px;background:#FBF9F4}
+.mkt tr.big td:last-child{font-family:Georgia,serif;font-size:18px}
+.verdict{background:var(--navy);color:#fff;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:center;gap:10px;text-align:center}
+.verdict .day{font-family:Georgia,serif;font-size:30px;line-height:1}
+.verdict .day small{font-size:13px;color:#C9D1DC}
+.verdict .prog{height:6px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden}
+.verdict .prog i{display:block;height:100%;background:var(--gold)}
+.verdict .call{font-size:12.5px;line-height:1.4}
+.verdict .call b{color:var(--gold2)}
+.verdict .rule{font-size:10.5px;color:#AEB8C6;line-height:1.35}
+/* tables */
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{text-align:left;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:8px 10px;border-bottom:1.5px solid var(--navy);white-space:nowrap}
+table.t td{padding:7px 10px;border-bottom:1px solid #F0EDE6;vertical-align:middle}
+table.t td.n,table.t th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.t tr:hover td{background:#FBF9F4}
+.scroll{overflow-x:auto}
+.pill{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px;white-space:nowrap}
+.p-fl{background:#F4ECDD;color:#7A5B25}.p-ny{background:#DFE8F2;color:#1F4468}.p-br{background:#ECEEF1;color:#4F5968}
+.p-bad{background:#FBE3E0;color:var(--bad)}.p-ok{background:#E1F2E8;color:var(--good)}.p-warn{background:#FBEFD8;color:#8A5C0B}.p-mut{background:#EFEDE8;color:var(--mut)}
+.chart svg{display:block;width:100%;height:auto}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--mut);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.funnel .row{display:grid;grid-template-columns:110px 1fr 1fr;gap:10px;align-items:center;margin:6px 0}
+.funnel .lbl{font-size:11.5px;color:var(--mut)}
+.funnel .fb{position:relative;height:22px;background:#F5F2EB;border-radius:5px;overflow:hidden}
+.funnel .fb i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.funnel .fb span{position:absolute;left:8px;top:3px;font-size:11.5px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.funnel .fb em{position:absolute;right:8px;top:4px;font-size:10px;color:var(--mut);font-style:normal}
+.fh{display:grid;grid-template-columns:110px 1fr 1fr;gap:10px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.minis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+@media(max-width:600px){.minis{grid-template-columns:repeat(2,1fr)}}
+.mini{background:#FBF9F4;border:1px solid #EFEBE2;border-radius:8px;padding:8px 10px}
+.mini .l{font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);font-weight:600}
+.mini .v{font-family:Georgia,serif;font-size:19px;color:var(--navy)}
+.alert{background:#FBEFD8;border:1px solid #F0D9A8;color:#6B4A0A;border-radius:8px;padding:8px 12px;font-size:12px;margin-bottom:10px}
+.empty{color:var(--mut);font-size:12px;padding:18px;text-align:center;background:#FBF9F4;border-radius:8px}
+.meter{display:inline-block;width:60px;height:6px;background:#EEE9DF;border-radius:4px;vertical-align:middle;margin-left:6px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--ny)}
+footer{margin-top:28px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img src="logo.png" alt="Charter Jets, Inc."><span class="ttl">Performance Dashboard</span></div>
+  <div class="meta" id="meta">Loading…</div>
+</div></header>
+<div class="hero-band"><div class="wrap"><div class="kpis" id="kpis"></div></div></div>
+<div class="wrap" id="root"></div>
+
+<script>
+const $=(s)=>document.querySelector(s);
+const fm=(n,d=0)=>n==null||isNaN(n)?'–':Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const usd=(n,d=0)=>n==null||isNaN(n)||!isFinite(n)?'–':'$'+fm(n,d);
+const pct=(n,d=1)=>n==null||isNaN(n)||!isFinite(n)?'–':fm(n*100,d)+'%';
+const div=(a,b)=>b?a/b:null;
+const esc=(s)=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const C={Florida:'#B9914B','New York':'#2F5D8A',Brand:'#8A94A3'};
+const pill=(m)=>`<span class="pill ${m==='Florida'?'p-fl':m==='New York'?'p-ny':'p-br'}">${esc(m==='New York'?'New York':m)}</span>`;
+const section=(k,t,note,body)=>`<div class="section"><div class="sec-t"><div><div class="k">${k}</div><h2>${t}</h2></div>${note?`<div class="note">${note}</div>`:''}</div>${body}</div>`;
+
+function barsSVG(days,keys,lineKey){
+  const W=760,H=220,P={l:44,r:40,t:14,b:28};
+  const n=days.length||1, bw=Math.min(46,(W-P.l-P.r)/n*0.62);
+  const tot=days.map(d=>keys.reduce((a,k)=>a+(d.markets[k]?.spend||0),0));
+  const maxS=Math.max(1,...tot)*1.15, line=days.map(d=>keys.reduce((a,k)=>a+(d.markets[k]?.[lineKey]||0),0));
+  const maxL=Math.max(1,...line)*1.25;
+  const x=(i)=>P.l+(W-P.l-P.r)*(i+0.5)/n, y=(v)=>H-P.b-(H-P.t-P.b)*v/maxS, yl=(v)=>H-P.b-(H-P.t-P.b)*v/maxL;
+  let g='';
+  for(let t=0;t<=4;t++){const v=maxS*t/4;g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="#EEE9DF"/><text x="${P.l-6}" y="${y(v)+3}" font-size="9.5" text-anchor="end" fill="#8A93A0">$${fm(v)}</text>`}
+  days.forEach((d,i)=>{let acc=0;keys.forEach(k=>{const v=d.markets[k]?.spend||0;if(!v)return;g+=`<rect x="${x(i)-bw/2}" y="${y(acc+v)}" width="${bw}" height="${y(acc)-y(acc+v)}" fill="${C[k]}" rx="2"><title>${k}: $${fm(v,2)}</title></rect>`;acc+=v});
+    g+=`<text x="${x(i)}" y="${H-P.b+14}" font-size="9.5" text-anchor="middle" fill="#8A93A0">${d.date.slice(5)}</text>`});
+  if(line.some(v=>v>0)){g+=`<polyline fill="none" stroke="#0D1928" stroke-width="2" points="${line.map((v,i)=>`${x(i)},${yl(v)}`).join(' ')}"/>`;line.forEach((v,i)=>g+=`<circle cx="${x(i)}" cy="${yl(v)}" r="3.2" fill="#0D1928"><title>${fm(v,1)} inquiries</title></circle>`);
+    for(let t=0;t<=2;t++){const v=maxL*t/2;g+=`<text x="${W-P.r+6}" y="${yl(v)+3}" font-size="9.5" fill="#0D1928">${fm(v,0)}</text>`}}
+  return `<svg viewBox="0 0 ${W} ${H}">${g}</svg>`;
+}
+function hBars(items,max,color){ // [{label,value,sub}]
+  max=max||Math.max(1,...items.map(i=>i.value));
+  return items.map(i=>`<div style="display:grid;grid-template-columns:120px 1fr 96px;gap:8px;align-items:center;margin:5px 0"><div style="font-size:11.5px;color:#4F5968;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(i.label)}</div><div style="height:14px;background:#F5F2EB;border-radius:4px;overflow:hidden"><div style="height:100%;width:${Math.max(i.value?2:0,100*i.value/max)}%;background:${i.color||color};border-radius:4px"></div></div><div style="font-size:11.5px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600">${i.sub??fm(i.value)}</div></div>`).join('');
+}
+function hoursSVG(hours,calls){
+  const W=760,H=150,P={l:26,r:10,t:10,b:22},bw=(W-P.l-P.r)/24;
+  const mx=Math.max(1,...hours.map(h=>h.clicks),...calls);
+  let g='';
+  hours.forEach((h,i)=>{const x=P.l+i*bw, hh=(H-P.t-P.b)*h.clicks/mx, ch=(H-P.t-P.b)*(calls[i]||0)/mx;
+    const off=(i>=1&&i<6);
+    g+=`<rect x="${x+1}" y="${P.t}" width="${bw-2}" height="${H-P.t-P.b}" fill="${off?'#F3F1EC':'transparent'}"/>`;
+    g+=`<rect x="${x+2}" y="${H-P.b-hh}" width="${bw/2-2}" height="${hh}" fill="#2F5D8A" rx="1.5"><title>${i}:00 · ${h.clicks} clicks, ${fm(h.conv,1)} conv.</title></rect>`;
+    g+=`<rect x="${x+bw/2}" y="${H-P.b-ch}" width="${bw/2-2}" height="${ch}" fill="#B9914B" rx="1.5"><title>${i}:00 · ${calls[i]||0} calls</title></rect>`;
+    if(i%3===0)g+=`<text x="${x+bw/2}" y="${H-6}" font-size="9.5" text-anchor="middle" fill="#8A93A0">${i}h</text>`});
+  return `<svg viewBox="0 0 ${W} ${H}">${g}</svg>`;
+}
+function donut(parts){ // [{label,value,color}]
+  const tot=parts.reduce((a,p)=>a+p.value,0); const R=46,r=30,cx=60,cy=60; let a0=-Math.PI/2,g='';
+  if(!tot) g=`<circle cx="${cx}" cy="${cy}" r="${(R+r)/2}" fill="none" stroke="#EEE9DF" stroke-width="${R-r}"/>`;
+  parts.forEach(p=>{if(!p.value)return;const a1=a0+2*Math.PI*p.value/tot, big=a1-a0>Math.PI?1:0;
+    const P=(a,rr)=>`${cx+rr*Math.cos(a)},${cy+rr*Math.sin(a)}`;
+    g+= p.value===tot?`<circle cx="${cx}" cy="${cy}" r="${(R+r)/2}" fill="none" stroke="${p.color}" stroke-width="${R-r}"/>`:`<path d="M${P(a0,R)} A${R},${R} 0 ${big} 1 ${P(a1,R)} L${P(a1,r)} A${r},${r} 0 ${big} 0 ${P(a0,r)} Z" fill="${p.color}"/>`;a0=a1});
+  g+=`<text x="${cx}" y="${cy+2}" text-anchor="middle" font-family="Georgia" font-size="20" fill="#0D1928">${fm(tot,0)}</text><text x="${cx}" y="${cy+15}" text-anchor="middle" font-size="8.5" fill="#8A93A0">TOTAL</text>`;
+  return `<div style="display:flex;align-items:center;gap:14px"><svg viewBox="0 0 120 120" style="width:120px;flex:none">${g}</svg><div>${parts.map(p=>`<div style="font-size:12px;margin:4px 0"><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${p.color};margin-right:6px"></i>${esc(p.label)} <b>${fm(p.value,0)}</b> <span style="color:#8A93A0">${tot?pct(p.value/tot,0):''}</span></div>`).join('')}</div></div>`;
+}
+
+fetch('data.json?v='+Date.now()).then(r=>r.json()).then(async d=>{
+  let clarity=null; try{clarity=await (await fetch('clarity-history.json?v='+Date.now())).json()}catch(e){}
+  render(d,clarity);
+}).catch(e=>{$('#root').innerHTML=`<div class="empty">Could not load data: ${esc(e.message)}</div>`});
+
+function render(d,clarity){
+  const upd=new Date(d.generated);
+  $('#meta').innerHTML=`<div><span class="dot"></span>Updated <b>${upd.toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</b></div><div>Campaign period ${d.launch} to ${d.today}</div>`;
+  const F=d.markets.Florida, N=d.markets['New York'], B=d.markets.Brand;
+  const all=['spend','impr','clicks','inquiries','deals','quoted','booked','margin','callrailQualified'].reduce((o,k)=>(o[k]=(F[k]||0)+(N[k]||0)+(B[k]||0),o),{});
+  const expected=d.budget.daily*d.daysLive;
+
+  // KPIs
+  $('#kpis').innerHTML=[
+    {l:'Spend to date',v:usd(all.spend),s:`${pct(div(all.spend,expected),0)} of plan ($${fm(expected)} in ${d.daysLive} day${d.daysLive>1?'s':''})`,bar:Math.min(1,div(all.spend,expected)||0)},
+    {l:'Clicks',v:fm(all.clicks),s:`CTR ${pct(div(all.clicks,all.impr))} · Avg CPC ${usd(div(all.spend,all.clicks),2)}`},
+    {l:'Inquiries',v:fm(all.inquiries,0),s:`Forms, live search and calls · ${usd(div(all.spend,all.inquiries))} each`},
+    {l:'Booked flights',v:fm(all.booked),s:all.booked?`${usd(div(all.spend,all.booked))} per booked flight · margin ${usd(all.margin)}`:'From Pipedrive, ad-attributed deals'},
+  ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v">${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%"></i></div>`:''}</div>`).join('');
+
+  let h='';
+  // ---------- THE TEST
+  const est=(m)=>{const cpi=div(m.spend,m.inquiries), cr=div(m.booked,m.deals); return {cpi,cr,cpf: m.booked?div(m.spend,m.booked):(cpi&&cr?cpi/cr:null), real: m.booked>0}};
+  const eF=est(F), eN=est(N);
+  let call='<b>Too early to call.</b> Both markets need inquiries and booked flights before the comparison means anything.';
+  if(eF.cpf&&eN.cpf){const lo=eF.cpf<eN.cpf?'South Florida':'New York', gap=Math.abs(eF.cpf-eN.cpf)/Math.max(eF.cpf,eN.cpf);
+    call= gap>=0.25?`<b>${lo}</b> is ${pct(gap,0)} cheaper per booked flight.`:`Within 25%: <b>too close to call</b>, keep 50/50.`}
+  else if(F.inquiries>=5&&N.inquiries>=5){const lo=div(F.spend,F.inquiries)<div(N.spend,N.inquiries)?'South Florida':'New York';call=`Early signal: <b>${lo}</b> has the lower cost per inquiry. Booked flights decide.`}
+  const mktCard=(cls,name,m,e)=>`<div class="mkt ${cls}"><div class="hd"><b>${name}</b><span>local + inbound · $158/day</span></div><table>
+    <tr><td>Spend</td><td>${usd(m.spend)}</td></tr><tr><td>Clicks · CTR</td><td>${fm(m.clicks)} · ${pct(div(m.clicks,m.impr))}</td></tr>
+    <tr><td>Avg CPC</td><td>${usd(div(m.spend,m.clicks),2)}</td></tr><tr><td>Inquiries (forms · search · calls)</td><td>${fm(m.inquiries,0)} <span style="color:#8A93A0;font-weight:400">(${fm(m.form,0)} · ${fm(m.search,0)} · ${fm(m.callsAds,0)})</span></td></tr>
+    <tr><td>Cost per inquiry</td><td>${usd(e.cpi)}</td></tr><tr><td>Deals in Pipedrive</td><td>${fm(m.deals)}</td></tr>
+    <tr><td>Booked flights · close rate</td><td>${fm(m.booked)} · ${pct(e.cr,0)}</td></tr>
+    <tr class="big"><td>Cost per booked flight${e.real?'':' <span class="pill p-mut">est.</span>'}</td><td>${usd(e.cpf)}</td></tr></table></div>`;
+  h+=section('The test','South Florida vs New York',`Decided on cost per booked flight · day 30 provisional, day 60 confirmed`,
+    `<div class="test">${mktCard('fl','South Florida',F,eF)}<div class="verdict"><div class="day">${Math.min(d.daysLive,d.testDays)}<small> / ${d.testDays} days</small></div><div class="prog"><i style="width:${Math.min(100,100*d.daysLive/d.testDays)}%"></i></div><div class="call">${call}</div><div class="rule">If one market is 25% or more cheaper per booked flight, it gets about 75% of the budget in month two.</div></div>${mktCard('ny','New York',N,eN)}</div>`);
+
+  // ---------- DAILY + MIX
+  const mix=[{label:'Quote forms',value:F.form+N.form+B.form,color:'#2F5D8A'},{label:'Live search inquiries',value:F.search+N.search+B.search,color:'#B9914B'},{label:'Phone calls',value:F.callsAds+N.callsAds+B.callsAds,color:'#0D1928'}];
+  h+=section('Daily','Spend and inquiries by day','',`<div class="grid g-73"><div class="card pad chart">${d.daily.length?barsSVG(d.daily,['Florida','New York','Brand'],'inquiries'):'<div class="empty">No data yet</div>'}<div class="legend"><span><i style="background:${C.Florida}"></i>South Florida</span><span><i style="background:${C['New York']}"></i>New York</span><span><i style="background:${C.Brand}"></i>Brand</span><span><i style="background:#0D1928;height:3px;vertical-align:3px"></i>Inquiries (right axis)</span></div></div>
+    <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">How people inquire</div>${donut(mix)}<div style="font-size:11px;color:var(--mut);margin-top:10px">Google Ads conversions by type. Calls include the call button in the ad and tracked calls from the landing pages.</div></div></div>`);
+
+  // ---------- FUNNEL
+  const fsteps=[['Impressions','impr'],['Clicks','clicks'],['Inquiries','inquiries'],['CRM deals','deals'],['Quoted','quoted'],['Booked','booked']];
+  const fb=(m,col)=>{const top=Math.max(1,m.impr);return fsteps.map(([l,k],i)=>{const v=m[k]||0, prev=i?m[fsteps[i-1][1]]||0:null;const w=i===0?100:Math.max(v?3:0,100*Math.pow(v/top,0.35));return `<div class="fb"><i style="width:${w}%;background:${col};opacity:${0.25+0.75*(1-i/6)}"></i><span>${fm(v,k==='inquiries'?0:0)}</span>${i?`<em>${prev?pct(v/prev,0):'–'}</em>`:''}</div>`})};
+  const fl=fb(F,C.Florida), ny=fb(N,C['New York']);
+  h+=section('Funnel','From impression to booked flight','Percentages show conversion from the previous step · bar width on a compressed scale',
+    `<div class="card pad funnel"><div class="fh"><span></span><span style="color:${C.Florida}">South Florida</span><span style="color:${C['New York']}">New York</span></div>${fsteps.map(([l],i)=>`<div class="row"><div class="lbl">${l}</div>${fl[i]}${ny[i]}</div>`).join('')}</div>`);
+
+  // ---------- CAMPAIGNS
+  const shareCell=(s,k)=>s&&s[k]!=null?pct(Number(s[k]),0):'–';
+  h+=section('Campaigns','Performance by campaign','Impression share fills in after the first full days',
+    `<div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Market</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Inquiries</th><th class="n">Cost / inq.</th><th class="n">Call button shown</th><th class="n">Impr. share</th><th class="n">Lost to rank</th><th class="n">Lost to budget</th></tr></thead><tbody>${
+    d.campaigns.map(c=>`<tr><td style="white-space:nowrap"><b>${esc(c.short)}</b></td><td>${pill(c.market)}</td><td class="n">${usd(c.spend,2)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${usd(div(c.spend,c.clicks),2)}</td><td class="n">${fm(c.inquiries,0)}</td><td class="n">${usd(div(c.spend,c.inquiries))}</td><td class="n">${fm(c.phoneImpr)}</td><td class="n">${shareCell(c.share,'is')}</td><td class="n">${shareCell(c.share,'lostRank')}</td><td class="n">${shareCell(c.share,'lostBudget')}</td></tr>`).join('')}</tbody></table></div>`);
+
+  // ---------- CALLS
+  const cr=d.callrail; let callsBody='';
+  if(!cr){callsBody='<div class="empty">CallRail data unavailable in this update.</div>'}
+  else{
+    const cs=cr.calls, q=cs.filter(c=>c.answered&&c.duration>=60);
+    const byO={}; cs.forEach(c=>byO[c.origin]=(byO[c.origin]||0)+1);
+    const hrs=Array(24).fill(0); cs.forEach(c=>hrs[c.hourET]++);
+    callsBody=`${cr.inTrial?'<div class="alert">The CallRail account is still on a trial plan. If the trial ends, call tracking stops and this section goes blank.</div>':''}
+    <div class="minis"><div class="mini"><div class="l">Tracked calls</div><div class="v">${fm(cs.length)}</div></div><div class="mini"><div class="l">Answered</div><div class="v">${fm(cs.filter(c=>c.answered).length)}</div></div><div class="mini"><div class="l">60 seconds or more</div><div class="v">${fm(q.length)}</div></div><div class="mini"><div class="l">First-time callers</div><div class="v">${fm(cs.filter(c=>c.firstCall).length)}</div></div></div>
+    <div class="grid g2"><div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Where calls come from</div>${Object.keys(byO).length?hBars(Object.entries(byO).map(([k,v])=>({label:k,value:v,color:k.startsWith('Google')?'#B9914B':'#8A94A3'}))):'<div class="empty">No calls yet since launch</div>'}</div>
+    <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Latest calls</div>${cs.length?`<div class="scroll"><table class="t"><thead><tr><th>When (ET)</th><th class="n">Duration</th><th>Status</th><th>Origin</th><th>Market</th></tr></thead><tbody>${cs.slice(0,8).map(c=>`<tr><td>${new Date(c.at).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</td><td class="n">${Math.floor(c.duration/60)}:${String(c.duration%60).padStart(2,'0')}</td><td>${c.answered?(c.duration>=60?'<span class="pill p-ok">Qualified</span>':'<span class="pill p-mut">Short</span>'):'<span class="pill p-bad">Missed</span>'}</td><td>${esc(c.origin)}</td><td>${c.market?pill(c.market):'–'}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">No calls yet since launch</div>'}</div></div>`;
+  }
+  h+=section('Calls','Phone calls (CallRail)','A qualified call is answered and lasts 60 seconds or more',`<div class="card pad">${callsBody}</div>`);
+
+  // ---------- WHEN + DEVICES
+  const callHrs=Array(24).fill(0); (cr?.calls||[]).forEach(c=>callHrs[c.hourET]++);
+  const dv=d.devices||{}, dvTot=Object.values(dv).reduce((a,o)=>a+o.clicks,0);
+  const clLast=clarity?Object.values(clarity.snapshots||{}):[];
+  const clDev={}; clLast.forEach(s=>Object.entries(s.devices||{}).forEach(([k,v])=>clDev[k]=(clDev[k]||0)+v));
+  h+=section('Timing and devices','When and where people engage','Hours in Eastern time · ads run 6 am to 1 am (shaded hours are off)',
+    `<div class="grid g-73"><div class="card pad chart">${hoursSVG(d.hours||[],callHrs)}<div class="legend"><span><i style="background:#2F5D8A"></i>Ad clicks</span><span><i style="background:#B9914B"></i>Tracked calls</span></div></div>
+    <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Ad clicks by device</div>${hBars(['DESKTOP','MOBILE','TABLET'].map(k=>({label:k[0]+k.slice(1).toLowerCase(),value:dv[k]?.clicks||0,sub:`${fm(dv[k]?.clicks||0)} · ${usd(div(dv[k]?.spend||0,dv[k]?.clicks||0),2)}`,color:'#2F5D8A'})))}
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin:12px 0 4px">Landing sessions by device (Clarity)</div>${hBars(Object.entries(clDev).filter(([k,v])=>v).map(([k,v])=>({label:k==='PC'?'Desktop':k,value:v,color:'#B9914B'})))}</div></div>`);
+
+  // ---------- LANDING PAGES (Clarity)
+  let lp='<div class="empty">Clarity data builds up day by day from launch.</div>';
+  if(clLast.length){
+    const agg={}; clLast.forEach(s=>s.pages.forEach(p=>{const o=(agg[p.path]||={path:p.path,sessions:0,sw:0,active:0,dead:0,rage:0,quickback:0,scriptErr:0});o.sessions+=p.sessions;o.sw+=(p.scroll||0)*p.sessions;o.active+=p.active;o.dead+=p.dead;o.rage+=p.rage;o.quickback+=p.quickback;o.scriptErr+=p.scriptErr}));
+    const rows=Object.values(agg).filter(o=>o.sessions>0).sort((a,b)=>b.sessions-a.sessions);
+    const flag=(v,s,lim)=>{const r=div(v,s);return r==null?'–':`<span class="pill ${r>=lim?'p-bad':r>0?'p-warn':'p-ok'}">${pct(r,0)}</span>`};
+    lp=`<div class="card scroll"><table class="t"><thead><tr><th>Landing page</th><th class="n">Sessions</th><th class="n">Avg scroll depth</th><th class="n">Active time / session</th><th class="n">Rage clicks</th><th class="n">Dead clicks</th><th class="n">Quick back</th><th class="n">Script errors</th></tr></thead><tbody>${rows.map(o=>{const sc=div(o.sw,o.sessions)||0;return `<tr><td><b>${esc(o.path)}</b></td><td class="n">${fm(o.sessions)}</td><td class="n">${fm(sc,0)}%<span class="meter"><i style="width:${Math.min(100,sc)}%"></i></span></td><td class="n">${fm(div(o.active,o.sessions),0)}s</td><td class="n">${flag(o.rage,o.sessions,.1)}</td><td class="n">${flag(o.dead,o.sessions,.2)}</td><td class="n">${flag(o.quickback,o.sessions,.2)}</td><td class="n">${flag(o.scriptErr,o.sessions,.1)}</td></tr>`}).join('')}</tbody></table></div>`;
+  }
+  h+=section('Landing pages','How visitors use the pages (Clarity)','Share of sessions with each issue · red means it needs attention',lp);
+
+  // ---------- KEYWORDS + TERMS
+  const kw=(d.keywords||[]).slice(0,15), tm=(d.terms||[]).slice(0,20);
+  h+=section('Search','Keywords and search terms','',`<div class="grid g2">
+   <div class="card scroll"><table class="t"><thead><tr><th>Top keywords by spend</th><th>Market</th><th class="n">QS</th><th class="n">Clicks</th><th class="n">CPC</th><th class="n">Spend</th><th class="n">Inq.</th></tr></thead><tbody>${kw.length?kw.map(k=>`<tr><td>[${esc(k.kw)}]<div style="font-size:10.5px;color:#8A93A0">${esc(k.adGroup)}</div></td><td>${pill(k.market)}</td><td class="n">${k.qs??'–'}</td><td class="n">${fm(k.clicks)}</td><td class="n">${usd(div(k.spend,k.clicks),2)}</td><td class="n">${usd(k.spend,2)}</td><td class="n">${fm(k.conv,0)}</td></tr>`).join(''):'<tr><td colspan="7" class="empty">No data yet</td></tr>'}</tbody></table></div>
+   <div class="card scroll"><table class="t"><thead><tr><th>What people actually searched</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">Spend</th><th>Status</th></tr></thead><tbody>${tm.length?tm.map(t=>`<tr><td>${esc(t.term)}</td><td class="n">${fm(t.impr)}</td><td class="n">${fm(t.clicks)}</td><td class="n">${usd(t.spend,2)}</td><td>${t.excluded?'<span class="pill p-mut">Blocked</span>':t.conv>0?'<span class="pill p-ok">Converted</span>':t.spend>=30?'<span class="pill p-warn">Watch</span>':''}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">No data yet</td></tr>'}</tbody></table></div></div>`);
+
+  // ---------- PIPELINE
+  const pl=d.pipeline; let pb='<div class="empty">Pipedrive data unavailable in this update.</div>';
+  if(pl){
+    const hm=Object.fromEntries((pl.history||[]).map(x=>[x.ym,x])); const hist=[]; {const t=new Date(d.today+'T12:00:00'); for(let i=11;i>=0;i--){const dt=new Date(t.getFullYear(),t.getMonth()-i,15); const ym=dt.toISOString().slice(0,7); hist.push(hm[ym]||{ym,booked:0,value:0,margin:0});}} const mx=Math.max(1,...hist.map(x=>x.booked));
+    const W=520,H=180,P={l:10,r:8,t:22,b:24},bw=(W-P.l-P.r)/Math.max(1,hist.length);
+    let g=''; hist.forEach((x,i)=>{const hh=(H-P.t-P.b)*x.booked/mx, X=P.l+i*bw;g+=`<rect x="${X+4}" y="${H-P.b-hh}" width="${bw-8}" height="${hh}" fill="#B9914B" rx="2"><title>${x.ym}: ${x.booked} flights, margin $${fm(x.margin)}</title></rect><text x="${X+bw/2}" y="${H-P.b-hh-4}" font-size="10" text-anchor="middle" fill="#0D1928">${x.booked}</text><text x="${X+bw/2}" y="${H-8}" font-size="9" text-anchor="middle" fill="#8A93A0">${new Date(x.ym+'-15').toLocaleString('en-US',{month:'short'})}</text>`});
+    pb=`<div class="grid g2"><div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px">Ad-attributed deals by stage, since launch</div>${hBars(pl.bySource.map(s=>({label:s.stage,value:s.ads,color:s.stage==='Booked'?'#2E8B57':'#2F5D8A'})),null)}<div style="font-size:11px;color:var(--mut);margin-top:8px">${fm(pl.lostAds)} lost · deals are attributed when they carry the Google click ID or campaign tag.</div></div>
+      <div class="card pad chart"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px">Booked flights per month, all sources (last 12 months)</div><svg viewBox="0 0 ${W} ${H}">${g}</svg><div style="font-size:11px;color:var(--mut)">Total margin ${usd(hist.reduce((a,x)=>a+x.margin,0))} on ${fm(hist.reduce((a,x)=>a+x.booked,0))} flights. Context for what a normal month looks like.</div></div></div>`;
+  }
+  h+=section('Pipeline','From inquiry to booked flight (Pipedrive)','',pb);
+
+  const s=d.sources, srcs=[['Google Ads',s.googleAds],['CallRail',s.callrail],['Pipedrive',s.pipedrive],['Clarity',s.clarity]];
+  h+=`<footer><div>Sources: ${srcs.map(([n,ok])=>`${n} ${ok?'✓':'✗'}`).join(' · ')}${s.errors?.length?` · <span style="color:var(--bad)">${esc(s.errors.join(' | '))}</span>`:''}</div><div>Updated daily · Charter Jets, Inc.</div></footer>`;
+  $('#root').innerHTML=h;
+}
+</script>
+</body>
+</html>
