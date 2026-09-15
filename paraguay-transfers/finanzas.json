@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T20:30:22.979Z",
+ "generated": "2026-09-15T21:51:03.323Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -199,15 +199,16 @@
   },
   {
    "fecha": "2026-09-15",
-   "in": 1108.74,
+   "in": 1314.02,
    "out": 60.5,
-   "n": 2,
+   "n": 3,
    "porFuente": {
     "Pagopar": 1108.74,
-    "WhatsApp · Pagos (Majo)": -60.5
+    "WhatsApp · Pagos (Majo)": -60.5,
+    "Transferencia": 205.28
    },
-   "neto": 1048.24,
-   "acum": 4652.03
+   "neto": 1253.52,
+   "acum": 4857.31
   }
  ],
  "movimientos": [
@@ -722,6 +723,14 @@
    "gs": 360000
   },
   {
+   "d": "2026-09-15",
+   "t": "in",
+   "usd": 205.28,
+   "fuente": "Transferencia",
+   "det": "Tania Josefina Storm Escobar (comprobante en Pagos (Majo))",
+   "gs": 1221400
+  },
+  {
    "d": "2026-09-01",
    "t": "out",
    "usd": 50.42,
@@ -846,9 +855,9 @@
    "mesLabel": "Septiembre",
    "traslados": 47,
    "ingresos": {
-    "planilla": 7988.4,
+    "planilla": 7981.06,
     "alohaSinFila": 0,
-    "total": 7988.4
+    "total": 7981.06
    },
    "directos": {
     "chofer": 2557,
@@ -858,7 +867,7 @@
     "otros": 49,
     "total": 3383
    },
-   "margenBruto": 4605.4,
+   "margenBruto": 4598.06,
    "cobro": {
     "stripe": 96.45,
     "aloha": null,
@@ -878,7 +887,7 @@
     "total": 468.86
    },
    "impuestos": null,
-   "resultado": 3935.68,
+   "resultado": 3928.34,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
