@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T14:30:26.680Z",
+ "generated": "2026-09-15T16:30:08.375Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 429.23,
   "stripePendiente": 2799.97,
-  "pagoparPendienteUsd": 6641.51,
+  "pagoparPendienteUsd": 7750.25,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -199,14 +199,15 @@
   },
   {
    "fecha": "2026-09-15",
-   "in": 0,
+   "in": 1108.74,
    "out": 60.5,
-   "n": 1,
+   "n": 2,
    "porFuente": {
+    "Pagopar": 1108.74,
     "WhatsApp · Pagos (Majo)": -60.5
    },
-   "neto": -60.5,
-   "acum": 3543.29
+   "neto": 1048.24,
+   "acum": 4652.03
   }
  ],
  "movimientos": [
@@ -479,6 +480,14 @@
    "fuente": "Pagopar",
    "det": "Pago QR · Tania Storm",
    "gs": 630000
+  },
+  {
+   "d": "2026-09-15",
+   "t": "in",
+   "usd": 1108.74,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · SUELI TERESINHA BONATTI BUHATEM",
+   "gs": 6597000
   },
   {
    "d": "2026-09-02",
@@ -835,11 +844,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 42,
+   "traslados": 43,
    "ingresos": {
-    "planilla": 7987.34,
+    "planilla": 7988.4,
     "alohaSinFila": 0,
-    "total": 7987.34
+    "total": 7988.4
    },
    "directos": {
     "chofer": 2557,
@@ -849,7 +858,7 @@
     "otros": 49,
     "total": 3383
    },
-   "margenBruto": 4604.34,
+   "margenBruto": 4605.4,
    "cobro": {
     "stripe": 96.45,
     "aloha": null,
@@ -864,12 +873,12 @@
     "total": 104.41
    },
    "marketing": {
-    "google": 177.21,
+    "google": 184.09,
     "meta": 279.12,
-    "total": 456.33
+    "total": 463.21
    },
    "impuestos": null,
-   "resultado": 3947.15,
+   "resultado": 3941.33,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -889,8 +898,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 25,
-   "bruto": 6641.48,
+   "cobros": 26,
+   "bruto": 7750.22,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -905,8 +914,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 39517000,
-  "cobradoUsd": 6641.48,
+  "cobradoGs": 46114000,
+  "cobradoUsd": 7750.22,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -973,6 +982,12 @@
     "cobros": 1,
     "gs": 630000,
     "usd": 105.88
+   },
+   {
+    "fecha": "2026-09-15",
+    "cobros": 1,
+    "gs": 6597000,
+    "usd": 1108.74
    }
   ],
   "pruebasExcluidas": 0,
@@ -980,8 +995,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 39517000,
-  "pendienteUsd": 6641.51
+  "pendienteGs": 46114000,
+  "pendienteUsd": 7750.25
  },
  "giros": [
   {
@@ -1076,7 +1091,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲39.5 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲46.1 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
