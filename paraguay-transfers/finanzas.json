@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T12:30:15.770Z",
+ "generated": "2026-09-15T14:30:26.680Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -196,6 +196,17 @@
    },
    "neto": -465.55,
    "acum": 3603.79
+  },
+  {
+   "fecha": "2026-09-15",
+   "in": 0,
+   "out": 60.5,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -60.5
+   },
+   "neto": -60.5,
+   "acum": 3543.29
   }
  ],
  "movimientos": [
@@ -694,6 +705,14 @@
    "gs": 2500000
   },
   {
+   "d": "2026-09-15",
+   "t": "out",
+   "usd": 60.5,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Ingrid Dominguez. Traslados internos x 3 días /Pax Tania",
+   "gs": 360000
+  },
+  {
    "d": "2026-09-01",
    "t": "out",
    "usd": 50.42,
@@ -818,19 +837,19 @@
    "mesLabel": "Septiembre",
    "traslados": 42,
    "ingresos": {
-    "planilla": 7980,
+    "planilla": 7987.34,
     "alohaSinFila": 0,
-    "total": 7980
+    "total": 7987.34
    },
    "directos": {
-    "chofer": 2497,
+    "chofer": 2557,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
     "otros": 49,
-    "total": 3323
+    "total": 3383
    },
-   "margenBruto": 4657,
+   "margenBruto": 4604.34,
    "cobro": {
     "stripe": 96.45,
     "aloha": null,
@@ -845,12 +864,12 @@
     "total": 104.41
    },
    "marketing": {
-    "google": 175.73,
+    "google": 177.21,
     "meta": 279.12,
-    "total": 454.85
+    "total": 456.33
    },
    "impuestos": null,
-   "resultado": 4001.29,
+   "resultado": 3947.15,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
