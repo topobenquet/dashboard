@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T10:20:12.736Z",
+ "generated": "2026-09-16T12:31:02.161Z",
  "tc": 5920,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-09-16",
   "itauGs": 43605,
-  "uenoGs": 13474538,
-  "uenoFecha": "2026-09-15",
+  "uenoGs": 24609376,
+  "uenoFecha": "2026-09-16",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3229.2,
@@ -209,6 +209,18 @@
    },
    "neto": 1259.87,
    "acum": 4871.36
+  },
+  {
+   "fecha": "2026-09-16",
+   "in": 0,
+   "out": 38.1,
+   "n": 2,
+   "porFuente": {
+    "WhatsApp · Alfredo": -19.05,
+    "WhatsApp · Pagos (Majo)": -19.05
+   },
+   "neto": -38.1,
+   "acum": 4833.26
   }
  ],
  "movimientos": [
@@ -721,6 +733,22 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Ingrid Dominguez. Traslados internos x 3 días /Pax Tania",
    "gs": 360000
+  },
+  {
+   "d": "2026-09-16",
+   "t": "out",
+   "usd": 19.05,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago a LOS JARDINES JACARANDA-SALON 1 vía ueno bank",
+   "gs": 112750
+  },
+  {
+   "d": "2026-09-16",
+   "t": "out",
+   "usd": 19.05,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Reembolso. Driver Alfredo. Compra de agua para pasajeros. Traslado Vehículo a disposición.",
+   "gs": 112750
   },
   {
    "d": "2026-09-15",
@@ -1255,6 +1283,13 @@
    "momento": "inicio",
    "gs": 13474538,
    "usd": 2276.1
+  },
+  {
+   "fecha": "2026-09-16",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 24609376,
+   "usd": 4156.99
   }
  ]
 }
