@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T10:39:51.426Z",
+ "generated": "2026-09-16T10:40:31.184Z",
  "today": "2026-09-16",
  "launch": "2026-09-15",
  "daysLive": 2,
@@ -37,8 +37,8 @@
    "value": 0,
    "callrailCalls": 0,
    "callrailQualified": 0,
-   "sessions": 19,
-   "avinodeSearches": 13,
+   "sessions": 12,
+   "avinodeSearches": 12,
    "avinodeOpenForm": 3,
    "avinodeInquiries": 0
   },
@@ -57,8 +57,8 @@
    "value": 0,
    "callrailCalls": 0,
    "callrailQualified": 0,
-   "sessions": 17,
-   "avinodeSearches": 16,
+   "sessions": 14,
+   "avinodeSearches": 15,
    "avinodeOpenForm": 4,
    "avinodeInquiries": 0
   },
@@ -1637,7 +1637,13 @@
     "users": 16,
     "search": 16,
     "openForm": 4,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 14,
+     "search": 15,
+     "openForm": 4,
+     "inquiry": 0
+    }
    },
    {
     "path": "/miami",
@@ -1648,7 +1654,13 @@
     "users": 9,
     "search": 7,
     "openForm": 1,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 4,
+     "search": 6,
+     "openForm": 1,
+     "inquiry": 0
+    }
    },
    {
     "path": "/florida",
@@ -1659,7 +1671,13 @@
     "users": 8,
     "search": 5,
     "openForm": 2,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 6,
+     "search": 5,
+     "openForm": 2,
+     "inquiry": 0
+    }
    },
    {
     "path": "/",
@@ -1670,7 +1688,13 @@
     "users": 3,
     "search": 1,
     "openForm": 0,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 1,
+     "search": 1,
+     "openForm": 0,
+     "inquiry": 0
+    }
    },
    {
     "path": "/fort-lauderdale",
@@ -1681,7 +1705,13 @@
     "users": 1,
     "search": 0,
     "openForm": 0,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 1,
+     "search": 0,
+     "openForm": 0,
+     "inquiry": 0
+    }
    },
    {
     "path": "/palm-beach",
@@ -1692,7 +1722,13 @@
     "users": 1,
     "search": 1,
     "openForm": 0,
-    "inquiry": 0
+    "inquiry": 0,
+    "ads": {
+     "sessions": 1,
+     "search": 1,
+     "openForm": 0,
+     "inquiry": 0
+    }
    }
   ],
   "sources": [
