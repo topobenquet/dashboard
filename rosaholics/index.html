@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Rosaholics · Tablero</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌹</text></svg>">
+<style>
+:root{
+  color-scheme:light;
+  --page:#f7f6f3; --surface:#fcfcfb; --card:#ffffff; --ink:#0b0b0b; --ink2:#52514e; --mut:#898781;
+  --grid:#e8e7e1; --axis:#c3c2b7; --line:rgba(11,11,11,.10); --wash:rgba(11,11,11,.04);
+  --brand:#8f1d3a; --brand-ink:#ffffff; --brand-soft:#f6e9ec;
+  --google:#2a78d6; --meta:#eb6834; --tiktok:#1baf7a; --shop:#4a3aa7; --prev:#b9b7ae;
+  --good:#0ca30c; --good-ink:#006300; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b; --info:#2a78d6;
+  --bad-ink:#b3261e;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --mut:#898781;
+    --grid:#2c2c2a; --axis:#383835; --line:rgba(255,255,255,.10); --wash:rgba(255,255,255,.05);
+    --brand:#6e1630; --brand-soft:#2b1a1f;
+    --google:#3987e5; --meta:#d95926; --tiktok:#199e70; --shop:#9085e9; --prev:#5c5b56;
+    --good-ink:#0ca30c; --bad-ink:#e66767;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --mut:#898781;
+  --grid:#2c2c2a; --axis:#383835; --line:rgba(255,255,255,.10); --wash:rgba(255,255,255,.05);
+  --brand:#6e1630; --brand-soft:#2b1a1f;
+  --google:#3987e5; --meta:#d95926; --tiktok:#199e70; --shop:#9085e9; --prev:#5c5b56;
+  --good-ink:#0ca30c; --bad-ink:#e66767;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--page);color:var(--ink);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+header{background:var(--brand);color:var(--brand-ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+header .marca{display:flex;align-items:center;gap:12px}
+header .marca svg{height:22px;width:auto}
+header .marca svg path{fill:#fff}
+header h1{font-size:15px;font-weight:500;opacity:.85;border-left:1px solid rgba(255,255,255,.35);padding-left:12px}
+header .meta{font-size:12px;opacity:.85;text-align:right}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--ink2);font:inherit;font-weight:500;padding:12px 10px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brand)}
+nav.tabs .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:4px;border-radius:9px;background:var(--crit);color:#fff;font-size:11px;line-height:18px;text-align:center}
+.filtros{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:14px 0 4px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
+.seg button{background:none;border:0;font:inherit;font-size:13px;color:var(--ink2);padding:6px 11px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--page);font-weight:600}
+.filtros .nota{font-size:12px;color:var(--mut)}
+section.panel{display:none;padding-bottom:40px}
+section.panel.on{display:block}
+h2{font-size:16px;font-weight:600;margin:22px 0 10px}
+h2 small{font-size:12px;font-weight:400;color:var(--mut);margin-left:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles{display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.g2,.g3{grid-template-columns:minmax(0,1fr)}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile .l{font-size:12px;color:var(--ink2)}
+.tile .v{font-size:24px;font-weight:600;margin-top:2px;letter-spacing:-.01em}
+.tile .s{font-size:12px;color:var(--mut);margin-top:2px}
+.up{color:var(--good-ink)} .down{color:var(--bad-ink)} .flat{color:var(--mut)}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .tt{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.12);padding:8px 10px;font-size:12px;min-width:140px;display:none;z-index:5}
+.tt .f{color:var(--mut);margin-bottom:4px}
+.tt .r{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.tt .r b{font-weight:600}
+.tt .k{display:inline-block;width:12px;height:2px;border-radius:1px;margin-right:6px;vertical-align:middle}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:0 0 8px}
+.leyenda i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.leyenda i.ln{height:2px;width:14px;vertical-align:3px}
+.leyenda i.dash{height:0;width:14px;border-top:2px dashed var(--prev);background:none;vertical-align:3px}
+.tabla{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-weight:500;color:var(--ink2);text-align:right;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+th:first-child,td:first-child{text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{white-space:normal;min-width:180px}
+tr:hover td{background:var(--wash)}
+td .sub{display:block;font-size:11px;color:var(--mut)}
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--wash);color:var(--ink2);margin-left:4px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.pace{margin:10px 0}
+.pace .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;gap:8px;flex-wrap:wrap}
+.pace .bar{position:relative;height:10px;border-radius:5px;background:var(--wash)}
+.pace .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.pace .bar i.proy{opacity:.3}
+.pace .bar b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.ads{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.ad{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.ad .img{aspect-ratio:1/1;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;overflow:hidden}
+.ad .img img{width:100%;height:100%;object-fit:cover;display:block}
+.ad .img.v{aspect-ratio:9/12}
+.ad .b{padding:10px 12px;font-size:12px}
+.ad .n{font-weight:600;font-size:13px;line-height:1.3;margin-bottom:2px;word-break:break-word}
+.ad .c{color:var(--mut);margin-bottom:8px}
+.ad dl{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.ad dt{color:var(--mut)} .ad dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.ad .rank{position:relative}
+.ad .flag{display:inline-block;margin-top:8px;font-size:11px;padding:2px 7px;border-radius:10px;background:var(--brand-soft);color:var(--ink)}
+.alerta{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 14px;border:1px solid var(--line);border-left-width:4px;border-radius:10px;background:var(--card);margin-bottom:8px}
+.alerta.critico{border-left-color:var(--crit)} .alerta.aviso{border-left-color:var(--warn)} .alerta.info{border-left-color:var(--info)}
+.alerta .ic{font-size:12px;font-weight:600;white-space:nowrap}
+.alerta .t{font-weight:600}
+.alerta .d{grid-column:2;color:var(--ink2);font-size:13px}
+.alerta .a{grid-column:2;font-size:13px}
+.alerta .m{grid-column:2;font-size:11px;color:var(--mut)}
+.nivel{display:inline-flex;align-items:center;gap:5px}
+.nivel::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.nivel.critico{color:var(--crit)} .nivel.aviso{color:#b07800} .nivel.info{color:var(--info)}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) .nivel.aviso{color:var(--warn)}}
+:root[data-theme="dark"] .nivel.aviso{color:var(--warn)}
+.vacio{color:var(--mut);font-size:13px;padding:16px 0}
+.aviso-fuente{background:var(--brand-soft);border-radius:10px;padding:10px 14px;font-size:13px;margin-top:12px}
+.sel{font:inherit;font-size:13px;padding:5px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+footer{color:var(--mut);font-size:12px;padding:24px 0 40px;border-top:1px solid var(--line)}
+.nota-p{font-size:12px;color:var(--mut);margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="marca" id="logo"><h1>Tablero de performance</h1></div>
+    <div class="meta" id="meta">Cargando…</div>
+  </div>
+</header>
+<nav class="tabs"><div class="wrap" role="tablist" id="tabs">
+  <button role="tab" data-tab="resumen" aria-selected="true">Resumen</button>
+  <button role="tab" data-tab="canales">Canales</button>
+  <button role="tab" data-tab="plataformas">Plataformas</button>
+  <button role="tab" data-tab="anuncios">Anuncios</button>
+  <button role="tab" data-tab="tienda">Tienda</button>
+  <button role="tab" data-tab="alertas">Alertas <span class="badge" id="badge" hidden></span></button>
+</div></nav>
+
+<main class="wrap">
+  <div class="filtros" id="filtros">
+    <div class="seg" id="periodo">
+      <button data-p="7">7 días</button><button data-p="14">14 días</button><button data-p="30" aria-pressed="true">30 días</button><button data-p="60">60 días</button><button data-p="mes">Este mes</button>
+    </div>
+    <span class="nota" id="rango"></span>
+  </div>
+
+  <section class="panel on" id="p-resumen"></section>
+  <section class="panel" id="p-canales"></section>
+  <section class="panel" id="p-plataformas"></section>
+  <section class="panel" id="p-anuncios"></section>
+  <section class="panel" id="p-tienda"></section>
+  <section class="panel" id="p-alertas"></section>
+
+  <footer id="pie"></footer>
+</main>
+
+<script>
+"use strict";
+// ───────── utilidades ─────────
+const $ = (s, r = document) => r.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k === "style") e.style.cssText = v;
+    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const k of kids.flat(Infinity)) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return e;
+};
+const SVGNS = "http://www.w3.org/2000/svg";
+const sv = (tag, attrs = {}) => { const e = document.createElementNS(SVGNS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+const grp = (n, dec = 0) => {
+  if (n == null || !isFinite(n)) return "–";
+  const neg = n < 0; n = Math.abs(n);
+  let [i, d] = n.toFixed(dec).split(".");
+  i = i.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return (neg ? "−" : "") + i + (d ? "," + d : "");
+};
+const usd = (n, dec = 0) => n == null || !isFinite(n) ? "–" : (n < 0 ? "−$" : "$") + grp(Math.abs(n), dec);
+const pct = (n, dec = 1) => n == null || !isFinite(n) ? "–" : grp(n * 100, dec) + "%";
+const xx = (n) => n == null || !isFinite(n) ? "–" : grp(n, 2) + "x";
+const addDays = (s, k) => { const d = new Date(s + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + k); return d.toISOString().slice(0, 10); };
+const dias = (a, b) => { const out = []; for (let d = a; d <= b; d = addDays(d, 1)) out.push(d); return out; };
+const fcorta = (s) => `${+s.slice(8)}/${+s.slice(5, 7)}`;
+const DIAS_SEM = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+const dsem = (s) => DIAS_SEM[new Date(s + "T12:00:00Z").getUTCDay()];
+const PLATS = ["google", "meta", "tiktok"];
+const NOM = { google: "Google", meta: "Meta", tiktok: "TikTok", shopify: "Shopify", total: "Total" };
+const COL = (p) => `var(--${p})`;
+const SOC = { google: ["Google"], meta: ["MetaAds", "Meta Shop"], tiktok: ["TikTok"] };
+
+let D, P = { per: "30", tab: "resumen", plat: "google", metrica: "cost" };
+try { const s = JSON.parse(localStorage.getItem("rosa-tablero") || "{}"); Object.assign(P, s); } catch (e) {}
+const guardar = () => { try { localStorage.setItem("rosa-tablero", JSON.stringify(P)); } catch (e) {} };
+
+// ───────── agregados ─────────
+function rango() {
+  const fin = D.hasta;
+  if (P.per === "mes") return { ini: fin.slice(0, 8) + "01", fin };
+  return { ini: addDays(fin, -(+P.per - 1)), fin };
+}
+function previo(r) {
+  const n = dias(r.ini, r.fin).length;
+  return { ini: addDays(r.ini, -n), fin: addDays(r.ini, -1) };
+}
+function sumaPlat(plat, r, cid) {
+  const a = [0, 0, 0, 0, 0];
+  const camps = (D[plat] || {}).campanas || {};
+  for (const [id, c] of Object.entries(camps)) {
+    if (cid && id !== cid) continue;
+    for (const [f, v] of Object.entries(c.diario)) if (f >= r.ini && f <= r.fin) for (let i = 0; i < 5; i++) a[i] += v[i];
+  }
+  return a;
+}
+function seriePlat(plat, r, cid) {
+  const m = {};
+  for (const [id, c] of Object.entries((D[plat] || {}).campanas || {})) {
+    if (cid && id !== cid) continue;
+    for (const [f, v] of Object.entries(c.diario)) { if (f < r.ini || f > r.fin) continue; const a = (m[f] ||= [0, 0, 0, 0, 0]); for (let i = 0; i < 5; i++) a[i] += v[i]; }
+  }
+  return m;
+}
+const K = {
+  cost: (v) => v[0], clicks: (v) => v[1], impr: (v) => v[2], conv: (v) => v[3], value: (v) => v[4],
+  cpc: (v) => v[1] ? v[0] / v[1] : null, ctr: (v) => v[2] ? v[1] / v[2] : null, cvr: (v) => v[1] ? v[3] / v[1] : null,
+  cpa: (v) => v[3] ? v[0] / v[3] : null, roas: (v) => v[0] ? v[4] / v[0] : null,
+};
+function tienda(r) {
+  const t = { pedidos: 0, ingresos: 0, reemb: 0, cancel: 0, nuevos: 0, ing_nuevos: 0, canales: {}, dias: 0, diasTot: 0 };
+  const dd = (D.tienda || {}).diario || {};
+  for (const f of dias(r.ini, r.fin)) {
+    t.diasTot++;
+    const x = dd[f]; if (!x) continue; t.dias++;
+    for (const k of ["pedidos", "ingresos", "reemb", "cancel", "nuevos", "ing_nuevos"]) t[k] += x[k];
+    for (const [c, [p, i, n]] of Object.entries(x.canales)) { const a = (t.canales[c] ||= [0, 0, 0]); a[0] += p; a[1] += i; a[2] += n; }
+  }
+  return t;
+}
+/** Ingresos por canal: Softwareholics donde hay, estimado desde Shopify donde no. */
+function canales(r) {
+  const out = {}; let sw = 0, est = 0;
+  const dd = (D.tienda || {}).diario || {};
+  for (const f of dias(r.ini, r.fin)) {
+    const s = (D.softwareholics || {})[f];
+    if (s) { sw++; for (const [c, v] of Object.entries(s)) if (c !== "TOTAL" && v) (out[c] ||= { ing: 0, ped: 0, nuevos: 0, pedKnown: false }).ing += v; }
+    else if (dd[f]) { est++; for (const [c, [p, i, n]] of Object.entries(dd[f].canales)) { const a = (out[c] ||= { ing: 0, ped: 0, nuevos: 0 }); a.ing += i; a.ped += p; a.nuevos += n; } }
+  }
+  return { canales: out, sw, est };
+}
+const delta = (a, b, invertido) => {
+  if (a == null || b == null || !b) return null;
+  const d = (a - b) / Math.abs(b);
+  return { d, cls: Math.abs(d) < 0.02 ? "flat" : ((d > 0) !== !!invertido ? "up" : "down") };
+};
+const deltaTxt = (dl) => dl ? el("span", { class: dl.cls }, (dl.d > 0 ? "▲ " : dl.d < 0 ? "▼ " : "") + grp(Math.abs(dl.d) * 100, 0) + "%") : el("span", { class: "flat" }, "sin comparación");
+
+function tile(label, valor, dl, sub) {
+  return el("div", { class: "tile" }, el("div", { class: "l" }, label), el("div", { class: "v" }, valor),
+    el("div", { class: "s" }, dl === undefined ? "" : deltaTxt(dl), dl === undefined ? "" : " vs período anterior", sub ? el("div", {}, sub) : null));
+}
+
+// ───────── gráficos ─────────
+/**
+ * series: [{nombre, color, valores:{fecha:n}, tipo:"bar"|"line", dash, apilar}]
+ * refs: [{y, etiqueta}]  fmt: formateador del eje y tooltip
+ */
+function grafico(fechas, series, { fmt = (n) => grp(n), alto = 220, refs = [], apilado = false } = {}) {
+  const W = 760, H = alto, m = { t: 12, r: 12, b: 26, l: 52 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const bars = series.filter((s) => s.tipo === "bar"), lines = series.filter((s) => s.tipo !== "bar");
+  let max = 0;
+  fechas.forEach((f) => {
+    if (apilado) max = Math.max(max, bars.reduce((a, s) => a + (s.valores[f] || 0), 0));
+    else bars.forEach((s) => (max = Math.max(max, s.valores[f] || 0)));
+    lines.forEach((s) => (max = Math.max(max, s.valores[f] ?? 0)));
+  });
+  refs.forEach((r) => (max = Math.max(max, r.y * 1.1)));
+  if (!max) max = 1;
+  const paso = niceStep(max / 4); max = Math.ceil(max / paso) * paso;
+  const y = (v) => m.t + ih - (v / max) * ih;
+  const bw = iw / fechas.length;
+  const x = (i) => m.l + bw * i + bw / 2;
+  const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
+  for (let v = 0; v <= max + 1e-9; v += paso) {
+    svg.append(sv("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--axis)" : "var(--grid)", "stroke-width": 1 }));
+    const t = sv("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--mut)" }); t.textContent = fmt(v, true); svg.append(t);
+  }
+  const cada = Math.ceil(fechas.length / 8);
+  fechas.forEach((f, i) => {
+    if (i % cada) return;
+    const t = sv("text", { x: x(i), y: H - 8, "text-anchor": "middle", "font-size": 11, fill: "var(--mut)" }); t.textContent = fcorta(f); svg.append(t);
+  });
+  // barras
+  const gap = fechas.length > 45 ? 1 : 2;
+  const nb = apilado ? 1 : Math.max(bars.length, 1);
+  const anchoB = Math.max(1, (bw - gap * 2) / nb - (nb > 1 ? 2 : 0));
+  fechas.forEach((f, i) => {
+    let base = 0;
+    bars.forEach((s, j) => {
+      const v = s.valores[f] || 0; if (!v) return;
+      const bx = apilado ? m.l + bw * i + gap : m.l + bw * i + gap + j * (anchoB + 2);
+      const y0 = y(base + v), h = y(base) - y(base + v);
+      const r = Math.min(3, anchoB / 2, h);
+      const esTope = !apilado || !bars.slice(j + 1).some((s2) => s2.valores[f]);
+      const hAjust = apilado && base > 0 ? h - 1.5 : h;
+      svg.append(sv("path", { d: esTope ? topRounded(bx, y0, anchoB, hAjust, r) : `M${bx},${y0}h${anchoB}v${hAjust}h${-anchoB}z`, fill: s.color }));
+      if (apilado) base += v;
+    });
+  });
+  // referencias
+  refs.forEach((r, i) => {
+    svg.append(sv("line", { x1: m.l, x2: W - m.r, y1: y(r.y), y2: y(r.y), stroke: "var(--ink2)", "stroke-width": 1, "stroke-dasharray": "4 4" }));
+    // Si dos referencias quedan pegadas, la de abajo lleva la etiqueta debajo de su línea.
+    const pegada = refs.some((o, j) => j !== i && o.y > r.y && y(r.y) - y(o.y) < 16);
+    const t = sv("text", { x: W - m.r, y: pegada ? y(r.y) + 14 : y(r.y) - 5, "text-anchor": "end", "font-size": 11, fill: "var(--ink2)", stroke: "var(--card)", "stroke-width": 3, "paint-order": "stroke" }); t.textContent = r.etiqueta; svg.append(t);
+  });
+  // líneas
+  lines.forEach((s) => {
+    let d = "", abierto = false;
+    fechas.forEach((f, i) => {
+      const v = s.valores[f];
+      if (v == null) { abierto = false; return; }
+      d += (abierto ? "L" : "M") + x(i).toFixed(1) + "," + y(v).toFixed(1); abierto = true;
+    });
+    svg.append(sv("path", { d, fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", ...(s.dash ? { "stroke-dasharray": "5 4" } : {}) }));
+  });
+  // capa de hover
+  const cross = sv("line", { y1: m.t, y2: m.t + ih, stroke: "var(--mut)", "stroke-width": 1, visibility: "hidden" });
+  svg.append(cross);
+  const hit = sv("rect", { x: m.l, y: m.t, width: iw, height: ih, fill: "transparent", tabindex: 0 });
+  svg.append(hit);
+  const cont = el("div", { class: "chart" }, svg);
+  const tt = el("div", { class: "tt", role: "tooltip" }); cont.append(tt);
+  const mostrar = (i) => {
+    const f = fechas[i]; cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    tt.replaceChildren(el("div", { class: "f" }, `${dsem(f)} ${fcorta(f)}`));
+    for (const s of series) {
+      const v = s.valores[f];
+      const k = el("span", { class: "k", style: `background:${s.color}` });
+      if (s.dash) k.style.cssText = `background:none;border-top:2px dashed ${s.color};height:0`;
+      tt.append(el("div", { class: "r" }, el("span", {}, k, s.nombre), el("b", {}, v == null ? "–" : fmt(v))));
+    }
+    if (apilado && bars.length > 1) tt.append(el("div", { class: "r", style: "border-top:1px solid var(--line);margin-top:4px;padding-top:4px" }, el("span", {}, "Total"), el("b", {}, fmt(bars.reduce((a, s) => a + (s.valores[f] || 0), 0)))));
+    tt.style.display = "block";
+    const rect = svg.getBoundingClientRect(), esc = rect.width / W;
+    let left = x(i) * esc + 12; if (left + tt.offsetWidth > rect.width) left = x(i) * esc - tt.offsetWidth - 12;
+    tt.style.left = Math.max(0, left) + "px"; tt.style.top = "8px";
+  };
+  const ocultar = () => { tt.style.display = "none"; cross.setAttribute("visibility", "hidden"); };
+  hit.addEventListener("pointermove", (ev) => {
+    const rect = svg.getBoundingClientRect(); const px = (ev.clientX - rect.left) / (rect.width / W);
+    mostrar(Math.max(0, Math.min(fechas.length - 1, Math.floor((px - m.l) / bw))));
+  });
+  hit.addEventListener("pointerleave", ocultar);
+  let foco = fechas.length - 1;
+  hit.addEventListener("focus", () => mostrar(foco)); hit.addEventListener("blur", ocultar);
+  hit.addEventListener("keydown", (ev) => { if (ev.key === "ArrowLeft") foco = Math.max(0, foco - 1); else if (ev.key === "ArrowRight") foco = Math.min(fechas.length - 1, foco + 1); else return; ev.preventDefault(); mostrar(foco); });
+  return cont;
+}
+function topRounded(x, y, w, h, r) {
+  if (h <= 0) return "";
+  return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+}
+function niceStep(raw) {
+  const p = Math.pow(10, Math.floor(Math.log10(raw))); const n = raw / p;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p;
+}
+const ejeUsd = (v, eje) => eje && v >= 1000 ? "$" + grp(v / 1000, v % 1000 ? 1 : 0) + "k" : usd(v);
+const leyenda = (items) => el("div", { class: "leyenda" }, items.map((i) => el("span", {}, el("i", { class: i.tipo === "line" ? "ln" : i.tipo === "dash" ? "dash" : "", style: i.tipo === "dash" ? "" : `background:${i.color}` }), i.nombre)));
+
+// Tabla ordenable. cols: [{t, v:(fila)=>n, f:(n,fila)=>texto|nodo, izq}]
+function tabla(cols, filas, ordenIni = 1) {
+  let orden = ordenIni, dir = -1;
+  const tbody = el("tbody");
+  const pintar = () => {
+    const fs = [...filas].sort((a, b) => { const x = cols[orden].v(a), y = cols[orden].v(b); return ((x ?? -Infinity) > (y ?? -Infinity) ? 1 : (x ?? -Infinity) < (y ?? -Infinity) ? -1 : 0) * dir; });
+    tbody.replaceChildren(...fs.map((f) => el("tr", {}, cols.map((c) => el("td", {}, c.f ? c.f(c.v(f), f) : c.v(f))))));
+  };
+  const thead = el("thead", {}, el("tr", {}, cols.map((c, i) => el("th", { onclick: () => { if (orden === i) dir = -dir; else { orden = i; dir = -1; } pintar(); }, title: "Ordenar" }, c.t))));
+  pintar();
+  return el("div", { class: "tabla" }, el("table", {}, thead, tbody));
+}
+
+// ───────── RESUMEN ─────────
+function resumen() {
+  const r = rango(), pr = previo(r);
+  const t = tienda(r), tp = tienda(pr);
+  const gasto = PLATS.reduce((a, p) => a + sumaPlat(p, r)[0], 0);
+  const gastoP = PLATS.reduce((a, p) => a + sumaPlat(p, pr)[0], 0);
+  const O = D.objetivos, MG = O.margen_bruto_sobre_gross_sales;
+  const mer = gasto ? t.ingresos / gasto : null, merP = gastoP ? tp.ingresos / gastoP : null;
+  const contrib = t.ingresos * MG - gasto, contribP = tp.ingresos * MG - gastoP;
+  const cac = t.nuevos ? gasto / t.nuevos : null, cacP = tp.nuevos ? gastoP / tp.nuevos : null;
+  const nodos = [];
+  if (t.dias < t.diasTot) nodos.push(el("div", { class: "aviso-fuente" }, `Shopify tiene pedidos desde el ${fcorta(D.tienda.primer_dia)}: los totales de la tienda cubren ${t.dias} de ${t.diasTot} días del período. La historia crece un día por día desde ahora.`));
+  nodos.push(el("h2", {}, "El negocio", el("small", {}, "facturación de Shopify contra la pauta de las tres plataformas")));
+  nodos.push(el("div", { class: "tiles" },
+    tile("Facturación", usd(t.ingresos), delta(t.ingresos, tp.ingresos), `${grp(t.pedidos)} pedidos`),
+    tile("Inversión en pauta", usd(gasto), delta(gasto, gastoP, true), PLATS.map((p) => `${NOM[p]} ${usd(sumaPlat(p, r)[0])}`).join(" · ")),
+    tile("MER", xx(mer), delta(mer, merP), `Equilibrio ${xx(O.roas_equilibrio)} · objetivo ${xx(O.roas_objetivo)}`),
+    tile("Contribución", usd(contrib), delta(contrib, contribP), `Margen bruto ${pct(MG, 1)} menos pauta`),
+    tile("Ticket promedio", usd(t.pedidos ? t.ingresos / t.pedidos : null), delta(t.pedidos ? t.ingresos / t.pedidos : null, tp.pedidos ? tp.ingresos / tp.pedidos : null)),
+    tile("Clientes nuevos", pct(t.pedidos ? t.nuevos / t.pedidos : null, 0), delta(t.pedidos ? t.nuevos / t.pedidos : null, tp.pedidos ? tp.nuevos / tp.pedidos : null), `${grp(t.nuevos)} de ${grp(t.pedidos)} pedidos`),
+    tile("Costo por cliente nuevo", usd(cac), delta(cac, cacP, true), "Pauta total / pedidos de clientes nuevos"),
+    tile("Reembolsos", usd(t.reemb), delta(t.reemb, tp.reemb, true), t.ingresos ? pct(t.reemb / t.ingresos) + " de la facturación" : ""),
+  ));
+  const fs = dias(r.ini, r.fin);
+  const dd = D.tienda?.diario || {};
+  const valIng = {}, valMer = {}, gastos = {};
+  PLATS.forEach((p) => (gastos[p] = {}));
+  fs.forEach((f) => {
+    let g = 0; PLATS.forEach((p) => { const v = sumaPlat(p, { ini: f, fin: f })[0]; gastos[p][f] = v; g += v; });
+    if (dd[f]) { valIng[f] = dd[f].ingresos; if (g) valMer[f] = dd[f].ingresos / g; }
+  });
+  nodos.push(el("div", { class: "grid g2" },
+    el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Inversión diaria por plataforma"),
+      leyenda(PLATS.map((p) => ({ nombre: NOM[p], color: COL(p) }))),
+      grafico(fs, PLATS.map((p) => ({ nombre: NOM[p], color: COL(p), tipo: "bar", valores: gastos[p] })), { fmt: ejeUsd, apilado: true })),
+    el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "MER diario", el("small", {}, "facturación / pauta")),
+      leyenda([{ nombre: "MER", color: "var(--shop)", tipo: "line" }]),
+      grafico(fs, [{ nombre: "MER", color: "var(--shop)", tipo: "line", valores: valMer }], { fmt: (v) => grp(v, v < 10 ? 1 : 0) + "x", refs: [{ y: O.roas_equilibrio, etiqueta: "equilibrio 3,14x" }, { y: O.roas_objetivo, etiqueta: "objetivo 4x" }] })),
+  ));
+  // Ritmo del mes
+  const fin = D.hasta, ini = fin.slice(0, 8) + "01";
+  const [yy, mm] = fin.split("-").map(Number); const diasMes = new Date(Date.UTC(yy, mm, 0)).getUTCDate(); const dia = +fin.slice(8);
+  const ritmo = el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Ritmo del mes", el("small", {}, `gastado al ${fcorta(fin)} y proyección con el ritmo de los últimos 3 días`)));
+  PLATS.forEach((p) => {
+    const pres = O.presupuesto_mensual[p]; if (!pres) return;
+    const mtd = sumaPlat(p, { ini, fin })[0];
+    const r3 = sumaPlat(p, { ini: addDays(fin, -2), fin })[0] / 3;
+    const proy = mtd + r3 * (diasMes - dia);
+    const esc = Math.max(pres, proy) * 1.05;
+    const desvio = (proy - pres) / pres;
+    ritmo.append(el("div", { class: "pace" },
+      el("div", { class: "top" }, el("span", {}, el("span", { class: "dot", style: `background:${COL(p)}` }), el("b", {}, NOM[p]), ` ${usd(mtd)} de ${usd(pres)}`),
+        el("span", { class: Math.abs(desvio) < 0.1 ? "flat" : desvio > 0 ? "down" : "down" }, `cierra en ${usd(proy)} (${desvio > 0 ? "+" : ""}${grp(desvio * 100, 0)}%) · para llegar justo ${usd(Math.max(pres - mtd, 0) / Math.max(diasMes - dia, 1))}/día`)),
+      el("div", { class: "bar", title: `Presupuesto ${usd(pres)}` },
+        el("i", { class: "proy", style: `width:${(proy / esc) * 100}%;background:${COL(p)}` }),
+        el("i", { style: `width:${(mtd / esc) * 100}%;background:${COL(p)}` }),
+        el("b", { style: `left:${(pres / esc) * 100}%` }))));
+  });
+  ritmo.append(el("div", { class: "nota-p" }, "Barra llena: gastado. Barra clara: proyección. Línea vertical: presupuesto acordado."));
+  const act = (D.alertas?.activas || []).slice(0, 5);
+  const alertasCard = el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Lo que pide atención"),
+    act.length ? act.map(alertaNodo) : el("div", { class: "vacio" }, "Sin alertas activas."),
+    (D.alertas?.activas || []).length > 5 ? el("button", { class: "sel", onclick: () => irA("alertas") }, `Ver las ${D.alertas.activas.length} alertas`) : null);
+  nodos.push(el("div", { class: "grid g2", style: "margin-top:12px" }, ritmo, alertasCard));
+  return nodos;
+}
+
+// ───────── CANALES ─────────
+function canalesPanel() {
+  const r = rango();
+  const { canales: cs, sw, est } = canales(r);
+  const t = tienda(r);
+  const total = Object.values(cs).reduce((a, c) => a + c.ing, 0);
+  const nodos = [];
+  nodos.push(el("h2", {}, "Lo que dice cada plataforma contra lo que se vendió de verdad"));
+  const filasP = PLATS.map((p) => {
+    const v = sumaPlat(p, r);
+    const real = SOC[p].reduce((a, c) => a + (cs[c]?.ing || 0), 0);
+    return { p, gasto: v[0], dice: v[4], real, roasDice: v[0] ? v[4] / v[0] : null, roasReal: v[0] ? real / v[0] : null, infla: real ? v[4] / real : null };
+  }).filter((f) => f.gasto > 0);
+  nodos.push(el("div", { class: "card" }, tabla([
+    { t: "Plataforma", v: (f) => f.p, f: (v) => el("span", {}, el("span", { class: "dot", style: `background:${COL(v)}` }), NOM[v]) },
+    { t: "Inversión", v: (f) => f.gasto, f: (v) => usd(v) },
+    { t: "Ventas que se atribuye", v: (f) => f.dice, f: (v) => usd(v) },
+    { t: "Ventas reales del canal", v: (f) => f.real, f: (v) => usd(v) },
+    { t: "ROAS que reporta", v: (f) => f.roasDice, f: xx },
+    { t: "ROAS real", v: (f) => f.roasReal, f: (v) => el("b", { class: v == null ? "" : v >= D.objetivos.roas_equilibrio ? "up" : "down" }, xx(v)) },
+    { t: "Infla", v: (f) => f.infla, f: (v) => v == null ? "–" : grp(v, 1) + "×" },
+  ], filasP, 1),
+    el("div", { class: "nota-p" }, "Ventas reales = facturación de Shopify del canal por último click. Meta y TikTok cuentan también vistas y ventanas de 7 días, por eso se atribuyen más. Meta es el canal con más clientes nuevos: su ROAS de último click subestima lo que aporta.")));
+  nodos.push(el("h2", {}, "Facturación por canal", el("small", {}, sw ? `Softwareholics en ${sw} de ${sw + est} días${est ? `; ${est} días estimados desde Shopify` : ""}` : "estimado desde Shopify con las reglas de Softwareholics")));
+  const filas = Object.entries(cs).filter(([, c]) => c.ing > 0).map(([c, x]) => ({ c, ...x, share: total ? x.ing / total : 0 }));
+  const cols = [
+    { t: "Canal", v: (f) => f.c },
+    { t: "Facturación", v: (f) => f.ing, f: (v) => usd(v) },
+    { t: "Participación", v: (f) => f.share, f: (v) => pct(v) },
+  ];
+  if (!sw) cols.push({ t: "Pedidos", v: (f) => f.ped, f: grp }, { t: "Ticket", v: (f) => f.ped ? f.ing / f.ped : null, f: (v) => usd(v) }, { t: "% nuevos", v: (f) => f.ped ? f.nuevos / f.ped : null, f: (v) => pct(v, 0) });
+  nodos.push(el("div", { class: "card" }, tabla(cols, filas, 1),
+    el("div", { class: "nota-p" }, `Total ${usd(total)}. `, sw && est ? "Los días sin reporte de Softwareholics se estiman con las mismas categorías: Throne, ShopApp, Subscription y Draft Order salen exactos; Google se estima alrededor de 10% más bajo que Softwareholics." : "")));
+  // Participación diaria de los canales pagos
+  const fs = dias(r.ini, r.fin);
+  const dd = D.tienda?.diario || {};
+  const ser = { Google: {}, Meta: {}, TikTok: {}, Resto: {} };
+  fs.forEach((f) => {
+    const s = D.softwareholics?.[f];
+    let g, m, tk, tot;
+    if (s) { g = s.Google || 0; m = (s.MetaAds || 0) + (s["Meta Shop"] || 0); tk = s.TikTok || 0; tot = s.TOTAL || 0; }
+    else if (dd[f]) { const c = dd[f].canales; g = c.Google?.[1] || 0; m = (c.MetaAds?.[1] || 0) + (c["Meta Shop"]?.[1] || 0); tk = c.TikTok?.[1] || 0; tot = dd[f].ingresos; }
+    else return;
+    ser.Google[f] = g; ser.Meta[f] = m; ser.TikTok[f] = tk; ser.Resto[f] = Math.max(tot - g - m - tk, 0);
+  });
+  const colsS = [["Google", COL("google")], ["Meta", COL("meta")], ["TikTok", COL("tiktok")], ["Directo, mail, afiliados y resto", "var(--prev)"]];
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, "Facturación diaria por canal"),
+    leyenda(colsS.map(([n, c]) => ({ nombre: n, color: c }))),
+    grafico(fs, [["Google", ser.Google], ["Meta", ser.Meta], ["TikTok", ser.TikTok], ["Resto", ser.Resto]].map(([n, v], i) => ({ nombre: colsS[i][0], color: colsS[i][1], tipo: "bar", valores: v })), { fmt: ejeUsd, apilado: true })));
+  return nodos;
+}
+
+// ───────── PLATAFORMAS ─────────
+const METRICAS = { cost: ["Inversión", (v) => usd(v)], clicks: ["Clicks", grp], cpc: ["CPC", (v) => usd(v, 2)], ctr: ["CTR", (v) => pct(v, 2)], conv: ["Compras", (v) => grp(v, 0)], cvr: ["Tasa de conversión", (v) => pct(v, 2)], cpa: ["Costo por compra", (v) => usd(v, 2)], roas: ["ROAS de plataforma", xx] };
+function plataformasPanel() {
+  const r = rango(), pr = previo(r), p = P.plat;
+  const nodos = [];
+  nodos.push(el("div", { class: "filtros" }, el("div", { class: "seg" }, PLATS.map((x) => el("button", { "aria-pressed": String(x === p), onclick: () => { P.plat = x; guardar(); pintar(); } }, NOM[x]))),
+    D.fuentes?.[p] && !D.fuentes[p].ok ? el("span", { class: "nota down" }, `No se pudo leer ${NOM[p]} hoy: dato al ${D.fuentes[p].dato_de || "anterior"}`) : null));
+  const v = sumaPlat(p, r), vp = sumaPlat(p, pr);
+  const inv = { cpc: true, cpa: true, cost: false };
+  nodos.push(el("div", { class: "tiles" }, Object.entries(METRICAS).map(([k, [n, f]]) => {
+    const t = tile(n, f(K[k](v)), delta(K[k](v), K[k](vp), inv[k]));
+    t.style.cursor = "pointer"; if (P.metrica === k) t.style.outline = `2px solid ${COL(p)}`;
+    t.addEventListener("click", () => { P.metrica = k; guardar(); pintar(); });
+    return t;
+  })));
+  const fs = dias(r.ini, r.fin);
+  const s = seriePlat(p, r);
+  const val = {}; fs.forEach((f) => { if (s[f]) val[f] = K[P.metrica](s[f]); });
+  const ap = D[p]?.anio_pasado || {};
+  const valAp = {}; fs.forEach((f) => { const fa = addDays(f, -364); if (ap[fa]) valAp[f] = K[P.metrica](ap[fa]); });
+  const [nm, fm] = METRICAS[P.metrica];
+  const hayAp = Object.keys(valAp).length > 0;
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, `${NOM[p]} · ${nm} por día`, el("small", {}, "tocá un indicador de arriba para cambiar el gráfico")),
+    leyenda([{ nombre: "Este año", color: COL(p), tipo: "line" }, ...(hayAp ? [{ nombre: "Mismo día de la semana, año anterior", tipo: "dash" }] : [])]),
+    grafico(fs, [{ nombre: "Este año", color: COL(p), tipo: "line", valores: val }, ...(hayAp ? [{ nombre: "Año anterior", color: "var(--prev)", tipo: "line", dash: true, valores: valAp }] : [])], { fmt: (x, eje) => P.metrica === "cost" ? ejeUsd(x, eje) : fm(x) })));
+  // campañas
+  const pc = D.tienda?.por_campana || {};
+  const filas = Object.entries(D[p]?.campanas || {}).map(([id, c]) => {
+    const a = sumaPlat(p, r, id), b = sumaPlat(p, pr, id);
+    let real = null;
+    if (p !== "google" && pc[id]) { real = 0; for (const [f, [, i]] of Object.entries(pc[id])) if (f >= r.ini && f <= r.fin) real += i; }
+    return { id, nombre: c.nombre, estado: c.estado, a, b, real };
+  }).filter((f) => f.a[0] > 0 || f.a[2] > 0);
+  nodos.push(el("h2", {}, "Campañas", el("small", {}, p === "google" ? "Google no tiene ventas reales por campaña: el tracking manda {campaignname}, que Google no reemplaza" : "Ventas reales = pedidos de Shopify con el ID de la campaña en el UTM")));
+  const cols = [
+    { t: "Campaña", v: (f) => f.nombre, f: (v, f) => el("span", {}, v, f.estado && !/ENABLED|ACTIVE/.test(f.estado) ? el("span", { class: "chip" }, f.estado.toLowerCase()) : null) },
+    { t: "Inversión", v: (f) => f.a[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(f.a[0], f.b[0], true)))) },
+    { t: "CPC", v: (f) => K.cpc(f.a), f: (v, f) => el("span", {}, usd(v, 2), el("span", { class: "sub" }, deltaTxt(delta(v, K.cpc(f.b), true)))) },
+    { t: "CTR", v: (f) => K.ctr(f.a), f: (v) => pct(v, 2) },
+    { t: "Compras", v: (f) => f.a[3], f: (v) => grp(v, 0) },
+    { t: "Tasa conv.", v: (f) => K.cvr(f.a), f: (v, f) => el("span", {}, pct(v, 2), el("span", { class: "sub" }, deltaTxt(delta(v, K.cvr(f.b))))) },
+    { t: "Costo por compra", v: (f) => K.cpa(f.a), f: (v) => usd(v, 2) },
+    { t: "ROAS plataforma", v: (f) => K.roas(f.a), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.b))))) },
+  ];
+  if (p !== "google") cols.push({ t: "Ventas reales", v: (f) => f.real, f: (v) => usd(v) }, { t: "ROAS real", v: (f) => f.real != null && f.a[0] ? f.real / f.a[0] : null, f: (v) => el("b", { class: v == null ? "" : v >= D.objetivos.roas_equilibrio ? "up" : "down" }, xx(v)) });
+  nodos.push(el("div", { class: "card" }, filas.length ? tabla(cols, filas, 1) : el("div", { class: "vacio" }, "Sin campañas con gasto en el período.")));
+  if (p === "google") {
+    const g = D.google?.salud || {};
+    if ((g.limitadas_presupuesto || []).length) nodos.push(el("div", { class: "aviso-fuente" }, "Limitadas por presupuesto: " + g.limitadas_presupuesto.map((x) => x.nombre).join(", ")));
+  }
+  nodos.push(el("div", { class: "nota-p" }, "Las compras de los últimos 2 o 3 días siguen llegando por atribución: el ROAS de los días más recientes se lee bajo."));
+  return nodos;
+}
+
+// ───────── ANUNCIOS ─────────
+function adCard(a, plat) {
+  const [c, cl, im, cv, va] = a.ult7, pv = a.prev7;
+  const ctr = im ? cl / im : null, pctr = pv[2] ? pv[1] / pv[2] : null;
+  const dlCtr = delta(ctr, pctr);
+  const filas = [["Inversión", usd(c)], ["ROAS plat.", xx(c ? va / c : null)], ["Compras", grp(cv, 0)], ["Costo/compra", usd(cv ? c / cv : null)], ["CTR", el("span", {}, pct(ctr, 2), " ", dlCtr ? el("span", { class: dlCtr.cls }, (dlCtr.d > 0 ? "▲" : "▼") + grp(Math.abs(dlCtr.d) * 100, 0) + "%") : "")]];
+  if (plat === "meta") filas.push(["Frecuencia", grp(a.frecuencia, 1)]);
+  if (plat === "tiktok") { filas.push(["Retención 2 s", pct(im ? (a.vistas2s || 0) / im : null)]); filas.push(["Carritos 30 d", grp(a.carritos30 ?? 0)]); }
+  const flags = [];
+  const T = D.alertas?.activas || [];
+  for (const al of T) if (al.cat === "Anuncios" && al.plataforma === plat && al.detalle.includes(a.nombre.slice(0, 50))) flags.push(al.titulo.replace(/^\d+ |^Un /, "").replace(/anuncios? de (Meta|TikTok) /, ""));
+  return el("div", { class: "ad" },
+    el("div", { class: "img" + (plat === "tiktok" ? " v" : "") }, a.img ? el("img", { src: a.img, alt: "", loading: "lazy" }) : "sin vista previa"),
+    el("div", { class: "b" }, el("div", { class: "n" }, a.nombre), el("div", { class: "c" }, a.campana),
+      el("dl", {}, filas.map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)])),
+      flags.map((f) => el("span", { class: "flag" }, "⚠ " + f))));
+}
+function anunciosPanel() {
+  const nodos = [];
+  const hasta = D.hasta, desde = addDays(hasta, -6);
+  nodos.push(el("div", { class: "aviso-fuente" }, `Los anuncios se miran siempre en los últimos 7 días (${fcorta(desde)} al ${fcorta(hasta)}) contra los 7 anteriores, sin importar el período elegido arriba. Los ROAS son los que reporta cada plataforma.`));
+  const orden = P.ordenAds || "gasto";
+  const ord = (arr) => [...arr].sort((a, b) => orden === "roas" ? ((b.ult7[0] ? b.ult7[4] / b.ult7[0] : 0) - (a.ult7[0] ? a.ult7[4] / a.ult7[0] : 0)) : orden === "compras" ? b.ult7[3] - a.ult7[3] : b.ult7[0] - a.ult7[0]);
+  nodos.push(el("div", { class: "filtros" }, el("span", { class: "nota" }, "Ordenar por"),
+    el("div", { class: "seg" }, [["gasto", "Inversión"], ["compras", "Compras"], ["roas", "ROAS"]].map(([k, n]) => el("button", { "aria-pressed": String(orden === k), onclick: () => { P.ordenAds = k; guardar(); pintar(); } }, n)))));
+  const meta = D.top?.meta?.anuncios || [];
+  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("meta")}` }), "Meta", el("small", {}, `${meta.length} anuncios con inversión`)));
+  nodos.push(meta.length ? el("div", { class: "ads" }, ord(meta).slice(0, 24).map((a) => adCard(a, "meta"))) : el("div", { class: "vacio" }, "Sin datos."));
+  const tt = D.top?.tiktok?.anuncios || [];
+  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("tiktok")}` }), "TikTok", el("small", {}, "reglas de corte: retención a 2 s < 10%, $75 sin carrito, $110 sin compra")));
+  nodos.push(tt.length ? el("div", { class: "ads" }, ord(tt).slice(0, 24).map((a) => adCard(a, "tiktok"))) : el("div", { class: "vacio" }, "Sin anuncios con inversión."));
+  const g = D.top?.google || {};
+  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("google")}` }), "Google · grupos de recursos de Performance Max"));
+  nodos.push(el("div", { class: "card" }, tabla([
+    { t: "Grupo", v: (f) => f.nombre, f: (v, f) => el("span", {}, v, el("span", { class: "sub" }, f.campana)) },
+    { t: "Inversión 7 d", v: (f) => f.ult7[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(v, f.prev7[0], true)))) },
+    { t: "Compras", v: (f) => f.ult7[3], f: (v) => grp(v, 1) },
+    { t: "Costo/compra", v: (f) => K.cpa(f.ult7), f: (v) => usd(v, 2) },
+    { t: "ROAS plataforma", v: (f) => K.roas(f.ult7), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.prev7))))) },
+  ], (g.grupos || []).filter((x) => x.ult7[0] > 0), 1)));
+  nodos.push(el("h2", {}, "Google · productos de Shopping con más inversión"));
+  nodos.push(el("div", { class: "ads" }, (g.productos || []).slice(0, 16).map((pp) => {
+    const [c, cl, im, cv, va] = pp.ult7;
+    return el("div", { class: "ad" }, el("div", { class: "img" }, pp.img ? el("img", { src: pp.img, alt: "", loading: "lazy" }) : "sin imagen"),
+      el("div", { class: "b" }, el("div", { class: "n" }, pp.titulo), el("div", { class: "c" }, pp.item),
+        el("dl", {}, [["Inversión", usd(c)], ["Clicks", grp(cl)], ["Compras", grp(cv, 1)], ["ROAS plat.", el("span", {}, xx(c ? va / c : null), " ", deltaTxt(delta(c ? va / c : null, pp.prev7[0] ? pp.prev7[4] / pp.prev7[0] : null)))]].map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)]))));
+  })));
+  return nodos;
+}
+
+// ───────── TIENDA ─────────
+function tiendaPanel() {
+  const r = rango(), pr = previo(r);
+  const t = tienda(r), tp = tienda(pr);
+  const nodos = [];
+  nodos.push(el("div", { class: "tiles" },
+    tile("Pedidos", grp(t.pedidos), delta(t.pedidos, tp.pedidos)),
+    tile("Facturación", usd(t.ingresos), delta(t.ingresos, tp.ingresos)),
+    tile("De clientes nuevos", usd(t.ing_nuevos), delta(t.ing_nuevos, tp.ing_nuevos), t.ingresos ? pct(t.ing_nuevos / t.ingresos, 0) + " de la facturación" : ""),
+    tile("Cancelados", grp(t.cancel), delta(t.cancel, tp.cancel, true))));
+  const fs = dias(r.ini, r.fin), dd = D.tienda?.diario || {};
+  const nuevos = {}, rec = {};
+  fs.forEach((f) => { if (dd[f]) { nuevos[f] = dd[f].ing_nuevos; rec[f] = dd[f].ingresos - dd[f].ing_nuevos; } });
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, "Facturación diaria: clientes nuevos y recurrentes"),
+    leyenda([{ nombre: "Nuevos", color: "var(--shop)" }, { nombre: "Recurrentes", color: "var(--prev)" }]),
+    grafico(fs, [{ nombre: "Nuevos", color: "var(--shop)", tipo: "bar", valores: nuevos }, { nombre: "Recurrentes", color: "var(--prev)", tipo: "bar", valores: rec }], { fmt: ejeUsd, apilado: true }),
+    el("div", { class: "nota-p" }, "Nuevo = primer pedido del cliente, o cuenta creada el mismo día del pedido. Es aproximado: Shopify no guarda el número de pedido del cliente al momento de la compra.")));
+  const n = P.per === "mes" ? (dias(r.ini, r.fin).length <= 7 ? "7" : dias(r.ini, r.fin).length <= 14 ? "14" : "30") : P.per;
+  const prods = D.tienda?.productos?.[n] || [];
+  nodos.push(el("h2", {}, "Productos más vendidos", el("small", {}, `últimos ${n} días · sin el cargo de envío`)));
+  nodos.push(el("div", { class: "card" }, tabla([
+    { t: "Producto", v: (f) => f.titulo, f: (v, f) => el("span", { style: "display:flex;gap:10px;align-items:center" }, f.img ? el("img", { src: f.img, alt: "", width: 36, height: 36, style: "border-radius:6px;object-fit:cover;flex:none", loading: "lazy" }) : null, v) },
+    { t: "Pedidos", v: (f) => f.pedidos, f: grp },
+    { t: "Unidades", v: (f) => f.unidades, f: grp },
+    { t: "Facturación", v: (f) => f.ingresos, f: (v) => usd(v) },
+    { t: "Precio medio", v: (f) => f.unidades ? f.ingresos / f.unidades : null, f: (v) => usd(v) },
+  ], prods, 3)));
+  return nodos;
+}
+
+// ───────── ALERTAS ─────────
+function alertaNodo(a) {
+  const niv = { critico: "Crítica", aviso: "Aviso", info: "Oportunidad" }[a.nivel];
+  const desde = a.desde ? new Date(a.desde) : null;
+  return el("div", { class: "alerta " + a.nivel },
+    el("span", { class: "ic nivel " + a.nivel }, niv),
+    el("span", { class: "t" }, a.titulo),
+    el("span", { class: "d" }, a.detalle),
+    a.accion ? el("span", { class: "a" }, "→ ", a.accion) : null,
+    el("span", { class: "m" }, `${a.cat} · ${NOM[a.plataforma] || a.plataforma}` + (desde ? ` · activa desde el ${desde.getDate()}/${desde.getMonth() + 1}` : "")));
+}
+function alertasPanel() {
+  const act = D.alertas?.activas || [];
+  const nodos = [el("h2", {}, "Alertas activas", el("small", {}, "se evalúan cada mañana con el día cerrado, y cada 3 horas lo urgente del día"))];
+  if (!act.length) nodos.push(el("div", { class: "vacio" }, "Nada fuera de lo normal."));
+  for (const niv of ["critico", "aviso", "info"]) {
+    const xs = act.filter((a) => a.nivel === niv); if (!xs.length) continue;
+    nodos.push(...xs.map(alertaNodo));
+  }
+  const hist = [...(D.alertas?.historial || [])].filter((h) => h.hasta).reverse().slice(0, 60);
+  nodos.push(el("h2", {}, "Historial", el("small", {}, "alertas que ya se resolvieron")));
+  nodos.push(hist.length ? el("div", { class: "card" }, tabla([
+    { t: "Alerta", v: (f) => f.titulo, f: (v, f) => el("span", {}, el("span", { class: "nivel " + f.nivel, style: "margin-right:6px" }), v) },
+    { t: "Desde", v: (f) => f.desde, f: (v) => new Date(v).toLocaleDateString("es", { day: "numeric", month: "numeric" }) },
+    { t: "Hasta", v: (f) => f.hasta, f: (v) => new Date(v).toLocaleDateString("es", { day: "numeric", month: "numeric" }) },
+    { t: "Plataforma", v: (f) => NOM[f.plataforma] || f.plataforma },
+  ], hist, 2)) : el("div", { class: "vacio" }, "Todavía no hay alertas resueltas."));
+  nodos.push(el("h2", {}, "Qué se vigila"));
+  nodos.push(el("div", { class: "card", style: "font-size:13px;color:var(--ink2)" }, el("ul", { style: "padding-left:18px;display:grid;gap:4px" }, [
+    "Caídas de facturación y pedidos en Shopify contra el mismo día de las semanas anteriores.",
+    "MER de 7 días abajo del equilibrio (3,14x) o del objetivo (4x).",
+    "CPC y gasto que suben, CTR que baja, y ROAS, tasa de conversión y costo por compra ya maduros (3 días de atraso), por plataforma y por campaña. Tiene que moverse contra el promedio de 7 días y contra el mismo día de la semana.",
+    "Tracking roto: pedidos con UTM de una plataforma que reporta cero compras, o al revés.",
+    "Campañas y anuncios que gastan sin vender, frecuencia alta y CTR en caída en Meta, y las reglas de corte de TikTok.",
+    "Ritmo del gasto contra el presupuesto del mes.",
+    "Anuncios rechazados, campañas limitadas por presupuesto y fuentes de datos que no responden.",
+    "Durante el día: gasto descontrolado, horas sin pedidos y el sitio caído.",
+  ].map((x) => el("li", {}, x)))));
+  return nodos;
+}
+
+// ───────── armado ─────────
+const PANELES = { resumen, canales: canalesPanel, plataformas: plataformasPanel, anuncios: anunciosPanel, tienda: tiendaPanel, alertas: alertasPanel };
+function irA(tab) { P.tab = tab; guardar(); history.replaceState(null, "", "#" + tab); pintar(); window.scrollTo({ top: 0 }); }
+function pintar() {
+  document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === P.tab)));
+  document.querySelectorAll("section.panel").forEach((s) => s.classList.toggle("on", s.id === "p-" + P.tab));
+  document.querySelectorAll("#periodo button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.p === P.per)));
+  $("#filtros").style.display = P.tab === "alertas" || P.tab === "anuncios" ? "none" : "";
+  const r = rango(); $("#rango").textContent = `${fcorta(r.ini)} al ${fcorta(r.fin)} · comparado con ${fcorta(previo(r).ini)} al ${fcorta(previo(r).fin)}`;
+  const sec = $("#p-" + P.tab);
+  try { sec.replaceChildren(...PANELES[P.tab]()); }
+  catch (e) { console.error(e); sec.replaceChildren(el("div", { class: "vacio" }, "No se pudo dibujar esta sección: " + e.message)); }
+}
+
+async function iniciar() {
+  try { D = await (await fetch("data.json", { cache: "no-store" })).json(); }
+  catch (e) { $("#meta").textContent = "No se pudieron cargar los datos."; return; }
+  const h = location.hash.slice(1); if (PANELES[h]) P.tab = h;
+  const gen = new Date(D.generado);
+  const caidas = Object.entries(D.fuentes || {}).filter(([, f]) => !f.ok).map(([k]) => k);
+  $("#meta").replaceChildren(el("div", {}, "Datos al ", el("b", {}, fcorta(D.hasta)), " (día cerrado)"),
+    el("div", {}, `Actualizado ${gen.toLocaleString("es", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" })}`),
+    ...(caidas.length ? [el("div", {}, "⚠ Sin actualizar hoy: " + caidas.join(", "))] : []));
+  const crit = (D.alertas?.activas || []).filter((a) => a.nivel === "critico").length;
+  const b = $("#badge"); if (crit) { b.hidden = false; b.textContent = crit; }
+  document.querySelectorAll("#tabs button").forEach((bt) => bt.addEventListener("click", () => irA(bt.dataset.tab)));
+  document.querySelectorAll("#periodo button").forEach((bt) => bt.addEventListener("click", () => { P.per = bt.dataset.p; guardar(); pintar(); }));
+  $("#pie").textContent = "Fuentes: Google Ads API, Meta Marketing API, TikTok Business API, Shopify Admin API y el reporte UTM de Softwareholics. Facturación = total original del pedido en Shopify (como Softwareholics), en hora de Lima.";
+  pintar();
+}
+fetch("logo.svg").then((r) => r.ok ? r.text() : "").then((t) => {
+  if (!t) return; const tmp = document.createElement("div"); tmp.innerHTML = t; const s = tmp.querySelector("svg");
+  if (s) { s.querySelectorAll("style").forEach((x) => x.remove()); s.setAttribute("aria-label", "Rosaholics"); $("#logo").prepend(s); }
+}).catch(() => {});
+iniciar();
+</script>
+</body>
+</html>
