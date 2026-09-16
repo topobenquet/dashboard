@@ -114,14 +114,16 @@ table.ft th:first-child, table.ft td:first-child { overflow:visible; text-overfl
 <div class="tabs" role="tablist">
   <button class="tab" data-tab="ops" aria-pressed="true">Operativo</button>
   <button class="tab" data-tab="fin" aria-pressed="false">Finanzas</button>
+  <button class="tab" data-tab="km" aria-pressed="false">Kilometraje</button>
   <span id="fin-updated" style="font-size:10.5px;color:#9CA3AF"></span>
 </div>
 
 <div id="root"></div>
 <div id="fin" hidden></div>
+<div id="km" hidden></div>
 
 <div style="text-align:center;color:#9CA3AF;font-size:11px;margin-top:24px;padding-top:16px;border-top:1px solid #E5E7EB;">
-  Paraguay Transfers · Se actualiza solo cada día · Fuentes: Balance Traslados (Drive) · GHL (leads) · Google/Meta Ads · Stripe · Pagopar · Binance · extractos de Itaú y ueno
+  Paraguay Transfers · Se actualiza solo cada día · Fuentes: Balance Traslados (Drive) · GHL (leads) · Google/Meta Ads · Stripe · Pagopar · Binance · extractos de Itaú y ueno · fotos del tablero de los choferes
 </div>
 
 <script>
@@ -620,6 +622,7 @@ async function init() {
 }
 init();
 </script>
-<script src="finanzas.js?v=6"></script>
+<script src="finanzas.js?v=7"></script>
+<script src="km.js?v=1"></script>
 </body>
 </html>

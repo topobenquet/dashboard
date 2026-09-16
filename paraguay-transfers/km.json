@@ -1,0 +1,658 @@
+{
+ "generated": "2026-09-16T10:58:09.978Z",
+ "mes": "2026-09",
+ "activacion": "2026-09-16T10:52:34.000Z",
+ "reglas": {
+  "desvio": 0.15,
+  "desvioMinKm": 20,
+  "huecoKm": 30,
+  "combustible": 0.15,
+  "margenAdelanto": 1.1
+ },
+ "vehiculos": {
+  "H1": {
+   "nombre": "Hyundai H1 (empresa)",
+   "combustible": "diésel",
+   "precioDefault": 10400,
+   "rendDefault": 10,
+   "precioL": 10450,
+   "precioFuente": "última carga con litros (13/09)",
+   "rend": 8.3,
+   "rendFuente": "medido en 1 tanque(s) lleno a lleno",
+   "tramos": [
+    {
+     "desde": 93451,
+     "hasta": 94933,
+     "km": 1482,
+     "litros": 178.5,
+     "rend": 8.3
+    }
+   ],
+   "gsKm": 1259,
+   "ultimoKm": 95474
+  },
+  "Voxy": {
+   "nombre": "Toyota Voxy (de Luis)",
+   "combustible": "nafta",
+   "precioDefault": 9500,
+   "rendDefault": 9,
+   "precioL": 9500,
+   "precioFuente": "estimado, sin facturas con litros todavía",
+   "rend": 9,
+   "rendFuente": "estimado, falta medir de tanque lleno a tanque lleno",
+   "tramos": [],
+   "gsKm": 1056,
+   "ultimoKm": null
+  }
+ },
+ "resumen": {
+  "H1": {
+   "kmViajes": 2470,
+   "kmFuera": 92,
+   "viajes": 5,
+   "costoComb": 3225558,
+   "pagado": 2328000
+  },
+  "Voxy": {
+   "kmViajes": 0,
+   "kmFuera": 0,
+   "viajes": 0,
+   "costoComb": 0,
+   "pagado": 0
+  }
+ },
+ "cumplimiento": [
+  {
+   "chofer": "Alfredo",
+   "lecturas": 19,
+   "conFoto": 19
+  },
+  {
+   "chofer": "Gustavo",
+   "lecturas": 4,
+   "conFoto": 2
+  },
+  {
+   "chofer": "Luis",
+   "lecturas": 1,
+   "conFoto": 1
+  }
+ ],
+ "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-16",
+   "fechaFin": "2026-09-16",
+   "horaIni": "07:35",
+   "horaFin": null,
+   "kmIni": 95474,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.6,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehiculo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-13",
+   "fechaFin": "2026-09-13",
+   "horaIni": "01:51",
+   "horaFin": "20:09",
+   "kmIni": 94671,
+   "kmFin": 95428,
+   "km": 757,
+   "tanqueIni": 0.95,
+   "tanqueFin": 0.85,
+   "traslados": [
+    "Asu - Iguazu Falls round trip"
+   ],
+   "kmEsperado": 750,
+   "desvio": 0.009,
+   "combustiblePagado": 800000,
+   "combustibleCargado": 800000,
+   "combustibleCorresponde": 953063,
+   "cargas": [
+    {
+     "fecha": "2026-09-13",
+     "gs": 450000,
+     "litros": 41.28
+    },
+    {
+     "fecha": "2026-09-13",
+     "gs": 350000,
+     "litros": 33.49
+    }
+   ],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-12",
+   "fechaFin": "2026-09-12",
+   "horaIni": "03:36",
+   "horaFin": "06:02",
+   "kmIni": 94624,
+   "kmFin": 94671,
+   "km": 47,
+   "tanqueIni": 0.9,
+   "tanqueFin": 0.9,
+   "traslados": [
+    "Yacht-Aero"
+   ],
+   "kmEsperado": 40,
+   "desvio": 0.175,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 59173,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-09-09",
+   "fechaFin": "2026-09-09",
+   "horaIni": "09:24",
+   "horaFin": "17:41",
+   "kmIni": 94483,
+   "kmFin": 94597,
+   "km": 114,
+   "tanqueIni": 0.55,
+   "tanqueFin": null,
+   "traslados": [
+    "Hotel Hilton (ASU) - Tour SanBer"
+   ],
+   "kmEsperado": 110,
+   "desvio": 0.036,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 143526,
+   "cargas": [],
+   "faltanFotos": [
+    94597
+   ],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": true
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-07",
+   "fechaFin": "2026-09-08",
+   "horaIni": "11:07",
+   "horaFin": "02:39",
+   "kmIni": 93792,
+   "kmFin": 94483,
+   "km": 691,
+   "tanqueIni": 0.9,
+   "tanqueFin": 0.5,
+   "traslados": [
+    "ASU-FOZ"
+   ],
+   "kmEsperado": 690,
+   "desvio": 0.001,
+   "combustiblePagado": 728000,
+   "combustibleCargado": 728008,
+   "combustibleCorresponde": 869969,
+   "cargas": [
+    {
+     "fecha": "2026-09-07",
+     "gs": 528008,
+     "litros": 50.77
+    },
+    {
+     "fecha": "2026-09-08",
+     "gs": 200000,
+     "litros": 19.14
+    }
+   ],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-02",
+   "fechaFin": "2026-09-05",
+   "horaIni": "07:05",
+   "horaFin": "08:19",
+   "kmIni": 92920,
+   "kmFin": 93781,
+   "km": 861,
+   "tanqueIni": 0.85,
+   "tanqueFin": 0.85,
+   "traslados": [
+    "Asu - Pto Iguazu",
+    "Pto Iguazu - Asu",
+    "Asu - Pto Iguazu",
+    "Transfer Pto Iguazu interno",
+    "Round Transfer Cataratas",
+    "Transfer Pto Iguazu interno",
+    "Pto Iguazu - Asu"
+   ],
+   "kmEsperado": 750,
+   "desvio": 0.148,
+   "combustiblePagado": 800000,
+   "combustibleCargado": 610000,
+   "combustibleCorresponde": 1083999,
+   "cargas": [
+    {
+     "fecha": "2026-09-04",
+     "gs": 610000,
+     "litros": 57.55
+    }
+   ],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-08-30",
+   "fechaFin": "2026-09-01",
+   "horaIni": "17:36",
+   "horaFin": "00:36",
+   "kmIni": 92230,
+   "kmFin": 92912,
+   "km": 682,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Asu - Foz"
+   ],
+   "kmEsperado": 690,
+   "desvio": -0.012,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 858638,
+   "cargas": [],
+   "faltanFotos": [
+    92230,
+    92912
+   ],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": true
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-08-29",
+   "fechaFin": "2026-08-29",
+   "horaIni": "12:02",
+   "horaFin": "19:45",
+   "kmIni": 92024,
+   "kmFin": 92116,
+   "km": 92,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Tour Asu"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 115828,
+   "cargas": [],
+   "faltanFotos": [
+    92116
+   ],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": true
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-08-24",
+   "fechaFin": "2026-08-26",
+   "horaIni": "03:38",
+   "horaFin": "18:31",
+   "kmIni": 91154,
+   "kmFin": 92004,
+   "km": 850,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 1070150,
+   "cargas": [],
+   "faltanFotos": [
+    91154,
+    91593,
+    92004
+   ],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  }
+ ],
+ "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 95450,
+   "hasta": 95474,
+   "km": 24,
+   "fechaDesde": "2026-09-15",
+   "fechaHasta": "2026-09-16",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 95428,
+   "hasta": 95450,
+   "km": 22,
+   "fechaDesde": "2026-09-13",
+   "fechaHasta": "2026-09-15",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 94599,
+   "hasta": 94624,
+   "km": 25,
+   "fechaDesde": "2026-09-11",
+   "fechaHasta": "2026-09-11",
+   "choferes": [
+    "Luis",
+    "Gustavo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 94597,
+   "hasta": 94599,
+   "km": 2,
+   "fechaDesde": "2026-09-09",
+   "fechaHasta": "2026-09-11",
+   "choferes": [
+    "Gustavo",
+    "Luis"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 93781,
+   "hasta": 93792,
+   "km": 11,
+   "fechaDesde": "2026-09-05",
+   "fechaHasta": "2026-09-05",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 92916,
+   "hasta": 92920,
+   "km": 4,
+   "fechaDesde": "2026-09-01",
+   "fechaHasta": "2026-09-02",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 92912,
+   "hasta": 92916,
+   "km": 4,
+   "fechaDesde": "2026-09-01",
+   "fechaHasta": "2026-09-01",
+   "choferes": [
+    "Gustavo",
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 92116,
+   "hasta": 92230,
+   "km": 114,
+   "fechaDesde": "2026-08-29",
+   "fechaHasta": "2026-08-30",
+   "choferes": [
+    "Gustavo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 92004,
+   "hasta": 92024,
+   "km": 20,
+   "fechaDesde": "2026-08-26",
+   "fechaHasta": "2026-08-29",
+   "choferes": [
+    "Alfredo",
+    "Gustavo"
+   ]
+  }
+ ],
+ "cargas": [
+  {
+   "fecha": "2026-09-13",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 350000,
+   "litros": 33.49,
+   "precioL": 10450,
+   "odo": 95354
+  },
+  {
+   "fecha": "2026-09-13",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 450000,
+   "litros": 41.28,
+   "precioL": 10901,
+   "odo": 94933
+  },
+  {
+   "fecha": "2026-09-11",
+   "grupo": "Luis",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 699850,
+   "litros": 67.29,
+   "precioL": 10400,
+   "odo": 94599
+  },
+  {
+   "fecha": "2026-09-08",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 200000,
+   "litros": 19.14,
+   "precioL": 10450,
+   "odo": 94413
+  },
+  {
+   "fecha": "2026-09-07",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 528008,
+   "litros": 50.77,
+   "precioL": 10400,
+   "odo": 93836
+  },
+  {
+   "fecha": "2026-09-04",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 610000,
+   "litros": 57.55,
+   "precioL": 10600,
+   "odo": 93451
+  },
+  {
+   "fecha": "2026-09-03",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "ARS",
+   "extranjera": true,
+   "gs": null,
+   "litros": 19.72,
+   "precioL": null,
+   "odo": 93309
+  },
+  {
+   "fecha": "2026-09-01",
+   "grupo": "Luis",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 558780,
+   "litros": 53.73,
+   "precioL": 10400,
+   "odo": null
+  }
+ ],
+ "proximos": [
+  {
+   "fecha": "2026-09-16",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-09-17",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-09-18",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-09-19",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-09-22",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Aero-Yacht",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-23",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Aero-Dazzler",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-26",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Dazzler-Aero",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-10-02",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Foz-Asu",
+   "km": 690,
+   "adelanto": 956000
+  },
+  {
+   "fecha": "2026-10-18",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Asu-Foz",
+   "km": 690,
+   "adelanto": 956000
+  }
+ ],
+ "alertas": [
+  {
+   "key": "hueco:H1:92116:92230",
+   "nivel": "juan",
+   "texto": "H1: 114 km sin traslado entre el 29/08 (km 92.116, Gustavo) y el 30/08 (km 92.230, Gustavo).",
+   "ts": 1788122161,
+   "fecha": "2026-08-30"
+  }
+ ]
+}
