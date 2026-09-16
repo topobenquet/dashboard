@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T20:30:26.206Z",
+ "generated": "2026-09-16T22:30:11.686Z",
  "tc": 5930,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3229.2,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 7776.39,
+  "pagoparPendienteUsd": 7828.16,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -21,41 +21,44 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 400,
+   "in": 974.03,
    "out": 144.82,
-   "n": 4,
+   "n": 8,
    "porFuente": {
     "Stripe": 400,
+    "Pagopar": 574.03,
     "WhatsApp · Gustavo": -50.59,
     "WhatsApp · Luis (factura)": -94.23
    },
-   "neto": 255.18,
-   "acum": 255.18
+   "neto": 829.21,
+   "acum": 829.21
   },
   {
    "fecha": "2026-09-02",
-   "in": 897,
+   "in": 1626.68,
    "out": 519.84,
-   "n": 6,
+   "n": 8,
    "porFuente": {
     "Stripe": 897,
+    "Pagopar": 729.68,
     "WhatsApp · Alfredo": -319.73,
     "WhatsApp · Pagos (Majo)": -200.11
    },
-   "neto": 377.16,
-   "acum": 632.34
+   "neto": 1106.84,
+   "acum": 1936.05
   },
   {
    "fecha": "2026-09-03",
-   "in": 247,
+   "in": 1134.86,
    "out": 468.8,
-   "n": 3,
+   "n": 8,
    "porFuente": {
     "Binance": 247,
+    "Pagopar": 887.86,
     "WhatsApp · Pagos (Majo)": -468.8
    },
-   "neto": -221.8,
-   "acum": 410.54
+   "neto": 666.06,
+   "acum": 2602.11
   },
   {
    "fecha": "2026-09-04",
@@ -66,7 +69,18 @@
     "WhatsApp · Pagos (Majo)": -1068.58
    },
    "neto": -1068.58,
-   "acum": -658.04
+   "acum": 1533.53
+  },
+  {
+   "fecha": "2026-09-05",
+   "in": 235.24,
+   "out": 0,
+   "n": 2,
+   "porFuente": {
+    "Pagopar": 235.24
+   },
+   "neto": 235.24,
+   "acum": 1768.77
   },
   {
    "fecha": "2026-09-06",
@@ -78,81 +92,87 @@
     "WhatsApp · Luis": -129.17
    },
    "neto": -146.03,
-   "acum": -804.07
+   "acum": 1622.74
   },
   {
    "fecha": "2026-09-07",
-   "in": 434,
+   "in": 1788.12,
    "out": 993.93,
-   "n": 5,
+   "n": 8,
    "porFuente": {
     "Stripe": 434,
+    "Pagopar": 1354.12,
     "WhatsApp · Pagos (Majo)": -293.93,
     "Manual · efectivo": -700
    },
-   "neto": -559.93,
-   "acum": -1364
+   "neto": 794.19,
+   "acum": 2416.93
   },
   {
    "fecha": "2026-09-08",
-   "in": 397,
+   "in": 606.1,
    "out": 639.42,
-   "n": 6,
+   "n": 8,
    "porFuente": {
     "Stripe": 397,
+    "Pagopar": 209.1,
     "WhatsApp · Pagos (Majo)": -639.42
    },
-   "neto": -242.42,
-   "acum": -1606.42
+   "neto": -33.32,
+   "acum": 2383.61
   },
   {
    "fecha": "2026-09-09",
-   "in": 0,
+   "in": 100.67,
    "out": 38.79,
-   "n": 2,
+   "n": 3,
    "porFuente": {
+    "Pagopar": 100.67,
     "WhatsApp · Gustavo": -33.73,
     "WhatsApp · Pagos (Majo)": -5.06
    },
-   "neto": -38.79,
-   "acum": -1645.21
+   "neto": 61.88,
+   "acum": 2445.49
   },
   {
    "fecha": "2026-09-10",
-   "in": 0,
+   "in": 125.47,
    "out": 309.26,
-   "n": 3,
+   "n": 5,
    "porFuente": {
+    "Pagopar": 125.47,
     "WhatsApp · Pagos (Majo)": -219.22,
     "WhatsApp · Luis (factura)": -90.04
    },
-   "neto": -309.26,
-   "acum": -1954.47
+   "neto": -183.79,
+   "acum": 2261.7
   },
   {
    "fecha": "2026-09-11",
-   "in": 100,
+   "in": 1802.19,
    "out": 943.14,
-   "n": 7,
+   "n": 8,
    "porFuente": {
     "Binance": 100,
+    "Pagopar": 1702.19,
     "WhatsApp · Pagos (Majo)": -807.08,
     "WhatsApp · Gustavo": -18.04,
     "WhatsApp · Luis (factura)": -118.02
    },
-   "neto": -843.14,
-   "acum": -2797.61
+   "neto": 859.05,
+   "acum": 3120.75
   },
   {
    "fecha": "2026-09-12",
-   "in": 247,
+   "in": 886.29,
    "out": 0,
-   "n": 1,
+   "n": 3,
    "porFuente": {
-    "Binance": 247
+    "Binance": 247,
+    "Pagopar": 639.29
    },
-   "neto": 247,
-   "acum": -2550.61
+   "neto": 886.29,
+   "acum": 4007.04
   },
   {
    "fecha": "2026-09-13",
@@ -163,42 +183,45 @@
     "Stripe": 69
    },
    "neto": 69,
-   "acum": -2481.61
+   "acum": 4076.04
   },
   {
    "fecha": "2026-09-14",
-   "in": 0,
+   "in": 106.24,
    "out": 573.36,
-   "n": 2,
+   "n": 3,
    "porFuente": {
+    "Pagopar": 106.24,
     "WhatsApp · Pagos (Majo)": -573.36
    },
-   "neto": -573.36,
-   "acum": -3054.97
+   "neto": -467.12,
+   "acum": 3608.92
   },
   {
    "fecha": "2026-09-15",
-   "in": 205.97,
+   "in": 1318.45,
    "out": 60.71,
-   "n": 2,
+   "n": 3,
    "porFuente": {
+    "Pagopar": 1112.48,
     "WhatsApp · Pagos (Majo)": -60.71,
     "Transferencia": 205.97
    },
-   "neto": 145.26,
-   "acum": -2909.71
+   "neto": 1257.74,
+   "acum": 4866.66
   },
   {
    "fecha": "2026-09-16",
-   "in": 0,
+   "in": 51.77,
    "out": 451.17,
-   "n": 3,
+   "n": 4,
    "porFuente": {
+    "Pagopar": 51.77,
     "WhatsApp · Alfredo": -19.01,
     "WhatsApp · Pagos (Majo)": -432.16
    },
-   "neto": -451.17,
-   "acum": -3360.88
+   "neto": -399.4,
+   "acum": 4467.26
   }
  ],
  "movimientos": [
@@ -271,6 +294,222 @@
    "usd": 247,
    "fuente": "Binance",
    "det": "depósito USDT"
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 51.26,
+   "fuente": "Pagopar",
+   "det": "PIX · Pedro Henrique Camiloti",
+   "gs": 304000
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 209.11,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Laura Donsbach",
+   "gs": 1240000
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 209.11,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lee Delicata",
+   "gs": 1240000
+  },
+  {
+   "d": "2026-09-01",
+   "t": "in",
+   "usd": 104.55,
+   "fuente": "Pagopar",
+   "det": "PIX · Isabela Zomer",
+   "gs": 620000
+  },
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 624.28,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · James Stuart Brander",
+   "gs": 3702000
+  },
+  {
+   "d": "2026-09-02",
+   "t": "in",
+   "usd": 105.4,
+   "fuente": "Pagopar",
+   "det": "PIX · simone zanella",
+   "gs": 625000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 51.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Gonzalo Alberto Flores Portal",
+   "gs": 307000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 105.4,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Gustavo Ferrari",
+   "gs": 625000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 51.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lourdes Mariela Amarilla Sanabria",
+   "gs": 307000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 523.95,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Lee Delicata",
+   "gs": 3107000
+  },
+  {
+   "d": "2026-09-03",
+   "t": "in",
+   "usd": 154.97,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Nisla urrutia",
+   "gs": 919000
+  },
+  {
+   "d": "2026-09-05",
+   "t": "in",
+   "usd": 78.41,
+   "fuente": "Pagopar",
+   "det": "QR Argentina · Aristida Genez Alcaraz",
+   "gs": 465000
+  },
+  {
+   "d": "2026-09-05",
+   "t": "in",
+   "usd": 156.83,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Clara Fiol",
+   "gs": 930000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "in",
+   "usd": 51.26,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Khushroo Tavadia",
+   "gs": 304000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "in",
+   "usd": 971.33,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · JOHANNES OLOF VORSTER",
+   "gs": 5760000
+  },
+  {
+   "d": "2026-09-07",
+   "t": "in",
+   "usd": 331.53,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Gustavo Ferrari",
+   "gs": 1966000
+  },
+  {
+   "d": "2026-09-08",
+   "t": "in",
+   "usd": 104.55,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sebastian Suhr",
+   "gs": 620000
+  },
+  {
+   "d": "2026-09-08",
+   "t": "in",
+   "usd": 104.55,
+   "fuente": "Pagopar",
+   "det": "PIX · Gustavo Napoleão",
+   "gs": 620000
+  },
+  {
+   "d": "2026-09-09",
+   "t": "in",
+   "usd": 100.67,
+   "fuente": "Pagopar",
+   "det": "PIX · Rafael Peliciolli Nunes",
+   "gs": 597000
+  },
+  {
+   "d": "2026-09-10",
+   "t": "in",
+   "usd": 52.11,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sebastian Suhr",
+   "gs": 309000
+  },
+  {
+   "d": "2026-09-10",
+   "t": "in",
+   "usd": 73.36,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · kalila Ferraz Coelho",
+   "gs": 435000
+  },
+  {
+   "d": "2026-09-11",
+   "t": "in",
+   "usd": 1702.19,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Stephanie B B Barbieri",
+   "gs": 10094000
+  },
+  {
+   "d": "2026-09-12",
+   "t": "in",
+   "usd": 107.08,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Philip and Linda staley",
+   "gs": 635000
+  },
+  {
+   "d": "2026-09-12",
+   "t": "in",
+   "usd": 532.21,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Laura Donsbach",
+   "gs": 3156000
+  },
+  {
+   "d": "2026-09-14",
+   "t": "in",
+   "usd": 106.24,
+   "fuente": "Pagopar",
+   "det": "Pago QR · Tania Storm",
+   "gs": 630000
+  },
+  {
+   "d": "2026-09-15",
+   "t": "in",
+   "usd": 1112.48,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · SUELI TERESINHA BONATTI BUHATEM",
+   "gs": 6597000
+  },
+  {
+   "d": "2026-09-16",
+   "t": "in",
+   "usd": 51.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Rafael Acosta",
+   "gs": 307000
   },
   {
    "d": "2026-09-02",
@@ -659,11 +898,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 48,
+   "traslados": 49,
    "ingresos": {
-    "planilla": 8081.06,
+    "planilla": 8130.06,
     "alohaSinFila": 0,
-    "total": 8081.06
+    "total": 8130.06
    },
    "directos": {
     "chofer": 2557,
@@ -673,7 +912,7 @@
     "otros": 49,
     "total": 3383
    },
-   "margenBruto": 4698.06,
+   "margenBruto": 4747.06,
    "cobro": {
     "stripe": 96.45,
     "aloha": null,
@@ -688,12 +927,12 @@
     "total": 104.77
    },
    "marketing": {
-    "google": 194.91,
+    "google": 196.36,
     "meta": 279.12,
-    "total": 474.03
+    "total": 475.48
    },
    "impuestos": null,
-   "resultado": 4022.81,
+   "resultado": 4070.36,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -712,6 +951,14 @@
    "nota": "medido cobro por cobro"
   },
   {
+   "riel": "Pagopar",
+   "cobros": 27,
+   "bruto": 7828.14,
+   "comision": null,
+   "pct": null,
+   "nota": "se mide con la liquidación"
+  },
+  {
    "riel": "Binance",
    "cobros": 3,
    "bruto": 594,
@@ -721,8 +968,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 46114000,
-  "cobradoUsd": 7776.37,
+  "cobradoGs": 46421000,
+  "cobradoUsd": 7828.14,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -795,6 +1042,12 @@
     "cobros": 1,
     "gs": 6597000,
     "usd": 1112.48
+   },
+   {
+    "fecha": "2026-09-16",
+    "cobros": 1,
+    "gs": 307000,
+    "usd": 51.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -802,8 +1055,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 46114000,
-  "pendienteUsd": 7776.39
+  "pendienteGs": 46421000,
+  "pendienteUsd": 7828.16
  },
  "giros": [
   {
@@ -898,7 +1151,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲46.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲46.4 millones cobrados por Pagopar sin acreditar."
   },
   {
    "nivel": "warn",
