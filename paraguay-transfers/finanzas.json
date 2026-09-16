@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T14:30:09.667Z",
+ "generated": "2026-09-16T16:30:48.861Z",
  "tc": 5930,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -910,12 +910,12 @@
     "total": 104.77
    },
    "marketing": {
-    "google": 192.68,
+    "google": 194.17,
     "meta": 279.12,
-    "total": 471.8
+    "total": 473.29
    },
    "impuestos": null,
-   "resultado": 3925.04,
+   "resultado": 3923.55,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1183,6 +1183,14 @@
    "usd": 59.02,
    "concepto": "Carga de combustible 33,493 L (surtidor Super)",
    "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 08/09 ya trae combustible"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Alfredo",
+   "gs": 10000,
+   "usd": 1.69,
+   "concepto": "Estacionamiento Solange's Parking (centro, Asunción)",
+   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 11/09 ya trae parking"
   }
  ],
  "saldosHistorial": [
