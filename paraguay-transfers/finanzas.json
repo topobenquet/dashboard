@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T16:30:48.861Z",
+ "generated": "2026-09-16T18:30:19.725Z",
  "tc": 5930,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -213,14 +213,14 @@
   {
    "fecha": "2026-09-16",
    "in": 0,
-   "out": 38.02,
-   "n": 2,
+   "out": 451.17,
+   "n": 3,
    "porFuente": {
     "WhatsApp · Alfredo": -19.01,
-    "WhatsApp · Pagos (Majo)": -19.01
+    "WhatsApp · Pagos (Majo)": -432.16
    },
-   "neto": -38.02,
-   "acum": 4828.64
+   "neto": -451.17,
+   "acum": 4415.49
   }
  ],
  "movimientos": [
@@ -751,6 +751,14 @@
    "gs": 112750
   },
   {
+   "d": "2026-09-16",
+   "t": "out",
+   "usd": 413.15,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago saldo pendiente traslados. Driver Hugo Fernández. Vehículo a disposición 15-16-17-18-",
+   "gs": 2450000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 205.97,
@@ -1191,6 +1199,46 @@
    "usd": 1.69,
    "concepto": "Estacionamiento Solange's Parking (centro, Asunción)",
    "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 11/09 ya trae parking"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 20000,
+   "usd": 3.37,
+   "concepto": "Parking 16/09",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 2500000,
+   "usd": 421.59,
+   "concepto": "* pagado queda pendiente de pago 2.450.000",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 150000,
+   "usd": 25.3,
+   "concepto": "Por dia a disposicion pagamos , pero despues nosotros cambia",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 100000,
+   "usd": 16.86,
+   "concepto": "Serían 2 viáticos de por el 16/09 + 17/09 que son full day. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 180000,
+   "usd": 30.35,
+   "concepto": "ahora que subio a digamos que cubre un viatico",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
