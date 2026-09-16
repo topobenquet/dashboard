@@ -251,7 +251,13 @@ function canales(r) {
   const dd = (D.tienda || {}).diario || {};
   for (const f of dias(r.ini, r.fin)) {
     const s = (D.softwareholics || {})[f];
-    if (s) { sw++; for (const [c, v] of Object.entries(s)) if (c !== "TOTAL" && v) (out[c] ||= { ing: 0, ped: 0, nuevos: 0, pedKnown: false }).ing += v; }
+    if (s) {
+      sw++;
+      for (const [c, v] of Object.entries(s)) if (c !== "TOTAL" && v) (out[c] ||= { ing: 0, ped: 0, nuevos: 0 }).ing += v;
+      // Softwareholics no tiene TikTok: lo mete en "Other UTM". Se toma de los UTM de Shopify.
+      const tk = dd[f]?.canales?.TikTok?.[1] || 0;
+      if (tk) { (out.TikTok ||= { ing: 0, ped: 0, nuevos: 0 }).ing += tk; if (out["Other UTM"]) out["Other UTM"].ing = Math.max(out["Other UTM"].ing - tk, 0); }
+    }
     else if (dd[f]) { est++; for (const [c, [p, i, n]] of Object.entries(dd[f].canales)) { const a = (out[c] ||= { ing: 0, ped: 0, nuevos: 0 }); a.ing += i; a.ped += p; a.nuevos += n; } }
   }
   return { canales: out, sw, est };
@@ -497,7 +503,7 @@ function canalesPanel() {
   fs.forEach((f) => {
     const s = D.softwareholics?.[f];
     let g, m, tk, tot;
-    if (s) { g = s.Google || 0; m = (s.MetaAds || 0) + (s["Meta Shop"] || 0); tk = s.TikTok || 0; tot = s.TOTAL || 0; }
+    if (s) { g = s.Google || 0; m = (s.MetaAds || 0) + (s["Meta Shop"] || 0); tk = dd[f]?.canales?.TikTok?.[1] || 0; tot = s.TOTAL || 0; }
     else if (dd[f]) { const c = dd[f].canales; g = c.Google?.[1] || 0; m = (c.MetaAds?.[1] || 0) + (c["Meta Shop"]?.[1] || 0); tk = c.TikTok?.[1] || 0; tot = dd[f].ingresos; }
     else return;
     ser.Google[f] = g; ser.Meta[f] = m; ser.TikTok[f] = tk; ser.Resto[f] = Math.max(tot - g - m - tk, 0);
