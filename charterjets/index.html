@@ -169,12 +169,18 @@ function render(d,clarity){
   const expected=d.budget.daily*d.daysLive;
 
   // KPIs
+  const W=d.weekly||{}, cur=W.current||{}, prv=W.previous||{};
+  const chg=(k,inv)=>{ if(!W.comparable) return ''; const a=cur[k]||0,b=prv[k]||0; if(!b) return ''; const r=(a-b)/b, up=r>=0, good=inv?!up:up;
+    return `<span style="color:${good?'#2E8B57':'#C0392B'};font-weight:600">${up?'▲':'▼'} ${pct(Math.abs(r))}</span> vs previous 7 days`; };
+  const weekNote=W.comparable?'':`Week-over-week comparison starts ${new Date((W.availableFrom||'')+'T12:00:00').toLocaleString('en-US',{month:'short',day:'numeric'})}`;
+  const P=d.pacing||{}, pr=div(P.projected,P.plan);
+  const monthName=P.month?new Date(P.month+'-15T12:00:00').toLocaleString('en-US',{month:'long'}):'';
   $('#kpis').innerHTML=[
-    {l:'Spend to date',v:usd(all.spend),s:`${pct(div(all.spend,expected),0)} of plan ($${fm(expected)} in ${d.daysLive} day${d.daysLive>1?'s':''})`,bar:Math.min(1,div(all.spend,expected)||0)},
-    {l:'Clicks',v:fm(all.clicks),s:`CTR ${pct(div(all.clicks,all.impr))} · Avg CPC ${usd(div(all.spend,all.clicks),2)}`},
-    {l:'Inquiries',v:fm(all.inquiries,0),s:`Forms, live search and calls · ${usd(div(all.spend,all.inquiries))} each`},
-    {l:'Booked flights',v:fm(all.booked),s:all.booked?`${usd(div(all.spend,all.booked))} per booked flight · margin ${usd(all.margin)}`:'From Pipedrive, ad-attributed deals'},
-  ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v">${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%"></i></div>`:''}</div>`).join('');
+    {l:`${monthName} spend`,v:usd(P.spentToDate),s:`On pace for <b>${usd(P.projected)}</b> vs ${usd(P.plan)} planned (${pct(pr)})`,bar:Math.min(1,pr||0),barColor:pr>1.1?'#C98A1B':'#B9914B'},
+    {l:'Clicks, last 7 days',v:fm(cur.clicks),s:chg('clicks')||`CTR ${pct(div(cur.clicks,cur.impr))} · Avg CPC ${usd(div(cur.spend,cur.clicks))}`},
+    {l:'Inquiries, last 7 days',v:fm(cur.inquiries),s:chg('inquiries')||`Forms, live search and calls · ${usd(div(cur.spend,cur.inquiries))} each`},
+    {l:'Booked flights',v:fm(all.booked),s:all.booked?`${usd(div(all.spend,all.booked))} per booked flight · margin ${usd(all.margin)}`:'Ad-attributed, from Pipedrive'},
+].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v">${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%;background:${k.barColor||'#B9914B'}"></i></div>`:''}</div>`).join('')+(weekNote?`<div style="grid-column:1/-1;font-size:10.5px;color:#8A93A0;margin-top:-4px">${weekNote}. Spend projection is based on the last ${P.basedOnDays||0} full day${P.basedOnDays===1?'':'s'} of spend.</div>`:'');
 
   let h='';
   // ---------- THE TEST
@@ -268,6 +274,18 @@ function render(d,clarity){
     `<div class="grid g-73"><div class="card pad chart">${hoursSVG(d.hours||[],callHrs)}<div class="legend"><span><i style="background:#2F5D8A"></i>Ad clicks</span><span><i style="background:#B9914B"></i>Tracked calls</span></div></div>
     <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Ad clicks by device</div>${hBars(['DESKTOP','MOBILE','TABLET'].map(k=>({label:k[0]+k.slice(1).toLowerCase(),value:dv[k]?.clicks||0,sub:`${fm(dv[k]?.clicks||0)} · ${usd(div(dv[k]?.spend||0,dv[k]?.clicks||0),2)}`,color:'#2F5D8A'})))}
     <div style="font-size:12px;font-weight:700;color:var(--navy);margin:12px 0 4px">Landing sessions by device (Clarity)</div>${hBars(Object.entries(clDev).filter(([k,v])=>v).map(([k,v])=>({label:k==='PC'?'Desktop':k,value:v,color:'#B9914B'})))}</div></div>`);
+
+  // ---------- ROUTES
+  const R=d.routes; let rb='<div class="empty">Route data unavailable in this update.</div>';
+  if(R){
+    const yr=R.since?R.since.slice(0,4):'';
+    rb=`<div class="card pad"><div class="minis"><div class="mini"><div class="l">Trips on record</div><div class="v">${fm(R.trips)}</div></div><div class="mini"><div class="l">Legs per trip</div><div class="v">${R.legsPerTrip}</div></div><div class="mini"><div class="l">Include an international leg</div><div class="v">${pct(R.intlShare)}</div></div><div class="mini"><div class="l">Since</div><div class="v">${yr}</div></div></div>
+      <div class="grid g2"><div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Top departure cities</div>${hBars(R.topDepartures.map(x=>({label:x.place,value:x.requested,sub:`${fm(x.requested)} · ${fm(x.booked)} booked`,color:'#2F5D8A'})))}</div>
+      <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Top destinations</div>${hBars(R.topDestinations.map(x=>({label:x.place,value:x.requested,sub:`${fm(x.requested)} · ${fm(x.booked)} booked`,color:'#B9914B'})))}</div></div>
+      <div class="grid g-73" style="margin-top:12px"><div class="scroll"><table class="t"><thead><tr><th>Most requested routes</th><th class="n">Requests</th><th class="n">Booked</th><th class="n">Margin</th></tr></thead><tbody>${R.topRoutes.map(x=>`<tr><td>${esc(x.route)}${x.international?' <span class="pill p-mut">Intl</span>':''}</td><td class="n">${fm(x.requested)}</td><td class="n">${fm(x.booked)}</td><td class="n">${usd(x.margin)}</td></tr>`).join('')}</tbody></table></div>
+      <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px">Routes people searched on Google</div>${(d.searchRoutes||[]).length?`<table class="t"><thead><tr><th>Search</th><th class="n">Impr.</th><th class="n">Clicks</th></tr></thead><tbody>${d.searchRoutes.map(t=>`<tr><td>${esc(t.term)}</td><td class="n">${fm(t.impr)}</td><td class="n">${fm(t.clicks)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">No route searches yet</div>'}<div style="font-size:11px;color:var(--mut);margin-top:8px">Since the campaigns launched.</div></div></div></div>`;
+  }
+  h+=section('Routes','Where clients fly','Trips and routes from Pipedrive quote requests · the live search tool does not share which route a visitor searched',rb);
 
   // ---------- KEYWORDS + TERMS
   const kw=(d.keywords||[]).slice(0,15), tm=(d.terms||[]).slice(0,20);

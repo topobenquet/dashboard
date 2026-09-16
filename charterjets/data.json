@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T11:13:13.814Z",
+ "generated": "2026-09-16T11:32:26.871Z",
  "today": "2026-09-16",
  "launch": "2026-09-15",
  "daysLive": 2,
@@ -24,7 +24,7 @@
  "markets": {
   "Florida": {
    "spend": 204.88,
-   "impr": 131,
+   "impr": 137,
    "clicks": 15,
    "inquiries": 0,
    "form": 0,
@@ -44,7 +44,7 @@
   },
   "New York": {
    "spend": 198.86,
-   "impr": 232,
+   "impr": 233,
    "clicks": 15,
    "inquiries": 0,
    "form": 0,
@@ -57,7 +57,7 @@
    "value": 0,
    "callrailCalls": 0,
    "callrailQualified": 0,
-   "sessions": 14,
+   "sessions": 15,
    "avinodeSearches": 10,
    "avinodeOpenForm": 4,
    "avinodeInquiries": 0
@@ -115,7 +115,7 @@
    "slug": "charter-south-fl",
    "short": "South FL · local",
    "spend": 112.88,
-   "impr": 87,
+   "impr": 89,
    "clicks": 8,
    "conv": 0,
    "phoneImpr": 0,
@@ -140,10 +140,10 @@
    "slug": "charter-fl-inbound",
    "short": "Florida · inbound",
    "spend": 92,
-   "impr": 44,
+   "impr": 48,
    "clicks": 7,
    "conv": 0,
-   "phoneImpr": 2,
+   "phoneImpr": 5,
    "phoneCalls": 0,
    "form": 0,
    "search": 0,
@@ -190,7 +190,7 @@
    "slug": "charter-nyc-inbound",
    "short": "New York · inbound",
    "spend": 38.74,
-   "impr": 30,
+   "impr": 31,
    "clicks": 3,
    "conv": 0,
    "phoneImpr": 0,
@@ -568,17 +568,6 @@
    "conv": 0
   },
   {
-   "kw": "private jet charter",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Charter - Core",
-   "qs": 7,
-   "impr": 6,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0
-  },
-  {
    "kw": "chartered flights",
    "campaign": "NYC · local",
    "market": "New York",
@@ -590,12 +579,12 @@
    "conv": 0
   },
   {
-   "kw": "private jet booking",
+   "kw": "private jet charter",
    "campaign": "South FL · local",
    "market": "Florida",
-   "adGroup": "Quote - Book",
-   "qs": null,
-   "impr": 5,
+   "adGroup": "Charter - Core",
+   "qs": 7,
+   "impr": 6,
    "clicks": 0,
    "spend": 0,
    "conv": 0
@@ -606,18 +595,18 @@
    "market": "Florida",
    "adGroup": "Routes - From South FL",
    "qs": null,
-   "impr": 4,
+   "impr": 5,
    "clicks": 0,
    "spend": 0,
    "conv": 0
   },
   {
-   "kw": "private jet rental",
+   "kw": "private jet booking",
    "campaign": "South FL · local",
    "market": "Florida",
-   "adGroup": "Rental - Hire",
+   "adGroup": "Quote - Book",
    "qs": null,
-   "impr": 4,
+   "impr": 5,
    "clicks": 0,
    "spend": 0,
    "conv": 0
@@ -667,10 +656,10 @@
    "conv": 0
   },
   {
-   "kw": "private jet rental quote",
-   "campaign": "NYC · local",
+   "kw": "private jet la to nyc",
+   "campaign": "New York · inbound",
    "market": "New York",
-   "adGroup": "Quote - Book",
+   "adGroup": "Inbound - Routes To NYC",
    "qs": null,
    "impr": 4,
    "clicks": 0,
@@ -678,10 +667,21 @@
    "conv": 0
   },
   {
-   "kw": "private jet flight cost",
+   "kw": "private jet dc to nyc",
+   "campaign": "New York · inbound",
+   "market": "New York",
+   "adGroup": "Inbound - Routes To NYC",
+   "qs": null,
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "private jet rental quote",
    "campaign": "NYC · local",
    "market": "New York",
-   "adGroup": "Pricing",
+   "adGroup": "Quote - Book",
    "qs": null,
    "impr": 4,
    "clicks": 0,
@@ -1509,13 +1509,13 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 145,
+   "impr": 146,
    "clicks": 9,
    "conv": 0,
    "spend": 117.41
   },
   "MOBILE": {
-   "impr": 219,
+   "impr": 225,
    "clicks": 22,
    "conv": 0,
    "spend": 301.1
@@ -1630,15 +1630,15 @@
    {
     "path": "/nyc",
     "market": "New York",
-    "sessions": 17,
+    "sessions": 19,
     "engaged": 13,
     "engagementSec": 142,
-    "users": 16,
+    "users": 18,
     "search": 11,
     "openForm": 4,
     "inquiry": 0,
     "ads": {
-     "sessions": 14,
+     "sessions": 15,
      "search": 10,
      "openForm": 4,
      "inquiry": 0
@@ -1733,12 +1733,12 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 27,
+    "sessions": 28,
     "engaged": 22
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 5,
+    "sessions": 6,
     "engaged": 1
    },
    {
@@ -1760,10 +1760,270 @@
   "daily": [
    {
     "date": "2026-09-15",
-    "sessions": 39,
-    "ads": 27
+    "sessions": 41,
+    "ads": 28
    }
   ]
+ },
+ "routes": {
+  "since": "2021-10-22",
+  "trips": 570,
+  "legsPerTrip": 1.5,
+  "intlShare": 0.29,
+  "topRoutes": [
+   {
+    "route": "Waterford Township → Mackinac Island",
+    "requested": 6,
+    "booked": 6,
+    "margin": 13443.88,
+    "international": false
+   },
+   {
+    "route": "Lawrenceville → Nashville",
+    "requested": 5,
+    "booked": 4,
+    "margin": 14093.07,
+    "international": false
+   },
+   {
+    "route": "Great Falls → Carlsbad",
+    "requested": 4,
+    "booked": 4,
+    "margin": 24591.47,
+    "international": false
+   },
+   {
+    "route": "Carlsbad → Great Falls",
+    "requested": 4,
+    "booked": 4,
+    "margin": 25938.22,
+    "international": false
+   },
+   {
+    "route": "Simpson Bay → Gustaf III Airport",
+    "requested": 4,
+    "booked": 4,
+    "margin": 6009.98,
+    "international": true
+   },
+   {
+    "route": "Wheeling → Nashville",
+    "requested": 4,
+    "booked": 3,
+    "margin": 5151.69,
+    "international": false
+   },
+   {
+    "route": "Atlanta → Nassau",
+    "requested": 3,
+    "booked": 3,
+    "margin": 6673.57,
+    "international": true
+   },
+   {
+    "route": "Waterford Township → Harbor Springs",
+    "requested": 3,
+    "booked": 3,
+    "margin": 12400.14,
+    "international": false
+   },
+   {
+    "route": "Gypsum → Atlanta",
+    "requested": 3,
+    "booked": 3,
+    "margin": 9432.55,
+    "international": false
+   },
+   {
+    "route": "Oakland → Las Vegas",
+    "requested": 3,
+    "booked": 1,
+    "margin": 4177.38,
+    "international": false
+   },
+   {
+    "route": "Teterboro → Waterford Township",
+    "requested": 3,
+    "booked": 1,
+    "margin": 1896.42,
+    "international": false
+   },
+   {
+    "route": "Colorado → Rochester",
+    "requested": 2,
+    "booked": 2,
+    "margin": 4685.05,
+    "international": false
+   }
+  ],
+  "topDepartures": [
+   {
+    "place": "Waterford Township",
+    "requested": 30,
+    "booked": 26
+   },
+   {
+    "place": "Lawrenceville",
+    "requested": 23,
+    "booked": 17
+   },
+   {
+    "place": "Atlanta",
+    "requested": 22,
+    "booked": 19
+   },
+   {
+    "place": "Los Angeles",
+    "requested": 17,
+    "booked": 10
+   },
+   {
+    "place": "Teterboro",
+    "requested": 13,
+    "booked": 9
+   },
+   {
+    "place": "Gainesville",
+    "requested": 12,
+    "booked": 9
+   },
+   {
+    "place": "Detroit",
+    "requested": 11,
+    "booked": 11
+   },
+   {
+    "place": "Michigan",
+    "requested": 11,
+    "booked": 10
+   }
+  ],
+  "topDestinations": [
+   {
+    "place": "Waterford Township",
+    "requested": 33,
+    "booked": 29
+   },
+   {
+    "place": "Atlanta",
+    "requested": 28,
+    "booked": 23
+   },
+   {
+    "place": "Lawrenceville",
+    "requested": 17,
+    "booked": 15
+   },
+   {
+    "place": "Michigan",
+    "requested": 13,
+    "booked": 12
+   },
+   {
+    "place": "Gainesville",
+    "requested": 13,
+    "booked": 8
+   },
+   {
+    "place": "Teterboro",
+    "requested": 12,
+    "booked": 8
+   },
+   {
+    "place": "Opa-locka",
+    "requested": 11,
+    "booked": 7
+   },
+   {
+    "place": "Detroit",
+    "requested": 10,
+    "booked": 10
+   }
+  ]
+ },
+ "searchRoutes": [
+  {
+   "term": "private jet orlando to miami",
+   "impr": 2,
+   "clicks": 1
+  },
+  {
+   "term": "private jet from miami",
+   "impr": 2,
+   "clicks": 1
+  },
+  {
+   "term": "private jet to nyc",
+   "impr": 2,
+   "clicks": 1
+  },
+  {
+   "term": "private jet to miami",
+   "impr": 2,
+   "clicks": 1
+  },
+  {
+   "term": "private flight to miami",
+   "impr": 2,
+   "clicks": 1
+  },
+  {
+   "term": "charter flight to miami",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "charter flights to miami",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "private charter to bahamas",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "private flight to bahamas",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "private flights to florida",
+   "impr": 1,
+   "clicks": 1
+  }
+ ],
+ "weekly": {
+  "current": {
+   "from": "2026-09-09",
+   "to": "2026-09-15",
+   "spend": 392.02,
+   "clicks": 29,
+   "impr": 362,
+   "inquiries": 0,
+   "sessions": 28
+  },
+  "previous": {
+   "from": "2026-09-02",
+   "to": "2026-09-08",
+   "spend": 0,
+   "clicks": 0,
+   "impr": 0,
+   "inquiries": 0,
+   "sessions": 0
+  },
+  "comparable": false,
+  "availableFrom": "2026-09-29"
+ },
+ "pacing": {
+  "month": "2026-09",
+  "spentToDate": 418.51,
+  "avgDaily": 392.02,
+  "daysLeft": 15,
+  "projected": 6272.32,
+  "plan": 5248,
+  "planDays": 16,
+  "basedOnDays": 1
  },
  "ads": {
   "daily": {
@@ -1837,7 +2097,7 @@
    "2026-09-16": {
     "Search | Charter | South FL": {
      "spend": 0,
-     "impr": 1,
+     "impr": 3,
      "clicks": 0,
      "conv": 0,
      "phoneImpr": 0,
@@ -1850,10 +2110,10 @@
     },
     "Search | Charter | FL Inbound": {
      "spend": 14.91,
-     "impr": 1,
+     "impr": 5,
      "clicks": 1,
      "conv": 0,
-     "phoneImpr": 0,
+     "phoneImpr": 3,
      "phoneCalls": 0,
      "form": 0,
      "search": 0,
@@ -1876,7 +2136,7 @@
     },
     "Search | Charter | NYC Inbound": {
      "spend": 0,
-     "impr": 2,
+     "impr": 3,
      "clicks": 0,
      "conv": 0,
      "phoneImpr": 0,
