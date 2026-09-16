@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T11:32:26.871Z",
+ "generated": "2026-09-16T11:46:06.432Z",
  "today": "2026-09-16",
  "launch": "2026-09-15",
  "daysLive": 2,
@@ -24,7 +24,7 @@
  "markets": {
   "Florida": {
    "spend": 204.88,
-   "impr": 137,
+   "impr": 138,
    "clicks": 15,
    "inquiries": 0,
    "form": 0,
@@ -115,7 +115,7 @@
    "slug": "charter-south-fl",
    "short": "South FL · local",
    "spend": 112.88,
-   "impr": 89,
+   "impr": 90,
    "clicks": 8,
    "conv": 0,
    "phoneImpr": 0,
@@ -762,17 +762,6 @@
    "excluded": false
   },
   {
-   "term": "charter flight",
-   "impr": 6,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
    "term": "charter flights",
    "impr": 6,
    "clicks": 0,
@@ -786,6 +775,17 @@
   },
   {
    "term": "reserve jets",
+   "impr": 6,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "charter flight",
    "impr": 6,
    "clicks": 0,
    "spend": 0,
@@ -875,13 +875,25 @@
    "excluded": false
   },
   {
-   "term": "charter plane",
+   "term": "private jets",
    "impr": 3,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
+    "Brand",
     "New York"
+   ],
+   "excluded": true
+  },
+  {
+   "term": "jets in miami",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
    ],
    "excluded": false
   },
@@ -898,7 +910,7 @@
    "excluded": false
   },
   {
-   "term": "jets in miami",
+   "term": "private jet charter fort lauderdale",
    "impr": 3,
    "clicks": 0,
    "spend": 0,
@@ -920,27 +932,15 @@
    "excluded": true
   },
   {
-   "term": "private jet charter fort lauderdale",
+   "term": "charter plane",
    "impr": 3,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
-    "Florida"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "private jets",
-   "impr": 3,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Brand",
     "New York"
    ],
-   "excluded": true
+   "excluded": false
   },
   {
    "term": "boca raton private airport",
@@ -1097,24 +1097,178 @@
    "excluded": false
   },
   {
-   "term": "best private jet charter",
+   "term": "private jet charter west palm beach",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
-    "New York"
+    "Florida"
    ],
    "excluded": false
   },
   {
-   "term": "book private flight",
+   "term": "private charter to bahamas",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
-    "New York"
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private flight to bahamas",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "plane private",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private charter flights",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet companies",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet flight",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "mia jet charters",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "how much does a pj cost",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "pj charter cost",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "plane charter",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet charter cost",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private airport fort lauderdale",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": true
+  },
+  {
+   "term": "fly private",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private airport palm beach",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": true
+  },
+  {
+   "term": "private jet west palm beach",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
    ],
    "excluded": false
   },
@@ -1141,84 +1295,7 @@
    "excluded": false
   },
   {
-   "term": "charter jet",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "charter plane cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "chartered flights cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "cost of a private jet rental",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "flight charter",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "flight charter cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "flight hire",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "fly private",
+   "term": "prive jets miami",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
@@ -1229,7 +1306,7 @@
    "excluded": false
   },
   {
-   "term": "fly private jet",
+   "term": "best private jet charter",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
@@ -1251,62 +1328,7 @@
    "excluded": false
   },
   {
-   "term": "how much a private jet cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "how much does a pj cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Florida"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "how much for a private jet",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "how much it cost to rent private jet",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
    "term": "jet charter",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "jet charters",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
@@ -1328,7 +1350,7 @@
    "excluded": false
   },
   {
-   "term": "light jet charter cost",
+   "term": "private airplanes",
    "impr": 2,
    "clicks": 0,
    "spend": 0,
@@ -1336,29 +1358,7 @@
    "markets": [
     "New York"
    ],
-   "excluded": false
-  },
-  {
-   "term": "mia jet charters",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Florida"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "pj charter cost",
-   "impr": 2,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Florida"
-   ],
-   "excluded": false
+   "excluded": true
   }
  ],
  "hours": [
@@ -1515,7 +1515,7 @@
    "spend": 117.41
   },
   "MOBILE": {
-   "impr": 225,
+   "impr": 226,
    "clicks": 22,
    "conv": 0,
    "spend": 301.1
@@ -1630,10 +1630,10 @@
    {
     "path": "/nyc",
     "market": "New York",
-    "sessions": 19,
+    "sessions": 20,
     "engaged": 13,
     "engagementSec": 142,
-    "users": 18,
+    "users": 19,
     "search": 11,
     "openForm": 4,
     "inquiry": 0,
@@ -1738,7 +1738,7 @@
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 6,
+    "sessions": 7,
     "engaged": 1
    },
    {
@@ -1760,7 +1760,7 @@
   "daily": [
    {
     "date": "2026-09-15",
-    "sessions": 41,
+    "sessions": 42,
     "ads": 28
    }
   ]
@@ -1768,28 +1768,15 @@
  "routes": {
   "since": "2021-10-22",
   "trips": 570,
+  "booked": 342,
   "legsPerTrip": 1.5,
-  "intlShare": 0.29,
+  "intlShare": 0.3,
   "topRoutes": [
    {
     "route": "Waterford Township → Mackinac Island",
     "requested": 6,
     "booked": 6,
     "margin": 13443.88,
-    "international": false
-   },
-   {
-    "route": "Lawrenceville → Nashville",
-    "requested": 5,
-    "booked": 4,
-    "margin": 14093.07,
-    "international": false
-   },
-   {
-    "route": "Great Falls → Carlsbad",
-    "requested": 4,
-    "booked": 4,
-    "margin": 24591.47,
     "international": false
    },
    {
@@ -1800,24 +1787,24 @@
     "international": false
    },
    {
+    "route": "Great Falls → Carlsbad",
+    "requested": 4,
+    "booked": 4,
+    "margin": 24591.47,
+    "international": false
+   },
+   {
+    "route": "Lawrenceville → Nashville",
+    "requested": 5,
+    "booked": 4,
+    "margin": 14093.07,
+    "international": false
+   },
+   {
     "route": "Simpson Bay → Gustaf III Airport",
     "requested": 4,
     "booked": 4,
     "margin": 6009.98,
-    "international": true
-   },
-   {
-    "route": "Wheeling → Nashville",
-    "requested": 4,
-    "booked": 3,
-    "margin": 5151.69,
-    "international": false
-   },
-   {
-    "route": "Atlanta → Nassau",
-    "requested": 3,
-    "booked": 3,
-    "margin": 6673.57,
     "international": true
    },
    {
@@ -1835,24 +1822,38 @@
     "international": false
    },
    {
-    "route": "Oakland → Las Vegas",
+    "route": "Atlanta → Nassau",
     "requested": 3,
-    "booked": 1,
-    "margin": 4177.38,
+    "booked": 3,
+    "margin": 6673.57,
+    "international": true
+   },
+   {
+    "route": "Wheeling → Nashville",
+    "requested": 4,
+    "booked": 3,
+    "margin": 5151.69,
     "international": false
    },
    {
-    "route": "Teterboro → Waterford Township",
-    "requested": 3,
-    "booked": 1,
-    "margin": 1896.42,
-    "international": false
-   },
-   {
-    "route": "Colorado → Rochester",
+    "route": "Orlando → Teterboro",
     "requested": 2,
     "booked": 2,
-    "margin": 4685.05,
+    "margin": 25195.65,
+    "international": false
+   },
+   {
+    "route": "Caicos Islands → South Burlington",
+    "requested": 2,
+    "booked": 2,
+    "margin": 17556.69,
+    "international": true
+   },
+   {
+    "route": "Hebron → Las Vegas",
+    "requested": 2,
+    "booked": 2,
+    "margin": 10028.99,
     "international": false
    }
   ],
@@ -1863,18 +1864,28 @@
     "booked": 26
    },
    {
-    "place": "Lawrenceville",
-    "requested": 23,
-    "booked": 17
-   },
-   {
     "place": "Atlanta",
     "requested": 22,
     "booked": 19
    },
    {
+    "place": "Lawrenceville",
+    "requested": 23,
+    "booked": 17
+   },
+   {
+    "place": "Detroit",
+    "requested": 11,
+    "booked": 11
+   },
+   {
     "place": "Los Angeles",
     "requested": 17,
+    "booked": 10
+   },
+   {
+    "place": "Michigan",
+    "requested": 11,
     "booked": 10
    },
    {
@@ -1886,16 +1897,6 @@
     "place": "Gainesville",
     "requested": 12,
     "booked": 9
-   },
-   {
-    "place": "Detroit",
-    "requested": 11,
-    "booked": 11
-   },
-   {
-    "place": "Michigan",
-    "requested": 11,
-    "booked": 10
    }
   ],
   "topDestinations": [
@@ -1920,9 +1921,9 @@
     "booked": 12
    },
    {
-    "place": "Gainesville",
-    "requested": 13,
-    "booked": 8
+    "place": "Detroit",
+    "requested": 10,
+    "booked": 10
    },
    {
     "place": "Teterboro",
@@ -1930,14 +1931,14 @@
     "booked": 8
    },
    {
+    "place": "Gainesville",
+    "requested": 13,
+    "booked": 8
+   },
+   {
     "place": "Opa-locka",
     "requested": 11,
     "booked": 7
-   },
-   {
-    "place": "Detroit",
-    "requested": 10,
-    "booked": 10
    }
   ]
  },
@@ -1968,22 +1969,22 @@
    "clicks": 1
   },
   {
-   "term": "charter flight to miami",
-   "impr": 2,
-   "clicks": 0
-  },
-  {
-   "term": "charter flights to miami",
-   "impr": 2,
-   "clicks": 0
-  },
-  {
    "term": "private charter to bahamas",
    "impr": 2,
    "clicks": 0
   },
   {
    "term": "private flight to bahamas",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "charter flight to miami",
+   "impr": 2,
+   "clicks": 0
+  },
+  {
+   "term": "charter flights to miami",
    "impr": 2,
    "clicks": 0
   },
@@ -2097,7 +2098,7 @@
    "2026-09-16": {
     "Search | Charter | South FL": {
      "spend": 0,
-     "impr": 3,
+     "impr": 4,
      "clicks": 0,
      "conv": 0,
      "phoneImpr": 0,
