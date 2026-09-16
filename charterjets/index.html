@@ -197,10 +197,10 @@ function render(d,clarity){
     <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">How people inquire</div>${donut(mix)}<div style="font-size:11px;color:var(--mut);margin-top:10px">Google Ads conversions by type. Calls include the call button in the ad and tracked calls from the landing pages.</div></div></div>`);
 
   // ---------- FUNNEL
-  const fsteps=[['Impressions','impr'],['Clicks','clicks'],['Inquiries','inquiries'],['CRM deals','deals'],['Quoted','quoted'],['Booked','booked']];
-  const fb=(m,col)=>{const top=Math.max(1,m.impr);return fsteps.map(([l,k],i)=>{const v=m[k]||0, prev=i?m[fsteps[i-1][1]]||0:null;const w=i===0?100:Math.max(v?3:0,100*Math.pow(v/top,0.35));return `<div class="fb"><i style="width:${w}%;background:${col};opacity:${0.25+0.75*(1-i/6)}"></i><span>${fm(v,k==='inquiries'?0:0)}</span>${i?`<em>${prev?pct(v/prev,0):'–'}</em>`:''}</div>`})};
+  const fsteps=[['Impressions','impr'],['Clicks','clicks'],['Landing sessions','sessions'],['Searched aircraft','avinodeSearches'],['Inquiries','inquiries'],['CRM deals','deals'],['Quoted','quoted'],['Booked','booked']];
+  const fb=(m,col)=>{const top=Math.max(1,m.impr);return fsteps.map(([l,k],i)=>{const v=m[k]||0, prev=i?m[fsteps[i-1][1]]||0:null;const w=i===0?100:Math.max(v?3:0,100*Math.pow(v/top,0.35));return `<div class="fb"><i style="width:${w}%;background:${col};opacity:${0.3+0.7*(1-i/8)}"></i><span>${fm(v,k==='inquiries'?0:0)}</span>${i?`<em>${prev?pct(v/prev,0):'–'}</em>`:''}</div>`})};
   const fl=fb(F,C.Florida), ny=fb(N,C['New York']);
-  h+=section('Funnel','From impression to booked flight','Percentages show conversion from the previous step · bar width on a compressed scale',
+  h+=section('Funnel','From impression to booked flight','Percentages show conversion from the previous step · sessions and searches from Google Analytics · bar width on a compressed scale',
     `<div class="card pad funnel"><div class="fh"><span></span><span style="color:${C.Florida}">South Florida</span><span style="color:${C['New York']}">New York</span></div>${fsteps.map(([l],i)=>`<div class="row"><div class="lbl">${l}</div>${fl[i]}${ny[i]}</div>`).join('')}</div>`);
 
   // ---------- CAMPAIGNS
@@ -208,6 +208,21 @@ function render(d,clarity){
   h+=section('Campaigns','Performance by campaign','Impression share fills in after the first full days',
     `<div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Market</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Inquiries</th><th class="n">Cost / inq.</th><th class="n">Call button shown</th><th class="n">Impr. share</th><th class="n">Lost to rank</th><th class="n">Lost to budget</th></tr></thead><tbody>${
     d.campaigns.map(c=>`<tr><td style="white-space:nowrap"><b>${esc(c.short)}</b></td><td>${pill(c.market)}</td><td class="n">${usd(c.spend,2)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${usd(div(c.spend,c.clicks),2)}</td><td class="n">${fm(c.inquiries,0)}</td><td class="n">${usd(div(c.spend,c.inquiries))}</td><td class="n">${fm(c.phoneImpr)}</td><td class="n">${shareCell(c.share,'is')}</td><td class="n">${shareCell(c.share,'lostRank')}</td><td class="n">${shareCell(c.share,'lostBudget')}</td></tr>`).join('')}</tbody></table></div>`);
+
+  // ---------- WEBSITE (GA4)
+  const g=d.ga4; let gb='<div class="empty">Google Analytics data unavailable in this update.</div>';
+  if(g){
+    const pg=g.pages||[], S=pg.reduce((a,p)=>a+p.sessions,0), E=pg.reduce((a,p)=>a+p.engaged,0), T=pg.reduce((a,p)=>a+p.engagementSec,0);
+    const adsS=(g.sources||[]).filter(x=>x.sm==='google / cpc').reduce((a,x)=>a+x.sessions,0);
+    const srch=pg.reduce((a,p)=>a+p.search,0), opn=pg.reduce((a,p)=>a+p.openForm,0), inq=pg.reduce((a,p)=>a+p.inquiry,0);
+    const mf=(mk,col)=>{const m=d.markets[mk];const st=[['Landing sessions',m.sessions],['Searched aircraft',m.avinodeSearches],['Opened quote form',m.avinodeOpenForm],['Sent inquiry',m.avinodeInquiries]];const mx=Math.max(1,st[0][1],st[1][1]);
+      return `<div style="font-size:12px;font-weight:700;color:${col};margin:6px 0 2px">${mk==='Florida'?'South Florida':mk}</div>`+hBars(st.map(([l,v],i)=>({label:l,value:v,sub:i?`${fm(v)} · ${st[i-1][1]?pct(v/st[i-1][1],0):'–'}`:fm(v),color:col})),mx)};
+    gb=`<div class="card pad"><div class="minis"><div class="mini"><div class="l">Landing sessions</div><div class="v">${fm(S)}</div></div><div class="mini"><div class="l">Engagement rate</div><div class="v">${pct(div(E,S),0)}</div></div><div class="mini"><div class="l">Avg engaged time</div><div class="v">${fm(div(T,S),0)}s</div></div><div class="mini"><div class="l">From Google Ads</div><div class="v">${pct(div(adsS,(g.sources||[]).reduce((a,x)=>a+x.sessions,0)),0)}</div></div></div>
+      <div class="grid g2"><div><div style="font-size:12px;font-weight:700;color:var(--navy)">Live aircraft search, step by step</div>${mf('Florida',C.Florida)}${mf('New York',C['New York'])}<div style="font-size:11px;color:var(--mut);margin-top:6px">Percentages compare each step with the one before. Searches can exceed sessions: one visitor often runs several.</div></div>
+      <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Where landing traffic comes from</div>${hBars((g.sources||[]).slice(0,6).map(x=>({label:x.sm,value:x.sessions,sub:`${fm(x.sessions)} · ${pct(div(x.engaged,x.sessions),0)} eng.`,color:x.sm==='google / cpc'?'#B9914B':'#8A94A3'})))}</div></div>
+      <div class="scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Landing page</th><th>Market</th><th class="n">Sessions</th><th class="n">Engagement</th><th class="n">Avg time</th><th class="n">Searches</th><th class="n">Opened form</th><th class="n">Inquiries</th><th class="n">Inquiry rate</th></tr></thead><tbody>${pg.filter(p=>p.sessions||p.search).map(p=>`<tr><td><b>${esc(p.path)}</b></td><td>${p.market?pill(p.market):'–'}</td><td class="n">${fm(p.sessions)}</td><td class="n">${pct(div(p.engaged,p.sessions),0)}</td><td class="n">${fm(div(p.engagementSec,p.sessions),0)}s</td><td class="n">${fm(p.search)}</td><td class="n">${fm(p.openForm)}</td><td class="n">${fm(p.inquiry)}</td><td class="n">${pct(div(p.inquiry,p.sessions),1)}</td></tr>`).join('')}</tbody></table></div></div>`;
+  }
+  h+=section('Website','What visitors do on the landing pages (Google Analytics)','Only fly.charterjetsinc.com · since launch',gb);
 
   // ---------- CALLS
   const cr=d.callrail; let callsBody='';
@@ -260,7 +275,7 @@ function render(d,clarity){
   }
   h+=section('Pipeline','From inquiry to booked flight (Pipedrive)','',pb);
 
-  const s=d.sources, srcs=[['Google Ads',s.googleAds],['CallRail',s.callrail],['Pipedrive',s.pipedrive],['Clarity',s.clarity]];
+  const s=d.sources, srcs=[['Google Ads',s.googleAds],['Google Analytics',s.ga4],['CallRail',s.callrail],['Pipedrive',s.pipedrive],['Clarity',s.clarity]];
   h+=`<footer><div>Sources: ${srcs.map(([n,ok])=>`${n} ${ok?'✓':'✗'}`).join(' · ')}${s.errors?.length?` · <span style="color:var(--bad)">${esc(s.errors.join(' | '))}</span>`:''}</div><div>Updated daily · Charter Jets, Inc.</div></footer>`;
   $('#root').innerHTML=h;
 }
