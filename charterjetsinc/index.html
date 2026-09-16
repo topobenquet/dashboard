@@ -271,8 +271,7 @@ function render(d,clarity){
   const clDev={}; clLast.forEach(s=>Object.entries(s.devices||{}).forEach(([k,v])=>clDev[k]=(clDev[k]||0)+v));
   h+=section('Timing and devices','When and where people engage','Hours in Eastern time · ads run 6 am to 1 am (shaded hours are off)',
     `<div class="grid g-73"><div class="card pad chart">${hoursSVG(d.hours||[],callHrs)}<div class="legend"><span><i style="background:#2F5D8A"></i>Ad clicks</span><span><i style="background:#B9914B"></i>Tracked calls</span></div></div>
-    <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Ad clicks by device</div>${hBars(['DESKTOP','MOBILE','TABLET'].map(k=>({label:k[0]+k.slice(1).toLowerCase(),value:dv[k]?.clicks||0,sub:`${fm(dv[k]?.clicks||0)} · ${usd(div(dv[k]?.spend||0,dv[k]?.clicks||0),2)}`,color:'#2F5D8A'})))}
-    <div style="font-size:12px;font-weight:700;color:var(--navy);margin:12px 0 4px">Landing sessions by device (Clarity)</div>${hBars(Object.entries(clDev).filter(([k,v])=>v).map(([k,v])=>({label:k==='PC'?'Desktop':k,value:v,color:'#B9914B'})))}</div></div>`);
+    <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Ad clicks by device</div>${hBars(['DESKTOP','MOBILE','TABLET'].map(k=>({label:k[0]+k.slice(1).toLowerCase(),value:dv[k]?.clicks||0,sub:`${fm(dv[k]?.clicks||0)} · ${usd(div(dv[k]?.spend||0,dv[k]?.clicks||0),2)}`,color:'#2F5D8A'})))}</div></div>`);
 
   // ---------- ROUTES
   const R=d.routes; let rb='<div class="empty">Route data unavailable in this update.</div>';
