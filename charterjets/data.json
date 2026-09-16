@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T10:46:17.569Z",
+ "generated": "2026-09-16T10:54:40.447Z",
  "today": "2026-09-16",
  "launch": "2026-09-15",
  "daysLive": 2,
@@ -115,7 +115,7 @@
    "slug": "charter-south-fl",
    "short": "South FL · local",
    "spend": 112.88,
-   "impr": 88,
+   "impr": 87,
    "clicks": 8,
    "conv": 0,
    "phoneImpr": 0,
@@ -140,7 +140,7 @@
    "slug": "charter-fl-inbound",
    "short": "Florida · inbound",
    "spend": 92,
-   "impr": 44,
+   "impr": 45,
    "clicks": 7,
    "conv": 0,
    "phoneImpr": 2,
@@ -331,7 +331,7 @@
    "market": "Florida",
    "adGroup": "Inbound - Florida",
    "qs": null,
-   "impr": 1,
+   "impr": 2,
    "clicks": 1,
    "spend": 14.91,
    "conv": 0
@@ -430,7 +430,7 @@
    "market": "Florida",
    "adGroup": "Rental - Hire",
    "qs": null,
-   "impr": 11,
+   "impr": 10,
    "clicks": 1,
    "spend": 14.3,
    "conv": 0
@@ -568,22 +568,22 @@
    "conv": 0
   },
   {
-   "kw": "private jet charter",
-   "campaign": "South FL · local",
-   "market": "Florida",
+   "kw": "chartered flights",
+   "campaign": "NYC · local",
+   "market": "New York",
    "adGroup": "Charter - Core",
-   "qs": 7,
+   "qs": 4,
    "impr": 6,
    "clicks": 0,
    "spend": 0,
    "conv": 0
   },
   {
-   "kw": "chartered flights",
-   "campaign": "NYC · local",
-   "market": "New York",
+   "kw": "private jet charter",
+   "campaign": "South FL · local",
+   "market": "Florida",
    "adGroup": "Charter - Core",
-   "qs": 4,
+   "qs": 7,
    "impr": 6,
    "clicks": 0,
    "spend": 0,
@@ -596,28 +596,6 @@
    "adGroup": "Quote - Book",
    "qs": null,
    "impr": 5,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0
-  },
-  {
-   "kw": "private jet to bahamas",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Routes - From South FL",
-   "qs": null,
-   "impr": 4,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0
-  },
-  {
-   "kw": "private jet rental",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Rental - Hire",
-   "qs": null,
-   "impr": 4,
    "clicks": 0,
    "spend": 0,
    "conv": 0
@@ -667,10 +645,10 @@
    "conv": 0
   },
   {
-   "kw": "private jet rental quote",
-   "campaign": "NYC · local",
+   "kw": "private jet la to nyc",
+   "campaign": "New York · inbound",
    "market": "New York",
-   "adGroup": "Quote - Book",
+   "adGroup": "Inbound - Routes To NYC",
    "qs": null,
    "impr": 4,
    "clicks": 0,
@@ -678,10 +656,32 @@
    "conv": 0
   },
   {
-   "kw": "private jet flight cost",
+   "kw": "private jet dc to nyc",
+   "campaign": "New York · inbound",
+   "market": "New York",
+   "adGroup": "Inbound - Routes To NYC",
+   "qs": null,
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "private jet to bahamas",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Routes - From South FL",
+   "qs": null,
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "private jet rental quote",
    "campaign": "NYC · local",
    "market": "New York",
-   "adGroup": "Pricing",
+   "adGroup": "Quote - Book",
    "qs": null,
    "impr": 4,
    "clicks": 0,
@@ -917,18 +917,6 @@
    "conv": 0,
    "markets": [
     "Florida"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "flight hire",
-   "impr": 3,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
    ],
    "excluded": false
   },
@@ -1360,6 +1348,17 @@
     "New York"
    ],
    "excluded": true
+  },
+  {
+   "term": "private aviation",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "New York"
+   ],
+   "excluded": false
   }
  ],
  "hours": [
@@ -1510,13 +1509,13 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 144,
+   "impr": 145,
    "clicks": 9,
    "conv": 0,
    "spend": 117.41
   },
   "MOBILE": {
-   "impr": 220,
+   "impr": 219,
    "clicks": 22,
    "conv": 0,
    "spend": 301.1
@@ -1838,7 +1837,7 @@
    "2026-09-16": {
     "Search | Charter | South FL": {
      "spend": 0,
-     "impr": 2,
+     "impr": 1,
      "clicks": 0,
      "conv": 0,
      "phoneImpr": 0,
@@ -1851,7 +1850,7 @@
     },
     "Search | Charter | FL Inbound": {
      "spend": 14.91,
-     "impr": 1,
+     "impr": 2,
      "clicks": 1,
      "conv": 0,
      "phoneImpr": 0,
