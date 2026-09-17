@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-17T22:17:14.356Z",
+ "generatedAt": "2026-09-17T22:18:32.858Z",
  "refDate": "2026-09-16",
  "lastSyncLabel": "Sep 16, 2026",
  "inicio": "2026-04-20",
@@ -73,10 +73,10 @@
    "ok": true,
    "asOf": "2026-09-16",
    "meses": {
-    "2026-04-01": "live",
-    "2026-05-01": "live",
-    "2026-06-01": "live",
-    "2026-07-01": "live",
+    "2026-04-01": "cache",
+    "2026-05-01": "cache",
+    "2026-06-01": "cache",
+    "2026-07-01": "cache",
     "2026-08-01": "live",
     "2026-09-01": "live"
    }
@@ -98,6 +98,18 @@
     "cart"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -1146,6 +1158,18 @@
     "cart"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -2195,6 +2219,18 @@
     "otras"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "RMK sin audiencia",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -3439,6 +3475,18 @@
     "cart"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -4487,6 +4535,18 @@
     "cart"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": true,
    "nota": "sin credenciales de la Apple Ads API",
    "semanas": [
@@ -5534,6 +5594,18 @@
     "nonbrand"
    ],
    "target": 0.75,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -6147,23 +6219,23 @@
       "spend": 3884.58,
       "impr": 224874,
       "clicks": 9103,
-      "conv": 1008.29,
-      "revenue": 33895.72
+      "conv": 1009.3,
+      "revenue": 33908.55
      },
      "aud": {
       "brand": {
        "spend": 930.01,
        "impr": 15722,
        "clicks": 5400,
-       "conv": 789,
-       "revenue": 25082.26
+       "conv": 790,
+       "revenue": 25094.75
       },
       "nonbrand": {
        "spend": 2954.57,
        "impr": 209152,
        "clicks": 3703,
-       "conv": 219.29,
-       "revenue": 8813.46
+       "conv": 219.3,
+       "revenue": 8813.8
       }
      }
     },
@@ -6353,23 +6425,23 @@
       "spend": 8863.65,
       "impr": 527070,
       "clicks": 20710,
-      "conv": 2319.23,
-      "revenue": 78293.08
+      "conv": 2320.24,
+      "revenue": 78305.91
      },
      "aud": {
       "brand": {
        "spend": 2124.89,
        "impr": 36535,
        "clicks": 12209,
-       "conv": 1808,
-       "revenue": 58172.99
+       "conv": 1809,
+       "revenue": 58185.48
       },
       "nonbrand": {
        "spend": 6738.77,
        "impr": 490535,
        "clicks": 8501,
-       "conv": 511.23,
-       "revenue": 20120.09
+       "conv": 511.24,
+       "revenue": 20120.43
       }
      }
     }
@@ -6385,6 +6457,18 @@
     "nonbrand"
    ],
    "target": 0.75,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -6908,16 +6992,16 @@
       "spend": 5446.35,
       "impr": 341320,
       "clicks": 15212,
-      "conv": 2552.58,
-      "revenue": 108614.44
+      "conv": 2553.58,
+      "revenue": 108640.32
      },
      "aud": {
       "brand": {
        "spend": 1118.43,
        "impr": 29513,
        "clicks": 7533,
-       "conv": 1958.11,
-       "revenue": 81029.37
+       "conv": 1959.11,
+       "revenue": 81055.25
       },
       "nonbrand": {
        "spend": 4327.93,
@@ -7034,14 +7118,14 @@
      "aud": {
       "brand": {
        "spend": 995.47,
-       "impr": 20839,
+       "impr": 20838,
        "clicks": 4266,
        "conv": 892.31,
        "revenue": 36900.71
       },
       "nonbrand": {
        "spend": 2631.02,
-       "impr": 281897,
+       "impr": 281898,
        "clicks": 5257,
        "conv": 287.57,
        "revenue": 11698.01
@@ -7175,16 +7259,16 @@
       "spend": 21471.48,
       "impr": 1452199,
       "clicks": 66229,
-      "conv": 11426.84,
-      "revenue": 487252.41
+      "conv": 11427.84,
+      "revenue": 487278.29
      },
      "aud": {
       "brand": {
        "spend": 5395.53,
        "impr": 148905,
        "clicks": 34416,
-       "conv": 8858.81,
-       "revenue": 367625.15
+       "conv": 8859.81,
+       "revenue": 367651.03
       },
       "nonbrand": {
        "spend": 16075.94,
@@ -7210,14 +7294,14 @@
      "aud": {
       "brand": {
        "spend": 4450.08,
-       "impr": 113332,
+       "impr": 113331,
        "clicks": 20878,
        "conv": 4736.48,
        "revenue": 196874.55
       },
       "nonbrand": {
        "spend": 14144.13,
-       "impr": 1560660,
+       "impr": 1560661,
        "clicks": 29202,
        "conv": 1749.82,
        "revenue": 76537.28
@@ -7237,6 +7321,18 @@
     "otras"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -8024,16 +8120,16 @@
      "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
      "label": "14-Sep · 16-Sep",
      "total": {
-      "spend": 1535.17,
-      "impr": 261285,
+      "spend": 1535.18,
+      "impr": 261286,
       "clicks": 1392,
       "conv": 644,
       "revenue": 23576.82
      },
      "aud": {
       "broad": {
-       "spend": 1535.17,
-       "impr": 261285,
+       "spend": 1535.18,
+       "impr": 261286,
        "clicks": 1392,
        "conv": 644,
        "revenue": 23576.82
@@ -8242,16 +8338,16 @@
      "parcial": true,
      "label": "Sep 2026",
      "total": {
-      "spend": 8288.39,
-      "impr": 1371316,
+      "spend": 8288.4,
+      "impr": 1371317,
       "clicks": 6648,
       "conv": 2362,
       "revenue": 79617
      },
      "aud": {
       "broad": {
-       "spend": 8166.17,
-       "impr": 1352673,
+       "spend": 8166.18,
+       "impr": 1352674,
        "clicks": 6580,
        "conv": 2357,
        "revenue": 79489.21
@@ -8281,6 +8377,18 @@
    "fuente": "Google Ads",
    "cols": [],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -8712,6 +8820,18 @@
     "comun"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -9235,8 +9355,8 @@
       "spend": 10782.69,
       "impr": 574112,
       "clicks": 26277,
-      "conv": 4211.74,
-      "revenue": 158974.83
+      "conv": 4212.74,
+      "revenue": 159000.71
      },
      "aud": {
       "rmk": {
@@ -9250,8 +9370,8 @@
        "spend": 10339.15,
        "impr": 572203,
        "clicks": 25822,
-       "conv": 4062.74,
-       "revenue": 154108.48
+       "conv": 4063.74,
+       "revenue": 154134.36
       }
      }
     },
@@ -9325,8 +9445,8 @@
       "spend": 12588.09,
       "impr": 1045273,
       "clicks": 32586,
-      "conv": 4214.35,
-      "revenue": 160497.7
+      "conv": 4215.36,
+      "revenue": 160510.53
      },
      "aud": {
       "rmk": {
@@ -9340,8 +9460,8 @@
        "spend": 12145.12,
        "impr": 1042805,
        "clicks": 32211,
-       "conv": 4107.35,
-       "revenue": 156473.7
+       "conv": 4108.36,
+       "revenue": 156486.53
       }
      }
     },
@@ -9502,8 +9622,8 @@
       "spend": 43736.49,
       "impr": 2495140,
       "clicks": 113338,
-      "conv": 18746.04,
-      "revenue": 709399.82
+      "conv": 18747.04,
+      "revenue": 709425.7
      },
      "aud": {
       "rmk": {
@@ -9517,8 +9637,8 @@
        "spend": 41939.08,
        "impr": 2486347,
        "clicks": 111258,
-       "conv": 18015.04,
-       "revenue": 686480.41
+       "conv": 18016.04,
+       "revenue": 686506.29
       }
      }
     },
@@ -9531,8 +9651,8 @@
       "spend": 28822.24,
       "impr": 2226183,
       "clicks": 72310,
-      "conv": 9527.53,
-      "revenue": 361922.06
+      "conv": 9528.54,
+      "revenue": 361934.89
      },
      "aud": {
       "rmk": {
@@ -9546,8 +9666,8 @@
        "spend": 27827.02,
        "impr": 2220702,
        "clicks": 71363,
-       "conv": 9240.53,
-       "revenue": 351704.92
+       "conv": 9241.54,
+       "revenue": 351717.75
       }
      }
     }
@@ -9563,6 +9683,18 @@
     "comun"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -10203,8 +10335,8 @@
      "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
      "label": "14-Sep · 16-Sep",
      "total": {
-      "spend": 1868.7,
-      "impr": 311232,
+      "spend": 1868.71,
+      "impr": 311233,
       "clicks": 1710,
       "conv": 798,
       "revenue": 28738.66
@@ -10218,8 +10350,8 @@
        "revenue": 5161.84
       },
       "comun": {
-       "spend": 1535.17,
-       "impr": 261285,
+       "spend": 1535.18,
+       "impr": 261286,
        "clicks": 1392,
        "conv": 644,
        "revenue": 23576.82
@@ -10379,8 +10511,8 @@
      "parcial": true,
      "label": "Sep 2026",
      "total": {
-      "spend": 10065.71,
-      "impr": 1621966,
+      "spend": 10065.72,
+      "impr": 1621967,
       "clicks": 8573,
       "conv": 3010,
       "revenue": 102485.57
@@ -10394,8 +10526,8 @@
        "revenue": 22868.57
       },
       "comun": {
-       "spend": 8288.39,
-       "impr": 1371316,
+       "spend": 8288.4,
+       "impr": 1371317,
        "clicks": 6648,
        "conv": 2362,
        "revenue": 79617
@@ -10414,6 +10546,18 @@
     "comun"
    ],
    "target": null,
+   "labels": {
+    "visitors": "Web visitors",
+    "menu": "Menu browsers",
+    "cart": "Cart abandoners",
+    "otras": "Otras",
+    "brand": "Brand",
+    "nonbrand": "NonBrand",
+    "broad": "Broad",
+    "lal": "LAL",
+    "rmk": "Remarketing",
+    "comun": "Comunes"
+   },
    "noData": false,
    "nota": null,
    "semanas": [
@@ -10937,8 +11081,8 @@
       "spend": 15380.98,
       "impr": 1483751,
       "clicks": 31740,
-      "conv": 4211.74,
-      "revenue": 158974.83
+      "conv": 4212.74,
+      "revenue": 159000.71
      },
      "aud": {
       "rmk": {
@@ -10952,8 +11096,8 @@
        "spend": 14188.01,
        "impr": 1380545,
        "clicks": 30304,
-       "conv": 4062.74,
-       "revenue": 154108.48
+       "conv": 4063.74,
+       "revenue": 154134.36
       }
      }
     },
@@ -11027,8 +11171,8 @@
       "spend": 17025.54,
       "impr": 1781396,
       "clicks": 36195,
-      "conv": 5651.35,
-      "revenue": 208014.58
+      "conv": 5652.36,
+      "revenue": 208027.41
      },
      "aud": {
       "rmk": {
@@ -11042,8 +11186,8 @@
        "spend": 15795.5,
        "impr": 1657999,
        "clicks": 35017,
-       "conv": 5236.35,
-       "revenue": 193129.28
+       "conv": 5237.36,
+       "revenue": 193142.11
       }
      }
     },
@@ -11054,8 +11198,8 @@
      "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
      "label": "14-Sep · 16-Sep",
      "total": {
-      "spend": 7302.87,
-      "impr": 700302,
+      "spend": 7302.88,
+      "impr": 700303,
       "clicks": 14446,
       "conv": 2401.74,
       "revenue": 88829.79
@@ -11069,8 +11213,8 @@
        "revenue": 5871.3
       },
       "comun": {
-       "spend": 6795.3,
-       "impr": 649654,
+       "spend": 6795.31,
+       "impr": 649655,
        "clicks": 13981,
        "conv": 2214.74,
        "revenue": 82958.49
@@ -11204,8 +11348,8 @@
       "spend": 65089.2,
       "impr": 6327371,
       "clicks": 136463,
-      "conv": 22862.04,
-      "revenue": 838989.23
+      "conv": 22863.04,
+      "revenue": 839015.11
      },
      "aud": {
       "rmk": {
@@ -11219,8 +11363,8 @@
        "spend": 59875.27,
        "impr": 5875439,
        "clicks": 129994,
-       "conv": 21326.04,
-       "revenue": 788647.56
+       "conv": 21327.04,
+       "revenue": 788673.44
       }
      }
     },
@@ -11230,11 +11374,11 @@
      "parcial": true,
      "label": "Sep 2026",
      "total": {
-      "spend": 38887.95,
-      "impr": 3848149,
+      "spend": 38887.96,
+      "impr": 3848150,
       "clicks": 80883,
-      "conv": 12537.53,
-      "revenue": 464407.63
+      "conv": 12538.54,
+      "revenue": 464420.46
      },
      "aud": {
       "rmk": {
@@ -11245,11 +11389,11 @@
        "revenue": 33085.71
       },
       "comun": {
-       "spend": 36115.41,
-       "impr": 3592018,
+       "spend": 36115.42,
+       "impr": 3592019,
        "clicks": 78011,
-       "conv": 11602.53,
-       "revenue": 431321.92
+       "conv": 11603.54,
+       "revenue": 431334.75
       }
      }
     }

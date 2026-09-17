@@ -161,7 +161,7 @@ function tabla(sec) {
   const conDatos = filas.filter((f) => f.total.spend > 0 || f.total.impr > 0);
   if (sec.noData) return '<div class="tbl-wrap"><div class="empty">' + sec.nota + '</div></div>';
   if (!conDatos.length) return '<div class="tbl-wrap"><div class="empty">Sin actividad en el per&iacute;odo.</div></div>';
-  const A = sec.cols.map((a) => '<th>' + DATA.colLabels[a] + '</th>').join('');
+  const A = sec.cols.map((a) => '<th>' + (sec.labels || DATA.colLabels)[a] + '</th>').join('');
   const primeras = VIEW === 'meses' ? 1 : 3;
   const anchoCost = 1 + sec.cols.length + (sec.target ? 1 : 0);
   const head1 = '<tr class="grp"><th class="lt" colspan="' + primeras + '"></th>'
