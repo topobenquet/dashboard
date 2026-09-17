@@ -30,6 +30,11 @@
   .tab{font-size:12px;font-weight:600;padding:7px 16px;border-radius:8px;border:1px solid var(--border);
     background:var(--card);color:var(--muted);cursor:pointer}
   .tab.on{background:var(--red);border-color:var(--red);color:#fff}
+  .grp-title{font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.6px;
+    margin:38px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;
+    align-items:center;justify-content:space-between;gap:12px}
+  .grp-title:first-of-type{margin-top:22px}
+  .grp-note{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:.4px;text-transform:none}
   .sec-title{font-size:15px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;
     margin:30px 0 10px;border-left:3px solid var(--red);padding-left:12px;display:flex;align-items:center;gap:10px}
   .pill{font-size:9px;font-weight:600;border-radius:4px;padding:2px 6px;letter-spacing:.5px;text-transform:none}
@@ -105,23 +110,31 @@ const roasCell = (t) => {
   if (r == null) return dash;
   return '<span class="' + (r >= 4 ? 'roas-hi' : r > 0 && r < 1 ? 'roas-lo' : '') + '">' + r.toFixed(2) + '</span>';
 };
+// % del spend que va a NonBrand, contra el piso que fija Juan.
+const nbCell = (f) => {
+  const b = f.aud.brand, nb = f.aud.nonbrand;
+  const d = b.spend + nb.spend;
+  if (!d) return dash;
+  const v = nb.spend / d;
+  return '<span class="' + (v >= DATA.nonbrandTarget ? 'roas-hi' : 'roas-lo') + '">' + (v * 100).toFixed(1) + '%</span>';
+};
 
-function suma(filas) {
+function suma(filas, cols) {
   const t = {spend:0, impr:0, clicks:0, conv:0, revenue:0};
   const aud = {};
-  for (const a of DATA.auds) aud[a] = {spend:0, impr:0, clicks:0, conv:0, revenue:0};
+  for (const a of cols) aud[a] = {spend:0, impr:0, clicks:0, conv:0, revenue:0};
   for (const f of filas) {
     for (const k in t) t[k] += f.total[k];
-    for (const a of DATA.auds) for (const k in t) aud[a][k] += f.aud[a][k];
+    for (const a of cols) for (const k in t) aud[a][k] += f.aud[a][k];
   }
   return {total:t, aud};
 }
 
-function fila(f, esTotal) {
-  const t = f.total, A = DATA.auds.map((a) => f.aud[a]);
+function fila(f, esTotal, sec) {
+  const t = f.total, A = sec.cols.map((a) => f.aud[a]);
   const cls = esTotal ? 'total' : (f.parcial ? 'parcial' : '');
   const cabecera = esTotal
-    ? (VIEW === 'meses' ? '<td class="lt" colspan="1">Total</td>' : '<td class="lt" colspan="3">Total ' + DATA.inicio + ' &rarr; ' + DATA.refDate + '</td>')
+    ? (VIEW === 'meses' ? '<td class="lt">Total</td>' : '<td class="lt" colspan="3">Total ' + DATA.inicio + ' &rarr; ' + DATA.refDate + '</td>')
     : (VIEW === 'meses'
         ? '<td class="lt">' + f.label + (f.parcial ? ' <span class="ciclo">(en curso)</span>' : '') + '</td>'
         : '<td class="lt ciclo">' + (f.ciclo || '') + '</td>'
@@ -130,6 +143,7 @@ function fila(f, esTotal) {
   const bloque = (fmt, sel) => '<td class="g">' + cell(sel(t), fmt) + '</td>' + A.map((x) => '<td class="sub">' + cell(sel(x), fmt) + '</td>').join('');
   return '<tr class="' + cls + '">' + cabecera
     + bloque(usd, (x) => x.spend)
+    + (sec.target ? '<td class="sub">' + nbCell(f) + '</td>' : '')
     + bloque(usd, (x) => x.revenue)
     + '<td class="g">' + roasCell(t) + '</td>' + A.map((x) => '<td class="sub">' + roasCell(x) + '</td>').join('')
     + '<td class="g">' + cell(aov(t), usd2) + '</td>'
@@ -147,30 +161,42 @@ function tabla(sec) {
   const conDatos = filas.filter((f) => f.total.spend > 0 || f.total.impr > 0);
   if (sec.noData) return '<div class="tbl-wrap"><div class="empty">' + sec.nota + '</div></div>';
   if (!conDatos.length) return '<div class="tbl-wrap"><div class="empty">Sin actividad en el per&iacute;odo.</div></div>';
-  const A = DATA.auds.map((a) => '<th>' + DATA.audLabels[a] + '</th>').join('');
+  const A = sec.cols.map((a) => '<th>' + DATA.colLabels[a] + '</th>').join('');
   const primeras = VIEW === 'meses' ? 1 : 3;
+  const anchoCost = 1 + sec.cols.length + (sec.target ? 1 : 0);
   const head1 = '<tr class="grp"><th class="lt" colspan="' + primeras + '"></th>'
-    + '<th class="g" colspan="4">Cost</th><th class="g" colspan="4">Revenue</th><th class="g" colspan="4">ROAS</th>'
+    + '<th class="g" colspan="' + anchoCost + '">Cost</th>'
+    + '<th class="g" colspan="' + (1 + sec.cols.length) + '">Revenue</th>'
+    + '<th class="g" colspan="' + (1 + sec.cols.length) + '">ROAS</th>'
     + '<th class="g" colspan="3">Orders</th><th class="g" colspan="4">Traffic</th></tr>';
   const head2 = '<tr>'
     + (VIEW === 'meses' ? '<th class="lt">Month</th>' : '<th class="lt">Campaign</th><th class="lt">Week start</th><th class="lt">Week end</th>')
-    + '<th class="g">Total</th>' + A + '<th class="g">Total</th>' + A + '<th class="g">Total</th>' + A
+    + '<th class="g">Total</th>' + A + (sec.target ? '<th>% NonBrand</th>' : '')
+    + '<th class="g">Total</th>' + A + '<th class="g">Total</th>' + A
     + '<th class="g">AOV</th><th>Orders</th><th>CPA</th>'
     + '<th class="g">Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr>';
-  const tot = suma(conDatos);
+  const tot = suma(conDatos, sec.cols);
   return '<div class="tbl-wrap"><table><thead>' + head1 + head2 + '</thead><tbody>'
-    + conDatos.map((f) => fila(f, false)).join('')
-    + fila({...tot, label:'Total', parcial:false}, true)
+    + conDatos.map((f) => fila(f, false, sec)).join('')
+    + fila({...tot, label:'Total', parcial:false}, true, sec)
     + '</tbody></table></div>';
 }
 
 function render() {
-  $('body').innerHTML = DATA.secciones.map((s) => {
+  let html = '', grupo = null;
+  for (const s of DATA.secciones) {
+    if (s.grupo !== grupo) {
+      grupo = s.grupo;
+      html += '<h2 class="grp-title">' + grupo
+        + (s.target ? '<span class="grp-note">piso NonBrand ' + Math.round(DATA.nonbrandTarget * 100) + '% del spend</span>' : '')
+        + '</h2>';
+    }
     const vivo = !s.noData;
-    return '<h2 class="sec-title">' + s.label.replace('Weekly ', '')
-      + '<span class="pill ' + (vivo ? 'live' : 'off') + '">' + (vivo ? s.fuente : 'sin conector') + '</span></h2>'
+    html += '<h3 class="sec-title">' + s.label
+      + '<span class="pill ' + (vivo ? 'live' : 'off') + '">' + (vivo ? s.fuente : 'sin conector') + '</span></h3>'
       + tabla(s);
-  }).join('');
+  }
+  $('body').innerHTML = html;
 }
 
 fetch('data.json?v=' + Date.now()).then((r) => r.json()).then((d) => {
@@ -181,9 +207,10 @@ fetch('data.json?v=' + Date.now()).then((r) => r.json()).then((d) => {
   src.push('<span class="src ' + (d.sources.google.ok ? 'ok' : 'warn') + '">Google Ads &middot; ' + (d.sources.google.ok ? 'vivo' : 'ca&iacute;do') + '</span>');
   src.push('<span class="src ' + (d.sources.meta.ok ? 'ok' : 'warn') + '">Meta Ads &middot; ' + (d.sources.meta.ok ? 'vivo' : 'parcial') + '</span>');
   src.push('<span class="src off">Apple Search Ads &middot; ' + d.sources.apple.error + '</span>');
+  if (d.sheetUrl) src.push('<a class="src ok" style="text-decoration:none" href="' + d.sheetUrl + '" target="_blank">Abrir en Google Sheets &rarr;</a>');
   $('sources').innerHTML = src.join('');
   $('footer').innerHTML = 'Semanas lunes a domingo; la &uacute;ltima va parcial (corta a ayer, d&iacute;as completos).<br>'
-    + 'Cost / Revenue / ROAS abiertos por audiencia de remarketing. Clicks de Meta = link clicks.<br>'
+    + 'Remarketing: Cost / Revenue / ROAS abiertos por audiencia. Clicks de Meta = link clicks.<br>'
     + 'Google reatribuye conversiones hacia atr&aacute;s: las semanas viejas pueden moverse respecto de la planilla original.';
   render();
 });
