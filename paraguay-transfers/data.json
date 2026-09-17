@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-16T10:21:01.664Z",
-  "lastSyncLabel": "16 Sep 2026",
+  "generated": "2026-09-17T10:21:03.612Z",
+  "lastSyncLabel": "17 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 164,
-      "reservas": 33,
-      "revenue": 10592,
+      "leads": 173,
+      "reservas": 34,
+      "revenue": 10641,
       "chofer": 4688,
       "comb": 622,
       "peajes": 115,
-      "comision": 221,
+      "comision": 222,
       "reembolsos": 13,
       "otros": 36,
-      "gAds": 191,
+      "gAds": 207,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,9 +207,9 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 191.18,
-      "clicks": 194,
-      "impr": 1181,
+      "spend": 206.53,
+      "clicks": 206,
+      "impr": 1220,
       "conv": 9
     }
   ],
@@ -3604,6 +3604,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "",
+      "cliente": "rafa acosta",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 48,
+      "fechaReserva": "16/09/26",
+      "fechaSalida": "03/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "ASU- FOZ Cataratas BR",
       "cliente": "Lee Delicata",
       "pais": "Inglaterra",
@@ -4069,7 +4083,7 @@
       "route": "FOZ-ASU",
       "cliente": "Isabela Zomer",
       "pais": "España",
-      "conductor": "Juan Vera CDE",
+      "conductor": "",
       "pago": 417,
       "sena": 100,
       "restante": 317,
@@ -4090,6 +4104,20 @@
       "choferCost": 0,
       "neto": 482,
       "fechaReserva": "13/09/26",
+      "fechaSalida": "22/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Pto Iguazu - ASU",
+      "cliente": "philip",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "12/09/26",
       "fechaSalida": "22/09/26"
     },
     {
@@ -4262,20 +4290,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "philip",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "12/09/26",
-      "fechaSalida": "22/10/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "Posadas - ASU",
       "cliente": "samuel pruczanski",
       "pais": "Argentina",
@@ -4389,7 +4403,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-16": 2,
+      "2026-09-17": 1,
+      "2026-09-16": 10,
       "2026-09-15": 16,
       "2026-09-14": 21,
       "2026-09-13": 6,
@@ -4445,6 +4460,7 @@
       "2026-09-02": 3,
       "2026-09-01": 7,
       "2026-09-03": 4,
+      "2026-09-16": 1,
       "2026-09-05": 1,
       "2026-09-07": 2,
       "2026-09-08": 3,
@@ -4452,9 +4468,9 @@
       "2026-09-14": 2,
       "2026-09-15": 1,
       "2026-09-13": 1,
+      "2026-09-12": 1,
       "2026-09-04": 2,
-      "2026-09-09": 3,
-      "2026-09-12": 1
+      "2026-09-09": 3
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -4702,12 +4718,13 @@
       "2026-09-13": 7.81,
       "2026-09-14": 9.11,
       "2026-09-15": 15.45,
-      "2026-09-16": 0
+      "2026-09-16": 15.35
     }
   },
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-09-17": 1,
       "2026-09-15": 9,
       "2026-09-14": 5,
       "2026-09-13": 2,
@@ -4741,7 +4758,7 @@
       "2026-08-02": 2
     },
     "monthly": {
-      "Septiembre": 62,
+      "Septiembre": 63,
       "Agosto": 27
     }
   }
