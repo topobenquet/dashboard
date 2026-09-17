@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T11:10:27.865Z",
+ "generated": "2026-09-17T13:10:24.913Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -15,8 +15,8 @@
    "combustible": "diésel",
    "precioDefault": 10400,
    "rendDefault": 10,
-   "precioL": 10450,
-   "precioFuente": "última carga con litros (13/09)",
+   "precioL": 10400,
+   "precioFuente": "última carga con litros (17/09)",
    "rend": 8.3,
    "rendFuente": "medido en 1 tanque(s) lleno a lleno",
    "tramos": [
@@ -28,8 +28,8 @@
      "rend": 8.3
     }
    ],
-   "gsKm": 1259,
-   "ultimoKm": 95542
+   "gsKm": 1253,
+   "ultimoKm": 95564
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -48,9 +48,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 2538,
-   "kmFuera": 92,
+   "kmFuera": 114,
    "viajes": 6,
-   "costoComb": 3311170,
+   "costoComb": 3322956,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 20,
-   "conFoto": 20
+   "lecturas": 22,
+   "conFoto": 22
   },
   {
    "chofer": "Gustavo",
@@ -79,6 +79,40 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-17",
+   "fechaFin": "2026-09-17",
+   "horaIni": "09:41",
+   "horaFin": null,
+   "kmIni": 95564,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.9,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehiculo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": 500000,
+   "combustibleCorresponde": null,
+   "cargas": [
+    {
+     "fecha": "2026-09-17",
+     "gs": 500000,
+     "litros": 48.08
+    }
+   ],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": true
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -100,7 +134,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 85612,
+   "combustibleCorresponde": 85204,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -128,7 +162,7 @@
    "desvio": 0.009,
    "combustiblePagado": 800000,
    "combustibleCargado": 800000,
-   "combustibleCorresponde": 953063,
+   "combustibleCorresponde": 948521,
    "cargas": [
     {
      "fecha": "2026-09-13",
@@ -167,7 +201,7 @@
    "desvio": 0.175,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 59173,
+   "combustibleCorresponde": 58891,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -195,7 +229,7 @@
    "desvio": 0.036,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 143526,
+   "combustibleCorresponde": 142842,
    "cargas": [],
    "faltanFotos": [
     94597
@@ -225,7 +259,7 @@
    "desvio": 0.001,
    "combustiblePagado": 728000,
    "combustibleCargado": 728008,
-   "combustibleCorresponde": 869969,
+   "combustibleCorresponde": 865823,
    "cargas": [
     {
      "fecha": "2026-09-07",
@@ -270,7 +304,7 @@
    "desvio": 0.148,
    "combustiblePagado": 800000,
    "combustibleCargado": 610000,
-   "combustibleCorresponde": 1083999,
+   "combustibleCorresponde": 1078833,
    "cargas": [
     {
      "fecha": "2026-09-04",
@@ -304,7 +338,7 @@
    "desvio": -0.012,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 858638,
+   "combustibleCorresponde": 854546,
    "cargas": [],
    "faltanFotos": [
     92230,
@@ -335,7 +369,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 115828,
+   "combustibleCorresponde": 115276,
    "cargas": [],
    "faltanFotos": [
     92116
@@ -363,7 +397,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 1070150,
+   "combustibleCorresponde": 1065050,
    "cargas": [],
    "faltanFotos": [
     91154,
@@ -376,6 +410,28 @@
   }
  ],
  "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 95562,
+   "hasta": 95564,
+   "km": 2,
+   "fechaDesde": "2026-09-17",
+   "fechaHasta": "2026-09-17",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 95542,
+   "hasta": 95562,
+   "km": 20,
+   "fechaDesde": "2026-09-16",
+   "fechaHasta": "2026-09-17",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
   {
    "vehiculo": "H1",
    "desde": 95450,
@@ -483,6 +539,17 @@
   }
  ],
  "cargas": [
+  {
+   "fecha": "2026-09-17",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 500000,
+   "litros": 48.08,
+   "precioL": 10400,
+   "odo": 95562
+  },
   {
    "fecha": "2026-09-13",
    "grupo": "Alfredo",
@@ -627,7 +694,7 @@
    "vehiculo": "H1",
    "ruta": "Foz-Asu",
    "km": 690,
-   "adelanto": 956000
+   "adelanto": 951000
   },
   {
    "fecha": "2026-10-18",
@@ -635,7 +702,7 @@
    "vehiculo": "H1",
    "ruta": "Asu-Foz",
    "km": 690,
-   "adelanto": 956000
+   "adelanto": 951000
   }
  ],
  "alertas": [
