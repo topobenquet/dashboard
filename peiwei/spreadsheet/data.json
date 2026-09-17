@@ -1,0 +1,5292 @@
+{
+ "generatedAt": "2026-09-17T22:00:54.238Z",
+ "refDate": "2026-09-16",
+ "lastSyncLabel": "Sep 16, 2026",
+ "inicio": "2026-04-20",
+ "auds": [
+  "visitors",
+  "menu",
+  "cart"
+ ],
+ "audLabels": {
+  "visitors": "Web visitors",
+  "menu": "Menu browsers",
+  "cart": "Cart abandoners"
+ },
+ "ciclos": [
+  {
+   "desde": "2026-04-20",
+   "hasta": "2026-05-03",
+   "label": "Campaign 1 (free app & free entree)"
+  },
+  {
+   "desde": "2026-05-04",
+   "hasta": "2026-05-17",
+   "label": "Campaign 2 (25% off, 50% off)"
+  },
+  {
+   "desde": "2026-05-18",
+   "hasta": "2026-05-31",
+   "label": "Campaign 3 (no offer)"
+  },
+  {
+   "desde": "2026-06-01",
+   "hasta": "2026-06-14",
+   "label": "Campaign 4 (free app & entree)"
+  },
+  {
+   "desde": "2026-06-15",
+   "hasta": "2026-07-05",
+   "label": "Campaign 5 (no offer desde 6/19)"
+  },
+  {
+   "desde": "2026-07-06",
+   "hasta": "2026-07-19",
+   "label": "Campaign 6 ($9.99, BOGO 50)"
+  },
+  {
+   "desde": "2026-07-20",
+   "hasta": "2026-08-02",
+   "label": "Campaign 7 (no offer)"
+  },
+  {
+   "desde": "2026-08-03",
+   "hasta": "2026-09-15",
+   "label": "Campaign 8 (free app & entree)"
+  },
+  {
+   "desde": "2026-09-16",
+   "hasta": "2026-11-19",
+   "label": "RMK 9 (no offer)"
+  }
+ ],
+ "sources": {
+  "google": {
+   "ok": true,
+   "asOf": "2026-09-16"
+  },
+  "meta": {
+   "ok": true,
+   "asOf": "2026-09-16",
+   "meses": {
+    "2026-04-01": "cache",
+    "2026-05-01": "cache",
+    "2026-06-01": "cache",
+    "2026-07-01": "cache",
+    "2026-08-01": "live",
+    "2026-09-01": "live"
+   }
+  },
+  "apple": {
+   "ok": false,
+   "error": "sin credenciales de la Apple Ads API"
+  }
+ },
+ "secciones": [
+  {
+   "key": "display",
+   "label": "Weekly Display",
+   "fuente": "Google Ads",
+   "noData": false,
+   "nota": null,
+   "semanas": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-26",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "20-Apr · 26-Apr",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-04-27",
+     "hasta": "2026-05-03",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "27-Apr · 3-May",
+     "total": {
+      "spend": 0.01,
+      "impr": 3,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0.01,
+       "impr": 3,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-04",
+     "hasta": "2026-05-10",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "4-May · 10-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-11",
+     "hasta": "2026-05-17",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "11-May · 17-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-18",
+     "hasta": "2026-05-24",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "18-May · 24-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-25",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "25-May · 31-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-07",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "1-Jun · 7-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-08",
+     "hasta": "2026-06-14",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "8-Jun · 14-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-15",
+     "hasta": "2026-06-21",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "15-Jun · 21-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-22",
+     "hasta": "2026-06-28",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "22-Jun · 28-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-29",
+     "hasta": "2026-07-05",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "29-Jun · 5-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-06",
+     "hasta": "2026-07-12",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "6-Jul · 12-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-13",
+     "hasta": "2026-07-19",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "13-Jul · 19-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-20",
+     "hasta": "2026-07-26",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "20-Jul · 26-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-27",
+     "hasta": "2026-08-02",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "27-Jul · 2-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-03",
+     "hasta": "2026-08-09",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "3-Aug · 9-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-10",
+     "hasta": "2026-08-16",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "10-Aug · 16-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-17",
+     "hasta": "2026-08-23",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "17-Aug · 23-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-24",
+     "hasta": "2026-08-30",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "24-Aug · 30-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-31",
+     "hasta": "2026-09-06",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "31-Aug · 6-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-07",
+     "hasta": "2026-09-13",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "7-Sep · 13-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-14",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
+     "label": "14-Sep · 16-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ],
+   "meses": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-30",
+     "parcial": false,
+     "label": "Apr 2026",
+     "total": {
+      "spend": 0,
+      "impr": 1,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 1,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-01",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "label": "May 2026",
+     "total": {
+      "spend": 0.01,
+      "impr": 2,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0.01,
+       "impr": 2,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-30",
+     "parcial": false,
+     "label": "Jun 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-01",
+     "hasta": "2026-07-31",
+     "parcial": false,
+     "label": "Jul 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-01",
+     "hasta": "2026-08-31",
+     "parcial": false,
+     "label": "Aug 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-01",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "label": "Sep 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "demandgen",
+   "label": "Weekly Demand Gen",
+   "fuente": "Google Ads",
+   "noData": false,
+   "nota": null,
+   "semanas": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-26",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "20-Apr · 26-Apr",
+     "total": {
+      "spend": 237.43,
+      "impr": 11170,
+      "clicks": 211,
+      "conv": 1.34,
+      "revenue": 51.43
+     },
+     "aud": {
+      "visitors": {
+       "spend": 80.1,
+       "impr": 6962,
+       "clicks": 141,
+       "conv": 1.07,
+       "revenue": 37.46
+      },
+      "menu": {
+       "spend": 78.66,
+       "impr": 2322,
+       "clicks": 46,
+       "conv": 0.21,
+       "revenue": 10.51
+      },
+      "cart": {
+       "spend": 78.67,
+       "impr": 1886,
+       "clicks": 24,
+       "conv": 0.06,
+       "revenue": 3.45
+      }
+     }
+    },
+    {
+     "desde": "2026-04-27",
+     "hasta": "2026-05-03",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "27-Apr · 3-May",
+     "total": {
+      "spend": 251.89,
+      "impr": 12672,
+      "clicks": 209,
+      "conv": 4.88,
+      "revenue": 158.67
+     },
+     "aud": {
+      "visitors": {
+       "spend": 87.12,
+       "impr": 6300,
+       "clicks": 106,
+       "conv": 1,
+       "revenue": 28.98
+      },
+      "menu": {
+       "spend": 79.56,
+       "impr": 3605,
+       "clicks": 67,
+       "conv": 0,
+       "revenue": 0.09
+      },
+      "cart": {
+       "spend": 85.22,
+       "impr": 2767,
+       "clicks": 36,
+       "conv": 3.88,
+       "revenue": 129.6
+      }
+     }
+    },
+    {
+     "desde": "2026-05-04",
+     "hasta": "2026-05-10",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "4-May · 10-May",
+     "total": {
+      "spend": 229.72,
+      "impr": 12800,
+      "clicks": 179,
+      "conv": 1.32,
+      "revenue": 53.54
+     },
+     "aud": {
+      "visitors": {
+       "spend": 76.37,
+       "impr": 6464,
+       "clicks": 88,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 79.66,
+       "impr": 4243,
+       "clicks": 50,
+       "conv": 1.19,
+       "revenue": 50.68
+      },
+      "cart": {
+       "spend": 73.7,
+       "impr": 2093,
+       "clicks": 41,
+       "conv": 0.13,
+       "revenue": 2.86
+      }
+     }
+    },
+    {
+     "desde": "2026-05-11",
+     "hasta": "2026-05-17",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "11-May · 17-May",
+     "total": {
+      "spend": 44.29,
+      "impr": 2276,
+      "clicks": 34,
+      "conv": 1,
+      "revenue": 42.55
+     },
+     "aud": {
+      "visitors": {
+       "spend": 15.16,
+       "impr": 950,
+       "clicks": 15,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 12.48,
+       "impr": 916,
+       "clicks": 10,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 16.64,
+       "impr": 410,
+       "clicks": 9,
+       "conv": 1,
+       "revenue": 42.55
+      }
+     }
+    },
+    {
+     "desde": "2026-05-18",
+     "hasta": "2026-05-24",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "18-May · 24-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-25",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "25-May · 31-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-07",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "1-Jun · 7-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-08",
+     "hasta": "2026-06-14",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "8-Jun · 14-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-15",
+     "hasta": "2026-06-21",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "15-Jun · 21-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-22",
+     "hasta": "2026-06-28",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "22-Jun · 28-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-29",
+     "hasta": "2026-07-05",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "29-Jun · 5-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-06",
+     "hasta": "2026-07-12",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "6-Jul · 12-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-13",
+     "hasta": "2026-07-19",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "13-Jul · 19-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-20",
+     "hasta": "2026-07-26",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "20-Jul · 26-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-27",
+     "hasta": "2026-08-02",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "27-Jul · 2-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-03",
+     "hasta": "2026-08-09",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "3-Aug · 9-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-10",
+     "hasta": "2026-08-16",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "10-Aug · 16-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-17",
+     "hasta": "2026-08-23",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "17-Aug · 23-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-24",
+     "hasta": "2026-08-30",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "24-Aug · 30-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-31",
+     "hasta": "2026-09-06",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "31-Aug · 6-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-07",
+     "hasta": "2026-09-13",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "7-Sep · 13-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-14",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
+     "label": "14-Sep · 16-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ],
+   "meses": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-30",
+     "parcial": false,
+     "label": "Apr 2026",
+     "total": {
+      "spend": 362.8,
+      "impr": 18606,
+      "clicks": 325,
+      "conv": 3.27,
+      "revenue": 110.68
+     },
+     "aud": {
+      "visitors": {
+       "spend": 121.32,
+       "impr": 10625,
+       "clicks": 200,
+       "conv": 2.07,
+       "revenue": 66.44
+      },
+      "menu": {
+       "spend": 121.12,
+       "impr": 4357,
+       "clicks": 82,
+       "conv": 0.21,
+       "revenue": 10.6
+      },
+      "cart": {
+       "spend": 120.36,
+       "impr": 3624,
+       "clicks": 43,
+       "conv": 1,
+       "revenue": 33.63
+      }
+     }
+    },
+    {
+     "desde": "2026-05-01",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "label": "May 2026",
+     "total": {
+      "spend": 400.52,
+      "impr": 20312,
+      "clicks": 308,
+      "conv": 5.27,
+      "revenue": 195.52
+     },
+     "aud": {
+      "visitors": {
+       "spend": 137.42,
+       "impr": 10051,
+       "clicks": 150,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 129.24,
+       "impr": 6729,
+       "clicks": 91,
+       "conv": 1.19,
+       "revenue": 50.68
+      },
+      "cart": {
+       "spend": 133.87,
+       "impr": 3532,
+       "clicks": 67,
+       "conv": 4.08,
+       "revenue": 144.83
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-30",
+     "parcial": false,
+     "label": "Jun 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-01",
+     "hasta": "2026-07-31",
+     "parcial": false,
+     "label": "Jul 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-01",
+     "hasta": "2026-08-31",
+     "parcial": false,
+     "label": "Aug 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-01",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "label": "Sep 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "social",
+   "label": "Weekly Social",
+   "fuente": "Meta Ads",
+   "noData": false,
+   "nota": null,
+   "semanas": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-26",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "20-Apr · 26-Apr",
+     "total": {
+      "spend": 659.29,
+      "impr": 68162,
+      "clicks": 1174,
+      "conv": 306,
+      "revenue": 9941.13
+     },
+     "aud": {
+      "visitors": {
+       "spend": 261.16,
+       "impr": 30311,
+       "clicks": 477,
+       "conv": 74,
+       "revenue": 2216.42
+      },
+      "menu": {
+       "spend": 247.47,
+       "impr": 25047,
+       "clicks": 511,
+       "conv": 173,
+       "revenue": 5675.26
+      },
+      "cart": {
+       "spend": 150.66,
+       "impr": 12804,
+       "clicks": 186,
+       "conv": 59,
+       "revenue": 2049.45
+      }
+     }
+    },
+    {
+     "desde": "2026-04-27",
+     "hasta": "2026-05-03",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "27-Apr · 3-May",
+     "total": {
+      "spend": 1044.64,
+      "impr": 132844,
+      "clicks": 2199,
+      "conv": 478,
+      "revenue": 15758.83
+     },
+     "aud": {
+      "visitors": {
+       "spend": 346.79,
+       "impr": 51851,
+       "clicks": 1037,
+       "conv": 105,
+       "revenue": 4205.72
+      },
+      "menu": {
+       "spend": 481.81,
+       "impr": 52268,
+       "clicks": 748,
+       "conv": 280,
+       "revenue": 8569.32
+      },
+      "cart": {
+       "spend": 216.04,
+       "impr": 28725,
+       "clicks": 414,
+       "conv": 93,
+       "revenue": 2983.79
+      }
+     }
+    },
+    {
+     "desde": "2026-05-04",
+     "hasta": "2026-05-10",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "4-May · 10-May",
+     "total": {
+      "spend": 1319.94,
+      "impr": 165981,
+      "clicks": 2552,
+      "conv": 438,
+      "revenue": 13454.82
+     },
+     "aud": {
+      "visitors": {
+       "spend": 344.19,
+       "impr": 45446,
+       "clicks": 1306,
+       "conv": 64,
+       "revenue": 2453.57
+      },
+      "menu": {
+       "spend": 686.1,
+       "impr": 84362,
+       "clicks": 649,
+       "conv": 282,
+       "revenue": 7926.08
+      },
+      "cart": {
+       "spend": 289.65,
+       "impr": 36173,
+       "clicks": 597,
+       "conv": 92,
+       "revenue": 3075.17
+      }
+     }
+    },
+    {
+     "desde": "2026-05-11",
+     "hasta": "2026-05-17",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "11-May · 17-May",
+     "total": {
+      "spend": 159.02,
+      "impr": 20370,
+      "clicks": 426,
+      "conv": 97,
+      "revenue": 3291.32
+     },
+     "aud": {
+      "visitors": {
+       "spend": 40,
+       "impr": 4685,
+       "clicks": 237,
+       "conv": 17,
+       "revenue": 872.23
+      },
+      "menu": {
+       "spend": 80.74,
+       "impr": 11070,
+       "clicks": 86,
+       "conv": 57,
+       "revenue": 1689.26
+      },
+      "cart": {
+       "spend": 38.28,
+       "impr": 4615,
+       "clicks": 103,
+       "conv": 23,
+       "revenue": 729.83
+      }
+     }
+    },
+    {
+     "desde": "2026-05-18",
+     "hasta": "2026-05-24",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "18-May · 24-May",
+     "total": {
+      "spend": 20.4,
+      "impr": 3749,
+      "clicks": 53,
+      "conv": 19,
+      "revenue": 563.82
+     },
+     "aud": {
+      "visitors": {
+       "spend": 6.78,
+       "impr": 1269,
+       "clicks": 20,
+       "conv": 8,
+       "revenue": 207.37
+      },
+      "menu": {
+       "spend": 6.77,
+       "impr": 910,
+       "clicks": 13,
+       "conv": 3,
+       "revenue": 81.82
+      },
+      "cart": {
+       "spend": 6.85,
+       "impr": 1570,
+       "clicks": 20,
+       "conv": 8,
+       "revenue": 274.63
+      }
+     }
+    },
+    {
+     "desde": "2026-05-25",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "25-May · 31-May",
+     "total": {
+      "spend": 516.67,
+      "impr": 79760,
+      "clicks": 1029,
+      "conv": 343,
+      "revenue": 12631.26
+     },
+     "aud": {
+      "visitors": {
+       "spend": 170.89,
+       "impr": 27007,
+       "clicks": 326,
+       "conv": 66,
+       "revenue": 1966.9
+      },
+      "menu": {
+       "spend": 173.43,
+       "impr": 24325,
+       "clicks": 463,
+       "conv": 182,
+       "revenue": 6886.6
+      },
+      "cart": {
+       "spend": 172.35,
+       "impr": 28428,
+       "clicks": 240,
+       "conv": 95,
+       "revenue": 3777.76
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-07",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "1-Jun · 7-Jun",
+     "total": {
+      "spend": 402.03,
+      "impr": 46791,
+      "clicks": 1007,
+      "conv": 273,
+      "revenue": 8415
+     },
+     "aud": {
+      "visitors": {
+       "spend": 181.28,
+       "impr": 24396,
+       "clicks": 459,
+       "conv": 69,
+       "revenue": 2694.52
+      },
+      "menu": {
+       "spend": 122.77,
+       "impr": 12030,
+       "clicks": 356,
+       "conv": 151,
+       "revenue": 4457.93
+      },
+      "cart": {
+       "spend": 97.98,
+       "impr": 10365,
+       "clicks": 192,
+       "conv": 53,
+       "revenue": 1262.55
+      }
+     }
+    },
+    {
+     "desde": "2026-06-08",
+     "hasta": "2026-06-14",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "8-Jun · 14-Jun",
+     "total": {
+      "spend": 347.19,
+      "impr": 46036,
+      "clicks": 1009,
+      "conv": 217,
+      "revenue": 6148.16
+     },
+     "aud": {
+      "visitors": {
+       "spend": 173.33,
+       "impr": 27313,
+       "clicks": 571,
+       "conv": 74,
+       "revenue": 2173.82
+      },
+      "menu": {
+       "spend": 105.87,
+       "impr": 11075,
+       "clicks": 251,
+       "conv": 111,
+       "revenue": 3115.65
+      },
+      "cart": {
+       "spend": 67.99,
+       "impr": 7648,
+       "clicks": 187,
+       "conv": 32,
+       "revenue": 858.69
+      }
+     }
+    },
+    {
+     "desde": "2026-06-15",
+     "hasta": "2026-06-21",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "15-Jun · 21-Jun",
+     "total": {
+      "spend": 610.45,
+      "impr": 96664,
+      "clicks": 1285,
+      "conv": 260,
+      "revenue": 8787.03
+     },
+     "aud": {
+      "visitors": {
+       "spend": 258.17,
+       "impr": 44831,
+       "clicks": 635,
+       "conv": 56,
+       "revenue": 2304.93
+      },
+      "menu": {
+       "spend": 222.97,
+       "impr": 31122,
+       "clicks": 381,
+       "conv": 148,
+       "revenue": 4602.36
+      },
+      "cart": {
+       "spend": 129.31,
+       "impr": 20711,
+       "clicks": 269,
+       "conv": 56,
+       "revenue": 1879.74
+      }
+     }
+    },
+    {
+     "desde": "2026-06-22",
+     "hasta": "2026-06-28",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "22-Jun · 28-Jun",
+     "total": {
+      "spend": 298.23,
+      "impr": 51366,
+      "clicks": 698,
+      "conv": 155,
+      "revenue": 4677.8
+     },
+     "aud": {
+      "visitors": {
+       "spend": 142.16,
+       "impr": 25563,
+       "clicks": 507,
+       "conv": 23,
+       "revenue": 628.98
+      },
+      "menu": {
+       "spend": 101.19,
+       "impr": 18173,
+       "clicks": 102,
+       "conv": 100,
+       "revenue": 2983.56
+      },
+      "cart": {
+       "spend": 54.88,
+       "impr": 7630,
+       "clicks": 89,
+       "conv": 32,
+       "revenue": 1065.26
+      }
+     }
+    },
+    {
+     "desde": "2026-06-29",
+     "hasta": "2026-07-05",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "29-Jun · 5-Jul",
+     "total": {
+      "spend": 95.07,
+      "impr": 13875,
+      "clicks": 94,
+      "conv": 71,
+      "revenue": 2069.35
+     },
+     "aud": {
+      "visitors": {
+       "spend": 13.33,
+       "impr": 2217,
+       "clicks": 34,
+       "conv": 8,
+       "revenue": 307.03
+      },
+      "menu": {
+       "spend": 54.77,
+       "impr": 8091,
+       "clicks": 38,
+       "conv": 35,
+       "revenue": 815.29
+      },
+      "cart": {
+       "spend": 26.97,
+       "impr": 3567,
+       "clicks": 22,
+       "conv": 28,
+       "revenue": 947.03
+      }
+     }
+    },
+    {
+     "desde": "2026-07-06",
+     "hasta": "2026-07-12",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "6-Jul · 12-Jul",
+     "total": {
+      "spend": 419.66,
+      "impr": 66787,
+      "clicks": 757,
+      "conv": 246,
+      "revenue": 7486.99
+     },
+     "aud": {
+      "visitors": {
+       "spend": 169.77,
+       "impr": 31814,
+       "clicks": 281,
+       "conv": 62,
+       "revenue": 2268.21
+      },
+      "menu": {
+       "spend": 143.88,
+       "impr": 19573,
+       "clicks": 213,
+       "conv": 135,
+       "revenue": 3468.83
+      },
+      "cart": {
+       "spend": 106.01,
+       "impr": 15400,
+       "clicks": 263,
+       "conv": 49,
+       "revenue": 1749.95
+      }
+     }
+    },
+    {
+     "desde": "2026-07-13",
+     "hasta": "2026-07-19",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "13-Jul · 19-Jul",
+     "total": {
+      "spend": 582.3,
+      "impr": 107666,
+      "clicks": 935,
+      "conv": 397,
+      "revenue": 13473.33
+     },
+     "aud": {
+      "visitors": {
+       "spend": 224.95,
+       "impr": 53267,
+       "clicks": 338,
+       "conv": 123,
+       "revenue": 5118.67
+      },
+      "menu": {
+       "spend": 195.32,
+       "impr": 30793,
+       "clicks": 279,
+       "conv": 189,
+       "revenue": 5531.55
+      },
+      "cart": {
+       "spend": 162.03,
+       "impr": 23606,
+       "clicks": 318,
+       "conv": 85,
+       "revenue": 2823.11
+      }
+     }
+    },
+    {
+     "desde": "2026-07-20",
+     "hasta": "2026-07-26",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "20-Jul · 26-Jul",
+     "total": {
+      "spend": 618.83,
+      "impr": 93041,
+      "clicks": 963,
+      "conv": 274,
+      "revenue": 9265.05
+     },
+     "aud": {
+      "visitors": {
+       "spend": 244.6,
+       "impr": 48882,
+       "clicks": 517,
+       "conv": 95,
+       "revenue": 3744.83
+      },
+      "menu": {
+       "spend": 201.37,
+       "impr": 22538,
+       "clicks": 159,
+       "conv": 93,
+       "revenue": 2634.29
+      },
+      "cart": {
+       "spend": 172.86,
+       "impr": 21621,
+       "clicks": 287,
+       "conv": 86,
+       "revenue": 2885.93
+      }
+     }
+    },
+    {
+     "desde": "2026-07-27",
+     "hasta": "2026-08-02",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "27-Jul · 2-Aug",
+     "total": {
+      "spend": 237.01,
+      "impr": 35306,
+      "clicks": 389,
+      "conv": 143,
+      "revenue": 4980.64
+     },
+     "aud": {
+      "visitors": {
+       "spend": 117.33,
+       "impr": 21820,
+       "clicks": 307,
+       "conv": 34,
+       "revenue": 1140.76
+      },
+      "menu": {
+       "spend": 80.2,
+       "impr": 9758,
+       "clicks": 39,
+       "conv": 59,
+       "revenue": 1558.19
+      },
+      "cart": {
+       "spend": 39.48,
+       "impr": 3728,
+       "clicks": 43,
+       "conv": 50,
+       "revenue": 2281.69
+      }
+     }
+    },
+    {
+     "desde": "2026-08-03",
+     "hasta": "2026-08-09",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "3-Aug · 9-Aug",
+     "total": {
+      "spend": 400.69,
+      "impr": 59498,
+      "clicks": 550,
+      "conv": 253,
+      "revenue": 8796.86
+     },
+     "aud": {
+      "visitors": {
+       "spend": 187.72,
+       "impr": 34185,
+       "clicks": 316,
+       "conv": 50,
+       "revenue": 1973.49
+      },
+      "menu": {
+       "spend": 125.52,
+       "impr": 14810,
+       "clicks": 70,
+       "conv": 126,
+       "revenue": 4341.29
+      },
+      "cart": {
+       "spend": 87.45,
+       "impr": 10503,
+       "clicks": 164,
+       "conv": 77,
+       "revenue": 2482.08
+      }
+     }
+    },
+    {
+     "desde": "2026-08-10",
+     "hasta": "2026-08-16",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "10-Aug · 16-Aug",
+     "total": {
+      "spend": 403.73,
+      "impr": 60801,
+      "clicks": 745,
+      "conv": 65,
+      "revenue": 2281.82
+     },
+     "aud": {
+      "visitors": {
+       "spend": 200.31,
+       "impr": 34778,
+       "clicks": 463,
+       "conv": 20,
+       "revenue": 528.97
+      },
+      "menu": {
+       "spend": 125.84,
+       "impr": 14787,
+       "clicks": 103,
+       "conv": 26,
+       "revenue": 1020.3
+      },
+      "cart": {
+       "spend": 77.58,
+       "impr": 11236,
+       "clicks": 179,
+       "conv": 19,
+       "revenue": 732.55
+      }
+     }
+    },
+    {
+     "desde": "2026-08-17",
+     "hasta": "2026-08-23",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "17-Aug · 23-Aug",
+     "total": {
+      "spend": 384.38,
+      "impr": 56491,
+      "clicks": 695,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 189.45,
+       "impr": 27334,
+       "clicks": 483,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 120.5,
+       "impr": 13119,
+       "clicks": 88,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 74.43,
+       "impr": 16038,
+       "clicks": 124,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-24",
+     "hasta": "2026-08-30",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "24-Aug · 30-Aug",
+     "total": {
+      "spend": 408.35,
+      "impr": 41608,
+      "clicks": 384,
+      "conv": 85,
+      "revenue": 3553.66
+     },
+     "aud": {
+      "visitors": {
+       "spend": 216.95,
+       "impr": 23413,
+       "clicks": 194,
+       "conv": 22,
+       "revenue": 1192.68
+      },
+      "menu": {
+       "spend": 107.94,
+       "impr": 9533,
+       "clicks": 94,
+       "conv": 54,
+       "revenue": 1993.06
+      },
+      "cart": {
+       "spend": 83.46,
+       "impr": 8662,
+       "clicks": 96,
+       "conv": 9,
+       "revenue": 367.92
+      }
+     }
+    },
+    {
+     "desde": "2026-08-31",
+     "hasta": "2026-09-06",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "31-Aug · 6-Sep",
+     "total": {
+      "spend": 463.88,
+      "impr": 45924,
+      "clicks": 744,
+      "conv": 137,
+      "revenue": 5243.68
+     },
+     "aud": {
+      "visitors": {
+       "spend": 235.36,
+       "impr": 23069,
+       "clicks": 312,
+       "conv": 41,
+       "revenue": 1524.82
+      },
+      "menu": {
+       "spend": 134.35,
+       "impr": 13966,
+       "clicks": 110,
+       "conv": 65,
+       "revenue": 2599.35
+      },
+      "cart": {
+       "spend": 94.17,
+       "impr": 8889,
+       "clicks": 322,
+       "conv": 31,
+       "revenue": 1119.51
+      }
+     }
+    },
+    {
+     "desde": "2026-09-07",
+     "hasta": "2026-09-13",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "7-Sep · 13-Sep",
+     "total": {
+      "spend": 419.42,
+      "impr": 45495,
+      "clicks": 554,
+      "conv": 167,
+      "revenue": 5848.74
+     },
+     "aud": {
+      "visitors": {
+       "spend": 210.13,
+       "impr": 22027,
+       "clicks": 276,
+       "conv": 61,
+       "revenue": 2262.68
+      },
+      "menu": {
+       "spend": 125.65,
+       "impr": 14989,
+       "clicks": 115,
+       "conv": 74,
+       "revenue": 2337.9
+      },
+      "cart": {
+       "spend": 83.64,
+       "impr": 8479,
+       "clicks": 163,
+       "conv": 32,
+       "revenue": 1248.16
+      }
+     }
+    },
+    {
+     "desde": "2026-09-14",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
+     "label": "14-Sep · 16-Sep",
+     "total": {
+      "spend": 176.8,
+      "impr": 19105,
+      "clicks": 213,
+      "conv": 86,
+      "revenue": 3303.34
+     },
+     "aud": {
+      "visitors": {
+       "spend": 93.06,
+       "impr": 9810,
+       "clicks": 133,
+       "conv": 30,
+       "revenue": 1168.05
+      },
+      "menu": {
+       "spend": 53.21,
+       "impr": 5889,
+       "clicks": 30,
+       "conv": 37,
+       "revenue": 969.9
+      },
+      "cart": {
+       "spend": 30.53,
+       "impr": 3406,
+       "clicks": 50,
+       "conv": 19,
+       "revenue": 1165.39
+      }
+     }
+    }
+   ],
+   "meses": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-30",
+     "parcial": false,
+     "label": "Apr 2026",
+     "total": {
+      "spend": 1161.65,
+      "impr": 128002,
+      "clicks": 2355,
+      "conv": 582,
+      "revenue": 19270.44
+     },
+     "aud": {
+      "visitors": {
+       "spend": 457.67,
+       "impr": 57721,
+       "clicks": 997,
+       "conv": 151,
+       "revenue": 5371.68
+      },
+      "menu": {
+       "spend": 459.26,
+       "impr": 45691,
+       "clicks": 1003,
+       "conv": 333,
+       "revenue": 10522.29
+      },
+      "cart": {
+       "spend": 244.72,
+       "impr": 24590,
+       "clicks": 355,
+       "conv": 98,
+       "revenue": 3376.47
+      }
+     }
+    },
+    {
+     "desde": "2026-05-01",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "label": "May 2026",
+     "total": {
+      "spend": 2558.31,
+      "impr": 342864,
+      "clicks": 5078,
+      "conv": 1099,
+      "revenue": 36370.74
+     },
+     "aud": {
+      "visitors": {
+       "spend": 712.14,
+       "impr": 102848,
+       "clicks": 2406,
+       "conv": 183,
+       "revenue": 6550.53
+      },
+      "menu": {
+       "spend": 1217.06,
+       "impr": 152291,
+       "clicks": 1467,
+       "conv": 644,
+       "revenue": 20306.05
+      },
+      "cart": {
+       "spend": 629.11,
+       "impr": 87725,
+       "clicks": 1205,
+       "conv": 272,
+       "revenue": 9514.16
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-30",
+     "parcial": false,
+     "label": "Jun 2026",
+     "total": {
+      "spend": 1704.87,
+      "impr": 247609,
+      "clicks": 4057,
+      "conv": 942,
+      "revenue": 28984.85
+     },
+     "aud": {
+      "visitors": {
+       "spend": 768.27,
+       "impr": 124320,
+       "clicks": 2206,
+       "conv": 228,
+       "revenue": 7995.24
+      },
+      "menu": {
+       "spend": 574.64,
+       "impr": 75411,
+       "clicks": 1106,
+       "conv": 525,
+       "revenue": 15470.81
+      },
+      "cart": {
+       "spend": 361.96,
+       "impr": 47878,
+       "clicks": 745,
+       "conv": 189,
+       "revenue": 5518.8
+      }
+     }
+    },
+    {
+     "desde": "2026-07-01",
+     "hasta": "2026-07-31",
+     "parcial": false,
+     "label": "Jul 2026",
+     "total": {
+      "spend": 1802.19,
+      "impr": 293646,
+      "clicks": 2909,
+      "conv": 1059,
+      "revenue": 34810.19
+     },
+     "aud": {
+      "visitors": {
+       "spend": 705.64,
+       "impr": 145707,
+       "clicks": 1325,
+       "conv": 304,
+       "revenue": 11897.51
+      },
+      "menu": {
+       "spend": 618.23,
+       "impr": 83427,
+       "clicks": 687,
+       "conv": 486,
+       "revenue": 13381.39
+      },
+      "cart": {
+       "spend": 478.32,
+       "impr": 64512,
+       "clicks": 897,
+       "conv": 269,
+       "revenue": 9531.29
+      }
+     }
+    },
+    {
+     "desde": "2026-08-01",
+     "hasta": "2026-08-31",
+     "parcial": false,
+     "label": "Aug 2026",
+     "total": {
+      "spend": 1810.86,
+      "impr": 245613,
+      "clicks": 2680,
+      "conv": 462,
+      "revenue": 16840.23
+     },
+     "aud": {
+      "visitors": {
+       "spend": 905.12,
+       "impr": 136111,
+       "clicks": 1651,
+       "conv": 114,
+       "revenue": 4522.79
+      },
+      "menu": {
+       "spend": 542.67,
+       "impr": 59198,
+       "clicks": 397,
+       "conv": 226,
+       "revenue": 7956.26
+      },
+      "cart": {
+       "spend": 363.07,
+       "impr": 50304,
+       "clicks": 632,
+       "conv": 122,
+       "revenue": 4361.18
+      }
+     }
+    },
+    {
+     "desde": "2026-09-01",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "label": "Sep 2026",
+     "total": {
+      "spend": 950.1,
+      "impr": 99586,
+      "clicks": 1376,
+      "conv": 366,
+      "revenue": 13696.18
+     },
+     "aud": {
+      "visitors": {
+       "spend": 478.87,
+       "impr": 48581,
+       "clicks": 644,
+       "conv": 122,
+       "revenue": 4616.9
+      },
+      "menu": {
+       "spend": 285.81,
+       "impr": 32210,
+       "clicks": 238,
+       "conv": 166,
+       "revenue": 5620.99
+      },
+      "cart": {
+       "spend": 185.42,
+       "impr": 18795,
+       "clicks": 494,
+       "conv": 78,
+       "revenue": 3458.29
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "search",
+   "label": "Weekly Search",
+   "fuente": "Google Ads",
+   "noData": false,
+   "nota": null,
+   "semanas": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-26",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "20-Apr · 26-Apr",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-04-27",
+     "hasta": "2026-05-03",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "27-Apr · 3-May",
+     "total": {
+      "spend": 446.56,
+      "impr": 4523,
+      "clicks": 1028,
+      "conv": 317,
+      "revenue": 11750.35
+     },
+     "aud": {
+      "visitors": {
+       "spend": 248.08,
+       "impr": 2359,
+       "clicks": 551,
+       "conv": 193,
+       "revenue": 6940.5
+      },
+      "menu": {
+       "spend": 117.98,
+       "impr": 1293,
+       "clicks": 187,
+       "conv": 47,
+       "revenue": 1878.39
+      },
+      "cart": {
+       "spend": 80.5,
+       "impr": 871,
+       "clicks": 290,
+       "conv": 77,
+       "revenue": 2931.46
+      }
+     }
+    },
+    {
+     "desde": "2026-05-04",
+     "hasta": "2026-05-10",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "4-May · 10-May",
+     "total": {
+      "spend": 1181.86,
+      "impr": 4291,
+      "clicks": 1161,
+      "conv": 518,
+      "revenue": 16582.34
+     },
+     "aud": {
+      "visitors": {
+       "spend": 317.79,
+       "impr": 2616,
+       "clicks": 799,
+       "conv": 380,
+       "revenue": 12223.06
+      },
+      "menu": {
+       "spend": 425.92,
+       "impr": 776,
+       "clicks": 153,
+       "conv": 64,
+       "revenue": 1722.09
+      },
+      "cart": {
+       "spend": 438.15,
+       "impr": 899,
+       "clicks": 209,
+       "conv": 74,
+       "revenue": 2637.19
+      }
+     }
+    },
+    {
+     "desde": "2026-05-11",
+     "hasta": "2026-05-17",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "11-May · 17-May",
+     "total": {
+      "spend": 1110.54,
+      "impr": 4603,
+      "clicks": 895,
+      "conv": 328,
+      "revenue": 10550.36
+     },
+     "aud": {
+      "visitors": {
+       "spend": 351.96,
+       "impr": 2685,
+       "clicks": 532,
+       "conv": 216,
+       "revenue": 6833.5
+      },
+      "menu": {
+       "spend": 353.01,
+       "impr": 712,
+       "clicks": 161,
+       "conv": 61,
+       "revenue": 1988.97
+      },
+      "cart": {
+       "spend": 405.58,
+       "impr": 1206,
+       "clicks": 202,
+       "conv": 51,
+       "revenue": 1727.89
+      }
+     }
+    },
+    {
+     "desde": "2026-05-18",
+     "hasta": "2026-05-24",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "18-May · 24-May",
+     "total": {
+      "spend": 646.07,
+      "impr": 2811,
+      "clicks": 578,
+      "conv": 191,
+      "revenue": 6913.2
+     },
+     "aud": {
+      "visitors": {
+       "spend": 265.83,
+       "impr": 1674,
+       "clicks": 337,
+       "conv": 114,
+       "revenue": 4221.64
+      },
+      "menu": {
+       "spend": 218.23,
+       "impr": 546,
+       "clicks": 129,
+       "conv": 45,
+       "revenue": 1573.77
+      },
+      "cart": {
+       "spend": 162.02,
+       "impr": 591,
+       "clicks": 112,
+       "conv": 32,
+       "revenue": 1117.79
+      }
+     }
+    },
+    {
+     "desde": "2026-05-25",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "25-May · 31-May",
+     "total": {
+      "spend": 473.89,
+      "impr": 3616,
+      "clicks": 582,
+      "conv": 181,
+      "revenue": 5447.57
+     },
+     "aud": {
+      "visitors": {
+       "spend": 245.32,
+       "impr": 2493,
+       "clicks": 379,
+       "conv": 119,
+       "revenue": 3507.26
+      },
+      "menu": {
+       "spend": 61.98,
+       "impr": 230,
+       "clicks": 75,
+       "conv": 18,
+       "revenue": 554.48
+      },
+      "cart": {
+       "spend": 166.59,
+       "impr": 893,
+       "clicks": 128,
+       "conv": 44,
+       "revenue": 1385.83
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-07",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "1-Jun · 7-Jun",
+     "total": {
+      "spend": 467.85,
+      "impr": 4682,
+      "clicks": 587,
+      "conv": 182,
+      "revenue": 5942.05
+     },
+     "aud": {
+      "visitors": {
+       "spend": 229.76,
+       "impr": 3549,
+       "clicks": 365,
+       "conv": 96,
+       "revenue": 3044.25
+      },
+      "menu": {
+       "spend": 130.2,
+       "impr": 424,
+       "clicks": 112,
+       "conv": 54,
+       "revenue": 1738.49
+      },
+      "cart": {
+       "spend": 107.89,
+       "impr": 709,
+       "clicks": 110,
+       "conv": 32,
+       "revenue": 1159.31
+      }
+     }
+    },
+    {
+     "desde": "2026-06-08",
+     "hasta": "2026-06-14",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "8-Jun · 14-Jun",
+     "total": {
+      "spend": 445.14,
+      "impr": 3669,
+      "clicks": 546,
+      "conv": 170,
+      "revenue": 5476.68
+     },
+     "aud": {
+      "visitors": {
+       "spend": 217.5,
+       "impr": 2730,
+       "clicks": 308,
+       "conv": 73,
+       "revenue": 2416.44
+      },
+      "menu": {
+       "spend": 153.27,
+       "impr": 418,
+       "clicks": 137,
+       "conv": 62,
+       "revenue": 1933.48
+      },
+      "cart": {
+       "spend": 74.38,
+       "impr": 521,
+       "clicks": 101,
+       "conv": 35,
+       "revenue": 1126.76
+      }
+     }
+    },
+    {
+     "desde": "2026-06-15",
+     "hasta": "2026-06-21",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "15-Jun · 21-Jun",
+     "total": {
+      "spend": 415.16,
+      "impr": 2607,
+      "clicks": 481,
+      "conv": 196,
+      "revenue": 6019.77
+     },
+     "aud": {
+      "visitors": {
+       "spend": 218.48,
+       "impr": 1679,
+       "clicks": 241,
+       "conv": 92,
+       "revenue": 2584.86
+      },
+      "menu": {
+       "spend": 138.1,
+       "impr": 435,
+       "clicks": 135,
+       "conv": 72,
+       "revenue": 2076.38
+      },
+      "cart": {
+       "spend": 58.58,
+       "impr": 493,
+       "clicks": 105,
+       "conv": 32,
+       "revenue": 1358.53
+      }
+     }
+    },
+    {
+     "desde": "2026-06-22",
+     "hasta": "2026-06-28",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "22-Jun · 28-Jun",
+     "total": {
+      "spend": 416.66,
+      "impr": 2321,
+      "clicks": 418,
+      "conv": 151,
+      "revenue": 5206.85
+     },
+     "aud": {
+      "visitors": {
+       "spend": 196.3,
+       "impr": 1354,
+       "clicks": 235,
+       "conv": 81,
+       "revenue": 3449.46
+      },
+      "menu": {
+       "spend": 140.27,
+       "impr": 498,
+       "clicks": 119,
+       "conv": 48,
+       "revenue": 1221.63
+      },
+      "cart": {
+       "spend": 80.1,
+       "impr": 469,
+       "clicks": 64,
+       "conv": 22,
+       "revenue": 535.76
+      }
+     }
+    },
+    {
+     "desde": "2026-06-29",
+     "hasta": "2026-07-05",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "29-Jun · 5-Jul",
+     "total": {
+      "spend": 118.7,
+      "impr": 1039,
+      "clicks": 234,
+      "conv": 108,
+      "revenue": 3364.16
+     },
+     "aud": {
+      "visitors": {
+       "spend": 67.01,
+       "impr": 573,
+       "clicks": 135,
+       "conv": 62,
+       "revenue": 1999.98
+      },
+      "menu": {
+       "spend": 24.83,
+       "impr": 137,
+       "clicks": 41,
+       "conv": 21,
+       "revenue": 604.3
+      },
+      "cart": {
+       "spend": 26.87,
+       "impr": 329,
+       "clicks": 58,
+       "conv": 25,
+       "revenue": 759.88
+      }
+     }
+    },
+    {
+     "desde": "2026-07-06",
+     "hasta": "2026-07-12",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "6-Jul · 12-Jul",
+     "total": {
+      "spend": 449.36,
+      "impr": 2228,
+      "clicks": 439,
+      "conv": 138,
+      "revenue": 4708.46
+     },
+     "aud": {
+      "visitors": {
+       "spend": 179.9,
+       "impr": 1255,
+       "clicks": 243,
+       "conv": 83,
+       "revenue": 3039.77
+      },
+      "menu": {
+       "spend": 151.44,
+       "impr": 392,
+       "clicks": 94,
+       "conv": 32,
+       "revenue": 793.6
+      },
+      "cart": {
+       "spend": 118.02,
+       "impr": 581,
+       "clicks": 102,
+       "conv": 23,
+       "revenue": 875.09
+      }
+     }
+    },
+    {
+     "desde": "2026-07-13",
+     "hasta": "2026-07-19",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "13-Jul · 19-Jul",
+     "total": {
+      "spend": 614.52,
+      "impr": 3115,
+      "clicks": 694,
+      "conv": 266,
+      "revenue": 8411.36
+     },
+     "aud": {
+      "visitors": {
+       "spend": 258.44,
+       "impr": 1922,
+       "clicks": 411,
+       "conv": 167,
+       "revenue": 5273.33
+      },
+      "menu": {
+       "spend": 217.75,
+       "impr": 672,
+       "clicks": 161,
+       "conv": 62,
+       "revenue": 2160.01
+      },
+      "cart": {
+       "spend": 138.33,
+       "impr": 521,
+       "clicks": 122,
+       "conv": 37,
+       "revenue": 978.02
+      }
+     }
+    },
+    {
+     "desde": "2026-07-20",
+     "hasta": "2026-07-26",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "20-Jul · 26-Jul",
+     "total": {
+      "spend": 659.12,
+      "impr": 3259,
+      "clicks": 717,
+      "conv": 267,
+      "revenue": 9707.25
+     },
+     "aud": {
+      "visitors": {
+       "spend": 284.92,
+       "impr": 1745,
+       "clicks": 427,
+       "conv": 141,
+       "revenue": 5922.31
+      },
+      "menu": {
+       "spend": 178.98,
+       "impr": 416,
+       "clicks": 156,
+       "conv": 72,
+       "revenue": 2331.5
+      },
+      "cart": {
+       "spend": 195.22,
+       "impr": 1098,
+       "clicks": 134,
+       "conv": 54,
+       "revenue": 1453.44
+      }
+     }
+    },
+    {
+     "desde": "2026-07-27",
+     "hasta": "2026-08-02",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "27-Jul · 2-Aug",
+     "total": {
+      "spend": 188.46,
+      "impr": 1119,
+      "clicks": 352,
+      "conv": 152,
+      "revenue": 4086.58
+     },
+     "aud": {
+      "visitors": {
+       "spend": 90.54,
+       "impr": 663,
+       "clicks": 210,
+       "conv": 79,
+       "revenue": 2173.3
+      },
+      "menu": {
+       "spend": 61.8,
+       "impr": 223,
+       "clicks": 90,
+       "conv": 60,
+       "revenue": 1472.25
+      },
+      "cart": {
+       "spend": 36.13,
+       "impr": 233,
+       "clicks": 52,
+       "conv": 13,
+       "revenue": 441.03
+      }
+     }
+    },
+    {
+     "desde": "2026-08-03",
+     "hasta": "2026-08-09",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "3-Aug · 9-Aug",
+     "total": {
+      "spend": 362.78,
+      "impr": 2182,
+      "clicks": 517,
+      "conv": 178,
+      "revenue": 5618.67
+     },
+     "aud": {
+      "visitors": {
+       "spend": 182.85,
+       "impr": 1508,
+       "clicks": 328,
+       "conv": 106,
+       "revenue": 3238.07
+      },
+      "menu": {
+       "spend": 106.44,
+       "impr": 326,
+       "clicks": 109,
+       "conv": 41,
+       "revenue": 1269.62
+      },
+      "cart": {
+       "spend": 73.5,
+       "impr": 348,
+       "clicks": 80,
+       "conv": 31,
+       "revenue": 1110.98
+      }
+     }
+    },
+    {
+     "desde": "2026-08-10",
+     "hasta": "2026-08-16",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "10-Aug · 16-Aug",
+     "total": {
+      "spend": 449.81,
+      "impr": 2190,
+      "clicks": 534,
+      "conv": 202,
+      "revenue": 6486.06
+     },
+     "aud": {
+      "visitors": {
+       "spend": 216.68,
+       "impr": 1375,
+       "clicks": 315,
+       "conv": 115,
+       "revenue": 3945.2
+      },
+      "menu": {
+       "spend": 137.93,
+       "impr": 430,
+       "clicks": 128,
+       "conv": 58,
+       "revenue": 1652.86
+      },
+      "cart": {
+       "spend": 95.2,
+       "impr": 385,
+       "clicks": 91,
+       "conv": 29,
+       "revenue": 888
+      }
+     }
+    },
+    {
+     "desde": "2026-08-17",
+     "hasta": "2026-08-23",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "17-Aug · 23-Aug",
+     "total": {
+      "spend": 443.55,
+      "impr": 1909,
+      "clicks": 455,
+      "conv": 149,
+      "revenue": 4866.35
+     },
+     "aud": {
+      "visitors": {
+       "spend": 229.49,
+       "impr": 1357,
+       "clicks": 280,
+       "conv": 87,
+       "revenue": 3190.84
+      },
+      "menu": {
+       "spend": 129.21,
+       "impr": 335,
+       "clicks": 102,
+       "conv": 42,
+       "revenue": 890.92
+      },
+      "cart": {
+       "spend": 84.84,
+       "impr": 217,
+       "clicks": 73,
+       "conv": 20,
+       "revenue": 784.59
+      }
+     }
+    },
+    {
+     "desde": "2026-08-24",
+     "hasta": "2026-08-30",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "24-Aug · 30-Aug",
+     "total": {
+      "spend": 434.97,
+      "impr": 1897,
+      "clicks": 441,
+      "conv": 150,
+      "revenue": 4641.85
+     },
+     "aud": {
+      "visitors": {
+       "spend": 217.7,
+       "impr": 1326,
+       "clicks": 277,
+       "conv": 81,
+       "revenue": 2623.98
+      },
+      "menu": {
+       "spend": 131.35,
+       "impr": 252,
+       "clicks": 80,
+       "conv": 45,
+       "revenue": 1203.47
+      },
+      "cart": {
+       "spend": 85.93,
+       "impr": 319,
+       "clicks": 84,
+       "conv": 24,
+       "revenue": 814.4
+      }
+     }
+    },
+    {
+     "desde": "2026-08-31",
+     "hasta": "2026-09-06",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "31-Aug · 6-Sep",
+     "total": {
+      "spend": 421.41,
+      "impr": 2486,
+      "clicks": 472,
+      "conv": 165,
+      "revenue": 5839.19
+     },
+     "aud": {
+      "visitors": {
+       "spend": 213.33,
+       "impr": 1662,
+       "clicks": 256,
+       "conv": 71,
+       "revenue": 2903.16
+      },
+      "menu": {
+       "spend": 125.3,
+       "impr": 395,
+       "clicks": 112,
+       "conv": 58,
+       "revenue": 1644.97
+      },
+      "cart": {
+       "spend": 82.78,
+       "impr": 429,
+       "clicks": 104,
+       "conv": 36,
+       "revenue": 1291.06
+      }
+     }
+    },
+    {
+     "desde": "2026-09-07",
+     "hasta": "2026-09-13",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "7-Sep · 13-Sep",
+     "total": {
+      "spend": 442.97,
+      "impr": 2468,
+      "clicks": 375,
+      "conv": 107,
+      "revenue": 4024
+     },
+     "aud": {
+      "visitors": {
+       "spend": 214.52,
+       "impr": 1547,
+       "clicks": 199,
+       "conv": 55,
+       "revenue": 2509.16
+      },
+      "menu": {
+       "spend": 134.2,
+       "impr": 440,
+       "clicks": 108,
+       "conv": 30,
+       "revenue": 797.43
+      },
+      "cart": {
+       "spend": 94.25,
+       "impr": 481,
+       "clicks": 68,
+       "conv": 22,
+       "revenue": 717.41
+      }
+     }
+    },
+    {
+     "desde": "2026-09-14",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
+     "label": "14-Sep · 16-Sep",
+     "total": {
+      "spend": 174.04,
+      "impr": 701,
+      "clicks": 147,
+      "conv": 33,
+      "revenue": 709.46
+     },
+     "aud": {
+      "visitors": {
+       "spend": 89.64,
+       "impr": 409,
+       "clicks": 70,
+       "conv": 15,
+       "revenue": 269.12
+      },
+      "menu": {
+       "spend": 49.35,
+       "impr": 147,
+       "clicks": 44,
+       "conv": 15,
+       "revenue": 359.32
+      },
+      "cart": {
+       "spend": 35.05,
+       "impr": 145,
+       "clicks": 33,
+       "conv": 3,
+       "revenue": 81.02
+      }
+     }
+    }
+   ],
+   "meses": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-30",
+     "parcial": false,
+     "label": "Apr 2026",
+     "total": {
+      "spend": 133.74,
+      "impr": 2139,
+      "clicks": 450,
+      "conv": 85,
+      "revenue": 3223.63
+     },
+     "aud": {
+      "visitors": {
+       "spend": 48.99,
+       "impr": 823,
+       "clicks": 139,
+       "conv": 19,
+       "revenue": 736.97
+      },
+      "menu": {
+       "spend": 34.75,
+       "impr": 794,
+       "clicks": 99,
+       "conv": 13,
+       "revenue": 504.8
+      },
+      "cart": {
+       "spend": 50,
+       "impr": 522,
+       "clicks": 212,
+       "conv": 53,
+       "revenue": 1981.86
+      }
+     }
+    },
+    {
+     "desde": "2026-05-01",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "label": "May 2026",
+     "total": {
+      "spend": 3725.2,
+      "impr": 17705,
+      "clicks": 3794,
+      "conv": 1450,
+      "revenue": 48020.19
+     },
+     "aud": {
+      "visitors": {
+       "spend": 1380,
+       "impr": 11004,
+       "clicks": 2459,
+       "conv": 1003,
+       "revenue": 32988.99
+      },
+      "menu": {
+       "spend": 1142.37,
+       "impr": 2763,
+       "clicks": 606,
+       "conv": 222,
+       "revenue": 7212.9
+      },
+      "cart": {
+       "spend": 1202.83,
+       "impr": 3938,
+       "clicks": 729,
+       "conv": 225,
+       "revenue": 7818.3
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-30",
+     "parcial": false,
+     "label": "Jun 2026",
+     "total": {
+      "spend": 1800.4,
+      "impr": 13794,
+      "clicks": 2120,
+      "conv": 737,
+      "revenue": 23779.59
+     },
+     "aud": {
+      "visitors": {
+       "spend": 898.49,
+       "impr": 9588,
+       "clicks": 1198,
+       "conv": 359,
+       "revenue": 12133.51
+      },
+      "menu": {
+       "spend": 570.98,
+       "impr": 1863,
+       "clicks": 524,
+       "conv": 244,
+       "revenue": 7123.3
+      },
+      "cart": {
+       "spend": 330.94,
+       "impr": 2343,
+       "clicks": 398,
+       "conv": 134,
+       "revenue": 4522.78
+      }
+     }
+    },
+    {
+     "desde": "2026-07-01",
+     "hasta": "2026-07-31",
+     "parcial": false,
+     "label": "Jul 2026",
+     "total": {
+      "spend": 1911.5,
+      "impr": 9804,
+      "clicks": 2262,
+      "conv": 859,
+      "revenue": 28192.6
+     },
+     "aud": {
+      "visitors": {
+       "spend": 814.75,
+       "impr": 5608,
+       "clicks": 1339,
+       "conv": 507,
+       "revenue": 17580.03
+      },
+      "menu": {
+       "spend": 604.64,
+       "impr": 1662,
+       "clicks": 492,
+       "conv": 218,
+       "revenue": 6604.31
+      },
+      "cart": {
+       "spend": 492.11,
+       "impr": 2534,
+       "clicks": 431,
+       "conv": 134,
+       "revenue": 4008.26
+      }
+     }
+    },
+    {
+     "desde": "2026-08-01",
+     "hasta": "2026-08-31",
+     "parcial": false,
+     "label": "Aug 2026",
+     "total": {
+      "spend": 1797.4,
+      "impr": 8793,
+      "clicks": 2080,
+      "conv": 731,
+      "revenue": 22919.41
+     },
+     "aud": {
+      "visitors": {
+       "spend": 898.75,
+       "impr": 5925,
+       "clicks": 1255,
+       "conv": 399,
+       "revenue": 13222.08
+      },
+      "menu": {
+       "spend": 539.9,
+       "impr": 1467,
+       "clicks": 465,
+       "conv": 216,
+       "revenue": 5768.71
+      },
+      "cart": {
+       "spend": 358.75,
+       "impr": 1401,
+       "clicks": 360,
+       "conv": 116,
+       "revenue": 3928.62
+      }
+     }
+    },
+    {
+     "desde": "2026-09-01",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "label": "Sep 2026",
+     "total": {
+      "spend": 995.22,
+      "impr": 5481,
+      "clicks": 947,
+      "conv": 287,
+      "revenue": 10217.14
+     },
+     "aud": {
+      "visitors": {
+       "spend": 495.05,
+       "impr": 3533,
+       "clicks": 508,
+       "conv": 139,
+       "revenue": 5647.61
+      },
+      "menu": {
+       "spend": 294.9,
+       "impr": 948,
+       "clicks": 247,
+       "conv": 94,
+       "revenue": 2653.91
+      },
+      "cart": {
+       "spend": 205.26,
+       "impr": 1000,
+       "clicks": 192,
+       "conv": 54,
+       "revenue": 1915.62
+      }
+     }
+    }
+   ]
+  },
+  {
+   "key": "apple",
+   "label": "Weekly Apple Search Ads",
+   "fuente": "Apple Search Ads",
+   "noData": true,
+   "nota": "sin credenciales de la Apple Ads API",
+   "semanas": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-26",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "20-Apr · 26-Apr",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-04-27",
+     "hasta": "2026-05-03",
+     "parcial": false,
+     "ciclo": "Campaign 1 (free app & free entree)",
+     "label": "27-Apr · 3-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-04",
+     "hasta": "2026-05-10",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "4-May · 10-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-11",
+     "hasta": "2026-05-17",
+     "parcial": false,
+     "ciclo": "Campaign 2 (25% off, 50% off)",
+     "label": "11-May · 17-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-18",
+     "hasta": "2026-05-24",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "18-May · 24-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-25",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "ciclo": "Campaign 3 (no offer)",
+     "label": "25-May · 31-May",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-07",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "1-Jun · 7-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-08",
+     "hasta": "2026-06-14",
+     "parcial": false,
+     "ciclo": "Campaign 4 (free app & entree)",
+     "label": "8-Jun · 14-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-15",
+     "hasta": "2026-06-21",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "15-Jun · 21-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-22",
+     "hasta": "2026-06-28",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "22-Jun · 28-Jun",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-29",
+     "hasta": "2026-07-05",
+     "parcial": false,
+     "ciclo": "Campaign 5 (no offer desde 6/19)",
+     "label": "29-Jun · 5-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-06",
+     "hasta": "2026-07-12",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "6-Jul · 12-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-13",
+     "hasta": "2026-07-19",
+     "parcial": false,
+     "ciclo": "Campaign 6 ($9.99, BOGO 50)",
+     "label": "13-Jul · 19-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-20",
+     "hasta": "2026-07-26",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "20-Jul · 26-Jul",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-27",
+     "hasta": "2026-08-02",
+     "parcial": false,
+     "ciclo": "Campaign 7 (no offer)",
+     "label": "27-Jul · 2-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-03",
+     "hasta": "2026-08-09",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "3-Aug · 9-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-10",
+     "hasta": "2026-08-16",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "10-Aug · 16-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-17",
+     "hasta": "2026-08-23",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "17-Aug · 23-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-24",
+     "hasta": "2026-08-30",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "24-Aug · 30-Aug",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-31",
+     "hasta": "2026-09-06",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "31-Aug · 6-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-07",
+     "hasta": "2026-09-13",
+     "parcial": false,
+     "ciclo": "Campaign 8 (free app & entree)",
+     "label": "7-Sep · 13-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-14",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "ciclo": "Campaign 8 (free app & entree) → RMK 9 (no offer)",
+     "label": "14-Sep · 16-Sep",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ],
+   "meses": [
+    {
+     "desde": "2026-04-20",
+     "hasta": "2026-04-30",
+     "parcial": false,
+     "label": "Apr 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-05-01",
+     "hasta": "2026-05-31",
+     "parcial": false,
+     "label": "May 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-06-01",
+     "hasta": "2026-06-30",
+     "parcial": false,
+     "label": "Jun 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-07-01",
+     "hasta": "2026-07-31",
+     "parcial": false,
+     "label": "Jul 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-08-01",
+     "hasta": "2026-08-31",
+     "parcial": false,
+     "label": "Aug 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    },
+    {
+     "desde": "2026-09-01",
+     "hasta": "2026-09-16",
+     "parcial": true,
+     "label": "Sep 2026",
+     "total": {
+      "spend": 0,
+      "impr": 0,
+      "clicks": 0,
+      "conv": 0,
+      "revenue": 0
+     },
+     "aud": {
+      "visitors": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "menu": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      },
+      "cart": {
+       "spend": 0,
+       "impr": 0,
+       "clicks": 0,
+       "conv": 0,
+       "revenue": 0
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

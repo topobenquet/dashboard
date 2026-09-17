@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pei Wei | Ads Trending Summary (RMK)</title>
+<style>
+  :root {
+    --red:#c8102e; --gold:#e8a020; --dark:#1a1a2e; --darker:#12121e;
+    --card:#1e1e30; --border:#2a2a40; --text:#e8e8f0; --muted:#888;
+    --green:#22c55e; --yellow:#f59e0b; --orange:#ef4444; --blue:#38bdf8; --purple:#a78bfa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--darker);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+  .container{max-width:1680px;margin:0 auto;padding:24px 28px}
+  .header{background:linear-gradient(135deg,var(--dark) 0%,#1a1a3e 100%);border-bottom:2px solid var(--red);
+    padding:18px 24px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .header-logo{display:flex;align-items:center;gap:14px}
+  .header-logo-icon{width:44px;height:44px;background:var(--red);border-radius:10px;display:flex;
+    align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff}
+  .header-title{font-size:20px;font-weight:700;color:#fff}
+  .header-subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+  .header-meta{text-align:right}
+  .header-date{font-size:13px;color:var(--gold);font-weight:600}
+  .header-updated{font-size:11px;color:var(--muted);margin-top:4px}
+  .src-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+  .src{font-size:11px;border-radius:6px;padding:4px 9px;border:1px solid var(--border);background:var(--card)}
+  .src.ok{color:var(--green)} .src.warn{color:var(--yellow)} .src.off{color:var(--muted)}
+  .tabs{display:flex;gap:8px;margin:18px 0 6px}
+  .tab{font-size:12px;font-weight:600;padding:7px 16px;border-radius:8px;border:1px solid var(--border);
+    background:var(--card);color:var(--muted);cursor:pointer}
+  .tab.on{background:var(--red);border-color:var(--red);color:#fff}
+  .sec-title{font-size:15px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;
+    margin:30px 0 10px;border-left:3px solid var(--red);padding-left:12px;display:flex;align-items:center;gap:10px}
+  .pill{font-size:9px;font-weight:600;border-radius:4px;padding:2px 6px;letter-spacing:.5px;text-transform:none}
+  .pill.live{background:#1a3a1a;color:var(--green)}
+  .pill.off{background:#333;color:var(--muted)}
+  .tbl-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--border);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:1380px}
+  thead th{padding:8px 10px;text-align:right;font-size:10px;text-transform:uppercase;letter-spacing:.4px;
+    color:var(--muted);background:#1a1a2c;border-bottom:1px solid var(--border);white-space:nowrap;font-weight:600}
+  thead tr.grp th{background:#171726;color:#bbb;text-align:center;border-bottom:1px solid var(--border)}
+  thead th.lt{text-align:left}
+  tbody td{padding:8px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border)}
+  tbody td.lt{text-align:left}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#252535}
+  tbody tr.parcial td{color:#c8c8dc;font-style:italic}
+  tbody tr.total td{background:rgba(255,255,255,.05);font-weight:700;color:#fff;border-top:1px solid var(--border)}
+  .g{border-left:1px solid var(--border)}
+  .ciclo{color:var(--muted);font-size:11px}
+  .sub{color:#a9a9c0}
+  .zero{color:#55556a}
+  .roas-hi{color:var(--green);font-weight:600}
+  .roas-lo{color:var(--orange)}
+  .empty{padding:18px;color:var(--muted);font-size:12px}
+  .footer{text-align:center;padding:24px;color:var(--muted);font-size:11px;border-top:1px solid var(--border);margin-top:32px;line-height:1.6}
+  @media (max-width:768px){.container{padding:14px}.header{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-logo">
+      <span class="header-logo-icon">PW</span>
+      <div>
+        <div class="header-title">Ads Trending Summary</div>
+        <div class="header-subtitle">Remarketing campaigns &middot; by audience</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <div class="header-date" id="ref-date">&nbsp;</div>
+      <div class="header-updated" id="last-updated">Cargando&hellip;</div>
+    </div>
+  </div>
+
+  <div class="src-row" id="sources"></div>
+  <div class="tabs">
+    <div class="tab on" data-view="semanas">Por semana</div>
+    <div class="tab" data-view="meses">Por mes</div>
+  </div>
+  <div id="body"></div>
+
+  <div class="footer" id="footer"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const n0 = (v) => (v || 0).toLocaleString('en-US', {maximumFractionDigits:0});
+const usd = (v) => '$' + (v || 0).toLocaleString('en-US', {maximumFractionDigits:0});
+const usd2 = (v) => '$' + (v || 0).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+const pct = (v) => (v * 100).toFixed(2) + '%';
+const dash = '<span class="zero">&mdash;</span>';
+let DATA = null, VIEW = 'semanas';
+
+// Derivadas: las mismas fórmulas de la planilla del cliente.
+const roas = (t) => (t.spend ? t.revenue / t.spend : null);
+const aov  = (t) => (t.conv ? t.revenue / t.conv : null);
+const cpa  = (t) => (t.conv ? t.spend / t.conv : null);
+const ctr  = (t) => (t.impr ? t.clicks / t.impr : null);
+const cpc  = (t) => (t.clicks ? t.spend / t.clicks : null);
+const cell = (v, fmt) => (v == null ? dash : fmt(v));
+const roasCell = (t) => {
+  const r = roas(t);
+  if (r == null) return dash;
+  return '<span class="' + (r >= 4 ? 'roas-hi' : r > 0 && r < 1 ? 'roas-lo' : '') + '">' + r.toFixed(2) + '</span>';
+};
+
+function suma(filas) {
+  const t = {spend:0, impr:0, clicks:0, conv:0, revenue:0};
+  const aud = {};
+  for (const a of DATA.auds) aud[a] = {spend:0, impr:0, clicks:0, conv:0, revenue:0};
+  for (const f of filas) {
+    for (const k in t) t[k] += f.total[k];
+    for (const a of DATA.auds) for (const k in t) aud[a][k] += f.aud[a][k];
+  }
+  return {total:t, aud};
+}
+
+function fila(f, esTotal) {
+  const t = f.total, A = DATA.auds.map((a) => f.aud[a]);
+  const cls = esTotal ? 'total' : (f.parcial ? 'parcial' : '');
+  const cabecera = esTotal
+    ? (VIEW === 'meses' ? '<td class="lt" colspan="1">Total</td>' : '<td class="lt" colspan="3">Total ' + DATA.inicio + ' &rarr; ' + DATA.refDate + '</td>')
+    : (VIEW === 'meses'
+        ? '<td class="lt">' + f.label + (f.parcial ? ' <span class="ciclo">(en curso)</span>' : '') + '</td>'
+        : '<td class="lt ciclo">' + (f.ciclo || '') + '</td>'
+          + '<td class="lt">' + f.label.split(' · ')[0] + '</td>'
+          + '<td class="lt">' + f.label.split(' · ')[1] + (f.parcial ? ' <span class="ciclo">(en curso)</span>' : '') + '</td>');
+  const bloque = (fmt, sel) => '<td class="g">' + cell(sel(t), fmt) + '</td>' + A.map((x) => '<td class="sub">' + cell(sel(x), fmt) + '</td>').join('');
+  return '<tr class="' + cls + '">' + cabecera
+    + bloque(usd, (x) => x.spend)
+    + bloque(usd, (x) => x.revenue)
+    + '<td class="g">' + roasCell(t) + '</td>' + A.map((x) => '<td class="sub">' + roasCell(x) + '</td>').join('')
+    + '<td class="g">' + cell(aov(t), usd2) + '</td>'
+    + '<td>' + (t.conv ? t.conv.toLocaleString('en-US', {maximumFractionDigits:1}) : dash) + '</td>'
+    + '<td>' + cell(cpa(t), usd2) + '</td>'
+    + '<td class="g">' + n0(t.impr) + '</td>'
+    + '<td>' + n0(t.clicks) + '</td>'
+    + '<td>' + cell(ctr(t), pct) + '</td>'
+    + '<td>' + cell(cpc(t), usd2) + '</td>'
+    + '</tr>';
+}
+
+function tabla(sec) {
+  const filas = sec[VIEW] || [];
+  const conDatos = filas.filter((f) => f.total.spend > 0 || f.total.impr > 0);
+  if (sec.noData) return '<div class="tbl-wrap"><div class="empty">' + sec.nota + '</div></div>';
+  if (!conDatos.length) return '<div class="tbl-wrap"><div class="empty">Sin actividad en el per&iacute;odo.</div></div>';
+  const A = DATA.auds.map((a) => '<th>' + DATA.audLabels[a] + '</th>').join('');
+  const primeras = VIEW === 'meses' ? 1 : 3;
+  const head1 = '<tr class="grp"><th class="lt" colspan="' + primeras + '"></th>'
+    + '<th class="g" colspan="4">Cost</th><th class="g" colspan="4">Revenue</th><th class="g" colspan="4">ROAS</th>'
+    + '<th class="g" colspan="3">Orders</th><th class="g" colspan="4">Traffic</th></tr>';
+  const head2 = '<tr>'
+    + (VIEW === 'meses' ? '<th class="lt">Month</th>' : '<th class="lt">Campaign</th><th class="lt">Week start</th><th class="lt">Week end</th>')
+    + '<th class="g">Total</th>' + A + '<th class="g">Total</th>' + A + '<th class="g">Total</th>' + A
+    + '<th class="g">AOV</th><th>Orders</th><th>CPA</th>'
+    + '<th class="g">Impressions</th><th>Clicks</th><th>CTR</th><th>CPC</th></tr>';
+  const tot = suma(conDatos);
+  return '<div class="tbl-wrap"><table><thead>' + head1 + head2 + '</thead><tbody>'
+    + conDatos.map((f) => fila(f, false)).join('')
+    + fila({...tot, label:'Total', parcial:false}, true)
+    + '</tbody></table></div>';
+}
+
+function render() {
+  $('body').innerHTML = DATA.secciones.map((s) => {
+    const vivo = !s.noData;
+    return '<h2 class="sec-title">' + s.label.replace('Weekly ', '')
+      + '<span class="pill ' + (vivo ? 'live' : 'off') + '">' + (vivo ? s.fuente : 'sin conector') + '</span></h2>'
+      + tabla(s);
+  }).join('');
+}
+
+fetch('data.json?v=' + Date.now()).then((r) => r.json()).then((d) => {
+  DATA = d;
+  $('ref-date').textContent = 'Datos hasta ' + d.lastSyncLabel;
+  $('last-updated').textContent = 'Actualizado ' + new Date(d.generatedAt).toLocaleString('en-US', {dateStyle:'medium', timeStyle:'short'});
+  const src = [];
+  src.push('<span class="src ' + (d.sources.google.ok ? 'ok' : 'warn') + '">Google Ads &middot; ' + (d.sources.google.ok ? 'vivo' : 'ca&iacute;do') + '</span>');
+  src.push('<span class="src ' + (d.sources.meta.ok ? 'ok' : 'warn') + '">Meta Ads &middot; ' + (d.sources.meta.ok ? 'vivo' : 'parcial') + '</span>');
+  src.push('<span class="src off">Apple Search Ads &middot; ' + d.sources.apple.error + '</span>');
+  $('sources').innerHTML = src.join('');
+  $('footer').innerHTML = 'Semanas lunes a domingo; la &uacute;ltima va parcial (corta a ayer, d&iacute;as completos).<br>'
+    + 'Cost / Revenue / ROAS abiertos por audiencia de remarketing. Clicks de Meta = link clicks.<br>'
+    + 'Google reatribuye conversiones hacia atr&aacute;s: las semanas viejas pueden moverse respecto de la planilla original.';
+  render();
+});
+
+document.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach((x) => x.classList.remove('on'));
+  t.classList.add('on'); VIEW = t.dataset.view; render();
+}));
+</script>
+</body>
+</html>
