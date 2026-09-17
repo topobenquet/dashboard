@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T20:42:26.949Z",
+ "generated": "2026-09-17T22:30:37.862Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -225,14 +225,16 @@
   },
   {
    "fecha": "2026-09-17",
-   "in": 298.32,
-   "out": 0,
-   "n": 2,
+   "in": 413.98,
+   "out": 89.65,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 298.32
+    "Pagopar": 298.32,
+    "WhatsApp · Pagos (Majo)": -89.65,
+    "Transferencia": 115.66
    },
-   "neto": 298.32,
-   "acum": 4761.53
+   "neto": 324.33,
+   "acum": 4787.54
   }
  ],
  "movimientos": [
@@ -795,12 +797,28 @@
    "gs": 2450000
   },
   {
+   "d": "2026-09-17",
+   "t": "out",
+   "usd": 89.65,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Reembolso Combustible + agua mineral",
+   "gs": 532500
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 205.62,
    "fuente": "Transferencia",
    "det": "Tania Josefina Storm Escobar (comprobante en Pagos (Majo))",
    "gs": 1221400
+  },
+  {
+   "d": "2026-09-17",
+   "t": "in",
+   "usd": 115.66,
+   "fuente": "Transferencia",
+   "det": "Frigorífico Modelo PY S.A. (comprobante en Pagos (Majo))",
+   "gs": 687000
   },
   {
    "d": "2026-09-01",
@@ -954,12 +972,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 210.67,
+    "google": 213.8,
     "meta": 279.12,
-    "total": 489.79
+    "total": 492.92
    },
    "impuestos": null,
-   "resultado": 4202.23,
+   "resultado": 4199.1,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
