@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T11:10:21.657Z",
+ "generated": "2026-09-18T21:10:18.187Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95665
+   "ultimoKm": 95709
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -47,10 +47,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 2538,
+   "kmViajes": 2582,
    "kmFuera": 215,
-   "viajes": 6,
-   "costoComb": 3449509,
+   "viajes": 7,
+   "costoComb": 3504641,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 23,
-   "conFoto": 23
+   "lecturas": 25,
+   "conFoto": 25
   },
   {
    "chofer": "Gustavo",
@@ -87,12 +87,12 @@
    "fechaIni": "2026-09-18",
    "fechaFin": "2026-09-18",
    "horaIni": "07:47",
-   "horaFin": null,
+   "horaFin": "17:23",
    "kmIni": 95665,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 95709,
+   "km": 44,
    "tanqueIni": 0.6,
-   "tanqueFin": null,
+   "tanqueFin": 0.4,
    "traslados": [
     "Vehiculo a disposición"
    ],
@@ -100,12 +100,12 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 55132,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
-   "inferido": false
+   "abierto": false,
+   "inferido": true
   },
   {
    "vehiculo": "H1",
@@ -653,6 +653,14 @@
    "ruta": "Vehiculo a disposición",
    "km": null,
    "adelanto": null
+  },
+  {
+   "fecha": "2026-09-18",
+   "chofer": "Luis",
+   "vehiculo": "Voxy",
+   "ruta": "AERO-ASU",
+   "km": 40,
+   "adelanto": 46000
   },
   {
    "fecha": "2026-09-19",
