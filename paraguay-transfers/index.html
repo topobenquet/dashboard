@@ -325,6 +325,44 @@ function renderArgentina(root) {
       <tbody>${rows}${previos}</tbody></table></div></div>`;
 }
 
+/* ════ RESEÑAS DE GOOGLE ════
+   Las deja resenas.mjs, que mira el perfil 4 veces al día. Si no hay dato, la
+   sección no se dibuja: vale más que falte a que muestre un cero falso. */
+function renderResenas(root) {
+  const R = DATA.resenas;
+  if (!R || !R.count) return;
+  const h = R.historia || [];
+  const mes = new Date().toISOString().slice(0,7);
+  const delMes = h.filter(x => String(x.fecha).startsWith(mes));
+  // "Nuevas en el mes" = lo que subió el contador desde la primera foto del mes.
+  // El primer mes que corre esto la base es incompleta, así que se avisa.
+  const base = delMes.length ? delMes[0].count : null;
+  const baseDia = delMes.length ? delMes[0].fecha : null;
+  const nuevas = base === null ? null : R.count - base;
+  const ult = (R.ultimas || []).slice(0,4);
+  const estrellas = n => "★".repeat(Math.max(0,Math.min(5,Math.round(n||0))));
+  const fecha = f => { try { return new Date(f).toLocaleDateString("es-PY",{day:"2-digit",month:"short"}); } catch { return ""; } };
+  root.innerHTML += `<div class="section">
+    <div class="section-title">Reseñas de Google</div>
+    <div class="kpi-row kpi-row-3" style="margin-bottom:12px;">
+      ${kpi("Reseñas totales", R.count, "", R.actualizado ? "al "+fecha(R.actualizado) : "", "kpi-blue")}
+      ${kpi("Promedio", (R.rating||0).toFixed(1)+" ★", "", "sobre 5 estrellas", "kpi-green")}
+      ${kpi("Nuevas este mes", nuevas === null ? "–" : (nuevas>=0?"+":"")+nuevas, "", base===null?"sin base del mes todavía":"desde el "+fecha(baseDia+"T12:00:00"))}
+    </div>
+    ${ult.length ? `<div class="card"><div class="card-title">Últimas reseñas</div>
+      ${ult.map(r => `<div style="padding:7px 0;border-bottom:1px solid #F3F4F6;">
+        <div style="font-size:11px;color:#374151;">
+          <strong>${(r.autor||"anónimo").replace(/</g,"&lt;")}</strong>
+          <span style="color:#F59E0B;">${estrellas(r.rating)}</span>
+          <span style="color:#9CA3AF;">· ${fecha(r.fecha)}</span>
+        </div>
+        ${r.texto ? `<div style="font-size:10.5px;color:#6B7280;margin-top:2px;">${r.texto.slice(0,180).replace(/</g,"&lt;")}${r.texto.length>180?"…":""}</div>` : ""}
+      </div>`).join("")}
+      <div style="font-size:9px;color:#9CA3AF;margin-top:8px;">Google muestra hasta 5 reseñas por API, elegidas por relevancia. El total sí es exacto.</div>
+    </div>` : ""}
+  </div>`;
+}
+
 function renderCountries(root) {
   const byC={};
   DATA.trips.forEach(t=>{ const p=norm(t.pais); if(!byC[p]) byC[p]={p,trips:0,rev:0,reg:regionMap[p]||"Otros"}; byC[p].trips++; byC[p].rev+=(t.pago||0); });
@@ -614,6 +652,7 @@ async function init() {
   renderDaily(root);
   renderArgentina(root);
   renderUpcoming(root);
+  renderResenas(root);
   renderCountries(root);
   root.innerHTML += `<div class="section grid-2">${renderRoutes()}${renderDrivers()}</div>`;
   // Va ÚLTIMO a propósito: cada `root.innerHTML +=` reserializa y reconstruye

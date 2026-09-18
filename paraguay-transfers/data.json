@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T10:20:57.933Z",
+  "generated": "2026-09-18T20:33:29.640Z",
   "lastSyncLabel": "18 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 183,
-      "reservas": 37,
-      "revenue": 11814,
-      "chofer": 4699,
+      "leads": 185,
+      "reservas": 38,
+      "revenue": 11936,
+      "chofer": 5638,
       "comb": 622,
       "peajes": 115,
-      "comision": 257.75,
+      "comision": 258.75,
       "reembolsos": 13,
       "otros": 37,
-      "gAds": 218,
+      "gAds": 224,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,9 +207,9 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 218.18,
-      "clicks": 216,
-      "impr": 1268,
+      "spend": 223.75,
+      "clicks": 220,
+      "impr": 1301,
       "conv": 10
     }
   ],
@@ -3877,8 +3877,8 @@
       "pago": 0,
       "sena": 1655,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "choferCost": 890,
+      "neto": -890,
       "fechaReserva": "10/09/26",
       "fechaSalida": "14/09/26"
     },
@@ -4028,11 +4028,11 @@
       "cliente": "ronaldo baez",
       "pais": "Paraguay",
       "conductor": "Alfredo Sánchez PT",
-      "pago": 158,
-      "sena": 158,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 153,
+      "pago": 211,
+      "sena": 162,
+      "restante": 49,
+      "choferCost": 49,
+      "neto": 156,
       "fechaReserva": "17/09/26",
       "fechaSalida": "17/09/26"
     },
@@ -4066,6 +4066,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "AERO-ASU",
+      "cliente": "Lyubov Kaschenko",
+      "pais": "Rusia",
+      "conductor": "Luis Vásquez",
+      "pago": 69,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "18/09/26",
+      "fechaSalida": "18/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Holiday Inn - Aero",
       "cliente": "Pedro Goede",
       "pais": "Brasil",
@@ -4094,20 +4108,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "FOZ-ASU",
-      "cliente": "Isabela Zomer",
-      "pais": "España",
-      "conductor": "",
-      "pago": 417,
-      "sena": 100,
-      "restante": 317,
-      "choferCost": 0,
-      "neto": 404,
-      "fechaReserva": "01/09/26",
-      "fechaSalida": "22/09/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "Aero-Yacht",
       "cliente": "Alex",
       "pais": "Alemania",
@@ -4118,20 +4118,6 @@
       "choferCost": 0,
       "neto": 482,
       "fechaReserva": "13/09/26",
-      "fechaSalida": "22/09/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Pto Iguazu - ASU",
-      "cliente": "philip",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "12/09/26",
       "fechaSalida": "22/09/26"
     },
     {
@@ -4153,7 +4139,7 @@
       "route": "Aeropuerto de Foz- Luque",
       "cliente": "Gustavo",
       "pais": "Brasil",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 0,
       "sena": 0,
       "restante": 0,
@@ -4178,7 +4164,7 @@
     },
     {
       "mes": "Septiembre",
-      "route": "Aloft-ASU",
+      "route": "Aloft-Aero",
       "cliente": "Nisla | Dash BPO",
       "pais": "Panamá",
       "conductor": "Elizabeth",
@@ -4234,8 +4220,8 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "kenny dudek",
+      "route": "Multitraslados",
+      "cliente": "Kenny Dudek",
       "pais": "Australia",
       "conductor": "",
       "pago": 890,
@@ -4245,6 +4231,20 @@
       "neto": 863,
       "fechaReserva": "18/09/26",
       "fechaSalida": "02/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "FOZ-ASU",
+      "cliente": "Isabela Zomer",
+      "pais": "España",
+      "conductor": "",
+      "pago": 417,
+      "sena": 100,
+      "restante": 317,
+      "choferCost": 0,
+      "neto": 404,
+      "fechaReserva": "01/09/26",
+      "fechaSalida": "03/10/26"
     },
     {
       "mes": "Septiembre",
@@ -4262,7 +4262,7 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
+      "route": "Aloft-Aero",
       "cliente": "Nisla | Dash BPO",
       "pais": "Panamá",
       "conductor": "Elizabeth",
@@ -4315,6 +4315,20 @@
       "neto": 0,
       "fechaReserva": "01/09/26",
       "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Pto Iguazu - ASU",
+      "cliente": "philip",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "12/09/26",
+      "fechaSalida": "22/10/26"
     },
     {
       "mes": "Septiembre",
@@ -4445,6 +4459,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-09-18": 2,
       "2026-09-17": 11,
       "2026-09-16": 10,
       "2026-09-15": 16,
@@ -4510,11 +4525,11 @@
       "2026-09-15": 1,
       "2026-09-16": 1,
       "2026-09-17": 2,
+      "2026-09-18": 2,
       "2026-09-13": 1,
-      "2026-09-12": 1,
       "2026-09-04": 2,
       "2026-09-09": 3,
-      "2026-09-18": 1
+      "2026-09-12": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -4764,8 +4779,52 @@
       "2026-09-15": 15.45,
       "2026-09-16": 15.35,
       "2026-09-17": 10.18,
-      "2026-09-18": 1.47
+      "2026-09-18": 7.04
     }
+  },
+  "resenas": {
+    "count": 61,
+    "rating": 5,
+    "actualizado": "2026-09-18T20:29:33.283Z",
+    "historia": [
+      {
+        "fecha": "2026-09-18",
+        "count": 61,
+        "rating": 5
+      }
+    ],
+    "ultimas": [
+      {
+        "autor": "Andres Lopez",
+        "rating": 5,
+        "fecha": "2026-08-31T23:49:34.848065146Z",
+        "texto": "Un viaje sin perfecto y con mucha seguridad, además del apoyo en el paso desde Paraguay a Brasil. 100% recomendable! Agradecidos de Gustavo, nuestro conductor en esta a oportunidad."
+      },
+      {
+        "autor": "Juana Galeano",
+        "rating": 5,
+        "fecha": "2026-08-05T12:08:47.219342036Z",
+        "texto": "Experiencia perfecta.\nPersonas sumamente atentos y empaticos.\nEternamente agradecida a ustedes."
+      },
+      {
+        "autor": "Alfredo David Sanchez Vargas",
+        "rating": 5,
+        "fecha": "2026-05-26T16:32:49.419894101Z",
+        "texto": "Exelente Servicio... Atención Profesional... Vehículos confortables y en muy buenas condiciones... Más que recomendado!!!"
+      },
+      {
+        "autor": "Martin Vial",
+        "rating": 5,
+        "fecha": "2026-05-17T22:21:28.923254381Z",
+        "texto": "Excelente servicio, siempre muy puntuales y con muy buena disposición."
+      },
+      {
+        "autor": "Nicolas Trimarco",
+        "rating": 5,
+        "fecha": "2026-04-16T11:50:46.593557675Z",
+        "texto": "Excelente servicio, Freddy un gran chófer y Beatriz recontra predispuesta a todas las consultas. Un lujo!"
+      }
+    ]
   },
   "argentina": {
     "desde": "2026-08-01",
