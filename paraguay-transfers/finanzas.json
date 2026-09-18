@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-18T18:30:27.304Z",
+ "generated": "2026-09-18T20:32:43.638Z",
  "tc": 5955,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3320.95,
-  "stripePendiente": 2441.46,
+  "stripePendiente": 2489.71,
   "pagoparPendienteUsd": 9027.04,
   "relay": null,
   "binance": null,
@@ -239,14 +239,16 @@
   {
    "fecha": "2026-09-18",
    "in": 934.17,
-   "out": 14.44,
-   "n": 2,
+   "out": 152.14,
+   "n": 6,
    "porFuente": {
     "Pagopar": 934.17,
-    "WhatsApp · Alfredo": -14.44
+    "WhatsApp · Alfredo": -14.44,
+    "WhatsApp · Pagos (Majo)": -129.3,
+    "WhatsApp · Pagos (Majo) (factura)": -8.4
    },
-   "neto": 919.73,
-   "acum": 5700.53
+   "neto": 782.03,
+   "acum": 5562.83
   }
  ],
  "movimientos": [
@@ -833,6 +835,30 @@
    "gs": 86000
   },
   {
+   "d": "2026-09-18",
+   "t": "out",
+   "usd": 8.4,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Compra de focos H1",
+   "gs": 50000
+  },
+  {
+   "d": "2026-09-18",
+   "t": "out",
+   "usd": 40.3,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Luis",
+   "gs": 240000
+  },
+  {
+   "d": "2026-09-18",
+   "t": "out",
+   "usd": 80.6,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández - adicional 4hs vehículo a disposición Pax Pedro Goede",
+   "gs": 480000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 205.1,
@@ -913,6 +939,14 @@
    "gs": 100000
   },
   {
+   "d": "2026-09-18",
+   "t": "out",
+   "usd": 8.4,
+   "fuente": "WhatsApp · Pagos (Majo) (factura)",
+   "det": "Repuestos: 2 focos 274 (Chic Repuestos)",
+   "gs": 50000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -971,21 +1005,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 50,
+   "traslados": 49,
    "ingresos": {
-    "planilla": 8310.06,
+    "planilla": 7893.06,
     "alohaSinFila": 0,
-    "total": 8310.06
+    "total": 7893.06
    },
    "directos": {
-    "chofer": 2617,
+    "chofer": 3507,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
     "otros": 50,
-    "total": 3444
+    "total": 4334
    },
-   "margenBruto": 4866.06,
+   "margenBruto": 3559.06,
    "cobro": {
     "stripe": 96.45,
     "aloha": null,
@@ -1000,12 +1034,12 @@
     "total": 104.33
    },
    "marketing": {
-    "google": 221.03,
+    "google": 223.75,
     "meta": 279.12,
-    "total": 500.15
+    "total": 502.87
    },
    "impuestos": null,
-   "resultado": 4165.13,
+   "resultado": 2855.41,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
