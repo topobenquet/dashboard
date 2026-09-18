@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-17T10:21:03.612Z",
-  "lastSyncLabel": "17 Sep 2026",
+  "generated": "2026-09-18T10:20:57.933Z",
+  "lastSyncLabel": "18 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 173,
-      "reservas": 34,
-      "revenue": 10641,
-      "chofer": 4688,
+      "leads": 183,
+      "reservas": 37,
+      "revenue": 11814,
+      "chofer": 4699,
       "comb": 622,
       "peajes": 115,
-      "comision": 222,
+      "comision": 257.75,
       "reembolsos": 13,
-      "otros": 36,
-      "gAds": 207,
+      "otros": 37,
+      "gAds": 218,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 206.53,
-      "clicks": 206,
-      "impr": 1220,
-      "conv": 9
+      "spend": 218.18,
+      "clicks": 216,
+      "impr": 1268,
+      "conv": 10
     }
   ],
   "trips": [
@@ -3514,7 +3514,7 @@
       "sena": 0,
       "restante": 0,
       "choferCost": 0,
-      "neto": 0,
+      "neto": 97,
       "fechaReserva": "02/09/26",
       "fechaSalida": "02/09/26"
     },
@@ -3600,20 +3600,6 @@
       "choferCost": 21,
       "neto": 26,
       "fechaReserva": "03/09/26",
-      "fechaSalida": "03/09/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "",
-      "cliente": "rafa acosta",
-      "pais": "Paraguay",
-      "conductor": "",
-      "pago": 49,
-      "sena": 49,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
-      "fechaReserva": "16/09/26",
       "fechaSalida": "03/09/26"
     },
     {
@@ -3920,7 +3906,7 @@
       "sena": 100,
       "restante": 0,
       "choferCost": 20,
-      "neto": 0,
+      "neto": 277,
       "fechaReserva": "14/09/26",
       "fechaSalida": "15/09/26"
     },
@@ -3976,7 +3962,7 @@
       "sena": 0,
       "restante": 0,
       "choferCost": 20,
-      "neto": 0,
+      "neto": -20,
       "fechaReserva": "14/09/26",
       "fechaSalida": "16/09/26"
     },
@@ -4018,8 +4004,36 @@
       "sena": 0,
       "restante": 0,
       "choferCost": 20,
-      "neto": 0,
+      "neto": -20,
       "fechaReserva": "14/09/26",
+      "fechaSalida": "17/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Asu-Aero",
+      "cliente": "Rafa acosta",
+      "pais": "Paraguay",
+      "conductor": "Luis Vásquez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 11,
+      "neto": 35,
+      "fechaReserva": "16/09/26",
+      "fechaSalida": "17/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Vehiculo a disposición",
+      "cliente": "ronaldo baez",
+      "pais": "Paraguay",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 158,
+      "sena": 158,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 153,
+      "fechaReserva": "17/09/26",
       "fechaSalida": "17/09/26"
     },
     {
@@ -4130,7 +4144,7 @@
       "sena": 100,
       "restante": 94,
       "choferCost": 40,
-      "neto": 100,
+      "neto": 147,
       "fechaReserva": "09/08/26",
       "fechaSalida": "23/09/26"
     },
@@ -4220,6 +4234,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "",
+      "cliente": "kenny dudek",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 890,
+      "sena": 890,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 863,
+      "fechaReserva": "18/09/26",
+      "fechaSalida": "02/10/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "ASU-FOZ",
       "cliente": "Luiz Felipe Castro",
       "pais": "USA",
@@ -4287,6 +4315,20 @@
       "neto": 0,
       "fechaReserva": "01/09/26",
       "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "",
+      "cliente": "joao chaleira",
+      "pais": "España",
+      "conductor": "",
+      "pago": 125,
+      "sena": 125,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 121.25,
+      "fechaReserva": "17/09/26",
+      "fechaSalida": "08/11/26"
     },
     {
       "mes": "Septiembre",
@@ -4403,7 +4445,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-17": 1,
+      "2026-09-17": 11,
       "2026-09-16": 10,
       "2026-09-15": 16,
       "2026-09-14": 21,
@@ -4460,17 +4502,19 @@
       "2026-09-02": 3,
       "2026-09-01": 7,
       "2026-09-03": 4,
-      "2026-09-16": 1,
       "2026-09-05": 1,
       "2026-09-07": 2,
       "2026-09-08": 3,
       "2026-09-10": 2,
       "2026-09-14": 2,
       "2026-09-15": 1,
+      "2026-09-16": 1,
+      "2026-09-17": 2,
       "2026-09-13": 1,
       "2026-09-12": 1,
       "2026-09-04": 2,
-      "2026-09-09": 3
+      "2026-09-09": 3,
+      "2026-09-18": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -4718,7 +4762,9 @@
       "2026-09-13": 7.81,
       "2026-09-14": 9.11,
       "2026-09-15": 15.45,
-      "2026-09-16": 15.35
+      "2026-09-16": 15.35,
+      "2026-09-17": 10.18,
+      "2026-09-18": 1.47
     }
   },
   "argentina": {

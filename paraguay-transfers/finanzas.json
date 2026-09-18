@@ -1,19 +1,19 @@
 {
- "generated": "2026-09-18T00:30:07.526Z",
+ "generated": "2026-09-18T10:20:09.986Z",
  "tc": 5930,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-17",
+  "fecha": "2026-09-18",
   "itauGs": 43605,
   "uenoGs": 24609376,
   "uenoFecha": "2026-09-16",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 3321.63,
+  "stripeDisponible": 3320.95,
   "stripePendiente": 2427.2,
-  "pagoparPendienteUsd": 8126.98,
+  "pagoparPendienteUsd": 9065.09,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -235,6 +235,17 @@
    },
    "neto": 324.87,
    "acum": 4792.13
+  },
+  {
+   "fecha": "2026-09-18",
+   "in": 938.11,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 938.11
+   },
+   "neto": 938.11,
+   "acum": 5730.24
   }
  ],
  "movimientos": [
@@ -539,6 +550,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Joao Chaleira",
    "gs": 782000
+  },
+  {
+   "d": "2026-09-18",
+   "t": "in",
+   "usd": 938.11,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Kenny Dudek",
+   "gs": 5563000
   },
   {
    "d": "2026-09-02",
@@ -972,12 +991,12 @@
     "total": 104.77
    },
    "marketing": {
-    "google": 213.95,
+    "google": 218.18,
     "meta": 279.12,
-    "total": 493.07
+    "total": 497.3
    },
    "impuestos": null,
-   "resultado": 4198.77,
+   "resultado": 4194.54,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -997,8 +1016,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 29,
-   "bruto": 8126.96,
+   "cobros": 30,
+   "bruto": 9065.07,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1013,8 +1032,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 48193000,
-  "cobradoUsd": 8126.96,
+  "cobradoGs": 53756000,
+  "cobradoUsd": 9065.07,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1099,6 +1118,12 @@
     "cobros": 2,
     "gs": 1772000,
     "usd": 298.82
+   },
+   {
+    "fecha": "2026-09-18",
+    "cobros": 1,
+    "gs": 5563000,
+    "usd": 938.11
    }
   ],
   "pruebasExcluidas": 0,
@@ -1106,8 +1131,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 48193000,
-  "pendienteUsd": 8126.98
+  "pendienteGs": 53756000,
+  "pendienteUsd": 9065.09
  },
  "giros": [
   {
@@ -1202,11 +1227,11 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲48.2 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲53.8 millones cobrados por Pagopar sin acreditar."
   },
   {
    "nivel": "warn",
-   "texto": "$3,322 disponibles en Stripe sin girar."
+   "texto": "$3,321 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
