@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T13:10:24.913Z",
+ "generated": "2026-09-18T11:10:21.657Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95564
+   "ultimoKm": 95665
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -48,9 +48,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 2538,
-   "kmFuera": 114,
+   "kmFuera": 215,
    "viajes": 6,
-   "costoComb": 3322956,
+   "costoComb": 3449509,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 22,
-   "conFoto": 22
+   "lecturas": 23,
+   "conFoto": 23
   },
   {
    "chofer": "Gustavo",
@@ -84,14 +84,14 @@
    "choferes": [
     "Alfredo"
    ],
-   "fechaIni": "2026-09-17",
-   "fechaFin": "2026-09-17",
-   "horaIni": "09:41",
+   "fechaIni": "2026-09-18",
+   "fechaFin": "2026-09-18",
+   "horaIni": "07:47",
    "horaFin": null,
-   "kmIni": 95564,
+   "kmIni": 95665,
    "kmFin": null,
    "km": null,
-   "tanqueIni": 0.9,
+   "tanqueIni": 0.6,
    "tanqueFin": null,
    "traslados": [
     "Vehiculo a disposición"
@@ -99,19 +99,13 @@
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
-   "combustibleCargado": 500000,
+   "combustibleCargado": null,
    "combustibleCorresponde": null,
-   "cargas": [
-    {
-     "fecha": "2026-09-17",
-     "gs": 500000,
-     "litros": 48.08
-    }
-   ],
+   "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
    "abierto": true,
-   "inferido": true
+   "inferido": false
   },
   {
    "vehiculo": "H1",
@@ -412,6 +406,18 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 95564,
+   "hasta": 95665,
+   "km": 101,
+   "fechaDesde": "2026-09-17",
+   "fechaHasta": "2026-09-18",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
    "desde": 95562,
    "hasta": 95564,
    "km": 2,
@@ -641,14 +647,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-09-17",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-09-18",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -706,6 +704,20 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:95564:95665",
+   "nivel": "juan",
+   "texto": "H1: 101 km sin traslado entre el 17/09 (km 95.564, Alfredo) y el 18/09 (km 95.665, Alfredo); no hubo km final.",
+   "ts": 1789728477,
+   "fecha": "2026-09-18"
+  },
+  {
+   "key": "sinkm:Luis:2026-09-17:Asu-Aero",
+   "nivel": "grupo",
+   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado Asu-Aero del 17/09. Mandalas con el número escrito, por favor.",
+   "ts": 1789700399,
+   "fecha": "2026-09-17"
+  },
   {
    "key": "hueco:H1:92116:92230",
    "nivel": "juan",
