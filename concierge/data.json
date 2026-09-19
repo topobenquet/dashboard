@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-18T10:21:29.709Z",
-  "lastSyncLabel": "18 Sep 2026",
+  "generated": "2026-09-19T10:21:40.428Z",
+  "lastSyncLabel": "19 Sep 2026",
   "year": 2026,
   "currentMonth": "Septiembre",
   "account": {
@@ -256,20 +256,20 @@
     {
       "mes": "Septiembre",
       "ym": "2026-09",
-      "spend": 3595.97,
-      "clicks": 1014,
-      "impr": 9116,
+      "spend": 3850.4,
+      "clicks": 1062,
+      "impr": 9515,
       "actions": {
         "Calls from ads": 23,
-        "Chat Lead": 197,
-        "Get a Callback": 239.8,
+        "Chat Lead": 209,
+        "Get a Callback": 245.9,
         "Local actions - Directions": 5,
+        "Local actions - Website visits": 4,
         "Not Qualified/Not Interested": 5,
-        "Local actions - Website visits": 3,
         "Local actions - Other engagements": 17,
         "Number Pool Calls": 3
       },
-      "contacto": 463,
+      "contacto": 481,
       "descartados": 5,
       "assessment": 0,
       "pipeline": 0,
@@ -4604,7 +4604,8 @@
         "Calls from ads": 2,
         "Chat Lead": 16,
         "Get a Callback": 17,
-        "Local actions - Directions": 2
+        "Local actions - Directions": 2,
+        "Local actions - Website visits": 1
       },
       "contacto": 35,
       "descartados": 0,
@@ -4637,10 +4638,10 @@
       "actions": {
         "Calls from ads": 4,
         "Chat Lead": 15,
-        "Get a Callback": 15.94,
+        "Get a Callback": 15.98,
         "Not Qualified/Not Interested": 1
       },
-      "contacto": 34.94,
+      "contacto": 34.98,
       "descartados": 1,
       "assessment": 0,
       "pipeline": 0,
@@ -4873,9 +4874,24 @@
       "leads": 0
     },
     "2026-09-18": {
-      "spend": 1.88,
+      "spend": 252.52,
+      "clicks": 48,
+      "impr": 409,
+      "actions": {
+        "Chat Lead": 12,
+        "Get a Callback": 5.97
+      },
+      "contacto": 17.97,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-09-19": {
+      "spend": 3.79,
       "clicks": 1,
-      "impr": 19,
+      "impr": 9,
       "actions": {},
       "contacto": 0,
       "descartados": 0,
@@ -4890,10 +4906,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 2139.82,
-      "clicks": 526,
-      "impr": 4771,
-      "contacto": 233,
+      "spend": 2292.42,
+      "clicks": 542,
+      "impr": 4862,
+      "contacto": 239,
       "descartados": 3,
       "assessment": 0,
       "pipeline": 0,
@@ -4904,10 +4920,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1061.49,
-      "clicks": 442,
-      "impr": 4014,
-      "contacto": 202,
+      "spend": 1119.51,
+      "clicks": 467,
+      "impr": 4266,
+      "contacto": 210,
       "descartados": 2,
       "assessment": 0,
       "pipeline": 0,
@@ -4918,10 +4934,10 @@
       "name": "Search Campaign Maryland Maximize Conversion Value",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 394.67,
-      "clicks": 46,
-      "impr": 331,
-      "contacto": 28,
+      "spend": 438.48,
+      "clicks": 53,
+      "impr": 387,
+      "contacto": 32,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5062,33 +5078,38 @@
       {
         "name": "Search Campaign Maryland",
         "status": "ENABLED",
-        "spend": 2139.82,
-        "clicks": 526,
-        "impr": 4771
+        "spend": 2292.42,
+        "clicks": 542,
+        "impr": 4862
       },
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1061.49,
-        "clicks": 442,
-        "impr": 4014
+        "spend": 1119.51,
+        "clicks": 467,
+        "impr": 4266
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
         "status": "ENABLED",
-        "spend": 394.67,
-        "clicks": 46,
-        "impr": 331
+        "spend": 438.48,
+        "clicks": 53,
+        "impr": 387
       }
     ]
   },
   "crm": {
     "source": "GHL",
     "daily": {
-      "2026-09-18": {
+      "2026-09-19": {
         "contacts": 1,
         "paid": 1,
         "opps": 1
+      },
+      "2026-09-18": {
+        "contacts": 6,
+        "paid": 5,
+        "opps": 5
       },
       "2026-09-17": {
         "contacts": 6,
@@ -6432,14 +6453,14 @@
       },
       {
         "ym": "2026-09",
-        "contacts": 144,
-        "paid": 137,
-        "opps": 137
+        "contacts": 150,
+        "paid": 142,
+        "opps": 142
       }
     ],
     "stages": {
       "2026-09": {
-        "New Leads": 131,
+        "New Leads": 136,
         "Not Qualified/Not Interested": 6
       },
       "2026-08": {
@@ -6510,11 +6531,11 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-09-18",
+    "lastContact": "2026-09-19",
     "totals": {
       "contactos": 2100,
       "opps": 2100,
-      "oppsPaid": 1886
+      "oppsPaid": 1885
     }
   },
   "monday": {
@@ -6523,12 +6544,11 @@
     "assessDaily": {
       "2026-07-15": 1,
       "2026-03-17": 2,
-      "2026-04-02": 3,
+      "2026-04-02": 2,
       "2026-04-17": 1,
       "2026-03-20": 1,
       "2026-05-05": 3,
       "2026-03-24": 2,
-      "2026-03-25": 1,
       "2026-03-26": 2,
       "2026-05-14": 4,
       "2026-04-29": 1,
@@ -6597,7 +6617,7 @@
       "2026-09-01": 5,
       "2026-08-31": 1,
       "2026-09-02": 1,
-      "2026-09-15": 2,
+      "2026-09-15": 1,
       "2026-09-11": 1,
       "2026-09-14": 1
     },
@@ -6610,15 +6630,15 @@
       },
       {
         "ym": "2026-03",
-        "items": 103,
-        "assessments": 10,
-        "cohortAssessed": 22
+        "items": 102,
+        "assessments": 9,
+        "cohortAssessed": 21
       },
       {
         "ym": "2026-04",
-        "items": 136,
-        "assessments": 13,
-        "cohortAssessed": 31
+        "items": 135,
+        "assessments": 12,
+        "cohortAssessed": 30
       },
       {
         "ym": "2026-05",
@@ -6640,14 +6660,14 @@
       },
       {
         "ym": "2026-08",
-        "items": 259,
+        "items": 258,
         "assessments": 25,
-        "cohortAssessed": 12
+        "cohortAssessed": 11
       },
       {
         "ym": "2026-09",
-        "items": 139,
-        "assessments": 21,
+        "items": 144,
+        "assessments": 20,
         "cohortAssessed": 5
       }
     ],
@@ -6658,13 +6678,13 @@
       },
       "2026-03": {
         "Not qualified/not interested": 84,
-        "POS developed": 8,
+        "POS developed": 7,
         "Waiting EDD": 7,
         "Has assessment scheduled": 3,
         "Additional information needed": 1
       },
       "2026-04": {
-        "POS developed": 8,
+        "POS developed": 7,
         "Not qualified/not interested": 110,
         "Waiting EDD": 13,
         "Has assessment scheduled": 3,
@@ -6672,10 +6692,10 @@
       },
       "2026-05": {
         "Has assessment scheduled": 4,
-        "Not qualified/not interested": 42,
+        "Not qualified/not interested": 43,
         "Waiting EDD": 5,
         "POS developed": 3,
-        "MAP referral pending": 5
+        "MAP referral pending": 4
       },
       "2026-06": {
         "POS developed": 7,
@@ -6687,9 +6707,9 @@
         "Private/AVCC": 1
       },
       "2026-07": {
-        "Not qualified/not interested": 192,
+        "Not qualified/not interested": 193,
         "Waiting EDD": 7,
-        "MAP referral pending": 30,
+        "MAP referral pending": 29,
         "POS developed": 1,
         "Additional information needed": 3,
         "Has assessment scheduled": 16
@@ -6697,18 +6717,18 @@
       "2026-08": {
         "Not qualified/not interested": 172,
         "MAP referral pending": 57,
-        "Has assessment scheduled": 9,
+        "Has assessment scheduled": 8,
         "POS developed": 2,
         "Waiting EDD": 4,
         "Additional information needed": 14,
         "New Leads": 1
       },
       "2026-09": {
-        "MAP referral pending": 26,
-        "Not qualified/not interested": 42,
-        "Additional information needed": 57,
+        "MAP referral pending": 25,
+        "Not qualified/not interested": 44,
+        "Additional information needed": 58,
         "Has assessment scheduled": 2,
-        "New Leads": 9,
+        "New Leads": 12,
         "POS developed": 1,
         "Waiting EDD": 2
       }
@@ -6725,13 +6745,13 @@
         "Not qualified/not interested": 87,
         "MAP referral pending": 74,
         "Waiting EDD": 16,
-        "Has assessment scheduled": 22,
-        "POS developed": 8,
+        "Has assessment scheduled": 21,
+        "POS developed": 7,
         "Additional information needed": 8
       },
       "2026-04": {
-        "POS developed": 9,
-        "Has assessment scheduled": 31,
+        "POS developed": 8,
+        "Has assessment scheduled": 30,
         "Not qualified/not interested": 113,
         "Additional information needed": 16,
         "MAP referral pending": 107,
@@ -6741,7 +6761,7 @@
       "2026-05": {
         "Has assessment scheduled": 16,
         "Waiting EDD": 12,
-        "Not qualified/not interested": 44,
+        "Not qualified/not interested": 45,
         "MAP referral pending": 51,
         "Additional information needed": 8,
         "POS developed": 3,
@@ -6757,7 +6777,7 @@
         "Private/AVCC": 1
       },
       "2026-07": {
-        "Not qualified/not interested": 192,
+        "Not qualified/not interested": 193,
         "Additional information needed": 171,
         "Waiting EDD": 15,
         "Has assessment scheduled": 28,
@@ -6769,16 +6789,16 @@
         "Not qualified/not interested": 175,
         "New Leads": 5,
         "POS developed": 5,
-        "Additional information needed": 165,
-        "MAP referral pending": 86,
-        "Has assessment scheduled": 12,
+        "Additional information needed": 164,
+        "MAP referral pending": 85,
+        "Has assessment scheduled": 11,
         "Waiting EDD": 7
       },
       "2026-09": {
         "MAP referral pending": 35,
-        "Additional information needed": 88,
-        "Not qualified/not interested": 45,
-        "New Leads": 10,
+        "Additional information needed": 91,
+        "Not qualified/not interested": 47,
+        "New Leads": 13,
         "Has assessment scheduled": 5,
         "POS developed": 1,
         "Waiting EDD": 2
@@ -6795,9 +6815,9 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1377,
-      "paid": 1139,
-      "logs": 2807
+      "items": 1384,
+      "paid": 1141,
+      "logs": 2814
     }
   }
 }
