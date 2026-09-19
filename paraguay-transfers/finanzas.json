@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T18:30:08.702Z",
+ "generated": "2026-09-19T20:30:16.031Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3320.84,
-  "stripePendiente": 2499.12,
+  "stripePendiente": 2563.83,
   "pagoparPendienteUsd": 9257.24,
   "relay": null,
   "binance": null,
@@ -252,18 +252,26 @@
   },
   {
    "fecha": "2026-09-19",
-   "in": 207.41,
+   "in": 275.41,
    "out": 90.91,
-   "n": 2,
+   "n": 3,
    "porFuente": {
+    "Stripe": 68,
     "Pagopar": 207.41,
     "WhatsApp · Pagos (Majo)": -90.91
    },
-   "neto": 116.5,
-   "acum": 5688.04
+   "neto": 184.5,
+   "acum": 5756.04
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-19",
+   "t": "in",
+   "usd": 68,
+   "fuente": "Stripe",
+   "det": "Payment for invoice 000181"
+  },
   {
    "d": "2026-09-13",
    "t": "in",
@@ -1033,26 +1041,26 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 50,
+   "traslados": 51,
    "ingresos": {
-    "planilla": 8090.06,
+    "planilla": 8158.06,
     "alohaSinFila": 0,
-    "total": 8090.06
+    "total": 8158.06
    },
    "directos": {
-    "chofer": 3507,
+    "chofer": 3527,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
     "otros": 50,
-    "total": 4334
+    "total": 4354
    },
-   "margenBruto": 3756.06,
+   "margenBruto": 3804.06,
    "cobro": {
-    "stripe": 96.45,
+    "stripe": 99.74,
     "aloha": null,
     "pagopar": null,
-    "total": 96.45
+    "total": 99.74
    },
    "estructura": {
     "seguro": 104.59,
@@ -1062,12 +1070,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 237.3,
+    "google": 237.81,
     "meta": 279.12,
-    "total": 516.42
+    "total": 516.93
    },
    "impuestos": null,
-   "resultado": 3038.6,
+   "resultado": 3082.8,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1079,10 +1087,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 7,
-   "bruto": 2197,
-   "comision": 96.45,
-   "pct": 4.39,
+   "cobros": 8,
+   "bruto": 2265,
+   "comision": 99.74,
+   "pct": 4.4,
    "nota": "medido cobro por cobro"
   },
   {
