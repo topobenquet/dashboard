@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T00:40:01.028Z",
+ "generated": "2026-09-19T11:10:14.257Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -647,22 +647,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-09-18",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-09-18",
-   "chofer": "Luis",
-   "vehiculo": "Voxy",
-   "ruta": "AERO-ASU",
-   "km": 40,
-   "adelanto": 46000
-  },
-  {
    "fecha": "2026-09-19",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -725,13 +709,6 @@
    "texto": "H1: 101 km sin traslado entre el 17/09 (km 95.564, Alfredo) y el 18/09 (km 95.665, Alfredo); no hubo km final.",
    "ts": 1789728477,
    "fecha": "2026-09-18"
-  },
-  {
-   "key": "sinkm:Luis:2026-09-17:Asu-Aero",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado Asu-Aero del 17/09. Mandalas con el número escrito, por favor.",
-   "ts": 1789700399,
-   "fecha": "2026-09-17"
   },
   {
    "key": "hueco:H1:92116:92230",
