@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T10:20:25.565Z",
+ "generated": "2026-09-19T12:30:51.038Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -249,6 +249,17 @@
    },
    "neto": 784,
    "acum": 5571.54
+  },
+  {
+   "fecha": "2026-09-19",
+   "in": 0,
+   "out": 90.91,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -90.91
+   },
+   "neto": -90.91,
+   "acum": 5480.63
   }
  ],
  "movimientos": [
@@ -857,6 +868,14 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Fernández - adicional 4hs vehículo a disposición Pax Pedro Goede",
    "gs": 480000
+  },
+  {
+   "d": "2026-09-19",
+   "t": "out",
+   "usd": 90.91,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "16/09 Traslado nocturno 300.000",
+   "gs": 540000
   },
   {
    "d": "2026-09-15",
