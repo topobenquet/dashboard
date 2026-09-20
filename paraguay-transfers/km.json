@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19T13:10:14.925Z",
+ "generated": "2026-09-20T11:10:17.515Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 26,
-   "conFoto": 26
+   "lecturas": 27,
+   "conFoto": 27
   },
   {
    "chofer": "Gustavo",
@@ -79,6 +79,32 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-20",
+   "fechaFin": "2026-09-20",
+   "horaIni": "07:55",
+   "horaFin": null,
+   "kmIni": 95730,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.55,
+   "tanqueFin": null,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -658,14 +684,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-09-19",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-09-22",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -678,6 +696,14 @@
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "Aero-Dazzler",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-23",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Aero-Asu",
    "km": 40,
    "adelanto": 55000
   },
@@ -707,13 +733,6 @@
   }
  ],
  "alertas": [
-  {
-   "key": "sinkm:Luis:2026-09-18:AERO-ASU",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado AERO-ASU del 18/09. Mandalas con el número escrito, por favor.",
-   "ts": 1789786799,
-   "fecha": "2026-09-18"
-  },
   {
    "key": "hueco:H1:95564:95665",
    "nivel": "juan",
