@@ -1,8 +1,8 @@
 {
- "generated": "2026-09-20T10:21:42.692Z",
- "today": "2026-09-20",
+ "generated": "2026-09-21T10:21:39.868Z",
+ "today": "2026-09-21",
  "launch": "2026-09-15",
- "daysLive": 6,
+ "daysLive": 7,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -23,9 +23,9 @@
  },
  "markets": {
   "Florida": {
-   "spend": 970.32,
-   "impr": 653,
-   "clicks": 82,
+   "spend": 1229.37,
+   "impr": 840,
+   "clicks": 106,
    "inquiries": 0,
    "form": 0,
    "search": 0,
@@ -37,9 +37,9 @@
    "value": 0,
    "callrailCalls": 0,
    "callrailQualified": 0,
-   "sessions": 72,
-   "avinodeSearches": 47,
-   "avinodeOpenForm": 27,
+   "sessions": 92,
+   "avinodeSearches": 61,
+   "avinodeOpenForm": 37,
    "avinodeInquiries": 0
   },
   "New York": {
@@ -114,11 +114,11 @@
    "market": "Florida",
    "slug": "charter-south-fl",
    "short": "South FL · local",
-   "spend": 637.36,
-   "impr": 497,
-   "clicks": 54,
+   "spend": 896.41,
+   "impr": 684,
+   "clicks": 78,
    "conv": 0,
-   "phoneImpr": 16,
+   "phoneImpr": 23,
    "phoneCalls": 0,
    "form": 0,
    "search": 0,
@@ -128,10 +128,10 @@
    "inquiries": 0,
    "share": {
     "status": "ENABLED",
-    "is": 0.6526508226691042,
-    "lostRank": 0.11882998171846434,
-    "lostBudget": 0.22851919561243145,
-    "top": 0.46983546617915906
+    "is": 0.684971098265896,
+    "lostRank": 0.13439306358381503,
+    "lostBudget": 0.18063583815028902,
+    "top": 0.5115606936416185
    }
   },
   {
@@ -178,10 +178,10 @@
    "inquiries": 0,
    "share": {
     "status": "PAUSED",
-    "is": 0.40652346857597454,
-    "lostRank": 0.08273667462211615,
-    "lostBudget": 0.5107398568019093,
-    "top": 0.2871917263325378
+    "is": 0.4074662430500397,
+    "lostRank": 0.08260524225575853,
+    "lostBudget": 0.5099285146942018,
+    "top": 0.2875297855440826
    }
   },
   {
@@ -295,6 +295,16 @@
      "inquiries": 0
     }
    }
+  },
+  {
+   "date": "2026-09-20",
+   "markets": {
+    "Florida": {
+     "spend": 259.05,
+     "clicks": 24,
+     "inquiries": 0
+    }
+   }
   }
  ],
  "keywords": [
@@ -303,10 +313,21 @@
    "campaign": "South FL · local",
    "market": "Florida",
    "adGroup": "Charter - Core",
-   "qs": 7,
-   "impr": 23,
-   "clicks": 5,
-   "spend": 92.05,
+   "qs": 8,
+   "impr": 37,
+   "clicks": 11,
+   "spend": 158.85,
+   "conv": 0
+  },
+  {
+   "kw": "private flights",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Charter - Core",
+   "qs": 6,
+   "impr": 59,
+   "clicks": 9,
+   "spend": 100.62,
    "conv": 0
   },
   {
@@ -376,23 +397,12 @@
    "conv": 0
   },
   {
-   "kw": "private flights",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Charter - Core",
-   "qs": 7,
-   "impr": 37,
-   "clicks": 4,
-   "spend": 39.8,
-   "conv": 0
-  },
-  {
    "kw": "private jet charter",
    "campaign": "South FL · local",
    "market": "Florida",
    "adGroup": "Charter - Core",
    "qs": 7,
-   "impr": 22,
+   "impr": 26,
    "clicks": 3,
    "spend": 39.36,
    "conv": 0
@@ -439,6 +449,17 @@
    "impr": 24,
    "clicks": 3,
    "spend": 35.19,
+   "conv": 0
+  },
+  {
+   "kw": "private jet quote",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Quote - Book",
+   "qs": null,
+   "impr": 29,
+   "clicks": 3,
+   "spend": 34.21,
    "conv": 0
   },
   {
@@ -497,6 +518,17 @@
    "conv": 0
   },
   {
+   "kw": "private jet charter quotes",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Quote - Book",
+   "qs": null,
+   "impr": 29,
+   "clicks": 2,
+   "spend": 27.99,
+   "conv": 0
+  },
+  {
    "kw": "private flight to florida",
    "campaign": "Florida · inbound",
    "market": "Florida",
@@ -513,7 +545,7 @@
    "market": "Florida",
    "adGroup": "Cities - Miami",
    "qs": null,
-   "impr": 13,
+   "impr": 15,
    "clicks": 2,
    "spend": 26.45,
    "conv": 0
@@ -549,6 +581,17 @@
    "impr": 27,
    "clicks": 2,
    "spend": 24.07,
+   "conv": 0
+  },
+  {
+   "kw": "charter flights",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Charter - Core",
+   "qs": 7,
+   "impr": 9,
+   "clicks": 3,
+   "spend": 23.96,
    "conv": 0
   },
   {
@@ -590,7 +633,7 @@
    "market": "Florida",
    "adGroup": "Charter - Core",
    "qs": 7,
-   "impr": 6,
+   "impr": 7,
    "clicks": 2,
    "spend": 21.38,
    "conv": 0
@@ -601,7 +644,7 @@
    "market": "Florida",
    "adGroup": "Charter - Core",
    "qs": null,
-   "impr": 19,
+   "impr": 22,
    "clicks": 2,
    "spend": 19.07,
    "conv": 0
@@ -662,17 +705,6 @@
    "conv": 0
   },
   {
-   "kw": "charter flights",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Charter - Core",
-   "qs": 6,
-   "impr": 3,
-   "clicks": 2,
-   "spend": 16.2,
-   "conv": 0
-  },
-  {
    "kw": "private jet rental",
    "campaign": "South FL · local",
    "market": "Florida",
@@ -684,12 +716,23 @@
    "conv": 0
   },
   {
+   "kw": "private jet charter palm beach",
+   "campaign": "South FL · local",
+   "market": "Florida",
+   "adGroup": "Cities - Palm Beach & Boca",
+   "qs": null,
+   "impr": 10,
+   "clicks": 1,
+   "spend": 15.43,
+   "conv": 0
+  },
+  {
    "kw": "private jet booking",
    "campaign": "South FL · local",
    "market": "Florida",
    "adGroup": "Quote - Book",
    "qs": null,
-   "impr": 11,
+   "impr": 13,
    "clicks": 1,
    "spend": 15,
    "conv": 0
@@ -704,45 +747,12 @@
    "clicks": 1,
    "spend": 14.99,
    "conv": 0
-  },
-  {
-   "kw": "private jet rental price",
-   "campaign": "South FL · local",
-   "market": "Florida",
-   "adGroup": "Pricing",
-   "qs": null,
-   "impr": 10,
-   "clicks": 1,
-   "spend": 14.97,
-   "conv": 0
-  },
-  {
-   "kw": "jet charter cost",
-   "campaign": "NYC · local",
-   "market": "New York",
-   "adGroup": "Pricing",
-   "qs": 5,
-   "impr": 4,
-   "clicks": 1,
-   "spend": 14.86,
-   "conv": 0
-  },
-  {
-   "kw": "private jet charter fort lauderdale",
-   "campaign": "Florida · inbound",
-   "market": "Florida",
-   "adGroup": "Inbound - Fort Lauderdale",
-   "qs": 5,
-   "impr": 4,
-   "clicks": 1,
-   "spend": 14.79,
-   "conv": 0
   }
  ],
  "terms": [
   {
    "term": "business jet",
-   "impr": 52,
+   "impr": 63,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
@@ -754,9 +764,9 @@
   },
   {
    "term": "private jet cost",
-   "impr": 41,
-   "clicks": 1,
-   "spend": 8.77,
+   "impr": 58,
+   "clicks": 4,
+   "spend": 41.63,
    "conv": 0,
    "markets": [
     "Florida",
@@ -766,9 +776,9 @@
   },
   {
    "term": "private jet flights",
-   "impr": 38,
-   "clicks": 10,
-   "spend": 141.14,
+   "impr": 52,
+   "clicks": 16,
+   "spend": 207.94,
    "conv": 0,
    "markets": [
     "Florida",
@@ -778,7 +788,7 @@
   },
   {
    "term": "private jet charter",
-   "impr": 37,
+   "impr": 41,
    "clicks": 5,
    "spend": 68.29,
    "conv": 0,
@@ -814,6 +824,18 @@
    "excluded": false
   },
   {
+   "term": "charter flights",
+   "impr": 22,
+   "clicks": 5,
+   "spend": 52.9,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
    "term": "private jet",
    "impr": 22,
    "clicks": 0,
@@ -838,10 +860,10 @@
    "excluded": false
   },
   {
-   "term": "charter flights",
-   "impr": 17,
-   "clicks": 4,
-   "spend": 45.14,
+   "term": "private flights",
+   "impr": 15,
+   "clicks": 5,
+   "spend": 55.88,
    "conv": 0,
    "markets": [
     "Florida",
@@ -850,10 +872,10 @@
    "excluded": false
   },
   {
-   "term": "private flights",
-   "impr": 13,
-   "clicks": 3,
-   "spend": 34.28,
+   "term": "private charter flights",
+   "impr": 14,
+   "clicks": 2,
+   "spend": 25.1,
    "conv": 0,
    "markets": [
     "Florida",
@@ -863,9 +885,45 @@
   },
   {
    "term": "private flight",
-   "impr": 12,
+   "impr": 13,
    "clicks": 2,
    "spend": 23.26,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "charter plane",
+   "impr": 12,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet prices",
+   "impr": 10,
+   "clicks": 3,
+   "spend": 45.49,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private plane charter",
+   "impr": 10,
+   "clicks": 0,
+   "spend": 0,
    "conv": 0,
    "markets": [
     "Florida",
@@ -886,33 +944,10 @@
    "excluded": false
   },
   {
-   "term": "private jet prices",
-   "impr": 9,
-   "clicks": 3,
-   "spend": 45.49,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "private charter flights",
+   "term": "private jet companies",
    "impr": 9,
    "clicks": 2,
-   "spend": 25.1,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "charter plane",
-   "impr": 8,
-   "clicks": 0,
-   "spend": 0,
+   "spend": 17.88,
    "conv": 0,
    "markets": [
     "Florida",
@@ -955,6 +990,30 @@
    "excluded": false
   },
   {
+   "term": "fly private",
+   "impr": 7,
+   "clicks": 3,
+   "spend": 30.53,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet charter cost",
+   "impr": 7,
+   "clicks": 1,
+   "spend": 10.71,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
    "term": "private charter to bahamas",
    "impr": 7,
    "clicks": 0,
@@ -978,7 +1037,7 @@
    "excluded": false
   },
   {
-   "term": "private jet companies",
+   "term": "private charter",
    "impr": 7,
    "clicks": 0,
    "spend": 0,
@@ -1037,6 +1096,18 @@
    "excluded": false
   },
   {
+   "term": "jet charter",
+   "impr": 6,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
    "term": "jet flight",
    "impr": 6,
    "clicks": 0,
@@ -1049,14 +1120,13 @@
    "excluded": false
   },
   {
-   "term": "private plane charter",
+   "term": "jets miami",
    "impr": 6,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
-    "Florida",
-    "New York"
+    "Florida"
    ],
    "excluded": false
   },
@@ -1076,18 +1146,6 @@
    "impr": 5,
    "clicks": 3,
    "spend": 57.83,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "fly private",
-   "impr": 5,
-   "clicks": 2,
-   "spend": 20.28,
    "conv": 0,
    "markets": [
     "Florida",
@@ -1118,7 +1176,18 @@
    "excluded": false
   },
   {
-   "term": "jet charter",
+   "term": "private charter flight",
+   "impr": 5,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private plane cost",
    "impr": 5,
    "clicks": 0,
    "spend": 0,
@@ -1165,10 +1234,21 @@
    "excluded": false
   },
   {
-   "term": "private jet charter cost",
-   "impr": 5,
-   "clicks": 0,
-   "spend": 0,
+   "term": "palm beach jets",
+   "impr": 4,
+   "clicks": 1,
+   "spend": 15.43,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "flying private cost",
+   "impr": 4,
+   "clicks": 1,
+   "spend": 13.71,
    "conv": 0,
    "markets": [
     "Florida",
@@ -1188,10 +1268,32 @@
    "excluded": false
   },
   {
+   "term": "private jet rental cost",
+   "impr": 4,
+   "clicks": 2,
+   "spend": 13.41,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
    "term": "private flight to miami",
    "impr": 4,
    "clicks": 2,
    "spend": 13.14,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private plane flights",
+   "impr": 4,
+   "clicks": 1,
+   "spend": 9,
    "conv": 0,
    "markets": [
     "Florida"
@@ -1211,7 +1313,18 @@
    "excluded": true
   },
   {
-   "term": "private jet costs",
+   "term": "chartered flight",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "jet flights",
    "impr": 4,
    "clicks": 0,
    "spend": 0,
@@ -1223,13 +1336,26 @@
    "excluded": false
   },
   {
-   "term": "jets miami",
+   "term": "private charter plane",
    "impr": 4,
    "clicks": 0,
    "spend": 0,
    "conv": 0,
    "markets": [
-    "Florida"
+    "Florida",
+    "New York"
+   ],
+   "excluded": false
+  },
+  {
+   "term": "private jet costs",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "markets": [
+    "Florida",
+    "New York"
    ],
    "excluded": false
   },
@@ -1320,121 +1446,6 @@
     "Florida"
    ],
    "excluded": false
-  },
-  {
-   "term": "jet charters",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 14.82,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "jets cost",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 14.7,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "plane charter",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 14.54,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "private jet orlando to miami",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 14.37,
-   "conv": 0,
-   "markets": [
-    "Florida"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "charter plane cost",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 13.78,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "cost of flying private",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 11.71,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "rent a jet",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 8.98,
-   "conv": 0,
-   "markets": [
-    "Florida",
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "chartered flight costs",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 8.88,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "private jet to new york",
-   "impr": 3,
-   "clicks": 1,
-   "spend": 8.88,
-   "conv": 0,
-   "markets": [
-    "New York"
-   ],
-   "excluded": false
-  },
-  {
-   "term": "charter a private flight",
-   "impr": 3,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "markets": [
-    "Brand",
-    "Florida"
-   ],
-   "excluded": false
   }
  ],
  "hours": [
@@ -1482,9 +1493,9 @@
   },
   {
    "h": 7,
-   "clicks": 0,
+   "clicks": 1,
    "conv": 0,
-   "spend": 0
+   "spend": 8.7
   },
   {
    "h": 8,
@@ -1494,27 +1505,27 @@
   },
   {
    "h": 9,
-   "clicks": 10,
+   "clicks": 11,
    "conv": 0,
-   "spend": 117.75
+   "spend": 126.75
   },
   {
    "h": 10,
-   "clicks": 4,
+   "clicks": 5,
    "conv": 0,
-   "spend": 39.47
+   "spend": 46.89
   },
   {
    "h": 11,
-   "clicks": 14,
+   "clicks": 15,
    "conv": 0,
-   "spend": 178.11
+   "spend": 199.45
   },
   {
    "h": 12,
-   "clicks": 6,
+   "clicks": 9,
    "conv": 0,
-   "spend": 80.6
+   "spend": 101.26
   },
   {
    "h": 13,
@@ -1524,57 +1535,57 @@
   },
   {
    "h": 14,
-   "clicks": 13,
+   "clicks": 14,
    "conv": 0,
-   "spend": 180.3
+   "spend": 197.96
   },
   {
    "h": 15,
-   "clicks": 14,
+   "clicks": 18,
    "conv": 0,
-   "spend": 165.44
+   "spend": 219.46
   },
   {
    "h": 16,
-   "clicks": 10,
+   "clicks": 11,
    "conv": 0,
-   "spend": 127.08
+   "spend": 135.86
   },
   {
    "h": 17,
-   "clicks": 10,
+   "clicks": 11,
    "conv": 0,
-   "spend": 106.28
+   "spend": 116.88
   },
   {
    "h": 18,
-   "clicks": 8,
+   "clicks": 11,
    "conv": 0,
-   "spend": 72.58
+   "spend": 101.17
   },
   {
    "h": 19,
-   "clicks": 11,
+   "clicks": 12,
    "conv": 0,
-   "spend": 132.37
+   "spend": 136.71
   },
   {
    "h": 20,
-   "clicks": 9,
+   "clicks": 10,
    "conv": 0,
-   "spend": 129.7
+   "spend": 146.36
   },
   {
    "h": 21,
-   "clicks": 7,
+   "clicks": 9,
    "conv": 0,
-   "spend": 77.52
+   "spend": 96.71
   },
   {
    "h": 22,
-   "clicks": 4,
+   "clicks": 7,
    "conv": 0,
-   "spend": 38.37
+   "spend": 70.46
   },
   {
    "h": 23,
@@ -1585,22 +1596,22 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 387,
-   "clicks": 41,
+   "impr": 415,
+   "clicks": 46,
    "conv": 0,
-   "spend": 626.66
+   "spend": 712.51
   },
   "MOBILE": {
-   "impr": 852,
-   "clicks": 101,
+   "impr": 1006,
+   "clicks": 119,
    "conv": 0,
-   "spend": 1102.85
+   "spend": 1258.39
   },
   "TABLET": {
-   "impr": 10,
-   "clicks": 0,
+   "impr": 15,
+   "clicks": 1,
    "conv": 0,
-   "spend": 0
+   "spend": 17.66
   }
  },
  "callrail": {
@@ -1719,6 +1730,23 @@
   "host": "fly.charterjetsinc.com",
   "pages": [
    {
+    "path": "/florida",
+    "market": "Florida",
+    "sessions": 82,
+    "engaged": 61,
+    "engagementSec": 888,
+    "users": 77,
+    "search": 49,
+    "openForm": 34,
+    "inquiry": 0,
+    "ads": {
+     "sessions": 74,
+     "search": 48,
+     "openForm": 33,
+     "inquiry": 0
+    }
+   },
+   {
     "path": "/nyc",
     "market": "New York",
     "sessions": 82,
@@ -1731,23 +1759,6 @@
     "ads": {
      "sessions": 71,
      "search": 40,
-     "openForm": 23,
-     "inquiry": 0
-    }
-   },
-   {
-    "path": "/florida",
-    "market": "Florida",
-    "sessions": 62,
-    "engaged": 43,
-    "engagementSec": 365,
-    "users": 57,
-    "search": 35,
-    "openForm": 24,
-    "inquiry": 0,
-    "ads": {
-     "sessions": 54,
-     "search": 34,
      "openForm": 23,
      "inquiry": 0
     }
@@ -1772,15 +1783,15 @@
    {
     "path": "/",
     "market": null,
-    "sessions": 13,
+    "sessions": 17,
     "engaged": 8,
-    "engagementSec": 151,
-    "users": 11,
+    "engagementSec": 160,
+    "users": 15,
     "search": 5,
     "openForm": 3,
     "inquiry": 1,
     "ads": {
-     "sessions": 2,
+     "sessions": 5,
      "search": 2,
      "openForm": 0,
      "inquiry": 0
@@ -1824,12 +1835,12 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 146,
-    "engaged": 107
+    "sessions": 169,
+    "engaged": 125
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 26,
+    "sessions": 27,
     "engaged": 6
    },
    {
@@ -1873,6 +1884,11 @@
     "date": "2026-09-19",
     "sessions": 28,
     "ads": 24
+   },
+   {
+    "date": "2026-09-20",
+    "sessions": 24,
+    "ads": 23
    }
   ]
  },
@@ -2100,24 +2116,24 @@
    "clicks": 1
   },
   {
-   "term": "private jet to nyc",
-   "impr": 2,
-   "clicks": 1
+   "term": "private jet from miami to new york",
+   "impr": 3,
+   "clicks": 0
   }
  ],
  "weekly": {
   "current": {
-   "from": "2026-09-13",
-   "to": "2026-09-19",
-   "spend": 1729.51,
-   "clicks": 142,
-   "impr": 1249,
+   "from": "2026-09-14",
+   "to": "2026-09-20",
+   "spend": 1988.56,
+   "clicks": 166,
+   "impr": 1436,
    "inquiries": 0,
-   "sessions": 146
+   "sessions": 169
   },
   "previous": {
-   "from": "2026-09-06",
-   "to": "2026-09-12",
+   "from": "2026-09-07",
+   "to": "2026-09-13",
    "spend": 0,
    "clicks": 0,
    "impr": 0,
@@ -2129,13 +2145,13 @@
  },
  "pacing": {
   "month": "2026-09",
-  "spentToDate": 1729.51,
-  "avgDaily": 345.9,
-  "daysLeft": 11,
-  "projected": 5534.43,
+  "spentToDate": 1988.56,
+  "avgDaily": 331.43,
+  "daysLeft": 10,
+  "projected": 5302.83,
   "plan": 5248,
   "planDays": 16,
-  "basedOnDays": 5
+  "basedOnDays": 6
  },
  "ads": {
   "daily": {
@@ -2434,6 +2450,21 @@
      "quoted": 0,
      "booked": 0
     }
+   },
+   "2026-09-20": {
+    "Search | Charter | South FL": {
+     "spend": 259.05,
+     "impr": 187,
+     "clicks": 24,
+     "conv": 0,
+     "phoneImpr": 7,
+     "phoneCalls": 0,
+     "form": 0,
+     "search": 0,
+     "call": 0,
+     "quoted": 0,
+     "booked": 0
+    }
    }
   },
   "share": {
@@ -2446,10 +2477,10 @@
    },
    "Search | Charter | South FL": {
     "status": "ENABLED",
-    "is": 0.6526508226691042,
-    "lostRank": 0.11882998171846434,
-    "lostBudget": 0.22851919561243145,
-    "top": 0.46983546617915906
+    "is": 0.684971098265896,
+    "lostRank": 0.13439306358381503,
+    "lostBudget": 0.18063583815028902,
+    "top": 0.5115606936416185
    },
    "Search | Charter | FL Inbound": {
     "status": "PAUSED",
@@ -2460,10 +2491,10 @@
    },
    "Search | Charter | NYC": {
     "status": "PAUSED",
-    "is": 0.40652346857597454,
-    "lostRank": 0.08273667462211615,
-    "lostBudget": 0.5107398568019093,
-    "top": 0.2871917263325378
+    "is": 0.4074662430500397,
+    "lostRank": 0.08260524225575853,
+    "lostBudget": 0.5099285146942018,
+    "top": 0.2875297855440826
    },
    "Search | Charter | NYC Inbound": {
     "status": "PAUSED",
