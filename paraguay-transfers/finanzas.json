@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21T12:30:21.661Z",
+ "generated": "2026-09-21T14:30:19.874Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -273,6 +273,17 @@
    },
    "neto": -202.02,
    "acum": 5554.02
+  },
+  {
+   "fecha": "2026-09-21",
+   "in": 303.03,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Transferencia": 303.03
+   },
+   "neto": 303.03,
+   "acum": 5857.05
   }
  ],
  "movimientos": [
@@ -930,6 +941,14 @@
    "gs": 687000
   },
   {
+   "d": "2026-09-21",
+   "t": "in",
+   "usd": 303.03,
+   "fuente": "Transferencia",
+   "det": "Tania Josefina Storm Escobar Y/o Jorge Guzman Roman Colarte (comprobante en Pagos (Majo))",
+   "gs": 1800000
+  },
+  {
    "d": "2026-09-01",
    "t": "out",
    "usd": 50.51,
@@ -1060,7 +1079,7 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 56,
+   "traslados": 57,
    "ingresos": {
     "planilla": 8158.06,
     "alohaSinFila": 0,
@@ -1089,12 +1108,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 254.98,
+    "google": 256.44,
     "meta": 279.12,
-    "total": 534.1
+    "total": 535.56
    },
    "impuestos": null,
-   "resultado": 2868.63,
+   "resultado": 2867.17,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
