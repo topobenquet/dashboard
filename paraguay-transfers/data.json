@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-20T10:20:47.083Z",
-  "lastSyncLabel": "20 Sep 2026",
+  "generated": "2026-09-21T10:20:42.092Z",
+  "lastSyncLabel": "21 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 199,
+      "leads": 205,
       "reservas": 40,
       "revenue": 12201,
-      "chofer": 5658,
+      "chofer": 5855,
       "comb": 622,
       "peajes": 115,
       "comision": 266.75,
       "reembolsos": 13,
       "otros": 37,
-      "gAds": 244,
+      "gAds": 251,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 243.89,
-      "clicks": 248,
-      "impr": 1395,
-      "conv": 14
+      "spend": 250.88,
+      "clicks": 270,
+      "impr": 1493,
+      "conv": 21
     }
   ],
   "trips": [
@@ -4108,7 +4108,7 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
+      "route": "Tour Asu -  desde Crowne Plaza",
       "cliente": "mk",
       "pais": "UK",
       "conductor": "",
@@ -4122,6 +4122,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "Aeropuerto Silvio Pettirossi→ Planta Emergent Cold LATAM (Remansito) → Hotel Dazzler Asunción",
+      "cliente": "Fernando",
+      "pais": "",
+      "conductor": "José Berdén",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 197,
+      "neto": 0,
+      "fechaReserva": "",
+      "fechaSalida": "21/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Aero-Yacht",
       "cliente": "Alex",
       "pais": "Alemania",
@@ -4132,6 +4146,20 @@
       "choferCost": 0,
       "neto": 482,
       "fechaReserva": "13/09/26",
+      "fechaSalida": "22/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Hotel Dazzler → Planta Emergent Cold LATAM → Hotel Dazzler.",
+      "cliente": "Fernando",
+      "pais": "",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "",
       "fechaSalida": "22/09/26"
     },
     {
@@ -4487,7 +4515,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-20": 4,
+      "2026-09-21": 3,
+      "2026-09-20": 7,
       "2026-09-19": 9,
       "2026-09-18": 3,
       "2026-09-17": 11,
@@ -4812,13 +4841,14 @@
       "2026-09-17": 10.18,
       "2026-09-18": 14.84,
       "2026-09-19": 8.39,
-      "2026-09-20": 3.95
+      "2026-09-20": 10.94,
+      "2026-09-21": 0
     }
   },
   "resenas": {
     "count": 61,
     "rating": 5,
-    "actualizado": "2026-09-19T23:10:06.011Z",
+    "actualizado": "2026-09-20T23:10:04.576Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -4827,6 +4857,11 @@
       },
       {
         "fecha": "2026-09-19",
+        "count": 61,
+        "rating": 5
+      },
+      {
+        "fecha": "2026-09-20",
         "count": 61,
         "rating": 5
       }
