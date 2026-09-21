@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20T22:30:06.022Z",
+ "generated": "2026-09-21T00:30:21.897Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -11,8 +11,8 @@
   "uenoFecha": "2026-09-18",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 3320.77,
-  "stripePendiente": 2563.83,
+  "stripeDisponible": 5747.97,
+  "stripePendiente": 136.63,
   "pagoparPendienteUsd": 9257.24,
   "relay": null,
   "binance": null,
@@ -262,6 +262,17 @@
    },
    "neto": 184.5,
    "acum": 5756.04
+  },
+  {
+   "fecha": "2026-09-20",
+   "in": 0,
+   "out": 202.02,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -202.02
+   },
+   "neto": -202.02,
+   "acum": 5554.02
   }
  ],
  "movimientos": [
@@ -895,6 +906,14 @@
    "gs": 540000
   },
   {
+   "d": "2026-09-20",
+   "t": "out",
+   "usd": 202.02,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver José Berden. Traslados varios Frigorífico Modelo. Emergent Cold LATAM",
+   "gs": 1200000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 205.62,
@@ -1041,21 +1060,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 51,
+   "traslados": 53,
    "ingresos": {
     "planilla": 8158.06,
     "alohaSinFila": 0,
     "total": 8158.06
    },
    "directos": {
-    "chofer": 3527,
+    "chofer": 3724,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
     "otros": 50,
-    "total": 4354
+    "total": 4551
    },
-   "margenBruto": 3804.06,
+   "margenBruto": 3607.06,
    "cobro": {
     "stripe": 99.74,
     "aloha": null,
@@ -1070,12 +1089,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 248.63,
+    "google": 249.92,
     "meta": 279.12,
-    "total": 527.75
+    "total": 529.04
    },
    "impuestos": null,
-   "resultado": 3071.98,
+   "resultado": 2873.69,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1316,7 +1335,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "$3,321 disponibles en Stripe sin girar."
+   "texto": "$5,748 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
