@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21T10:20:08.875Z",
+ "generated": "2026-09-21T12:30:21.661Z",
  "tc": 5940,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-09-21",
   "itauGs": 43605,
-  "uenoGs": 20784126,
-  "uenoFecha": "2026-09-18",
+  "uenoGs": 29151220,
+  "uenoFecha": "2026-09-21",
   "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 5747.97,
@@ -1060,7 +1060,7 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 53,
+   "traslados": 56,
    "ingresos": {
     "planilla": 8158.06,
     "alohaSinFila": 0,
@@ -1089,12 +1089,12 @@
     "total": 104.59
    },
    "marketing": {
-    "google": 250.88,
+    "google": 254.98,
     "meta": 279.12,
-    "total": 530
+    "total": 534.1
    },
    "impuestos": null,
-   "resultado": 2872.73,
+   "resultado": 2868.63,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1556,6 +1556,13 @@
    "momento": "inicio",
    "gs": 20784126,
    "usd": 3499.01
+  },
+  {
+   "fecha": "2026-09-21",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 29151220,
+   "usd": 4907.61
   }
  ]
 }
