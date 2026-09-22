@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T14:30:40.480Z",
+ "generated": "2026-09-22T16:30:25.102Z",
  "tc": 5930,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 5810.48,
   "stripePendiente": 2285.53,
-  "pagoparPendienteUsd": 9431.03,
+  "pagoparPendienteUsd": 9482.8,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -288,14 +288,15 @@
   },
   {
    "fecha": "2026-09-22",
-   "in": 0,
+   "in": 51.77,
    "out": 60.71,
-   "n": 1,
+   "n": 2,
    "porFuente": {
+    "Pagopar": 51.77,
     "WhatsApp · Pagos (Majo)": -60.71
    },
-   "neto": -60.71,
-   "acum": 5960.82
+   "neto": -8.94,
+   "acum": 6012.59
   }
  ],
  "movimientos": [
@@ -631,6 +632,14 @@
    "fuente": "Pagopar",
    "det": "PIX · Decio",
    "gs": 938000
+  },
+  {
+   "d": "2026-09-22",
+   "t": "in",
+   "usd": 51.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · May Chin",
+   "gs": 307000
   },
   {
    "d": "2026-09-02",
@@ -1136,12 +1145,12 @@
     "total": 104.77
    },
    "marketing": {
-    "google": 278.56,
+    "google": 279.85,
     "meta": 279.12,
-    "total": 557.68
+    "total": 558.97
    },
    "impuestos": null,
-   "resultado": 2844.87,
+   "resultado": 2843.58,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1161,8 +1170,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 32,
-   "bruto": 9431.01,
+   "cobros": 33,
+   "bruto": 9482.78,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1177,8 +1186,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 55926000,
-  "cobradoUsd": 9431.01,
+  "cobradoGs": 56233000,
+  "cobradoUsd": 9482.78,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1281,6 +1290,12 @@
     "cobros": 1,
     "gs": 938000,
     "usd": 158.18
+   },
+   {
+    "fecha": "2026-09-22",
+    "cobros": 1,
+    "gs": 307000,
+    "usd": 51.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -1288,8 +1303,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 55926000,
-  "pendienteUsd": 9431.03
+  "pendienteGs": 56233000,
+  "pendienteUsd": 9482.8
  },
  "giros": [
   {
@@ -1384,7 +1399,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲55.9 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲56.2 millones cobrados por Pagopar sin acreditar."
   },
   {
    "nivel": "warn",
