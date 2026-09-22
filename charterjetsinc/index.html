@@ -158,6 +158,15 @@ function donut(parts){ // [{label,value,color}]
 }
 
 fetch('data.json?v='+Date.now()).then(r=>r.json()).then(async d=>{
+  // data.json se pide siempre fresco, pero este index.html lo cachea el navegador 10 minutos.
+  // Si cambia la estructura del json, el html viejo choca contra el json nuevo y rompe con un
+  // error incomprensible. Cuando falta lo que esta version espera, recargo una sola vez con otra
+  // URL (otra clave de cache) para traer el html nuevo.
+  if(!d||!d.account){
+    const u=new URL(location.href);
+    if(!u.searchParams.has('r')){u.searchParams.set('r',Date.now());location.replace(u.toString());return}
+    throw new Error('This page was loaded from an old cached copy. Please refresh with Cmd+Shift+R (Ctrl+F5 on Windows).');
+  }
   let clarity=null; try{clarity=await (await fetch('clarity-history.json?v='+Date.now())).json()}catch(e){}
   render(d,clarity);
 }).catch(e=>{$('#root').innerHTML=`<div class="empty">Could not load data: ${esc(e.message)}</div>`});
