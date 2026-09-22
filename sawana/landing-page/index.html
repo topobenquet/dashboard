@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oficjalne expose | Wille inwestycyjne na Bali | Sawana Developments</title>
+<meta name="description" content="Willa na Bali od 159 000 EUR. 9-11% netto rocznie w euro. Odbierz oficjalne expose z cenami i wyliczeniem zwrotu.">
+<meta name="robots" content="noindex">
+
+<!-- ============================================================
+     CONFIG. Lo unico que hay que tocar para poner esto en vivo.
+     GHL_WEBHOOK: Workflows > New Workflow > Trigger "Inbound Webhook"
+     > copiar la URL y pegarla aca. Recibe {phone, source, utm_*}.
+     ============================================================ -->
+<script>
+window.SAWANA = {
+  GHL_WEBHOOK: "",              // <-- pegar aca la URL del inbound webhook de GHL
+  THANKS_HEADLINE: "Gotowe. Expose jest w drodze.",
+  THANKS_BODY: "PDF przyjdzie SMS-em w ciagu minuty. Zadzwonimy w ciagu 24 godzin, zeby odpowiedziec na pytania."
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0A0F0D; --ink-2:#121A17;
+  --paper:#F7F4EE; --paper-2:#EFEAE0;
+  --gold:#C0A472; --gold-soft:#D8C094;
+  --muted:#7C8480; --line:rgba(10,15,13,.12);
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:var(--pad)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+  padding-block:calc(env(safe-area-inset-top,0px) + 40px) 56px;color:#fff;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:url("img/hero.jpg") center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(105deg,rgba(6,11,9,.93) 0%,rgba(6,11,9,.80) 46%,rgba(6,11,9,.42) 100%)}
+@media (max-width:860px){
+  .hero::after{background:linear-gradient(180deg,rgba(6,11,9,.72) 0%,rgba(6,11,9,.92) 52%,rgba(6,11,9,.97) 100%)}
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;width:100%}
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  /* el formulario sube por encima de los ticks: en mobile tiene que verse sin scroll largo */
+  .hero-grid > div:first-child{display:contents}
+  .hero .brand{order:1}
+  .hero .eyebrow{order:2;letter-spacing:.14em}
+  .hero h1{order:3;margin:10px 0 14px}
+  .hero .lede{order:4}
+  .hero .card{order:5}
+  .hero .ticks{order:6;margin-top:0}
+}
+.brand{font-family:var(--serif);font-size:20px;letter-spacing:.02em;margin-bottom:auto}
+.hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.06;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:var(--gold-soft)}
+.lede{font-size:clamp(16px,2vw,19px);line-height:1.62;color:rgba(255,255,255,.82);max-width:34em}
+.ticks{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:11px}
+.ticks li{position:relative;padding-left:28px;font-size:15.5px;color:rgba(255,255,255,.9)}
+.ticks li::before{content:"";position:absolute;left:1px;top:.36em;width:13px;height:7px;
+  border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);
+  transform:rotate(-45deg)}
+
+/* ---------- FORM ---------- */
+.card{background:rgba(255,255,255,.055);backdrop-filter:blur(14px);
+  border:1px solid rgba(216,192,148,.32);border-radius:18px;padding:clamp(24px,3.4vw,36px)}
+.card h2{font-size:clamp(21px,2.6vw,26px);line-height:1.22;color:#fff;margin-bottom:8px}
+.card .sub{font-size:14.5px;color:rgba(255,255,255,.66);margin:0 0 22px}
+.field{display:flex;gap:10px;flex-wrap:wrap}
+.prefix{display:flex;align-items:center;gap:7px;padding:0 15px;height:58px;flex:0 0 auto;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:11px;
+  color:#fff;font-size:16px;font-variant-numeric:tabular-nums}
+input[type=tel]{flex:1 1 170px;min-width:0;height:58px;padding:0 17px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:11px;
+  color:#fff;font:500 19px/1 var(--sans);letter-spacing:.04em}
+input[type=tel]::placeholder{color:rgba(255,255,255,.4);font-weight:400;letter-spacing:.02em}
+input[type=tel]:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.12)}
+.btn{margin-top:14px;width:100%;height:60px;border:0;border-radius:11px;cursor:pointer;
+  background:var(--gold);color:#0A0F0D;font:600 15px/1 var(--sans);letter-spacing:.11em;
+  text-transform:uppercase;transition:background .18s,transform .18s}
+.btn:hover{background:var(--gold-soft)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.55;cursor:progress}
+.consent{margin:15px 0 0;font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.5)}
+.sms{margin:16px 0 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:13.5px;color:var(--gold-soft)}
+.err{margin:12px 0 0;font-size:14px;color:#FFB4A8}
+.thanks{text-align:center;padding:14px 0}
+.thanks h2{margin-bottom:12px}
+.thanks p{color:rgba(255,255,255,.75);font-size:15.5px;margin:0}
+
+/* ---------- SECTIONS ---------- */
+section{padding-block:clamp(56px,8vw,104px)}
+.sec-head{max-width:36em;margin-bottom:clamp(30px,4vw,48px)}
+.sec-head h2{font-size:clamp(27px,3.9vw,43px);line-height:1.13;margin:14px 0 14px}
+.sec-head p{color:var(--muted);font-size:17px;margin:0}
+
+/* comparison */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,26px)}
+@media (max-width:760px){.vs{grid-template-columns:1fr}}
+.vs article{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.vs article.win{border-color:var(--gold);box-shadow:0 18px 44px -28px rgba(10,15,13,.45)}
+.vs figure{margin:0;aspect-ratio:16/10;background:var(--paper-2)}
+.vs figure img{width:100%;height:100%;object-fit:cover}
+.vs figure.plan{display:grid;place-items:center;
+  background:repeating-linear-gradient(45deg,var(--paper-2) 0 12px,#E7E1D5 12px 24px)}
+.vs figure.plan span{font-family:var(--serif);font-size:clamp(34px,5vw,52px);color:#A9A093;
+  border:2px dashed #BDB4A5;padding:14px 26px;background:var(--paper)}
+.vs .body{padding:clamp(20px,2.6vw,30px)}
+.vs h3{font-size:clamp(20px,2.4vw,25px);margin-bottom:6px}
+.vs .where{font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.vs ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px;font-size:15.5px;color:#39413D}
+.vs li{display:flex;justify-content:space-between;gap:14px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.vs li:last-child{border-bottom:0;padding-bottom:0}
+.vs li b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;text-align:right}
+.vs .big{font-family:var(--serif);font-size:clamp(28px,3.6vw,38px);margin-top:16px;color:var(--ink)}
+.vs .win .big{color:#1D5C43}
+
+/* roi table */
+.roi{background:var(--ink);color:#fff}
+.roi .sec-head h2{color:#fff}
+.roi .sec-head p{color:rgba(255,255,255,.62)}
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:480px;border-collapse:collapse;font-size:15.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.12)}
+th{font:600 12px/1.4 var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
+td:last-child,th:last-child{text-align:right}
+tr.total td{border-bottom:0;border-top:1px solid var(--gold);padding-top:18px;
+  font-family:var(--serif);font-size:clamp(20px,2.6vw,25px)}
+tr.total td:last-child{color:var(--gold-soft)}
+.note{margin-top:22px;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.52);max-width:52em}
+
+/* advisor */
+.advisor{display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,4vw,52px);align-items:center}
+@media (max-width:760px){.advisor{grid-template-columns:1fr;gap:26px}}
+.portrait{aspect-ratio:1;border-radius:50%;overflow:hidden;background:var(--paper-2);
+  border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:24px}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait .ph{font-size:13px;line-height:1.5;color:var(--muted)}
+.advisor blockquote{margin:0;font-family:var(--serif);font-size:clamp(20px,2.7vw,28px);line-height:1.38}
+.advisor .who{margin-top:18px;font-size:15px;color:var(--muted)}
+.advisor .who b{display:block;color:var(--ink);font-family:var(--sans);font-weight:600;font-size:16px}
+
+/* closing cta */
+.close{position:relative;color:#fff;isolation:isolate;text-align:center}
+.close::before{content:"";position:absolute;inset:0;z-index:-2;background:url("img/rooftop.jpg") center/cover no-repeat}
+.close::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(6,11,9,.78)}
+.close h2{font-size:clamp(27px,4vw,44px);line-height:1.12;margin-bottom:16px}
+.close p{color:rgba(255,255,255,.76);max-width:30em;margin:0 auto 30px}
+.close .card{max-width:520px;margin:0 auto;text-align:left}
+
+footer{background:var(--ink-2);color:rgba(255,255,255,.44);
+  padding-block:44px calc(env(safe-area-inset-bottom,0px) + 44px);font-size:13px;line-height:1.65}
+footer b{color:rgba(255,255,255,.72);font-family:var(--serif);font-weight:500;font-size:17px;
+  display:block;margin-bottom:12px}
+footer p{margin:0 0 10px;max-width:60em}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="brand">sawana<span style="color:var(--gold)">.</span></div>
+      <p class="eyebrow" style="margin-top:34px">Inwestycje w nieruchomości na Bali</p>
+      <h1>Za 700 000 zł kupisz 38 m² w Warszawie.<br><em>Albo całą willę z basenem.</em></h1>
+      <p class="lede">Wille na Bali od 159 000 EUR. Umeblowane pod klucz, z zarządzaniem najmem od pierwszego dnia. Prognozowany zwrot 9–11% netto rocznie w euro.</p>
+      <ul class="ticks">
+        <li>Jesteśmy deweloperem, nie pośrednikiem. Cena bez prowizji agenta.</li>
+        <li>Płatność etapami, zgodnie z postępem budowy.</li>
+        <li>Polskojęzyczny doradca. Rozmowa bez zobowiązań.</li>
+      </ul>
+    </div>
+
+    <div class="card" id="formCard">
+      <div id="formView">
+        <h2>Odbierz oficjalne expose</h2>
+        <p class="sub">Ceny wszystkich dostępnych willi, metraże, terminy odbioru i pełne wyliczenie zwrotu. Jedno pole.</p>
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <span class="prefix">🇵🇱 +48</span>
+            <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
+                   placeholder="600 000 000" aria-label="Numer telefonu" required>
+          </div>
+          <button class="btn" type="submit" id="submitBtn">Wyślij mi expose</button>
+          <p class="err" id="err" hidden></p>
+          <p class="consent">Podając numer, zgadzasz się na kontakt ze strony Sawana Developments w sprawie tej oferty. W każdej chwili możesz zrezygnować.</p>
+          <p class="sms">PDF dostaniesz SMS-em w ciągu minuty.</p>
+        </form>
+      </div>
+      <div class="thanks" id="thanksView" hidden>
+        <h2 id="thanksH"></h2>
+        <p id="thanksB"></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= COMPARISON ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Te same pieniądze</p>
+      <h2>Pieniądze, które leżą, tracą na wartości</h2>
+      <p>Porównanie tej samej kwoty ulokowanej w dwóch miejscach. Liczby po lewej to średnia rynkowa dla kawalerki na wynajem w Warszawie.</p>
+    </div>
+    <div class="vs">
+      <article>
+        <figure class="plan"><span>38 m²</span></figure>
+        <div class="body">
+          <p class="where">Warszawa</p>
+          <h3>Kawalerka 38 m²</h3>
+          <ul>
+            <li><span>Powierzchnia</span><b>38 m²</b></li>
+            <li><span>Najemcy</span><b>1</b></li>
+            <li><span>Rentowność brutto</span><b>ok. 5,5%</b></li>
+            <li><span>Rentowność netto</span><b>ok. 3,5–4%</b></li>
+            <li><span>Waluta</span><b>PLN</b></li>
+          </ul>
+          <p class="big">ok. 4% netto</p>
+        </div>
+      </article>
+      <article class="win">
+        <figure><img src="img/pool.jpg" alt="Willa na Bali z prywatnym basenem" loading="lazy"></figure>
+        <div class="body">
+          <p class="where">Bali, Uluwatu</p>
+          <h3>Willa z prywatnym basenem</h3>
+          <ul>
+            <li><span>Powierzchnia</span><b>75–186 m²</b></li>
+            <li><span>Obłożenie</span><b>ok. 75%</b></li>
+            <li><span>Rentowność brutto</span><b>ok. 19–24%</b></li>
+            <li><span>Rentowność netto</span><b>9–11%</b></li>
+            <li><span>Waluta</span><b>EUR</b></li>
+          </ul>
+          <p class="big">9–11% netto</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HONEST ROI ================= -->
+<section class="roi">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Bez ściemy</p>
+      <h2>Pokazujemy, co zostaje po kosztach</h2>
+      <p>Większość ofert na Bali podaje przychód brutto i nazywa go zwrotem. My pokazujemy obie liczby i wszystko, co jest pomiędzy. Przykład: willa 1-sypialniana Luma za 159 000 EUR.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th>Pozycja</th><th>Rocznie (EUR)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Przychód brutto z najmu (125 EUR/noc, 75% obłożenia)</td><td>34 200</td></tr>
+          <tr><td>Zarządzanie najmem (20%)</td><td>−6 840</td></tr>
+          <tr><td>Prowizje Airbnb / Booking (8%)</td><td>−2 736</td></tr>
+          <tr><td>Sprzątanie, pranie, media, basen, ogród</td><td>−3 800</td></tr>
+          <tr><td>Konserwacja i wymiana wyposażenia (5%)</td><td>−1 710</td></tr>
+          <tr><td>Podatki w Indonezji</td><td>−3 100</td></tr>
+          <tr class="total"><td>Zostaje w kieszeni</td><td>≈ 16 000 · 10,1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Szacunek na podstawie danych rynkowych, nie gwarancja zwrotu. Przy obłożeniu 85% liczba rośnie, przy 60% spada. Wille sprzedawane są w formie leasehold: prawo użytkowania na czas określony, z opcją przedłużenia po cenie rynkowej. Doradca przejdzie z Tobą przez wyliczenie dla konkretnej willi.</p>
+  </div>
+</section>
+
+<!-- ================= ADVISOR ================= -->
+<section>
+  <div class="wrap advisor">
+    <!-- TODO: reemplazar por la foto real del closer -> landing/img/closer.jpg -->
+    <div class="portrait">
+      <p class="ph">Miejsce na zdjęcie<br>doradcy</p>
+    </div>
+    <div>
+      <p class="eyebrow">Z kim rozmawiasz</p>
+      <blockquote>„Nie sprzedaję marzeń o Bali. Przechodzę z Tobą przez liczby i mówię wprost, kiedy ta inwestycja nie ma sensu."</blockquote>
+      <p class="who"><b>[Imię i nazwisko doradcy]</b>Doradca inwestycyjny na rynek polski · Sawana Developments</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLOSING CTA ================= -->
+<section class="close">
+  <div class="wrap">
+    <h2>Najlepsze jednostki rezerwowane są pierwsze</h2>
+    <p>W expose znajdziesz aktualną listę dostępnych willi z cenami. Zostaw numer, resztę zrobimy my.</p>
+    <div class="card">
+      <h2>Odbierz oficjalne expose</h2>
+      <p class="sub">Jedno pole. PDF przyjdzie SMS-em.</p>
+      <form id="leadForm2" novalidate>
+        <div class="field">
+          <span class="prefix">🇵🇱 +48</span>
+          <input type="tel" id="phone2" inputmode="tel" autocomplete="tel"
+                 placeholder="600 000 000" aria-label="Numer telefonu" required>
+        </div>
+        <button class="btn" type="submit">Wyślij mi expose</button>
+        <p class="err" id="err2" hidden></p>
+        <p class="consent">Podając numer, zgadzasz się na kontakt ze strony Sawana Developments w sprawie tej oferty.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>sawana developments</b>
+    <p>Projekty butikowe od 3 do 17 jednostek w Uluwatu, południe Bali. Zdjęcia w tym materiale to wizualizacje projektowe i mają charakter poglądowy.</p>
+    <p>Prognozy rentowności są szacunkami opartymi na danych rynkowych i nie stanowią gwarancji zwrotu ani oferty w rozumieniu przepisów prawa. Nieruchomości sprzedawane są w formie leasehold. Przed decyzją inwestycyjną skonsultuj się z własnym doradcą podatkowym.</p>
+    <p>© 2026 Sawana Developments.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var CFG = window.SAWANA || {};
+  var qs  = new URLSearchParams(location.search);
+
+  function utms(){
+    var o = {};
+    ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid"].forEach(function(k){
+      var v = qs.get(k); if (v) o[k] = v;
+    });
+    return o;
+  }
+
+  // Acepta 9 digitos PL, o con prefijo 48 / +48.
+  function normalize(raw){
+    var d = (raw||"").replace(/\D/g,"");
+    if (d.length === 11 && d.indexOf("48") === 0) d = d.slice(2);
+    if (d.length === 9) return "+48" + d;
+    return null;
+  }
+
+  function wire(formId, inputId, errId){
+    var form = document.getElementById(formId);
+    if (!form) return;
+    var input = document.getElementById(inputId);
+    var err   = document.getElementById(errId);
+    var btn   = form.querySelector("button");
+
+    input.addEventListener("input", function(){
+      var d = input.value.replace(/\D/g,"").slice(0,9);
+      input.value = d.replace(/(\d{3})(?=\d)/g, "$1 ").trim();
+      err.hidden = true;
+    });
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var phone = normalize(input.value);
+      if (!phone){
+        err.textContent = "Wpisz 9-cyfrowy numer telefonu.";
+        err.hidden = false; input.focus(); return;
+      }
+      btn.disabled = true;
+      btn.textContent = "Wysyłam…";
+
+      var payload = Object.assign({
+        phone: phone,
+        source: "pl-expose-landing",
+        page: location.href
+      }, utms());
+
+      var notConnected = function(){
+        var fv = document.getElementById("formView"),
+            tv = document.getElementById("thanksView"),
+            h  = '<b>Strona w wersji podgl\u0105dowej.</b> Formularz nie jest jeszcze pod\u0142\u0105czony, '
+               + 'wi\u0119c numer <b>nie zosta\u0142 zapisany</b>. Skontaktuj si\u0119 z nami bezpo\u015brednio.';
+        if (fv && tv && formId === "leadForm"){
+          document.getElementById("thanksH").textContent = "Podgl\u0105d, nie wersja finalna.";
+          document.getElementById("thanksB").innerHTML = h;
+          fv.hidden = true; tv.hidden = false;
+          document.getElementById("formCard").scrollIntoView({behavior:"smooth", block:"center"});
+        } else {
+          form.innerHTML = '<div class="thanks"><h2>Podgl\u0105d, nie wersja finalna.</h2><p>' + h + '</p></div>';
+        }
+      };
+
+      var done = function(){
+        if (window.fbq) fbq("track", "Lead", {content_name: "PL Expose"});
+        var fv = document.getElementById("formView"),
+            tv = document.getElementById("thanksView");
+        if (fv && tv && formId === "leadForm"){
+          document.getElementById("thanksH").textContent = CFG.THANKS_HEADLINE;
+          document.getElementById("thanksB").textContent = CFG.THANKS_BODY;
+          fv.hidden = true; tv.hidden = false;
+          document.getElementById("formCard").scrollIntoView({behavior:"smooth", block:"center"});
+        } else {
+          form.innerHTML = '<div class="thanks"><h2>' + CFG.THANKS_HEADLINE +
+                           '</h2><p>' + CFG.THANKS_BODY + '</p></div>';
+        }
+      };
+
+      if (!CFG.GHL_WEBHOOK){
+        // Sin webhook no hay captura. Nunca mostramos el "gracias": seria mentirle
+        // a quien dejo el numero. Avisamos que la pagina esta en preview.
+        console.warn("SAWANA.GHL_WEBHOOK vacio: el lead NO se envio a ningun lado.", payload);
+        notConnected(); return;
+      }
+
+      fetch(CFG.GHL_WEBHOOK, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+      }).then(done).catch(function(){
+        btn.disabled = false;
+        btn.textContent = "Wyślij mi expose";
+        err.textContent = "Coś poszło nie tak. Spróbuj jeszcze raz.";
+        err.hidden = false;
+      });
+    });
+  }
+
+  wire("leadForm",  "phone",  "err");
+  wire("leadForm2", "phone2", "err2");
+})();
+</script>
+</body>
+</html>
