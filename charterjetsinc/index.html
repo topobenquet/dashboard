@@ -8,7 +8,7 @@
 <style>
 :root{
   --navy:#0D1928; --navy2:#16263B; --gold:#B9914B; --gold2:#E9DCC4; --bg:#F4F2ED; --card:#FFFFFF;
-  --ink:#1B2430; --mut:#6B7483; --line:#E4E1DA; --fl:#B9914B; --ny:#2F5D8A; --br:#8A94A3;
+  --ink:#1B2430; --mut:#6B7483; --line:#E4E1DA; --fl:#B9914B; --blue:#2F5D8A; --br:#8A94A3;
   --good:#2E8B57; --warn:#C98A1B; --bad:#C0392B; color-scheme:light;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -41,14 +41,14 @@ header.top .meta b{color:#fff;font-weight:600}
 .kpi .s{font-size:10.5px;color:var(--mut);margin-top:3px}
 .bar{height:6px;background:#EEE9DF;border-radius:4px;overflow:hidden;margin-top:6px}
 .bar i{display:block;height:100%;background:var(--gold);border-radius:4px}
-/* test */
-.test{display:grid;grid-template-columns:1fr 210px 1fr;gap:12px;align-items:stretch}
-@media(max-width:900px){.test{grid-template-columns:1fr}}
+/* account */
+.acct{display:grid;grid-template-columns:1fr 280px;gap:12px;align-items:stretch}
+@media(max-width:900px){.acct{grid-template-columns:1fr}}
 .mkt{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .mkt .hd{padding:12px 16px;color:#fff;display:flex;justify-content:space-between;align-items:baseline}
 .mkt .hd b{font-family:Georgia,serif;font-size:17px;font-weight:600}
 .mkt .hd span{font-size:11px;opacity:.85}
-.mkt.fl .hd{background:var(--fl)} .mkt.ny .hd{background:var(--ny)}
+.mkt.fl .hd{background:var(--fl)} .mkt.br .hd{background:var(--br)}
 .mkt table{width:100%;border-collapse:collapse}
 .mkt td{padding:7px 16px;border-bottom:1px solid #F0EDE6;font-size:12.5px}
 .mkt td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--navy)}
@@ -70,20 +70,20 @@ table.t td.n,table.t th.n{text-align:right;font-variant-numeric:tabular-nums;whi
 table.t tr:hover td{background:#FBF9F4}
 .scroll{overflow-x:auto}
 .pill{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px;white-space:nowrap}
-.p-fl{background:#F4ECDD;color:#7A5B25}.p-ny{background:#DFE8F2;color:#1F4468}.p-br{background:#ECEEF1;color:#4F5968}
+.p-fl{background:#F4ECDD;color:#7A5B25}.p-ch{background:#F4ECDD;color:#7A5B25}.p-br{background:#ECEEF1;color:#4F5968}
 .p-bad{background:#FBE3E0;color:var(--bad)}.p-ok{background:#E1F2E8;color:var(--good)}.p-warn{background:#FBEFD8;color:#8A5C0B}.p-mut{background:#EFEDE8;color:var(--mut)}
 .chart svg{display:block;width:100%;height:auto}
-.fz{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:900px){.fz{grid-template-columns:1fr}}
+.fz{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(max-width:900px){.fz{grid-template-columns:1fr}}
 .fz .card h3{font-family:Georgia,serif;font-size:15px;font-weight:600;margin-bottom:2px}.fz .card .sub{font-size:11px;color:var(--mut);margin-bottom:6px}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--mut);margin-top:6px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
-.funnel .row{display:grid;grid-template-columns:110px 1fr 1fr;gap:10px;align-items:center;margin:6px 0}
+.funnel .row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;margin:6px 0}
 .funnel .lbl{font-size:11.5px;color:var(--mut)}
 .funnel .fb{position:relative;height:22px;background:#F5F2EB;border-radius:5px;overflow:hidden}
 .funnel .fb i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
 .funnel .fb span{position:absolute;left:8px;top:3px;font-size:11.5px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
 .funnel .fb em{position:absolute;right:8px;top:4px;font-size:10px;color:var(--mut);font-style:normal}
-.fh{display:grid;grid-template-columns:110px 1fr 1fr;gap:10px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.fh{display:grid;grid-template-columns:150px 1fr;gap:12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
 .minis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
 @media(max-width:600px){.minis{grid-template-columns:repeat(2,1fr)}}
 .mini{background:#FBF9F4;border:1px solid #EFEBE2;border-radius:8px;padding:8px 10px}
@@ -92,7 +92,7 @@ table.t tr:hover td{background:#FBF9F4}
 .alert{background:#FBEFD8;border:1px solid #F0D9A8;color:#6B4A0A;border-radius:8px;padding:8px 12px;font-size:12px;margin-bottom:10px}
 .empty{color:var(--mut);font-size:12px;padding:18px;text-align:center;background:#FBF9F4;border-radius:8px}
 .meter{display:inline-block;width:60px;height:6px;background:#EEE9DF;border-radius:4px;vertical-align:middle;margin-left:6px;overflow:hidden}
-.meter i{display:block;height:100%;background:var(--ny)}
+.meter i{display:block;height:100%;background:var(--blue)}
 footer{margin-top:28px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 </style>
 </head>
@@ -111,20 +111,21 @@ const usd=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':'$'+fm(n);
 const pct=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':fm(n*100)+'%';
 const div=(a,b)=>b?a/b:null;
 const esc=(s)=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const C={Florida:'#B9914B','New York':'#2F5D8A',Brand:'#8A94A3'};
-const pill=(m)=>`<span class="pill ${m==='Florida'?'p-fl':m==='New York'?'p-ny':'p-br'}">${esc(m==='New York'?'New York':m)}</span>`;
+const C={Charter:'#B9914B',Brand:'#8A94A3',blue:'#2F5D8A',ink:'#0D1928'};
+const pill=(g)=>`<span class="pill ${g==='Brand'?'p-br':'p-ch'}">${esc(g)}</span>`;
+const statusPill=(st)=>st==='ENABLED'?'<span class="pill p-ok">Active</span>':st==='PAUSED'?'<span class="pill p-mut">Paused</span>':st?`<span class="pill p-mut">${esc(st[0]+st.slice(1).toLowerCase())}</span>`:'–';
 const section=(k,t,note,body)=>`<div class="section"><div class="sec-t"><div><div class="k">${k}</div><h2>${t}</h2></div>${note?`<div class="note">${note}</div>`:''}</div>${body}</div>`;
 
 function barsSVG(days,keys,lineKey){
   const W=760,H=220,P={l:44,r:40,t:14,b:28};
   const n=days.length||1, bw=Math.min(46,(W-P.l-P.r)/n*0.62);
-  const tot=days.map(d=>keys.reduce((a,k)=>a+(d.markets[k]?.spend||0),0));
-  const maxS=Math.max(1,...tot)*1.15, line=days.map(d=>keys.reduce((a,k)=>a+(d.markets[k]?.[lineKey]||0),0));
+  const tot=days.map(d=>keys.reduce((a,k)=>a+(d.groups[k]?.spend||0),0));
+  const maxS=Math.max(1,...tot)*1.15, line=days.map(d=>keys.reduce((a,k)=>a+(d.groups[k]?.[lineKey]||0),0));
   const maxL=Math.max(1,...line)*1.25;
   const x=(i)=>P.l+(W-P.l-P.r)*(i+0.5)/n, y=(v)=>H-P.b-(H-P.t-P.b)*v/maxS, yl=(v)=>H-P.b-(H-P.t-P.b)*v/maxL;
   let g='';
   for(let t=0;t<=4;t++){const v=maxS*t/4;g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="#EEE9DF"/><text x="${P.l-6}" y="${y(v)+3}" font-size="9.5" text-anchor="end" fill="#8A93A0">$${fm(v)}</text>`}
-  days.forEach((d,i)=>{let acc=0;keys.forEach(k=>{const v=d.markets[k]?.spend||0;if(!v)return;g+=`<rect x="${x(i)-bw/2}" y="${y(acc+v)}" width="${bw}" height="${y(acc)-y(acc+v)}" fill="${C[k]}" rx="2"><title>${k}: $${fm(v,2)}</title></rect>`;acc+=v});
+  days.forEach((d,i)=>{let acc=0;keys.forEach(k=>{const v=d.groups[k]?.spend||0;if(!v)return;g+=`<rect x="${x(i)-bw/2}" y="${y(acc+v)}" width="${bw}" height="${y(acc)-y(acc+v)}" fill="${C[k]}" rx="2"><title>${k}: $${fm(v,2)}</title></rect>`;acc+=v});
     g+=`<text x="${x(i)}" y="${H-P.b+14}" font-size="9.5" text-anchor="middle" fill="#8A93A0">${d.date.slice(5)}</text>`});
   if(line.some(v=>v>0)){g+=`<polyline fill="none" stroke="#0D1928" stroke-width="2" points="${line.map((v,i)=>`${x(i)},${yl(v)}`).join(' ')}"/>`;line.forEach((v,i)=>g+=`<circle cx="${x(i)}" cy="${yl(v)}" r="3.2" fill="#0D1928"><title>${fm(v,1)} inquiries</title></circle>`);
     for(let t=0;t<=2;t++){const v=maxL*t/2;g+=`<text x="${W-P.r+6}" y="${yl(v)+3}" font-size="9.5" fill="#0D1928">${fm(v,0)}</text>`}}
@@ -164,9 +165,8 @@ fetch('data.json?v='+Date.now()).then(r=>r.json()).then(async d=>{
 function render(d,clarity){
   const upd=new Date(d.generated);
   $('#meta').innerHTML=`<div><span class="dot"></span>Updated <b>${upd.toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</b></div><div>Campaign period ${d.launch} to ${d.today}</div>`;
-  const F=d.markets.Florida, N=d.markets['New York'], B=d.markets.Brand;
-  const all=['spend','impr','clicks','inquiries','deals','quoted','booked','margin','callrailQualified'].reduce((o,k)=>(o[k]=(F[k]||0)+(N[k]||0)+(B[k]||0),o),{});
-  const expected=d.budget.daily*d.daysLive;
+  const A=d.account, G=d.groups||{}, GC=G.Charter||{}, GB=G.Brand||{};
+  const all=A;
 
   // KPIs
   const W=d.weekly||{}, cur=W.current||{}, prv=W.previous||{};
@@ -183,39 +183,49 @@ function render(d,clarity){
 ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v">${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%;background:${k.barColor||'#B9914B'}"></i></div>`:''}</div>`).join('')+(weekNote?`<div style="grid-column:1/-1;font-size:10.5px;color:#8A93A0;margin-top:-4px">${weekNote}. Spend projection is based on the last ${P.basedOnDays||0} full day${P.basedOnDays===1?'':'s'} of spend.</div>`:'');
 
   let h='';
-  // ---------- THE TEST
-  const est=(m)=>{const cpi=div(m.spend,m.inquiries), cr=div(m.booked,m.deals); return {cpi,cr,cpf: m.booked?div(m.spend,m.booked):(cpi&&cr?cpi/cr:null), real: m.booked>0}};
-  const eF=est(F), eN=est(N);
-  let call='<b>Too early to call.</b> Both markets need inquiries and booked flights before the comparison means anything.';
-  if(eF.cpf&&eN.cpf){const lo=eF.cpf<eN.cpf?'South Florida':'New York', gap=Math.abs(eF.cpf-eN.cpf)/Math.max(eF.cpf,eN.cpf);
-    call= gap>=0.25?`<b>${lo}</b> is ${pct(gap,0)} cheaper per booked flight.`:`Within 25%: <b>too close to call</b>, keep 50/50.`}
-  else if(F.inquiries>=5&&N.inquiries>=5){const lo=div(F.spend,F.inquiries)<div(N.spend,N.inquiries)?'South Florida':'New York';call=`Early signal: <b>${lo}</b> has the lower cost per inquiry. Booked flights decide.`}
-  const mktCard=(cls,name,m,e)=>`<div class="mkt ${cls}"><div class="hd"><b>${name}</b><span>local + inbound · $158/day</span></div><table>
-    <tr><td>Spend</td><td>${usd(m.spend)}</td></tr><tr><td>Clicks · CTR</td><td>${fm(m.clicks)} · ${pct(div(m.clicks,m.impr))}</td></tr>
-    <tr><td>Avg CPC</td><td>${usd(div(m.spend,m.clicks),2)}</td></tr><tr><td>Inquiries (forms · search · calls)</td><td>${fm(m.inquiries,0)} <span style="color:#8A93A0;font-weight:400">(${fm(m.form,0)} · ${fm(m.search,0)} · ${fm(m.callsAds,0)})</span></td></tr>
-    <tr><td>Cost per inquiry</td><td>${usd(e.cpi)}</td></tr><tr><td>Deals in Pipedrive</td><td>${fm(m.deals)}</td></tr>
-    <tr><td>Booked flights · close rate</td><td>${fm(m.booked)} · ${pct(e.cr,0)}</td></tr>
-    <tr class="big"><td>Cost per booked flight${e.real?'':' <span class="pill p-mut">est.</span>'}</td><td>${usd(e.cpf)}</td></tr></table></div>`;
-  h+=section('Markets','South Florida and New York',`Each market combines its local and inbound campaigns · ${d.daysLive} day${d.daysLive>1?'s':''} live`,
-    `<div class="grid g2">${mktCard('fl','South Florida',F,eF)}${mktCard('ny','New York',N,eN)}</div>`);
+  // ---------- THE ACCOUNT
+  const cpi=div(A.spend,A.inquiries), closeRate=div(A.booked,A.deals);
+  const cpf=A.booked?div(A.spend,A.booked):(cpi&&closeRate?cpi/closeRate:null);
+  const roi=A.margin&&A.spend?A.margin/A.spend:null;
+  const gRow=(name,g,col)=>`<tr><td><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:${col};margin-right:7px"></span>${name}</td><td class="n">${usd(g.spend)}</td><td class="n">${fm(g.impr)}</td><td class="n">${fm(g.clicks)}</td><td class="n">${pct(div(g.clicks,g.impr))}</td><td class="n">${usd(div(g.spend,g.clicks),2)}</td><td class="n">${fm(g.inquiries,0)}</td><td class="n">${usd(div(g.spend,g.inquiries))}</td><td class="n">${pct(div(g.spend,A.spend),0)}</td></tr>`;
+  const acctCard=`<div class="mkt fl"><div class="hd"><b>Whole account</b><span>All campaigns · ${d.daysLive} day${d.daysLive>1?'s':''} live</span></div><table>
+    <tr><td>Spend</td><td>${usd(A.spend)}</td></tr>
+    <tr><td>Impressions · clicks</td><td>${fm(A.impr)} · ${fm(A.clicks)}</td></tr>
+    <tr><td>CTR</td><td>${pct(div(A.clicks,A.impr))}</td></tr>
+    <tr><td>Avg CPC</td><td>${usd(div(A.spend,A.clicks),2)}</td></tr>
+    <tr><td>Inquiries (forms · search · calls)</td><td>${fm(A.inquiries,0)} <span style="color:#8A93A0;font-weight:400">(${fm(A.form,0)} · ${fm(A.search,0)} · ${fm(A.callsAds,0)})</span></td></tr>
+    <tr><td>Cost per inquiry</td><td>${usd(cpi)}</td></tr>
+    <tr><td>Deals in Pipedrive</td><td>${fm(A.deals)}</td></tr>
+    <tr><td>Quoted</td><td>${fm(A.quoted)}</td></tr>
+    <tr><td>Booked flights · close rate</td><td>${fm(A.booked)} · ${pct(closeRate,0)}</td></tr>
+    <tr><td>Margin on booked flights</td><td>${usd(A.margin)}</td></tr>
+    <tr class="big"><td>Cost per booked flight${A.booked?'':' <span class="pill p-mut">est.</span>'}</td><td>${usd(cpf)}</td></tr></table></div>`;
+  const verdict=`<div class="verdict"><div class="day">${d.daysLive}<small> / ${d.testDays} days</small></div>
+    <div class="prog"><i style="width:${Math.min(100,100*d.daysLive/d.testDays)}%"></i></div>
+    <div class="call">${A.booked?`<b>${usd(roi,0)}</b> of margin for every $1 spent so far.`:A.inquiries>=5?`<b>${fm(A.inquiries,0)} inquiries</b> at ${usd(cpi)} each. Booked flights decide.`:'<b>Too early to call.</b> The account needs inquiries and booked flights before the numbers mean anything.'}</div>
+    <div class="rule">The account runs South Florida only. Spend, inquiries and booked flights below are the whole account since launch.</div></div>`;
+  h+=section('Account','How the account is doing',`Everything on this page is the full Google Ads account · ${d.daysLive} day${d.daysLive>1?'s':''} live`,
+    `<div class="acct">${acctCard}${verdict}</div>
+     <div class="card scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Where the money goes</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Inquiries</th><th class="n">Cost / inq.</th><th class="n">Share of spend</th></tr></thead><tbody>${gRow('Charter (non-brand)',GC,C.Charter)}${gRow('Brand',GB,C.Brand)}</tbody></table></div>
+     <div style="font-size:11px;color:var(--mut);margin:8px 2px 0">Deals, booked flights and calls cannot be split between Charter and Brand, so that table only carries what Google Ads can attribute: spend, clicks and inquiries.</div>`);
 
   // ---------- DAILY + MIX
-  const mix=[{label:'Quote forms',value:F.form+N.form+B.form,color:'#2F5D8A'},{label:'Live search inquiries',value:F.search+N.search+B.search,color:'#B9914B'},{label:'Phone calls',value:F.callsAds+N.callsAds+B.callsAds,color:'#0D1928'}];
-  h+=section('Daily','Spend and inquiries by day','',`<div class="grid g-73"><div class="card pad chart">${d.daily.length?barsSVG(d.daily,['Florida','New York','Brand'],'inquiries'):'<div class="empty">No data yet</div>'}<div class="legend"><span><i style="background:${C.Florida}"></i>South Florida</span><span><i style="background:${C['New York']}"></i>New York</span><span><i style="background:${C.Brand}"></i>Brand</span><span><i style="background:#0D1928;height:3px;vertical-align:3px"></i>Inquiries (right axis)</span></div></div>
+  const mix=[{label:'Quote forms',value:A.form,color:C.blue},{label:'Live search inquiries',value:A.search,color:C.Charter},{label:'Phone calls',value:A.callsAds,color:C.ink}];
+  h+=section('Daily','Spend and inquiries by day','',`<div class="grid g-73"><div class="card pad chart">${d.daily.length?barsSVG(d.daily,['Charter','Brand'],'inquiries'):'<div class="empty">No data yet</div>'}<div class="legend"><span><i style="background:${C.Charter}"></i>Charter (non-brand)</span><span><i style="background:${C.Brand}"></i>Brand</span><span><i style="background:#0D1928;height:3px;vertical-align:3px"></i>Inquiries (right axis)</span></div></div>
     <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">How people inquire</div>${donut(mix)}<div style="font-size:11px;color:var(--mut);margin-top:10px">Google Ads conversions by type. Calls include the call button in the ad and tracked calls from the landing pages.</div></div></div>`);
 
   // ---------- FUNNEL
   const fsteps=[['Impressions','impr'],['Clicks','clicks'],['Sessions from ads','sessions'],['Searched aircraft','avinodeSearches'],['Inquiries','inquiries'],['CRM deals','deals'],['Quoted','quoted'],['Booked','booked']];
-  const fb=(m,col)=>{const top=Math.max(1,m.impr);return fsteps.map(([l,k],i)=>{const v=m[k]||0, prev=i?m[fsteps[i-1][1]]||0:null;const w=i===0?100:Math.max(v?3:0,100*Math.pow(v/top,0.35));return `<div class="fb"><i style="width:${w}%;background:${col};opacity:${0.3+0.7*(1-i/8)}"></i><span>${fm(v,k==='inquiries'?0:0)}</span>${i?`<em>${prev?pct(v/prev,0):'–'}</em>`:''}</div>`})};
-  const fl=fb(F,C.Florida), ny=fb(N,C['New York']);
+  const fb=(m,col)=>{const top=Math.max(1,m.impr);return fsteps.map(([l,k],i)=>{const v=m[k]||0, prev=i?m[fsteps[i-1][1]]||0:null;const w=i===0?100:Math.max(v?3:0,100*Math.pow(v/top,0.35));return `<div class="fb"><i style="width:${w}%;background:${col};opacity:${0.3+0.7*(1-i/8)}"></i><span>${fm(v,0)}</span>${i?`<em>${prev?pct(v/prev,0):'–'} of the step above</em>`:''}</div>`})};
+  const fa=fb(A,C.Charter);
   h+=section('Funnel','From impression to booked flight','Percentages show conversion from the previous step · sessions and searches are Google Ads traffic only (Google Analytics) · bar width on a compressed scale',
-    `<div class="card pad funnel"><div class="fh"><span></span><span style="color:${C.Florida}">South Florida</span><span style="color:${C['New York']}">New York</span></div>${fsteps.map(([l],i)=>`<div class="row"><div class="lbl">${l}</div>${fl[i]}${ny[i]}</div>`).join('')}</div>`);
+    `<div class="card pad funnel"><div class="fh"><span></span><span style="color:${C.Charter}">Whole account</span></div>${fsteps.map(([l],i)=>`<div class="row"><div class="lbl">${l}</div>${fa[i]}</div>`).join('')}</div>`);
 
   // ---------- CAMPAIGNS
   const shareCell=(s,k)=>s&&s[k]!=null?pct(Number(s[k]),0):'–';
-  h+=section('Campaigns','Performance by campaign','Impression share fills in after the first full days',
-    `<div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Market</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Inquiries</th><th class="n">Cost / inq.</th><th class="n">Call button shown</th><th class="n">Impr. share</th></tr></thead><tbody>${
-    d.campaigns.map(c=>`<tr><td style="white-space:nowrap"><b>${esc(c.short)}</b></td><td>${pill(c.market)}</td><td class="n">${usd(c.spend,2)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${usd(div(c.spend,c.clicks),2)}</td><td class="n">${fm(c.inquiries,0)}</td><td class="n">${usd(div(c.spend,c.inquiries))}</td><td class="n">${fm(c.phoneImpr)}</td><td class="n">${shareCell(c.share,'is')}</td></tr>`).join('')}</tbody></table></div>`);
+  h+=section('Campaigns','Performance by campaign','Paused campaigns stay on the list with what they spent, so the account totals add up',
+    `<div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Type</th><th>Status</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Inquiries</th><th class="n">Cost / inq.</th><th class="n">Call button shown</th><th class="n">Impr. share</th></tr></thead><tbody>${
+    d.campaigns.slice().sort((a,b)=>b.spend-a.spend).map(c=>`<tr${c.status==='ENABLED'?'':' style="opacity:.62"'}><td style="white-space:nowrap"><b>${esc(c.short)}</b></td><td>${pill(c.group)}</td><td>${statusPill(c.status)}</td><td class="n">${usd(c.spend,2)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${usd(div(c.spend,c.clicks),2)}</td><td class="n">${fm(c.inquiries,0)}</td><td class="n">${usd(div(c.spend,c.inquiries))}</td><td class="n">${fm(c.phoneImpr)}</td><td class="n">${shareCell(c.share,'is')}</td></tr>`).join('')}</tbody></table></div>`);
 
   // ---------- WEBSITE (GA4)
   const clAgg={}; (clarity?Object.values(clarity.snapshots||{}):[]).forEach(sn=>(sn.pages||[]).forEach(p=>{const o=(clAgg[p.path]||={s:0,sw:0,fr:0});o.s+=p.sessions;o.sw+=(p.scroll||0)*p.sessions;o.fr+=Math.min(p.sessions,(p.rage||0)+(p.dead||0))}));
@@ -240,13 +250,13 @@ function render(d,clarity){
     };
     const stepsOf=(o)=>[['Sessions',o.sessions],['Searched',o.search],['Opened form',o.openForm],['Sent inquiry',o.inquiry]];
     const totAds=pg.reduce((a,p)=>({sessions:a.sessions+(p.ads?.sessions||0),search:a.search+(p.ads?.search||0),openForm:a.openForm+(p.ads?.openForm||0),inquiry:a.inquiry+(p.ads?.inquiry||0)}),{sessions:0,search:0,openForm:0,inquiry:0});
-    const mk=(n)=>{const m=d.markets[n];return {sessions:m.sessions,search:m.avinodeSearches,openForm:m.avinodeOpenForm,inquiry:m.avinodeInquiries}};
+    const totAll={sessions:S,search:srch,openForm:opn,inquiry:inq};
     const fcard=(title,o,col)=>`<div class="card pad"><h3 style="color:${col}">${title}</h3><div class="sub">${o.sessions?`${pct(o.inquiry/o.sessions)} of sessions sent an inquiry`:'No sessions yet'}</div>${funnelSVG(stepsOf(o),col)}</div>`;
-    const funnelBlock=`<div class="fz">${fcard('All Google Ads traffic',totAds,'#0D1928')}${fcard('South Florida',mk('Florida'),C.Florida)}${fcard('New York',mk('New York'),C['New York'])}</div>
+    const funnelBlock=`<div class="fz">${fcard('Google Ads traffic',totAds,C.ink)}${fcard('All traffic',totAll,C.Charter)}</div>
       <div style="font-size:11px;color:var(--mut);margin:8px 2px 12px">Counted as sessions from Google Ads: a visitor who searches five times counts once. The percentage on the right compares each step with the one above it.</div>`;
     gb=`${funnelBlock}<div class="card pad"><div class="minis"><div class="mini"><div class="l">Landing sessions</div><div class="v">${fm(S)}</div></div><div class="mini"><div class="l">Engagement rate</div><div class="v">${pct(div(E,S),0)}</div></div><div class="mini"><div class="l">Avg engaged time</div><div class="v">${fm(div(T,S),0)}s</div></div><div class="mini"><div class="l">From Google Ads</div><div class="v">${pct(div(adsS,(g.sources||[]).reduce((a,x)=>a+x.sessions,0)),0)}</div></div></div>
-      <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Engagement by landing page</div>${hBars(pg.filter(p=>p.sessions).slice(0,6).map(p=>({label:p.path,value:p.sessions,sub:`${fm(p.sessions)} · ${pct(div(p.engaged,p.sessions))} eng.`,color:p.market?C[p.market]:'#8A94A3'})))}</div>
-      <div class="scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Landing page</th><th>Market</th><th class="n">Sessions</th><th class="n">Engagement</th><th class="n">Avg time</th><th class="n">Searched</th><th class="n">Opened form</th><th class="n">Sent inquiry</th><th class="n">Search rate</th><th class="n">Inquiry rate</th><th class="n">Scroll depth</th><th class="n">Frustrated clicks</th></tr></thead><tbody>${pg.filter(p=>p.sessions||p.search).map(p=>`<tr><td><b>${esc(p.path)}</b></td><td>${p.market?pill(p.market):'–'}</td><td class="n">${fm(p.sessions)}</td><td class="n">${pct(div(p.engaged,p.sessions),0)}</td><td class="n">${fm(div(p.engagementSec,p.sessions),0)}s</td><td class="n">${fm(p.search)}</td><td class="n">${fm(p.openForm)}</td><td class="n">${fm(p.inquiry)}</td><td class="n">${pct(div(p.search,p.sessions),0)}</td><td class="n">${pct(div(p.inquiry,p.sessions),1)}</td><td class="n">${clOf(p.path)?fm(clOf(p.path).scroll)+'%':'–'}</td><td class="n">${frPill(clOf(p.path)?.friction)}</td></tr>`).join('')}</tbody></table></div></div>`;
+      <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Engagement by landing page</div>${hBars(pg.filter(p=>p.sessions).slice(0,6).map(p=>({label:p.path,value:p.sessions,sub:`${fm(p.sessions)} · ${pct(div(p.engaged,p.sessions))} eng.`,color:C.Charter})))}</div>
+      <div class="scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Landing page</th><th class="n">Sessions</th><th class="n">Engagement</th><th class="n">Avg time</th><th class="n">Searched</th><th class="n">Opened form</th><th class="n">Sent inquiry</th><th class="n">Search rate</th><th class="n">Inquiry rate</th><th class="n">Scroll depth</th><th class="n">Frustrated clicks</th></tr></thead><tbody>${pg.filter(p=>p.sessions||p.search).map(p=>`<tr><td><b>${esc(p.path)}</b></td><td class="n">${fm(p.sessions)}</td><td class="n">${pct(div(p.engaged,p.sessions),0)}</td><td class="n">${fm(div(p.engagementSec,p.sessions),0)}s</td><td class="n">${fm(p.search)}</td><td class="n">${fm(p.openForm)}</td><td class="n">${fm(p.inquiry)}</td><td class="n">${pct(div(p.search,p.sessions),0)}</td><td class="n">${pct(div(p.inquiry,p.sessions),1)}</td><td class="n">${clOf(p.path)?fm(clOf(p.path).scroll)+'%':'–'}</td><td class="n">${frPill(clOf(p.path)?.friction)}</td></tr>`).join('')}</tbody></table></div></div>`;
   }
   h+=section('Website','What visitors do on the landing pages (Google Analytics)','Only fly.charterjetsinc.com · since launch · scroll depth and frustrated clicks (repeated or unresponsive clicks) from Microsoft Clarity',gb);
 
@@ -260,7 +270,7 @@ function render(d,clarity){
     callsBody=`${cr.inTrial?'<div class="alert">The CallRail account is still on a trial plan. If the trial ends, call tracking stops and this section goes blank.</div>':''}
     <div class="minis"><div class="mini"><div class="l">Tracked calls</div><div class="v">${fm(cs.length)}</div></div><div class="mini"><div class="l">Answered</div><div class="v">${fm(cs.filter(c=>c.answered).length)}</div></div><div class="mini"><div class="l">60 seconds or more</div><div class="v">${fm(q.length)}</div></div><div class="mini"><div class="l">First-time callers</div><div class="v">${fm(cs.filter(c=>c.firstCall).length)}</div></div></div>
     <div class="grid g2"><div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Where calls come from</div>${Object.keys(byO).length?hBars(Object.entries(byO).map(([k,v])=>({label:k,value:v,color:k.startsWith('Google')?'#B9914B':'#8A94A3'}))):'<div class="empty">No calls yet since launch</div>'}</div>
-    <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Latest calls</div>${cs.length?`<div class="scroll"><table class="t"><thead><tr><th>When (ET)</th><th class="n">Duration</th><th>Status</th><th>Origin</th><th>Market</th></tr></thead><tbody>${cs.slice(0,8).map(c=>`<tr><td>${new Date(c.at).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</td><td class="n">${Math.floor(c.duration/60)}:${String(c.duration%60).padStart(2,'0')}</td><td>${c.answered?(c.duration>=60?'<span class="pill p-ok">Qualified</span>':'<span class="pill p-mut">Short</span>'):'<span class="pill p-bad">Missed</span>'}</td><td>${esc(c.origin)}</td><td>${c.market?pill(c.market):'–'}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">No calls yet since launch</div>'}</div></div>`;
+    <div><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px">Latest calls</div>${cs.length?`<div class="scroll"><table class="t"><thead><tr><th>When (ET)</th><th class="n">Duration</th><th>Status</th><th>Origin</th></tr></thead><tbody>${cs.slice(0,8).map(c=>`<tr><td>${new Date(c.at).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</td><td class="n">${Math.floor(c.duration/60)}:${String(c.duration%60).padStart(2,'0')}</td><td>${c.answered?(c.duration>=60?'<span class="pill p-ok">Qualified</span>':'<span class="pill p-mut">Short</span>'):'<span class="pill p-bad">Missed</span>'}</td><td>${esc(c.origin)}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">No calls yet since launch</div>'}</div></div>`;
   }
   h+=section('Calls','Phone calls (CallRail)','A qualified call is answered and lasts 60 seconds or more',`<div class="card pad">${callsBody}</div>`);
 
@@ -288,7 +298,7 @@ function render(d,clarity){
   // ---------- KEYWORDS + TERMS
   const kw=(d.keywords||[]).slice(0,15), tm=(d.terms||[]).slice(0,20);
   h+=section('Search','Keywords and search terms','',`<div class="grid g2">
-   <div class="card scroll"><table class="t"><thead><tr><th>Top keywords by spend</th><th>Market</th><th class="n">QS</th><th class="n">Clicks</th><th class="n">CPC</th><th class="n">Spend</th><th class="n">Inq.</th></tr></thead><tbody>${kw.length?kw.map(k=>`<tr><td>[${esc(k.kw)}]<div style="font-size:10.5px;color:#8A93A0">${esc(k.adGroup)}</div></td><td>${pill(k.market)}</td><td class="n">${k.qs??'–'}</td><td class="n">${fm(k.clicks)}</td><td class="n">${usd(div(k.spend,k.clicks),2)}</td><td class="n">${usd(k.spend,2)}</td><td class="n">${fm(k.conv,0)}</td></tr>`).join(''):'<tr><td colspan="7" class="empty">No data yet</td></tr>'}</tbody></table></div>
+   <div class="card scroll"><table class="t"><thead><tr><th>Top keywords by spend</th><th>Campaign</th><th class="n">QS</th><th class="n">Clicks</th><th class="n">CPC</th><th class="n">Spend</th><th class="n">Inq.</th></tr></thead><tbody>${kw.length?kw.map(k=>`<tr><td>[${esc(k.kw)}]<div style="font-size:10.5px;color:#8A93A0">${esc(k.adGroup)}</div></td><td style="white-space:nowrap;font-size:11px;color:#4F5968">${esc(k.campaign)}</td><td class="n">${k.qs??'–'}</td><td class="n">${fm(k.clicks)}</td><td class="n">${usd(div(k.spend,k.clicks),2)}</td><td class="n">${usd(k.spend,2)}</td><td class="n">${fm(k.conv,0)}</td></tr>`).join(''):'<tr><td colspan="7" class="empty">No data yet</td></tr>'}</tbody></table></div>
    <div class="card scroll"><table class="t"><thead><tr><th>What people actually searched</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">Spend</th><th>Status</th></tr></thead><tbody>${tm.length?tm.map(t=>`<tr><td>${esc(t.term)}</td><td class="n">${fm(t.impr)}</td><td class="n">${fm(t.clicks)}</td><td class="n">${usd(t.spend,2)}</td><td>${t.excluded?'<span class="pill p-mut">Blocked</span>':t.conv>0?'<span class="pill p-ok">Converted</span>':t.spend>=30?'<span class="pill p-warn">Watch</span>':''}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">No data yet</td></tr>'}</tbody></table></div></div>`);
 
   // ---------- PIPELINE
