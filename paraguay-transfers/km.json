@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T11:10:06.087Z",
+ "generated": "2026-09-22T17:10:11.821Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95811
+   "ultimoKm": 95828
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -48,9 +48,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 2663,
-   "kmFuera": 236,
+   "kmFuera": 253,
    "viajes": 8,
-   "costoComb": 3632447,
+   "costoComb": 3653748,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,7 +64,7 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 28,
+   "lecturas": 29,
    "conFoto": 28
   },
   {
@@ -79,6 +79,34 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-22",
+   "fechaFin": "2026-09-22",
+   "horaIni": "13:11",
+   "horaFin": null,
+   "kmIni": 95828,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [
+    95828
+   ],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -434,6 +462,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 95811,
+   "hasta": 95828,
+   "km": 17,
+   "fechaDesde": "2026-09-20",
+   "fechaHasta": "2026-09-22",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 95709,
    "hasta": 95730,
    "km": 21,
@@ -735,6 +774,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "foto:AC3FF514DF31738C2394E3B982849906",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 95.828 (22/09 13:11). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1790093477,
+   "fecha": "2026-09-22"
+  },
   {
    "key": "hueco:H1:95564:95665",
    "nivel": "juan",
