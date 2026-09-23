@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T11:10:14.892Z",
+ "generated": "2026-09-23T13:10:05.581Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -95,9 +95,10 @@
    "tanqueFin": null,
    "traslados": [
     "Aero-Yacht",
-    "Aero-Dazzler"
+    "Aero-Dazzler",
+    "Aeropuerto - Encarnación"
    ],
-   "kmEsperado": 40,
+   "kmEsperado": 740,
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
@@ -781,6 +782,14 @@
    "ruta": "Aero-Dazzler",
    "km": 40,
    "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-23",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Aeropuerto - Encarnación",
+   "km": 740,
+   "adelanto": 1020000
   },
   {
    "fecha": "2026-09-26",
