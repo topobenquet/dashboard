@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T10:20:15.960Z",
+ "generated": "2026-09-23T12:30:25.638Z",
  "tc": 5920,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,11 +7,11 @@
  "saldos": {
   "fecha": "2026-09-23",
   "itauGs": 43605,
-  "uenoGs": 30951220,
-  "uenoFecha": "2026-09-22",
-  "uenoMomento": "actual",
+  "uenoGs": 38026068,
+  "uenoFecha": "2026-09-23",
+  "uenoMomento": "inicio",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 7527.53,
+  "stripeDisponible": 527.53,
   "stripePendiente": 638.92,
   "pagoparPendienteUsd": 9759.63,
   "relay": null,
@@ -1134,9 +1134,9 @@
    "mesLabel": "Septiembre",
    "traslados": 59,
    "ingresos": {
-    "planilla": 8109.06,
+    "planilla": 8303.06,
     "alohaSinFila": 0,
-    "total": 8109.06
+    "total": 8303.06
    },
    "directos": {
     "chofer": 3744,
@@ -1146,7 +1146,7 @@
     "otros": 50,
     "total": 4571
    },
-   "margenBruto": 3538.06,
+   "margenBruto": 3732.06,
    "cobro": {
     "stripe": 102.2,
     "aloha": null,
@@ -1166,7 +1166,7 @@
     "total": 566.13
    },
    "impuestos": null,
-   "resultado": 2764.79,
+   "resultado": 2958.79,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1396,6 +1396,12 @@
    "tipo": "standard"
   },
   {
+   "fecha": "2026-09-23",
+   "monto": 7000,
+   "tipo": "standard",
+   "fee": 0
+  },
+  {
    "fecha": "2026-09-11",
    "monto": 6000,
    "tipo": "standard",
@@ -1416,10 +1422,6 @@
   {
    "nivel": "warn",
    "texto": "₲57.8 millones cobrados por Pagopar sin acreditar."
-  },
-  {
-   "nivel": "warn",
-   "texto": "$7,528 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
@@ -1686,6 +1688,13 @@
    "momento": "actual",
    "gs": 30951220,
    "usd": 5228.25
+  },
+  {
+   "fecha": "2026-09-23",
+   "cuenta": "ueno",
+   "momento": "inicio",
+   "gs": 38026068,
+   "usd": 6423.32
   }
  ]
 }
