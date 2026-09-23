@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T19:10:14.552Z",
+ "generated": "2026-09-23T11:10:14.892Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95845
+   "ultimoKm": 95850
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -48,9 +48,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 2680,
-   "kmFuera": 253,
+   "kmFuera": 258,
    "viajes": 9,
-   "costoComb": 3675049,
+   "costoComb": 3681314,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 30,
-   "conFoto": 29
+   "lecturas": 31,
+   "conFoto": 30
   },
   {
    "chofer": "Gustavo",
@@ -84,6 +84,35 @@
    "choferes": [
     "Alfredo"
    ],
+   "fechaIni": "2026-09-23",
+   "fechaFin": "2026-09-23",
+   "horaIni": "05:35",
+   "horaFin": null,
+   "kmIni": 95850,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.85,
+   "tanqueFin": null,
+   "traslados": [
+    "Aero-Yacht",
+    "Aero-Dazzler"
+   ],
+   "kmEsperado": 40,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
    "fechaIni": "2026-09-22",
    "fechaFin": "2026-09-22",
    "horaIni": "13:11",
@@ -93,9 +122,11 @@
    "km": 17,
    "tanqueIni": null,
    "tanqueFin": 0.05,
-   "traslados": [],
-   "kmEsperado": null,
-   "desvio": null,
+   "traslados": [
+    "Aero-Asu"
+   ],
+   "kmEsperado": 40,
+   "desvio": -0.575,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 21301,
@@ -462,6 +493,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 95845,
+   "hasta": 95850,
+   "km": 5,
+   "fechaDesde": "2026-09-22",
+   "fechaHasta": "2026-09-23",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 95811,
    "hasta": 95828,
    "km": 17,
@@ -741,18 +783,18 @@
    "adelanto": 55000
   },
   {
-   "fecha": "2026-09-23",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Aero-Asu",
-   "km": 40,
-   "adelanto": 55000
-  },
-  {
    "fecha": "2026-09-26",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "Dazzler-Aero",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-10-01",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Aero - Asunción Rent Suites Santa Teresa",
    "km": 40,
    "adelanto": 55000
   },
@@ -765,15 +807,158 @@
    "adelanto": 951000
   },
   {
+   "fecha": "2026-10-02",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-04",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-05",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-06",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-07",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-08",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-09",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-10",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-11",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-12",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-12",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Asunción Rent Suites Santa Teresa - Aero",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-10-13",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-14",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-15",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-16",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-17",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
+  },
+  {
    "fecha": "2026-10-18",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "Asu-Foz",
    "km": 690,
    "adelanto": 951000
+  },
+  {
+   "fecha": "2026-10-18",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
   }
  ],
  "alertas": [
+  {
+   "key": "desvio:H1:95828",
+   "nivel": "juan",
+   "texto": "H1, Alfredo, 22/09 (Aero-Asu): 17 km reales contra 40 km esperados (-57%).",
+   "ts": 1790100383,
+   "fecha": "2026-09-22"
+  },
   {
    "key": "foto:AC3FF514DF31738C2394E3B982849906",
    "nivel": "grupo",
