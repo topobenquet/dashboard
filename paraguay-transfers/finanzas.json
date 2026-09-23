@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T20:30:17.358Z",
+ "generated": "2026-09-23T22:30:50.113Z",
  "tc": 5920,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,9 +7,9 @@
  "saldos": {
   "fecha": "2026-09-23",
   "itauGs": 43605,
-  "uenoGs": 38026068,
+  "uenoGs": 39356615,
   "uenoFecha": "2026-09-23",
-  "uenoMomento": "inicio",
+  "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 527.53,
   "stripePendiente": 638.92,
@@ -302,13 +302,14 @@
   {
    "fecha": "2026-09-23",
    "in": 151.18,
-   "out": 0,
-   "n": 2,
+   "out": 276.01,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 151.18
+    "Pagopar": 151.18,
+    "WhatsApp · Pagos (Majo)": -276.01
    },
-   "neto": 151.18,
-   "acum": 6480.07
+   "neto": -124.83,
+   "acum": 6204.06
   }
  ],
  "movimientos": [
@@ -1005,6 +1006,14 @@
    "gs": 360000
   },
   {
+   "d": "2026-09-23",
+   "t": "out",
+   "usd": 276.01,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pagos Alfredo según detalle:",
+   "gs": 1634000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 206.32,
@@ -1159,11 +1168,11 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 58,
+   "traslados": 61,
    "ingresos": {
-    "planilla": 8158.06,
+    "planilla": 8305.06,
     "alohaSinFila": 0,
-    "total": 8158.06
+    "total": 8305.06
    },
    "directos": {
     "chofer": 3757,
@@ -1173,7 +1182,7 @@
     "otros": 51,
     "total": 4585
    },
-   "margenBruto": 3573.06,
+   "margenBruto": 3720.06,
    "cobro": {
     "stripe": 102.2,
     "aloha": null,
@@ -1188,12 +1197,12 @@
     "total": 104.94
    },
    "marketing": {
-    "google": 305.77,
+    "google": 307.63,
     "meta": 279.12,
-    "total": 584.89
+    "total": 586.75
    },
    "impuestos": null,
-   "resultado": 2781.03,
+   "resultado": 2926.17,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1593,6 +1602,46 @@
    "usd": 54.9,
    "concepto": "Quedan los del pago del City Tour de hoy",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 120000,
+   "usd": 20.27,
+   "concepto": "Viático: Gs.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 800000,
+   "usd": 135.14,
+   "concepto": "Combustible Encarnación: Gs.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 800000,
+   "usd": 135.14,
+   "concepto": "• Combustible Encarnación: Gs.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 90000,
+   "usd": 15.2,
+   "concepto": "4.- Gs. Transfer Hotel a Hotel.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 300000,
+   "usd": 50.68,
+   "concepto": "+ 120.000 viatico. .Encarnacion",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
@@ -1728,6 +1777,13 @@
    "momento": "inicio",
    "gs": 38026068,
    "usd": 6423.32
+  },
+  {
+   "fecha": "2026-09-23",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 39356615,
+   "usd": 6648.08
   }
  ]
 }
