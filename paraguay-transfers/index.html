@@ -318,7 +318,7 @@ function renderArgentina(root) {
   const previos=MESES_ES.slice(MESES_ES.indexOf("Agosto"), curNum-1)
     .map(mes=>`<tr><td>Total ${mes}</td><td>${A.monthly?.[mes]||0}</td><td></td></tr>`).join("");
   root.innerHTML += `<div class="section"><div class="section-title">Transfers Argentina: leads por día (${m.mes} 2026)</div>
-    <div class="info-box info-gray">Consultas que entran por el WhatsApp de Paraguay Transfers pero piden un traslado dentro de Argentina. Están fuera de los leads de PT.</div>
+    <div class="info-box info-gray">Consultas que piden un traslado dentro de Argentina. Hasta el 15/9 entraban por el WhatsApp de Paraguay Transfers; desde el 15/9 el sitio publica su propio número (+595 991 850 766) y se leen de ahí. Están fuera de los leads de PT.</div>
     <div class="ft-wrap"><table class="ft nowrap1" style="min-width:280px;">
       <colgroup><col style="width:40%"><col style="width:30%"><col style="width:30%"></colgroup>
       <thead><tr><th>Fecha</th><th>Leads AR</th><th>Acumulado</th></tr></thead>
