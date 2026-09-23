@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T13:10:05.581Z",
+ "generated": "2026-09-23T15:10:17.322Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95850
+   "ultimoKm": 95930
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -47,10 +47,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 2680,
+   "kmViajes": 2760,
    "kmFuera": 258,
-   "viajes": 9,
-   "costoComb": 3681314,
+   "viajes": 10,
+   "costoComb": 3781554,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 31,
-   "conFoto": 30
+   "lecturas": 32,
+   "conFoto": 31
   },
   {
    "chofer": "Gustavo",
@@ -87,26 +87,26 @@
    "fechaIni": "2026-09-23",
    "fechaFin": "2026-09-23",
    "horaIni": "05:35",
-   "horaFin": null,
+   "horaFin": "10:48",
    "kmIni": 95850,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 95930,
+   "km": 80,
    "tanqueIni": 0.85,
-   "tanqueFin": null,
+   "tanqueFin": 0.9,
    "traslados": [
     "Aero-Yacht",
     "Aero-Dazzler",
     "Aeropuerto - Encarnación"
    ],
    "kmEsperado": 740,
-   "desvio": null,
+   "desvio": -0.892,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 100240,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -961,6 +961,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "desvio:H1:95850",
+   "nivel": "juan",
+   "texto": "H1, Alfredo, 23/09 (Aero-Yacht + Aero-Dazzler + Aeropuerto - Encarnación): 80 km reales contra 740 km esperados (-89%).",
+   "ts": 1790171290,
+   "fecha": "2026-09-23"
+  },
   {
    "key": "desvio:H1:95828",
    "nivel": "juan",
