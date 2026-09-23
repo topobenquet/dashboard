@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23T14:30:18.282Z",
+ "generated": "2026-09-23T16:30:10.866Z",
  "tc": 5920,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 527.53,
   "stripePendiente": 638.92,
-  "pagoparPendienteUsd": 9759.63,
+  "pagoparPendienteUsd": 9858.95,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -298,6 +298,17 @@
    },
    "neto": 300.86,
    "acum": 6328.89
+  },
+  {
+   "fecha": "2026-09-23",
+   "in": 99.32,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 99.32
+   },
+   "neto": 99.32,
+   "acum": 6428.21
   }
  ],
  "movimientos": [
@@ -656,6 +667,14 @@
    "fuente": "Pagopar",
    "det": "PIX · Gustavo Napoleão",
    "gs": 1544000
+  },
+  {
+   "d": "2026-09-23",
+   "t": "in",
+   "usd": 99.32,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Rafael Jimenez Carbajal",
+   "gs": 588000
   },
   {
    "d": "2026-09-02",
@@ -1161,12 +1180,12 @@
     "total": 104.94
    },
    "marketing": {
-    "google": 287.01,
+    "google": 287.64,
     "meta": 279.12,
-    "total": 566.13
+    "total": 566.76
    },
    "impuestos": null,
-   "resultado": 2799.79,
+   "resultado": 2799.16,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1186,8 +1205,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 34,
-   "bruto": 9759.63,
+   "cobros": 35,
+   "bruto": 9858.95,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1202,8 +1221,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 57777000,
-  "cobradoUsd": 9759.63,
+  "cobradoGs": 58365000,
+  "cobradoUsd": 9858.95,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1312,6 +1331,12 @@
     "cobros": 2,
     "gs": 1851000,
     "usd": 312.67
+   },
+   {
+    "fecha": "2026-09-23",
+    "cobros": 1,
+    "gs": 588000,
+    "usd": 99.32
    }
   ],
   "pruebasExcluidas": 0,
@@ -1319,8 +1344,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 57777000,
-  "pendienteUsd": 9759.63
+  "pendienteGs": 58365000,
+  "pendienteUsd": 9858.95
  },
  "giros": [
   {
@@ -1421,7 +1446,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲57.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲58.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
