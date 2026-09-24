@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T14:30:15.407Z",
+ "generated": "2026-09-24T16:30:49.461Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 11433.56,
+  "pagoparPendienteUsd": 11506.1,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -313,15 +313,15 @@
   },
   {
    "fecha": "2026-09-24",
-   "in": 126.1,
-   "out": 389.83,
-   "n": 2,
+   "in": 198.64,
+   "out": 779.66,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 126.1,
-    "WhatsApp · Pagos (Majo)": -389.83
+    "Pagopar": 198.64,
+    "WhatsApp · Pagos (Majo)": -779.66
    },
-   "neto": -263.73,
-   "acum": 7316.9
+   "neto": -581.02,
+   "acum": 6999.61
   }
  ],
  "movimientos": [
@@ -714,6 +714,14 @@
    "gs": 744000
   },
   {
+   "d": "2026-09-24",
+   "t": "in",
+   "usd": 72.54,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Ian s Patten",
+   "gs": 428000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 321.36,
@@ -1050,6 +1058,22 @@
    "gs": 2300000
   },
   {
+   "d": "2026-09-24",
+   "t": "out",
+   "usd": 50.85,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Juan Ramon Cristaldo Vera",
+   "gs": 300000
+  },
+  {
+   "d": "2026-09-24",
+   "t": "out",
+   "usd": 338.98,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Seña Driver Hugo Fernández traslados 15-Oct  46 pax + 18-oct 24 pax",
+   "gs": 2000000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1233,12 +1257,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 319.94,
+    "google": 322.34,
     "meta": 279.12,
-    "total": 599.06
+    "total": 601.46
    },
    "impuestos": null,
-   "resultado": 2913.5,
+   "resultado": 2911.1,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1258,8 +1282,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 38,
-   "bruto": 11433.53,
+   "cobros": 39,
+   "bruto": 11506.07,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1274,8 +1298,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 67458000,
-  "cobradoUsd": 11433.53,
+  "cobradoGs": 67886000,
+  "cobradoUsd": 11506.07,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1393,9 +1417,9 @@
    },
    {
     "fecha": "2026-09-24",
-    "cobros": 1,
-    "gs": 744000,
-    "usd": 126.1
+    "cobros": 2,
+    "gs": 1172000,
+    "usd": 198.64
    }
   ],
   "pruebasExcluidas": 0,
@@ -1403,8 +1427,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 67458000,
-  "pendienteUsd": 11433.56
+  "pendienteGs": 67886000,
+  "pendienteUsd": 11506.1
  },
  "giros": [
   {
@@ -1505,7 +1529,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲67.5 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲67.9 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
