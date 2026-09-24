@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-24T00:30:07.428Z",
+ "generated": "2026-09-24T10:20:12.522Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-23",
+  "fecha": "2026-09-24",
   "itauGs": 43605,
   "uenoGs": 39356615,
   "uenoFecha": "2026-09-23",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 9944.41,
+  "pagoparPendienteUsd": 11307.46,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -301,15 +301,15 @@
   },
   {
    "fecha": "2026-09-23",
-   "in": 151.69,
+   "in": 1514.74,
    "out": 276.95,
-   "n": 3,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 151.69,
+    "Pagopar": 1514.74,
     "WhatsApp · Pagos (Majo)": -276.95
    },
-   "neto": -125.26,
-   "acum": 6217.58
+   "neto": 1237.79,
+   "acum": 7580.63
   }
  ],
  "movimientos": [
@@ -684,6 +684,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · May Chin",
    "gs": 307000
+  },
+  {
+   "d": "2026-09-23",
+   "t": "in",
+   "usd": 1363.05,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Alan Nino",
+   "gs": 8042000
   },
   {
    "d": "2026-09-02",
@@ -1197,12 +1205,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 312.64,
+    "google": 316.02,
     "meta": 279.12,
-    "total": 591.76
+    "total": 595.14
    },
    "impuestos": null,
-   "resultado": 2920.8,
+   "resultado": 2917.42,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1222,8 +1230,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 36,
-   "bruto": 9944.38,
+   "cobros": 37,
+   "bruto": 11307.43,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1238,8 +1246,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 58672000,
-  "cobradoUsd": 9944.38,
+  "cobradoGs": 66714000,
+  "cobradoUsd": 11307.43,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1351,9 +1359,9 @@
    },
    {
     "fecha": "2026-09-23",
-    "cobros": 2,
-    "gs": 895000,
-    "usd": 151.69
+    "cobros": 3,
+    "gs": 8937000,
+    "usd": 1514.74
    }
   ],
   "pruebasExcluidas": 0,
@@ -1361,8 +1369,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 58672000,
-  "pendienteUsd": 9944.41
+  "pendienteGs": 66714000,
+  "pendienteUsd": 11307.46
  },
  "giros": [
   {
@@ -1463,7 +1471,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲58.7 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲66.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
