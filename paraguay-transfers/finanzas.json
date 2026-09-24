@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T10:20:12.522Z",
+ "generated": "2026-09-24T12:30:47.197Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-09-24",
   "itauGs": 43605,
-  "uenoGs": 39356615,
-  "uenoFecha": "2026-09-23",
+  "uenoGs": 37722615,
+  "uenoFecha": "2026-09-24",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
@@ -310,6 +310,17 @@
    },
    "neto": 1237.79,
    "acum": 7580.63
+  },
+  {
+   "fecha": "2026-09-24",
+   "in": 0,
+   "out": 389.83,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -389.83
+   },
+   "neto": -389.83,
+   "acum": 7190.8
   }
  ],
  "movimientos": [
@@ -1022,6 +1033,14 @@
    "gs": 1634000
   },
   {
+   "d": "2026-09-24",
+   "t": "out",
+   "usd": 389.83,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Kia Soluto / Asu CDE-FOZ Pedido 23-09-03/ 26/27sept",
+   "gs": 2300000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1205,12 +1224,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 316.02,
+    "google": 317.7,
     "meta": 279.12,
-    "total": 595.14
+    "total": 596.82
    },
    "impuestos": null,
-   "resultado": 2917.42,
+   "resultado": 2915.74,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1792,6 +1811,13 @@
    "momento": "actual",
    "gs": 39356615,
    "usd": 6670.61
+  },
+  {
+   "fecha": "2026-09-24",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 37722615,
+   "usd": 6393.66
   }
  ]
 }
