@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-25T00:30:07.463Z",
+ "generated": "2026-09-25T10:20:38.323Z",
  "tc": 5890,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-24",
+  "fecha": "2026-09-25",
   "itauGs": 43605,
   "uenoGs": 37722615,
   "uenoFecha": "2026-09-24",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 11809.85,
+  "pagoparPendienteUsd": 11915.11,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -322,6 +322,17 @@
    },
    "neto": -297.78,
    "acum": 7291.97
+  },
+  {
+   "fecha": "2026-09-25",
+   "in": 105.26,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 105.26
+   },
+   "neto": 105.26,
+   "acum": 7397.23
   }
  ],
  "movimientos": [
@@ -728,6 +739,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sheila Segovia Benítez",
    "gs": 1674000
+  },
+  {
+   "d": "2026-09-25",
+   "t": "in",
+   "usd": 105.26,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sascha Jan  Bolscheit",
+   "gs": 620000
   },
   {
    "d": "2026-09-02",
@@ -1265,12 +1284,12 @@
     "total": 105.48
    },
    "marketing": {
-    "google": 333.21,
+    "google": 333.63,
     "meta": 279.12,
-    "total": 612.33
+    "total": 612.75
    },
    "impuestos": null,
-   "resultado": 3187.34,
+   "resultado": 3186.92,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1290,8 +1309,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 40,
-   "bruto": 11809.82,
+   "cobros": 41,
+   "bruto": 11915.08,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1306,8 +1325,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 69560000,
-  "cobradoUsd": 11809.82,
+  "cobradoGs": 70180000,
+  "cobradoUsd": 11915.08,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1428,6 +1447,12 @@
     "cobros": 3,
     "gs": 2846000,
     "usd": 483.2
+   },
+   {
+    "fecha": "2026-09-25",
+    "cobros": 1,
+    "gs": 620000,
+    "usd": 105.26
    }
   ],
   "pruebasExcluidas": 0,
@@ -1435,8 +1460,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 69560000,
-  "pendienteUsd": 11809.85
+  "pendienteGs": 70180000,
+  "pendienteUsd": 11915.11
  },
  "giros": [
   {
@@ -1537,7 +1562,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲69.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲70.2 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [

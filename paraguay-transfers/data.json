@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-24T10:20:51.329Z",
-  "lastSyncLabel": "24 Sep 2026",
+  "generated": "2026-09-25T10:21:21.648Z",
+  "lastSyncLabel": "25 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 244,
-      "reservas": 49,
-      "revenue": 14195,
+      "leads": 254,
+      "reservas": 53,
+      "revenue": 15148,
       "chofer": 5888,
       "comb": 622,
       "peajes": 115,
-      "comision": 307.75,
+      "comision": 336.75,
       "reembolsos": 13,
       "otros": 38,
-      "gAds": 316,
+      "gAds": 334,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 316.02,
-      "clicks": 347,
-      "impr": 1780,
-      "conv": 25
+      "spend": 333.63,
+      "clicks": 367,
+      "impr": 1850,
+      "conv": 28
     }
   ],
   "trips": [
@@ -4109,7 +4109,7 @@
     {
       "mes": "Septiembre",
       "route": "Tour Asu -  desde Crowne Plaza",
-      "cliente": "mk",
+      "cliente": "MK",
       "pais": "UK",
       "conductor": "Alfredo Sánchez PT",
       "pago": 197,
@@ -4178,10 +4178,10 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "mk",
+      "route": "Crowne Plaza  -Sheraton",
+      "cliente": "MK",
       "pais": "UK",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 49,
       "sena": 49,
       "restante": 0,
@@ -4234,20 +4234,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "Aeropuerto - Encarnación",
-      "cliente": "Decio",
-      "pais": "Brasil",
-      "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "21/09/26",
-      "fechaSalida": "23/09/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "Hotel Dazzler → Planta Emergent Cold LATAM → Hotel Dazzler.",
       "cliente": "Fernando",
       "pais": "Uruguay",
@@ -4276,10 +4262,10 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
+      "route": "Asu-Aero",
       "cliente": "laura flores",
       "pais": "Paraguay",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 49,
       "sena": 49,
       "restante": 0,
@@ -4287,6 +4273,20 @@
       "neto": 48,
       "fechaReserva": "23/09/26",
       "fechaSalida": "24/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "ASU-AERO",
+      "cliente": "ian patten",
+      "pais": "Panamá",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 67,
+      "fechaReserva": "24/09/26",
+      "fechaSalida": "25/09/26"
     },
     {
       "mes": "Septiembre",
@@ -4319,15 +4319,43 @@
     {
       "mes": "Septiembre",
       "route": "ASU-AERO",
-      "cliente": "mk",
+      "cliente": "MK",
       "pais": "UK",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 49,
       "sena": 49,
       "restante": 0,
       "choferCost": 0,
       "neto": 48,
       "fechaReserva": "23/09/26",
+      "fechaSalida": "26/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Tour FOZ",
+      "cliente": "Alan",
+      "pais": "USA",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 1297,
+      "sena": 1297,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 1258,
+      "fechaReserva": "23/09/26",
+      "fechaSalida": "26/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "",
+      "cliente": "henny schubert",
+      "pais": "Alemania",
+      "conductor": "",
+      "pago": 217,
+      "sena": 217,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 210,
+      "fechaReserva": "24/09/26",
       "fechaSalida": "26/09/26"
     },
     {
@@ -4542,20 +4570,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "joao chaleira",
-      "pais": "España",
-      "conductor": "",
-      "pago": 125,
-      "sena": 125,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 121.25,
-      "fechaReserva": "17/09/26",
-      "fechaSalida": "08/11/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "Aloft-Aero",
       "cliente": "Nisla | Dash BPO",
       "pais": "Panamá",
@@ -4752,17 +4766,101 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
-      "cliente": "rafael peliciolli nunes",
-      "pais": "Brasil",
-      "conductor": "",
-      "pago": 97,
-      "sena": 97,
+      "route": "ASU-PtoIguazu",
+      "cliente": "Hisaaki Takei",
+      "pais": "Japón",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 300,
       "restante": 0,
       "choferCost": 0,
-      "neto": 94,
-      "fechaReserva": "09/09/26",
-      "fechaSalida": ""
+      "neto": 0,
+      "fechaReserva": "01/09/26",
+      "fechaSalida": "17/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Vehiculo a disposición",
+      "cliente": "Kenny Dudek",
+      "pais": "Australia",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "18/09/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "ASU-FOZ",
+      "cliente": "Sílvia Almeida",
+      "pais": "Portugal",
+      "conductor": "",
+      "pago": 0,
+      "sena": 2399,
+      "restante": 0,
+      "choferCost": 1311,
+      "neto": 0,
+      "fechaReserva": "02/09/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Asunción Rent Suites Santa Teresa - Aero",
+      "cliente": "Kenny Dudek",
+      "pais": "Australia",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "18/09/26",
+      "fechaSalida": "19/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "ASU-FOZ",
+      "cliente": "antje dometzky",
+      "pais": "Alemania",
+      "conductor": "",
+      "pago": 397,
+      "sena": 120,
+      "restante": 277,
+      "choferCost": 0,
+      "neto": 385,
+      "fechaReserva": "24/09/26",
+      "fechaSalida": "19/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Pto Iguazu - ASU",
+      "cliente": "philip",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "12/09/26",
+      "fechaSalida": "22/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "",
+      "cliente": "joao chaleira",
+      "pais": "España",
+      "conductor": "",
+      "pago": 125,
+      "sena": 125,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 121.25,
+      "fechaReserva": "17/09/26",
+      "fechaSalida": "08/11/26"
     },
     {
       "mes": "Septiembre",
@@ -4777,6 +4875,20 @@
       "neto": 359,
       "fechaReserva": "14/09/26",
       "fechaSalida": "11/11/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "FOZ-ASU",
+      "cliente": "shei",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 270,
+      "sena": 270,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 262,
+      "fechaReserva": "24/09/26",
+      "fechaSalida": "15/11/26"
     },
     {
       "mes": "Septiembre",
@@ -4808,62 +4920,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "Asunción Rent Suites Santa Teresa - Aero",
-      "cliente": "Kenny Dudek",
-      "pais": "Australia",
-      "conductor": "HUGO FERNANDEZ",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "18/09/26",
-      "fechaSalida": "19/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Vehiculo a disposición",
-      "cliente": "Kenny Dudek",
-      "pais": "Australia",
-      "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "18/09/26",
-      "fechaSalida": "18/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Pto Iguazu - ASU",
-      "cliente": "philip",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 100,
-      "sena": 100,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
-      "fechaReserva": "12/09/26",
-      "fechaSalida": "22/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "ASU-FOZ",
-      "cliente": "Sílvia Almeida",
-      "pais": "Portugal",
-      "conductor": "",
-      "pago": 0,
-      "sena": 2399,
-      "restante": 0,
-      "choferCost": 1311,
-      "neto": 0,
-      "fechaReserva": "02/09/26",
-      "fechaSalida": "18/10/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "",
       "cliente": "Clara Fiol",
       "pais": "USA",
@@ -4878,58 +4934,30 @@
     },
     {
       "mes": "Septiembre",
-      "route": "ASU-PtoIguazu",
-      "cliente": "Hisaaki Takei",
-      "pais": "Japón",
+      "route": "Aeropuerto - Encarnación",
+      "cliente": "Decio",
+      "pais": "Brasil",
       "conductor": "Alfredo Sánchez PT",
       "pago": 0,
-      "sena": 300,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "01/09/26",
-      "fechaSalida": "17/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Aero - Asunción Rent Suites Santa Teresa",
-      "cliente": "Kenny Dudek",
-      "pais": "Number of Passengers: 12\nNumber of Suitcases: 16",
-      "conductor": "HUGO FERNANDEZ",
-      "pago": 0,
       "sena": 0,
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
-      "fechaReserva": "18/09/26",
-      "fechaSalida": "08/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Asunción Rent Suites Santa Teresa - Aero",
-      "cliente": "Kenny Dudek",
-      "pais": "Number of Passengers: 13\nNumber of Suitcases: 17",
-      "conductor": "HUGO FERNANDEZ",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "18/09/26",
-      "fechaSalida": "19/10/26"
+      "fechaReserva": "21/09/26",
+      "fechaSalida": ""
     },
     {
       "mes": "Septiembre",
       "route": "",
-      "cliente": "alan",
-      "pais": "USA",
+      "cliente": "rafael peliciolli nunes",
+      "pais": "Brasil",
       "conductor": "",
-      "pago": 1297,
-      "sena": 1297,
+      "pago": 97,
+      "sena": 97,
       "restante": 0,
       "choferCost": 0,
-      "neto": 1258,
-      "fechaReserva": "23/09/26",
+      "neto": 94,
+      "fechaReserva": "09/09/26",
       "fechaSalida": ""
     },
     {
@@ -4977,7 +5005,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-24": 4,
+      "2026-09-25": 1,
+      "2026-09-24": 13,
       "2026-09-23": 11,
       "2026-09-22": 12,
       "2026-09-21": 15,
@@ -5054,6 +5083,7 @@
       "2026-09-21": 2,
       "2026-09-23": 3,
       "2026-09-13": 1,
+      "2026-09-24": 4,
       "2026-09-22": 2,
       "2026-09-04": 2,
       "2026-09-09": 3,
@@ -5313,13 +5343,14 @@
       "2026-09-21": 22.56,
       "2026-09-22": 12.23,
       "2026-09-23": 29.09,
-      "2026-09-24": 1.26
+      "2026-09-24": 17.46,
+      "2026-09-25": 1.41
     }
   },
   "resenas": {
     "count": 61,
     "rating": 5,
-    "actualizado": "2026-09-23T23:10:01.544Z",
+    "actualizado": "2026-09-24T23:10:05.593Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -5348,6 +5379,11 @@
       },
       {
         "fecha": "2026-09-23",
+        "count": 61,
+        "rating": 5
+      },
+      {
+        "fecha": "2026-09-24",
         "count": 61,
         "rating": 5
       }
@@ -5388,6 +5424,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-09-25": 2,
       "2026-09-17": 9,
       "2026-09-15": 12,
       "2026-09-14": 5,
@@ -5426,10 +5463,11 @@
       "2026-09-20": 11,
       "2026-09-21": 13,
       "2026-09-22": 10,
-      "2026-09-23": 8
+      "2026-09-23": 8,
+      "2026-09-24": 12
     },
     "monthly": {
-      "Septiembre": 143,
+      "Septiembre": 157,
       "Agosto": 27
     }
   }
