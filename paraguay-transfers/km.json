@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T17:10:33.710Z",
+ "generated": "2026-09-25T11:10:14.257Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95967
+   "ultimoKm": 95994
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -47,10 +47,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 2760,
+   "kmViajes": 2791,
    "kmFuera": 291,
-   "viajes": 10,
-   "costoComb": 3822903,
+   "viajes": 11,
+   "costoComb": 3861746,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 35,
-   "conFoto": 34
+   "lecturas": 37,
+   "conFoto": 36
   },
   {
    "chofer": "Gustavo",
@@ -85,24 +85,26 @@
     "Alfredo"
    ],
    "fechaIni": "2026-09-24",
-   "fechaFin": "2026-09-24",
+   "fechaFin": "2026-09-25",
    "horaIni": "13:10",
-   "horaFin": null,
+   "horaFin": "04:28",
    "kmIni": 95963,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 95994,
+   "km": 31,
    "tanqueIni": 0.8,
-   "tanqueFin": null,
-   "traslados": [],
-   "kmEsperado": null,
-   "desvio": null,
+   "tanqueFin": 0.9,
+   "traslados": [
+    "ASU-AERO"
+   ],
+   "kmEsperado": 40,
+   "desvio": -0.225,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 38843,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": true
   },
   {
@@ -121,11 +123,10 @@
    "tanqueFin": 0.9,
    "traslados": [
     "Aero-Yacht",
-    "Aero-Dazzler",
-    "Aeropuerto - Encarnación"
+    "Aero-Dazzler"
    ],
-   "kmEsperado": 740,
-   "desvio": -0.892,
+   "kmEsperado": 40,
+   "desvio": 1,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 100240,
@@ -150,7 +151,8 @@
    "tanqueIni": null,
    "tanqueFin": 0.05,
    "traslados": [
-    "Aero-Asu"
+    "Aero-Asu",
+    "Crowne Plaza  -Sheraton"
    ],
    "kmEsperado": 40,
    "desvio": -0.575,
@@ -816,10 +818,26 @@
  ],
  "proximos": [
   {
+   "fecha": "2026-09-25",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "ASU-AERO",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
    "fecha": "2026-09-26",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "1765 Edifico Alicante 2 - Aero",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-26",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "ASU-AERO",
    "km": 40,
    "adelanto": 55000
   },
@@ -994,16 +1012,23 @@
  ],
  "alertas": [
   {
+   "key": "sinkm:Luis:2026-09-24:Asu-Aero",
+   "nivel": "grupo",
+   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado Asu-Aero del 24/09. Mandalas con el número escrito, por favor.",
+   "ts": 1790305199,
+   "fecha": "2026-09-24"
+  },
+  {
    "key": "desvio:H1:95850",
    "nivel": "juan",
-   "texto": "H1, Alfredo, 23/09 (Aero-Yacht + Aero-Dazzler + Aeropuerto - Encarnación): 80 km reales contra 740 km esperados (-89%).",
+   "texto": "H1, Alfredo, 23/09 (Aero-Yacht + Aero-Dazzler): 80 km reales contra 40 km esperados (+100%).",
    "ts": 1790171290,
    "fecha": "2026-09-23"
   },
   {
    "key": "desvio:H1:95828",
    "nivel": "juan",
-   "texto": "H1, Alfredo, 22/09 (Aero-Asu): 17 km reales contra 40 km esperados (-57%).",
+   "texto": "H1, Alfredo, 22/09 (Aero-Asu + Crowne Plaza  -Sheraton): 17 km reales contra 40 km esperados (-57%).",
    "ts": 1790100383,
    "fecha": "2026-09-22"
   },
