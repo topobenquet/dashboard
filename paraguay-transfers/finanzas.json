@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T10:20:38.323Z",
+ "generated": "2026-09-25T12:30:31.157Z",
  "tc": 5890,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-09-25",
   "itauGs": 43605,
-  "uenoGs": 37722615,
-  "uenoFecha": "2026-09-24",
+  "uenoGs": 34312615,
+  "uenoFecha": "2026-09-25",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
@@ -326,13 +326,14 @@
   {
    "fecha": "2026-09-25",
    "in": 105.26,
-   "out": 0,
-   "n": 1,
+   "out": 1697.79,
+   "n": 2,
    "porFuente": {
-    "Pagopar": 105.26
+    "Pagopar": 105.26,
+    "WhatsApp · Pagos (Majo)": -1697.79
    },
-   "neto": 105.26,
-   "acum": 7397.23
+   "neto": -1592.53,
+   "acum": 5699.44
   }
  ],
  "movimientos": [
@@ -1101,6 +1102,14 @@
    "gs": 2000000
   },
   {
+   "d": "2026-09-25",
+   "t": "out",
+   "usd": 1697.79,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Honorarios Juan Benquet",
+   "gs": 10000000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.37,
@@ -1255,21 +1264,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 63,
+   "traslados": 65,
    "ingresos": {
-    "planilla": 8592.35,
+    "planilla": 9140.35,
     "alohaSinFila": 0,
-    "total": 8592.35
+    "total": 9140.35
    },
    "directos": {
-    "chofer": 3757,
+    "chofer": 3777,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
-    "otros": 51,
-    "total": 4585
+    "otros": 54,
+    "total": 4608
    },
-   "margenBruto": 4007.35,
+   "margenBruto": 4532.35,
    "cobro": {
     "stripe": 102.2,
     "aloha": null,
@@ -1289,7 +1298,7 @@
     "total": 612.75
    },
    "impuestos": null,
-   "resultado": 3186.92,
+   "resultado": 3711.92,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1890,6 +1899,13 @@
    "momento": "actual",
    "gs": 37722615,
    "usd": 6404.52
+  },
+  {
+   "fecha": "2026-09-25",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 34312615,
+   "usd": 5825.57
   }
  ]
 }
