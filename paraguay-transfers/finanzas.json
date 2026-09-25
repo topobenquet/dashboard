@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T20:30:14.728Z",
+ "generated": "2026-09-25T22:30:26.959Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -326,14 +326,14 @@
   {
    "fecha": "2026-09-25",
    "in": 269.15,
-   "out": 1889.84,
-   "n": 5,
+   "out": 1994.93,
+   "n": 7,
    "porFuente": {
     "Pagopar": 269.15,
-    "WhatsApp · Pagos (Majo)": -1889.84
+    "WhatsApp · Pagos (Majo)": -1994.93
    },
-   "neto": -1620.69,
-   "acum": 5662.65
+   "neto": -1725.78,
+   "acum": 5557.56
   }
  ],
  "movimientos": [
@@ -1134,6 +1134,22 @@
    "gs": 1150000
   },
   {
+   "d": "2026-09-25",
+   "t": "out",
+   "usd": 20.34,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Traslado 26/09 4:00am Pax Derik",
+   "gs": 120000
+  },
+  {
+   "d": "2026-09-25",
+   "t": "out",
+   "usd": 84.75,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Juan Vera traslado Cde 26/09 7am Pax Henny",
+   "gs": 500000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1295,14 +1311,14 @@
     "total": 9296.35
    },
    "directos": {
-    "chofer": 3777,
+    "chofer": 3866,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 40,
     "otros": 54,
-    "total": 4608
+    "total": 4697
    },
-   "margenBruto": 4688.35,
+   "margenBruto": 4599.35,
    "cobro": {
     "stripe": 102.2,
     "aloha": null,
@@ -1317,12 +1333,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 342.17,
+    "google": 346.32,
     "meta": 279.12,
-    "total": 621.29
+    "total": 625.44
    },
    "impuestos": null,
-   "resultado": 3859.56,
+   "resultado": 3766.41,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
