@@ -1,0 +1,4415 @@
+{
+ "generated": "2026-09-25T20:34:59.392Z",
+ "today": "2026-09-25",
+ "launch": "2026-09-24",
+ "daysLive": 2,
+ "testDays": 30,
+ "budget": {
+  "monthly": 6000,
+  "daily": 200
+ },
+ "sources": {
+  "googleAds": true,
+  "ga4": true,
+  "negatives": true,
+  "errors": []
+ },
+ "account": {
+  "spend": 125.55,
+  "impr": 5860,
+  "clicks": 177,
+  "value": 0,
+  "resView": 104,
+  "checkout": 0,
+  "reserved": 0,
+  "upsell": 0,
+  "sessions": 10
+ },
+ "groups": {
+  "PMax": {
+   "spend": 24.05,
+   "impr": 5076,
+   "clicks": 89,
+   "value": 0,
+   "resView": 27,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0
+  },
+  "Non-Brand": {
+   "spend": 73.01,
+   "impr": 497,
+   "clicks": 73,
+   "value": 0,
+   "resView": 64,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0
+  },
+  "Competitor": {
+   "spend": 26.64,
+   "impr": 285,
+   "clicks": 13,
+   "value": 0,
+   "resView": 11,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0
+  },
+  "Brand": {
+   "spend": 1.85,
+   "impr": 2,
+   "clicks": 2,
+   "value": 0,
+   "resView": 2,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0
+  }
+ },
+ "campaigns": [
+  {
+   "name": "PMax | Reservation | US",
+   "id": "24290862625",
+   "group": "PMax",
+   "slug": "pmax-reservation-us",
+   "short": "PMax · Reservation",
+   "spend": 24.05,
+   "impr": 5076,
+   "clicks": 89,
+   "conv": 0,
+   "value": 0,
+   "resView": 27,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0,
+   "share": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "status": "ENABLED"
+  },
+  {
+   "name": "Search | Non-Brand | US",
+   "id": "24279736317",
+   "group": "Non-Brand",
+   "slug": "search-nonbrand-us",
+   "short": "Search · Non-Brand",
+   "spend": 73.01,
+   "impr": 497,
+   "clicks": 73,
+   "conv": 0,
+   "value": 0,
+   "resView": 64,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0,
+   "share": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "status": "ENABLED"
+  },
+  {
+   "name": "Search | Competitor | US",
+   "id": "24285147290",
+   "group": "Competitor",
+   "slug": "search-competitor-us",
+   "short": "Search · Competitor",
+   "spend": 26.64,
+   "impr": 285,
+   "clicks": 13,
+   "conv": 0,
+   "value": 0,
+   "resView": 11,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0,
+   "share": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "status": "ENABLED"
+  },
+  {
+   "name": "Search | Brand | US",
+   "id": "24290862901",
+   "group": "Brand",
+   "slug": "search-brand-us",
+   "short": "Search · Brand",
+   "spend": 1.85,
+   "impr": 2,
+   "clicks": 2,
+   "conv": 0,
+   "value": 0,
+   "resView": 2,
+   "checkout": 0,
+   "reserved": 0,
+   "upsell": 0,
+   "share": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "status": "ENABLED"
+  }
+ ],
+ "daily": [
+  {
+   "date": "2026-09-24",
+   "groups": {
+    "Non-Brand": {
+     "spend": 40.99,
+     "clicks": 19,
+     "reserved": 0
+    },
+    "Competitor": {
+     "spend": 22.07,
+     "clicks": 11,
+     "reserved": 0
+    },
+    "PMax": {
+     "spend": 0.901605,
+     "clicks": 3,
+     "reserved": 0
+    },
+    "Brand": {
+     "spend": 0.9,
+     "clicks": 1,
+     "reserved": 0
+    }
+   },
+   "spend": 64.86160500000001,
+   "clicks": 34,
+   "reserved": 0
+  },
+  {
+   "date": "2026-09-25",
+   "groups": {
+    "Non-Brand": {
+     "spend": 32.02,
+     "clicks": 54,
+     "reserved": 0
+    },
+    "Competitor": {
+     "spend": 4.57,
+     "clicks": 2,
+     "reserved": 0
+    },
+    "PMax": {
+     "spend": 23.150835,
+     "clicks": 86,
+     "reserved": 0
+    },
+    "Brand": {
+     "spend": 0.95,
+     "clicks": 1,
+     "reserved": 0
+    }
+   },
+   "spend": 60.69083500000001,
+   "clicks": 143,
+   "reserved": 0
+  }
+ ],
+ "keywords": [
+  {
+   "kw": "oura ring health tracker",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Oura & Others",
+   "qs": null,
+   "impr": 220,
+   "clicks": 10,
+   "spend": 20.88,
+   "conv": 0
+  },
+  {
+   "kw": "best wearable health tracker",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 38,
+   "clicks": 6,
+   "spend": 10.04,
+   "conv": 0
+  },
+  {
+   "kw": "best fitness smartwatch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 49,
+   "clicks": 15,
+   "spend": 8.46,
+   "conv": 0
+  },
+  {
+   "kw": "best health monitor watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 44,
+   "clicks": 14,
+   "spend": 7.06,
+   "conv": 0
+  },
+  {
+   "kw": "health monitor watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": 1,
+   "impr": 36,
+   "clicks": 8,
+   "spend": 6.71,
+   "conv": 0
+  },
+  {
+   "kw": "solar watches",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": 3,
+   "impr": 60,
+   "clicks": 3,
+   "spend": 6.42,
+   "conv": 0
+  },
+  {
+   "kw": "whoop strap",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Whoop",
+   "qs": null,
+   "impr": 20,
+   "clicks": 3,
+   "spend": 5.76,
+   "conv": 0
+  },
+  {
+   "kw": "best health tracker",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 20,
+   "clicks": 8,
+   "spend": 4.63,
+   "conv": 0
+  },
+  {
+   "kw": "best solar watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": null,
+   "impr": 21,
+   "clicks": 2,
+   "spend": 4.29,
+   "conv": 0
+  },
+  {
+   "kw": "wearable health tracker",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 33,
+   "clicks": 2,
+   "spend": 4.2,
+   "conv": 0
+  },
+  {
+   "kw": "best smartwatch for health monitoring",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": 1,
+   "impr": 36,
+   "clicks": 7,
+   "spend": 4.09,
+   "conv": 0
+  },
+  {
+   "kw": "best fitness watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": 3,
+   "impr": 12,
+   "clicks": 1,
+   "spend": 2.21,
+   "conv": 0
+  },
+  {
+   "kw": "fitness tracker no subscription",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 9,
+   "clicks": 1,
+   "spend": 2.2,
+   "conv": 0
+  },
+  {
+   "kw": "solar powered watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": 1,
+   "impr": 5,
+   "clicks": 1,
+   "spend": 2.18,
+   "conv": 0
+  },
+  {
+   "kw": "minimalist fitness tracker",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 13,
+   "clicks": 1,
+   "spend": 2.16,
+   "conv": 0
+  },
+  {
+   "kw": "light powered watches",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": null,
+   "impr": 22,
+   "clicks": 1,
+   "spend": 2.15,
+   "conv": 0
+  },
+  {
+   "kw": "best heart rate monitor watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 3,
+   "clicks": 1,
+   "spend": 2.13,
+   "conv": 0
+  },
+  {
+   "kw": "e ink watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": 5,
+   "impr": 6,
+   "clicks": 1,
+   "spend": 2.1,
+   "conv": 0
+  },
+  {
+   "kw": "solar powered smart watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": null,
+   "impr": 5,
+   "clicks": 1,
+   "spend": 1.98,
+   "conv": 0
+  },
+  {
+   "kw": "bean watch",
+   "campaign": "Search · Brand",
+   "group": "Brand",
+   "adGroup": "AG - Bean Brand",
+   "qs": 7,
+   "impr": 2,
+   "clicks": 2,
+   "spend": 1.85,
+   "conv": 0
+  },
+  {
+   "kw": "health tracker watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 30,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "heart rate monitor watches",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 28,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "whoop subscription",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Whoop",
+   "qs": null,
+   "impr": 20,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "whoop alternative",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Whoop",
+   "qs": 3,
+   "impr": 14,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "best whoop alternative",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Whoop",
+   "qs": null,
+   "impr": 7,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "heart monitoring watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 6,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "best health tracking watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 5,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "fall detection watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "smart watch no subscription",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "best watch for health monitoring",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "apple watch alternative",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Oura & Others",
+   "qs": null,
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "best solar powered watches",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": null,
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "heart monitor smart watch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Health Sensors",
+   "qs": null,
+   "impr": 1,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "long battery life smartwatch",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Solar No Charging",
+   "qs": null,
+   "impr": 1,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "slim fitness tracker",
+   "campaign": "Search · Non-Brand",
+   "group": "Non-Brand",
+   "adGroup": "AG - Best Health Watch",
+   "qs": null,
+   "impr": 1,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  },
+  {
+   "kw": "oura ring alternative",
+   "campaign": "Search · Competitor",
+   "group": "Competitor",
+   "adGroup": "AG - Oura & Others",
+   "qs": null,
+   "impr": 1,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0
+  }
+ ],
+ "terms": [
+  {
+   "term": "oura ring",
+   "impr": 134,
+   "clicks": 5,
+   "spend": 10.3,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "health and fitness tracker",
+   "impr": 29,
+   "clicks": 11,
+   "spend": 3.44,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "oura ring 5",
+   "impr": 24,
+   "clicks": 5,
+   "spend": 10.58,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "what is the best health tracker device",
+   "impr": 12,
+   "clicks": 7,
+   "spend": 2.88,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "solar watch",
+   "impr": 12,
+   "clicks": 1,
+   "spend": 2.08,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health wearables 2026",
+   "impr": 7,
+   "clicks": 7,
+   "spend": 3.16,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health watch for seniors",
+   "impr": 7,
+   "clicks": 1,
+   "spend": 0.25,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "solar watches",
+   "impr": 7,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health tracker 2026",
+   "impr": 6,
+   "clicks": 2,
+   "spend": 0.55,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "fitness watch",
+   "impr": 6,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health monitoring devices",
+   "impr": 5,
+   "clicks": 1,
+   "spend": 1.03,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "health tracker",
+   "impr": 5,
+   "clicks": 1,
+   "spend": 0.41,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "smart health tracker",
+   "impr": 5,
+   "clicks": 1,
+   "spend": 0.36,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "what is the best health tracking device",
+   "impr": 4,
+   "clicks": 3,
+   "spend": 1.46,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "affordable fitness tracker",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "best smartwatch without subscription",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "running watch",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "solar powered mens watches",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "oura ring subscription",
+   "impr": 4,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best smartwatches for seniors",
+   "impr": 3,
+   "clicks": 3,
+   "spend": 2.28,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "e ink watch",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "solar titanium watch",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "aurora ring",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "oura ring what is it",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "what is an oura ring",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "cost of whoop band",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "how much is a whoop",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "whoop discount code",
+   "impr": 3,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best ladies solar powered watches",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2.18,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best smartwatch for health monitoring 2026",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2.16,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "thin fitness watch",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2.16,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "bering slim solar",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2.15,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "solar smartwatch for men",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2.09,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "whoop custom bands",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 2,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best solar smart watches",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 1.98,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "bean watch",
+   "impr": 2,
+   "clicks": 2,
+   "spend": 1.85,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best wearables for women",
+   "impr": 2,
+   "clicks": 2,
+   "spend": 1.02,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best smart watch for seniors",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 0.65,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health wearables",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 0.63,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "live tracker watch",
+   "impr": 2,
+   "clicks": 1,
+   "spend": 0.31,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best fitness tracker watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best health tracking devices",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best sports watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": true
+  },
+  {
+   "term": "blood pressure fitness tracker",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "blood pressure smart watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "faceless smart watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "fitness tracker watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "fitness watch that looks like a normal watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "health monitor watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "hybrid watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "new health watch",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "smart hybrid watches",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "smart watch for android that takes blood pressure",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "smart watch for seniors with fall detection",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "smartwatch that doesn t require subscription",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "solar powered fitness tracker",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "watches with step counter",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "what is the best watch to monitor heart rate",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best solar powered watches for women",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "best solar watches for men",
+   "impr": 2,
+   "clicks": 0,
+   "spend": 0,
+   "conv": 0,
+   "excluded": false
+  }
+ ],
+ "hours": [
+  {
+   "h": 0,
+   "clicks": 2,
+   "conv": 0,
+   "spend": 2.14
+  },
+  {
+   "h": 1,
+   "clicks": 0,
+   "conv": 0,
+   "spend": 0.08
+  },
+  {
+   "h": 2,
+   "clicks": 11,
+   "conv": 0,
+   "spend": 10.43
+  },
+  {
+   "h": 3,
+   "clicks": 2,
+   "conv": 0,
+   "spend": 0.78
+  },
+  {
+   "h": 4,
+   "clicks": 1,
+   "conv": 0,
+   "spend": 0.31
+  },
+  {
+   "h": 5,
+   "clicks": 4,
+   "conv": 0,
+   "spend": 1.96
+  },
+  {
+   "h": 6,
+   "clicks": 2,
+   "conv": 0,
+   "spend": 1.19
+  },
+  {
+   "h": 7,
+   "clicks": 3,
+   "conv": 0,
+   "spend": 1.46
+  },
+  {
+   "h": 8,
+   "clicks": 7,
+   "conv": 0,
+   "spend": 4.29
+  },
+  {
+   "h": 9,
+   "clicks": 4,
+   "conv": 0,
+   "spend": 4.05
+  },
+  {
+   "h": 10,
+   "clicks": 1,
+   "conv": 0,
+   "spend": 0.46
+  },
+  {
+   "h": 11,
+   "clicks": 6,
+   "conv": 0,
+   "spend": 2.47
+  },
+  {
+   "h": 12,
+   "clicks": 11,
+   "conv": 0,
+   "spend": 2.98
+  },
+  {
+   "h": 13,
+   "clicks": 22,
+   "conv": 0,
+   "spend": 5.97
+  },
+  {
+   "h": 14,
+   "clicks": 37,
+   "conv": 0,
+   "spend": 12.97
+  },
+  {
+   "h": 15,
+   "clicks": 26,
+   "conv": 0,
+   "spend": 6.12
+  },
+  {
+   "h": 16,
+   "clicks": 4,
+   "conv": 0,
+   "spend": 3.02
+  },
+  {
+   "h": 17,
+   "clicks": 0,
+   "conv": 0,
+   "spend": 0
+  },
+  {
+   "h": 18,
+   "clicks": 0,
+   "conv": 0,
+   "spend": 0
+  },
+  {
+   "h": 19,
+   "clicks": 0,
+   "conv": 0,
+   "spend": 0.04
+  },
+  {
+   "h": 20,
+   "clicks": 1,
+   "conv": 0,
+   "spend": 2.1
+  },
+  {
+   "h": 21,
+   "clicks": 20,
+   "conv": 0,
+   "spend": 38.23
+  },
+  {
+   "h": 22,
+   "clicks": 10,
+   "conv": 0,
+   "spend": 19.46
+  },
+  {
+   "h": 23,
+   "clicks": 3,
+   "conv": 0,
+   "spend": 5.04
+  }
+ ],
+ "devices": {
+  "DESKTOP": {
+   "impr": 692,
+   "clicks": 3,
+   "conv": 0,
+   "spend": 1.56
+  },
+  "MOBILE": {
+   "impr": 4644,
+   "clicks": 171,
+   "conv": 0,
+   "spend": 120.98
+  },
+  "TABLET": {
+   "impr": 520,
+   "clicks": 3,
+   "conv": 0,
+   "spend": 3.02
+  },
+  "CONNECTED_TV": {
+   "impr": 4,
+   "clicks": 0,
+   "conv": 0,
+   "spend": 0
+  }
+ },
+ "ga4": {
+  "property": "549917804",
+  "host": "www.beanwatch.com",
+  "pages": [
+   {
+    "path": "/",
+    "sessions": 15,
+    "engaged": 1,
+    "engagementSec": 212,
+    "users": 15,
+    "adsSessions": 10
+   }
+  ],
+  "sources": [
+   {
+    "sm": "google / cpc",
+    "sessions": 22,
+    "engaged": 1
+   },
+   {
+    "sm": "(direct) / (none)",
+    "sessions": 4,
+    "engaged": 2
+   },
+   {
+    "sm": "(not set)",
+    "sessions": 3,
+    "engaged": 0
+   },
+   {
+    "sm": "facebook.com / referral",
+    "sessions": 2,
+    "engaged": 0
+   },
+   {
+    "sm": "syndicatedsearch.goog / referral",
+    "sessions": 1,
+    "engaged": 0
+   }
+  ],
+  "daily": [
+   {
+    "date": "2026-09-24",
+    "sessions": 17,
+    "ads": 12
+   },
+   {
+    "date": "2026-09-25",
+    "sessions": 15,
+    "ads": 10
+   }
+  ]
+ },
+ "negatives": {
+  "added": [
+   {
+    "date": "2026-09-25",
+    "term": "fitness tracker watch band",
+    "list": "2. Bands, chargers and accessories",
+    "reason": "Replacement band",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "citizen solar watches for women",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Traditional solar watch brand",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "ironway solar watch",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Traditional watch brand",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "nixon time teller solar",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Nixon analog watch model",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "solar titanium watch",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Classic titanium solar watch",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "solar watch with compass",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Outdoor solar field watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "bering slim solar",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Traditional watch brand",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.15
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best solar atomic watches",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Solar atomic watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "solar field watch",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Solar field watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best luxury solar watches for men",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Luxury solar watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best solar dive watches",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Solar dive watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best solar quartz watches for men",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Analog quartz watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "solar powered divers watch",
+    "list": "3. Analog, dive and luxury watches",
+    "reason": "Solar dive watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "livikey smart watch",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost Chinese brand",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "supersonic smart watch with heart rate",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost brand",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "bestinn smart watch fitness tracker",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost brand",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "l17 smartwatch",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost Chinese model",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "w8 pro smartwatch",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost Chinese model",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "affordable fitness tracker",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Looking for the lowest price",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "ht29 smart watch",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost Chinese model",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "souyie smartwatch",
+    "list": "4. Cheap, deals, dupes and marketplaces",
+    "reason": "Low-cost Chinese brand",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "kids heart rate monitor",
+    "list": "5. Other device categories",
+    "reason": "Kids device",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "running watch",
+    "list": "5. Other device categories",
+    "reason": "GPS running watch",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best sports watch",
+    "list": "5. Other device categories",
+    "reason": "High-performance sports watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best strava compatible watches",
+    "list": "5. Other device categories",
+    "reason": "GPS sports watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "fitness tracker no screen no subscription",
+    "list": "5. Other device categories",
+    "reason": "Screenless band",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "kids watch with step counter no bluetooth",
+    "list": "5. Other device categories",
+    "reason": "Kids watch, different category",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "non bluetooth watch with pedometer",
+    "list": "5. Other device categories",
+    "reason": "Basic pedometer, no Bluetooth",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "lightest gps watch",
+    "list": "5. Other device categories",
+    "reason": "GPS sports watch, different category",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "best budget running watch",
+    "list": "5. Other device categories",
+    "reason": "GPS running watch",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 2.21
+   },
+   {
+    "date": "2026-09-25",
+    "term": "fitness tracker bracelet without screen",
+    "list": "5. Other device categories",
+    "reason": "Screenless band",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "fitness tracker that is not a watch",
+    "list": "5. Other device categories",
+    "reason": "Wants a non-watch tracker",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "screenless health tracker",
+    "list": "5. Other device categories",
+    "reason": "Screenless tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "non watch fitness tracker",
+    "list": "5. Other device categories",
+    "reason": "Wants a non-watch tracker",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "step counter without bluetooth",
+    "list": "5. Other device categories",
+    "reason": "Basic pedometer, no Bluetooth",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "aura rings",
+    "list": "6. Competitor info and curiosity",
+    "reason": "Misspelling of Oura",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "aurora ring",
+    "list": "6. Competitor info and curiosity",
+    "reason": "Misspelling of Oura",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "aurora ring costco",
+    "list": "6. Competitor info and curiosity",
+    "reason": "Oura misspelling, retail purchase",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "benefits of oura ring for women",
+    "list": "6. Competitor info and curiosity",
+    "reason": "Info about a competitor product",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   },
+   {
+    "date": "2026-09-25",
+    "term": "do oura rings track steps",
+    "list": "6. Competitor info and curiosity",
+    "reason": "Info about Oura",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0
+   }
+  ],
+  "watching": [
+   {
+    "term": "alternative to smart watch for health tracking",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "best fitness tracker watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "best ladies solar powered watches",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "best solar powered watches for women",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "best solar watches for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "calorie tracking device",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "faceless smart watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "fitness devices",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "fitness tracker",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "fitness tracker watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "fitness watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "gps watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "health tracking band",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "how much are oura rings",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "hsa approved smart watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "hsa eligible smart watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "light weight watches for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "live tracker watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "o u r a ring",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring 4 review",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring 5",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring 5 heart rate accuracy",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring america",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura ring ceramic",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "oura rings",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "recommend why an oura ring might be better than other health tracking wearables",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "round sport watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "running watches for women",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "smart watch sports for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar digital watches",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar digital watches for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar power watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar power watch for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar power watches",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar powered mens watches",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar watch",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar watch for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "solar watches for men",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "the aura ring",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "the best fitness tracker",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "watch powered by light",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "what is the best fitness tracker",
+    "since": "2026-09-25"
+   },
+   {
+    "term": "whoop bracelet",
+    "since": "2026-09-25"
+   }
+  ],
+  "reviewed": 188,
+  "relevant": 104,
+  "agentLists": {
+   "NEG | 1. Competitor support and usage": 0,
+   "NEG | 2. Bands, chargers and accessories": 1,
+   "NEG | 3. Analog, dive and luxury watches": 12,
+   "NEG | 4. Cheap, deals, dupes and marketplaces": 8,
+   "NEG | 5. Other device categories": 14,
+   "NEG | 6. Competitor info and curiosity": 5,
+   "NEG | 7. Jobs, investing, DIY and education": 0,
+   "NEG | 8. Irrelevant": 0,
+   "NEG | 9. Search term review": 0
+  },
+  "setupLists": {
+   "NEG - Cuenta": 44,
+   "NEG - Relojes analogicos": 29,
+   "NEG - Bean generico": 36
+  }
+ },
+ "weekly": {
+  "current": {
+   "from": "2026-09-18",
+   "to": "2026-09-24",
+   "spend": 64.86,
+   "clicks": 34,
+   "impr": 588,
+   "reserved": 0,
+   "value": 0,
+   "sessions": 12
+  },
+  "previous": {
+   "from": "2026-09-11",
+   "to": "2026-09-17",
+   "spend": 0,
+   "clicks": 0,
+   "impr": 0,
+   "reserved": 0,
+   "value": 0,
+   "sessions": 0
+  },
+  "comparable": false,
+  "availableFrom": "2026-10-08"
+ },
+ "pacing": {
+  "month": "2026-09",
+  "spentToDate": 125.12,
+  "avgDaily": 64.86,
+  "daysLeft": 6,
+  "projected": 454.03,
+  "plan": 1400,
+  "planDays": 7,
+  "basedOnDays": 1
+ },
+ "adsRaw": {
+  "daily": {
+   "2026-09-24": {
+    "Search | Non-Brand | US": {
+     "spend": 40.99,
+     "impr": 291,
+     "clicks": 19,
+     "conv": 0,
+     "value": 0,
+     "resView": 19,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "Search | Competitor | US": {
+     "spend": 22.07,
+     "impr": 170,
+     "clicks": 11,
+     "conv": 0,
+     "value": 0,
+     "resView": 10,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "PMax | Reservation | US": {
+     "spend": 0.901605,
+     "impr": 126,
+     "clicks": 3,
+     "conv": 0,
+     "value": 0,
+     "resView": 2,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "Search | Brand | US": {
+     "spend": 0.9,
+     "impr": 1,
+     "clicks": 1,
+     "conv": 0,
+     "value": 0,
+     "resView": 1.5,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    }
+   },
+   "2026-09-25": {
+    "Search | Non-Brand | US": {
+     "spend": 32.02,
+     "impr": 206,
+     "clicks": 54,
+     "conv": 0,
+     "value": 0,
+     "resView": 45,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "Search | Competitor | US": {
+     "spend": 4.57,
+     "impr": 115,
+     "clicks": 2,
+     "conv": 0,
+     "value": 0,
+     "resView": 1,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "PMax | Reservation | US": {
+     "spend": 23.150835,
+     "impr": 4950,
+     "clicks": 86,
+     "conv": 0,
+     "value": 0,
+     "resView": 25,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    },
+    "Search | Brand | US": {
+     "spend": 0.95,
+     "impr": 1,
+     "clicks": 1,
+     "conv": 0,
+     "value": 0,
+     "resView": 0.5,
+     "checkout": 0,
+     "reserved": 0,
+     "upsell": 0
+    }
+   }
+  },
+  "monthSpend": {
+   "2026-09-24": 64.861605,
+   "2026-09-25": 60.254341
+  },
+  "share": {
+   "Search | Non-Brand | US": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "Search | Competitor | US": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "PMax | Reservation | US": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   },
+   "Search | Brand | US": {
+    "status": "ENABLED",
+    "is": null,
+    "top": null
+   }
+  },
+  "liveName": {
+   "Search | Non-Brand | US": "Search | Non-Brand | US",
+   "Search | Competitor | US": "Search | Competitor | US",
+   "PMax | Reservation | US": "PMax | Reservation | US",
+   "Search | Brand | US": "Search | Brand | US"
+  },
+  "negLists": {
+   "NEG - Cuenta": 44,
+   "NEG | 1. Competitor support and usage": 0,
+   "NEG | 2. Bands, chargers and accessories": 1,
+   "NEG | 3. Analog, dive and luxury watches": 12,
+   "NEG | 4. Cheap, deals, dupes and marketplaces": 8,
+   "NEG | 5. Other device categories": 14,
+   "NEG - Relojes analogicos": 29,
+   "NEG | 6. Competitor info and curiosity": 5,
+   "NEG | 7. Jobs, investing, DIY and education": 0,
+   "NEG | 8. Irrelevant": 0,
+   "NEG | 9. Search term review": 0,
+   "NEG - Bean generico": 36
+  },
+  "keywords": [
+   {
+    "kw": "oura ring health tracker",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Oura & Others",
+    "qs": null,
+    "impr": 220,
+    "clicks": 10,
+    "spend": 20.88,
+    "conv": 0
+   },
+   {
+    "kw": "best wearable health tracker",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 38,
+    "clicks": 6,
+    "spend": 10.04,
+    "conv": 0
+   },
+   {
+    "kw": "best fitness smartwatch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 49,
+    "clicks": 15,
+    "spend": 8.46,
+    "conv": 0
+   },
+   {
+    "kw": "best health monitor watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 44,
+    "clicks": 14,
+    "spend": 7.06,
+    "conv": 0
+   },
+   {
+    "kw": "health monitor watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": 1,
+    "impr": 36,
+    "clicks": 8,
+    "spend": 6.71,
+    "conv": 0
+   },
+   {
+    "kw": "solar watches",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": 3,
+    "impr": 60,
+    "clicks": 3,
+    "spend": 6.42,
+    "conv": 0
+   },
+   {
+    "kw": "whoop strap",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Whoop",
+    "qs": null,
+    "impr": 20,
+    "clicks": 3,
+    "spend": 5.76,
+    "conv": 0
+   },
+   {
+    "kw": "best health tracker",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 20,
+    "clicks": 8,
+    "spend": 4.63,
+    "conv": 0
+   },
+   {
+    "kw": "best solar watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": null,
+    "impr": 21,
+    "clicks": 2,
+    "spend": 4.29,
+    "conv": 0
+   },
+   {
+    "kw": "wearable health tracker",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 33,
+    "clicks": 2,
+    "spend": 4.2,
+    "conv": 0
+   },
+   {
+    "kw": "best smartwatch for health monitoring",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": 1,
+    "impr": 36,
+    "clicks": 7,
+    "spend": 4.09,
+    "conv": 0
+   },
+   {
+    "kw": "best fitness watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": 3,
+    "impr": 12,
+    "clicks": 1,
+    "spend": 2.21,
+    "conv": 0
+   },
+   {
+    "kw": "fitness tracker no subscription",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 9,
+    "clicks": 1,
+    "spend": 2.2,
+    "conv": 0
+   },
+   {
+    "kw": "solar powered watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": 1,
+    "impr": 5,
+    "clicks": 1,
+    "spend": 2.18,
+    "conv": 0
+   },
+   {
+    "kw": "minimalist fitness tracker",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 13,
+    "clicks": 1,
+    "spend": 2.16,
+    "conv": 0
+   },
+   {
+    "kw": "light powered watches",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": null,
+    "impr": 22,
+    "clicks": 1,
+    "spend": 2.15,
+    "conv": 0
+   },
+   {
+    "kw": "best heart rate monitor watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 3,
+    "clicks": 1,
+    "spend": 2.13,
+    "conv": 0
+   },
+   {
+    "kw": "e ink watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": 5,
+    "impr": 6,
+    "clicks": 1,
+    "spend": 2.1,
+    "conv": 0
+   },
+   {
+    "kw": "solar powered smart watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": null,
+    "impr": 5,
+    "clicks": 1,
+    "spend": 1.98,
+    "conv": 0
+   },
+   {
+    "kw": "bean watch",
+    "campaign": "Search · Brand",
+    "group": "Brand",
+    "adGroup": "AG - Bean Brand",
+    "qs": 7,
+    "impr": 2,
+    "clicks": 2,
+    "spend": 1.85,
+    "conv": 0
+   },
+   {
+    "kw": "health tracker watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 30,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "heart rate monitor watches",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 28,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "whoop subscription",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Whoop",
+    "qs": null,
+    "impr": 20,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "whoop alternative",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Whoop",
+    "qs": 3,
+    "impr": 14,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "best whoop alternative",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Whoop",
+    "qs": null,
+    "impr": 7,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "heart monitoring watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 6,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "best health tracking watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 5,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "fall detection watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "smart watch no subscription",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "best watch for health monitoring",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "apple watch alternative",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Oura & Others",
+    "qs": null,
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "best solar powered watches",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": null,
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "heart monitor smart watch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Health Sensors",
+    "qs": null,
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "long battery life smartwatch",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Solar No Charging",
+    "qs": null,
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "slim fitness tracker",
+    "campaign": "Search · Non-Brand",
+    "group": "Non-Brand",
+    "adGroup": "AG - Best Health Watch",
+    "qs": null,
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   },
+   {
+    "kw": "oura ring alternative",
+    "campaign": "Search · Competitor",
+    "group": "Competitor",
+    "adGroup": "AG - Oura & Others",
+    "qs": null,
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0
+   }
+  ],
+  "terms": [
+   {
+    "term": "oura ring",
+    "impr": 134,
+    "clicks": 5,
+    "spend": 10.3,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health and fitness tracker",
+    "impr": 29,
+    "clicks": 11,
+    "spend": 3.44,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring 5",
+    "impr": 24,
+    "clicks": 5,
+    "spend": 10.58,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best health tracker device",
+    "impr": 12,
+    "clicks": 7,
+    "spend": 2.88,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar watch",
+    "impr": 12,
+    "clicks": 1,
+    "spend": 2.08,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health wearables 2026",
+    "impr": 7,
+    "clicks": 7,
+    "spend": 3.16,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health watch for seniors",
+    "impr": 7,
+    "clicks": 1,
+    "spend": 0.25,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar watches",
+    "impr": 7,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health tracker 2026",
+    "impr": 6,
+    "clicks": 2,
+    "spend": 0.55,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness watch",
+    "impr": 6,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health monitoring devices",
+    "impr": 5,
+    "clicks": 1,
+    "spend": 1.03,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health tracker",
+    "impr": 5,
+    "clicks": 1,
+    "spend": 0.41,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart health tracker",
+    "impr": 5,
+    "clicks": 1,
+    "spend": 0.36,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best health tracking device",
+    "impr": 4,
+    "clicks": 3,
+    "spend": 1.46,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "affordable fitness tracker",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best smartwatch without subscription",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "running watch",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar powered mens watches",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring subscription",
+    "impr": 4,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smartwatches for seniors",
+    "impr": 3,
+    "clicks": 3,
+    "spend": 2.28,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "e ink watch",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar titanium watch",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "aurora ring",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "oura ring what is it",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is an oura ring",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "cost of whoop band",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how much is a whoop",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop discount code",
+    "impr": 3,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best ladies solar powered watches",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.18,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smartwatch for health monitoring 2026",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.16,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "thin fitness watch",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.16,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "bering slim solar",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.15,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar smartwatch for men",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2.09,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop custom bands",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 2,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best solar smart watches",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 1.98,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "bean watch",
+    "impr": 2,
+    "clicks": 2,
+    "spend": 1.85,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best wearables for women",
+    "impr": 2,
+    "clicks": 2,
+    "spend": 1.02,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smart watch for seniors",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 0.65,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health wearables",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 0.63,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "live tracker watch",
+    "impr": 2,
+    "clicks": 1,
+    "spend": 0.31,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness tracker watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health tracking devices",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best sports watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "blood pressure fitness tracker",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "blood pressure smart watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "faceless smart watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness watch that looks like a normal watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health monitor watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "hybrid watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "new health watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart hybrid watches",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch for android that takes blood pressure",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch for seniors with fall detection",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smartwatch that doesn t require subscription",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar powered fitness tracker",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "watches with step counter",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best watch to monitor heart rate",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best solar powered watches for women",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best solar watches for men",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "citizen solar watches for women",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "ironway solar watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar digital watches",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar power watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar smart watches",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar watch for men",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar watch with compass",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar watches for men",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "watch powered by light",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker bracelet without screen",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "fitness tracker that is not a watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "health smart watch",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "non watch fitness tracker",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "how much is oura ring membership",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "o u r a ring",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring 4 review",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura rings",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what does the oura ring track",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the oura ring",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best whoop alternative",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker like whoop without subscription",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how much is a whoop band",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop alternative",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop band alternative",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop band without subscription price",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop cheaper alternative",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop cost",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop one membership cost",
+    "impr": 2,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best budget running watch",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 2.21,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best fitness tracker without subscription",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 2.2,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "the best fitness tracker",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 2.16,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "custom whoop bands",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 1.72,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best health watch",
+    "impr": 1,
+    "clicks": 2,
+    "spend": 1.56,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best smart watch for health monitoring",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.81,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health watch for android",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.77,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smart watch for sleep tracking",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.68,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best health watch",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.58,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "apnea smartwatch",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.48,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness devices",
+    "impr": 1,
+    "clicks": 1,
+    "spend": 0.46,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "alternative to smart watch for health tracking",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "android health watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best android heart rate monitor watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness tracker smartwatch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness trackers for women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness watch for older women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best heart rate monitor watch for afib",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best heart rate watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best hybrid smartwatch 2026",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smartwatch for health monitoring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smartwatch with no subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best strava compatible watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best wearable heart rate monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "bestinn smart watch fitness tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "calorie tracking device",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "exercise watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker no screen no subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "fitness tracker watch band",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "fitness watch that looks like a watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health tracking band",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart monitor watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart monitor watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart rate monitor for wrist",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart rate only watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart rate watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "heart watch monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "hsa approved smart watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "hsa eligible smart watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "ht29 smart watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "iwatch alternatives",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "kids heart rate monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "kids watch with step counter no bluetooth",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "l17 smartwatch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "livikey smart watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "most durable fitness tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "non bluetooth watch with pedometer",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "round sport watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch afib",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch heart monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch with bp monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "souyie smartwatch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "supersonic smart watch with heart rate",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "w8 pro smartwatch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "watch with ecg monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "watches with fall detection",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "wearable step counter",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is the best fitness tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what smart watch has the best heart rate monitor",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "which fitness tracker is the best",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best luxury solar watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best solar atomic watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best solar dive watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "best solar quartz watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "e ink wrist watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "light weight watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "nixon time teller solar",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "smart watch longest battery life",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch solar powered",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar digital watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar field watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar power watch for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar power watches",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "solar powered divers watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "solar powered watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best fitness watch that looks like a watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "best smartwatch for heart monitoring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness watch no subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "gps watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health watches for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "health watches for women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "lightest gps watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "minimalist smart watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "running watches for women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "screenless health tracker",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "small fitness watches for women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch ekg",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch sports for men",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "smart watch with no subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "step count watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "step counter watch",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "step counter without bluetooth",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "watch that checks blood pressure",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "aura rings",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "aurora ring costco",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "benefits of oura ring for women",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "do oura rings track steps",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": true
+   },
+   {
+    "term": "how accurate is oura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how much are oura rings",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how much is oura subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how tight does my oura ring need to be",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how to find oura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how to find your oura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "kids oura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring 5 heart rate accuracy",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring 5 what does it do",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring 5 what it does",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring america",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring ceramic",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring monthly fee",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "oura ring what does it do",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "recommend why an oura ring might be better than other health tracking wearables",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "the aura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what do oura rings do",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what does a oura ring do",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what does oura ring track",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what finger should i wear my oura ring on",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is an aura ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what is an aurora ring",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "what oura ring does",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "cheaper whoop alternative",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "fitness tracker like whoop",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "how much does a whoop cost",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop 4.0 membership cost",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop 5.0 band",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop alternative no subscription",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop band dupe",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop bracelet",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop com",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop lifetime membership",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop like devices",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop price",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   },
+   {
+    "term": "whoop without membership",
+    "impr": 1,
+    "clicks": 0,
+    "spend": 0,
+    "conv": 0,
+    "excluded": false
+   }
+  ],
+  "hours": [
+   {
+    "h": 0,
+    "clicks": 2,
+    "conv": 0,
+    "spend": 2.14
+   },
+   {
+    "h": 1,
+    "clicks": 0,
+    "conv": 0,
+    "spend": 0.08
+   },
+   {
+    "h": 2,
+    "clicks": 11,
+    "conv": 0,
+    "spend": 10.43
+   },
+   {
+    "h": 3,
+    "clicks": 2,
+    "conv": 0,
+    "spend": 0.78
+   },
+   {
+    "h": 4,
+    "clicks": 1,
+    "conv": 0,
+    "spend": 0.31
+   },
+   {
+    "h": 5,
+    "clicks": 4,
+    "conv": 0,
+    "spend": 1.96
+   },
+   {
+    "h": 6,
+    "clicks": 2,
+    "conv": 0,
+    "spend": 1.19
+   },
+   {
+    "h": 7,
+    "clicks": 3,
+    "conv": 0,
+    "spend": 1.46
+   },
+   {
+    "h": 8,
+    "clicks": 7,
+    "conv": 0,
+    "spend": 4.29
+   },
+   {
+    "h": 9,
+    "clicks": 4,
+    "conv": 0,
+    "spend": 4.05
+   },
+   {
+    "h": 10,
+    "clicks": 1,
+    "conv": 0,
+    "spend": 0.46
+   },
+   {
+    "h": 11,
+    "clicks": 6,
+    "conv": 0,
+    "spend": 2.47
+   },
+   {
+    "h": 12,
+    "clicks": 11,
+    "conv": 0,
+    "spend": 2.98
+   },
+   {
+    "h": 13,
+    "clicks": 22,
+    "conv": 0,
+    "spend": 5.97
+   },
+   {
+    "h": 14,
+    "clicks": 37,
+    "conv": 0,
+    "spend": 12.97
+   },
+   {
+    "h": 15,
+    "clicks": 26,
+    "conv": 0,
+    "spend": 6.12
+   },
+   {
+    "h": 16,
+    "clicks": 4,
+    "conv": 0,
+    "spend": 3.02
+   },
+   {
+    "h": 17,
+    "clicks": 0,
+    "conv": 0,
+    "spend": 0
+   },
+   {
+    "h": 18,
+    "clicks": 0,
+    "conv": 0,
+    "spend": 0
+   },
+   {
+    "h": 19,
+    "clicks": 0,
+    "conv": 0,
+    "spend": 0.04
+   },
+   {
+    "h": 20,
+    "clicks": 1,
+    "conv": 0,
+    "spend": 2.1
+   },
+   {
+    "h": 21,
+    "clicks": 20,
+    "conv": 0,
+    "spend": 38.23
+   },
+   {
+    "h": 22,
+    "clicks": 10,
+    "conv": 0,
+    "spend": 19.46
+   },
+   {
+    "h": 23,
+    "clicks": 3,
+    "conv": 0,
+    "spend": 5.04
+   }
+  ],
+  "devices": {
+   "DESKTOP": {
+    "impr": 692,
+    "clicks": 3,
+    "conv": 0,
+    "spend": 1.56
+   },
+   "MOBILE": {
+    "impr": 4644,
+    "clicks": 171,
+    "conv": 0,
+    "spend": 120.98
+   },
+   "TABLET": {
+    "impr": 520,
+    "clicks": 3,
+    "conv": 0,
+    "spend": 3.02
+   },
+   "CONNECTED_TV": {
+    "impr": 4,
+    "clicks": 0,
+    "conv": 0,
+    "spend": 0
+   }
+  }
+ }
+}
