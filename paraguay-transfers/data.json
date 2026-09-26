@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-25T10:21:21.648Z",
-  "lastSyncLabel": "25 Sep 2026",
+  "generated": "2026-09-26T10:20:56.946Z",
+  "lastSyncLabel": "26 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 254,
-      "reservas": 53,
-      "revenue": 15148,
-      "chofer": 5888,
+      "leads": 266,
+      "reservas": 56,
+      "revenue": 15852,
+      "chofer": 5997,
       "comb": 622,
       "peajes": 115,
-      "comision": 336.75,
+      "comision": 339.75,
       "reembolsos": 13,
-      "otros": 38,
-      "gAds": 334,
+      "otros": 41,
+      "gAds": 353,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 333.63,
-      "clicks": 367,
-      "impr": 1850,
-      "conv": 28
+      "spend": 353.47,
+      "clicks": 396,
+      "impr": 1993,
+      "conv": 33
     }
   ],
   "trips": [
@@ -4126,11 +4126,11 @@
       "cliente": "Fernando",
       "pais": "Uruguay",
       "conductor": "José Berdén",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
+      "pago": 375,
+      "sena": 113,
+      "restante": 263,
       "choferCost": 197,
-      "neto": 0,
+      "neto": 179,
       "fechaReserva": "18/09/26",
       "fechaSalida": "21/09/26"
     },
@@ -4227,8 +4227,8 @@
       "pago": 194,
       "sena": 100,
       "restante": 94,
-      "choferCost": 40,
-      "neto": 147,
+      "choferCost": 0,
+      "neto": 187,
       "fechaReserva": "09/08/26",
       "fechaSalida": "23/09/26"
     },
@@ -4283,8 +4283,8 @@
       "pago": 69,
       "sena": 69,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 67,
+      "choferCost": 20,
+      "neto": 46,
       "fechaReserva": "24/09/26",
       "fechaSalida": "25/09/26"
     },
@@ -4304,21 +4304,49 @@
     },
     {
       "mes": "Septiembre",
+      "route": "CDE-FOZ",
+      "cliente": "eduardo estrada",
+      "pais": "Chile",
+      "conductor": "",
+      "pago": 107,
+      "sena": 107,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 104,
+      "fechaReserva": "25/09/26",
+      "fechaSalida": "25/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "1765 Edifico Alicante 2 - Aero",
       "cliente": "Derik Aleksander",
       "pais": "Canadá",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "José Berdén",
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 13,
-      "neto": 33,
+      "choferCost": 20,
+      "neto": 27,
       "fechaReserva": "22/09/26",
       "fechaSalida": "26/09/26"
     },
     {
       "mes": "Septiembre",
-      "route": "ASU-AERO",
+      "route": "Dazzler - Aero",
+      "cliente": "Rafa 5215591984468",
+      "pais": "México",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 20,
+      "neto": 0,
+      "fechaReserva": "09/08/26",
+      "fechaSalida": "26/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Sheraton -AERO",
       "cliente": "MK",
       "pais": "UK",
       "conductor": "Alfredo Sánchez PT",
@@ -4346,17 +4374,31 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
+      "route": "vehículo a disposición / 7 horas en Cde",
       "cliente": "henny schubert",
       "pais": "Alemania",
-      "conductor": "",
-      "pago": 217,
-      "sena": 217,
+      "conductor": "Juan Vera CDE",
+      "pago": 195,
+      "sena": 195,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 210,
+      "choferCost": 82,
+      "neto": 107,
       "fechaReserva": "24/09/26",
       "fechaSalida": "26/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Edif.Altamira-AERO",
+      "cliente": "antonio",
+      "pais": "Paraguay",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 48,
+      "fechaReserva": "25/09/26",
+      "fechaSalida": "28/09/26"
     },
     {
       "mes": "Septiembre",
@@ -4370,6 +4412,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "04/09/26",
+      "fechaSalida": "30/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Yacht - Aero",
+      "cliente": "Alex",
+      "pais": "Alemania",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 195,
+      "sena": 100,
+      "restante": 95,
+      "choferCost": 20,
+      "neto": 0,
+      "fechaReserva": "24/09/26",
       "fechaSalida": "30/09/26"
     },
     {
@@ -4850,7 +4906,7 @@
     },
     {
       "mes": "Septiembre",
-      "route": "",
+      "route": "ASU-FOZ",
       "cliente": "joao chaleira",
       "pais": "España",
       "conductor": "",
@@ -5005,7 +5061,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-25": 1,
+      "2026-09-26": 2,
+      "2026-09-25": 11,
       "2026-09-24": 13,
       "2026-09-23": 11,
       "2026-09-22": 12,
@@ -5083,7 +5140,8 @@
       "2026-09-21": 2,
       "2026-09-23": 3,
       "2026-09-13": 1,
-      "2026-09-24": 4,
+      "2026-09-24": 5,
+      "2026-09-25": 2,
       "2026-09-22": 2,
       "2026-09-04": 2,
       "2026-09-09": 3,
@@ -5344,13 +5402,14 @@
       "2026-09-22": 12.23,
       "2026-09-23": 29.09,
       "2026-09-24": 17.46,
-      "2026-09-25": 1.41
+      "2026-09-25": 19.83,
+      "2026-09-26": 1.42
     }
   },
   "resenas": {
-    "count": 61,
+    "count": 62,
     "rating": 5,
-    "actualizado": "2026-09-24T23:10:05.593Z",
+    "actualizado": "2026-09-25T23:10:04.347Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -5385,6 +5444,11 @@
       {
         "fecha": "2026-09-24",
         "count": 61,
+        "rating": 5
+      },
+      {
+        "fecha": "2026-09-25",
+        "count": 62,
         "rating": 5
       }
     ],
@@ -5424,7 +5488,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-09-25": 2,
+      "2026-09-25": 13,
       "2026-09-17": 9,
       "2026-09-15": 12,
       "2026-09-14": 5,
@@ -5467,7 +5531,7 @@
       "2026-09-24": 12
     },
     "monthly": {
-      "Septiembre": 157,
+      "Septiembre": 168,
       "Agosto": 27
     }
   }
