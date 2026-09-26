@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T18:30:11.195Z",
+ "generated": "2026-09-26T22:30:25.422Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
   "stripePendiente": 286.5,
-  "pagoparPendienteUsd": 12058.98,
+  "pagoparPendienteUsd": 12304.92,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -337,14 +337,16 @@
   },
   {
    "fecha": "2026-09-26",
-   "in": 300,
-   "out": 0,
-   "n": 1,
+   "in": 545.93,
+   "out": 50.85,
+   "n": 3,
    "porFuente": {
-    "Stripe": 300
+    "Stripe": 300,
+    "Pagopar": 245.93,
+    "WhatsApp · Pagos (Majo)": -50.85
    },
-   "neto": 300,
-   "acum": 5857.56
+   "neto": 495.08,
+   "acum": 6052.64
   }
  ],
  "movimientos": [
@@ -784,6 +786,14 @@
    "gs": 304000
   },
   {
+   "d": "2026-09-26",
+   "t": "in",
+   "usd": 245.93,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Emily Crowley (Canada Inline)",
+   "gs": 1451000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 321.36,
@@ -1168,6 +1178,14 @@
    "gs": 500000
   },
   {
+   "d": "2026-09-26",
+   "t": "out",
+   "usd": 50.85,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Patricia Anahi Vazquez Macchi",
+   "gs": 300000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1351,12 +1369,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 359.55,
+    "google": 361.05,
     "meta": 279.12,
-    "total": 638.67
+    "total": 640.17
    },
    "impuestos": null,
-   "resultado": 3739.68,
+   "resultado": 3738.18,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1376,8 +1394,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 43,
-   "bruto": 12058.95,
+   "cobros": 44,
+   "bruto": 12304.88,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1392,8 +1410,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 71148000,
-  "cobradoUsd": 12058.95,
+  "cobradoGs": 72599000,
+  "cobradoUsd": 12304.88,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1520,6 +1538,12 @@
     "cobros": 3,
     "gs": 1588000,
     "usd": 269.15
+   },
+   {
+    "fecha": "2026-09-26",
+    "cobros": 1,
+    "gs": 1451000,
+    "usd": 245.93
    }
   ],
   "pruebasExcluidas": 0,
@@ -1527,8 +1551,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 71148000,
-  "pendienteUsd": 12058.98
+  "pendienteGs": 72599000,
+  "pendienteUsd": 12304.92
  },
  "giros": [
   {
@@ -1629,7 +1653,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲71.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲72.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
