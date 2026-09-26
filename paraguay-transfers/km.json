@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25T11:10:14.257Z",
+ "generated": "2026-09-26T11:10:19.554Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 37,
-   "conFoto": 36
+   "lecturas": 38,
+   "conFoto": 37
   },
   {
    "chofer": "Gustavo",
@@ -79,6 +79,35 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-26",
+   "fechaFin": "2026-09-26",
+   "horaIni": "06:01",
+   "horaFin": null,
+   "kmIni": 95994,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.75,
+   "tanqueFin": null,
+   "traslados": [
+    "Dazzler - Aero",
+    "Sheraton -AERO"
+   ],
+   "kmEsperado": 40,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -818,10 +847,10 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-09-25",
+   "fecha": "2026-09-26",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "ASU-AERO",
+   "ruta": "Dazzler - Aero",
    "km": 40,
    "adelanto": 55000
   },
@@ -829,15 +858,23 @@
    "fecha": "2026-09-26",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "1765 Edifico Alicante 2 - Aero",
+   "ruta": "Sheraton -AERO",
    "km": 40,
    "adelanto": 55000
   },
   {
-   "fecha": "2026-09-26",
+   "fecha": "2026-09-28",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "ASU-AERO",
+   "ruta": "Edif.Altamira-AERO",
+   "km": 40,
+   "adelanto": 55000
+  },
+  {
+   "fecha": "2026-09-30",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Yacht - Aero",
    "km": 40,
    "adelanto": 55000
   },
@@ -1011,13 +1048,6 @@
   }
  ],
  "alertas": [
-  {
-   "key": "sinkm:Luis:2026-09-24:Asu-Aero",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado Asu-Aero del 24/09. Mandalas con el número escrito, por favor.",
-   "ts": 1790305199,
-   "fecha": "2026-09-24"
-  },
   {
    "key": "desvio:H1:95850",
    "nivel": "juan",
