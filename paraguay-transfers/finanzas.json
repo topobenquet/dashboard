@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T10:20:20.774Z",
+ "generated": "2026-09-26T16:31:11.265Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -21,31 +21,29 @@
  "caja": [
   {
    "fecha": "2026-09-01",
-   "in": 976.95,
+   "in": 576.95,
    "out": 145.56,
-   "n": 8,
+   "n": 6,
    "porFuente": {
-    "Stripe": 400,
     "Pagopar": 576.95,
     "WhatsApp · Gustavo": -50.85,
     "WhatsApp · Luis (factura)": -94.71
    },
-   "neto": 831.39,
-   "acum": 831.39
+   "neto": 431.39,
+   "acum": 431.39
   },
   {
    "fecha": "2026-09-02",
-   "in": 1630.39,
+   "in": 733.39,
    "out": 522.48,
-   "n": 8,
+   "n": 6,
    "porFuente": {
-    "Stripe": 897,
     "Pagopar": 733.39,
     "WhatsApp · Alfredo": -321.36,
     "WhatsApp · Pagos (Majo)": -201.12
    },
-   "neto": 1107.91,
-   "acum": 1939.3
+   "neto": 210.91,
+   "acum": 642.3
   },
   {
    "fecha": "2026-09-03",
@@ -58,7 +56,7 @@
     "WhatsApp · Pagos (Majo)": -471.18
    },
    "neto": 668.18,
-   "acum": 2607.48
+   "acum": 1310.48
   },
   {
    "fecha": "2026-09-04",
@@ -69,7 +67,7 @@
     "WhatsApp · Pagos (Majo)": -1074.02
    },
    "neto": -1074.02,
-   "acum": 1533.46
+   "acum": 236.46
   },
   {
    "fecha": "2026-09-05",
@@ -80,7 +78,7 @@
     "Pagopar": 236.44
    },
    "neto": 236.44,
-   "acum": 1769.9
+   "acum": 472.9
   },
   {
    "fecha": "2026-09-06",
@@ -92,34 +90,32 @@
     "WhatsApp · Luis": -129.83
    },
    "neto": -146.78,
-   "acum": 1623.12
+   "acum": 326.12
   },
   {
    "fecha": "2026-09-07",
-   "in": 1795.02,
+   "in": 1361.02,
    "out": 995.42,
-   "n": 8,
+   "n": 7,
    "porFuente": {
-    "Stripe": 434,
     "Pagopar": 1361.02,
     "WhatsApp · Pagos (Majo)": -295.42,
     "Manual · efectivo": -700
    },
-   "neto": 799.6,
-   "acum": 2422.72
+   "neto": 365.6,
+   "acum": 691.72
   },
   {
    "fecha": "2026-09-08",
-   "in": 607.16,
+   "in": 210.16,
    "out": 642.68,
-   "n": 8,
+   "n": 7,
    "porFuente": {
-    "Stripe": 397,
     "Pagopar": 210.16,
     "WhatsApp · Pagos (Majo)": -642.68
    },
-   "neto": -35.52,
-   "acum": 2387.2
+   "neto": -432.52,
+   "acum": 259.2
   },
   {
    "fecha": "2026-09-09",
@@ -132,7 +128,7 @@
     "WhatsApp · Pagos (Majo)": -5.08
    },
    "neto": 62.21,
-   "acum": 2449.41
+   "acum": 321.41
   },
   {
    "fecha": "2026-09-10",
@@ -145,7 +141,7 @@
     "WhatsApp · Luis (factura)": -90.5
    },
    "neto": -184.74,
-   "acum": 2264.67
+   "acum": 136.67
   },
   {
    "fecha": "2026-09-11",
@@ -160,7 +156,7 @@
     "WhatsApp · Luis (factura)": -118.62
    },
    "neto": 862.91,
-   "acum": 3127.58
+   "acum": 999.58
   },
   {
    "fecha": "2026-09-12",
@@ -172,18 +168,7 @@
     "Pagopar": 642.55
    },
    "neto": 889.55,
-   "acum": 4017.13
-  },
-  {
-   "fecha": "2026-09-13",
-   "in": 69,
-   "out": 0,
-   "n": 1,
-   "porFuente": {
-    "Stripe": 69
-   },
-   "neto": 69,
-   "acum": 4086.13
+   "acum": 1889.13
   },
   {
    "fecha": "2026-09-14",
@@ -195,7 +180,7 @@
     "WhatsApp · Pagos (Majo)": -576.27
    },
    "neto": -469.49,
-   "acum": 3616.64
+   "acum": 1419.64
   },
   {
    "fecha": "2026-09-15",
@@ -208,7 +193,7 @@
     "Transferencia": 207.02
    },
    "neto": 1264.14,
-   "acum": 4880.78
+   "acum": 2683.78
   },
   {
    "fecha": "2026-09-16",
@@ -221,7 +206,7 @@
     "WhatsApp · Pagos (Majo)": -434.36
    },
    "neto": -401.44,
-   "acum": 4479.34
+   "acum": 2282.34
   },
   {
    "fecha": "2026-09-17",
@@ -234,7 +219,7 @@
     "Transferencia": 116.44
    },
    "neto": 326.53,
-   "acum": 4805.87
+   "acum": 2608.87
   },
   {
    "fecha": "2026-09-18",
@@ -248,20 +233,19 @@
     "WhatsApp · Pagos (Majo) (factura)": -8.47
    },
    "neto": 789.32,
-   "acum": 5595.19
+   "acum": 3398.19
   },
   {
    "fecha": "2026-09-19",
-   "in": 276.81,
+   "in": 208.81,
    "out": 91.53,
-   "n": 3,
+   "n": 2,
    "porFuente": {
-    "Stripe": 68,
     "Pagopar": 208.81,
     "WhatsApp · Pagos (Majo)": -91.53
    },
-   "neto": 185.28,
-   "acum": 5780.47
+   "neto": 117.28,
+   "acum": 3515.47
   },
   {
    "fecha": "2026-09-20",
@@ -272,7 +256,7 @@
     "WhatsApp · Pagos (Majo)": -203.39
    },
    "neto": -203.39,
-   "acum": 5577.08
+   "acum": 3312.08
   },
   {
    "fecha": "2026-09-21",
@@ -284,20 +268,19 @@
     "Transferencia": 305.08
    },
    "neto": 464.06,
-   "acum": 6041.14
+   "acum": 3776.14
   },
   {
    "fecha": "2026-09-22",
-   "in": 362.72,
+   "in": 313.72,
    "out": 61.02,
-   "n": 4,
+   "n": 3,
    "porFuente": {
-    "Stripe": 49,
     "Pagopar": 313.72,
     "WhatsApp · Pagos (Majo)": -61.02
    },
-   "neto": 301.7,
-   "acum": 6342.84
+   "neto": 252.7,
+   "acum": 4028.84
   },
   {
    "fecha": "2026-09-23",
@@ -309,7 +292,7 @@
     "WhatsApp · Pagos (Majo)": -276.95
    },
    "neto": 1237.79,
-   "acum": 7580.63
+   "acum": 5266.63
   },
   {
    "fecha": "2026-09-24",
@@ -321,7 +304,7 @@
     "WhatsApp · Pagos (Majo)": -779.66
    },
    "neto": -297.29,
-   "acum": 7283.34
+   "acum": 4969.34
   },
   {
    "fecha": "2026-09-25",
@@ -333,91 +316,10 @@
     "WhatsApp · Pagos (Majo)": -1994.93
    },
    "neto": -1725.78,
-   "acum": 5557.56
-  },
-  {
-   "fecha": "2026-09-26",
-   "in": 300,
-   "out": 0,
-   "n": 1,
-   "porFuente": {
-    "Stripe": 300
-   },
-   "neto": 300,
-   "acum": 5857.56
+   "acum": 3243.56
   }
  ],
  "movimientos": [
-  {
-   "d": "2026-09-26",
-   "t": "in",
-   "usd": 300,
-   "fuente": "Stripe",
-   "det": "Tan Ban Huat"
-  },
-  {
-   "d": "2026-09-22",
-   "t": "in",
-   "usd": 49,
-   "fuente": "Stripe",
-   "det": "Payment for invoice 000182"
-  },
-  {
-   "d": "2026-09-19",
-   "t": "in",
-   "usd": 68,
-   "fuente": "Stripe",
-   "det": "Payment for invoice 000181"
-  },
-  {
-   "d": "2026-09-13",
-   "t": "in",
-   "usd": 69,
-   "fuente": "Stripe",
-   "det": "Payment for invoice 000180"
-  },
-  {
-   "d": "2026-09-08",
-   "t": "in",
-   "usd": 397,
-   "fuente": "Stripe",
-   "det": "Silvio Lima"
-  },
-  {
-   "d": "2026-09-07",
-   "t": "in",
-   "usd": 434,
-   "fuente": "Stripe",
-   "det": "Payment for invoice 000178"
-  },
-  {
-   "d": "2026-09-02",
-   "t": "in",
-   "usd": 97,
-   "fuente": "Stripe",
-   "det": "Stuart Brander"
-  },
-  {
-   "d": "2026-09-02",
-   "t": "in",
-   "usd": 800,
-   "fuente": "Stripe",
-   "det": "Payment for invoice 000176"
-  },
-  {
-   "d": "2026-09-01",
-   "t": "in",
-   "usd": 100,
-   "fuente": "Stripe",
-   "det": "James B Simpson"
-  },
-  {
-   "d": "2026-09-01",
-   "t": "in",
-   "usd": 300,
-   "fuente": "Stripe",
-   "det": "Hisaaki Takei"
-  },
   {
    "d": "2026-09-12",
    "t": "in",
@@ -1338,10 +1240,10 @@
    },
    "margenBruto": 4599.35,
    "cobro": {
-    "stripe": 115.7,
+    "stripe": null,
     "aloha": null,
     "pagopar": null,
-    "total": 115.7
+    "total": 0
    },
    "estructura": {
     "seguro": 105.3,
@@ -1351,12 +1253,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 353.47,
+    "google": 358.05,
     "meta": 279.12,
-    "total": 632.59
+    "total": 637.17
    },
    "impuestos": null,
-   "resultado": 3745.76,
+   "resultado": 3856.88,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1366,14 +1268,6 @@
   }
  ],
  "rieles": [
-  {
-   "riel": "Stripe",
-   "cobros": 10,
-   "bruto": 2614,
-   "comision": 115.7,
-   "pct": 4.43,
-   "nota": "medido cobro por cobro"
-  },
   {
    "riel": "Pagopar",
    "cobros": 43,
