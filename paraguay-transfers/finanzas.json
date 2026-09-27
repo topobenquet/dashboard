@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-27T16:30:11.896Z",
+ "generated": "2026-09-27T18:30:06.678Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -1359,21 +1359,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 67,
+   "traslados": 69,
    "ingresos": {
-    "planilla": 9296.35,
+    "planilla": 9724.35,
     "alohaSinFila": 0,
-    "total": 9296.35
+    "total": 9724.35
    },
    "directos": {
-    "chofer": 3866,
+    "chofer": 3935,
     "combustible": 622,
     "peajes": 115,
-    "viaticos": 40,
-    "otros": 54,
-    "total": 4697
+    "viaticos": 60,
+    "otros": 55,
+    "total": 4787
    },
-   "margenBruto": 4599.35,
+   "margenBruto": 4937.35,
    "cobro": {
     "stripe": 115.7,
     "aloha": null,
@@ -1393,7 +1393,7 @@
     "total": 651.04
    },
    "impuestos": null,
-   "resultado": 3727.31,
+   "resultado": 4065.31,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1856,6 +1856,46 @@
    "gs": 300000,
    "usd": 50.85,
    "concepto": "+ 120.000 viatico. .Encarnacion",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-27",
+   "grupo": "Alfredo",
+   "gs": 120000,
+   "usd": 20.34,
+   "concepto": "1.- . Pago Adelantado.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-27",
+   "grupo": "Alfredo",
+   "gs": 800000,
+   "usd": 135.59,
+   "concepto": "2.- . Gasoil Encar.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-27",
+   "grupo": "Alfredo",
+   "gs": 90000,
+   "usd": 15.25,
+   "concepto": "3.- .MK Hotel/Hotel.",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-27",
+   "grupo": "Alfredo",
+   "gs": 120000,
+   "usd": 20.34,
+   "concepto": "Ok... Veo que ya está pagado un por el viático de encar",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-27",
+   "grupo": "Alfredo",
+   "gs": 120000,
+   "usd": 20.34,
+   "concepto": "3..- . Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
