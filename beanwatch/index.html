@@ -221,7 +221,8 @@ function render(d){
   const P=d.pacing||{}, F0=d.funnel||{};
   // Los KPIs son de TODA la inversion, Google mas Meta. La cuenta solo de Google subestimaba
   // las reservas, porque las 4 que hubo las reporta el pixel de Meta.
-  const totSpend=F0.spend??A.spend, totRes=(F0.pasos?.[5]?.valor)??A.reserved??0;
+  const ultimo=F0.pasos?.[F0.pasos.length-1];   // el ultimo paso son las reservas pagas
+  const totSpend=F0.spend??A.spend, totRes=ultimo?.valor??A.reserved??0;
   const totClicks=(F0.pasos?.[1]?.valor)??A.clicks, totImpr=(F0.pasos?.[0]?.valor)??A.impr;
   const totRev=F0.ingresos??A.value??0;
   const planTot=(P.plan||0)*2; // el plan de $200/dia se reparte entre las dos plataformas
