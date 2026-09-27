@@ -264,9 +264,9 @@ function render(d){
       // el porcentaje solo se muestra contra el paso que de verdad es su denominador
       const base=p.base!=null?F.pasos[p.base]:null;
       const r=base&&base.valor?p.valor/base.valor:null;
-      const mal=r!=null&&r<0.10, medio=r!=null&&r<0.50&&!mal;
+      const mal=!p.neutro&&r!=null&&r<0.10, medio=!p.neutro&&r!=null&&r<0.50&&!mal;
       const col=mal?'#C0392B':medio?'#C98A1B':'#5B72B5';
-      const nota=r!=null?`${pct(r)} of ${esc(base.nombre.toLowerCase())}`:(p.nota?esc(p.nota):'');
+      const nota=r!=null?`${pct(r)} ${p.neutro&&p.nota?esc(p.nota):'of '+esc(base.nombre.toLowerCase())}`:(p.nota?esc(p.nota):'');
       return `<div class="row"><div class="lbl">${p.nombre}<br><span style="font-size:9.5px;color:#9A9A9A">${p.fuente}</span></div>
         <div class="fb"><i style="width:${w}%;background:${col};opacity:${0.35+0.65*(1-i/6)}"></i><span>${fm(p.valor)}</span>${nota?`<em>${nota}</em>`:''}</div></div>`;
     }).join('');
