@@ -1040,6 +1040,65 @@
     "Email": 2,
     "Other": 0
    }
+  },
+  "2026-09-27": {
+   "numOfDays": 1,
+   "takenAt": "2026-09-27T10:21:46.555Z",
+   "pages": [
+    {
+     "path": "/",
+     "sessions": 21,
+     "bots": 0,
+     "scrollW": 298.5,
+     "scrollN": 19,
+     "active": 1601,
+     "total": 1889,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": 15.7
+    },
+    {
+     "path": "/florida",
+     "sessions": 24,
+     "bots": 1,
+     "scrollW": 459.25,
+     "scrollN": 20,
+     "active": 1371,
+     "total": 1672,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": 23
+    },
+    {
+     "path": "/nyc",
+     "sessions": 0,
+     "bots": 1,
+     "scrollW": 0,
+     "scrollN": 0,
+     "active": 0,
+     "total": 0,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": null
+    }
+   ],
+   "devices": {
+    "Mobile": 45,
+    "PC": 14,
+    "Other": 0
+   }
   }
  }
 }
