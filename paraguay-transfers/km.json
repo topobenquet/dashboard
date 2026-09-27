@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T11:10:19.554Z",
+ "generated": "2026-09-27T11:10:05.826Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -847,22 +847,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-09-26",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Dazzler - Aero",
-   "km": 40,
-   "adelanto": 55000
-  },
-  {
-   "fecha": "2026-09-26",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Sheraton -AERO",
-   "km": 40,
-   "adelanto": 55000
-  },
-  {
    "fecha": "2026-09-28",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1048,6 +1032,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "final:H1:95994",
+   "nivel": "grupo",
+   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 26/09 a las 06:01 (km inicio 95.994). Mandá la foto del tablero con el número.",
+   "ts": 1790413297,
+   "fecha": "2026-09-26"
+  },
   {
    "key": "desvio:H1:95850",
    "nivel": "juan",
