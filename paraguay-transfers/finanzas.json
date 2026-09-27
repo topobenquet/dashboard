@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-27T20:30:06.417Z",
+ "generated": "2026-09-27T22:30:32.698Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
   "stripePendiente": 303.7,
-  "pagoparPendienteUsd": 12358.64,
+  "pagoparPendienteUsd": 12534.24,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -350,14 +350,15 @@
   },
   {
    "fecha": "2026-09-27",
-   "in": 53.73,
-   "out": 0,
-   "n": 1,
+   "in": 229.32,
+   "out": 550.84,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 53.73
+    "Pagopar": 229.32,
+    "WhatsApp · Pagos (Majo)": -550.84
    },
-   "neto": 53.73,
-   "acum": 6106.37
+   "neto": -321.52,
+   "acum": 5731.12
   }
  ],
  "movimientos": [
@@ -813,6 +814,14 @@
    "gs": 317000
   },
   {
+   "d": "2026-09-27",
+   "t": "in",
+   "usd": 175.59,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Debbie Savory",
+   "gs": 1036000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 321.36,
@@ -1205,6 +1214,22 @@
    "gs": 300000
   },
   {
+   "d": "2026-09-27",
+   "t": "out",
+   "usd": 508.47,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 3000000
+  },
+  {
+   "d": "2026-09-27",
+   "t": "out",
+   "usd": 42.37,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Hugo Leandro Fernandez Rodriguez (Banco Itaú)",
+   "gs": 250000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1359,21 +1384,21 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 69,
+   "traslados": 70,
    "ingresos": {
-    "planilla": 9724.35,
+    "planilla": 9891.35,
     "alohaSinFila": 0,
-    "total": 9724.35
+    "total": 9891.35
    },
    "directos": {
-    "chofer": 3935,
+    "chofer": 4037,
     "combustible": 622,
     "peajes": 115,
     "viaticos": 60,
     "otros": 55,
-    "total": 4787
+    "total": 4889
    },
-   "margenBruto": 4937.35,
+   "margenBruto": 5002.35,
    "cobro": {
     "stripe": 115.7,
     "aloha": null,
@@ -1388,12 +1413,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 373.41,
+    "google": 374.89,
     "meta": 279.12,
-    "total": 652.53
+    "total": 654.01
    },
    "impuestos": null,
-   "resultado": 4063.82,
+   "resultado": 4127.34,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1413,8 +1438,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 45,
-   "bruto": 12358.61,
+   "cobros": 46,
+   "bruto": 12534.2,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1429,8 +1454,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 72916000,
-  "cobradoUsd": 12358.61,
+  "cobradoGs": 73952000,
+  "cobradoUsd": 12534.2,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1566,9 +1591,9 @@
    },
    {
     "fecha": "2026-09-27",
-    "cobros": 1,
-    "gs": 317000,
-    "usd": 53.73
+    "cobros": 2,
+    "gs": 1353000,
+    "usd": 229.32
    }
   ],
   "pruebasExcluidas": 0,
@@ -1576,8 +1601,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 72916000,
-  "pendienteUsd": 12358.64
+  "pendienteGs": 73952000,
+  "pendienteUsd": 12534.24
  },
  "giros": [
   {
@@ -1678,7 +1703,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲72.9 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲74 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
