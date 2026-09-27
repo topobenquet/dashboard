@@ -1,94 +1,94 @@
 {
- "generatedAt": "2026-09-26T10:25:02.044Z",
- "refDate": "2026-09-25",
- "lastSyncLabel": "Sep 25, 2026",
- "daysElapsed": 25,
+ "generatedAt": "2026-09-27T10:25:01.733Z",
+ "refDate": "2026-09-26",
+ "lastSyncLabel": "Sep 26, 2026",
+ "daysElapsed": 26,
  "daysInMonth": 30,
  "monthLabel": "September 2026",
  "channels": [
   {
    "name": "Google Search",
    "budget": 16200,
-   "spend": 13735.07,
-   "impr": 842055,
-   "clicks": 32746,
-   "conv": 3757.87,
-   "revenue": 126025.55,
+   "spend": 14277.73,
+   "impr": 878462,
+   "clicks": 34414,
+   "conv": 3942.89,
+   "revenue": 132854.23,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.04,
-   "cpc": 0.42,
-   "cpa": 3.66,
-   "roas": 9.18,
-   "projEOM": 16482.08,
-   "pctBudget": 0.85,
+   "cpc": 0.41,
+   "cpa": 3.62,
+   "roas": 9.3,
+   "projEOM": 16474.3,
+   "pctBudget": 0.88,
    "pacing": 1.02
   },
   {
    "name": "Google PMax",
    "budget": 34000,
-   "spend": 28657.12,
-   "impr": 2719157,
-   "clicks": 80385,
-   "conv": 10548.61,
-   "revenue": 442116.99,
+   "spend": 29503.01,
+   "impr": 2836748,
+   "clicks": 83361,
+   "conv": 10929.97,
+   "revenue": 458308.13,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.03,
-   "cpc": 0.36,
-   "cpa": 2.72,
-   "roas": 15.43,
-   "projEOM": 34388.55,
-   "pctBudget": 0.84,
-   "pacing": 1.01
+   "cpc": 0.35,
+   "cpa": 2.7,
+   "roas": 15.53,
+   "projEOM": 34041.94,
+   "pctBudget": 0.87,
+   "pacing": 1
   },
   {
    "name": "Google App",
    "budget": 900,
-   "spend": 649.31,
-   "impr": 34359,
-   "clicks": 990,
-   "conv": 729,
+   "spend": 682.96,
+   "impr": 36224,
+   "clicks": 1050,
+   "conv": 761,
    "revenue": 0,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.03,
-   "cpc": 0.66,
-   "cpa": 0.89,
+   "cpc": 0.65,
+   "cpa": 0.9,
    "roas": 0,
-   "projEOM": 779.17,
-   "pctBudget": 0.72,
-   "pacing": 0.87
+   "projEOM": 788.03,
+   "pctBudget": 0.76,
+   "pacing": 0.88
   },
   {
    "name": "Google Remarketing",
    "budget": 1800,
-   "spend": 1557.57,
-   "impr": 8369,
-   "clicks": 1540,
-   "conv": 479,
-   "revenue": 16628.43,
+   "spend": 1599.49,
+   "impr": 8693,
+   "clicks": 1601,
+   "conv": 499,
+   "revenue": 17340.69,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.18,
-   "cpc": 1.01,
-   "cpa": 3.25,
-   "roas": 10.68,
-   "projEOM": 1869.08,
-   "pctBudget": 0.87,
-   "pacing": 1.04
+   "cpc": 1,
+   "cpa": 3.21,
+   "roas": 10.84,
+   "projEOM": 1845.56,
+   "pctBudget": 0.89,
+   "pacing": 1.03
   },
   {
    "name": "Meta Ads",
    "budget": 23200,
    "spend": 0,
-   "impr": 2542885,
-   "clicks": 19762,
-   "conv": 4962,
+   "impr": 2667874,
+   "clicks": 20507,
+   "conv": 5197,
    "revenue": 0,
    "live": true,
    "stale": false,
@@ -105,9 +105,9 @@
    "name": "Meta Remarketing",
    "budget": 1800,
    "spend": 0,
-   "impr": 162612,
-   "clicks": 3678,
-   "conv": 670,
+   "impr": 167235,
+   "clicks": 3732,
+   "conv": 698,
    "revenue": 0,
    "live": true,
    "stale": false,
@@ -123,21 +123,21 @@
   {
    "name": "TikTok",
    "budget": 1000,
-   "spend": 957.6,
-   "impr": 32890,
-   "clicks": 642,
-   "conv": 86,
-   "revenue": 2972.81,
+   "spend": 1025.78,
+   "impr": 34946,
+   "clicks": 705,
+   "conv": 91,
+   "revenue": 3114.38,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.02,
-   "cpc": 1.49,
-   "cpa": 11.13,
-   "roas": 3.1,
-   "projEOM": 1149.12,
-   "pctBudget": 0.96,
-   "pacing": 1.15
+   "cpc": 1.46,
+   "cpa": 11.27,
+   "roas": 3.04,
+   "projEOM": 1183.59,
+   "pctBudget": 1.03,
+   "pacing": 1.18
   },
   {
    "name": "Apple Search Ads",
@@ -164,81 +164,81 @@
    "platform": "google",
    "channel": "Google PMax",
    "name": "PMax | NonBrand  | All Stores",
-   "spend": 21756.92,
-   "impr": 2543927,
-   "clicks": 47139,
-   "conv": 2879.11,
-   "revenue": 125640.74
+   "spend": 22502.44,
+   "impr": 2658009,
+   "clicks": 49391,
+   "conv": 3002.33,
+   "revenue": 131130.14
   },
   {
    "platform": "google",
    "channel": "Google Search",
    "name": "Search | NonBrand | All Stores",
-   "spend": 10425.41,
-   "impr": 781345,
-   "clicks": 13572,
-   "conv": 859.87,
-   "revenue": 32952.84
+   "spend": 10826.94,
+   "impr": 813963,
+   "clicks": 14169,
+   "conv": 898.89,
+   "revenue": 34321.3
   },
   {
    "platform": "google",
    "channel": "Google PMax",
    "name": "PMax | Brand | All Stores",
-   "spend": 6900.2,
-   "impr": 175230,
-   "clicks": 33246,
-   "conv": 7669.5,
-   "revenue": 316476.25
+   "spend": 7000.57,
+   "impr": 178739,
+   "clicks": 33970,
+   "conv": 7927.64,
+   "revenue": 327177.99
   },
   {
    "platform": "google",
    "channel": "Google Search",
    "name": "Search | Brand | All Stores",
-   "spend": 3309.66,
-   "impr": 60710,
-   "clicks": 19174,
-   "conv": 2898,
-   "revenue": 93072.71
+   "spend": 3450.79,
+   "impr": 64499,
+   "clicks": 20245,
+   "conv": 3044,
+   "revenue": 98532.93
   },
   {
    "platform": "google",
    "channel": "Google Remarketing",
    "name": "Search Remarketing | Visitors",
-   "spend": 763.5,
-   "impr": 5429,
-   "clicks": 832,
-   "conv": 230,
-   "revenue": 8850.5
+   "spend": 789.28,
+   "impr": 5656,
+   "clicks": 875,
+   "conv": 242,
+   "revenue": 9360.58
   },
   {
    "platform": "google",
    "channel": "Google App",
    "name": "App promotion",
-   "spend": 649.31,
-   "impr": 34359,
-   "clicks": 990,
-   "conv": 729,
+   "spend": 682.96,
+   "impr": 36224,
+   "clicks": 1050,
+   "conv": 761,
    "revenue": 0
   },
   {
    "platform": "tiktok",
    "channel": "TikTok",
    "name": "TikTok | Sales | No Offer | US",
-   "spend": 569.69,
-   "impr": 20284,
-   "clicks": 372,
-   "conv": 50,
-   "revenue": 1533.28
+   "spend": 637.87,
+   "impr": 22340,
+   "clicks": 435,
+   "conv": 55,
+   "revenue": 1674.85
   },
   {
    "platform": "google",
    "channel": "Google Remarketing",
    "name": "Search Remarketing | Menu Browsers",
-   "spend": 488.2,
-   "impr": 1474,
-   "clicks": 400,
-   "conv": 154,
-   "revenue": 4298.15
+   "spend": 499.64,
+   "impr": 1509,
+   "clicks": 408,
+   "conv": 157,
+   "revenue": 4377.6
   },
   {
    "platform": "tiktok",
@@ -254,20 +254,20 @@
    "platform": "google",
    "channel": "Google Remarketing",
    "name": "Search Remarketing | Cart Abandoners",
-   "spend": 305.87,
-   "impr": 1466,
-   "clicks": 308,
-   "conv": 95,
-   "revenue": 3479.78
+   "spend": 310.56,
+   "impr": 1528,
+   "clicks": 318,
+   "conv": 100,
+   "revenue": 3602.51
   },
   {
    "platform": "meta",
    "channel": "Meta Ads",
    "name": "All Stores | RMK",
    "spend": 0,
-   "impr": 256930,
-   "clicks": 1221,
-   "conv": 521,
+   "impr": 268781,
+   "clicks": 1263,
+   "conv": 549,
    "revenue": 0
   },
   {
@@ -275,9 +275,9 @@
    "channel": "Meta Ads",
    "name": "All Stores | Broad",
    "spend": 0,
-   "impr": 2122011,
-   "clicks": 16857,
-   "conv": 4237,
+   "impr": 2216088,
+   "clicks": 17413,
+   "conv": 4423,
    "revenue": 0
   },
   {
@@ -285,9 +285,9 @@
    "channel": "Meta Ads",
    "name": "All Stores | LAL",
    "spend": 0,
-   "impr": 163944,
-   "clicks": 1684,
-   "conv": 204,
+   "impr": 183005,
+   "clicks": 1831,
+   "conv": 225,
    "revenue": 0
   },
   {
@@ -295,9 +295,9 @@
    "channel": "Meta Remarketing",
    "name": "Remarketing | Website Visitors",
    "spend": 0,
-   "impr": 80472,
-   "clicks": 1508,
-   "conv": 191,
+   "impr": 82690,
+   "clicks": 1537,
+   "conv": 199,
    "revenue": 0
   },
   {
@@ -305,9 +305,9 @@
    "channel": "Meta Remarketing",
    "name": "Remarketing | Menu Browsers",
    "spend": 0,
-   "impr": 50574,
-   "clicks": 750,
-   "conv": 342,
+   "impr": 52145,
+   "clicks": 761,
+   "conv": 358,
    "revenue": 0
   },
   {
@@ -315,9 +315,9 @@
    "channel": "Meta Remarketing",
    "name": "Remarketing | Cart Abandoners",
    "spend": 0,
-   "impr": 31566,
-   "clicks": 1420,
-   "conv": 137,
+   "impr": 32400,
+   "clicks": 1434,
+   "conv": 141,
    "revenue": 0
   }
  ],
@@ -346,20 +346,21 @@
   "2026-09-22": 1777.98,
   "2026-09-23": 1871.49,
   "2026-09-24": 1702.16,
-  "2026-09-25": 1757.77
+  "2026-09-25": 1758.04,
+  "2026-09-26": 1463.84
  },
  "sources": {
   "google": {
    "ok": true,
-   "asOf": "2026-09-25"
+   "asOf": "2026-09-26"
   },
   "tiktok": {
    "ok": true,
-   "asOf": "2026-09-25"
+   "asOf": "2026-09-26"
   },
   "meta": {
    "ok": true,
-   "asOf": "2026-09-25"
+   "asOf": "2026-09-26"
   },
   "apple": {
    "ok": false,
@@ -380,15 +381,15 @@
       "spend": 3413.66,
       "impr": 220011,
       "clicks": 8649,
-      "conv": 1063.33,
-      "revenue": 35474.81
+      "conv": 1066.33,
+      "revenue": 35594.37
      },
      "Google PMax": {
       "spend": 6868.11,
       "impr": 562317,
       "clicks": 17700,
-      "conv": 2534.41,
-      "revenue": 106841.85
+      "conv": 2545.75,
+      "revenue": 107329.07
      },
      "Google App": {
       "spend": 139.65,
@@ -436,15 +437,15 @@
       "spend": 3884.38,
       "impr": 224874,
       "clicks": 9103,
-      "conv": 1059.52,
-      "revenue": 35248.3
+      "conv": 1063.56,
+      "revenue": 35353.02
      },
      "Google PMax": {
       "spend": 8099.32,
       "impr": 808937,
       "clicks": 22850,
-      "conv": 3055.3,
-      "revenue": 128307.04
+      "conv": 3065.36,
+      "revenue": 128689.32
      },
      "Google App": {
       "spend": 161.28,
@@ -490,17 +491,17 @@
     "canales": {
      "Google Search": {
       "spend": 3871.52,
-      "impr": 229306,
+      "impr": 229305,
       "clicks": 9065,
-      "conv": 1008.45,
-      "revenue": 34993.62
+      "conv": 1017.47,
+      "revenue": 35281.97
      },
      "Google PMax": {
       "spend": 8032.83,
       "impr": 784513,
       "clicks": 22790,
-      "conv": 3059.65,
-      "revenue": 128841.85
+      "conv": 3075.71,
+      "revenue": 129439.57
      },
      "Google App": {
       "spend": 157.51,
@@ -513,8 +514,8 @@
       "spend": 422.06,
       "impr": 2275,
       "clicks": 441,
-      "conv": 117,
-      "revenue": 3662.24
+      "conv": 118,
+      "revenue": 3684.37
      },
      "Meta Ads": {
       "spend": 0,
@@ -541,57 +542,57 @@
    },
    {
     "desde": "2026-09-21",
-    "hasta": "2026-09-25",
+    "hasta": "2026-09-26",
     "parcial": true,
     "canales": {
      "Google Search": {
-      "spend": 2565.51,
-      "impr": 167864,
-      "clicks": 5929,
-      "conv": 626.56,
-      "revenue": 20308.82
+      "spend": 3108.17,
+      "impr": 204272,
+      "clicks": 7597,
+      "conv": 795.52,
+      "revenue": 26624.86
      },
      "Google PMax": {
-      "spend": 5656.87,
-      "impr": 563390,
-      "clicks": 17045,
-      "conv": 1899.25,
-      "revenue": 78126.25
+      "spend": 6502.76,
+      "impr": 680981,
+      "clicks": 20021,
+      "conv": 2243.15,
+      "revenue": 92850.18
      },
      "Google App": {
-      "spend": 190.86,
-      "impr": 9240,
-      "clicks": 271,
-      "conv": 182,
+      "spend": 224.51,
+      "impr": 11105,
+      "clicks": 331,
+      "conv": 214,
       "revenue": 0
      },
      "Google Remarketing": {
-      "spend": 314.33,
-      "impr": 1314,
-      "clicks": 299,
-      "conv": 89,
-      "revenue": 2916.71
+      "spend": 356.25,
+      "impr": 1638,
+      "clicks": 360,
+      "conv": 108,
+      "revenue": 3606.84
      },
      "Meta Ads": {
       "spend": 0,
-      "impr": 621514,
-      "clicks": 4973,
-      "conv": 1369,
+      "impr": 746503,
+      "clicks": 5718,
+      "conv": 1604,
       "revenue": 0
      },
      "Meta Remarketing": {
       "spend": 0,
-      "impr": 34196,
-      "clicks": 676,
-      "conv": 176,
+      "impr": 38819,
+      "clicks": 730,
+      "conv": 204,
       "revenue": 0
      },
      "TikTok": {
-      "spend": 348.01,
-      "impr": 9679,
-      "clicks": 226,
-      "conv": 35,
-      "revenue": 1049.93
+      "spend": 416.19,
+      "impr": 11735,
+      "clicks": 289,
+      "conv": 40,
+      "revenue": 1191.5
      }
     }
    }
@@ -602,21 +603,21 @@
      "platform": "google",
      "channel": "Google PMax",
      "name": "PMax | NonBrand  | All Stores",
-     "spend": 21756.92,
-     "impr": 2543927,
-     "clicks": 47139,
-     "conv": 2879.11,
-     "revenue": 125640.74
+     "spend": 22502.44,
+     "impr": 2658009,
+     "clicks": 49391,
+     "conv": 3002.33,
+     "revenue": 131130.14
     },
     {
      "platform": "google",
      "channel": "Google PMax",
      "name": "PMax | Brand | All Stores",
-     "spend": 6900.2,
-     "impr": 175230,
-     "clicks": 33246,
-     "conv": 7669.5,
-     "revenue": 316476.25
+     "spend": 7000.57,
+     "impr": 178739,
+     "clicks": 33970,
+     "conv": 7927.64,
+     "revenue": 327177.99
     }
    ],
    "Google Search": [
@@ -624,21 +625,21 @@
      "platform": "google",
      "channel": "Google Search",
      "name": "Search | NonBrand | All Stores",
-     "spend": 10425.41,
-     "impr": 781345,
-     "clicks": 13572,
-     "conv": 859.87,
-     "revenue": 32952.84
+     "spend": 10826.94,
+     "impr": 813963,
+     "clicks": 14169,
+     "conv": 898.89,
+     "revenue": 34321.3
     },
     {
      "platform": "google",
      "channel": "Google Search",
      "name": "Search | Brand | All Stores",
-     "spend": 3309.66,
-     "impr": 60710,
-     "clicks": 19174,
-     "conv": 2898,
-     "revenue": 93072.71
+     "spend": 3450.79,
+     "impr": 64499,
+     "clicks": 20245,
+     "conv": 3044,
+     "revenue": 98532.93
     }
    ],
    "Google Remarketing": [
@@ -646,31 +647,31 @@
      "platform": "google",
      "channel": "Google Remarketing",
      "name": "Search Remarketing | Visitors",
-     "spend": 763.5,
-     "impr": 5429,
-     "clicks": 832,
-     "conv": 230,
-     "revenue": 8850.5
+     "spend": 789.28,
+     "impr": 5656,
+     "clicks": 875,
+     "conv": 242,
+     "revenue": 9360.58
     },
     {
      "platform": "google",
      "channel": "Google Remarketing",
      "name": "Search Remarketing | Menu Browsers",
-     "spend": 488.2,
-     "impr": 1474,
-     "clicks": 400,
-     "conv": 154,
-     "revenue": 4298.15
+     "spend": 499.64,
+     "impr": 1509,
+     "clicks": 408,
+     "conv": 157,
+     "revenue": 4377.6
     },
     {
      "platform": "google",
      "channel": "Google Remarketing",
      "name": "Search Remarketing | Cart Abandoners",
-     "spend": 305.87,
-     "impr": 1466,
-     "clicks": 308,
-     "conv": 95,
-     "revenue": 3479.78
+     "spend": 310.56,
+     "impr": 1528,
+     "clicks": 318,
+     "conv": 100,
+     "revenue": 3602.51
     }
    ],
    "Google App": [
@@ -678,10 +679,10 @@
      "platform": "google",
      "channel": "Google App",
      "name": "App promotion",
-     "spend": 649.31,
-     "impr": 34359,
-     "clicks": 990,
-     "conv": 729,
+     "spend": 682.96,
+     "impr": 36224,
+     "clicks": 1050,
+     "conv": 761,
      "revenue": 0
     }
    ],
@@ -690,11 +691,11 @@
      "platform": "tiktok",
      "channel": "TikTok",
      "name": "TikTok | Sales | No Offer | US",
-     "spend": 569.69,
-     "impr": 20284,
-     "clicks": 372,
-     "conv": 50,
-     "revenue": 1533.28
+     "spend": 637.87,
+     "impr": 22340,
+     "clicks": 435,
+     "conv": 55,
+     "revenue": 1674.85
     },
     {
      "platform": "tiktok",
@@ -713,9 +714,9 @@
      "channel": "Meta Ads",
      "name": "All Stores | RMK",
      "spend": 0,
-     "impr": 256930,
-     "clicks": 1221,
-     "conv": 521,
+     "impr": 268781,
+     "clicks": 1263,
+     "conv": 549,
      "revenue": 0
     },
     {
@@ -723,9 +724,9 @@
      "channel": "Meta Ads",
      "name": "All Stores | Broad",
      "spend": 0,
-     "impr": 2122011,
-     "clicks": 16857,
-     "conv": 4237,
+     "impr": 2216088,
+     "clicks": 17413,
+     "conv": 4423,
      "revenue": 0
     },
     {
@@ -733,9 +734,9 @@
      "channel": "Meta Ads",
      "name": "All Stores | LAL",
      "spend": 0,
-     "impr": 163944,
-     "clicks": 1684,
-     "conv": 204,
+     "impr": 183005,
+     "clicks": 1831,
+     "conv": 225,
      "revenue": 0
     }
    ],
@@ -745,9 +746,9 @@
      "channel": "Meta Remarketing",
      "name": "Remarketing | Website Visitors",
      "spend": 0,
-     "impr": 80472,
-     "clicks": 1508,
-     "conv": 191,
+     "impr": 82690,
+     "clicks": 1537,
+     "conv": 199,
      "revenue": 0
     },
     {
@@ -755,9 +756,9 @@
      "channel": "Meta Remarketing",
      "name": "Remarketing | Menu Browsers",
      "spend": 0,
-     "impr": 50574,
-     "clicks": 750,
-     "conv": 342,
+     "impr": 52145,
+     "clicks": 761,
+     "conv": 358,
      "revenue": 0
     },
     {
@@ -765,9 +766,9 @@
      "channel": "Meta Remarketing",
      "name": "Remarketing | Cart Abandoners",
      "spend": 0,
-     "impr": 31566,
-     "clicks": 1420,
-     "conv": 137,
+     "impr": 32400,
+     "clicks": 1434,
+     "conv": 141,
      "revenue": 0
     }
    ]
@@ -937,15 +938,15 @@
       "spend": 201.58,
       "impr": 8422,
       "clicks": 3738,
-      "conv": 702,
-      "revenue": 24118.03
+      "conv": 710,
+      "revenue": 24303.61
      },
      "nonbrand": {
       "spend": 3932.91,
       "impr": 240854,
       "clicks": 4211,
-      "conv": 302.43,
-      "revenue": 10956.98
+      "conv": 304.43,
+      "revenue": 11002.34
      }
     },
     "pmax": {
@@ -953,15 +954,15 @@
       "spend": 1302.37,
       "impr": 41040,
       "clicks": 8511,
-      "conv": 2223.85,
-      "revenue": 90167.04
+      "conv": 2229.94,
+      "revenue": 90531.83
      },
      "nonbrand": {
       "spend": 1970.73,
       "impr": 186137,
       "clicks": 4897,
-      "conv": 422.42,
-      "revenue": 18275.13
+      "conv": 424.49,
+      "revenue": 18442.03
      }
     },
     "otras": []
@@ -975,15 +976,15 @@
       "spend": 840.8,
       "impr": 16602,
       "clicks": 5430,
-      "conv": 860,
-      "revenue": 27808.93
+      "conv": 862,
+      "revenue": 27896.04
      },
      "nonbrand": {
       "spend": 3067.55,
       "impr": 237355,
       "clicks": 3960,
-      "conv": 294.3,
-      "revenue": 10861.06
+      "conv": 295.3,
+      "revenue": 10893.51
      }
     },
     "pmax": {
@@ -991,15 +992,15 @@
       "spend": 1753.6,
       "impr": 50713,
       "clicks": 8864,
-      "conv": 2143.96,
-      "revenue": 88695.7
+      "conv": 2149.96,
+      "revenue": 88964.61
      },
      "nonbrand": {
       "spend": 5450.72,
       "impr": 532301,
       "clicks": 10450,
-      "conv": 732.78,
-      "revenue": 31949.6
+      "conv": 738.11,
+      "revenue": 32167.91
      }
     },
     "otras": []
@@ -1013,15 +1014,15 @@
       "spend": 930.01,
       "impr": 15722,
       "clicks": 5400,
-      "conv": 820,
-      "revenue": 25948.37
+      "conv": 823,
+      "revenue": 26025.79
      },
      "nonbrand": {
       "spend": 2954.37,
       "impr": 209152,
       "clicks": 3703,
-      "conv": 239.52,
-      "revenue": 9299.93
+      "conv": 240.56,
+      "revenue": 9327.23
      }
     },
     "pmax": {
@@ -1029,15 +1030,15 @@
       "spend": 1975.58,
       "impr": 49728,
       "clicks": 8998,
-      "conv": 2167.1,
-      "revenue": 89257.16
+      "conv": 2176,
+      "revenue": 89559.66
      },
      "nonbrand": {
       "spend": 6123.74,
       "impr": 759209,
       "clicks": 13852,
-      "conv": 888.2,
-      "revenue": 39049.88
+      "conv": 889.37,
+      "revenue": 39129.66
      }
     },
     "otras": []
@@ -1051,15 +1052,15 @@
       "spend": 932.81,
       "impr": 17533,
       "clicks": 5240,
-      "conv": 795,
-      "revenue": 26358.26
+      "conv": 802,
+      "revenue": 26594.95
      },
      "nonbrand": {
       "spend": 2938.7,
-      "impr": 211773,
+      "impr": 211772,
       "clicks": 3825,
-      "conv": 213.45,
-      "revenue": 8635.36
+      "conv": 215.47,
+      "revenue": 8687.02
      }
     },
     "pmax": {
@@ -1067,53 +1068,53 @@
       "spend": 1937.73,
       "impr": 46490,
       "clicks": 9157,
-      "conv": 2169.14,
-      "revenue": 89784.51
+      "conv": 2179.2,
+      "revenue": 90144.66
      },
      "nonbrand": {
       "spend": 6095.1,
       "impr": 738023,
       "clicks": 13633,
-      "conv": 890.51,
-      "revenue": 39057.33
+      "conv": 896.51,
+      "revenue": 39294.9
      }
     },
     "otras": []
    },
    {
     "desde": "2026-09-21",
-    "hasta": "2026-09-25",
+    "hasta": "2026-09-26",
     "parcial": true,
     "search": {
      "brand": {
-      "spend": 610.23,
-      "impr": 11204,
-      "clicks": 3257,
-      "conv": 466,
-      "revenue": 14411.32
+      "spend": 751.36,
+      "impr": 14993,
+      "clicks": 4328,
+      "conv": 600,
+      "revenue": 19470.32
      },
      "nonbrand": {
-      "spend": 1955.28,
-      "impr": 156660,
-      "clicks": 2672,
-      "conv": 160.56,
-      "revenue": 5897.5
+      "spend": 2356.8,
+      "impr": 189279,
+      "clicks": 3269,
+      "conv": 195.52,
+      "revenue": 7154.54
      }
     },
     "pmax": {
      "brand": {
-      "spend": 1507.86,
-      "impr": 36247,
-      "clicks": 7477,
-      "conv": 1492.25,
-      "revenue": 60970.61
+      "spend": 1608.23,
+      "impr": 39756,
+      "clicks": 8201,
+      "conv": 1725.43,
+      "revenue": 70740.78
      },
      "nonbrand": {
-      "spend": 4149.01,
-      "impr": 527143,
-      "clicks": 9568,
-      "conv": 407,
-      "revenue": 17155.64
+      "spend": 4894.53,
+      "impr": 641225,
+      "clicks": 11820,
+      "conv": 517.72,
+      "revenue": 22109.39
      }
     },
     "otras": []
@@ -1122,34 +1123,34 @@
   "mtd": {
    "search": {
     "brand": {
-     "spend": 3309.66,
-     "impr": 60710,
-     "clicks": 19174,
-     "conv": 2898,
-     "revenue": 93072.71
+     "spend": 3450.79,
+     "impr": 64499,
+     "clicks": 20245,
+     "conv": 3044,
+     "revenue": 98532.93
     },
     "nonbrand": {
-     "spend": 10425.41,
-     "impr": 781345,
-     "clicks": 13572,
-     "conv": 859.87,
-     "revenue": 32952.84
+     "spend": 10826.94,
+     "impr": 813963,
+     "clicks": 14169,
+     "conv": 898.89,
+     "revenue": 34321.3
     }
    },
    "pmax": {
     "brand": {
-     "spend": 6900.2,
-     "impr": 175230,
-     "clicks": 33246,
-     "conv": 7669.5,
-     "revenue": 316476.25
+     "spend": 7000.57,
+     "impr": 178739,
+     "clicks": 33970,
+     "conv": 7927.64,
+     "revenue": 327177.99
     },
     "nonbrand": {
-     "spend": 21756.92,
-     "impr": 2543927,
-     "clicks": 47139,
-     "conv": 2879.11,
-     "revenue": 125640.74
+     "spend": 22502.44,
+     "impr": 2658009,
+     "clicks": 49391,
+     "conv": 3002.33,
+     "revenue": 131130.14
     }
    },
    "otras": []
