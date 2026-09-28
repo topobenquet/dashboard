@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28T12:30:56.438Z",
+ "generated": "2026-09-28T14:31:21.130Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -359,6 +359,19 @@
    },
    "neto": -340.16,
    "acum": 5712.48
+  },
+  {
+   "fecha": "2026-09-28",
+   "in": 0,
+   "out": 383.18,
+   "n": 3,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -206.78,
+    "WhatsApp · Alfredo": -88.2,
+    "WhatsApp · Alfredo (factura)": -88.2
+   },
+   "neto": -383.18,
+   "acum": 5329.3
   }
  ],
  "movimientos": [
@@ -1238,6 +1251,22 @@
    "gs": 110000
   },
   {
+   "d": "2026-09-28",
+   "t": "out",
+   "usd": 206.78,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Alfredo.",
+   "gs": 1220000
+  },
+  {
+   "d": "2026-09-28",
+   "t": "out",
+   "usd": 88.2,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago combustible Petropar Conmebol (ueno bank)",
+   "gs": 520405
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1334,6 +1363,14 @@
    "gs": 50000
   },
   {
+   "d": "2026-09-28",
+   "t": "out",
+   "usd": 88.2,
+   "fuente": "WhatsApp · Alfredo (factura)",
+   "det": "Carga de combustible 48,20 L en surtidor",
+   "gs": 520400
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -1421,12 +1458,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 381.26,
+    "google": 381.55,
     "meta": 279.12,
-    "total": 660.38
+    "total": 660.67
    },
    "impuestos": null,
-   "resultado": 4342.97,
+   "resultado": 4342.68,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
