@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28T14:31:21.130Z",
+ "generated": "2026-09-28T16:30:13.760Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
-  "stripePendiente": 303.7,
+  "stripePendiente": 366.87,
   "pagoparPendienteUsd": 12534.24,
   "relay": null,
   "binance": null,
@@ -362,19 +362,27 @@
   },
   {
    "fecha": "2026-09-28",
-   "in": 0,
+   "in": 59,
    "out": 383.18,
-   "n": 3,
+   "n": 4,
    "porFuente": {
+    "Stripe": 59,
     "WhatsApp · Pagos (Majo)": -206.78,
     "WhatsApp · Alfredo": -88.2,
     "WhatsApp · Alfredo (factura)": -88.2
    },
-   "neto": -383.18,
-   "acum": 5329.3
+   "neto": -324.18,
+   "acum": 5388.3
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-28",
+   "t": "in",
+   "usd": 59,
+   "fuente": "Stripe",
+   "det": "GEMA BERNAL HERNANDEZ"
+  },
   {
    "d": "2026-09-26",
    "t": "in",
@@ -1445,10 +1453,10 @@
    },
    "margenBruto": 5224.35,
    "cobro": {
-    "stripe": 115.7,
+    "stripe": 118.92,
     "aloha": null,
     "pagopar": null,
-    "total": 115.7
+    "total": 118.92
    },
    "estructura": {
     "seguro": 105.3,
@@ -1458,12 +1466,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 381.55,
+    "google": 384.59,
     "meta": 279.12,
-    "total": 660.67
+    "total": 663.71
    },
    "impuestos": null,
-   "resultado": 4342.68,
+   "resultado": 4336.42,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1475,10 +1483,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 10,
-   "bruto": 2614,
-   "comision": 115.7,
-   "pct": 4.43,
+   "cobros": 11,
+   "bruto": 2673,
+   "comision": 118.92,
+   "pct": 4.45,
    "nota": "medido cobro por cobro"
   },
   {
