@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-27T22:30:32.698Z",
+ "generated": "2026-09-28T10:20:21.253Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-27",
+  "fecha": "2026-09-28",
   "itauGs": 43605,
   "uenoGs": 34312615,
   "uenoFecha": "2026-09-25",
@@ -351,14 +351,14 @@
   {
    "fecha": "2026-09-27",
    "in": 229.32,
-   "out": 550.84,
-   "n": 4,
+   "out": 569.48,
+   "n": 5,
    "porFuente": {
     "Pagopar": 229.32,
-    "WhatsApp · Pagos (Majo)": -550.84
+    "WhatsApp · Pagos (Majo)": -569.48
    },
-   "neto": -321.52,
-   "acum": 5731.12
+   "neto": -340.16,
+   "acum": 5712.48
   }
  ],
  "movimientos": [
@@ -1230,6 +1230,14 @@
    "gs": 250000
   },
   {
+   "d": "2026-09-27",
+   "t": "out",
+   "usd": 18.64,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver José Berden. Mañana 28/09 9:am Pax Antonio",
+   "gs": 110000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1413,12 +1421,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 374.89,
+    "google": 381.26,
     "meta": 279.12,
-    "total": 654.01
+    "total": 660.38
    },
    "impuestos": null,
-   "resultado": 4127.34,
+   "resultado": 4120.97,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",

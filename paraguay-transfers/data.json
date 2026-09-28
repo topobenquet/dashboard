@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-27T10:20:50.260Z",
-  "lastSyncLabel": "27 Sep 2026",
+  "generated": "2026-09-28T10:20:58.258Z",
+  "lastSyncLabel": "28 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 276,
-      "reservas": 58,
-      "revenue": 17185,
-      "chofer": 5997,
+      "leads": 286,
+      "reservas": 59,
+      "revenue": 17546,
+      "chofer": 6578,
       "comb": 622,
       "peajes": 115,
-      "comision": 379.75,
+      "comision": 384.75,
       "reembolsos": 13,
-      "otros": 41,
-      "gAds": 366,
+      "otros": 42,
+      "gAds": 381,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 366.17,
-      "clicks": 414,
-      "impr": 2075,
-      "conv": 37
+      "spend": 381.26,
+      "clicks": 427,
+      "impr": 2122,
+      "conv": 38
     }
   ],
   "trips": [
@@ -4307,12 +4307,12 @@
       "route": "CDE-FOZ",
       "cliente": "eduardo estrada",
       "pais": "Chile",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 107,
       "sena": 107,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 104,
+      "choferCost": 49,
+      "neto": 55,
       "fechaReserva": "25/09/26",
       "fechaSalida": "25/09/26"
     },
@@ -4336,11 +4336,11 @@
       "cliente": "Rafa 5215591984468",
       "pais": "México",
       "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
+      "pago": 194,
+      "sena": 100,
+      "restante": 94,
       "choferCost": 20,
-      "neto": 0,
+      "neto": 173,
       "fechaReserva": "09/08/26",
       "fechaSalida": "26/09/26"
     },
@@ -4353,8 +4353,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 20,
+      "neto": 27,
       "fechaReserva": "23/09/26",
       "fechaSalida": "26/09/26"
     },
@@ -4388,17 +4388,45 @@
     },
     {
       "mes": "Septiembre",
+      "route": "Aeropuerto - Encarnación",
+      "cliente": "Decio",
+      "pais": "Brasil",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "21/09/26",
+      "fechaSalida": "28/09/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "Edif.Altamira-AERO",
       "cliente": "antonio",
       "pais": "Paraguay",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "José Berdén",
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 20,
+      "neto": 28,
       "fechaReserva": "25/09/26",
       "fechaSalida": "28/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Aero - Esplendor",
+      "cliente": "emily crowley",
+      "pais": "Canadá",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 234,
+      "sena": 234,
+      "restante": 0,
+      "choferCost": 82,
+      "neto": 145,
+      "fechaReserva": "26/09/26",
+      "fechaSalida": "29/09/26"
     },
     {
       "mes": "Septiembre",
@@ -4419,13 +4447,27 @@
       "route": "Yacht - Aero",
       "cliente": "Alex",
       "pais": "Alemania",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 195,
       "sena": 100,
       "restante": 95,
       "choferCost": 20,
       "neto": 0,
       "fechaReserva": "24/09/26",
+      "fechaSalida": "30/09/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "Silvio Pettirossi Airport to Ruta San Bernardino - Altos, Altos 030206, Paraguay",
+      "cliente": "deb",
+      "pais": "Canadá",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 167,
+      "sena": 167,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 162,
+      "fechaReserva": "27/09/26",
       "fechaSalida": "30/09/26"
     },
     {
@@ -4444,24 +4486,10 @@
     },
     {
       "mes": "Septiembre",
-      "route": "hotel to hotel",
-      "cliente": "emily crowley",
-      "pais": "Canadá",
-      "conductor": "",
-      "pago": 234,
-      "sena": 234,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 227,
-      "fechaReserva": "26/09/26",
-      "fechaSalida": "01/10/26"
-    },
-    {
-      "mes": "Septiembre",
       "route": "AERO - Yacht & Golf Club",
       "cliente": "Luiz Felipe Castro",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 49,
       "sena": 0,
       "restante": 49,
@@ -4475,20 +4503,6 @@
       "route": "FOZ-ASU",
       "cliente": "thomas kirby",
       "pais": "UK",
-      "conductor": "",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "09/09/26",
-      "fechaSalida": "02/10/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Foz-ASU",
-      "cliente": "Tom (Thomas Kirby)",
-      "pais": "Inglaterra",
       "conductor": "",
       "pago": 0,
       "sena": 0,
@@ -4531,12 +4545,12 @@
       "route": "FOZ-ASU",
       "cliente": "Isabela Zomer",
       "pais": "España",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 417,
       "sena": 100,
       "restante": 317,
-      "choferCost": 0,
-      "neto": 404,
+      "choferCost": 410,
+      "neto": -5,
       "fechaReserva": "01/09/26",
       "fechaSalida": "03/10/26"
     },
@@ -5018,20 +5032,6 @@
     },
     {
       "mes": "Septiembre",
-      "route": "Aeropuerto - Encarnación",
-      "cliente": "Decio",
-      "pais": "Brasil",
-      "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "21/09/26",
-      "fechaSalida": ""
-    },
-    {
-      "mes": "Septiembre",
       "route": "",
       "cliente": "rafael peliciolli nunes",
       "pais": "Brasil",
@@ -5085,11 +5085,26 @@
       "neto": 0,
       "fechaReserva": "09/07/26",
       "fechaSalida": "24/10/26 - 31/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-ChâteauVictoriaHotel",
+      "cliente": "Angela",
+      "pais": "España",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "28/09/26",
+      "fechaSalida": "18/10/26"
     }
   ],
   "daily": {
     "leads": {
-      "2026-09-27": 2,
+      "2026-09-28": 2,
+      "2026-09-27": 10,
       "2026-09-26": 10,
       "2026-09-25": 11,
       "2026-09-24": 13,
@@ -5172,9 +5187,10 @@
       "2026-09-24": 5,
       "2026-09-25": 2,
       "2026-09-22": 2,
-      "2026-09-04": 2,
       "2026-09-26": 2,
-      "2026-09-09": 3,
+      "2026-09-04": 2,
+      "2026-09-27": 1,
+      "2026-09-09": 2,
       "2026-09-12": 1
     },
     "gads": {
@@ -5434,13 +5450,14 @@
       "2026-09-24": 17.46,
       "2026-09-25": 19.83,
       "2026-09-26": 14.12,
-      "2026-09-27": 0
+      "2026-09-27": 15.09,
+      "2026-09-28": 0
     }
   },
   "resenas": {
     "count": 62,
     "rating": 5,
-    "actualizado": "2026-09-26T23:10:02.913Z",
+    "actualizado": "2026-09-27T23:10:02.737Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -5484,6 +5501,11 @@
       },
       {
         "fecha": "2026-09-26",
+        "count": 62,
+        "rating": 5
+      },
+      {
+        "fecha": "2026-09-27",
         "count": 62,
         "rating": 5
       }
@@ -5565,10 +5587,12 @@
       "2026-09-22": 10,
       "2026-09-23": 8,
       "2026-09-24": 12,
-      "2026-09-26": 7
+      "2026-09-26": 7,
+      "2026-09-27": 7,
+      "2026-09-28": 2
     },
     "monthly": {
-      "Septiembre": 175,
+      "Septiembre": 184,
       "Agosto": 27
     }
   }
