@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28T11:10:06.186Z",
+ "generated": "2026-09-28T13:10:34.179Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -29,7 +29,7 @@
     }
    ],
    "gsKm": 1253,
-   "ultimoKm": 95994
+   "ultimoKm": 96031
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -48,9 +48,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 2791,
-   "kmFuera": 291,
+   "kmFuera": 328,
    "viajes": 11,
-   "costoComb": 3861746,
+   "costoComb": 3908107,
    "pagado": 2328000
   },
   "Voxy": {
@@ -64,8 +64,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 38,
-   "conFoto": 37
+   "lecturas": 39,
+   "conFoto": 38
   },
   {
    "chofer": "Gustavo",
@@ -84,20 +84,19 @@
    "choferes": [
     "Alfredo"
    ],
-   "fechaIni": "2026-09-26",
-   "fechaFin": "2026-09-26",
-   "horaIni": "06:01",
+   "fechaIni": "2026-09-28",
+   "fechaFin": "2026-09-28",
+   "horaIni": "08:59",
    "horaFin": null,
-   "kmIni": 95994,
+   "kmIni": 96031,
    "kmFin": null,
    "km": null,
-   "tanqueIni": 0.75,
+   "tanqueIni": 0.5,
    "tanqueFin": null,
    "traslados": [
-    "Dazzler - Aero",
-    "Sheraton -AERO"
+    "Aeropuerto - Encarnación"
    ],
-   "kmEsperado": 40,
+   "kmEsperado": 740,
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
@@ -549,6 +548,18 @@
   }
  ],
  "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 95994,
+   "hasta": 96031,
+   "km": 37,
+   "fechaDesde": "2026-09-26",
+   "fechaHasta": "2026-09-28",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
   {
    "vehiculo": "H1",
    "desde": 95958,
@@ -1049,11 +1060,11 @@
  ],
  "alertas": [
   {
-   "key": "final:H1:95994",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 26/09 a las 06:01 (km inicio 95.994). Mandá la foto del tablero con el número.",
-   "ts": 1790413297,
-   "fecha": "2026-09-26"
+   "key": "hueco:H1:95994:96031",
+   "nivel": "juan",
+   "texto": "H1: 37 km sin traslado entre el 26/09 (km 95.994, Alfredo) y el 28/09 (km 96.031, Alfredo); no hubo km final.",
+   "ts": 1790596783,
+   "fecha": "2026-09-28"
   },
   {
    "key": "desvio:H1:95850",
