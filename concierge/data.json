@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-27T10:21:21.674Z",
-  "lastSyncLabel": "27 Sep 2026",
+  "generated": "2026-09-28T10:21:31.814Z",
+  "lastSyncLabel": "28 Sep 2026",
   "year": 2026,
   "currentMonth": "Septiembre",
   "account": {
@@ -256,13 +256,13 @@
     {
       "mes": "Septiembre",
       "ym": "2026-09",
-      "spend": 4699.18,
-      "clicks": 1356,
-      "impr": 11894,
+      "spend": 4733.26,
+      "clicks": 1375,
+      "impr": 12070,
       "actions": {
         "Calls from ads": 30,
-        "Chat Lead": 288,
-        "Get a Callback": 356.9,
+        "Chat Lead": 290,
+        "Get a Callback": 360.9,
         "Local actions - Directions": 6,
         "Local actions - Website visits": 9,
         "Not Qualified/Not Interested": 5,
@@ -270,7 +270,7 @@
         "Number Pool Calls": 11,
         "Clicks to call": 2
       },
-      "contacto": 688,
+      "contacto": 694,
       "descartados": 5,
       "assessment": 0,
       "pipeline": 0,
@@ -5029,9 +5029,24 @@
       "leads": 0
     },
     "2026-09-27": {
-      "spend": 0,
-      "clicks": 0,
-      "impr": 5,
+      "spend": 32.01,
+      "clicks": 18,
+      "impr": 168,
+      "actions": {
+        "Chat Lead": 2,
+        "Get a Callback": 4
+      },
+      "contacto": 6,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-09-28": {
+      "spend": 2.07,
+      "clicks": 1,
+      "impr": 13,
       "actions": {},
       "contacto": 0,
       "descartados": 0,
@@ -5060,10 +5075,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1498.33,
-      "clicks": 635,
-      "impr": 5482,
-      "contacto": 341,
+      "spend": 1532.41,
+      "clicks": 654,
+      "impr": 5658,
+      "contacto": 347,
       "descartados": 2,
       "assessment": 0,
       "pipeline": 0,
@@ -5225,9 +5240,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1498.33,
-        "clicks": 635,
-        "impr": 5482
+        "spend": 1532.41,
+        "clicks": 654,
+        "impr": 5658
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
@@ -5241,6 +5256,11 @@
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-09-27": {
+        "contacts": 3,
+        "paid": 2,
+        "opps": 2
+      },
       "2026-09-26": {
         "contacts": 7,
         "paid": 6,
@@ -6628,14 +6648,14 @@
       },
       {
         "ym": "2026-09",
-        "contacts": 212,
-        "paid": 203,
-        "opps": 203
+        "contacts": 215,
+        "paid": 205,
+        "opps": 205
       }
     ],
     "stages": {
       "2026-09": {
-        "New Leads": 197,
+        "New Leads": 199,
         "Not Qualified/Not Interested": 6
       },
       "2026-08": {
@@ -6706,7 +6726,7 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-09-26",
+    "lastContact": "2026-09-27",
     "totals": {
       "contactos": 2200,
       "opps": 2200,
@@ -6845,7 +6865,7 @@
       },
       {
         "ym": "2026-09",
-        "items": 206,
+        "items": 208,
         "assessments": 22,
         "cohortAssessed": 5
       }
@@ -6909,7 +6929,7 @@
         "Additional information needed": 84,
         "POS developed": 3,
         "Waiting EDD": 2,
-        "New Leads": 8
+        "New Leads": 10
       }
     },
     "passed": {
@@ -6977,7 +6997,7 @@
         "MAP referral pending": 56,
         "Additional information needed": 132,
         "Not qualified/not interested": 67,
-        "New Leads": 9,
+        "New Leads": 11,
         "Has assessment scheduled": 5,
         "POS developed": 3,
         "Waiting EDD": 2
@@ -6994,8 +7014,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1455,
-      "paid": 1207,
+      "items": 1458,
+      "paid": 1209,
       "logs": 2940
     }
   }
