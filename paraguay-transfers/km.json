@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T17:10:15.050Z",
+ "generated": "2026-09-29T19:10:13.676Z",
  "mes": "2026-09",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -36,7 +36,7 @@
     }
    ],
    "gsKm": 1304,
-   "ultimoKm": 96825
+   "ultimoKm": 96841
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -54,10 +54,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 2791,
+   "kmViajes": 3601,
    "kmFuera": 328,
-   "viajes": 11,
-   "costoComb": 4067176,
+   "viajes": 12,
+   "costoComb": 5123416,
    "pagado": 2328000
   },
   "Voxy": {
@@ -71,8 +71,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 42,
-   "conFoto": 41
+   "lecturas": 43,
+   "conFoto": 42
   },
   {
    "chofer": "Gustavo",
@@ -94,20 +94,20 @@
    "fechaIni": "2026-09-28",
    "fechaFin": "2026-09-29",
    "horaIni": "08:59",
-   "horaFin": null,
+   "horaFin": "14:40",
    "kmIni": 96031,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 96841,
+   "km": 810,
    "tanqueIni": 0.5,
-   "tanqueFin": null,
+   "tanqueFin": 0.2,
    "traslados": [
     "Aeropuerto - Encarnación"
    ],
    "kmEsperado": 740,
-   "desvio": null,
+   "desvio": 0.095,
    "combustiblePagado": null,
    "combustibleCargado": 900400,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 1056240,
    "cargas": [
     {
      "fecha": "2026-09-28",
@@ -127,7 +127,7 @@
    ],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -1111,13 +1111,6 @@
    "key": "hueco:H1:95994:96031",
    "nivel": "juan",
    "texto": "H1: 37 km sin traslado entre el 26/09 (km 95.994, Alfredo) y el 28/09 (km 96.031, Alfredo); no hubo km final.",
-   "ts": 1790596783,
-   "fecha": "2026-09-28"
-  },
-  {
-   "key": "final:H1:96031",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 28/09 a las 08:59 (km inicio 96.031). Mandá la foto del tablero con el número.",
    "ts": 1790596783,
    "fecha": "2026-09-28"
   },
