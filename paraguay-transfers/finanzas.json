@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T12:30:09.937Z",
+ "generated": "2026-09-29T14:30:31.524Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-09-29",
   "itauGs": 43605,
-  "uenoGs": 34312615,
-  "uenoFecha": "2026-09-25",
+  "uenoGs": 22706236,
+  "uenoFecha": "2026-09-29",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
-  "stripePendiente": 456.43,
-  "pagoparPendienteUsd": 12534.24,
+  "stripePendiente": 493.41,
+  "pagoparPendienteUsd": 12658.31,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -376,14 +376,15 @@
   },
   {
    "fecha": "2026-09-29",
-   "in": 0,
+   "in": 124.07,
    "out": 47.46,
-   "n": 1,
+   "n": 2,
    "porFuente": {
+    "Pagopar": 124.07,
     "WhatsApp · Alfredo (factura)": -47.46
    },
-   "neto": -47.46,
-   "acum": 5340.84
+   "neto": 76.61,
+   "acum": 5464.91
   }
  ],
  "movimientos": [
@@ -852,6 +853,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Debbie Savory",
    "gs": 1036000
+  },
+  {
+   "d": "2026-09-29",
+   "t": "in",
+   "usd": 124.07,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Emily Crowley (Canada Inline)",
+   "gs": 732000
   },
   {
    "d": "2026-09-02",
@@ -1485,12 +1494,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 393.52,
+    "google": 398.62,
     "meta": 279.12,
-    "total": 672.64
+    "total": 677.74
    },
    "impuestos": null,
-   "resultado": 4307.49,
+   "resultado": 4302.39,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1510,8 +1519,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 46,
-   "bruto": 12534.2,
+   "cobros": 47,
+   "bruto": 12658.27,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1526,8 +1535,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 73952000,
-  "cobradoUsd": 12534.2,
+  "cobradoGs": 74684000,
+  "cobradoUsd": 12658.27,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1666,6 +1675,12 @@
     "cobros": 2,
     "gs": 1353000,
     "usd": 229.32
+   },
+   {
+    "fecha": "2026-09-29",
+    "cobros": 1,
+    "gs": 732000,
+    "usd": 124.07
    }
   ],
   "pruebasExcluidas": 0,
@@ -1673,8 +1688,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 73952000,
-  "pendienteUsd": 12534.24
+  "pendienteGs": 74684000,
+  "pendienteUsd": 12658.31
  },
  "giros": [
   {
@@ -1775,7 +1790,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲74 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲74.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2150,6 +2165,13 @@
    "momento": "actual",
    "gs": 34312615,
    "usd": 5815.7
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 22706236,
+   "usd": 3848.51
   }
  ]
 }
