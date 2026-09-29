@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-29T00:30:08.861Z",
+ "generated": "2026-09-29T10:20:43.936Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-28",
+  "fecha": "2026-09-29",
   "itauGs": 43605,
   "uenoGs": 34312615,
   "uenoFecha": "2026-09-25",
@@ -373,6 +373,17 @@
    },
    "neto": -324.18,
    "acum": 5388.3
+  },
+  {
+   "fecha": "2026-09-29",
+   "in": 0,
+   "out": 47.46,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Alfredo (factura)": -47.46
+   },
+   "neto": -47.46,
+   "acum": 5340.84
   }
  ],
  "movimientos": [
@@ -1379,6 +1390,14 @@
    "gs": 520400
   },
   {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 47.46,
+   "fuente": "WhatsApp · Alfredo (factura)",
+   "det": "Carga de combustible diésel 25,22 L a 11.100 Gs/L (surtidor)",
+   "gs": 280000
+  },
+  {
    "d": "2026-09-07",
    "t": "out",
    "usd": 700,
@@ -1466,12 +1485,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 390.36,
+    "google": 391.8,
     "meta": 279.12,
-    "total": 669.48
+    "total": 670.92
    },
    "impuestos": null,
-   "resultado": 4310.65,
+   "resultado": 4309.21,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
