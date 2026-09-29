@@ -82,15 +82,6 @@ table.t tr:hover td{background:#F7F8FC}
 .funnel .fb span{position:absolute;left:8px;top:3px;font-size:11.5px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
 .funnel .fb em{position:absolute;right:8px;top:4px;font-size:10px;color:var(--mut);font-style:normal}
 .fh{display:grid;grid-template-columns:170px 1fr;gap:12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
-.rango{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
-.rango button{font:inherit;font-size:11.5px;font-weight:600;padding:6px 13px;
- border:1px solid rgba(255,255,255,.28);background:transparent;color:#C9C9C9;
- border-radius:99px;cursor:pointer;white-space:nowrap;transition:background .12s,color .12s}
-.rango button:hover{border-color:rgba(255,255,255,.55);color:#fff}
-.rango button[aria-pressed="true"]{background:#fff;color:var(--navy);border-color:#fff}
-.rango button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.kpi .cmp{font-size:10.5px;margin-top:3px;font-variant-numeric:tabular-nums}
-.kpi .cmp b{font-weight:700}
 .minis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
 @media(max-width:600px){.minis{grid-template-columns:repeat(2,1fr)}}
 .mini{background:#F7F8FC;border:1px solid #E8EBF3;border-radius:8px;padding:8px 10px}
@@ -228,86 +219,26 @@ function render(d){
     return `<span style="color:${good?'#2E8B57':'#C0392B'};font-weight:600">${up?'▲':'▼'} ${pct(Math.abs(r))}</span> vs previous 7 days`; };
   const weekNote=W.comparable?'':`Week-over-week comparison starts ${fdate(W.availableFrom||d.today)}`;
   const P=d.pacing||{}, F0=d.funnel||{}, ST=d.stripe||null;
-  const SERIE=d.serie||[];
-
-  // ---------- RANGOS DE FECHA ----------
-  // Cada rango se compara contra el periodo inmediatamente anterior del mismo largo:
-  // hoy contra ayer, este mes contra el mes pasado, y asi.
-  const hoy=d.today;
-  const dmas=(f,n)=>{const x=new Date(f+'T12:00:00');x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
-  const mes=(f)=>f.slice(0,7);
-  const finDeMes=(y,m)=>new Date(Date.UTC(y,m+1,0)).toISOString().slice(0,10);
-  function rangos(k){
-    const [Y,M]=hoy.slice(0,7).split('-').map(Number);
-    switch(k){
-      case 'hoy':      return {a:[hoy,hoy], b:[dmas(hoy,-1),dmas(hoy,-1)], lbl:'Today', cmp:'yesterday'};
-      case 'ayer':     return {a:[dmas(hoy,-1),dmas(hoy,-1)], b:[dmas(hoy,-2),dmas(hoy,-2)], lbl:'Yesterday', cmp:'the day before'};
-      case '7d':       return {a:[dmas(hoy,-6),hoy], b:[dmas(hoy,-13),dmas(hoy,-7)], lbl:'Last 7 days', cmp:'the 7 days before'};
-      case 'mes':      return {a:[`${hoy.slice(0,7)}-01`,hoy], b:[`${M===1?Y-1:Y}-${String(M===1?12:M-1).padStart(2,'0')}-01`, finDeMes(M===1?Y-1:Y, (M===1?12:M-1)-1)], lbl:'This month', cmp:'last month'};
-      case 'mespasado':{const y=M===1?Y-1:Y, m=M===1?12:M-1, y2=m===1?y-1:y, m2=m===1?12:m-1;
-                        return {a:[`${y}-${String(m).padStart(2,'0')}-01`, finDeMes(y,m-1)], b:[`${y2}-${String(m2).padStart(2,'0')}-01`, finDeMes(y2,m2-1)], lbl:'Last month', cmp:'the month before'};}
-      default:         return {a:[d.launch,hoy], b:null, lbl:'All time', cmp:null};
-    }
-  }
-  const sumar=(desde,hasta)=>{
-    const z={spend:0,spendG:0,spendM:0,clicks:0,impr:0,reservas:0,upsells:0,ingresos:0,leads:0};
-    for(const r of SERIE) if(r.date>=desde&&r.date<=hasta) for(const k in z) z[k]+=r[k]||0;
-    z.roas=z.spend?z.ingresos/z.spend:null;
-    z.aov=z.reservas?z.ingresos/z.reservas:null;
-    z.cpa=z.reservas?z.spend/z.reservas:null;
-    return z;
-  };
-  const delta=(a,b,inv)=>{
-    if(b==null||!b) return '';
-    const r=(a-b)/b, up=r>=0, bien=inv?!up:up;
-    return `<div class="cmp" style="color:${bien?'#2E8B57':'#C0392B'}"><b>${up?'▲':'▼'} ${pct(Math.abs(r))}</b> <span style="color:#8A8A8A">vs ${RANGO_CMP}</span></div>`;
-  };
-  let RANGO='hoy', RANGO_CMP='yesterday';
-
-  function pintarKPIs(){
-    const R=rangos(RANGO); RANGO_CMP=R.cmp;
-    const A1=sumar(R.a[0],R.a[1]);
-    const B1=R.b?sumar(R.b[0],R.b[1]):null;
-    const roasCol=A1.roas==null?'':A1.roas>=1?'#2E8B57':'#C0392B';
-    const nada=A1.spend===0&&A1.ingresos===0;
-    $('#kpis').innerHTML=[
-      {l:'Return on ad spend',v:A1.roas!=null?A1.roas.toFixed(2)+'x':'–',
-       s:`${usd(A1.ingresos)} collected on ${usd(A1.spend)} of ad spend`,vcol:roasCol,
-       cmp:B1?delta(A1.roas||0,B1.roas||0):''},
-      {l:'Revenue collected',v:usd(A1.ingresos),
-       s:`${fm(A1.reservas)} reservations · ${fm(A1.upsells)} paid in full`,
-       cmp:B1?delta(A1.ingresos,B1.ingresos):''},
-      {l:'Reservations',v:fm(A1.reservas),
-       s:A1.reservas?`${usd2(A1.cpa)} each · ${usd2(A1.aov)} average order`:'$29 deposits that lock the $299 price',
-       cmp:B1?delta(A1.reservas,B1.reservas):''},
-      {l:'Ad spend',v:usd(A1.spend),s:`Google ${usd(A1.spendG)} · Meta ${usd(A1.spendM)}`,
-       cmp:B1?delta(A1.spend,B1.spend,true):''},
-    ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v"${k.vcol?` style="color:${k.vcol}"`:''}>${k.v}</div><div class="s">${k.s}</div>${k.cmp||''}</div>`).join('')
-      +`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">${R.lbl}: ${fdate(R.a[0])}${R.a[0]!==R.a[1]?' to '+fdate(R.a[1]):''}${nada?' · no activity in this range yet':''}. Sales and revenue come from Stripe, which is the official number. Everything below covers the whole campaign.</div>`;
-    document.querySelectorAll('.rango button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.r===RANGO)));
-  }
-  const BOTONES=[['hoy','Today'],['ayer','Yesterday'],['7d','Last 7 days'],['mes','This month'],['mespasado','Last month'],['todo','All time']];
-  $('#kpis').insertAdjacentHTML('beforebegin',
-    `<div class="rango">${BOTONES.map(([k,l])=>`<button data-r="${k}" aria-pressed="${k==='hoy'}">${l}</button>`).join('')}</div>`);
-  document.querySelector('.rango').addEventListener('click',(e)=>{
-    const b=e.target.closest('button'); if(!b) return; RANGO=b.dataset.r; pintarKPIs();
-  });
-  pintarKPIs();
+  // Stripe es la fuente oficial de ventas e ingresos. Las plataformas solo para la brecha.
+  const totSpend=F0.spend??A.spend;
+  const totRev=ST?ST.ingresos:(F0.ingresos??A.value??0);
+  const totRes=ST?ST.reservas:((F0.pasos?.[F0.pasos.length-1]?.valor)??A.reserved??0);
+  const totUps=ST?ST.upsells:0;
+  const roas=totSpend?totRev/totSpend:null;
+  const monthName=P.month?new Date(P.month+'-15T12:00:00').toLocaleString('en-US',{month:'long'}):'';
+  const roasCol=roas==null?'':roas>=1?'#2E8B57':'#C0392B';
+  $('#kpis').innerHTML=[
+    {l:'Return on ad spend',v:roas!=null?roas.toFixed(2)+'x':'–',
+     s:`${usd(totRev)} collected on ${usd(totSpend)} of ad spend`,vcol:roasCol,
+     bar:roas!=null?Math.min(1,roas/2):null,barColor:roas>=1?'#2E8B57':'#C0392B'},
+    {l:'Revenue collected',v:usd(totRev),
+     s:ST?`${fm(ST.reservas)} reservations · ${fm(ST.upsells)} paid in full`:'From the ad platforms'},
+    {l:'Reservations',v:fm(totRes),
+     s:totRes?`${usd2(div(totSpend,totRes))} per reservation · ${usd2(ST?ST.aov:29)} average order`:'$29 deposits that lock the $299 price'},
+    {l:`${monthName} ad spend`,v:usd(totSpend),s:`Google ${usd(A.spend)} · Meta ${usd(d.meta?.spend||0)}`},
+  ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v"${k.vcol?` style="color:${k.vcol}"`:''}>${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%;background:${k.barColor||'#8AA0DB'}"></i></div>`:''}</div>`).join('')+`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">Sales and revenue come from Stripe, which is the official number${ST&&ST.modo==='semilla'?' (last read by hand on '+new Date(ST.leido).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+')':''}. Day ${d.daysLive} of the campaign.</div>`;
 
   let h='';
-  // ---------- META ADS
-  if(d.meta&&d.meta.campaigns){
-    const M=d.meta;
-    h+=section('Meta','Facebook and Instagram','Reservations are counted by the Meta pixel',
-      `<div class="minis">${[
-        {l:'Spend',v:usd(M.spend)},{l:'Link clicks',v:fm(M.clicks)},
-        {l:'Landing page views',v:fm(M.lpv)},{l:'Reservations',v:fm(M.purchases)},
-      ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v">${t.v}</div></div>`).join('')}</div>
-      <div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Status</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Landing views</th><th class="n">Reservations</th><th class="n">Cost / res.</th></tr></thead><tbody>${
-        M.campaigns.slice().sort((a,b)=>b.spend-a.spend).map(c=>`<tr${c.status==='ACTIVE'?'':' style="opacity:.62"'}><td><b>${esc(c.name)}</b></td><td>${c.status==='ACTIVE'?'<span class="pill p-ok">Active</span>':'<span class="pill p-mut">Paused</span>'}</td><td class="n">${usd2(c.spend)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${fm(c.lpv)}</td><td class="n">${fm(c.purchases)}</td><td class="n">${c.purchases?usd2(c.spend/c.purchases):'–'}</td></tr>`).join('')
-      }</tbody></table></div>`);
-  }
-
   // ---------- THE ACCOUNT
   const cpr=div(A.spend,A.reserved), roas=div(A.value,A.spend);
   const gRow=(name,g,col)=>`<tr><td><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:${col};margin-right:7px"></span>${name}</td><td class="n">${usd(g.spend)}</td><td class="n">${fm(g.impr)}</td><td class="n">${fm(g.clicks)}</td><td class="n">${pct(div(g.clicks,g.impr))}</td><td class="n">${usd2(div(g.spend,g.clicks))}</td><td class="n">${fm(g.resView)}</td><td class="n">${fm(g.reserved)}</td><td class="n">${usd(div(g.spend,g.reserved))}</td><td class="n">${pct(div(g.spend,A.spend))}</td></tr>`;
@@ -322,8 +253,12 @@ function render(d){
     <tr><td>Paid in full (upsell)</td><td>${fm(A.upsell)}</td></tr>
     <tr><td>Revenue · return on ad spend</td><td>${usd(A.value)} · ${roas?roas.toFixed(2)+'x':'–'}</td></tr>
     <tr class="big"><td>Cost per reservation</td><td>${usd(cpr)}</td></tr></table></div>`;
+  const verdict=`<div class="verdict"><div class="day">${d.daysLive}<small> / ${d.testDays} days</small></div>
+    <div class="prog"><i style="width:${Math.min(100,100*d.daysLive/d.testDays)}%"></i></div>
+    <div class="call">${A.reserved>=5?`<b>${fm(A.reserved)} reservations</b> at ${usd(cpr)} each.`:A.resView>=20?`<b>${fm(A.resView)} people</b> reached the reservation page. Reservations decide.`:'<b>Too early to call.</b> The account needs reservations before the numbers mean anything.'}</div>
+    <div class="rule">Performance Max is the volume engine: the category has almost no search demand yet. Search harvests the intent that exists.</div></div>`;
   h+=section('Account','How the account is doing',`Everything on this page is the full Google Ads account · ${d.daysLive} day${d.daysLive>1?'s':''} live`,
-    `<div class="acct" style="grid-template-columns:1fr">${acctCard}</div>
+    `<div class="acct">${acctCard}${verdict}</div>
      <div class="card scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Where the money goes</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Res. page views</th><th class="n">Reservations</th><th class="n">Cost / res.</th><th class="n">Share of spend</th></tr></thead><tbody>${['PMax','Non-Brand','Competitor','Brand'].map(g=>gRow(GL[g],G[g]||{},C[g])).join('')}</tbody></table></div>`);
 
   // ---------- DAILY + MIX
@@ -410,6 +345,19 @@ function render(d){
         ${brechaCard}
       </div>
       ${ST.descartadas?`<div style="font-size:10.5px;color:var(--mut);margin-top:8px">Left out: ${ST.descartadas.reembolsadas} refunded, ${ST.descartadas.fallidas} failed or blocked, ${ST.descartadas.pruebas} internal test, ${ST.descartadas.otraMarca} from another brand.</div>`:''}`);
+  }
+
+  // ---------- META ADS
+  if(d.meta&&d.meta.campaigns){
+    const M=d.meta;
+    h+=section('Meta','Facebook and Instagram','Reservations are counted by the Meta pixel',
+      `<div class="minis">${[
+        {l:'Spend',v:usd(M.spend)},{l:'Link clicks',v:fm(M.clicks)},
+        {l:'Landing page views',v:fm(M.lpv)},{l:'Reservations',v:fm(M.purchases)},
+      ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v">${t.v}</div></div>`).join('')}</div>
+      <div class="card scroll"><table class="t"><thead><tr><th>Campaign</th><th>Status</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Landing views</th><th class="n">Reservations</th><th class="n">Cost / res.</th></tr></thead><tbody>${
+        M.campaigns.slice().sort((a,b)=>b.spend-a.spend).map(c=>`<tr${c.status==='ACTIVE'?'':' style="opacity:.62"'}><td><b>${esc(c.name)}</b></td><td>${c.status==='ACTIVE'?'<span class="pill p-ok">Active</span>':'<span class="pill p-mut">Paused</span>'}</td><td class="n">${usd2(c.spend)}</td><td class="n">${fm(c.impr)}</td><td class="n">${fm(c.clicks)}</td><td class="n">${pct(div(c.clicks,c.impr))}</td><td class="n">${fm(c.lpv)}</td><td class="n">${fm(c.purchases)}</td><td class="n">${c.purchases?usd2(c.spend/c.purchases):'–'}</td></tr>`).join('')
+      }</tbody></table></div>`);
   }
 
   // ---------- SITIO (Clarity)
