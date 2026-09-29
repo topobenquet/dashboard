@@ -218,25 +218,22 @@ function render(d){
   const chg=(k,inv)=>{ if(!W.comparable) return ''; const a=cur[k]||0,b=prv[k]||0; if(!b) return ''; const r=(a-b)/b, up=r>=0, good=inv?!up:up;
     return `<span style="color:${good?'#2E8B57':'#C0392B'};font-weight:600">${up?'▲':'▼'} ${pct(Math.abs(r))}</span> vs previous 7 days`; };
   const weekNote=W.comparable?'':`Week-over-week comparison starts ${fdate(W.availableFrom||d.today)}`;
-  const P=d.pacing||{}, F0=d.funnel||{}, ST=d.stripe||null;
-  // Stripe es la fuente oficial de ventas e ingresos. Las plataformas solo para la brecha.
-  const totSpend=F0.spend??A.spend;
-  const totRev=ST?ST.ingresos:(F0.ingresos??A.value??0);
-  const totRes=ST?ST.reservas:((F0.pasos?.[F0.pasos.length-1]?.valor)??A.reserved??0);
-  const totUps=ST?ST.upsells:0;
-  const roas=totSpend?totRev/totSpend:null;
+  const P=d.pacing||{}, F0=d.funnel||{};
+  // Los KPIs son de TODA la inversion, Google mas Meta. La cuenta solo de Google subestimaba
+  // las reservas, porque las 4 que hubo las reporta el pixel de Meta.
+  const ultimo=F0.pasos?.[F0.pasos.length-1];   // el ultimo paso son las reservas pagas
+  const totSpend=F0.spend??A.spend, totRes=ultimo?.valor??A.reserved??0;
+  const totClicks=(F0.pasos?.[1]?.valor)??A.clicks, totImpr=(F0.pasos?.[0]?.valor)??A.impr;
+  const totRev=F0.ingresos??A.value??0;
+  const planTot=(P.plan||0)*2; // el plan de $200/dia se reparte entre las dos plataformas
+  const prTot=div(totSpend,planTot);
   const monthName=P.month?new Date(P.month+'-15T12:00:00').toLocaleString('en-US',{month:'long'}):'';
-  const roasCol=roas==null?'':roas>=1?'#2E8B57':'#C0392B';
   $('#kpis').innerHTML=[
-    {l:'Return on ad spend',v:roas!=null?roas.toFixed(2)+'x':'–',
-     s:`${usd(totRev)} collected on ${usd(totSpend)} of ad spend`,vcol:roasCol,
-     bar:roas!=null?Math.min(1,roas/2):null,barColor:roas>=1?'#2E8B57':'#C0392B'},
-    {l:'Revenue collected',v:usd(totRev),
-     s:ST?`${fm(ST.reservas)} reservations · ${fm(ST.upsells)} paid in full`:'From the ad platforms'},
-    {l:'Reservations',v:fm(totRes),
-     s:totRes?`${usd2(div(totSpend,totRes))} per reservation · ${usd2(ST?ST.aov:29)} average order`:'$29 deposits that lock the $299 price'},
-    {l:`${monthName} ad spend`,v:usd(totSpend),s:`Google ${usd(A.spend)} · Meta ${usd(d.meta?.spend||0)}`},
-  ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v"${k.vcol?` style="color:${k.vcol}"`:''}>${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%;background:${k.barColor||'#8AA0DB'}"></i></div>`:''}</div>`).join('')+`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">Sales and revenue come from Stripe, which is the official number${ST&&ST.modo==='semilla'?' (last read by hand on '+new Date(ST.leido).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+')':''}. Day ${d.daysLive} of the campaign.</div>`;
+    {l:`${monthName} spend, all platforms`,v:usd(totSpend),s:`Google ${usd(A.spend)} · Meta ${usd(d.meta?.spend||0)}`,bar:Math.min(1,prTot||0),barColor:prTot>1.1?'#C98A1B':'#8AA0DB'},
+    {l:'Clicks',v:fm(totClicks),s:`CTR ${pct(div(totClicks,totImpr))} · Avg CPC ${usd2(div(totSpend,totClicks))}`},
+    {l:'Reservations',v:fm(totRes),s:totRes?`${usd2(div(totSpend,totRes))} per reservation · break-even ceiling is $77`:'$29 deposits that lock the $299 price'},
+    {l:'Revenue from ads',v:usd(totRev),s:totRev?`${(totRev/totSpend).toFixed(2)}x return on ad spend`:'Deposits plus paid-in-full upgrades'},
+  ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v">${k.v}</div><div class="s">${k.s}</div>${k.bar!=null?`<div class="bar"><i style="width:${100*k.bar}%;background:${k.barColor||'#8AA0DB'}"></i></div>`:''}</div>`).join('')+`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">Reservations are counted by the Meta pixel and Google Ads together. Day ${d.daysLive} of the campaign, so there is no week-over-week comparison yet.</div>`;
 
   let h='';
   // ---------- THE ACCOUNT
@@ -307,44 +304,6 @@ function render(d){
       `Ad data from Google and Meta, page views from Clarity, emails from the signup sheet${F.ventana?' · site data covers the '+F.ventana.replace('ultimos','last').replace('dias','days'):''}`,
       `<div class="minis">${tiles}</div><div class="card pad">${funnelSVG(F.pasos)}</div>
        <div style="font-size:10.5px;color:var(--mut);margin-top:8px">Width uses a compressed scale so the small steps stay visible. Platform conversion counts before September 27 are understated: the site is a single-page app and the tags only fired on a full page load, which was fixed on the 27th.</div>`);
-  }
-
-  // ---------- VENTAS (Stripe) Y BRECHA CONTRA LAS PLATAFORMAS
-  if(ST){
-    const B=F0.brecha;
-    const dias=Object.keys(ST.porDia||{}).sort();
-    const maxIng=Math.max(1,...dias.map(k=>ST.porDia[k].ingresos));
-    const barras=dias.map(k=>{const o=ST.porDia[k];
-      return `<div style="display:grid;grid-template-columns:78px 1fr 150px;gap:10px;align-items:center;margin:5px 0">
-        <div style="font-size:11.5px;color:#4F4F4F">${fdate(k)}</div>
-        <div style="height:16px;background:#F2F2EE;border-radius:4px;overflow:hidden;display:flex">
-          <div style="width:${100*(o.reservas*29)/maxIng}%;background:#5B72B5"></div>
-          <div style="width:${100*(o.ingresos-o.reservas*29)/maxIng}%;background:#C9A45C"></div></div>
-        <div style="font-size:11.5px;text-align:right;font-variant-numeric:tabular-nums">${usd(o.ingresos)} · ${o.reservas} res${o.upsells?` · ${o.upsells} full`:''}</div></div>`;
-    }).join('');
-    const brechaCard=B?`<div class="card pad">
-      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">Stripe against what Meta reports</div>
-      <table class="t" style="margin-top:0"><tbody>
-        <tr><td>Revenue in Stripe</td><td class="n"><b>${usd(B.ingresosStripe)}</b></td></tr>
-        <tr><td>Revenue Meta reports</td><td class="n">${usd(B.ingresosMeta)}</td></tr>
-        <tr class="big"><td>Gap</td><td class="n" style="color:#C0392B">${usd(B.difIngresos)} · ${B.difPct}%</td></tr>
-        <tr><td>Payments in Stripe</td><td class="n">${fm(B.ventasStripe)}</td></tr>
-        <tr><td>Purchases Meta reports</td><td class="n">${fm(B.ventasMeta)}</td></tr>
-      </tbody></table>
-      <div style="font-size:10.5px;color:var(--mut);margin-top:8px">Meta counts a purchase but records it at a fixed $29, because the checkout runs inside an embedded window and the real amount never reaches the page. Every paid-in-full upgrade is worth $249 to $270, so the gap is almost entirely the upgrades. It closes once the checkout redirect passes the amount back.</div></div>`:'';
-    h+=section('Sales','What actually came in','Stripe is the official source · LytBand payments in the same Stripe account are excluded',
-      `<div class="minis">${[
-        {l:'Reservations',v:fm(ST.reservas),s:usd(ST.ingresoReservas)},
-        {l:'Paid in full',v:fm(ST.upsells),s:usd(ST.ingresoUpsells)},
-        {l:'Upgrade rate',v:ST.tasaUpsell!=null?ST.tasaUpsell+'%':'–',s:'Of people who reserved'},
-        {l:'Average order',v:usd2(ST.aov),s:'Per reservation, upgrades included'},
-      ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v">${t.v}</div><div style="font-size:10px;color:var(--mut);margin-top:2px">${t.s}</div></div>`).join('')}</div>
-      <div class="grid g2">
-        <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">Revenue by day</div>${barras||'<div class="empty">No sales yet</div>'}
-          <div style="font-size:10.5px;color:var(--mut);margin-top:8px"><span style="display:inline-block;width:9px;height:9px;background:#5B72B5;border-radius:2px"></span> $29 reservations &nbsp; <span style="display:inline-block;width:9px;height:9px;background:#C9A45C;border-radius:2px"></span> paid-in-full upgrades</div></div>
-        ${brechaCard}
-      </div>
-      ${ST.descartadas?`<div style="font-size:10.5px;color:var(--mut);margin-top:8px">Left out: ${ST.descartadas.reembolsadas} refunded, ${ST.descartadas.fallidas} failed or blocked, ${ST.descartadas.pruebas} internal test, ${ST.descartadas.otraMarca} from another brand.</div>`:''}`);
   }
 
   // ---------- META ADS
