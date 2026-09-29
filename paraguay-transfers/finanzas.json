@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T16:30:19.918Z",
+ "generated": "2026-09-29T18:30:56.870Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -12,8 +12,8 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1166.45,
-  "stripePendiente": 493.41,
-  "pagoparPendienteUsd": 12658.31,
+  "stripePendiente": 702.31,
+  "pagoparPendienteUsd": 12750.17,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -362,32 +362,43 @@
   },
   {
    "fecha": "2026-09-28",
-   "in": 59,
+   "in": 228.49,
    "out": 383.18,
-   "n": 4,
+   "n": 5,
    "porFuente": {
     "Stripe": 59,
     "WhatsApp · Pagos (Majo)": -206.78,
     "WhatsApp · Alfredo": -88.2,
+    "Transferencia": 169.49,
     "WhatsApp · Alfredo (factura)": -88.2
    },
-   "neto": -324.18,
-   "acum": 5388.3
+   "neto": -154.69,
+   "acum": 5557.79
   },
   {
    "fecha": "2026-09-29",
-   "in": 124.07,
-   "out": 47.46,
-   "n": 2,
+   "in": 410.93,
+   "out": 105.09,
+   "n": 6,
    "porFuente": {
-    "Pagopar": 124.07,
+    "Stripe": 195,
+    "Pagopar": 215.93,
+    "WhatsApp · Alfredo": -16.95,
+    "WhatsApp · Pagos (Majo)": -40.68,
     "WhatsApp · Alfredo (factura)": -47.46
    },
-   "neto": 76.61,
-   "acum": 5464.91
+   "neto": 305.84,
+   "acum": 5863.63
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-09-29",
+   "t": "in",
+   "usd": 195,
+   "fuente": "Stripe",
+   "det": "GEMA BERNAL HERNANDEZ"
+  },
   {
    "d": "2026-09-28",
    "t": "in",
@@ -863,6 +874,14 @@
    "gs": 732000
   },
   {
+   "d": "2026-09-29",
+   "t": "in",
+   "usd": 91.86,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · ETIQUETA OPERADORA TURISTICA LTDA",
+   "gs": 542000
+  },
+  {
    "d": "2026-09-02",
    "t": "out",
    "usd": 321.36,
@@ -1295,6 +1314,22 @@
    "gs": 520405
   },
   {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 16.95,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago en SHELL Bahía Acceso Sur 2 (combustible)",
+   "gs": 100000
+  },
+  {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 40.68,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver INGRID DOMINGUEZ. Traslado Pax Tania Storm. 30/09 y",
+   "gs": 240000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1317,6 +1352,14 @@
    "fuente": "Transferencia",
    "det": "Tania Josefina Storm Escobar Y/o Jorge Guzman Roman Colarte (comprobante en Pagos (Majo))",
    "gs": 1800000
+  },
+  {
+   "d": "2026-09-28",
+   "t": "in",
+   "usd": 169.49,
+   "fuente": "Transferencia",
+   "det": "Tania Josefina Storm Escobar Y/o Josefina Escobar De Storm (comprobante en Pagos (Majo))",
+   "gs": 1000000
   },
   {
    "d": "2026-09-01",
@@ -1481,10 +1524,10 @@
    },
    "margenBruto": 5204.35,
    "cobro": {
-    "stripe": 118.92,
+    "stripe": 128.85,
     "aloha": null,
     "pagopar": null,
-    "total": 118.92
+    "total": 128.85
    },
    "estructura": {
     "seguro": 105.3,
@@ -1494,12 +1537,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 401.78,
+    "google": 401.46,
     "meta": 279.12,
-    "total": 680.9
+    "total": 680.58
    },
    "impuestos": null,
-   "resultado": 4299.23,
+   "resultado": 4289.62,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1511,16 +1554,16 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 11,
-   "bruto": 2673,
-   "comision": 118.92,
-   "pct": 4.45,
+   "cobros": 12,
+   "bruto": 2868,
+   "comision": 128.85,
+   "pct": 4.49,
    "nota": "medido cobro por cobro"
   },
   {
    "riel": "Pagopar",
-   "cobros": 47,
-   "bruto": 12658.27,
+   "cobros": 48,
+   "bruto": 12750.13,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1535,8 +1578,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 74684000,
-  "cobradoUsd": 12658.27,
+  "cobradoGs": 75226000,
+  "cobradoUsd": 12750.13,
   "diario": [
    {
     "fecha": "2026-09-01",
@@ -1678,9 +1721,9 @@
    },
    {
     "fecha": "2026-09-29",
-    "cobros": 1,
-    "gs": 732000,
-    "usd": 124.07
+    "cobros": 2,
+    "gs": 1274000,
+    "usd": 215.93
    }
   ],
   "pruebasExcluidas": 0,
@@ -1688,8 +1731,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 74684000,
-  "pendienteUsd": 12658.31
+  "pendienteGs": 75226000,
+  "pendienteUsd": 12750.17
  },
  "giros": [
   {
@@ -1790,7 +1833,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲74.7 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲75.2 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2008,6 +2051,14 @@
    "gs": 120000,
    "usd": 20.34,
    "concepto": "3..- . Viático",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-09-29",
+   "grupo": "Alfredo",
+   "gs": 100000,
+   "usd": 16.95,
+   "concepto": "Voy a cargar GS de Gasoil para llegar a Asunción",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
