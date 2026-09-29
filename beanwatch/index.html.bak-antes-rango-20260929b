@@ -250,7 +250,7 @@ function render(d){
     }
   }
   const sumar=(desde,hasta)=>{
-    const z={spend:0,spendG:0,spendM:0,clicks:0,impr:0,lpv:0,reservas:0,upsells:0,ingresos:0,leads:0};
+    const z={spend:0,spendG:0,spendM:0,clicks:0,impr:0,reservas:0,upsells:0,ingresos:0,leads:0};
     for(const r of SERIE) if(r.date>=desde&&r.date<=hasta) for(const k in z) z[k]+=r[k]||0;
     z.roas=z.spend?z.ingresos/z.spend:null;
     z.aov=z.reservas?z.ingresos/z.reservas:null;
@@ -285,8 +285,6 @@ function render(d){
     ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v"${k.vcol?` style="color:${k.vcol}"`:''}>${k.v}</div><div class="s">${k.s}</div>${k.cmp||''}</div>`).join('')
       +`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">${R.lbl}: ${fdate(R.a[0])}${R.a[0]!==R.a[1]?' to '+fdate(R.a[1]):''}${nada?' · no activity in this range yet':''}. Sales and revenue come from Stripe, which is the official number. Everything below covers the whole campaign.</div>`;
     document.querySelectorAll('.rango button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.r===RANGO)));
-    const fb=document.getElementById('funnelBox'); if(fb&&window.dibujarFunnel) fb.innerHTML=window.dibujarFunnel(A1);
-    const ab=document.getElementById('acctBox'); if(ab&&window.dibujarCuenta) ab.innerHTML=window.dibujarCuenta(A1,R.lbl);
   }
   const BOTONES=[['hoy','Today'],['ayer','Yesterday'],['7d','Last 7 days'],['mes','This month'],['mespasado','Last month'],['todo','All time']];
   $('#kpis').insertAdjacentHTML('beforebegin',
@@ -294,7 +292,7 @@ function render(d){
   document.querySelector('.rango').addEventListener('click',(e)=>{
     const b=e.target.closest('button'); if(!b) return; RANGO=b.dataset.r; pintarKPIs();
   });
-  // el primer pintado real ocurre al final, cuando ya existen #funnelBox y #acctBox
+  pintarKPIs();
 
   let h='';
   // ---------- META ADS
@@ -313,69 +311,68 @@ function render(d){
   // ---------- THE ACCOUNT
   const cpr=div(A.spend,A.reserved), roas=div(A.value,A.spend);
   const gRow=(name,g,col)=>`<tr><td><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:${col};margin-right:7px"></span>${name}</td><td class="n">${usd(g.spend)}</td><td class="n">${fm(g.impr)}</td><td class="n">${fm(g.clicks)}</td><td class="n">${pct(div(g.clicks,g.impr))}</td><td class="n">${usd2(div(g.spend,g.clicks))}</td><td class="n">${fm(g.resView)}</td><td class="n">${fm(g.reserved)}</td><td class="n">${usd(div(g.spend,g.reserved))}</td><td class="n">${pct(div(g.spend,A.spend))}</td></tr>`;
-  window.dibujarCuenta=(A1,lbl)=>`<div class="mkt"><div class="hd"><b>Whole account</b><span>Google + Meta · ${esc(lbl)}</span></div><table>
-    <tr><td>Spend</td><td>${usd(A1.spend)}</td></tr>
-    <tr><td>Google · Meta</td><td>${usd(A1.spendG)} · ${usd(A1.spendM)}</td></tr>
-    <tr><td>Impressions · clicks</td><td>${fm(A1.impr)} · ${fm(A1.clicks)}</td></tr>
-    <tr><td>CTR</td><td>${pct(div(A1.clicks,A1.impr))}</td></tr>
-    <tr><td>Avg CPC</td><td>${usd2(div(A1.spend,A1.clicks))}</td></tr>
-    <tr><td>Landing page views</td><td>${fm(A1.lpv)}</td></tr>
-    <tr><td>Emails captured</td><td>${fm(A1.leads)}</td></tr>
-    <tr><td>Reservations ($29 deposit)</td><td>${fm(A1.reservas)}</td></tr>
-    <tr><td>Paid in full (upsell)</td><td>${fm(A1.upsells)}</td></tr>
-    <tr><td>Revenue · return on ad spend</td><td>${usd(A1.ingresos)} · ${A1.spend?(A1.ingresos/A1.spend).toFixed(2)+'x':'–'}</td></tr>
-    <tr class="big"><td>Cost per reservation</td><td>${A1.reservas?usd2(A1.spend/A1.reservas):'–'}</td></tr></table></div>`;
-  h+=section('Account','How the account is doing','Follows the date range picked at the top',
-    `<div class="acct" style="grid-template-columns:1fr"><div id="acctBox"></div></div>`);
+  const acctCard=`<div class="mkt"><div class="hd"><b>Whole account</b><span>All campaigns · ${d.daysLive} day${d.daysLive>1?'s':''} live</span></div><table>
+    <tr><td>Spend</td><td>${usd(A.spend)}</td></tr>
+    <tr><td>Impressions · clicks</td><td>${fm(A.impr)} · ${fm(A.clicks)}</td></tr>
+    <tr><td>CTR</td><td>${pct(div(A.clicks,A.impr))}</td></tr>
+    <tr><td>Avg CPC</td><td>${usd2(div(A.spend,A.clicks))}</td></tr>
+    <tr><td>Reservation page views</td><td>${fm(A.resView)}</td></tr>
+    <tr><td>Checkouts started</td><td>${fm(A.checkout)}</td></tr>
+    <tr><td>Reservations ($29 deposit)</td><td>${fm(A.reserved)}</td></tr>
+    <tr><td>Paid in full (upsell)</td><td>${fm(A.upsell)}</td></tr>
+    <tr><td>Revenue · return on ad spend</td><td>${usd(A.value)} · ${roas?roas.toFixed(2)+'x':'–'}</td></tr>
+    <tr class="big"><td>Cost per reservation</td><td>${usd(cpr)}</td></tr></table></div>`;
+  h+=section('Account','How the account is doing',`Everything on this page is the full Google Ads account · ${d.daysLive} day${d.daysLive>1?'s':''} live`,
+    `<div class="acct" style="grid-template-columns:1fr">${acctCard}</div>
+     <div class="card scroll" style="margin-top:12px"><table class="t"><thead><tr><th>Where the money goes</th><th class="n">Spend</th><th class="n">Impr.</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Avg CPC</th><th class="n">Res. page views</th><th class="n">Reservations</th><th class="n">Cost / res.</th><th class="n">Share of spend</th></tr></thead><tbody>${['PMax','Non-Brand','Competitor','Brand'].map(g=>gRow(GL[g],G[g]||{},C[g])).join('')}</tbody></table></div>`);
 
   // ---------- DAILY + MIX
   const mix=['PMax','Non-Brand','Competitor','Brand'].map(g=>({label:GL[g],value:G[g]?.spend||0,color:C[g],fmt:usd}));
   h+=section('Daily','Spend and reservations by day','',`<div class="grid g-73"><div class="card pad chart">${d.daily.length?barsSVG(d.daily,['PMax','Non-Brand','Competitor','Brand'],'reserved'):'<div class="empty">No data yet</div>'}<div class="legend">${['PMax','Non-Brand','Competitor','Brand'].map(g=>`<span><i style="background:${C[g]}"></i>${GL[g]}</span>`).join('')}<span><i style="background:#111;height:3px;vertical-align:3px"></i>Reservations (right axis)</span></div></div>
     <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">Spend by campaign type</div>${donut(mix,usd(A.spend))}<div style="font-size:11px;color:var(--mut);margin-top:10px">Budget split: $120 a day to Performance Max and $80 across the three Search campaigns.</div></div></div>`);
 
-  // ---------- FUNNEL: desde que la persona llega a la pagina
-  // Solo tres pasos, y todos se recalculan con el rango elegido arriba.
-  window.dibujarFunnel=(A1)=>{
-    const pasos=[
-      {n:'Landing page views', f:'Google Ads + Meta', v:A1.lpv, base:null},
-      {n:'Gave us an email', f:'Signup sheet · reaches checkout', v:A1.leads, base:0},
-      {n:'Paid the $29', f:'Stripe', v:A1.reservas, base:1,
-       nota:A1.upsells?`plus ${fm(A1.upsells)} paid in full`:null},
-    ];
-    const W=880,L=196,R=130,FW=W-L-R,rowH=72,H=pasos.length*rowH+6;
-    const top=Math.max(1,pasos[0].v), minW=0.14;
-    const wOf=(v)=>Math.max(minW,Math.pow(v/top,0.5))*FW, cx=L+FW/2;
-    let g='';
-    pasos.forEach((p,i)=>{
-      const y=i*rowH+3, hh=rowH-10;
-      const w1=wOf(p.v), w2=i<pasos.length-1?wOf(pasos[i+1].v):w1*0.8;
-      const base=p.base!=null?pasos[p.base]:null;
-      const r=base&&base.v?p.v/base.v:null;
-      const mal=r!=null&&r<0.10, medio=r!=null&&r<0.40&&!mal;
-      const col=mal?'#C0392B':medio?'#C98A1B':'#5B72B5';
-      g+=`<path d="M${cx-w1/2},${y} L${cx+w1/2},${y} L${cx+w2/2},${y+hh} L${cx-w2/2},${y+hh} Z" fill="${col}" opacity="${1-i*0.14}"/>`;
-      g+=`<text x="${cx}" y="${y+hh/2+8}" text-anchor="middle" font-family="Georgia" font-size="22" fill="#fff" font-weight="600">${fm(p.v)}</text>`;
-      g+=`<text x="${L-14}" y="${y+hh/2}" text-anchor="end" font-size="13" fill="#111111" font-weight="600">${esc(p.n)}</text>`;
-      g+=`<text x="${L-14}" y="${y+hh/2+15}" text-anchor="end" font-size="9.5" fill="#9A9A9A">${esc(p.f)}</text>`;
-      if(r!=null){
-        g+=`<text x="${W-4}" y="${y+hh/2}" text-anchor="end" font-size="17" font-family="Georgia" fill="${col}">${pct(r)}</text>`;
-        g+=`<text x="${W-4}" y="${y+hh/2+14}" text-anchor="end" font-size="9" fill="#8A8A8A">of ${esc(base.n.toLowerCase())}</text>`;
-        if(p.nota) g+=`<text x="${W-4}" y="${y+hh/2+26}" text-anchor="end" font-size="8.5" fill="#B0B0B0">${esc(p.nota)}</text>`;
-      }
-    });
+  // ---------- FUNNEL (cruza las fuentes que de verdad miden cada paso)
+  const F=d.funnel;
+  if(F&&F.pasos){
+    // Embudo de trapecios: cada fila se angosta hasta el ancho del paso siguiente.
+    const funnelSVG=(pasos)=>{
+      const W=880,L=196,R=118,FW=W-L-R,rowH=62,H=pasos.length*rowH+6;
+      const top=Math.max(1,pasos[0].valor), minW=0.12;
+      // escala comprimida: si no, 4 sobre 28.802 no se ve
+      const wOf=(v)=>Math.max(minW,Math.pow(v/top,0.42))*FW, cx=L+FW/2;
+      let g='';
+      pasos.forEach((p,i)=>{
+        const y=i*rowH+3, hh=rowH-8;
+        const w1=wOf(p.valor), w2=i<pasos.length-1?wOf(pasos[i+1].valor):w1*0.82;
+        const base=p.base!=null?pasos[p.base]:null;
+        const r=base&&base.valor?p.valor/base.valor:null;
+        const mal=!p.neutro&&r!=null&&r<0.10, medio=!p.neutro&&r!=null&&r<0.50&&!mal;
+        const col=mal?'#C0392B':medio?'#C98A1B':'#5B72B5';
+        g+=`<path d="M${cx-w1/2},${y} L${cx+w1/2},${y} L${cx+w2/2},${y+hh} L${cx-w2/2},${y+hh} Z" fill="${col}" opacity="${1-i*0.11}"/>`;
+        g+=`<text x="${cx}" y="${y+hh/2+7}" text-anchor="middle" font-family="Georgia" font-size="19" fill="#fff" font-weight="600">${fm(p.valor)}</text>`;
+        g+=`<text x="${L-14}" y="${y+hh/2}" text-anchor="end" font-size="12.5" fill="#111111" font-weight="600">${esc(p.nombre)}</text>`;
+        g+=`<text x="${L-14}" y="${y+hh/2+14}" text-anchor="end" font-size="9.5" fill="#9A9A9A">${esc(p.fuente)}</text>`;
+        if(r!=null){
+          g+=`<text x="${W-4}" y="${y+hh/2}" text-anchor="end" font-size="16" font-family="Georgia" fill="${col}">${pct(r)}</text>`;
+          g+=`<text x="${W-4}" y="${y+hh/2+13}" text-anchor="end" font-size="9" fill="#8A8A8A">${p.neutro&&p.nota?esc(p.nota):'of '+esc(base.nombre.toLowerCase())}</text>`;
+          if(!p.neutro&&p.nota) g+=`<text x="${W-4}" y="${y+hh/2+25}" text-anchor="end" font-size="8.5" fill="#B0B0B0">${esc(p.nota)}</text>`;
+        } else if(p.nota){
+          g+=`<text x="${W-4}" y="${y+hh/2+4}" text-anchor="end" font-size="9.5" fill="#8A8A8A">${esc(p.nota)}</text>`;
+        }
+      });
+      return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg>`;
+    };
     const tiles=[
-      {l:'Cost per landing view',v:A1.lpv?usd2(A1.spend/A1.lpv):'–'},
-      {l:'Landing to email',v:A1.lpv?pct(A1.leads/A1.lpv):'–'},
-      {l:'Email to payment',v:A1.leads?pct(A1.reservas/A1.leads):'–',
-       mal:A1.leads&&(A1.reservas/A1.leads)<0.15},
-      {l:'Cost per reservation',v:A1.reservas?usd2(A1.spend/A1.reservas):'–',
-       mal:A1.reservas&&(A1.spend/A1.reservas)>77},
-    ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v"${t.mal?' style="color:#C0392B"':''}>${t.v}</div></div>`).join('');
-    return `<div class="minis">${tiles}</div><div class="card pad"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg></div>`;
-  };
-  h+=section('Funnel','Where people drop off once they land',
-    'Landing views are the ones the ads paid for · emails and checkout are the same step · payments from Stripe',
-    `<div id="funnelBox"></div>`);
+      {l:'Ad spend',v:usd(F.spend),s:`Google ${usd(F.spendGoogle)} · Meta ${usd(F.spendMeta)}`},
+      {l:'Cost per email',v:F.cpl!=null?usd2(F.cpl):'–',s:'Healthy for a cold-traffic list'},
+      {l:'Cost per reservation',v:F.cpa!=null?usd2(F.cpa):'–',s:`Break-even ceiling is ${usd(F.cpaTecho)}`,mal:F.cpa!=null&&F.cpa>F.cpaTecho},
+      {l:'Checkout to payment',v:F.checkoutCvr!=null?F.checkoutCvr+'%':'–',s:'Of the people who gave us an email',mal:F.checkoutCvr!=null&&F.checkoutCvr<15},
+    ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v"${t.mal?' style="color:#C0392B"':''}>${t.v}</div><div style="font-size:10px;color:var(--mut);margin-top:2px">${t.s}</div></div>`).join('');
+    h+=section('Funnel','Where people drop off',
+      `Ad data from Google and Meta, page views from Clarity, emails from the signup sheet${F.ventana?' · site data covers the '+F.ventana.replace('ultimos','last').replace('dias','days'):''}`,
+      `<div class="minis">${tiles}</div><div class="card pad">${funnelSVG(F.pasos)}</div>
+       <div style="font-size:10.5px;color:var(--mut);margin-top:8px">Width uses a compressed scale so the small steps stay visible. Platform conversion counts before September 27 are understated: the site is a single-page app and the tags only fired on a full page load, which was fixed on the 27th.</div>`);
+  }
 
   // ---------- VENTAS (Stripe) Y BRECHA CONTRA LAS PLATAFORMAS
   if(ST){
@@ -489,7 +486,6 @@ function render(d){
   const s=d.sources, srcs=[['Google Ads',s.googleAds],['Google Analytics',s.ga4],['Negative keyword review',s.negatives]];
   h+=`<footer><div>Sources: ${srcs.map(([n,ok])=>`${n} ${ok?'✓':'✗'}`).join(' · ')}${s.errors?.length?` · <span style="color:var(--bad)">${esc(s.errors.join(' | '))}</span>`:''}</div><div>Updated daily · Bean Watch</div></footer>`;
   $('#root').innerHTML=h;
-  pintarKPIs();   // ahora si existen #funnelBox y #acctBox
 }
 </script>
 </body>
