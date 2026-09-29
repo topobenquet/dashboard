@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T18:30:56.870Z",
+ "generated": "2026-09-29T20:30:25.500Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
@@ -378,17 +378,17 @@
   {
    "fecha": "2026-09-29",
    "in": 410.93,
-   "out": 105.09,
-   "n": 6,
+   "out": 410.18,
+   "n": 9,
    "porFuente": {
     "Stripe": 195,
     "Pagopar": 215.93,
     "WhatsApp · Alfredo": -16.95,
-    "WhatsApp · Pagos (Majo)": -40.68,
+    "WhatsApp · Pagos (Majo)": -345.77,
     "WhatsApp · Alfredo (factura)": -47.46
    },
-   "neto": 305.84,
-   "acum": 5863.63
+   "neto": 0.75,
+   "acum": 5558.54
   }
  ],
  "movimientos": [
@@ -1330,6 +1330,30 @@
    "gs": 240000
   },
   {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 67.8,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Servicio de Guía turístico bilingue. Tour Asu 01/10 pax Emily",
+   "gs": 400000
+  },
+  {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 152.54,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago cancelación 01/oct City Tour Asu - 22 Pax Marcopolo /PATRICIA CRUCERO TOURS / PAX: Em",
+   "gs": 900000
+  },
+  {
+   "d": "2026-09-29",
+   "t": "out",
+   "usd": 84.75,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago seña Sprinter / 15-oct Aerop - Hotel Asu 12 pasajeros / Pax: Gemma",
+   "gs": 500000
+  },
+  {
    "d": "2026-09-15",
    "t": "in",
    "usd": 207.02,
@@ -1537,12 +1561,12 @@
     "total": 105.3
    },
    "marketing": {
-    "google": 401.46,
+    "google": 404.2,
     "meta": 279.12,
-    "total": 680.58
+    "total": 683.32
    },
    "impuestos": null,
-   "resultado": 4289.62,
+   "resultado": 4286.88,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
