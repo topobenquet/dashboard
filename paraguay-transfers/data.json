@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-29T10:21:22.054Z",
-  "lastSyncLabel": "29 Sep 2026",
+  "generated": "2026-09-30T10:20:46.471Z",
+  "lastSyncLabel": "30 Sep 2026",
   "currentMonth": "Septiembre",
   "months": [
     {
@@ -133,16 +133,16 @@
     },
     {
       "mes": "Septiembre",
-      "leads": 301,
-      "reservas": 63,
-      "revenue": 18532,
-      "chofer": 6598,
+      "leads": 310,
+      "reservas": 65,
+      "revenue": 18619,
+      "chofer": 7044,
       "comb": 622,
       "peajes": 115,
-      "comision": 386.75,
+      "comision": 389.75,
       "reembolsos": 13,
-      "otros": 42,
-      "gAds": 392,
+      "otros": 108,
+      "gAds": 410,
       "meta": 279.12,
       "costoSheet": 317,
       "gananciaSheet": 45770
@@ -207,10 +207,10 @@
     },
     {
       "mes": "Septiembre",
-      "spend": 391.8,
-      "clicks": 452,
-      "impr": 2227,
-      "conv": 43
+      "spend": 410.43,
+      "clicks": 485,
+      "impr": 2378,
+      "conv": 50
     }
   ],
   "trips": [
@@ -3478,6 +3478,20 @@
     },
     {
       "mes": "Septiembre",
+      "route": "do aeroporto de Asuncion para hotel dazzler e hotel Ibis Asuncion",
+      "cliente": "pedro goede - etiqueta op",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 87,
+      "sena": 87,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 84,
+      "fechaReserva": "29/09/26",
+      "fechaSalida": "03/08/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "",
       "cliente": "aiden longcroft-harris",
       "pais": "Canadá",
@@ -4440,14 +4454,14 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "04/09/26",
-      "fechaSalida": "30/09/26"
+      "fechaSalida": "29/09/26"
     },
     {
       "mes": "Septiembre",
       "route": "Yacht - Encarnacion",
       "cliente": "Alex",
       "pais": "Alemania",
-      "conductor": "HUGO FERNANDEZ",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 417,
       "sena": 100,
       "restante": 317,
@@ -4461,7 +4475,7 @@
       "route": "Silvio Pettirossi Airport to Ruta San Bernardino - Altos, Altos 030206, Paraguay",
       "cliente": "deb",
       "pais": "Canadá",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 167,
       "sena": 167,
       "restante": 0,
@@ -4500,6 +4514,34 @@
     },
     {
       "mes": "Septiembre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "Tania Storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 20,
+      "neto": 0,
+      "fechaReserva": "28/09/26",
+      "fechaSalida": "01/10/26"
+    },
+    {
+      "mes": "Septiembre",
+      "route": "TOUR ASU -  desde Hotel Esplendor con guia",
+      "cliente": "emily crowley",
+      "pais": "Canadá",
+      "conductor": "Crucero Tours",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 213,
+      "neto": 0,
+      "fechaReserva": "26/09/26",
+      "fechaSalida": "01/10/26"
+    },
+    {
+      "mes": "Septiembre",
       "route": "AERO - Yacht & Golf Club",
       "cliente": "Luiz Felipe Castro",
       "pais": "USA",
@@ -4517,12 +4559,12 @@
       "route": "FOZ-ASU",
       "cliente": "thomas kirby",
       "pais": "UK",
-      "conductor": "",
+      "conductor": "Juan Vera CDE",
       "pago": 0,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "choferCost": 213,
+      "neto": -213,
       "fechaReserva": "09/09/26",
       "fechaSalida": "02/10/26"
     },
@@ -4587,7 +4629,7 @@
       "route": "ASU-FOZ",
       "cliente": "Luiz Felipe Castro",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 417,
       "sena": 150,
       "restante": 267,
@@ -5087,6 +5129,20 @@
       "fechaSalida": ""
     },
     {
+      "mes": "Septiembre",
+      "route": "",
+      "cliente": "decio",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "29/09/26",
+      "fechaSalida": ""
+    },
+    {
       "mes": "Octubre",
       "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
       "cliente": "Kia Sonnet",
@@ -5187,7 +5243,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-09-29": 2,
+      "2026-09-30": 1,
+      "2026-09-29": 10,
       "2026-09-28": 15,
       "2026-09-27": 10,
       "2026-09-26": 10,
@@ -5252,6 +5309,7 @@
       "2026-08-01": 14
     },
     "ventas": {
+      "2026-09-29": 2,
       "2026-09-11": 1,
       "2026-09-02": 3,
       "2026-09-01": 7,
@@ -5538,13 +5596,14 @@
       "2026-09-26": 14.12,
       "2026-09-27": 15.09,
       "2026-09-28": 10.34,
-      "2026-09-29": 0.2
+      "2026-09-29": 17.3,
+      "2026-09-30": 1.53
     }
   },
   "resenas": {
     "count": 63,
     "rating": 5,
-    "actualizado": "2026-09-28T23:10:04.057Z",
+    "actualizado": "2026-09-29T23:10:03.587Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -5598,6 +5657,11 @@
       },
       {
         "fecha": "2026-09-28",
+        "count": 63,
+        "rating": 5
+      },
+      {
+        "fecha": "2026-09-29",
         "count": 63,
         "rating": 5
       }
@@ -5682,10 +5746,10 @@
       "2026-09-26": 7,
       "2026-09-27": 7,
       "2026-09-28": 14,
-      "2026-09-29": 2
+      "2026-09-29": 7
     },
     "monthly": {
-      "Septiembre": 198,
+      "Septiembre": 203,
       "Agosto": 27
     }
   }
