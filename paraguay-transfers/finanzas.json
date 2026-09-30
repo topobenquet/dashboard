@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-30T00:30:10.825Z",
+ "generated": "2026-09-30T10:15:02.822Z",
  "tc": 5880,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-09",
  "mesLabel": "Septiembre 2026",
  "saldos": {
-  "fecha": "2026-09-29",
+  "fecha": "2026-09-30",
   "itauGs": 43605,
   "uenoGs": 22706236,
   "uenoFecha": "2026-09-29",
@@ -22,16 +22,15 @@
   {
    "fecha": "2026-09-01",
    "in": 978.9,
-   "out": 146.05,
-   "n": 8,
+   "out": 51.02,
+   "n": 7,
    "porFuente": {
     "Stripe": 400,
     "Pagopar": 578.9,
-    "WhatsApp · Gustavo": -51.02,
-    "WhatsApp · Luis (factura)": -95.03
+    "WhatsApp · Gustavo": -51.02
    },
-   "neto": 832.85,
-   "acum": 832.85
+   "neto": 927.88,
+   "acum": 927.88
   },
   {
    "fecha": "2026-09-02",
@@ -45,7 +44,7 @@
     "WhatsApp · Pagos (Majo)": -201.81
    },
    "neto": 1108.62,
-   "acum": 1941.47
+   "acum": 2036.5
   },
   {
    "fecha": "2026-09-03",
@@ -58,7 +57,7 @@
     "WhatsApp · Pagos (Majo)": -472.79
    },
    "neto": 669.61,
-   "acum": 2611.08
+   "acum": 2706.11
   },
   {
    "fecha": "2026-09-04",
@@ -69,7 +68,7 @@
     "WhatsApp · Pagos (Majo)": -1077.66
    },
    "neto": -1077.66,
-   "acum": 1533.42
+   "acum": 1628.45
   },
   {
    "fecha": "2026-09-05",
@@ -80,7 +79,7 @@
     "Pagopar": 237.24
    },
    "neto": 237.24,
-   "acum": 1770.66
+   "acum": 1865.69
   },
   {
    "fecha": "2026-09-06",
@@ -92,7 +91,7 @@
     "WhatsApp · Luis": -130.27
    },
    "neto": -147.28,
-   "acum": 1623.38
+   "acum": 1718.41
   },
   {
    "fecha": "2026-09-07",
@@ -106,7 +105,7 @@
     "Manual · efectivo": -700
    },
    "neto": 803.21,
-   "acum": 2426.59
+   "acum": 2521.62
   },
   {
    "fecha": "2026-09-08",
@@ -119,7 +118,7 @@
     "WhatsApp · Pagos (Majo)": -644.87
    },
    "neto": -36.99,
-   "acum": 2389.6
+   "acum": 2484.63
   },
   {
    "fecha": "2026-09-09",
@@ -132,35 +131,33 @@
     "WhatsApp · Pagos (Majo)": -5.1
    },
    "neto": 62.42,
-   "acum": 2452.02
+   "acum": 2547.05
   },
   {
    "fecha": "2026-09-10",
    "in": 126.53,
-   "out": 311.89,
-   "n": 5,
+   "out": 221.09,
+   "n": 3,
    "porFuente": {
     "Pagopar": 126.53,
-    "WhatsApp · Pagos (Majo)": -221.09,
-    "WhatsApp · Luis (factura)": -90.8
+    "WhatsApp · Pagos (Majo)": -221.09
    },
-   "neto": -185.36,
-   "acum": 2266.66
+   "neto": -94.56,
+   "acum": 2452.49
   },
   {
    "fecha": "2026-09-11",
    "in": 1816.67,
-   "out": 951.17,
-   "n": 8,
+   "out": 832.15,
+   "n": 7,
    "porFuente": {
     "Binance": 100,
     "Pagopar": 1716.67,
     "WhatsApp · Pagos (Majo)": -813.95,
-    "WhatsApp · Gustavo": -18.2,
-    "WhatsApp · Luis (factura)": -119.02
+    "WhatsApp · Gustavo": -18.2
    },
-   "neto": 865.5,
-   "acum": 3132.16
+   "neto": 984.52,
+   "acum": 3437.01
   },
   {
    "fecha": "2026-09-12",
@@ -172,7 +169,7 @@
     "Pagopar": 644.72
    },
    "neto": 891.72,
-   "acum": 4023.88
+   "acum": 4328.73
   },
   {
    "fecha": "2026-09-13",
@@ -183,7 +180,7 @@
     "Stripe": 69
    },
    "neto": 69,
-   "acum": 4092.88
+   "acum": 4397.73
   },
   {
    "fecha": "2026-09-14",
@@ -195,7 +192,7 @@
     "WhatsApp · Pagos (Majo)": -578.23
    },
    "neto": -471.09,
-   "acum": 3621.79
+   "acum": 3926.64
   },
   {
    "fecha": "2026-09-15",
@@ -208,7 +205,7 @@
     "Transferencia": 207.72
    },
    "neto": 1268.44,
-   "acum": 4890.23
+   "acum": 5195.08
   },
   {
    "fecha": "2026-09-16",
@@ -221,7 +218,7 @@
     "WhatsApp · Pagos (Majo)": -435.85
    },
    "neto": -402.82,
-   "acum": 4487.41
+   "acum": 4792.26
   },
   {
    "fecha": "2026-09-17",
@@ -234,21 +231,20 @@
     "Transferencia": 116.84
    },
    "neto": 327.64,
-   "acum": 4815.05
+   "acum": 5119.9
   },
   {
    "fecha": "2026-09-18",
    "in": 946.09,
-   "out": 154.08,
-   "n": 6,
+   "out": 145.58,
+   "n": 5,
    "porFuente": {
     "Pagopar": 946.09,
     "WhatsApp · Alfredo": -14.63,
-    "WhatsApp · Pagos (Majo)": -130.95,
-    "WhatsApp · Pagos (Majo) (factura)": -8.5
+    "WhatsApp · Pagos (Majo)": -130.95
    },
-   "neto": 792.01,
-   "acum": 5607.06
+   "neto": 800.51,
+   "acum": 5920.41
   },
   {
    "fecha": "2026-09-19",
@@ -261,7 +257,7 @@
     "WhatsApp · Pagos (Majo)": -91.84
    },
    "neto": 185.68,
-   "acum": 5792.74
+   "acum": 6106.09
   },
   {
    "fecha": "2026-09-20",
@@ -272,7 +268,7 @@
     "WhatsApp · Pagos (Majo)": -204.08
    },
    "neto": -204.08,
-   "acum": 5588.66
+   "acum": 5902.01
   },
   {
    "fecha": "2026-09-21",
@@ -284,7 +280,7 @@
     "Transferencia": 306.12
    },
    "neto": 465.64,
-   "acum": 6054.3
+   "acum": 6367.65
   },
   {
    "fecha": "2026-09-22",
@@ -297,7 +293,7 @@
     "WhatsApp · Pagos (Majo)": -61.22
    },
    "neto": 302.58,
-   "acum": 6356.88
+   "acum": 6670.23
   },
   {
    "fecha": "2026-09-23",
@@ -309,7 +305,7 @@
     "WhatsApp · Pagos (Majo)": -277.89
    },
    "neto": 1242.01,
-   "acum": 7598.89
+   "acum": 7912.24
   },
   {
    "fecha": "2026-09-24",
@@ -321,7 +317,7 @@
     "WhatsApp · Pagos (Majo)": -782.32
    },
    "neto": -298.31,
-   "acum": 7300.58
+   "acum": 7613.93
   },
   {
    "fecha": "2026-09-25",
@@ -333,7 +329,7 @@
     "WhatsApp · Pagos (Majo)": -2001.7
    },
    "neto": -1731.63,
-   "acum": 5568.95
+   "acum": 5882.3
   },
   {
    "fecha": "2026-09-26",
@@ -346,7 +342,7 @@
     "WhatsApp · Pagos (Majo)": -51.02
    },
    "neto": 495.75,
-   "acum": 6064.7
+   "acum": 6378.05
   },
   {
    "fecha": "2026-09-27",
@@ -358,37 +354,35 @@
     "WhatsApp · Pagos (Majo)": -571.43
    },
    "neto": -341.33,
-   "acum": 5723.37
+   "acum": 6036.72
   },
   {
    "fecha": "2026-09-28",
    "in": 229.07,
-   "out": 384.48,
-   "n": 5,
+   "out": 295.98,
+   "n": 4,
    "porFuente": {
     "Stripe": 59,
     "WhatsApp · Pagos (Majo)": -207.48,
     "WhatsApp · Alfredo": -88.5,
-    "Transferencia": 170.07,
-    "WhatsApp · Alfredo (factura)": -88.5
+    "Transferencia": 170.07
    },
-   "neto": -155.41,
-   "acum": 5567.96
+   "neto": -66.91,
+   "acum": 5969.81
   },
   {
    "fecha": "2026-09-29",
    "in": 411.67,
-   "out": 411.57,
-   "n": 9,
+   "out": 363.95,
+   "n": 8,
    "porFuente": {
     "Stripe": 195,
     "Pagopar": 216.67,
     "WhatsApp · Alfredo": -17.01,
-    "WhatsApp · Pagos (Majo)": -346.94,
-    "WhatsApp · Alfredo (factura)": -47.62
+    "WhatsApp · Pagos (Majo)": -346.94
    },
-   "neto": 0.1,
-   "acum": 5568.06
+   "neto": 47.72,
+   "acum": 6017.53
   }
  ],
  "movimientos": [
@@ -1394,14 +1388,6 @@
    "gs": 300000
   },
   {
-   "d": "2026-09-01",
-   "t": "out",
-   "usd": 95.03,
-   "fuente": "WhatsApp · Luis (factura)",
-   "det": "Combustible V-Power Diesel 53,73 L - Shell Madame Lynch",
-   "gs": 558780
-  },
-  {
    "d": "2026-09-06",
    "t": "out",
    "usd": 23.13,
@@ -1418,60 +1404,12 @@
    "gs": 630000
   },
   {
-   "d": "2026-09-10",
-   "t": "out",
-   "usd": 82.98,
-   "fuente": "WhatsApp · Luis (factura)",
-   "det": "Compra supermercado (alimentos y limpieza)",
-   "gs": 487911
-  },
-  {
-   "d": "2026-09-10",
-   "t": "out",
-   "usd": 7.82,
-   "fuente": "WhatsApp · Luis (factura)",
-   "det": "Lona 2x3m azul - Ferretería Ferrex",
-   "gs": 46000
-  },
-  {
-   "d": "2026-09-11",
-   "t": "out",
-   "usd": 119.02,
-   "fuente": "WhatsApp · Luis (factura)",
-   "det": "Combustible V-Power Diesel 67,29 L (Combubar Company S.R.L.)",
-   "gs": 699850
-  },
-  {
    "d": "2026-09-11",
    "t": "out",
    "usd": 17.01,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "GUSTAVO + Estacionamiento Aerop?",
    "gs": 100000
-  },
-  {
-   "d": "2026-09-18",
-   "t": "out",
-   "usd": 8.5,
-   "fuente": "WhatsApp · Pagos (Majo) (factura)",
-   "det": "Repuestos: 2 focos 274 (Chic Repuestos)",
-   "gs": 50000
-  },
-  {
-   "d": "2026-09-28",
-   "t": "out",
-   "usd": 88.5,
-   "fuente": "WhatsApp · Alfredo (factura)",
-   "det": "Carga de combustible 48,20 L en surtidor",
-   "gs": 520400
-  },
-  {
-   "d": "2026-09-29",
-   "t": "out",
-   "usd": 47.62,
-   "fuente": "WhatsApp · Alfredo (factura)",
-   "det": "Carga de combustible diésel 25,22 L a 11.100 Gs/L (surtidor)",
-   "gs": 280000
   },
   {
    "d": "2026-09-07",
@@ -1561,12 +1499,12 @@
     "total": 105.66
    },
    "marketing": {
-    "google": 406.97,
+    "google": 410.43,
     "meta": 279.12,
-    "total": 686.09
+    "total": 689.55
    },
    "impuestos": null,
-   "resultado": 4283.75,
+   "resultado": 4280.29,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
@@ -1878,44 +1816,12 @@
    "motivo": "posible duplicado: ver peajes del mismo viaje CDE 03/09, la transferencia del 08/09 a Luis ya lo cubriría"
   },
   {
-   "fecha": "2026-09-07",
-   "grupo": "Alfredo",
-   "gs": 528008,
-   "usd": 89.8,
-   "concepto": "Combustible Shell San Bernardino",
-   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 02/09 ya trae combustible"
-  },
-  {
-   "fecha": "2026-09-07",
-   "grupo": "Alfredo",
-   "gs": 520000,
-   "usd": 88.44,
-   "concepto": "Carga de combustible 50,77 Lt",
-   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 02/09 ya trae combustible"
-  },
-  {
    "fecha": "2026-09-08",
    "grupo": "Alfredo",
    "gs": 50000,
    "usd": 8.5,
    "concepto": "Solo queda agregarle si me dejan entrar en el mismo parking ",
    "motivo": "posible duplicado: la transferencia a Alfredo del 11/09 ya trae 'parking 50.000'"
-  },
-  {
-   "fecha": "2026-09-13",
-   "grupo": "Alfredo",
-   "gs": 350000,
-   "usd": 59.52,
-   "concepto": "Carga de combustible 33,493 L (surtidor Super)",
-   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 08/09 ya trae combustible"
-  },
-  {
-   "fecha": "2026-09-16",
-   "grupo": "Alfredo",
-   "gs": 10000,
-   "usd": 1.7,
-   "concepto": "Estacionamiento Solange's Parking (centro, Asunción)",
-   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 11/09 ya trae parking"
   },
   {
    "fecha": "2026-09-16",
@@ -1956,14 +1862,6 @@
    "usd": 30.61,
    "concepto": "ahora que subio a digamos que cubre un viatico",
    "motivo": "mencionado en el chat, sin comprobante"
-  },
-  {
-   "fecha": "2026-09-17",
-   "grupo": "Alfredo",
-   "gs": 500000,
-   "usd": 85.03,
-   "concepto": "Carga de combustible 48,07 litros en surtidor",
-   "motivo": "posible duplicado: la transferencia a Alfredo David Sanchez Vargas del 11/09 ya trae combustible"
   },
   {
    "fecha": "2026-09-22",
