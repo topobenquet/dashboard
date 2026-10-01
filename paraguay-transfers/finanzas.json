@@ -1,16 +1,16 @@
 {
- "generated": "2026-10-01T10:20:11.529Z",
- "tc": 5860,
+ "generated": "2026-10-01T12:30:14.847Z",
+ "tc": 5870,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
  "saldos": {
   "fecha": "2026-10-01",
   "itauGs": 43605,
-  "uenoGs": 4673836,
-  "uenoFecha": "2026-09-01",
-  "uenoMomento": null,
-  "uenoFuente": "finanzas-manual.json",
+  "uenoGs": 30574047,
+  "uenoFecha": "2026-10-01",
+  "uenoMomento": "actual",
+  "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1868.76,
   "stripePendiente": 48.25,
   "pagoparPendienteUsd": 0,
@@ -251,5 +251,13 @@
   }
  ],
  "aDefinir": [],
- "saldosHistorial": []
+ "saldosHistorial": [
+  {
+   "fecha": "2026-10-01",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 30574047,
+   "usd": 5208.53
+  }
+ ]
 }
