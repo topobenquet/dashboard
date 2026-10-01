@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T15:10:37.238Z",
+ "generated": "2026-10-01T21:10:13.934Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -36,7 +36,7 @@
     }
    ],
    "gsKm": 1535,
-   "ultimoKm": 97443
+   "ultimoKm": 97634
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -55,9 +55,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 0,
-   "kmFuera": 580,
+   "kmFuera": 771,
    "viajes": 0,
-   "costoComb": 890300,
+   "costoComb": 1183485,
    "pagado": 0
   },
   "Voxy": {
@@ -71,8 +71,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 2,
-   "conFoto": 2
+   "lecturas": 3,
+   "conFoto": 3
   },
   {
    "chofer": "Gustavo",
@@ -571,6 +571,17 @@
   }
  ],
  "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 97443,
+   "hasta": 97634,
+   "km": 191,
+   "fechaDesde": "2026-10-01",
+   "fechaHasta": "2026-10-01",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
   {
    "vehiculo": "H1",
    "desde": 97442,
@@ -1165,6 +1176,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:97443:97634",
+   "nivel": "juan",
+   "texto": "H1: 191 km sin traslado entre el 01/10 (km 97.443, Alfredo) y el 01/10 (km 97.634, Alfredo).",
+   "ts": 1790882609,
+   "fecha": "2026-10-01"
+  },
   {
    "key": "hueco:H1:96863:97442",
    "nivel": "juan",
