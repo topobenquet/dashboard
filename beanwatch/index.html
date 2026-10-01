@@ -271,14 +271,14 @@ function render(d){
     const roasCol=A1.roas==null?'':A1.roas>=1?'#2E8B57':'#C0392B';
     const nada=A1.spend===0&&A1.ingresos===0;
     $('#kpis').innerHTML=[
-      {l:'Return on ad spend',v:A1.roas!=null?A1.roas.toFixed(2)+'x':'–',
+      {l:'Return on ad spend',v:A1.roas!=null?A1.roas.toFixed(1)+'x':'–',
        s:`${usd(A1.ingresos)} collected on ${usd(A1.spend)} of ad spend`,vcol:roasCol,
        cmp:B1?delta(A1.roas||0,B1.roas||0):''},
       {l:'Revenue collected',v:usd(A1.ingresos),
        s:`${fm(A1.reservas)} reservations · ${fm(A1.upsells)} paid in full`,
        cmp:B1?delta(A1.ingresos,B1.ingresos):''},
       {l:'Reservations',v:fm(A1.reservas),
-       s:A1.reservas?`${usd2(A1.cpa)} each · ${usd2(A1.aov)} average order`:'$29 deposits that lock the $299 price',
+       s:A1.reservas?`${usd(A1.cpa)} each · ${usd(A1.aov)} average order`:'$29 deposits that lock the $299 price',
        cmp:B1?delta(A1.reservas,B1.reservas):''},
       {l:'Ad spend',v:usd(A1.spend),s:`Google ${usd(A1.spendG)} · Meta ${usd(A1.spendM)}`,
        cmp:B1?delta(A1.spend,B1.spend,true):''},
@@ -346,8 +346,8 @@ function render(d){
     <tr><td>Emails captured</td><td>${fm(A1.leads)}</td></tr>
     <tr><td>Reservations ($29 deposit)</td><td>${fm(A1.reservas)}</td></tr>
     <tr><td>Paid in full (upsell)</td><td>${fm(A1.upsells)}</td></tr>
-    <tr><td>Revenue · return on ad spend</td><td>${usd(A1.ingresos)} · ${A1.spend?(A1.ingresos/A1.spend).toFixed(2)+'x':'–'}</td></tr>
-    <tr class="big"><td>Cost per reservation</td><td>${A1.reservas?usd2(A1.spend/A1.reservas):'–'}</td></tr></table></div>`;
+    <tr><td>Revenue · return on ad spend</td><td>${usd(A1.ingresos)} · ${A1.spend?(A1.ingresos/A1.spend).toFixed(1)+'x':'–'}</td></tr>
+    <tr class="big"><td>Cost per reservation</td><td>${A1.reservas?usd(A1.spend/A1.reservas):'–'}</td></tr></table></div>`;
   h+=section('Account','How the account is doing','Follows the date range picked at the top',
     `<div class="acct" style="grid-template-columns:1fr"><div id="acctBox"></div></div>`);
 
@@ -386,7 +386,7 @@ function render(d){
       {l:'Landing to email',v:A1.lpv?pct(A1.leads/A1.lpv):'–'},
       {l:'Email to payment',v:A1.leads?pct(A1.reservas/A1.leads):'–',
        mal:A1.leads&&(A1.reservas/A1.leads)<0.15},
-      {l:'Cost per reservation',v:A1.reservas?usd2(A1.spend/A1.reservas):'–',
+      {l:'Cost per reservation',v:A1.reservas?usd(A1.spend/A1.reservas):'–',
        mal:A1.reservas&&(A1.spend/A1.reservas)>77},
     ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v"${t.mal?' style="color:#C0392B"':''}>${t.v}</div></div>`).join('');
     return `<div class="minis">${tiles}</div><div class="card pad"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg></div>`;
@@ -423,7 +423,7 @@ function render(d){
         {l:'Reservations',v:fm(ST.reservas),s:usd(ST.ingresoReservas)},
         {l:'Paid in full',v:fm(ST.upsells),s:usd(ST.ingresoUpsells)},
         {l:'Upgrade rate',v:ST.tasaUpsell!=null?ST.tasaUpsell+'%':'–',s:'Of people who reserved'},
-        {l:'Average order',v:usd2(ST.aov),s:'Per reservation, upgrades included'},
+        {l:'Average order',v:usd(ST.aov),s:'Per reservation, upgrades included'},
       ].map(t=>`<div class="mini"><div class="l">${t.l}</div><div class="v">${t.v}</div><div style="font-size:10px;color:var(--mut);margin-top:2px">${t.s}</div></div>`).join('')}</div>
       <div class="grid g2">
         <div class="card pad"><div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">Revenue by day</div>${barras||'<div class="empty">No sales yet</div>'}
