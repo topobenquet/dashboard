@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T12:30:14.847Z",
+ "generated": "2026-10-01T14:30:45.403Z",
  "tc": 5870,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,14 +12,44 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1868.76,
-  "stripePendiente": 48.25,
+  "stripePendiente": 287.79,
   "pagoparPendienteUsd": 0,
   "relay": null,
   "binance": null,
   "payoneer": null
  },
- "caja": [],
- "movimientos": [],
+ "caja": [
+  {
+   "fecha": "2026-10-01",
+   "in": 0,
+   "out": 647.37,
+   "n": 2,
+   "porFuente": {
+    "WhatsApp · Alfredo": -119.26,
+    "WhatsApp · Pagos (Majo)": -528.11
+   },
+   "neto": -647.37,
+   "acum": -647.37
+  }
+ ],
+ "movimientos": [
+  {
+   "d": "2026-10-01",
+   "t": "out",
+   "usd": 119.26,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago a PETROPAR San Juan Misiones (combustible)",
+   "gs": 700043
+  },
+  {
+   "d": "2026-10-01",
+   "t": "out",
+   "usd": 528.11,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Salario Sept/26 María José Cáceres",
+   "gs": 3100000
+  }
+ ],
  "pnl": [
   {
    "mes": "2026-08",
