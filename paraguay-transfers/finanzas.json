@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T18:30:17.260Z",
+ "generated": "2026-10-01T20:30:40.320Z",
  "tc": 5870,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -22,14 +22,14 @@
   {
    "fecha": "2026-10-01",
    "in": 0,
-   "out": 647.37,
-   "n": 2,
+   "out": 996.6,
+   "n": 4,
    "porFuente": {
     "WhatsApp · Alfredo": -119.26,
-    "WhatsApp · Pagos (Majo)": -528.11
+    "WhatsApp · Pagos (Majo)": -877.34
    },
-   "neto": -647.37,
-   "acum": -647.37
+   "neto": -996.6,
+   "acum": -996.6
   }
  ],
  "movimientos": [
@@ -48,6 +48,22 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Salario Sept/26 María José Cáceres",
    "gs": 3100000
+  },
+  {
+   "d": "2026-10-01",
+   "t": "out",
+   "usd": 42.59,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 250000
+  },
+  {
+   "d": "2026-10-01",
+   "t": "out",
+   "usd": 306.64,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Segovia",
+   "gs": 1800000
   }
  ],
  "pnl": [
@@ -280,7 +296,48 @@
    "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
   }
  ],
- "aDefinir": [],
+ "aDefinir": [
+  {
+   "fecha": "2026-10-01",
+   "grupo": "Alfredo",
+   "gs": 770000,
+   "usd": 131.18,
+   "concepto": "Gasoil:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-01",
+   "grupo": "Alfredo",
+   "gs": 50000,
+   "usd": 8.52,
+   "concepto": "Peaje:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-01",
+   "grupo": "Alfredo",
+   "gs": 180000,
+   "usd": 30.66,
+   "concepto": "Hospedaje:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-01",
+   "grupo": "Alfredo",
+   "gs": 70000,
+   "usd": 11.93,
+   "concepto": "Lavadero:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-01",
+   "grupo": "Alfredo",
+   "gs": 800000,
+   "usd": 136.29,
+   "concepto": "Obs: Se me depósito GS para carga de Gasoil, solo cargue 770",
+   "motivo": "mencionado en el chat, sin comprobante"
+  }
+ ],
  "saldosHistorial": [
   {
    "fecha": "2026-10-01",
