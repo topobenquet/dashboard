@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T21:45:34.775Z",
+ "generated": "2026-10-01T22:30:27.900Z",
  "tc": 5870,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -21,15 +21,16 @@
  "caja": [
   {
    "fecha": "2026-10-01",
-   "in": 0,
+   "in": 212.95,
    "out": 996.6,
-   "n": 4,
+   "n": 5,
    "porFuente": {
     "WhatsApp · Alfredo": -119.26,
-    "WhatsApp · Pagos (Majo)": -877.34
+    "WhatsApp · Pagos (Majo)": -877.34,
+    "Transferencia": 212.95
    },
-   "neto": -996.6,
-   "acum": -996.6
+   "neto": -783.65,
+   "acum": -783.65
   }
  ],
  "movimientos": [
@@ -64,6 +65,14 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Segovia",
    "gs": 1800000
+  },
+  {
+   "d": "2026-10-01",
+   "t": "in",
+   "usd": 212.95,
+   "fuente": "Transferencia",
+   "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
+   "gs": 1250000
   }
  ],
  "pnl": [
