@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-01T22:30:27.900Z",
- "tc": 5870,
+ "generated": "2026-10-02T00:30:09.052Z",
+ "tc": 5850,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
@@ -11,8 +11,8 @@
   "uenoFecha": "2026-10-01",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 1868.76,
-  "stripePendiente": 527.33,
+  "stripeDisponible": 1917.01,
+  "stripePendiente": 479.08,
   "pagoparPendienteUsd": 0,
   "relay": null,
   "binance": null,
@@ -21,23 +21,23 @@
  "caja": [
   {
    "fecha": "2026-10-01",
-   "in": 212.95,
-   "out": 996.6,
+   "in": 213.68,
+   "out": 1000.01,
    "n": 5,
    "porFuente": {
-    "WhatsApp · Alfredo": -119.26,
-    "WhatsApp · Pagos (Majo)": -877.34,
-    "Transferencia": 212.95
+    "WhatsApp · Alfredo": -119.67,
+    "WhatsApp · Pagos (Majo)": -880.34,
+    "Transferencia": 213.68
    },
-   "neto": -783.65,
-   "acum": -783.65
+   "neto": -786.33,
+   "acum": -786.33
   }
  ],
  "movimientos": [
   {
    "d": "2026-10-01",
    "t": "out",
-   "usd": 119.26,
+   "usd": 119.67,
    "fuente": "WhatsApp · Alfredo",
    "det": "Pago a PETROPAR San Juan Misiones (combustible)",
    "gs": 700043
@@ -45,7 +45,7 @@
   {
    "d": "2026-10-01",
    "t": "out",
-   "usd": 528.11,
+   "usd": 529.91,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Salario Sept/26 María José Cáceres",
    "gs": 3100000
@@ -53,7 +53,7 @@
   {
    "d": "2026-10-01",
    "t": "out",
-   "usd": 42.59,
+   "usd": 42.74,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Fernández",
    "gs": 250000
@@ -61,7 +61,7 @@
   {
    "d": "2026-10-01",
    "t": "out",
-   "usd": 306.64,
+   "usd": 307.69,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Segovia",
    "gs": 1800000
@@ -69,7 +69,7 @@
   {
    "d": "2026-10-01",
    "t": "in",
-   "usd": 212.95,
+   "usd": 213.68,
    "fuente": "Transferencia",
    "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
    "gs": 1250000
@@ -310,7 +310,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 770000,
-   "usd": 131.18,
+   "usd": 131.62,
    "concepto": "Gasoil:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -318,7 +318,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 50000,
-   "usd": 8.52,
+   "usd": 8.55,
    "concepto": "Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -326,7 +326,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 180000,
-   "usd": 30.66,
+   "usd": 30.77,
    "concepto": "Hospedaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -334,7 +334,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 70000,
-   "usd": 11.93,
+   "usd": 11.97,
    "concepto": "Lavadero:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -342,7 +342,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 800000,
-   "usd": 136.29,
+   "usd": 136.75,
    "concepto": "Obs: Se me depósito GS para carga de Gasoil, solo cargue 770",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -350,7 +350,7 @@
    "fecha": "2026-10-01",
    "grupo": "Alfredo",
    "gs": 200000,
-   "usd": 34.07,
+   "usd": 34.19,
    "concepto": "Alfre, para que tengas en cuenta lo que estaríamos considera",
    "motivo": "mencionado en el chat, sin comprobante"
   }
@@ -361,7 +361,7 @@
    "cuenta": "ueno",
    "momento": "actual",
    "gs": 30574047,
-   "usd": 5208.53
+   "usd": 5226.33
   }
  ]
 }
