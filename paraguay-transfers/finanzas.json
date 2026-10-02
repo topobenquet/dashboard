@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T16:30:32.995Z",
+ "generated": "2026-10-02T20:30:17.198Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -35,14 +35,14 @@
   {
    "fecha": "2026-10-02",
    "in": 388.39,
-   "out": 93.86,
-   "n": 3,
+   "out": 123.89,
+   "n": 4,
    "porFuente": {
     "Pagopar": 388.39,
-    "WhatsApp · Pagos (Majo)": -93.86
+    "WhatsApp · Pagos (Majo)": -123.89
    },
-   "neto": 294.53,
-   "acum": -490.46
+   "neto": 264.5,
+   "acum": -520.49
   }
  ],
  "movimientos": [
@@ -101,6 +101,14 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Honorarios Profesionales / Septiembre 2026 / Contador",
    "gs": 550000
+  },
+  {
+   "d": "2026-10-02",
+   "t": "out",
+   "usd": 30.03,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Parking Aeropuerto 16.000",
+   "gs": 176000
   },
   {
    "d": "2026-10-01",
@@ -405,6 +413,14 @@
    "gs": 200000,
    "usd": 34.13,
    "concepto": "Alfre, para que tengas en cuenta lo que estaríamos considera",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-02",
+   "grupo": "Alfredo",
+   "gs": 80000,
+   "usd": 13.65,
+   "concepto": "viático...",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
