@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T12:30:25.957Z",
+ "generated": "2026-10-02T16:30:32.995Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 13.55,
   "stripePendiente": 516.06,
-  "pagoparPendienteUsd": 335.49,
+  "pagoparPendienteUsd": 388.4,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -34,14 +34,15 @@
   },
   {
    "fecha": "2026-10-02",
-   "in": 335.49,
-   "out": 0,
-   "n": 1,
+   "in": 388.39,
+   "out": 93.86,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 335.49
+    "Pagopar": 388.39,
+    "WhatsApp · Pagos (Majo)": -93.86
    },
-   "neto": 335.49,
-   "acum": -449.5
+   "neto": 294.53,
+   "acum": -490.46
   }
  ],
  "movimientos": [
@@ -52,6 +53,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Thomas Kirby",
    "gs": 1966000
+  },
+  {
+   "d": "2026-10-02",
+   "t": "in",
+   "usd": 52.9,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Emily Crowley",
+   "gs": 310000
   },
   {
    "d": "2026-10-01",
@@ -84,6 +93,14 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Segovia",
    "gs": 1800000
+  },
+  {
+   "d": "2026-10-02",
+   "t": "out",
+   "usd": 93.86,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Honorarios Profesionales / Septiembre 2026 / Contador",
+   "gs": 550000
   },
   {
    "d": "2026-10-01",
@@ -199,8 +216,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 1,
-   "bruto": 335.49,
+   "cobros": 2,
+   "bruto": 388.39,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -215,14 +232,14 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 1966000,
-  "cobradoUsd": 335.49,
+  "cobradoGs": 2276000,
+  "cobradoUsd": 388.39,
   "diario": [
    {
     "fecha": "2026-10-02",
-    "cobros": 1,
-    "gs": 1966000,
-    "usd": 335.49
+    "cobros": 2,
+    "gs": 2276000,
+    "usd": 388.39
    }
   ],
   "pruebasExcluidas": 0,
@@ -230,8 +247,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 1966000,
-  "pendienteUsd": 335.49
+  "pendienteGs": 2276000,
+  "pendienteUsd": 388.4
  },
  "giros": [
   {
@@ -335,6 +352,10 @@
   {
    "nivel": "crit",
    "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
+  },
+  {
+   "nivel": "warn",
+   "texto": "₲2.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
