@@ -298,6 +298,34 @@ function render(d){
   // el primer pintado real ocurre al final, cuando ya existen #funnelBox y #acctBox
 
   let h='';
+
+  // ---------- DAILY RETURN ON AD SPEND (desde el lanzamiento, no sigue el selector de fechas) ----------
+  {
+    const dias=SERIE.filter(r=>(r.spend||0)>0||(r.ingresos||0)>0).sort((a,b)=>a.date<b.date?-1:1);
+    if(dias.length){
+      let cs=0,ci=0,cr=0,cu=0;
+      const tone=(v)=>v==null?'':v>=1.1?'color:var(--good);font-weight:700':v<1?'color:var(--bad);font-weight:700':'color:var(--warn);font-weight:700';
+      const fila=dias.map(r=>{
+        cs+=r.spend||0; ci+=r.ingresos||0; cr+=r.reservas||0; cu+=r.upsells||0;
+        const ro=div(r.ingresos,r.spend), rc=div(ci,cs), parcial=r.date===d.today;
+        return `<tr><td>${fdate(r.date)}${parcial?' <span style="color:var(--mut);font-size:10px">(today, partial)</span>':''}</td>
+          <td class="n">${usd(r.spendG)}</td><td class="n">${usd(r.spendM)}</td><td class="n"><b>${usd(r.spend)}</b></td>
+          <td class="n">${fm(r.reservas)}</td><td class="n">${fm(r.upsells)}</td><td class="n">${usd(r.ingresos)}</td>
+          <td class="n" style="${tone(ro)}">${ro==null?'–':ro.toFixed(2)+'x'}</td>
+          <td class="n" style="${tone(rc)}">${rc==null?'–':rc.toFixed(2)+'x'}</td>
+          <td class="n">${r.reservas?usd(r.spend/r.reservas):'–'}</td></tr>`;
+      }).join('');
+      const gG=dias.reduce((a,r)=>a+(r.spendG||0),0), gM=dias.reduce((a,r)=>a+(r.spendM||0),0), tot=ci?ci/cs:null;
+      const tfila=`<tr style="border-top:2px solid var(--line);font-weight:700"><td>Since launch</td><td class="n">${usd(gG)}</td><td class="n">${usd(gM)}</td><td class="n">${usd(cs)}</td>
+        <td class="n">${fm(cr)}</td><td class="n">${fm(cu)}</td><td class="n">${usd(ci)}</td><td class="n" style="${tone(tot)}">${tot==null?'–':tot.toFixed(2)+'x'}</td>
+        <td class="n" style="${tone(tot)}">${tot==null?'–':tot.toFixed(2)+'x'}</td><td class="n">${cr?usd(cs/cr):'–'}</td></tr>`;
+      const ult3=dias.filter(r=>r.date!==d.today).slice(-3), s3=ult3.reduce((a,r)=>a+(r.spend||0),0), i3=ult3.reduce((a,r)=>a+(r.ingresos||0),0);
+      const solo=dias.reduce((a,r)=>a+(r.reservas||0)*29,0);
+      h+=section('Return','Return on ad spend, day by day','Revenue is cash collected in Stripe · spend is Google Ads + Meta · break-even is 1.00x before payment fees and cost of goods',
+        `<div class="card scroll"><table class="t"><thead><tr><th>Day</th><th class="n">Google</th><th class="n">Meta</th><th class="n">Total spend</th><th class="n">Reservations</th><th class="n">Upsells</th><th class="n">Revenue</th><th class="n">ROAS</th><th class="n">Cumulative</th><th class="n">Cost per reservation</th></tr></thead><tbody>${fila}${tfila}</tbody></table></div>
+         <div style="font-size:11px;color:var(--mut);margin-top:8px">Last 3 full days: ${s3?(i3/s3).toFixed(2)+'x':'–'} · Reservations alone (deposits only) would return ${cs?(solo/cs).toFixed(2)+'x':'–'}: the upsells carry the result. Days use Argentina time for sales and the ad account time zone for spend, so a sale near midnight can land one day apart.</div>`);
+    }
+  }
   // ---------- META ADS (sigue el rango elegido arriba)
   if(d.meta){
     window.dibujarMeta=(desde,hasta,lbl)=>{
