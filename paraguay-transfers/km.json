@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T00:40:02.288Z",
+ "generated": "2026-10-03T11:10:13.041Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -43,7 +43,7 @@
     }
    ],
    "gsKm": 1646,
-   "ultimoKm": 97666
+   "ultimoKm": 97762
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -61,10 +61,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 0,
+   "kmViajes": 100,
    "kmFuera": 799,
-   "viajes": 0,
-   "costoComb": 1315154,
+   "viajes": 1,
+   "costoComb": 1479754,
    "pagado": 0
   },
   "Voxy": {
@@ -78,8 +78,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 5,
-   "conFoto": 4
+   "lecturas": 6,
+   "conFoto": 5
   },
   {
    "chofer": "Gustavo",
@@ -101,12 +101,12 @@
    "fechaIni": "2026-10-02",
    "fechaFin": "2026-10-02",
    "horaIni": "08:57",
-   "horaFin": null,
+   "horaFin": "22:37",
    "kmIni": 97662,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 97762,
+   "km": 100,
    "tanqueIni": null,
-   "tanqueFin": null,
+   "tanqueFin": 0.8,
    "traslados": [
     "Foz-Asu",
     "Vehiculo a disposición",
@@ -116,13 +116,13 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 164600,
    "cargas": [],
    "faltanFotos": [
     97662
    ],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -1041,23 +1041,7 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-02",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Foz-Asu",
-   "km": 690,
-   "adelanto": 1249000
-  },
-  {
-   "fecha": "2026-10-02",
-   "chofer": "Luis",
-   "vehiculo": "Voxy",
-   "ruta": "AERO - Yacht & Golf Club",
-   "km": 40,
-   "adelanto": 46000
-  },
-  {
-   "fecha": "2026-10-02",
+   "fecha": "2026-10-03",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "Vehiculo a disposición",
