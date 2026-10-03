@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-02T10:20:45.746Z",
-  "lastSyncLabel": "2 Oct 2026",
+  "generated": "2026-10-03T10:20:52.264Z",
+  "lastSyncLabel": "3 Oct 2026",
   "currentMonth": "Noviembre",
   "months": [
     {
@@ -149,19 +149,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 7,
-      "reservas": 25,
-      "revenue": 9230.92,
-      "chofer": 2186.88,
+      "leads": 19,
+      "reservas": 27,
+      "revenue": 10014.92,
+      "chofer": 2199.99,
       "comb": 0,
       "peajes": 66,
-      "comision": 175.92,
+      "comision": 199.44,
       "reembolsos": 0,
-      "otros": 66.88,
-      "gAds": 15,
-      "meta": 7.99,
-      "costoSheet": 2495.69,
-      "gananciaSheet": 6721.41
+      "otros": 68.19,
+      "gAds": 22,
+      "meta": 11.6,
+      "costoSheet": 2533.64,
+      "gananciaSheet": 7459.34
     },
     {
       "mes": "Noviembre",
@@ -246,10 +246,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 14.81,
-      "clicks": 43,
-      "impr": 137,
-      "conv": 9
+      "spend": 22.2,
+      "clicks": 71,
+      "impr": 277,
+      "conv": 17
     },
     {
       "mes": "Noviembre",
@@ -5204,6 +5204,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "hotel to hotel",
+      "cliente": "emily crowley",
+      "pais": "Canadá",
+      "conductor": "",
+      "pago": 50,
+      "sena": 50,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 48.5,
+      "fechaReserva": "02/10/26",
+      "fechaSalida": "01/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "AERO - Yacht & Golf Club",
       "cliente": "Luiz Felipe Castro",
       "pais": "USA",
@@ -5211,8 +5225,8 @@
       "pago": 49,
       "sena": 0,
       "restante": 49,
-      "choferCost": 0,
-      "neto": 47.53,
+      "choferCost": 13.11,
+      "neto": 33.1,
       "fechaReserva": "31/08/26",
       "fechaSalida": "02/10/26"
     },
@@ -5222,11 +5236,11 @@
       "cliente": "thomas kirby",
       "pais": "UK",
       "conductor": "Juan Vera CDE",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
+      "pago": 417,
+      "sena": 100,
+      "restante": 317,
       "choferCost": 213.11,
-      "neto": -213.11,
+      "neto": 191.38,
       "fechaReserva": "09/09/26",
       "fechaSalida": "02/10/26"
     },
@@ -5242,6 +5256,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "18/09/26",
+      "fechaSalida": "02/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "FOZ-ASU",
+      "cliente": "thomas kirby",
+      "pais": "UK",
+      "conductor": "",
+      "pago": 317,
+      "sena": 317,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 307.49,
+      "fechaReserva": "02/10/26",
       "fechaSalida": "02/10/26"
     },
     {
@@ -5263,7 +5291,7 @@
       "route": "Vehiculo a disposición",
       "cliente": "Kenny Dudek",
       "pais": "Australia",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 0,
       "sena": 0,
       "restante": 0,
@@ -5975,6 +6003,8 @@
   ],
   "daily": {
     "leads": {
+      "2026-10-03": 1,
+      "2026-10-02": 11,
       "2026-10-01": 7
     },
     "leadsPrev": {
@@ -6273,13 +6303,14 @@
       "2026-09-29": 17.3,
       "2026-09-30": 16.24,
       "2026-10-01": 13.82,
-      "2026-10-02": 0.99
+      "2026-10-02": 8.13,
+      "2026-10-03": 0.25
     }
   },
   "resenas": {
-    "count": 64,
+    "count": 65,
     "rating": 5,
-    "actualizado": "2026-10-01T23:10:02.021Z",
+    "actualizado": "2026-10-02T23:10:05.733Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -6350,6 +6381,11 @@
         "fecha": "2026-10-01",
         "count": 64,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-02",
+        "count": 65,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -6388,6 +6424,8 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-10-03": 3,
+      "2026-10-02": 5,
       "2026-09-25": 13,
       "2026-09-17": 9,
       "2026-09-15": 12,
@@ -6434,13 +6472,12 @@
       "2026-09-28": 14,
       "2026-09-29": 7,
       "2026-09-30": 10,
-      "2026-10-01": 19,
-      "2026-10-02": 2
+      "2026-10-01": 19
     },
     "monthly": {
+      "Octubre": 27,
       "Septiembre": 213,
-      "Agosto": 27,
-      "Octubre": 21
+      "Agosto": 27
     }
   }
 }
