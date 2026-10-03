@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T10:20:14.388Z",
+ "generated": "2026-10-03T12:30:11.202Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 13.55,
   "stripePendiente": 516.06,
-  "pagoparPendienteUsd": 388.4,
+  "pagoparPendienteUsd": 914.33,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -43,6 +43,17 @@
    },
    "neto": 264.5,
    "acum": -520.49
+  },
+  {
+   "fecha": "2026-10-03",
+   "in": 525.94,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 525.94
+   },
+   "neto": 525.94,
+   "acum": 5.45
   }
  ],
  "movimientos": [
@@ -61,6 +72,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Emily Crowley",
    "gs": 310000
+  },
+  {
+   "d": "2026-10-03",
+   "t": "in",
+   "usd": 525.94,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Isabela zomer",
+   "gs": 3082000
   },
   {
    "d": "2026-10-01",
@@ -224,8 +243,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 2,
-   "bruto": 388.39,
+   "cobros": 3,
+   "bruto": 914.33,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -240,14 +259,20 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 2276000,
-  "cobradoUsd": 388.39,
+  "cobradoGs": 5358000,
+  "cobradoUsd": 914.33,
   "diario": [
    {
     "fecha": "2026-10-02",
     "cobros": 2,
     "gs": 2276000,
     "usd": 388.39
+   },
+   {
+    "fecha": "2026-10-03",
+    "cobros": 1,
+    "gs": 3082000,
+    "usd": 525.94
    }
   ],
   "pruebasExcluidas": 0,
@@ -255,8 +280,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 2276000,
-  "pendienteUsd": 388.4
+  "pendienteGs": 5358000,
+  "pendienteUsd": 914.33
  },
  "giros": [
   {
@@ -363,7 +388,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲2.3 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲5.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
