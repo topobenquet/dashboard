@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T10:20:10.626Z",
+ "generated": "2026-10-04T20:30:09.523Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 13.55,
   "stripePendiente": 516.06,
-  "pagoparPendienteUsd": 914.33,
+  "pagoparPendienteUsd": 1124.23,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -54,6 +54,17 @@
    },
    "neto": 525.94,
    "acum": 5.45
+  },
+  {
+   "fecha": "2026-10-04",
+   "in": 209.9,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 209.9
+   },
+   "neto": 209.9,
+   "acum": 215.35
   }
  ],
  "movimientos": [
@@ -80,6 +91,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Isabela zomer",
    "gs": 3082000
+  },
+  {
+   "d": "2026-10-04",
+   "t": "in",
+   "usd": 209.9,
+   "fuente": "Pagopar",
+   "det": "PIX · Emanuelly Antunes Diniz",
+   "gs": 1230000
   },
   {
    "d": "2026-10-01",
@@ -243,8 +262,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 3,
-   "bruto": 914.33,
+   "cobros": 4,
+   "bruto": 1124.23,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -259,8 +278,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 5358000,
-  "cobradoUsd": 914.33,
+  "cobradoGs": 6588000,
+  "cobradoUsd": 1124.23,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -273,6 +292,12 @@
     "cobros": 1,
     "gs": 3082000,
     "usd": 525.94
+   },
+   {
+    "fecha": "2026-10-04",
+    "cobros": 1,
+    "gs": 1230000,
+    "usd": 209.9
    }
   ],
   "pruebasExcluidas": 0,
@@ -280,8 +305,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 5358000,
-  "pendienteUsd": 914.33
+  "pendienteGs": 6588000,
+  "pendienteUsd": 1124.23
  },
  "giros": [
   {
@@ -388,7 +413,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲5.4 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲6.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
