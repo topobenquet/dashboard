@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T00:40:08.216Z",
+ "generated": "2026-10-04T11:10:09.265Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -43,7 +43,7 @@
     }
    ],
    "gsKm": 1646,
-   "ultimoKm": 97916
+   "ultimoKm": 97922
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -62,9 +62,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 241,
-   "kmFuera": 812,
+   "kmFuera": 818,
    "viajes": 2,
-   "costoComb": 1733238,
+   "costoComb": 1743114,
    "pagado": 0
   },
   "Voxy": {
@@ -78,7 +78,7 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 9,
+   "lecturas": 10,
    "conFoto": 6
   },
   {
@@ -98,16 +98,17 @@
    "choferes": [
     "Alfredo"
    ],
-   "fechaIni": "2026-10-03",
-   "fechaFin": "2026-10-03",
-   "horaIni": "21:34",
+   "fechaIni": "2026-10-04",
+   "fechaFin": "2026-10-04",
+   "horaIni": "07:45",
    "horaFin": null,
-   "kmIni": 97916,
+   "kmIni": 97922,
    "kmFin": null,
    "km": null,
    "tanqueIni": null,
    "tanqueFin": null,
    "traslados": [
+    "Vehiculo a disposición",
     "Vehiculo a disposición"
    ],
    "kmEsperado": null,
@@ -117,11 +118,11 @@
    "combustibleCorresponde": null,
    "cargas": [],
    "faltanFotos": [
-    97916
+    97922
    ],
    "sinFinal": false,
    "abierto": true,
-   "inferido": true
+   "inferido": false
   },
   {
    "vehiculo": "H1",
@@ -672,6 +673,18 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 97916,
+   "hasta": 97922,
+   "km": 6,
+   "fechaDesde": "2026-10-03",
+   "fechaHasta": "2026-10-04",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
    "desde": 97907,
    "hasta": 97916,
    "km": 9,
@@ -1123,14 +1136,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-03",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-10-04",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1293,25 +1298,25 @@
  ],
  "alertas": [
   {
+   "key": "foto:ACA671B07C2EEBC4290D6325CFD06B53",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 97.922 (04/10 07:45). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1791110746,
+   "fecha": "2026-10-04"
+  },
+  {
+   "key": "foto:AC19D4E07F5CD67807BF1D8AAC5C65A1",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 97.916 (03/10 21:34). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1791074085,
+   "fecha": "2026-10-03"
+  },
+  {
    "key": "foto:AC46F05EC5E5C1FBC0F4C6F81D4C8ADE",
    "nivel": "grupo",
    "texto": "📸 Alfredo, falta la foto del tablero del km 97.907 (03/10 20:47). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
    "ts": 1791071277,
    "fecha": "2026-10-03"
-  },
-  {
-   "key": "sinkm:Luis:2026-10-02:AERO - Yacht & Golf Club",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado AERO - Yacht & Golf Club del 02/10. Mandalas con el número escrito, por favor.",
-   "ts": 1790996399,
-   "fecha": "2026-10-02"
-  },
-  {
-   "key": "sinkm:Luis:2026-10-02:AERO - Yacht & Golf Club",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado AERO - Yacht & Golf Club del 02/10. Mandalas con el número escrito, por favor.",
-   "ts": 1790996399,
-   "fecha": "2026-10-02"
   },
   {
    "key": "foto:ACB42F72C84884E7DA2F2461D358DF11",
