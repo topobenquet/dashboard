@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T18:30:08.731Z",
+ "generated": "2026-10-05T20:30:44.257Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 492.63,
-  "stripePendiente": 36.98,
+  "stripePendiente": 73.96,
   "pagoparPendienteUsd": 1340.1,
   "relay": null,
   "binance": null,
@@ -69,13 +69,14 @@
   {
    "fecha": "2026-10-05",
    "in": 215.87,
-   "out": 0,
-   "n": 3,
+   "out": 264.5,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 215.87
+    "Pagopar": 215.87,
+    "WhatsApp · Pagos (Majo)": -264.5
    },
-   "neto": 215.87,
-   "acum": 431.22
+   "neto": -48.63,
+   "acum": 166.72
   }
  ],
  "movimientos": [
@@ -182,6 +183,22 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Parking Aeropuerto 16.000",
    "gs": 176000
+  },
+  {
+   "d": "2026-10-05",
+   "t": "out",
+   "usd": 184.3,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "💰 PAGOS  · LUIS",
+   "gs": 1080000
+  },
+  {
+   "d": "2026-10-05",
+   "t": "out",
+   "usd": 80.2,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver INGRID DOMINGUEZ",
+   "gs": 470000
   },
   {
    "d": "2026-10-01",
@@ -512,6 +529,14 @@
    "gs": 80000,
    "usd": 13.65,
    "concepto": "viático...",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-05",
+   "grupo": "Luis",
+   "gs": 136000,
+   "usd": 23.21,
+   "concepto": "peajes .....",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
