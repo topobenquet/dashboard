@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T16:30:32.282Z",
+ "generated": "2026-10-05T18:30:08.731Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 492.63,
   "stripePendiente": 36.98,
-  "pagoparPendienteUsd": 1176.11,
+  "pagoparPendienteUsd": 1340.1,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -68,14 +68,14 @@
   },
   {
    "fecha": "2026-10-05",
-   "in": 51.88,
+   "in": 215.87,
    "out": 0,
-   "n": 1,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 51.88
+    "Pagopar": 215.87
    },
-   "neto": 51.88,
-   "acum": 267.23
+   "neto": 215.87,
+   "acum": 431.22
   }
  ],
  "movimientos": [
@@ -118,6 +118,22 @@
    "fuente": "Pagopar",
    "det": "Pago QR · Silvia Ramirez Romero",
    "gs": 304000
+  },
+  {
+   "d": "2026-10-05",
+   "t": "in",
+   "usd": 58.19,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Julian Piccinin",
+   "gs": 341000
+  },
+  {
+   "d": "2026-10-05",
+   "t": "in",
+   "usd": 105.8,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Josey Widhalm",
+   "gs": 620000
   },
   {
    "d": "2026-10-01",
@@ -281,8 +297,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 5,
-   "bruto": 1176.11,
+   "cobros": 7,
+   "bruto": 1340.1,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -297,8 +313,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 6892000,
-  "cobradoUsd": 1176.11,
+  "cobradoGs": 7853000,
+  "cobradoUsd": 1340.1,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -320,9 +336,9 @@
    },
    {
     "fecha": "2026-10-05",
-    "cobros": 1,
-    "gs": 304000,
-    "usd": 51.88
+    "cobros": 3,
+    "gs": 1265000,
+    "usd": 215.87
    }
   ],
   "pruebasExcluidas": 0,
@@ -330,8 +346,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 6892000,
-  "pendienteUsd": 1176.11
+  "pendienteGs": 7853000,
+  "pendienteUsd": 1340.1
  },
  "giros": [
   {
@@ -438,7 +454,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲6.9 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲7.9 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
