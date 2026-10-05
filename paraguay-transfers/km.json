@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T00:40:02.027Z",
+ "generated": "2026-10-05T11:11:43.283Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -43,7 +43,7 @@
     }
    ],
    "gsKm": 1646,
-   "ultimoKm": 97922
+   "ultimoKm": 98143
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -61,10 +61,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 241,
+   "kmViajes": 462,
    "kmFuera": 818,
-   "viajes": 2,
-   "costoComb": 1743114,
+   "viajes": 3,
+   "costoComb": 2106880,
    "pagado": 0
   },
   "Voxy": {
@@ -78,7 +78,7 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 10,
+   "lecturas": 12,
    "conFoto": 6
   },
   {
@@ -101,10 +101,10 @@
    "fechaIni": "2026-10-04",
    "fechaFin": "2026-10-04",
    "horaIni": "07:45",
-   "horaFin": null,
+   "horaFin": "23:11",
    "kmIni": 97922,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 98143,
+   "km": 221,
    "tanqueIni": null,
    "tanqueFin": null,
    "traslados": [
@@ -115,13 +115,15 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 363766,
    "cargas": [],
    "faltanFotos": [
-    97922
+    97922,
+    98125,
+    98143
    ],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -1136,22 +1138,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-04",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-10-04",
-   "chofer": "Luis",
-   "vehiculo": "Voxy",
-   "ruta": "ASU-FOZ",
-   "km": 690,
-   "adelanto": 802000
-  },
-  {
    "fecha": "2026-10-05",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1309,6 +1295,20 @@
    "nivel": "grupo",
    "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado ASU-FOZ del 04/10. Mandalas con el número escrito, por favor.",
    "ts": 1791169199,
+   "fecha": "2026-10-04"
+  },
+  {
+   "key": "foto:ACAB69D7728AC638839142D90E101591",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 98.143 (04/10 23:11). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1791166276,
+   "fecha": "2026-10-04"
+  },
+  {
+   "key": "foto:AC0E37BC9C048D7978E704774B1F53A1",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 98.125 (04/10 22:08). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1791162485,
    "fecha": "2026-10-04"
   },
   {
