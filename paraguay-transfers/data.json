@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-05T13:23:36.559Z",
-  "lastSyncLabel": "5 Oct 2026",
+  "generated": "2026-10-06T10:20:47.268Z",
+  "lastSyncLabel": "6 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -119,7 +119,7 @@
       "mes": "Agosto",
       "leads": 310,
       "reservas": 62,
-      "revenue": 15773,
+      "revenue": 15822,
       "chofer": 5070,
       "comb": 1169,
       "peajes": 382,
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 69,
-      "revenue": 19020,
-      "chofer": 7093,
+      "revenue": 19068,
+      "chofer": 7219,
       "comb": 770,
-      "peajes": 123,
+      "peajes": 145,
       "comision": 385.75,
       "reembolsos": 13,
-      "otros": 138,
+      "otros": 141,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 317,
@@ -149,19 +149,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 36,
-      "reservas": 5,
-      "revenue": 10014.92,
-      "chofer": 2218.02,
+      "leads": 45,
+      "reservas": 9,
+      "revenue": 10842.09,
+      "chofer": 2421.37,
       "comb": 0,
       "peajes": 66,
-      "comision": 211.32,
+      "comision": 222.63,
       "reembolsos": 0,
       "otros": 68.19,
-      "gAds": 33,
-      "meta": 20.43,
-      "costoSheet": 2551.67,
-      "gananciaSheet": 7431.31
+      "gAds": 44,
+      "meta": 23.59,
+      "costoSheet": 2763.34,
+      "gananciaSheet": 8035.76
     }
   ],
   "adsMonthly": [
@@ -230,10 +230,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 33.4,
-      "clicks": 82,
-      "impr": 333,
-      "conv": 19
+      "spend": 44.46,
+      "clicks": 90,
+      "impr": 389,
+      "conv": 21
     }
   ],
   "trips": [
@@ -3155,11 +3155,11 @@
       "cliente": "Pedro",
       "pais": "Brasil",
       "conductor": "Luis Vásquez",
-      "pago": 0,
+      "pago": 49,
       "sena": 49,
       "restante": 0,
       "choferCost": 11,
-      "neto": 0,
+      "neto": 36,
       "fechaReserva": "01/09/26",
       "fechaSalida": "02/09/26"
     },
@@ -3201,7 +3201,7 @@
       "sena": 0,
       "restante": 0,
       "choferCost": 49,
-      "neto": 0,
+      "neto": -49,
       "fechaReserva": "28/08/26",
       "fechaSalida": "04/09/26"
     },
@@ -3561,25 +3561,11 @@
       "cliente": "Stuart Brander",
       "pais": "Nueva Zelanda",
       "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
+      "pago": 97,
+      "sena": 97,
       "restante": 0,
       "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "02/09/26",
-      "fechaSalida": "03/09/26"
-    },
-    {
-      "mes": "Septiembre",
-      "route": "Transfer Pto Iguazu interno",
-      "cliente": "Stuart Brander",
-      "pais": "Nueva Zelanda",
-      "conductor": "Alfredo Sánchez PT",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "neto": 97,
       "fechaReserva": "02/09/26",
       "fechaSalida": "03/09/26"
     },
@@ -3676,8 +3662,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 13,
-      "neto": 20,
+      "choferCost": 16,
+      "neto": 17,
       "fechaReserva": "30/08/26",
       "fechaSalida": "05/09/26"
     },
@@ -3733,7 +3719,7 @@
       "sena": 100,
       "restante": 317,
       "choferCost": 98,
-      "neto": 0,
+      "neto": 138,
       "fechaReserva": "03/09/26",
       "fechaSalida": "07/09/26"
     },
@@ -3788,8 +3774,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 13,
-      "neto": 33,
+      "choferCost": 16,
+      "neto": 30,
       "fechaReserva": "",
       "fechaSalida": "09/09/26"
     },
@@ -3898,7 +3884,7 @@
       "pais": "Brasil",
       "conductor": "HUGO FERNANDEZ",
       "pago": 0,
-      "sena": 0,
+      "sena": 217,
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
@@ -3954,7 +3940,7 @@
       "pais": "Brasil",
       "conductor": "HUGO FERNANDEZ",
       "pago": 0,
-      "sena": 0,
+      "sena": 217,
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
@@ -3996,7 +3982,7 @@
       "pais": "Brasil",
       "conductor": "HUGO FERNANDEZ",
       "pago": 0,
-      "sena": 0,
+      "sena": 217,
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
@@ -4066,7 +4052,7 @@
       "pais": "Brasil",
       "conductor": "HUGO FERNANDEZ",
       "pago": 0,
-      "sena": 0,
+      "sena": 217,
       "restante": 0,
       "choferCost": 0,
       "neto": 0,
@@ -4082,7 +4068,7 @@
       "pago": 69,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
+      "choferCost": 11,
       "neto": 0,
       "fechaReserva": "18/09/26",
       "fechaSalida": "18/09/26"
@@ -4093,11 +4079,11 @@
       "cliente": "Pedro Goede",
       "pais": "Brasil",
       "conductor": "HUGO FERNANDEZ",
-      "pago": 49,
-      "sena": 0,
+      "pago": 0,
+      "sena": 217,
       "restante": 0,
       "choferCost": 0,
-      "neto": 49,
+      "neto": 0,
       "fechaReserva": "10/09/26",
       "fechaSalida": "19/09/26"
     },
@@ -4278,8 +4264,8 @@
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 11,
+      "neto": 35,
       "fechaReserva": "23/09/26",
       "fechaSalida": "24/09/26"
     },
@@ -4544,8 +4530,8 @@
       "pago": 49,
       "sena": 0,
       "restante": 49,
-      "choferCost": 0,
-      "neto": 48,
+      "choferCost": 16,
+      "neto": 30,
       "fechaReserva": "31/08/26",
       "fechaSalida": "02/10/26"
     },
@@ -4628,8 +4614,8 @@
       "pago": 417,
       "sena": 150,
       "restante": 267,
-      "choferCost": 0,
-      "neto": 404,
+      "choferCost": 82,
+      "neto": 281,
       "fechaReserva": "31/08/26",
       "fechaSalida": "04/10/26"
     },
@@ -5349,6 +5335,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "Tania Storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 196.72,
+      "sena": 65.57,
+      "restante": 0,
+      "choferCost": 19.67,
+      "neto": 177.05,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "06/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Vehiculo a disposición",
       "cliente": "Kenny Dudek",
       "pais": "Australia",
@@ -5363,15 +5363,71 @@
     },
     {
       "mes": "Octubre",
+      "route": "San Lorenzo, zona Pinedo, Lucero c/1 de marzo a Aeropuerto Silvio Pettirossi",
+      "cliente": "silvia ramirez",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 18.03,
+      "neto": 29.5,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "06/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Aero Formosa-ASU",
+      "cliente": "pichi",
+      "pais": "Argentina",
+      "conductor": "Alejandro Mouchard",
+      "pago": 159,
+      "sena": 55,
+      "restante": 104,
+      "choferCost": 105,
+      "neto": 49.23,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "06/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-Hotel.Excelsior",
+      "cliente": "christoff poppe",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 66.93,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "06/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "Tania Storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 196.72,
+      "sena": 65.57,
+      "restante": 0,
+      "choferCost": 19.67,
+      "neto": 177.05,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "07/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "AERO-ChâteauVictoriaHotel",
       "cliente": "Donna Wicks",
-      "pais": "",
+      "pais": "Connecto",
       "conductor": "José Berdén",
       "pago": 32.21,
       "sena": 0,
       "restante": 32.21,
-      "choferCost": 18.03,
-      "neto": 14.18,
+      "choferCost": 19.67,
+      "neto": 12.54,
       "fechaReserva": "28/09/26",
       "fechaSalida": "07/10/26"
     },
@@ -5388,6 +5444,20 @@
       "neto": 0,
       "fechaReserva": "18/09/26",
       "fechaSalida": "07/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
+      "cliente": "Tania Storm",
+      "pais": "Paraguay",
+      "conductor": "Ingrid Domínguez",
+      "pago": 196.72,
+      "sena": 65.57,
+      "restante": 0,
+      "choferCost": 19.67,
+      "neto": 177.05,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": "08/10/26"
     },
     {
       "mes": "Octubre",
@@ -5477,13 +5547,13 @@
       "mes": "Octubre",
       "route": "ChâteauVictoriaHotel-AERO",
       "cliente": "Donna Wicks",
-      "pais": "",
-      "conductor": "",
+      "pais": "Connecto",
+      "conductor": "José Berdén",
       "pago": 32.21,
       "sena": 0,
       "restante": 32.21,
-      "choferCost": 0,
-      "neto": 32.21,
+      "choferCost": 19.67,
+      "neto": 12.54,
       "fechaReserva": "01/10/26",
       "fechaSalida": "11/10/26"
     },
@@ -5570,20 +5640,6 @@
       "neto": 0,
       "fechaReserva": "18/09/26",
       "fechaSalida": "13/10/26"
-    },
-    {
-      "mes": "Octubre",
-      "route": "ChâteauVictoriaHotel-AERO",
-      "cliente": "Danielle Hayon",
-      "pais": "",
-      "conductor": "",
-      "pago": 40,
-      "sena": 0,
-      "restante": 40,
-      "choferCost": 0,
-      "neto": 40,
-      "fechaReserva": "01/10/26",
-      "fechaSalida": "14/10/26"
     },
     {
       "mes": "Octubre",
@@ -5922,6 +5978,20 @@
       "fechaSalida": ""
     },
     {
+      "mes": "Octubre",
+      "route": "",
+      "cliente": "josey widhalm",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 97,
+      "fechaReserva": "05/10/26",
+      "fechaSalida": ""
+    },
+    {
       "mes": "Noviembre",
       "route": "ASU-FOZ",
       "cliente": "joao chaleira",
@@ -6008,7 +6078,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-05": 2,
+      "2026-10-06": 1,
+      "2026-10-05": 10,
       "2026-10-04": 9,
       "2026-10-03": 7,
       "2026-10-02": 11,
@@ -6049,7 +6120,8 @@
     },
     "ventas": {
       "2026-10-02": 2,
-      "2026-10-01": 2,
+      "2026-10-05": 5,
+      "2026-10-01": 1,
       "2026-10-04": 1
     },
     "gads": {
@@ -6317,13 +6389,14 @@
       "2026-10-02": 8.13,
       "2026-10-03": 5.4,
       "2026-10-04": 4.59,
-      "2026-10-05": 1.46
+      "2026-10-05": 11.05,
+      "2026-10-06": 1.47
     }
   },
   "resenas": {
     "count": 65,
     "rating": 5,
-    "actualizado": "2026-10-05T12:10:04.136Z",
+    "actualizado": "2026-10-05T23:10:05.492Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -6502,10 +6575,10 @@
       "2026-09-29": 7,
       "2026-09-30": 10,
       "2026-10-01": 19,
-      "2026-10-05": 3
+      "2026-10-05": 13
     },
     "monthly": {
-      "Octubre": 58,
+      "Octubre": 68,
       "Septiembre": 213,
       "Agosto": 27
     }
