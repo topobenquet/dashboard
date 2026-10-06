@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T10:25:01.942Z",
+ "generatedAt": "2026-10-06T15:34:08.820Z",
  "refDate": "2026-10-05",
  "lastSyncLabel": "Oct 5, 2026",
  "daysElapsed": 5,
@@ -10,17 +10,17 @@
    "name": "Google Search",
    "budget": 16200,
    "spend": 2577.96,
-   "impr": 181845,
+   "impr": 181865,
    "clicks": 6724,
-   "conv": 665.62,
-   "revenue": 24237.93,
+   "conv": 668.62,
+   "revenue": 24358.21,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.04,
    "cpc": 0.38,
-   "cpa": 3.87,
-   "roas": 9.4,
+   "cpa": 3.86,
+   "roas": 9.45,
    "projEOM": 15983.35,
    "pctBudget": 0.16,
    "pacing": 0.99
@@ -28,19 +28,19 @@
   {
    "name": "Google PMax",
    "budget": 36000,
-   "spend": 5262.94,
-   "impr": 592138,
-   "clicks": 16240,
-   "conv": 1638.54,
-   "revenue": 69914.98,
+   "spend": 5263.52,
+   "impr": 592212,
+   "clicks": 16241,
+   "conv": 1654.54,
+   "revenue": 70622.63,
    "live": true,
    "stale": false,
    "noData": false,
    "ctr": 0.03,
    "cpc": 0.32,
-   "cpa": 3.21,
-   "roas": 13.28,
-   "projEOM": 32630.22,
+   "cpa": 3.18,
+   "roas": 13.42,
+   "projEOM": 32633.82,
    "pctBudget": 0.15,
    "pacing": 0.91
   },
@@ -90,8 +90,8 @@
    "clicks": 6641,
    "conv": 1221,
    "revenue": 0,
-   "live": true,
-   "stale": false,
+   "live": false,
+   "stale": true,
    "noData": false,
    "ctr": 0.01,
    "cpc": 0,
@@ -109,8 +109,8 @@
    "clicks": 493,
    "conv": 122,
    "revenue": 0,
-   "live": true,
-   "stale": false,
+   "live": false,
+   "stale": true,
    "noData": false,
    "ctr": 0.01,
    "cpc": 0,
@@ -164,31 +164,31 @@
    "platform": "google",
    "channel": "Google PMax",
    "name": "PMax | NonBrand  | All Stores",
-   "spend": 4152.47,
-   "impr": 562483,
-   "clicks": 10231,
-   "conv": 410.4,
-   "revenue": 18587.86
+   "spend": 4153.05,
+   "impr": 562553,
+   "clicks": 10232,
+   "conv": 417.4,
+   "revenue": 18845.6
   },
   {
    "platform": "google",
    "channel": "Google Search",
    "name": "Search | NonBrand | All Stores",
    "spend": 2007.8,
-   "impr": 168812,
+   "impr": 168832,
    "clicks": 2787,
-   "conv": 135.62,
-   "revenue": 5481.98
+   "conv": 138.62,
+   "revenue": 5602.26
   },
   {
    "platform": "google",
    "channel": "Google PMax",
    "name": "PMax | Brand | All Stores",
    "spend": 1110.47,
-   "impr": 29655,
+   "impr": 29659,
    "clicks": 6009,
-   "conv": 1228.15,
-   "revenue": 51327.12
+   "conv": 1237.15,
+   "revenue": 51777.02
   },
   {
    "platform": "google",
@@ -316,7 +316,7 @@
   "2026-10-02": 1801.4,
   "2026-10-03": 1574.16,
   "2026-10-04": 1612.08,
-  "2026-10-05": 1706.16
+  "2026-10-05": 1706.74
  },
  "sources": {
   "google": {
@@ -328,8 +328,10 @@
    "asOf": "2026-10-05"
   },
   "meta": {
-   "ok": true,
-   "asOf": "2026-10-05"
+   "ok": false,
+   "stale": true,
+   "asOf": "2026-10-05",
+   "error": "claude -p no devolvió resultado de ads_get_ad_entities"
   },
   "apple": {
    "ok": false,
@@ -348,21 +350,21 @@
     "canales": {
      "Google Search": {
       "spend": 2142.05,
-      "impr": 152649,
+      "impr": 152653,
       "clicks": 5987,
-      "conv": 618.66,
-      "revenue": 22384.27
+      "conv": 621.66,
+      "revenue": 22504.55
      },
      "Google PMax": {
       "spend": 4073.03,
-      "impr": 479845,
+      "impr": 479855,
       "clicks": 13239,
-      "conv": 1429.21,
-      "revenue": 61566.25
+      "conv": 1445.21,
+      "revenue": 62273.89
      },
      "Google App": {
       "spend": 108.91,
-      "impr": 5190,
+      "impr": 5189,
       "clicks": 167,
       "conv": 136,
       "revenue": 0
@@ -404,21 +406,21 @@
     "canales": {
      "Google Search": {
       "spend": 435.91,
-      "impr": 29196,
+      "impr": 29212,
       "clicks": 737,
       "conv": 46.96,
       "revenue": 1853.66
      },
      "Google PMax": {
-      "spend": 1189.91,
-      "impr": 112293,
-      "clicks": 3001,
+      "spend": 1190.49,
+      "impr": 112357,
+      "clicks": 3002,
       "conv": 209.33,
       "revenue": 8348.73
      },
      "Google App": {
       "spend": 17.62,
-      "impr": 1056,
+      "impr": 1057,
       "clicks": 28,
       "conv": 23,
       "revenue": 0
@@ -460,21 +462,21 @@
      "platform": "google",
      "channel": "Google PMax",
      "name": "PMax | NonBrand  | All Stores",
-     "spend": 4152.47,
-     "impr": 562483,
-     "clicks": 10231,
-     "conv": 410.4,
-     "revenue": 18587.86
+     "spend": 4153.05,
+     "impr": 562553,
+     "clicks": 10232,
+     "conv": 417.4,
+     "revenue": 18845.6
     },
     {
      "platform": "google",
      "channel": "Google PMax",
      "name": "PMax | Brand | All Stores",
      "spend": 1110.47,
-     "impr": 29655,
+     "impr": 29659,
      "clicks": 6009,
-     "conv": 1228.15,
-     "revenue": 51327.12
+     "conv": 1237.15,
+     "revenue": 51777.02
     }
    ],
    "Google Search": [
@@ -483,10 +485,10 @@
      "channel": "Google Search",
      "name": "Search | NonBrand | All Stores",
      "spend": 2007.8,
-     "impr": 168812,
+     "impr": 168832,
      "clicks": 2787,
-     "conv": 135.62,
-     "revenue": 5481.98
+     "conv": 138.62,
+     "revenue": 5602.26
     },
     {
      "platform": "google",
@@ -823,8 +825,8 @@
       "spend": 932.81,
       "impr": 17533,
       "clicks": 5240,
-      "conv": 841,
-      "revenue": 27762.13
+      "conv": 842,
+      "revenue": 27786.35
      },
      "nonbrand": {
       "spend": 2938.7,
@@ -877,8 +879,8 @@
       "spend": 1808.52,
       "impr": 45690,
       "clicks": 9342,
-      "conv": 2218,
-      "revenue": 91563.33
+      "conv": 2219,
+      "revenue": 91615.48
      },
      "nonbrand": {
       "spend": 5799.52,
@@ -904,10 +906,10 @@
      },
      "nonbrand": {
       "spend": 2691.97,
-      "impr": 228346,
+      "impr": 228350,
       "clicks": 3800,
-      "conv": 205.58,
-      "revenue": 8030.89
+      "conv": 208.58,
+      "revenue": 8151.17
      }
     },
     "pmax": {
@@ -915,15 +917,15 @@
       "spend": 1763.29,
       "impr": 46612,
       "clicks": 9218,
-      "conv": 2030.1,
-      "revenue": 83192.8
+      "conv": 2039.1,
+      "revenue": 83642.7
      },
      "nonbrand": {
       "spend": 5613.81,
-      "impr": 736476,
+      "impr": 736486,
       "clicks": 13785,
-      "conv": 714.27,
-      "revenue": 31767.1
+      "conv": 721.27,
+      "revenue": 32024.85
      }
     },
     "otras": []
@@ -942,7 +944,7 @@
      },
      "nonbrand": {
       "spend": 393.07,
-      "impr": 28191,
+      "impr": 28207,
       "clicks": 494,
       "conv": 12.96,
       "revenue": 397.87
@@ -951,15 +953,15 @@
     "pmax": {
      "brand": {
       "spend": 260.36,
-      "impr": 5798,
+      "impr": 5802,
       "clicks": 1072,
       "conv": 175.61,
       "revenue": 7030.26
      },
      "nonbrand": {
-      "spend": 929.56,
-      "impr": 106495,
-      "clicks": 1929,
+      "spend": 930.14,
+      "impr": 106555,
+      "clicks": 1930,
       "conv": 33.72,
       "revenue": 1318.47
      }
@@ -978,26 +980,26 @@
     },
     "nonbrand": {
      "spend": 2007.8,
-     "impr": 168812,
+     "impr": 168832,
      "clicks": 2787,
-     "conv": 135.62,
-     "revenue": 5481.98
+     "conv": 138.62,
+     "revenue": 5602.26
     }
    },
    "pmax": {
     "brand": {
      "spend": 1110.47,
-     "impr": 29655,
+     "impr": 29659,
      "clicks": 6009,
-     "conv": 1228.15,
-     "revenue": 51327.12
+     "conv": 1237.15,
+     "revenue": 51777.02
     },
     "nonbrand": {
-     "spend": 4152.47,
-     "impr": 562483,
-     "clicks": 10231,
-     "conv": 410.4,
-     "revenue": 18587.86
+     "spend": 4153.05,
+     "impr": 562553,
+     "clicks": 10232,
+     "conv": 417.4,
+     "revenue": 18845.6
     }
    },
    "otras": []
