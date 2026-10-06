@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T23:10:21.476Z",
+ "generated": "2026-10-06T11:10:03.852Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -589,7 +589,6 @@
     "Asu - Pto Iguazu",
     "Transfer Pto Iguazu interno",
     "Round Transfer Cataratas",
-    "Transfer Pto Iguazu interno",
     "Pto Iguazu - Asu"
    ],
    "kmEsperado": 750,
@@ -1178,14 +1177,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-05",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-10-06",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1323,20 +1314,6 @@
   }
  ],
  "alertas": [
-  {
-   "key": "sinkm:Luis:2026-10-04:ASU-FOZ",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado ASU-FOZ del 04/10. Mandalas con el número escrito, por favor.",
-   "ts": 1791169199,
-   "fecha": "2026-10-04"
-  },
-  {
-   "key": "sinkm:Luis:2026-10-04:ASU-FOZ",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado ASU-FOZ del 04/10. Mandalas con el número escrito, por favor.",
-   "ts": 1791169199,
-   "fecha": "2026-10-04"
-  },
   {
    "key": "foto:ACAB69D7728AC638839142D90E101591",
    "nivel": "grupo",
