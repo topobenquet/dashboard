@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T11:10:03.852Z",
+ "generated": "2026-10-06T13:10:19.574Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -43,7 +43,7 @@
     }
    ],
    "gsKm": 1646,
-   "ultimoKm": 98220
+   "ultimoKm": 98224
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -62,9 +62,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 533,
-   "kmFuera": 824,
+   "kmFuera": 828,
    "viajes": 4,
-   "costoComb": 2233622,
+   "costoComb": 2240206,
    "pagado": 0
   },
   "Voxy": {
@@ -78,8 +78,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 14,
-   "conFoto": 8
+   "lecturas": 15,
+   "conFoto": 9
   },
   {
    "chofer": "Gustavo",
@@ -701,6 +701,17 @@
   }
  ],
  "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 98220,
+   "hasta": 98224,
+   "km": 4,
+   "fechaDesde": "2026-10-05",
+   "fechaHasta": "2026-10-06",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
   {
    "vehiculo": "H1",
    "desde": 98143,
