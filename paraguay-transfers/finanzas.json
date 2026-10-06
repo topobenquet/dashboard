@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T18:30:11.831Z",
+ "generated": "2026-10-06T20:30:28.188Z",
  "tc": 5850,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -81,13 +81,14 @@
   {
    "fecha": "2026-10-06",
    "in": 2101.71,
-   "out": 0,
-   "n": 3,
+   "out": 348.72,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 2101.71
+    "Pagopar": 2101.71,
+    "WhatsApp · Pagos (Majo)": -348.72
    },
-   "neto": 2101.71,
-   "acum": 2341.87
+   "neto": 1752.99,
+   "acum": 1993.15
   }
  ],
  "movimientos": [
@@ -242,6 +243,22 @@
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver INGRID DOMINGUEZ",
    "gs": 470000
+  },
+  {
+   "d": "2026-10-06",
+   "t": "out",
+   "usd": 41.03,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver José Berden - transfer Pax Donna Wick 07-10 y 11/10",
+   "gs": 240000
+  },
+  {
+   "d": "2026-10-06",
+   "t": "out",
+   "usd": 307.69,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Traslado Asu / Pto Iguazu. 07/10 3am Pax: Yumizumba",
+   "gs": 1800000
   },
   {
    "d": "2026-10-01",
