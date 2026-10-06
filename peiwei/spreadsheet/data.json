@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T16:57:43.543Z",
+ "generatedAt": "2026-10-06T16:59:05.614Z",
  "refDate": "2026-10-05",
  "lastSyncLabel": "Oct 5, 2026",
  "inicio": "2026-04-20",
@@ -70,7 +70,7 @@
    "asOf": "2026-10-05"
   },
   "meta": {
-   "ok": false,
+   "ok": true,
    "asOf": "2026-10-05",
    "meses": {
     "2026-04-01": "cache",
@@ -79,7 +79,7 @@
     "2026-07-01": "cache",
     "2026-08-01": "cache",
     "2026-09-01": "cache",
-    "2026-10-01": "error"
+    "2026-10-01": "live"
    }
   },
   "apple": {
@@ -3548,40 +3548,40 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "28-Sep · 4-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 310.97,
+      "impr": 36506,
+      "clicks": 351,
+      "conv": 137,
+      "revenue": 3859.2
      },
      "aud": {
       "visitors": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 144.05,
+       "impr": 15725,
+       "clicks": 179,
+       "conv": 16,
+       "revenue": 425.72
       },
       "menu": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 84.97,
+       "impr": 9202,
+       "clicks": 99,
+       "conv": 63,
+       "revenue": 1636.71
       },
       "cart": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 49.59,
+       "impr": 4386,
+       "clicks": 34,
+       "conv": 20,
+       "revenue": 784.28
       },
       "otras": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 32.36,
+       "impr": 7193,
+       "clicks": 39,
+       "conv": 38,
+       "revenue": 1012.49
       }
      }
     },
@@ -3592,40 +3592,40 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "5-Oct · 5-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 61.69,
+      "impr": 7923,
+      "clicks": 51,
+      "conv": 30,
+      "revenue": 633.99
      },
      "aud": {
       "visitors": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 24.74,
+       "impr": 2883,
+       "clicks": 27,
+       "conv": 2,
+       "revenue": 45.5
       },
       "menu": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 15.35,
+       "impr": 1549,
+       "clicks": 13,
+       "conv": 15,
+       "revenue": 359.42
       },
       "cart": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 10.34,
+       "impr": 928,
+       "clicks": 6,
+       "conv": 6,
+       "revenue": 143.6
       },
       "otras": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 11.26,
+       "impr": 2563,
+       "clicks": 5,
+       "conv": 7,
+       "revenue": 85.47
       }
      }
     }
@@ -3895,40 +3895,40 @@
      "parcial": true,
      "label": "Oct 2026",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 372.66,
+      "impr": 44429,
+      "clicks": 402,
+      "conv": 167,
+      "revenue": 4493.19
      },
      "aud": {
       "visitors": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 168.79,
+       "impr": 18608,
+       "clicks": 206,
+       "conv": 18,
+       "revenue": 471.22
       },
       "menu": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 100.32,
+       "impr": 10751,
+       "clicks": 112,
+       "conv": 78,
+       "revenue": 1996.13
       },
       "cart": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 59.93,
+       "impr": 5314,
+       "clicks": 40,
+       "conv": 26,
+       "revenue": 927.88
       },
       "otras": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 43.62,
+       "impr": 9756,
+       "clicks": 44,
+       "conv": 45,
+       "revenue": 1097.96
       }
      }
     }
@@ -7073,8 +7073,8 @@
       "spend": 3528.1,
       "impr": 245822,
       "clicks": 8989,
-      "conv": 940.58,
-      "revenue": 33352.8
+      "conv": 941.58,
+      "revenue": 33390.99
      },
      "aud": {
       "brand": {
@@ -7088,8 +7088,8 @@
        "spend": 2691.97,
        "impr": 228350,
        "clicks": 3800,
-       "conv": 210.58,
-       "revenue": 8241.83
+       "conv": 211.58,
+       "revenue": 8280.02
       }
      }
     },
@@ -7101,7 +7101,7 @@
      "label": "5-Oct · 5-Oct",
      "total": {
       "spend": 435.91,
-      "impr": 29220,
+      "impr": 29222,
       "clicks": 737,
       "conv": 46.96,
       "revenue": 1853.66
@@ -7116,7 +7116,7 @@
       },
       "nonbrand": {
        "spend": 393.07,
-       "impr": 28215,
+       "impr": 28217,
        "clicks": 494,
        "conv": 12.96,
        "revenue": 397.87
@@ -7306,10 +7306,10 @@
      "label": "Oct 2026",
      "total": {
       "spend": 2577.96,
-      "impr": 181873,
+      "impr": 181875,
       "clicks": 6724,
-      "conv": 670.62,
-      "revenue": 24448.87
+      "conv": 671.62,
+      "revenue": 24487.06
      },
      "aud": {
       "brand": {
@@ -7321,10 +7321,10 @@
       },
       "nonbrand": {
        "spend": 2007.8,
-       "impr": 168840,
+       "impr": 168842,
        "clicks": 2787,
-       "conv": 140.62,
-       "revenue": 5692.92
+       "conv": 141.62,
+       "revenue": 5731.11
       }
      }
     }
@@ -8055,8 +8055,8 @@
       "spend": 7377.09,
       "impr": 783097,
       "clicks": 23003,
-      "conv": 2784.54,
-      "revenue": 116584.27
+      "conv": 2785.54,
+      "revenue": 116599.16
      },
      "aud": {
       "brand": {
@@ -8070,8 +8070,8 @@
        "spend": 5613.81,
        "impr": 736485,
        "clicks": 13785,
-       "conv": 733.44,
-       "revenue": 32491.99
+       "conv": 734.44,
+       "revenue": 32506.88
       }
      }
     },
@@ -8290,8 +8290,8 @@
       "spend": 5263.52,
       "impr": 592210,
       "clicks": 16241,
-      "conv": 1678.71,
-      "revenue": 71539.35
+      "conv": 1679.71,
+      "revenue": 71554.24
      },
      "aud": {
       "brand": {
@@ -8305,8 +8305,8 @@
        "spend": 4153.05,
        "impr": 562552,
        "clicks": 10232,
-       "conv": 429.57,
-       "revenue": 19312.75
+       "conv": 430.57,
+       "revenue": 19327.64
       }
      }
     }
@@ -9196,26 +9196,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "28-Sep · 4-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 4372.77,
+      "impr": 688685,
+      "clicks": 3557,
+      "conv": 938,
+      "revenue": 31953.5
      },
      "aud": {
       "broad": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 590.51,
+       "impr": 115677,
+       "clicks": 402,
+       "conv": 567,
+       "revenue": 17499.51
       },
       "lal": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 3782.26,
+       "impr": 573008,
+       "clicks": 3155,
+       "conv": 371,
+       "revenue": 14453.99
       },
       "otras": {
        "spend": 0,
@@ -9233,26 +9233,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "5-Oct · 5-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 553.97,
+      "impr": 91392,
+      "clicks": 491,
+      "conv": 238,
+      "revenue": 6237.06
      },
      "aud": {
       "broad": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 212.67,
+       "impr": 39651,
+       "clicks": 155,
+       "conv": 177,
+       "revenue": 4298.07
       },
       "lal": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 341.3,
+       "impr": 51741,
+       "clicks": 336,
+       "conv": 61,
+       "revenue": 1938.99
       },
       "otras": {
        "spend": 0,
@@ -9487,26 +9487,26 @@
      "parcial": true,
      "label": "Oct 2026",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 4926.74,
+      "impr": 780077,
+      "clicks": 4048,
+      "conv": 1176,
+      "revenue": 38190.56
      },
      "aud": {
       "broad": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 803.18,
+       "impr": 155328,
+       "clicks": 557,
+       "conv": 744,
+       "revenue": 21797.58
       },
       "lal": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 4123.56,
+       "impr": 624749,
+       "clicks": 3491,
+       "conv": 432,
+       "revenue": 16392.98
       },
       "otras": {
        "spend": 0,
@@ -10743,8 +10743,8 @@
       "spend": 11492.06,
       "impr": 1040665,
       "clicks": 32747,
-      "conv": 4096.12,
-      "revenue": 154128.62
+      "conv": 4098.12,
+      "revenue": 154181.7
      },
      "aud": {
       "rmk": {
@@ -10758,8 +10758,8 @@
        "spend": 11098.06,
        "impr": 1037967,
        "clicks": 32284,
-       "conv": 3963.12,
-       "revenue": 149937.07
+       "conv": 3965.12,
+       "revenue": 149990.15
       }
      }
     },
@@ -10771,7 +10771,7 @@
      "label": "5-Oct · 5-Oct",
      "total": {
       "spend": 1706.74,
-      "impr": 142851,
+      "impr": 142853,
       "clicks": 3844,
       "conv": 302.29,
       "revenue": 10958.39
@@ -10786,7 +10786,7 @@
       },
       "comun": {
        "spend": 1644.02,
-       "impr": 142633,
+       "impr": 142635,
        "clicks": 3767,
        "conv": 279.29,
        "revenue": 10202.4
@@ -10976,10 +10976,10 @@
      "label": "Oct 2026",
      "total": {
       "spend": 8274.09,
-      "impr": 782471,
+      "impr": 782473,
       "clicks": 23518,
-      "conv": 2600.33,
-      "revenue": 98929.19
+      "conv": 2602.33,
+      "revenue": 98982.27
      },
      "aud": {
       "rmk": {
@@ -10991,10 +10991,10 @@
       },
       "comun": {
        "spend": 7968.01,
-       "impr": 780329,
+       "impr": 780331,
        "clicks": 23160,
-       "conv": 2508.33,
-       "revenue": 95988.23
+       "conv": 2510.33,
+       "revenue": 96041.31
       }
      }
     }
@@ -11722,26 +11722,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "28-Sep · 4-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 4683.74,
+      "impr": 725191,
+      "clicks": 3908,
+      "conv": 1075,
+      "revenue": 35812.7
      },
      "aud": {
       "rmk": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 310.97,
+       "impr": 36506,
+       "clicks": 351,
+       "conv": 137,
+       "revenue": 3859.2
       },
       "comun": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 4372.77,
+       "impr": 688685,
+       "clicks": 3557,
+       "conv": 938,
+       "revenue": 31953.5
       }
      }
     },
@@ -11752,26 +11752,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "5-Oct · 5-Oct",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 615.66,
+      "impr": 99315,
+      "clicks": 542,
+      "conv": 268,
+      "revenue": 6871.05
      },
      "aud": {
       "rmk": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 61.69,
+       "impr": 7923,
+       "clicks": 51,
+       "conv": 30,
+       "revenue": 633.99
       },
       "comun": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 553.97,
+       "impr": 91392,
+       "clicks": 491,
+       "conv": 238,
+       "revenue": 6237.06
       }
      }
     }
@@ -11957,26 +11957,26 @@
      "parcial": true,
      "label": "Oct 2026",
      "total": {
-      "spend": 0,
-      "impr": 0,
-      "clicks": 0,
-      "conv": 0,
-      "revenue": 0
+      "spend": 5299.4,
+      "impr": 824506,
+      "clicks": 4450,
+      "conv": 1343,
+      "revenue": 42683.75
      },
      "aud": {
       "rmk": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 372.66,
+       "impr": 44429,
+       "clicks": 402,
+       "conv": 167,
+       "revenue": 4493.19
       },
       "comun": {
-       "spend": 0,
-       "impr": 0,
-       "clicks": 0,
-       "conv": 0,
-       "revenue": 0
+       "spend": 4926.74,
+       "impr": 780077,
+       "clicks": 4048,
+       "conv": 1176,
+       "revenue": 38190.56
       }
      }
     }
@@ -12704,26 +12704,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "28-Sep · 4-Oct",
      "total": {
-      "spend": 11492.06,
-      "impr": 1040665,
-      "clicks": 32747,
-      "conv": 4096.12,
-      "revenue": 154128.62
+      "spend": 16175.8,
+      "impr": 1765856,
+      "clicks": 36655,
+      "conv": 5173.12,
+      "revenue": 189994.4
      },
      "aud": {
       "rmk": {
-       "spend": 394.01,
-       "impr": 2698,
-       "clicks": 463,
-       "conv": 133,
-       "revenue": 4191.55
+       "spend": 704.98,
+       "impr": 39204,
+       "clicks": 814,
+       "conv": 270,
+       "revenue": 8050.75
       },
       "comun": {
-       "spend": 11098.06,
-       "impr": 1037967,
-       "clicks": 32284,
-       "conv": 3963.12,
-       "revenue": 149937.07
+       "spend": 15470.83,
+       "impr": 1726652,
+       "clicks": 35841,
+       "conv": 4903.12,
+       "revenue": 181943.65
       }
      }
     },
@@ -12734,26 +12734,26 @@
      "ciclo": "RMK 9 (no offer)",
      "label": "5-Oct · 5-Oct",
      "total": {
-      "spend": 1706.74,
-      "impr": 142851,
-      "clicks": 3844,
-      "conv": 302.29,
-      "revenue": 10958.39
+      "spend": 2322.4,
+      "impr": 242168,
+      "clicks": 4386,
+      "conv": 570.29,
+      "revenue": 17829.44
      },
      "aud": {
       "rmk": {
-       "spend": 62.72,
-       "impr": 218,
-       "clicks": 77,
-       "conv": 23,
-       "revenue": 755.99
+       "spend": 124.41,
+       "impr": 8141,
+       "clicks": 128,
+       "conv": 53,
+       "revenue": 1389.98
       },
       "comun": {
-       "spend": 1644.02,
-       "impr": 142633,
-       "clicks": 3767,
-       "conv": 279.29,
-       "revenue": 10202.4
+       "spend": 2197.99,
+       "impr": 234027,
+       "clicks": 4258,
+       "conv": 517.29,
+       "revenue": 16439.46
       }
      }
     }
@@ -12939,26 +12939,26 @@
      "parcial": true,
      "label": "Oct 2026",
      "total": {
-      "spend": 8274.09,
-      "impr": 782471,
-      "clicks": 23518,
-      "conv": 2600.33,
-      "revenue": 98929.19
+      "spend": 13573.49,
+      "impr": 1606979,
+      "clicks": 27968,
+      "conv": 3945.33,
+      "revenue": 141666.02
      },
      "aud": {
       "rmk": {
-       "spend": 306.09,
-       "impr": 2142,
-       "clicks": 358,
-       "conv": 92,
-       "revenue": 2940.96
+       "spend": 678.75,
+       "impr": 46571,
+       "clicks": 760,
+       "conv": 259,
+       "revenue": 7434.15
       },
       "comun": {
-       "spend": 7968.01,
-       "impr": 780329,
-       "clicks": 23160,
-       "conv": 2508.33,
-       "revenue": 95988.23
+       "spend": 12894.75,
+       "impr": 1560408,
+       "clicks": 27208,
+       "conv": 3686.33,
+       "revenue": 134231.87
       }
      }
     }
