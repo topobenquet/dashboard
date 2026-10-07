@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-07T19:01:54.121Z",
+ "generatedAt": "2026-10-07T19:03:09.062Z",
  "refDate": "2026-10-06",
  "lastSyncLabel": "Oct 6, 2026",
  "daysElapsed": 6,
@@ -142,21 +142,21 @@
   {
    "name": "Apple Search Ads",
    "budget": 675,
-   "spend": 0,
-   "impr": 0,
-   "clicks": 0,
-   "conv": 0,
+   "spend": 135.82,
+   "impr": 5655,
+   "clicks": 65,
+   "conv": 21,
    "revenue": 0,
-   "live": false,
+   "live": true,
    "stale": false,
-   "noData": true,
-   "ctr": 0,
-   "cpc": 0,
-   "cpa": 0,
+   "noData": false,
+   "ctr": 0.01,
+   "cpc": 2.09,
+   "cpa": 6.47,
    "roas": 0,
-   "projEOM": 0,
-   "pctBudget": 0,
-   "pacing": 0
+   "projEOM": 701.73,
+   "pctBudget": 0.2,
+   "pacing": 1.04
   },
   {
    "name": "Apple Maps",
@@ -280,6 +280,16 @@
    "revenue": 0
   },
   {
+   "platform": "apple",
+   "channel": "Apple Search Ads",
+   "name": "Non Branded Jan 2026",
+   "spend": 135.82,
+   "impr": 5655,
+   "clicks": 65,
+   "conv": 21,
+   "revenue": 0
+  },
+  {
    "platform": "meta",
    "channel": "Meta Remarketing",
    "name": "Remarketing | Menu Browsers",
@@ -362,17 +372,15 @@
    "asOf": "2026-10-06"
   },
   "apple": {
-   "ok": false,
-   "error": "fetch failed"
+   "ok": true,
+   "asOf": "2026-10-06"
   },
   "appleMaps": {
    "ok": true,
    "asOf": "2026-10-06"
   }
  },
- "unavailable": [
-  "Apple Search Ads"
- ],
+ "unavailable": [],
  "weekly": {
   "semanas": [
    {
@@ -428,6 +436,13 @@
       "clicks": 153,
       "conv": 25,
       "revenue": 661.53
+     },
+     "Apple Search Ads": {
+      "spend": 94.01,
+      "impr": 3617,
+      "clicks": 44,
+      "conv": 18,
+      "revenue": 0
      }
     }
    },
@@ -484,6 +499,13 @@
       "clicks": 76,
       "conv": 19,
       "revenue": 540.73
+     },
+     "Apple Search Ads": {
+      "spend": 41.81,
+      "impr": 2038,
+      "clicks": 21,
+      "conv": 3,
+      "revenue": 0
      }
     }
    }
@@ -660,6 +682,18 @@
      "impr": 7173,
      "clicks": 225,
      "conv": 188,
+     "revenue": 0
+    }
+   ],
+   "Apple Search Ads": [
+    {
+     "platform": "apple",
+     "channel": "Apple Search Ads",
+     "name": "Non Branded Jan 2026",
+     "spend": 135.82,
+     "impr": 5655,
+     "clicks": 65,
+     "conv": 21,
      "revenue": 0
     }
    ]
