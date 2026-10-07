@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T13:10:19.574Z",
+ "generated": "2026-10-07T11:10:09.700Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -43,7 +43,7 @@
     }
    ],
    "gsKm": 1646,
-   "ultimoKm": 98224
+   "ultimoKm": 98389
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -62,9 +62,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 533,
-   "kmFuera": 828,
+   "kmFuera": 993,
    "viajes": 4,
-   "costoComb": 2240206,
+   "costoComb": 2511796,
    "pagado": 0
   },
   "Voxy": {
@@ -78,8 +78,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 15,
-   "conFoto": 9
+   "lecturas": 16,
+   "conFoto": 10
   },
   {
    "chofer": "Gustavo",
@@ -108,7 +108,6 @@
    "tanqueIni": 0.75,
    "tanqueFin": 0.75,
    "traslados": [
-    "Vehiculo a disposición",
     "Vehiculo a disposición"
    ],
    "kmEsperado": null,
@@ -137,7 +136,6 @@
    "tanqueIni": null,
    "tanqueFin": null,
    "traslados": [
-    "Vehiculo a disposición",
     "Vehiculo a disposición"
    ],
    "kmEsperado": null,
@@ -201,7 +199,6 @@
    "tanqueFin": 0.8,
    "traslados": [
     "Foz-Asu",
-    "Vehiculo a disposición",
     "Vehiculo a disposición"
    ],
    "kmEsperado": null,
@@ -231,11 +228,9 @@
    "km": 810,
    "tanqueIni": 0.5,
    "tanqueFin": 0.2,
-   "traslados": [
-    "Aeropuerto - Encarnación"
-   ],
-   "kmEsperado": 740,
-   "desvio": 0.095,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 900400,
    "combustibleCorresponde": 1333260,
@@ -275,11 +270,9 @@
    "km": 31,
    "tanqueIni": 0.8,
    "tanqueFin": 0.9,
-   "traslados": [
-    "ASU-AERO"
-   ],
-   "kmEsperado": 40,
-   "desvio": -0.225,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 51026,
@@ -303,12 +296,9 @@
    "km": 80,
    "tanqueIni": 0.85,
    "tanqueFin": 0.9,
-   "traslados": [
-    "Aero-Yacht",
-    "Aero-Dazzler"
-   ],
-   "kmEsperado": 40,
-   "desvio": 1,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 131680,
@@ -332,12 +322,9 @@
    "km": 17,
    "tanqueIni": null,
    "tanqueFin": 0.05,
-   "traslados": [
-    "Aero-Asu",
-    "Crowne Plaza  -Sheraton"
-   ],
-   "kmEsperado": 40,
-   "desvio": -0.575,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 27982,
@@ -363,9 +350,7 @@
    "km": 81,
    "tanqueIni": 0.55,
    "tanqueFin": 0.1,
-   "traslados": [
-    "Tour Asu -  desde Crowne Plaza"
-   ],
+   "traslados": [],
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
@@ -391,9 +376,7 @@
    "km": 44,
    "tanqueIni": 0.6,
    "tanqueFin": 0.4,
-   "traslados": [
-    "Vehiculo a disposición"
-   ],
+   "traslados": [],
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
@@ -419,9 +402,7 @@
    "km": 68,
    "tanqueIni": 0.6,
    "tanqueFin": 0.15,
-   "traslados": [
-    "Vehiculo a disposición"
-   ],
+   "traslados": [],
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
@@ -447,11 +428,9 @@
    "km": 757,
    "tanqueIni": 0.95,
    "tanqueFin": 0.85,
-   "traslados": [
-    "Asu - Iguazu Falls round trip"
-   ],
-   "kmEsperado": 750,
-   "desvio": 0.009,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": 800000,
    "combustibleCargado": 800000,
    "combustibleCorresponde": 1246022,
@@ -486,11 +465,9 @@
    "km": 47,
    "tanqueIni": 0.9,
    "tanqueFin": 0.9,
-   "traslados": [
-    "Yacht-Aero"
-   ],
-   "kmEsperado": 40,
-   "desvio": 0.175,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 77362,
@@ -514,11 +491,9 @@
    "km": 114,
    "tanqueIni": 0.55,
    "tanqueFin": null,
-   "traslados": [
-    "Hotel Hilton (ASU) - Tour SanBer"
-   ],
-   "kmEsperado": 110,
-   "desvio": 0.036,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 187644,
@@ -544,11 +519,9 @@
    "km": 691,
    "tanqueIni": 0.9,
    "tanqueFin": 0.5,
-   "traslados": [
-    "ASU-FOZ"
-   ],
-   "kmEsperado": 690,
-   "desvio": 0.001,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": 728000,
    "combustibleCargado": 728008,
    "combustibleCorresponde": 1137386,
@@ -585,10 +558,6 @@
    "tanqueFin": 0.85,
    "traslados": [
     "Asu - Pto Iguazu",
-    "Pto Iguazu - Asu",
-    "Asu - Pto Iguazu",
-    "Transfer Pto Iguazu interno",
-    "Round Transfer Cataratas",
     "Pto Iguazu - Asu"
    ],
    "kmEsperado": 750,
@@ -701,6 +670,17 @@
   }
  ],
  "huecos": [
+  {
+   "vehiculo": "H1",
+   "desde": 98224,
+   "hasta": 98389,
+   "km": 165,
+   "fechaDesde": "2026-10-06",
+   "fechaHasta": "2026-10-06",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
   {
    "vehiculo": "H1",
    "desde": 98220,
@@ -1188,14 +1168,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-06",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-10-07",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1239,20 +1211,12 @@
    "fecha": "2026-10-12",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-10-12",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
    "ruta": "Asunción Rent Suites Santa Teresa - Aero",
    "km": 40,
    "adelanto": 72000
   },
   {
-   "fecha": "2026-10-13",
+   "fecha": "2026-10-12",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "Vehiculo a disposición",
@@ -1266,6 +1230,14 @@
    "ruta": "AERO-ChâteauVictoriaHotel",
    "km": 40,
    "adelanto": 72000
+  },
+  {
+   "fecha": "2026-10-13",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
   },
   {
    "fecha": "2026-10-14",
@@ -1295,17 +1267,17 @@
    "fecha": "2026-10-17",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
+   "ruta": "ASU-PtoIguazu",
+   "km": 750,
+   "adelanto": 1358000
   },
   {
    "fecha": "2026-10-17",
    "chofer": "Alfredo",
    "vehiculo": "H1",
-   "ruta": "ASU-PtoIguazu",
-   "km": 750,
-   "adelanto": 1358000
+   "ruta": "Vehiculo a disposición",
+   "km": null,
+   "adelanto": null
   },
   {
    "fecha": "2026-10-18",
@@ -1325,6 +1297,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:98224:98389",
+   "nivel": "juan",
+   "texto": "H1: 165 km sin traslado entre el 06/10 (km 98.224, Alfredo) y el 06/10 (km 98.389, Alfredo).",
+   "ts": 1791341995,
+   "fecha": "2026-10-06"
+  },
   {
    "key": "foto:ACAB69D7728AC638839142D90E101591",
    "nivel": "grupo",
@@ -1387,20 +1366,6 @@
    "texto": "H1: 37 km sin traslado entre el 26/09 (km 95.994, Alfredo) y el 28/09 (km 96.031, Alfredo); no hubo km final.",
    "ts": 1790596783,
    "fecha": "2026-09-28"
-  },
-  {
-   "key": "desvio:H1:95850",
-   "nivel": "juan",
-   "texto": "H1, Alfredo, 23/09 (Aero-Yacht + Aero-Dazzler): 80 km reales contra 40 km esperados (+100%).",
-   "ts": 1790171290,
-   "fecha": "2026-09-23"
-  },
-  {
-   "key": "desvio:H1:95828",
-   "nivel": "juan",
-   "texto": "H1, Alfredo, 22/09 (Aero-Asu + Crowne Plaza  -Sheraton): 17 km reales contra 40 km esperados (-57%).",
-   "ts": 1790100383,
-   "fecha": "2026-09-22"
   },
   {
    "key": "foto:AC3FF514DF31738C2394E3B982849906",
