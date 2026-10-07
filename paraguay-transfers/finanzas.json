@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T20:30:32.520Z",
+ "generated": "2026-10-07T22:30:06.375Z",
  "tc": 5840,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 3994.18,
+  "pagoparPendienteUsd": 4204.79,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -92,15 +92,15 @@
   },
   {
    "fecha": "2026-10-07",
-   "in": 470.89,
+   "in": 681.51,
    "out": 8.56,
-   "n": 3,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 470.89,
+    "Pagopar": 681.51,
     "WhatsApp · Pagos (Majo)": -8.56
    },
-   "neto": 462.33,
-   "acum": 2347.58
+   "neto": 672.95,
+   "acum": 2558.2
   }
  ],
  "movimientos": [
@@ -207,6 +207,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Koah Kraft",
    "gs": 1827000
+  },
+  {
+   "d": "2026-10-07",
+   "t": "in",
+   "usd": 105.31,
+   "fuente": "Pagopar",
+   "det": "Pago QR · Guillermo Sosa",
+   "gs": 615000
+  },
+  {
+   "d": "2026-10-07",
+   "t": "in",
+   "usd": 105.31,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · André Garcia",
+   "gs": 615000
   },
   {
    "d": "2026-10-01",
@@ -504,8 +520,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 13,
-   "bruto": 3994.17,
+   "cobros": 15,
+   "bruto": 4204.79,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -520,8 +536,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 23326000,
-  "cobradoUsd": 3994.17,
+  "cobradoGs": 24556000,
+  "cobradoUsd": 4204.79,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -555,9 +571,9 @@
    },
    {
     "fecha": "2026-10-07",
-    "cobros": 2,
-    "gs": 2750000,
-    "usd": 470.89
+    "cobros": 4,
+    "gs": 3980000,
+    "usd": 681.51
    }
   ],
   "pruebasExcluidas": 0,
@@ -565,8 +581,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 23326000,
-  "pendienteUsd": 3994.18
+  "pendienteGs": 24556000,
+  "pendienteUsd": 4204.79
  },
  "giros": [
   {
@@ -673,7 +689,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲23.3 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲24.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
