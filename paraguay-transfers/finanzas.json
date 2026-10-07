@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T12:30:15.883Z",
+ "generated": "2026-10-07T20:30:32.520Z",
  "tc": 5840,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -93,13 +93,14 @@
   {
    "fecha": "2026-10-07",
    "in": 470.89,
-   "out": 0,
-   "n": 2,
+   "out": 8.56,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 470.89
+    "Pagopar": 470.89,
+    "WhatsApp · Pagos (Majo)": -8.56
    },
-   "neto": 470.89,
-   "acum": 2356.14
+   "neto": 462.33,
+   "acum": 2347.58
   }
  ],
  "movimientos": [
@@ -213,7 +214,13 @@
    "usd": 119.87,
    "fuente": "WhatsApp · Alfredo",
    "det": "Pago a PETROPAR San Juan Misiones (combustible)",
-   "gs": 700043
+   "gs": 700043,
+   "rub": {
+    "chofer": 0,
+    "comb": 119.87,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-01",
@@ -221,7 +228,13 @@
    "usd": 530.82,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Salario Sept/26 María José Cáceres",
-   "gs": 3100000
+   "gs": 3100000,
+   "rub": {
+    "chofer": 0,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 530.82
+   }
   },
   {
    "d": "2026-10-01",
@@ -229,7 +242,13 @@
    "usd": 42.81,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Fernández",
-   "gs": 250000
+   "gs": 250000,
+   "rub": {
+    "chofer": 42.81,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-01",
@@ -237,7 +256,13 @@
    "usd": 308.22,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver Hugo Segovia",
-   "gs": 1800000
+   "gs": 1800000,
+   "rub": {
+    "chofer": 308.22,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-02",
@@ -245,7 +270,13 @@
    "usd": 94.18,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Honorarios Profesionales / Septiembre 2026 / Contador",
-   "gs": 550000
+   "gs": 550000,
+   "rub": {
+    "chofer": 94.18,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-02",
@@ -253,7 +284,13 @@
    "usd": 30.14,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Parking Aeropuerto 16.000",
-   "gs": 176000
+   "gs": 176000,
+   "rub": {
+    "chofer": 30.14,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-05",
@@ -261,7 +298,13 @@
    "usd": 184.93,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "💰 PAGOS  · LUIS",
-   "gs": 1080000
+   "gs": 1080000,
+   "rub": {
+    "chofer": 184.93,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-05",
@@ -269,7 +312,13 @@
    "usd": 80.48,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver INGRID DOMINGUEZ",
-   "gs": 470000
+   "gs": 470000,
+   "rub": {
+    "chofer": 80.48,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-06",
@@ -277,7 +326,13 @@
    "usd": 41.1,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver José Berden - transfer Pax Donna Wick 07-10 y 11/10",
-   "gs": 240000
+   "gs": 240000,
+   "rub": {
+    "chofer": 41.1,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-06",
@@ -285,7 +340,13 @@
    "usd": 308.22,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Traslado Asu / Pto Iguazu. 07/10 3am Pax: Yumizumba",
-   "gs": 1800000
+   "gs": 1800000,
+   "rub": {
+    "chofer": 308.22,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-06",
@@ -293,7 +354,13 @@
    "usd": 85.62,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago seña Driver traslado 10/oct SanBer-Asu-SanBer Pax:Tomás",
-   "gs": 500000
+   "gs": 500000,
+   "rub": {
+    "chofer": 85.62,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-06",
@@ -301,7 +368,27 @@
    "usd": 25.68,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Driver José Berden traslado 07/10 pax: Christoff",
-   "gs": 150000
+   "gs": 150000,
+   "rub": {
+    "chofer": 25.68,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-07",
+   "t": "out",
+   "usd": 8.56,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver José Berden. Espera traslado 07/10 pax Donna",
+   "gs": 50000,
+   "rub": {
+    "chofer": 8.56,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
   },
   {
    "d": "2026-10-01",
