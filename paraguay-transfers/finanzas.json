@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T12:30:42.268Z",
+ "generated": "2026-10-08T14:30:22.007Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -105,14 +105,14 @@
   {
    "fecha": "2026-10-08",
    "in": 2012.07,
-   "out": 206.9,
-   "n": 4,
+   "out": 991.38,
+   "n": 5,
    "porFuente": {
     "Pagopar": 2012.07,
-    "WhatsApp · Pagos (Majo)": -206.9
+    "WhatsApp · Pagos (Majo)": -991.38
    },
-   "neto": 1805.17,
-   "acum": 4617.76
+   "neto": 1020.69,
+   "acum": 3833.28
   }
  ],
  "movimientos": [
@@ -459,6 +459,20 @@
    "gs": 1200000,
    "rub": {
     "chofer": 206.9,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-08",
+   "t": "out",
+   "usd": 784.48,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 4550000,
+   "rub": {
+    "chofer": 784.48,
     "comb": 0,
     "peajes": 0,
     "otros": 0
