@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand · Dashboard</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
+:root{
+  color-scheme:light;
+  --page:#f7f6f3; --surface:#fcfcfb; --card:#ffffff; --ink:#0b0b0b; --ink2:#52514e; --mut:#898781;
+  --grid:#e8e7e1; --axis:#c3c2b7; --line:rgba(11,11,11,.10); --wash:rgba(11,11,11,.04);
+  --brand:#8f1d3a; --brand-ink:#ffffff; --brand-soft:#f6e9ec;
+  --google:#2a78d6; --meta:#eb6834; --tiktok:#1baf7a; --shop:#4a3aa7; --prev:#b9b7ae;
+  --good:#0ca30c; --good-ink:#006300; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b; --info:#2a78d6;
+  --bad-ink:#b3261e;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --mut:#898781;
+    --grid:#2c2c2a; --axis:#383835; --line:rgba(255,255,255,.10); --wash:rgba(255,255,255,.05);
+    --brand:#6e1630; --brand-soft:#2b1a1f;
+    --google:#3987e5; --meta:#d95926; --tiktok:#199e70; --shop:#9085e9; --prev:#5c5b56;
+    --good-ink:#0ca30c; --bad-ink:#e66767;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --mut:#898781;
+  --grid:#2c2c2a; --axis:#383835; --line:rgba(255,255,255,.10); --wash:rgba(255,255,255,.05);
+  --brand:#6e1630; --brand-soft:#2b1a1f;
+  --google:#3987e5; --meta:#d95926; --tiktok:#199e70; --shop:#9085e9; --prev:#5c5b56;
+  --good-ink:#0ca30c; --bad-ink:#e66767;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--page);color:var(--ink);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+header{background:var(--brand);color:var(--brand-ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+header .marca{display:flex;align-items:center;gap:12px}
+header .marca svg{height:22px;width:auto}
+header .marca svg path{fill:#fff}
+header h1{font-size:15px;font-weight:500;opacity:.85;border-left:1px solid rgba(255,255,255,.35);padding-left:12px}
+header .meta{font-size:12px;opacity:.85;text-align:right}
+nav.tabs{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--ink2);font:inherit;font-weight:500;padding:12px 10px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brand)}
+nav.tabs .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:4px;border-radius:9px;background:var(--crit);color:#fff;font-size:11px;line-height:18px;text-align:center}
+.filtros{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:14px 0 4px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
+.seg button{background:none;border:0;font:inherit;font-size:13px;color:var(--ink2);padding:6px 11px;cursor:pointer}
+.seg button:disabled{opacity:.4;cursor:not-allowed}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--page);font-weight:600}
+.filtros .nota{font-size:12px;color:var(--mut)}
+section.panel{display:none;padding-bottom:40px}
+section.panel.on{display:block}
+h2{font-size:16px;font-weight:600;margin:22px 0 10px}
+h2 small{font-size:12px;font-weight:400;color:var(--mut);margin-left:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles{display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.g2,.g3{grid-template-columns:minmax(0,1fr)}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile .l{font-size:12px;color:var(--ink2)}
+.tile .v{font-size:24px;font-weight:600;margin-top:2px;letter-spacing:-.01em}
+.tile .s{font-size:12px;color:var(--mut);margin-top:2px}
+.up{color:var(--good-ink)} .down{color:var(--bad-ink)} .flat{color:var(--mut)}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .tt{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.12);padding:8px 10px;font-size:12px;min-width:140px;display:none;z-index:5}
+.tt .f{color:var(--mut);margin-bottom:4px}
+.tt .r{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.tt .r b{font-weight:600}
+.tt .k{display:inline-block;width:12px;height:2px;border-radius:1px;margin-right:6px;vertical-align:middle}
+.leyenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:0 0 8px}
+.leyenda i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.leyenda i.ln{height:2px;width:14px;vertical-align:3px}
+.leyenda i.dash{height:0;width:14px;border-top:2px dashed var(--prev);background:none;vertical-align:3px}
+.tabla{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-weight:500;color:var(--ink2);text-align:right;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+th:first-child,td:first-child{text-align:left}
+td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{white-space:normal;min-width:180px}
+tr:hover td{background:var(--wash)}
+td .sub{display:block;font-size:11px;color:var(--mut)}
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--wash);color:var(--ink2);margin-left:4px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:0}
+.pace{margin:10px 0}
+.pace .top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px;gap:8px;flex-wrap:wrap}
+.pace .bar{position:relative;height:10px;border-radius:5px;background:var(--wash)}
+.pace .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.pace .bar i.proy{opacity:.3}
+.pace .bar b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.ads{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.ad{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.ad .img{aspect-ratio:1/1;background:var(--wash);display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;overflow:hidden}
+.ad .img img{width:100%;height:100%;object-fit:cover;display:block}
+.ad .img.v{aspect-ratio:9/12}
+.ad .b{padding:10px 12px;font-size:12px}
+.ad .n{font-weight:600;font-size:13px;line-height:1.3;margin-bottom:2px;word-break:break-word}
+.ad .c{color:var(--mut);margin-bottom:8px}
+.ad dl{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.ad dt{color:var(--mut)} .ad dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.ad .rank{position:relative}
+.ad .flag{display:inline-block;margin-top:8px;font-size:11px;padding:2px 7px;border-radius:10px;background:var(--brand-soft);color:var(--ink)}
+.alerta{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 14px;border:1px solid var(--line);border-left-width:4px;border-radius:10px;background:var(--card);margin-bottom:8px}
+.alerta.critico{border-left-color:var(--crit)} .alerta.aviso{border-left-color:var(--warn)} .alerta.info{border-left-color:var(--info)}
+.alerta .ic{font-size:12px;font-weight:600;white-space:nowrap}
+.alerta .t{font-weight:600}
+.alerta .d{grid-column:2;color:var(--ink2);font-size:13px}
+.alerta .a{grid-column:2;font-size:13px}
+.alerta .m{grid-column:2;font-size:11px;color:var(--mut)}
+.nivel{display:inline-flex;align-items:center;gap:5px}
+.nivel::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.nivel.critico{color:var(--crit)} .nivel.aviso{color:#b07800} .nivel.info{color:var(--info)}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) .nivel.aviso{color:var(--warn)}}
+:root[data-theme="dark"] .nivel.aviso{color:var(--warn)}
+.vacio{color:var(--mut);font-size:13px;padding:16px 0}
+.aviso-fuente{background:var(--brand-soft);border-radius:10px;padding:10px 14px;font-size:13px;margin-top:12px}
+.sel{font:inherit;font-size:13px;padding:5px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+footer{color:var(--mut);font-size:12px;padding:24px 0 40px;border-top:1px solid var(--line)}
+.nota-p{font-size:12px;color:var(--mut);margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="marca" id="logo"><h1>Performance Dashboard</h1></div>
+    <div class="meta" id="meta">Loading…</div>
+  </div>
+</header>
+<nav class="tabs"><div class="wrap" role="tablist" id="tabs">
+  <button role="tab" data-tab="resumen" aria-selected="true">Summary</button>
+  <button role="tab" data-tab="canales">Channels</button>
+  <button role="tab" data-tab="plataformas">Platforms</button>
+  <button role="tab" data-tab="anuncios">Ads</button>
+  <button role="tab" data-tab="tienda">Store</button>
+  <button role="tab" data-tab="alertas">Alerts <span class="badge" id="badge" hidden></span></button>
+</div></nav>
+
+<main class="wrap">
+  <div class="filtros" id="filtros">
+    <div class="seg" id="periodo">
+      <button data-p="7">7 days</button><button data-p="14">14 days</button><button data-p="30" aria-pressed="true">30 days</button><button data-p="60">60 days</button><button data-p="mes">This month</button>
+    </div>
+    <span class="nota" id="rango"></span>
+  </div>
+
+  <section class="panel on" id="p-resumen"></section>
+  <section class="panel" id="p-canales"></section>
+  <section class="panel" id="p-plataformas"></section>
+  <section class="panel" id="p-anuncios"></section>
+  <section class="panel" id="p-tienda"></section>
+  <section class="panel" id="p-alertas"></section>
+
+  <footer id="pie"></footer>
+</main>
+
+<script>
+"use strict";
+// ───────── utilidades ─────────
+const $ = (s, r = document) => r.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v; else if (k === "style") e.style.cssText = v;
+    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const k of kids.flat(Infinity)) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return e;
+};
+const SVGNS = "http://www.w3.org/2000/svg";
+const sv = (tag, attrs = {}) => { const e = document.createElementNS(SVGNS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); return e; };
+const grp = (n, dec = 0) => {
+  if (n == null || !isFinite(n)) return "–";
+  const neg = n < 0; n = Math.abs(n);
+  let [i, d] = n.toFixed(dec).split(".");
+  i = i.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return (neg ? "−" : "") + i + (d ? "." + d : "");
+};
+const usd = (n, dec = 0) => n == null || !isFinite(n) ? "–" : (n < 0 ? "−$" : "$") + grp(Math.abs(n), dec);
+const pct = (n, dec = 1) => n == null || !isFinite(n) ? "–" : grp(n * 100, dec) + "%";
+const xx = (n) => n == null || !isFinite(n) ? "–" : grp(n, 2) + "x";
+const addDays = (s, k) => { const d = new Date(s + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + k); return d.toISOString().slice(0, 10); };
+const dias = (a, b) => { const out = []; for (let d = a; d <= b; d = addDays(d, 1)) out.push(d); return out; };
+const fcorta = (s) => `${+s.slice(5, 7)}/${+s.slice(8)}`;
+const DIAS_SEM = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const dsem = (s) => DIAS_SEM[new Date(s + "T12:00:00Z").getUTCDay()];
+const CANAL_LBL = { "Directa / Organica": "Direct / Organic", "No definido": "Not defined", "IA": "AI" };
+const PLATS = ["google", "meta", "tiktok"];
+const NOM = { google: "Google", meta: "Meta", tiktok: "TikTok", shopify: "Shopify", total: "Total" };
+const COL = (p) => `var(--${p})`;
+const SOC = { google: ["Google"], meta: ["MetaAds", "Meta Shop"], tiktok: ["TikTok"] };
+
+let D, P = { per: "30", tab: "resumen", plat: "google", metrica: "cost" };
+try { const s = JSON.parse(localStorage.getItem("sample-tablero") || "{}"); Object.assign(P, s); } catch (e) {}
+const guardar = () => { try { localStorage.setItem("sample-tablero", JSON.stringify(P)); } catch (e) {} };
+
+// ───────── agregados ─────────
+function rango() {
+  const fin = D.hasta;
+  if (P.per === "mes") return { ini: fin.slice(0, 8) + "01", fin };
+  return { ini: addDays(fin, -(+P.per - 1)), fin };
+}
+function previo(r) {
+  const n = dias(r.ini, r.fin).length;
+  return { ini: addDays(r.ini, -n), fin: addDays(r.ini, -1) };
+}
+function sumaPlat(plat, r, cid) {
+  const a = [0, 0, 0, 0, 0];
+  const camps = (D[plat] || {}).campanas || {};
+  for (const [id, c] of Object.entries(camps)) {
+    if (cid && id !== cid) continue;
+    for (const [f, v] of Object.entries(c.diario)) if (f >= r.ini && f <= r.fin) for (let i = 0; i < 5; i++) a[i] += v[i];
+  }
+  return a;
+}
+function seriePlat(plat, r, cid) {
+  const m = {};
+  for (const [id, c] of Object.entries((D[plat] || {}).campanas || {})) {
+    if (cid && id !== cid) continue;
+    for (const [f, v] of Object.entries(c.diario)) { if (f < r.ini || f > r.fin) continue; const a = (m[f] ||= [0, 0, 0, 0, 0]); for (let i = 0; i < 5; i++) a[i] += v[i]; }
+  }
+  return m;
+}
+const K = {
+  cost: (v) => v[0], clicks: (v) => v[1], impr: (v) => v[2], conv: (v) => v[3], value: (v) => v[4],
+  cpc: (v) => v[1] ? v[0] / v[1] : null, ctr: (v) => v[2] ? v[1] / v[2] : null, cvr: (v) => v[1] ? v[3] / v[1] : null,
+  cpa: (v) => v[3] ? v[0] / v[3] : null, roas: (v) => v[0] ? v[4] / v[0] : null,
+};
+function tienda(r) {
+  const t = { pedidos: 0, ingresos: 0, reemb: 0, cancel: 0, nuevos: 0, ing_nuevos: 0, canales: {}, dias: 0, diasTot: 0 };
+  const dd = (D.tienda || {}).diario || {};
+  for (const f of dias(r.ini, r.fin)) {
+    t.diasTot++;
+    const x = dd[f]; if (!x) continue; t.dias++;
+    for (const k of ["pedidos", "ingresos", "reemb", "cancel", "nuevos", "ing_nuevos"]) t[k] += x[k];
+    for (const [c, [p, i, n]] of Object.entries(x.canales)) { const a = (t.canales[c] ||= [0, 0, 0]); a[0] += p; a[1] += i; a[2] += n; }
+  }
+  return t;
+}
+/** Revenue by channel: attribution report where available, estimated from Shopify where not. */
+function canales(r) {
+  const out = {}; let sw = 0, est = 0;
+  const dd = (D.tienda || {}).diario || {};
+  for (const f of dias(r.ini, r.fin)) {
+    const s = (D.attribution || {})[f];
+    if (s) {
+      sw++;
+      for (const [c, v] of Object.entries(s)) if (c !== "TOTAL" && v) (out[c] ||= { ing: 0, ped: 0, nuevos: 0 }).ing += v;
+      // The attribution report has no TikTok: it lumps it into "Other UTM". TikTok is taken from Shopify UTMs.
+      const tk = dd[f]?.canales?.TikTok?.[1] || 0;
+      if (tk) { (out.TikTok ||= { ing: 0, ped: 0, nuevos: 0 }).ing += tk; if (out["Other UTM"]) out["Other UTM"].ing = Math.max(out["Other UTM"].ing - tk, 0); }
+    }
+    else if (dd[f]) { est++; for (const [c, [p, i, n]] of Object.entries(dd[f].canales)) { const a = (out[c] ||= { ing: 0, ped: 0, nuevos: 0 }); a.ing += i; a.ped += p; a.nuevos += n; } }
+  }
+  return { canales: out, sw, est };
+}
+const delta = (a, b, invertido) => {
+  if (a == null || b == null || !b) return null;
+  const d = (a - b) / Math.abs(b);
+  return { d, cls: Math.abs(d) < 0.02 ? "flat" : ((d > 0) !== !!invertido ? "up" : "down") };
+};
+const deltaTxt = (dl) => dl ? el("span", { class: dl.cls }, (dl.d > 0 ? "▲ " : dl.d < 0 ? "▼ " : "") + grp(Math.abs(dl.d) * 100, 0) + "%") : el("span", { class: "flat" }, "no comparison");
+
+function tile(label, valor, dl, sub) {
+  return el("div", { class: "tile" }, el("div", { class: "l" }, label), el("div", { class: "v" }, valor),
+    el("div", { class: "s" }, dl === undefined ? "" : deltaTxt(dl), dl === undefined ? "" : " vs prior period", sub ? el("div", {}, sub) : null));
+}
+
+// ───────── charts ─────────
+/**
+ * series: [{nombre, color, valores:{fecha:n}, tipo:"bar"|"line", dash, apilar}]
+ * refs: [{y, etiqueta}]  fmt: axis and tooltip formatter
+ */
+function grafico(fechas, series, { fmt = (n) => grp(n), alto = 220, refs = [], apilado = false } = {}) {
+  const W = 760, H = alto, m = { t: 12, r: 12, b: 26, l: 52 };
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const bars = series.filter((s) => s.tipo === "bar"), lines = series.filter((s) => s.tipo !== "bar");
+  let max = 0;
+  fechas.forEach((f) => {
+    if (apilado) max = Math.max(max, bars.reduce((a, s) => a + (s.valores[f] || 0), 0));
+    else bars.forEach((s) => (max = Math.max(max, s.valores[f] || 0)));
+    lines.forEach((s) => (max = Math.max(max, s.valores[f] ?? 0)));
+  });
+  refs.forEach((r) => (max = Math.max(max, r.y * 1.1)));
+  if (!max) max = 1;
+  const paso = niceStep(max / 4); max = Math.ceil(max / paso) * paso;
+  const y = (v) => m.t + ih - (v / max) * ih;
+  const bw = iw / fechas.length;
+  const x = (i) => m.l + bw * i + bw / 2;
+  const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" });
+  for (let v = 0; v <= max + 1e-9; v += paso) {
+    svg.append(sv("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: v === 0 ? "var(--axis)" : "var(--grid)", "stroke-width": 1 }));
+    const t = sv("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--mut)" }); t.textContent = fmt(v, true); svg.append(t);
+  }
+  const cada = Math.ceil(fechas.length / 8);
+  fechas.forEach((f, i) => {
+    if (i % cada) return;
+    const t = sv("text", { x: x(i), y: H - 8, "text-anchor": "middle", "font-size": 11, fill: "var(--mut)" }); t.textContent = fcorta(f); svg.append(t);
+  });
+  // barras
+  const gap = fechas.length > 45 ? 1 : 2;
+  const nb = apilado ? 1 : Math.max(bars.length, 1);
+  const anchoB = Math.max(1, (bw - gap * 2) / nb - (nb > 1 ? 2 : 0));
+  fechas.forEach((f, i) => {
+    let base = 0;
+    bars.forEach((s, j) => {
+      const v = s.valores[f] || 0; if (!v) return;
+      const bx = apilado ? m.l + bw * i + gap : m.l + bw * i + gap + j * (anchoB + 2);
+      const y0 = y(base + v), h = y(base) - y(base + v);
+      const r = Math.min(3, anchoB / 2, h);
+      const esTope = !apilado || !bars.slice(j + 1).some((s2) => s2.valores[f]);
+      const hAjust = apilado && base > 0 ? h - 1.5 : h;
+      svg.append(sv("path", { d: esTope ? topRounded(bx, y0, anchoB, hAjust, r) : `M${bx},${y0}h${anchoB}v${hAjust}h${-anchoB}z`, fill: s.color }));
+      if (apilado) base += v;
+    });
+  });
+  // referencias
+  refs.forEach((r, i) => {
+    svg.append(sv("line", { x1: m.l, x2: W - m.r, y1: y(r.y), y2: y(r.y), stroke: "var(--ink2)", "stroke-width": 1, "stroke-dasharray": "4 4" }));
+    // If two reference lines are close together, the lower one gets its label below its line.
+    const pegada = refs.some((o, j) => j !== i && o.y > r.y && y(r.y) - y(o.y) < 16);
+    const t = sv("text", { x: W - m.r, y: pegada ? y(r.y) + 14 : y(r.y) - 5, "text-anchor": "end", "font-size": 11, fill: "var(--ink2)", stroke: "var(--card)", "stroke-width": 3, "paint-order": "stroke" }); t.textContent = r.etiqueta; svg.append(t);
+  });
+  // lines
+  lines.forEach((s) => {
+    let d = "", abierto = false;
+    fechas.forEach((f, i) => {
+      const v = s.valores[f];
+      if (v == null) { abierto = false; return; }
+      d += (abierto ? "L" : "M") + x(i).toFixed(1) + "," + y(v).toFixed(1); abierto = true;
+    });
+    svg.append(sv("path", { d, fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round", ...(s.dash ? { "stroke-dasharray": "5 4" } : {}) }));
+  });
+  // hover layer
+  const cross = sv("line", { y1: m.t, y2: m.t + ih, stroke: "var(--mut)", "stroke-width": 1, visibility: "hidden" });
+  svg.append(cross);
+  const hit = sv("rect", { x: m.l, y: m.t, width: iw, height: ih, fill: "transparent", tabindex: 0 });
+  svg.append(hit);
+  const cont = el("div", { class: "chart" }, svg);
+  const tt = el("div", { class: "tt", role: "tooltip" }); cont.append(tt);
+  const mostrar = (i) => {
+    const f = fechas[i]; cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    tt.replaceChildren(el("div", { class: "f" }, `${dsem(f)} ${fcorta(f)}`));
+    for (const s of series) {
+      const v = s.valores[f];
+      const k = el("span", { class: "k", style: `background:${s.color}` });
+      if (s.dash) k.style.cssText = `background:none;border-top:2px dashed ${s.color};height:0`;
+      tt.append(el("div", { class: "r" }, el("span", {}, k, s.nombre), el("b", {}, v == null ? "–" : fmt(v))));
+    }
+    if (apilado && bars.length > 1) tt.append(el("div", { class: "r", style: "border-top:1px solid var(--line);margin-top:4px;padding-top:4px" }, el("span", {}, "Total"), el("b", {}, fmt(bars.reduce((a, s) => a + (s.valores[f] || 0), 0)))));
+    tt.style.display = "block";
+    const rect = svg.getBoundingClientRect(), esc = rect.width / W;
+    let left = x(i) * esc + 12; if (left + tt.offsetWidth > rect.width) left = x(i) * esc - tt.offsetWidth - 12;
+    tt.style.left = Math.max(0, left) + "px"; tt.style.top = "8px";
+  };
+  const ocultar = () => { tt.style.display = "none"; cross.setAttribute("visibility", "hidden"); };
+  hit.addEventListener("pointermove", (ev) => {
+    const rect = svg.getBoundingClientRect(); const px = (ev.clientX - rect.left) / (rect.width / W);
+    mostrar(Math.max(0, Math.min(fechas.length - 1, Math.floor((px - m.l) / bw))));
+  });
+  hit.addEventListener("pointerleave", ocultar);
+  let foco = fechas.length - 1;
+  hit.addEventListener("focus", () => mostrar(foco)); hit.addEventListener("blur", ocultar);
+  hit.addEventListener("keydown", (ev) => { if (ev.key === "ArrowLeft") foco = Math.max(0, foco - 1); else if (ev.key === "ArrowRight") foco = Math.min(fechas.length - 1, foco + 1); else return; ev.preventDefault(); mostrar(foco); });
+  return cont;
+}
+function topRounded(x, y, w, h, r) {
+  if (h <= 0) return "";
+  return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+}
+function niceStep(raw) {
+  const p = Math.pow(10, Math.floor(Math.log10(raw))); const n = raw / p;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p;
+}
+const ejeUsd = (v, eje) => eje && v >= 1000 ? "$" + grp(v / 1000, v % 1000 ? 1 : 0) + "k" : usd(v);
+const leyenda = (items) => el("div", { class: "leyenda" }, items.map((i) => el("span", {}, el("i", { class: i.tipo === "line" ? "ln" : i.tipo === "dash" ? "dash" : "", style: i.tipo === "dash" ? "" : `background:${i.color}` }), i.nombre)));
+
+// Tabla ordenable. cols: [{t, v:(fila)=>n, f:(n,fila)=>texto|nodo, izq}]
+function tabla(cols, filas, ordenIni = 1) {
+  let orden = ordenIni, dir = -1;
+  const tbody = el("tbody");
+  const pintar = () => {
+    const fs = [...filas].sort((a, b) => { const x = cols[orden].v(a), y = cols[orden].v(b); return ((x ?? -Infinity) > (y ?? -Infinity) ? 1 : (x ?? -Infinity) < (y ?? -Infinity) ? -1 : 0) * dir; });
+    tbody.replaceChildren(...fs.map((f) => el("tr", {}, cols.map((c) => el("td", {}, c.f ? c.f(c.v(f), f) : c.v(f))))));
+  };
+  const thead = el("thead", {}, el("tr", {}, cols.map((c, i) => el("th", { onclick: () => { if (orden === i) dir = -dir; else { orden = i; dir = -1; } pintar(); }, title: "Sort" }, c.t))));
+  pintar();
+  return el("div", { class: "tabla" }, el("table", {}, thead, tbody));
+}
+
+// ───────── RESUMEN ─────────
+function resumen() {
+  const r = rango(), pr = previo(r);
+  const t = tienda(r), tp = tienda(pr);
+  const gasto = PLATS.reduce((a, p) => a + sumaPlat(p, r)[0], 0);
+  const gastoP = PLATS.reduce((a, p) => a + sumaPlat(p, pr)[0], 0);
+  const O = D.objetivos, MG = O.margen_bruto_sobre_gross_sales;
+  const mer = gasto ? t.ingresos / gasto : null, merP = gastoP ? tp.ingresos / gastoP : null;
+  const contrib = t.ingresos * MG - gasto, contribP = tp.ingresos * MG - gastoP;
+  const cac = t.nuevos ? gasto / t.nuevos : null, cacP = tp.nuevos ? gastoP / tp.nuevos : null;
+  const nodos = [];
+  if (t.dias < t.diasTot) nodos.push(el("div", { class: "aviso-fuente" }, `Shopify orders start on ${fcorta(D.tienda.primer_dia)}: store totals cover ${t.dias} of ${t.diasTot} days in the period. History grows one day at a time from here on.`));
+  nodos.push(el("h2", {}, "The business", el("small", {}, "Shopify revenue vs. ad spend across the three platforms")));
+  nodos.push(el("div", { class: "tiles" },
+    tile("Revenue", usd(t.ingresos), delta(t.ingresos, tp.ingresos), `${grp(t.pedidos)} orders`),
+    tile("Ad spend", usd(gasto), delta(gasto, gastoP, true), PLATS.map((p) => `${NOM[p]} ${usd(sumaPlat(p, r)[0])}`).join(" · ")),
+    tile("MER", xx(mer), delta(mer, merP), `Break-even ${xx(O.roas_equilibrio)} · target ${xx(O.roas_objetivo)}`),
+    tile("Contribution", usd(contrib), delta(contrib, contribP), `Gross margin ${pct(MG, 1)} minus ad spend`),
+    tile("Average order value", usd(t.pedidos ? t.ingresos / t.pedidos : null), delta(t.pedidos ? t.ingresos / t.pedidos : null, tp.pedidos ? tp.ingresos / tp.pedidos : null)),
+    tile("New customers", pct(t.pedidos ? t.nuevos / t.pedidos : null, 0), delta(t.pedidos ? t.nuevos / t.pedidos : null, tp.pedidos ? tp.nuevos / tp.pedidos : null), `${grp(t.nuevos)} of ${grp(t.pedidos)} orders`),
+    tile("Cost per new customer", usd(cac), delta(cac, cacP, true), "Total ad spend / new-customer orders"),
+    tile("Refunds", usd(t.reemb), delta(t.reemb, tp.reemb, true), t.ingresos ? pct(t.reemb / t.ingresos) + " of revenue" : ""),
+  ));
+  const fs = dias(r.ini, r.fin);
+  const dd = D.tienda?.diario || {};
+  const valIng = {}, valMer = {}, gastos = {};
+  PLATS.forEach((p) => (gastos[p] = {}));
+  fs.forEach((f) => {
+    let g = 0; PLATS.forEach((p) => { const v = sumaPlat(p, { ini: f, fin: f })[0]; gastos[p][f] = v; g += v; });
+    if (dd[f]) { valIng[f] = dd[f].ingresos; if (g) valMer[f] = dd[f].ingresos / g; }
+  });
+  nodos.push(el("div", { class: "grid g2" },
+    el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Daily spend by platform"),
+      leyenda(PLATS.map((p) => ({ nombre: NOM[p], color: COL(p) }))),
+      grafico(fs, PLATS.map((p) => ({ nombre: NOM[p], color: COL(p), tipo: "bar", valores: gastos[p] })), { fmt: ejeUsd, apilado: true })),
+    el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Daily MER", el("small", {}, "revenue / ad spend")),
+      leyenda([{ nombre: "MER", color: "var(--shop)", tipo: "line" }]),
+      grafico(fs, [{ nombre: "MER", color: "var(--shop)", tipo: "line", valores: valMer }], { fmt: (v) => grp(v, v < 10 ? 1 : 0) + "x", refs: [{ y: O.roas_equilibrio, etiqueta: "break-even 3.14x" }, { y: O.roas_objetivo, etiqueta: "target 4x" }] })),
+  ));
+  // Month pacing
+  const fin = D.hasta, ini = fin.slice(0, 8) + "01";
+  const [yy, mm] = fin.split("-").map(Number); const diasMes = new Date(Date.UTC(yy, mm, 0)).getUTCDate(); const dia = +fin.slice(8);
+  const ritmo = el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Month pacing", el("small", {}, `spent as of ${fcorta(fin)} and projected at the pace of the last 3 days`)));
+  PLATS.forEach((p) => {
+    const pres = O.presupuesto_mensual[p]; if (!pres) return;
+    const mtd = sumaPlat(p, { ini, fin })[0];
+    const r3 = sumaPlat(p, { ini: addDays(fin, -2), fin })[0] / 3;
+    const proy = mtd + r3 * (diasMes - dia);
+    const esc = Math.max(pres, proy) * 1.05;
+    const desvio = (proy - pres) / pres;
+    ritmo.append(el("div", { class: "pace" },
+      el("div", { class: "top" }, el("span", {}, el("span", { class: "dot", style: `background:${COL(p)}` }), el("b", {}, NOM[p]), ` ${usd(mtd)} of ${usd(pres)}`),
+        el("span", { class: Math.abs(desvio) < 0.1 ? "flat" : desvio > 0 ? "down" : "down" }, `on pace to close at ${usd(proy)} (${desvio > 0 ? "+" : ""}${grp(desvio * 100, 0)}%) · to land exactly on budget ${usd(Math.max(pres - mtd, 0) / Math.max(diasMes - dia, 1))}/day`)),
+      el("div", { class: "bar", title: `Budget ${usd(pres)}` },
+        el("i", { class: "proy", style: `width:${(proy / esc) * 100}%;background:${COL(p)}` }),
+        el("i", { style: `width:${(mtd / esc) * 100}%;background:${COL(p)}` }),
+        el("b", { style: `left:${(pres / esc) * 100}%` }))));
+  });
+  ritmo.append(el("div", { class: "nota-p" }, "Solid bar: spent. Light bar: projection. Vertical line: agreed budget."));
+  const act = (D.alertas?.activas || []).slice(0, 5);
+  const alertasCard = el("div", { class: "card" }, el("h2", { style: "margin-top:0" }, "Needs attention"),
+    act.length ? act.map(alertaNodo) : el("div", { class: "vacio" }, "No active alerts."),
+    (D.alertas?.activas || []).length > 5 ? el("button", { class: "sel", onclick: () => irA("alertas") }, `View all ${D.alertas.activas.length} alerts`) : null);
+  nodos.push(el("div", { class: "grid g2", style: "margin-top:12px" }, ritmo, alertasCard));
+  return nodos;
+}
+
+// ───────── CANALES ─────────
+function canalesPanel() {
+  const r = rango();
+  const { canales: cs, sw, est } = canales(r);
+  const t = tienda(r);
+  const total = Object.values(cs).reduce((a, c) => a + c.ing, 0);
+  const nodos = [];
+  nodos.push(el("h2", {}, "What each platform reports vs. what actually sold"));
+  const filasP = PLATS.map((p) => {
+    const v = sumaPlat(p, r);
+    const real = SOC[p].reduce((a, c) => a + (cs[c]?.ing || 0), 0);
+    return { p, gasto: v[0], dice: v[4], real, roasDice: v[0] ? v[4] / v[0] : null, roasReal: v[0] ? real / v[0] : null, infla: real ? v[4] / real : null };
+  }).filter((f) => f.gasto > 0);
+  nodos.push(el("div", { class: "card" }, tabla([
+    { t: "Platform", v: (f) => f.p, f: (v) => el("span", {}, el("span", { class: "dot", style: `background:${COL(v)}` }), NOM[v]) },
+    { t: "Spend", v: (f) => f.gasto, f: (v) => usd(v) },
+    { t: "Sales it claims", v: (f) => f.dice, f: (v) => usd(v) },
+    { t: "Actual channel sales", v: (f) => f.real, f: (v) => usd(v) },
+    { t: "Reported ROAS", v: (f) => f.roasDice, f: xx },
+    { t: "Actual ROAS", v: (f) => f.roasReal, f: (v) => el("b", { class: v == null ? "" : v >= D.objetivos.roas_equilibrio ? "up" : "down" }, xx(v)) },
+    { t: "Inflation", v: (f) => f.infla, f: (v) => v == null ? "–" : grp(v, 1) + "×" },
+  ], filasP, 1),
+    el("div", { class: "nota-p" }, "Actual sales = Shopify revenue for the channel by last click. Meta and TikTok also count views and 7-day windows, which is why they claim more. Meta is the channel with the most new customers: its last-click ROAS understates what it contributes.")));
+  nodos.push(el("h2", {}, "Revenue by channel", el("small", {}, sw ? `attribution report for ${sw} of ${sw + est} days${est ? `; ${est} days estimated from Shopify` : ""}` : "estimated from Shopify using the attribution report rules")));
+  const filas = Object.entries(cs).filter(([, c]) => c.ing > 0).map(([c, x]) => ({ c, ...x, share: total ? x.ing / total : 0 }));
+  const cols = [
+    { t: "Channel", v: (f) => f.c, f: (v) => CANAL_LBL[v] || v },
+    { t: "Revenue", v: (f) => f.ing, f: (v) => usd(v) },
+    { t: "Share", v: (f) => f.share, f: (v) => pct(v) },
+  ];
+  if (!sw) cols.push({ t: "Orders", v: (f) => f.ped, f: grp }, { t: "AOV", v: (f) => f.ped ? f.ing / f.ped : null, f: (v) => usd(v) }, { t: "% new", v: (f) => f.ped ? f.nuevos / f.ped : null, f: (v) => pct(v, 0) });
+  nodos.push(el("div", { class: "card" }, tabla(cols, filas, 1),
+    el("div", { class: "nota-p" }, `Total ${usd(total)}. `, sw && est ? "Days without an attribution report are estimated with the same categories: Creators, Shop App, Subscription and Draft Order come out exact; Google is estimated at roughly 10% below the attribution report." : "")));
+  // Daily share of the paid channels
+  const fs = dias(r.ini, r.fin);
+  const dd = D.tienda?.diario || {};
+  const ser = { Google: {}, Meta: {}, TikTok: {}, Resto: {} };
+  fs.forEach((f) => {
+    const s = D.attribution?.[f];
+    let g, m, tk, tot;
+    if (s) { g = s.Google || 0; m = (s.MetaAds || 0) + (s["Meta Shop"] || 0); tk = dd[f]?.canales?.TikTok?.[1] || 0; tot = s.TOTAL || 0; }
+    else if (dd[f]) { const c = dd[f].canales; g = c.Google?.[1] || 0; m = (c.MetaAds?.[1] || 0) + (c["Meta Shop"]?.[1] || 0); tk = c.TikTok?.[1] || 0; tot = dd[f].ingresos; }
+    else return;
+    ser.Google[f] = g; ser.Meta[f] = m; ser.TikTok[f] = tk; ser.Resto[f] = Math.max(tot - g - m - tk, 0);
+  });
+  const colsS = [["Google", COL("google")], ["Meta", COL("meta")], ["TikTok", COL("tiktok")], ["Direct, email, affiliates and other", "var(--prev)"]];
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, "Daily revenue by channel"),
+    leyenda(colsS.map(([n, c]) => ({ nombre: n, color: c }))),
+    grafico(fs, [["Google", ser.Google], ["Meta", ser.Meta], ["TikTok", ser.TikTok], ["Resto", ser.Resto]].map(([n, v], i) => ({ nombre: colsS[i][0], color: colsS[i][1], tipo: "bar", valores: v })), { fmt: ejeUsd, apilado: true })));
+  return nodos;
+}
+
+// ───────── PLATAFORMAS ─────────
+const METRICAS = { cost: ["Spend", (v) => usd(v)], clicks: ["Clicks", grp], cpc: ["CPC", (v) => usd(v, 2)], ctr: ["CTR", (v) => pct(v, 2)], conv: ["Purchases", (v) => grp(v, 0)], cvr: ["Conversion rate", (v) => pct(v, 2)], cpa: ["Cost per purchase", (v) => usd(v, 2)], roas: ["Platform ROAS", xx] };
+function plataformasPanel() {
+  const r = rango(), pr = previo(r), p = P.plat;
+  const nodos = [];
+  nodos.push(el("div", { class: "filtros" }, el("div", { class: "seg" }, PLATS.map((x) => el("button", { "aria-pressed": String(x === p), onclick: () => { P.plat = x; guardar(); pintar(); } }, NOM[x]))),
+    D.fuentes?.[p] && !D.fuentes[p].ok ? el("span", { class: "nota down" }, `Could not read ${NOM[p]} today: data as of ${D.fuentes[p].dato_de || "previous"}`) : null));
+  const v = sumaPlat(p, r), vp = sumaPlat(p, pr);
+  const inv = { cpc: true, cpa: true, cost: false };
+  nodos.push(el("div", { class: "tiles" }, Object.entries(METRICAS).map(([k, [n, f]]) => {
+    const t = tile(n, f(K[k](v)), delta(K[k](v), K[k](vp), inv[k]));
+    t.style.cursor = "pointer"; if (P.metrica === k) t.style.outline = `2px solid ${COL(p)}`;
+    t.addEventListener("click", () => { P.metrica = k; guardar(); pintar(); });
+    return t;
+  })));
+  const fs = dias(r.ini, r.fin);
+  const s = seriePlat(p, r);
+  const val = {}; fs.forEach((f) => { if (s[f]) val[f] = K[P.metrica](s[f]); });
+  const ap = D[p]?.anio_pasado || {};
+  const valAp = {}; fs.forEach((f) => { const fa = addDays(f, -364); if (ap[fa]) valAp[f] = K[P.metrica](ap[fa]); });
+  const [nm, fm] = METRICAS[P.metrica];
+  const hayAp = Object.keys(valAp).length > 0;
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, `${NOM[p]} · ${nm} per day`, el("small", {}, "click a metric above to change the chart")),
+    leyenda([{ nombre: "This year", color: COL(p), tipo: "line" }, ...(hayAp ? [{ nombre: "Same weekday, prior year", tipo: "dash" }] : [])]),
+    grafico(fs, [{ nombre: "This year", color: COL(p), tipo: "line", valores: val }, ...(hayAp ? [{ nombre: "Prior year", color: "var(--prev)", tipo: "line", dash: true, valores: valAp }] : [])], { fmt: (x, eje) => P.metrica === "cost" ? ejeUsd(x, eje) : fm(x) })));
+  // campaigns
+  const pc = D.tienda?.por_campana || {};
+  const filas = Object.entries(D[p]?.campanas || {}).map(([id, c]) => {
+    const a = sumaPlat(p, r, id), b = sumaPlat(p, pr, id);
+    let real = null;
+    if (p !== "google" && pc[id]) { real = 0; for (const [f, [, i]] of Object.entries(pc[id])) if (f >= r.ini && f <= r.fin) real += i; }
+    return { id, nombre: c.nombre, estado: c.estado, a, b, real };
+  }).filter((f) => f.a[0] > 0 || f.a[2] > 0);
+  nodos.push(el("h2", {}, "Campaigns", el("small", {}, p === "google" ? "Google has no actual sales by campaign: the tracking sends {campaignname}, which Google does not replace" : "Actual sales = Shopify orders with the campaign ID in the UTM")));
+  const cols = [
+    { t: "Campaign", v: (f) => f.nombre, f: (v, f) => el("span", {}, v, f.estado && !/ENABLED|ACTIVE/.test(f.estado) ? el("span", { class: "chip" }, f.estado.toLowerCase()) : null) },
+    { t: "Spend", v: (f) => f.a[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(f.a[0], f.b[0], true)))) },
+    { t: "CPC", v: (f) => K.cpc(f.a), f: (v, f) => el("span", {}, usd(v, 2), el("span", { class: "sub" }, deltaTxt(delta(v, K.cpc(f.b), true)))) },
+    { t: "CTR", v: (f) => K.ctr(f.a), f: (v) => pct(v, 2) },
+    { t: "Purchases", v: (f) => f.a[3], f: (v) => grp(v, 0) },
+    { t: "Conv. rate", v: (f) => K.cvr(f.a), f: (v, f) => el("span", {}, pct(v, 2), el("span", { class: "sub" }, deltaTxt(delta(v, K.cvr(f.b))))) },
+    { t: "Cost per purchase", v: (f) => K.cpa(f.a), f: (v) => usd(v, 2) },
+    { t: "Platform ROAS", v: (f) => K.roas(f.a), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.b))))) },
+  ];
+  if (p !== "google") cols.push({ t: "Actual sales", v: (f) => f.real, f: (v) => usd(v) }, { t: "Actual ROAS", v: (f) => f.real != null && f.a[0] ? f.real / f.a[0] : null, f: (v) => el("b", { class: v == null ? "" : v >= D.objetivos.roas_equilibrio ? "up" : "down" }, xx(v)) });
+  nodos.push(el("div", { class: "card" }, filas.length ? tabla(cols, filas, 1) : el("div", { class: "vacio" }, "No campaigns with spend in the period.")));
+  if (p === "google") {
+    const g = D.google?.salud || {};
+    if ((g.limitadas_presupuesto || []).length) nodos.push(el("div", { class: "aviso-fuente" }, "Budget-limited: " + g.limitadas_presupuesto.map((x) => x.nombre).join(", ")));
+  }
+  nodos.push(el("div", { class: "nota-p" }, "Purchases from the last 2 or 3 days are still coming in through attribution: ROAS for the most recent days reads low."));
+  return nodos;
+}
+
+// ───────── ANUNCIOS ─────────
+// Each ad carries its daily data (up to 60 days) and the period is chosen here, separate from the rest of the dashboard.
+// "Today" comes from ads_hoy.json, refreshed every 3 hours.
+const PER_ADS = [["hoy", "Today"], ["ayer", "Yesterday"], ["7", "7 days"], ["14", "14 days"], ["30", "30 days"], ["60", "60 days"], ["mes", "This month"]];
+let HOY = null;
+const hoyFecha = () => addDays(D.hasta, 1);
+const hoyOk = () => !!(HOY && HOY.fecha === hoyFecha());
+function rangoAds() {
+  let per = P.perAds || "7";
+  if (per === "hoy" && !hoyOk()) per = "7";
+  const fin = D.hasta;
+  if (per === "hoy") return { per, r: { ini: hoyFecha(), fin: hoyFecha() }, p: { ini: fin, fin } };
+  if (per === "ayer") return { per, r: { ini: fin, fin }, p: { ini: addDays(fin, -1), fin: addDays(fin, -1) } };
+  const r = per === "mes" ? { ini: fin.slice(0, 8) + "01", fin } : { ini: addDays(fin, -(+per - 1)), fin };
+  return { per, r, p: previo(r) };
+}
+const fusion = (base, fila) => fila ? { ...(base || {}), [hoyFecha()]: fila } : (base || {});
+function sumAd(diario, r) {
+  const a = [0, 0, 0, 0, 0, 0, 0];
+  for (const [f, v] of Object.entries(diario || {})) if (f >= r.ini && f <= r.fin) for (let i = 0; i < v.length; i++) a[i] += v[i];
+  return a;
+}
+/** Ads (with spend in the last 60 days) plus those that appeared today and are not yet in the history. */
+function itemsAds(plat) {
+  const t = D.top?.[plat] || {};
+  const h = hoyOk() ? (HOY[plat] || {}) : {};
+  const vistos = new Set();
+  const out = [...(t.anuncios || []), ...(t.otros || [])].map((a) => { vistos.add(a.id); return { ...a, diario: fusion(a.diario, h[a.id]?.fila) }; });
+  for (const [id, x] of Object.entries(h)) if (!vistos.has(id)) out.push({ id, nombre: x.nombre, campana: x.campana, diario: { [hoyFecha()]: x.fila } });
+  return out;
+}
+const dl2 = (a, b, inv) => { const d = delta(a, b, inv); return d ? el("span", { class: d.cls }, " " + (d.d > 0 ? "▲" : d.d < 0 ? "▼" : "") + grp(Math.abs(d.d) * 100, 0) + "%") : ""; };
+const ratio = (n, d) => d ? n / d : null;
+function adCard(a, plat, ra, rp, per) {
+  const [c, cl, im, cv, va] = ra, [pc, pcl, pim, pcv, pva] = rp;
+  const filas = [
+    ["Spend", el("span", {}, usd(c), dl2(c, pc, true))],
+    ["Platform ROAS", el("span", {}, xx(ratio(va, c)), dl2(ratio(va, c), ratio(pva, pc)))],
+    ["Purchases", el("span", {}, grp(cv, 0), dl2(cv, pcv))],
+    ["Cost/purchase", el("span", {}, usd(ratio(c, cv)), dl2(ratio(c, cv), ratio(pc, pcv), true))],
+    ["CTR", el("span", {}, pct(ratio(cl, im), 2), dl2(ratio(cl, im), ratio(pcl, pim)))]];
+  if (plat === "meta") filas.push(["Frequency", per === "7" ? grp(a.frecuencia, 1) : per === "30" ? grp(a.frecuencia30, 1) : el("span", { title: "Frequency cannot be summed across days: only available for 7 and 30 days" }, "–")]);
+  if (plat === "tiktok") { filas.push(["2 s retention", pct(ratio(ra[5], im))]); filas.push(["Add to carts", grp(ra[6])]); }
+  const flags = [];
+  for (const al of D.alertas?.activas || []) if (al.cat === "Ads" && al.plataforma === plat && al.detalle.includes(a.nombre.slice(0, 50))) flags.push(al.titulo.replace(/^\d+ |^An? /, "").replace(/^(Meta|TikTok) ads? /, "").replace(/^./, (c) => c.toUpperCase()));
+  return el("div", { class: "ad" },
+    el("div", { class: "img" + (plat === "tiktok" ? " v" : "") }, a.img ? el("img", { src: a.img, alt: "", loading: "lazy" }) : "no preview"),
+    el("div", { class: "b" }, el("div", { class: "n" }, a.nombre), el("div", { class: "c" }, a.campana),
+      el("dl", {}, filas.map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)])),
+      flags.map((f) => el("span", { class: "flag" }, "⚠ " + f))));
+}
+function anunciosPanel() {
+  const nodos = [];
+  const { per, r, p } = rangoAds();
+  const rtxt = (x) => x.ini === x.fin ? fcorta(x.ini) : `${fcorta(x.ini)} to ${fcorta(x.fin)}`;
+  nodos.push(el("div", { class: "filtros" },
+    el("div", { class: "seg" }, PER_ADS.map(([k, n]) => el("button", { "aria-pressed": String(per === k), disabled: k === "hoy" && !hoyOk() ? "" : null,
+      title: k === "hoy" && !hoyOk() ? "No data for today yet (updates every 3 hours, from 10 a.m. to midnight ET)" : null,
+      onclick: () => { P.perAds = k; guardar(); pintar(); } }, n))),
+    el("span", { class: "nota" }, `${rtxt(r)} · compared with ${rtxt(p)}`)));
+  let aviso = "ROAS figures are as reported by each platform. Purchases from the last 2 or 3 days are still coming in through attribution, so the most recent periods read low.";
+  if (per === "hoy") aviso = `Today is partial: data as of ${new Date(HOY.generado).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" })} (ET), compared with a full yesterday. ` + aviso;
+  if (per === "60" || (per === "mes" && p.ini < addDays(D.hasta, -59))) aviso = "Only 60 days of history per ad are available: this period has no full comparison. " + aviso;
+  nodos.push(el("div", { class: "aviso-fuente" }, aviso));
+  const orden = P.ordenAds || "gasto";
+  const clave = (x) => orden === "roas" ? (x.ra[0] ? x.ra[4] / x.ra[0] : 0) : orden === "compras" ? x.ra[3] : x.ra[0];
+  nodos.push(el("div", { class: "filtros" }, el("span", { class: "nota" }, "Sort by"),
+    el("div", { class: "seg" }, [["gasto", "Spend"], ["compras", "Purchases"], ["roas", "ROAS"]].map(([k, n]) => el("button", { "aria-pressed": String(orden === k), onclick: () => { P.ordenAds = k; guardar(); pintar(); } }, n)))));
+  const seccion = (plat, titulo, sub) => {
+    const todos = itemsAds(plat).map((a) => ({ a, ra: sumAd(a.diario, r), rp: sumAd(a.diario, p) }));
+    const vivos = todos.filter((x) => x.ra[0] > 0).sort((x, y) => clave(y) - clave(x));
+    const solo = todos.filter((x) => x.ra[0] === 0 && x.rp[0] > 0).length;
+    nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL(plat)}` }), titulo,
+      el("small", {}, `${vivos.length} ads with spend` + (solo ? ` · ${solo} spent only in the prior period` : "") + (sub ? " · " + sub : ""))));
+    nodos.push(vivos.length ? el("div", { class: "ads" }, vivos.slice(0, 24).map((x) => adCard(x.a, plat, x.ra, x.rp, per))) : el("div", { class: "vacio" }, "No ads with spend in this period."));
+  };
+  seccion("meta", "Meta");
+  seccion("tiktok", "TikTok", "cutoff rules: 2 s retention < 10%, $75 with no add-to-cart, $110 with no purchase");
+  const g = D.top?.google || {};
+  const hg = hoyOk() ? (HOY.google_grupos || {}) : {};
+  const grupos = (g.grupos || []).map((x) => ({ ...x, ra: sumAd(fusion(x.diario, hg[x.id]?.fila), r), rp: sumAd(x.diario, p) })).filter((x) => x.ra[0] > 0);
+  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("google")}` }), "Google · Performance Max asset groups"));
+  nodos.push(el("div", { class: "card" }, grupos.length ? tabla([
+    { t: "Group", v: (f) => f.nombre, f: (v, f) => el("span", {}, v, el("span", { class: "sub" }, f.campana)) },
+    { t: "Spend", v: (f) => f.ra[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(v, f.rp[0], true)))) },
+    { t: "Purchases", v: (f) => f.ra[3], f: (v) => grp(v, 1) },
+    { t: "Cost/purchase", v: (f) => K.cpa(f.ra), f: (v) => usd(v, 2) },
+    { t: "Platform ROAS", v: (f) => K.roas(f.ra), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.rp))))) },
+  ], grupos, 1) : el("div", { class: "vacio" }, "No spend in this period.")));
+  nodos.push(el("h2", {}, "Google · top Shopping products by spend"));
+  const hp = hoyOk() ? (HOY.google_productos || {}) : {};
+  const prods = (g.productos || []).map((x) => ({ ...x, ra: sumAd(fusion(x.diario, hp[x.item]?.fila), r), rp: sumAd(x.diario, p) }))
+    .filter((x) => x.ra[0] > 0).sort((x, y) => y.ra[0] - x.ra[0]).slice(0, 16);
+  nodos.push(prods.length ? el("div", { class: "ads" }, prods.map((pp) => {
+    const [c, cl, im, cv, va] = pp.ra, [pc, , , pcv, pva] = pp.rp;
+    return el("div", { class: "ad" }, el("div", { class: "img" }, pp.img ? el("img", { src: pp.img, alt: "", loading: "lazy" }) : "no image"),
+      el("div", { class: "b" }, el("div", { class: "n" }, pp.titulo), el("div", { class: "c" }, pp.item),
+        el("dl", {}, [["Spend", el("span", {}, usd(c), dl2(c, pc, true))], ["Clicks", grp(cl)], ["Purchases", grp(cv, 1)], ["Platform ROAS", el("span", {}, xx(ratio(va, c)), dl2(ratio(va, c), ratio(pva, pc)))]].map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)]))));
+  })) : el("div", { class: "vacio" }, "No spend in this period."));
+  nodos.push(el("div", { class: "nota-p" }, "Shopping products are the top 20 by spend over the last 7 and the last 60 days."));
+  return nodos;
+}
+
+// ───────── TIENDA ─────────
+function tiendaPanel() {
+  const r = rango(), pr = previo(r);
+  const t = tienda(r), tp = tienda(pr);
+  const nodos = [];
+  nodos.push(el("div", { class: "tiles" },
+    tile("Orders", grp(t.pedidos), delta(t.pedidos, tp.pedidos)),
+    tile("Revenue", usd(t.ingresos), delta(t.ingresos, tp.ingresos)),
+    tile("From new customers", usd(t.ing_nuevos), delta(t.ing_nuevos, tp.ing_nuevos), t.ingresos ? pct(t.ing_nuevos / t.ingresos, 0) + " of revenue" : ""),
+    tile("Canceled", grp(t.cancel), delta(t.cancel, tp.cancel, true))));
+  const fs = dias(r.ini, r.fin), dd = D.tienda?.diario || {};
+  const nuevos = {}, rec = {};
+  fs.forEach((f) => { if (dd[f]) { nuevos[f] = dd[f].ing_nuevos; rec[f] = dd[f].ingresos - dd[f].ing_nuevos; } });
+  nodos.push(el("div", { class: "card", style: "margin-top:12px" }, el("h2", { style: "margin-top:0" }, "Daily revenue: new vs. returning customers"),
+    leyenda([{ nombre: "New", color: "var(--shop)" }, { nombre: "Returning", color: "var(--prev)" }]),
+    grafico(fs, [{ nombre: "New", color: "var(--shop)", tipo: "bar", valores: nuevos }, { nombre: "Returning", color: "var(--prev)", tipo: "bar", valores: rec }], { fmt: ejeUsd, apilado: true }),
+    el("div", { class: "nota-p" }, "New = the customer's first order, or an account created the same day as the order. This is approximate: Shopify does not store the customer's order number at the time of purchase.")));
+  const n = P.per === "mes" ? (dias(r.ini, r.fin).length <= 7 ? "7" : dias(r.ini, r.fin).length <= 14 ? "14" : "30") : P.per;
+  const prods = D.tienda?.productos?.[n] || [];
+  nodos.push(el("h2", {}, "Top-selling products", el("small", {}, `last ${n} days · excluding shipping charges`)));
+  nodos.push(el("div", { class: "card" }, tabla([
+    { t: "Product", v: (f) => f.titulo, f: (v, f) => el("span", { style: "display:flex;gap:10px;align-items:center" }, f.img ? el("img", { src: f.img, alt: "", width: 36, height: 36, style: "border-radius:6px;object-fit:cover;flex:none", loading: "lazy" }) : null, v) },
+    { t: "Orders", v: (f) => f.pedidos, f: grp },
+    { t: "Units", v: (f) => f.unidades, f: grp },
+    { t: "Revenue", v: (f) => f.ingresos, f: (v) => usd(v) },
+    { t: "Avg. price", v: (f) => f.unidades ? f.ingresos / f.unidades : null, f: (v) => usd(v) },
+  ], prods, 3)));
+  return nodos;
+}
+
+// ───────── ALERTAS ─────────
+function alertaNodo(a) {
+  const niv = { critico: "Critical", aviso: "Warning", info: "Opportunity" }[a.nivel];
+  const desde = a.desde ? new Date(a.desde) : null;
+  return el("div", { class: "alerta " + a.nivel },
+    el("span", { class: "ic nivel " + a.nivel }, niv),
+    el("span", { class: "t" }, a.titulo),
+    el("span", { class: "d" }, a.detalle),
+    a.accion ? el("span", { class: "a" }, "→ ", a.accion) : null,
+    el("span", { class: "m" }, `${a.cat} · ${NOM[a.plataforma] || a.plataforma}` + (desde ? ` · active since ${desde.getMonth() + 1}/${desde.getDate()}` : "")));
+}
+function alertasPanel() {
+  const act = D.alertas?.activas || [];
+  const nodos = [el("h2", {}, "Active alerts", el("small", {}, "evaluated every morning on the closed day, and urgent items every 3 hours during the day"))];
+  if (!act.length) nodos.push(el("div", { class: "vacio" }, "Nothing out of the ordinary."));
+  for (const niv of ["critico", "aviso", "info"]) {
+    const xs = act.filter((a) => a.nivel === niv); if (!xs.length) continue;
+    nodos.push(...xs.map(alertaNodo));
+  }
+  const hist = [...(D.alertas?.historial || [])].filter((h) => h.hasta).reverse().slice(0, 60);
+  nodos.push(el("h2", {}, "History", el("small", {}, "alerts that have already been resolved")));
+  nodos.push(hist.length ? el("div", { class: "card" }, tabla([
+    { t: "Alert", v: (f) => f.titulo, f: (v, f) => el("span", {}, el("span", { class: "nivel " + f.nivel, style: "margin-right:6px" }), v) },
+    { t: "From", v: (f) => f.desde, f: (v) => new Date(v).toLocaleDateString("en-US", { day: "numeric", month: "numeric" }) },
+    { t: "To", v: (f) => f.hasta, f: (v) => new Date(v).toLocaleDateString("en-US", { day: "numeric", month: "numeric" }) },
+    { t: "Platform", v: (f) => NOM[f.plataforma] || f.plataforma },
+  ], hist, 2)) : el("div", { class: "vacio" }, "No resolved alerts yet."));
+  nodos.push(el("h2", {}, "What we monitor"));
+  nodos.push(el("div", { class: "card", style: "font-size:13px;color:var(--ink2)" }, el("ul", { style: "padding-left:18px;display:grid;gap:4px" }, [
+    "Drops in Shopify revenue and orders vs. the same weekday in prior weeks.",
+    "7-day MER below break-even (3.14x) or below target (4x).",
+    "Rising CPC and spend, falling CTR, and matured ROAS, conversion rate and cost per purchase (3-day lag), by platform and by campaign. It has to move against both the 7-day average and the same weekday.",
+    "Broken tracking: orders with a platform's UTM while that platform reports zero purchases, or the other way around.",
+    "Campaigns and ads that spend without selling, high frequency and falling CTR on Meta, and TikTok cutoff rules.",
+    "Spend pacing against the monthly budget.",
+    "Disapproved ads, budget-limited campaigns and data sources that are not responding.",
+    "During the day: runaway spend, hours without orders and the site being down.",
+  ].map((x) => el("li", {}, x)))));
+  return nodos;
+}
+
+// ───────── armado ─────────
+const PANELES = { resumen, canales: canalesPanel, plataformas: plataformasPanel, anuncios: anunciosPanel, tienda: tiendaPanel, alertas: alertasPanel };
+function irA(tab) { P.tab = tab; guardar(); history.replaceState(null, "", "#" + tab); pintar(); window.scrollTo({ top: 0 }); }
+function pintar() {
+  document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === P.tab)));
+  document.querySelectorAll("section.panel").forEach((s) => s.classList.toggle("on", s.id === "p-" + P.tab));
+  document.querySelectorAll("#periodo button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.p === P.per)));
+  $("#filtros").style.display = P.tab === "alertas" || P.tab === "anuncios" ? "none" : "";
+  const r = rango(); $("#rango").textContent = `${fcorta(r.ini)} to ${fcorta(r.fin)} · compared with ${fcorta(previo(r).ini)} to ${fcorta(previo(r).fin)}`;
+  const sec = $("#p-" + P.tab);
+  try { sec.replaceChildren(...PANELES[P.tab]()); }
+  catch (e) { console.error(e); sec.replaceChildren(el("div", { class: "vacio" }, "Could not render this section: " + e.message)); }
+}
+
+async function iniciar() {
+  try { D = await (await fetch("data.json", { cache: "no-store" })).json(); }
+  catch (e) { $("#meta").textContent = "Could not load the data."; return; }
+  try { const rh = await fetch("ads_hoy.json", { cache: "no-store" }); if (rh.ok) HOY = await rh.json(); } catch (e) {}
+  const h = location.hash.slice(1); if (PANELES[h]) P.tab = h;
+  const gen = new Date(D.generado);
+  const caidas = Object.entries(D.fuentes || {}).filter(([, f]) => !f.ok).map(([k]) => k);
+  $("#meta").replaceChildren(el("div", {}, "Data as of ", el("b", {}, fcorta(D.hasta)), " (closed day)"),
+    el("div", {}, `Updated ${gen.toLocaleString("en-US", { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York" })} ET`),
+    ...(caidas.length ? [el("div", {}, "⚠ Not updated today: " + caidas.join(", "))] : []));
+  const crit = (D.alertas?.activas || []).filter((a) => a.nivel === "critico").length;
+  const b = $("#badge"); if (crit) { b.hidden = false; b.textContent = crit; }
+  document.querySelectorAll("#tabs button").forEach((bt) => bt.addEventListener("click", () => irA(bt.dataset.tab)));
+  document.querySelectorAll("#periodo button").forEach((bt) => bt.addEventListener("click", () => { P.per = bt.dataset.p; guardar(); pintar(); }));
+  $("#pie").textContent = "Sources: Google Ads API, Meta Marketing API, TikTok Business API, Shopify Admin API and the attribution report UTM data. Revenue = original order total in Shopify (as in the attribution report), in ET.";
+  pintar();
+}
+fetch("logo.svg").then((r) => r.ok ? r.text() : "").then((t) => {
+  if (!t) return; const tmp = document.createElement("div"); tmp.innerHTML = t; const s = tmp.querySelector("svg");
+  if (s) { s.querySelectorAll("style").forEach((x) => x.remove()); s.setAttribute("aria-label", "Brand"); $("#logo").prepend(s); }
+}).catch(() => {});
+iniciar();
+</script>
+</body>
+</html>
