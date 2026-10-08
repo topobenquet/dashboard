@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T16:30:11.951Z",
+ "generated": "2026-10-08T18:30:35.138Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 0,
-  "pagoparPendienteUsd": 6689.83,
+  "pagoparPendienteUsd": 6846.55,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -104,15 +104,15 @@
   },
   {
    "fecha": "2026-10-08",
-   "in": 2219.31,
-   "out": 991.38,
-   "n": 7,
+   "in": 2376.03,
+   "out": 1220.69,
+   "n": 10,
    "porFuente": {
-    "Pagopar": 2219.31,
-    "WhatsApp · Pagos (Majo)": -991.38
+    "Pagopar": 2376.03,
+    "WhatsApp · Pagos (Majo)": -1220.69
    },
-   "neto": 1227.93,
-   "acum": 4040.52
+   "neto": 1155.34,
+   "acum": 3967.93
   }
  ],
  "movimientos": [
@@ -283,6 +283,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jacques Bois",
    "gs": 610000
+  },
+  {
+   "d": "2026-10-08",
+   "t": "in",
+   "usd": 156.72,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Emily Crowley (Canada Inline)",
+   "gs": 909000
   },
   {
    "d": "2026-10-01",
@@ -495,6 +503,34 @@
    }
   },
   {
+   "d": "2026-10-08",
+   "t": "out",
+   "usd": 31.03,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago liquidación Driver Elizabeth.",
+   "gs": 180000,
+   "rub": {
+    "chofer": 31.03,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-08",
+   "t": "out",
+   "usd": 198.28,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago traslado 09/10 Terminal de Ómnibus /Esplendor - 10/10 Esplendor/ terminal de ómnibus ",
+   "gs": 1150000,
+   "rub": {
+    "chofer": 198.28,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 215.52,
@@ -608,8 +644,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 21,
-   "bruto": 6689.82,
+   "cobros": 22,
+   "bruto": 6846.54,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -624,8 +660,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 38801000,
-  "cobradoUsd": 6689.82,
+  "cobradoGs": 39710000,
+  "cobradoUsd": 6846.54,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -665,9 +701,9 @@
    },
    {
     "fecha": "2026-10-08",
-    "cobros": 5,
-    "gs": 12872000,
-    "usd": 2219.31
+    "cobros": 6,
+    "gs": 13781000,
+    "usd": 2376.03
    }
   ],
   "pruebasExcluidas": 0,
@@ -675,8 +711,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 38801000,
-  "pendienteUsd": 6689.83
+  "pendienteGs": 39710000,
+  "pendienteUsd": 6846.55
  },
  "giros": [
   {
@@ -783,7 +819,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲38.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲39.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
