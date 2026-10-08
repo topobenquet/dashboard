@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T10:21:43.562Z",
+  "generated": "2026-10-08T11:32:48.039Z",
   "lastSyncLabel": "8 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -151,8 +151,8 @@
     {
       "mes": "Octubre",
       "leads": 81,
-      "reservas": 18,
-      "revenue": 4789.13,
+      "reservas": 20,
+      "revenue": 4861.72,
       "chofer": 1425.16,
       "comb": 120.7,
       "peajes": 0,
@@ -160,9 +160,9 @@
       "reembolsos": 0,
       "otros": 534.48,
       "gAds": 79,
-      "meta": 30.94,
-      "costoSheet": 3959.94,
-      "gananciaSheet": 9383.45,
+      "meta": 31.1,
+      "costoSheet": 4066.93,
+      "gananciaSheet": 9542.47,
       "base": "caja"
     }
   ],
@@ -5477,6 +5477,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "A disposición - Aero",
+      "cliente": "GUILLERMO IVAN SOSA LOPEZ",
+      "pais": "",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 197,
+      "sena": 100,
+      "restante": 97,
+      "choferCost": 73.77,
+      "neto": 123.23,
+      "fechaReserva": "07/10/26",
+      "fechaSalida": "08/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
       "cliente": "Tania Storm",
       "pais": "Paraguay",
@@ -5522,12 +5536,12 @@
       "route": "AERO-ASU",
       "cliente": "andré garcia",
       "pais": "Brasil",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 138,
       "sena": 100,
       "restante": 38,
-      "choferCost": 0,
-      "neto": 133.86,
+      "choferCost": 11.48,
+      "neto": 122.38,
       "fechaReserva": "07/10/26",
       "fechaSalida": "08/10/26"
     },
@@ -5673,6 +5687,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Aeropuerto a Austria 1878",
+      "cliente": "fabricio savastano",
+      "pais": "Chile",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 66.93,
+      "fechaReserva": "08/10/26",
+      "fechaSalida": "12/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "AERO-ChâteauVictoriaHotel",
       "cliente": "Angela",
       "pais": "España",
@@ -5718,12 +5746,12 @@
       "route": "AERO-ASU",
       "cliente": "david òptim",
       "pais": "España",
-      "conductor": "",
+      "conductor": "José Berdén",
       "pago": 98,
       "sena": 98,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 95.06,
+      "choferCost": 19.67,
+      "neto": 75.39,
       "fechaReserva": "08/10/26",
       "fechaSalida": "14/10/26"
     },
@@ -6252,9 +6280,9 @@
       "2026-10-02": 2,
       "2026-10-05": 5,
       "2026-10-06": 4,
-      "2026-10-07": 4,
+      "2026-10-07": 5,
       "2026-10-01": 1,
-      "2026-10-08": 1,
+      "2026-10-08": 2,
       "2026-10-04": 1
     },
     "gads": {
@@ -6670,9 +6698,9 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-10-08": 2,
-      "2026-10-07": 3,
-      "2026-10-06": 2,
+      "2026-10-08": 3,
+      "2026-10-07": 22,
+      "2026-10-06": 13,
       "2026-10-04": 16,
       "2026-10-03": 15,
       "2026-10-02": 5,
@@ -6723,10 +6751,10 @@
       "2026-09-29": 7,
       "2026-09-30": 10,
       "2026-10-01": 19,
-      "2026-10-05": 13
+      "2026-10-05": 29
     },
     "monthly": {
-      "Octubre": 75,
+      "Octubre": 122,
       "Septiembre": 213,
       "Agosto": 27
     }
