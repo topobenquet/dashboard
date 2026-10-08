@@ -52,6 +52,7 @@ nav.tabs .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:4p
 .filtros{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:14px 0 4px}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
 .seg button{background:none;border:0;font:inherit;font-size:13px;color:var(--ink2);padding:6px 11px;cursor:pointer}
+.seg button:disabled{opacity:.4;cursor:not-allowed}
 .seg button+button{border-left:1px solid var(--line)}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--page);font-weight:600}
 .filtros .nota{font-size:12px;color:var(--mut)}
@@ -570,16 +571,50 @@ function plataformasPanel() {
 }
 
 // ───────── ANUNCIOS ─────────
-function adCard(a, plat) {
-  const [c, cl, im, cv, va] = a.ult7, pv = a.prev7;
-  const ctr = im ? cl / im : null, pctr = pv[2] ? pv[1] / pv[2] : null;
-  const dlCtr = delta(ctr, pctr);
-  const filas = [["Inversión", usd(c)], ["ROAS plat.", xx(c ? va / c : null)], ["Compras", grp(cv, 0)], ["Costo/compra", usd(cv ? c / cv : null)], ["CTR", el("span", {}, pct(ctr, 2), " ", dlCtr ? el("span", { class: dlCtr.cls }, (dlCtr.d > 0 ? "▲" : "▼") + grp(Math.abs(dlCtr.d) * 100, 0) + "%") : "")]];
-  if (plat === "meta") filas.push(["Frecuencia", grp(a.frecuencia, 1)]);
-  if (plat === "tiktok") { filas.push(["Retención 2 s", pct(im ? (a.vistas2s || 0) / im : null)]); filas.push(["Carritos 30 d", grp(a.carritos30 ?? 0)]); }
+// Cada anuncio trae su diario (hasta 60 días) y el período se elige acá, aparte del resto del tablero.
+// "Hoy" sale de ads_hoy.json, que intradia.py renueva cada 3 horas.
+const PER_ADS = [["hoy", "Hoy"], ["ayer", "Ayer"], ["7", "7 días"], ["14", "14 días"], ["30", "30 días"], ["60", "60 días"], ["mes", "Este mes"]];
+let HOY = null;
+const hoyFecha = () => addDays(D.hasta, 1);
+const hoyOk = () => !!(HOY && HOY.fecha === hoyFecha());
+function rangoAds() {
+  let per = P.perAds || "7";
+  if (per === "hoy" && !hoyOk()) per = "7";
+  const fin = D.hasta;
+  if (per === "hoy") return { per, r: { ini: hoyFecha(), fin: hoyFecha() }, p: { ini: fin, fin } };
+  if (per === "ayer") return { per, r: { ini: fin, fin }, p: { ini: addDays(fin, -1), fin: addDays(fin, -1) } };
+  const r = per === "mes" ? { ini: fin.slice(0, 8) + "01", fin } : { ini: addDays(fin, -(+per - 1)), fin };
+  return { per, r, p: previo(r) };
+}
+const fusion = (base, fila) => fila ? { ...(base || {}), [hoyFecha()]: fila } : (base || {});
+function sumAd(diario, r) {
+  const a = [0, 0, 0, 0, 0, 0, 0];
+  for (const [f, v] of Object.entries(diario || {})) if (f >= r.ini && f <= r.fin) for (let i = 0; i < v.length; i++) a[i] += v[i];
+  return a;
+}
+/** Anuncios (con gasto en los últimos 60 días) + los que aparecieron hoy y todavía no están en el histórico. */
+function itemsAds(plat) {
+  const t = D.top?.[plat] || {};
+  const h = hoyOk() ? (HOY[plat] || {}) : {};
+  const vistos = new Set();
+  const out = [...(t.anuncios || []), ...(t.otros || [])].map((a) => { vistos.add(a.id); return { ...a, diario: fusion(a.diario, h[a.id]?.fila) }; });
+  for (const [id, x] of Object.entries(h)) if (!vistos.has(id)) out.push({ id, nombre: x.nombre, campana: x.campana, diario: { [hoyFecha()]: x.fila } });
+  return out;
+}
+const dl2 = (a, b, inv) => { const d = delta(a, b, inv); return d ? el("span", { class: d.cls }, " " + (d.d > 0 ? "▲" : d.d < 0 ? "▼" : "") + grp(Math.abs(d.d) * 100, 0) + "%") : ""; };
+const ratio = (n, d) => d ? n / d : null;
+function adCard(a, plat, ra, rp, per) {
+  const [c, cl, im, cv, va] = ra, [pc, pcl, pim, pcv, pva] = rp;
+  const filas = [
+    ["Inversión", el("span", {}, usd(c), dl2(c, pc, true))],
+    ["ROAS plat.", el("span", {}, xx(ratio(va, c)), dl2(ratio(va, c), ratio(pva, pc)))],
+    ["Compras", el("span", {}, grp(cv, 0), dl2(cv, pcv))],
+    ["Costo/compra", el("span", {}, usd(ratio(c, cv)), dl2(ratio(c, cv), ratio(pc, pcv), true))],
+    ["CTR", el("span", {}, pct(ratio(cl, im), 2), dl2(ratio(cl, im), ratio(pcl, pim)))]];
+  if (plat === "meta") filas.push(["Frecuencia", per === "7" ? grp(a.frecuencia, 1) : per === "30" ? grp(a.frecuencia30, 1) : el("span", { title: "La frecuencia no se puede sumar entre días: solo está para 7 y 30 días" }, "–")]);
+  if (plat === "tiktok") { filas.push(["Retención 2 s", pct(ratio(ra[5], im))]); filas.push(["Carritos", grp(ra[6])]); }
   const flags = [];
-  const T = D.alertas?.activas || [];
-  for (const al of T) if (al.cat === "Anuncios" && al.plataforma === plat && al.detalle.includes(a.nombre.slice(0, 50))) flags.push(al.titulo.replace(/^\d+ |^Un /, "").replace(/anuncios? de (Meta|TikTok) /, ""));
+  for (const al of D.alertas?.activas || []) if (al.cat === "Anuncios" && al.plataforma === plat && al.detalle.includes(a.nombre.slice(0, 50))) flags.push(al.titulo.replace(/^\d+ |^Un /, "").replace(/anuncios? de (Meta|TikTok) /, ""));
   return el("div", { class: "ad" },
     el("div", { class: "img" + (plat === "tiktok" ? " v" : "") }, a.img ? el("img", { src: a.img, alt: "", loading: "lazy" }) : "sin vista previa"),
     el("div", { class: "b" }, el("div", { class: "n" }, a.nombre), el("div", { class: "c" }, a.campana),
@@ -588,34 +623,53 @@ function adCard(a, plat) {
 }
 function anunciosPanel() {
   const nodos = [];
-  const hasta = D.hasta, desde = addDays(hasta, -6);
-  nodos.push(el("div", { class: "aviso-fuente" }, `Los anuncios se miran siempre en los últimos 7 días (${fcorta(desde)} al ${fcorta(hasta)}) contra los 7 anteriores, sin importar el período elegido arriba. Los ROAS son los que reporta cada plataforma.`));
+  const { per, r, p } = rangoAds();
+  const rtxt = (x) => x.ini === x.fin ? fcorta(x.ini) : `${fcorta(x.ini)} al ${fcorta(x.fin)}`;
+  nodos.push(el("div", { class: "filtros" },
+    el("div", { class: "seg" }, PER_ADS.map(([k, n]) => el("button", { "aria-pressed": String(per === k), disabled: k === "hoy" && !hoyOk() ? "" : null,
+      title: k === "hoy" && !hoyOk() ? "Todavía no hay datos de hoy (se actualizan cada 3 horas, de 9 a 23 hora de Lima)" : null,
+      onclick: () => { P.perAds = k; guardar(); pintar(); } }, n))),
+    el("span", { class: "nota" }, `${rtxt(r)} · comparado con ${rtxt(p)}`)));
+  let aviso = "Los ROAS son los que reporta cada plataforma. Las compras de los últimos 2 o 3 días siguen llegando por atribución, así que los períodos más recientes se leen bajos.";
+  if (per === "hoy") aviso = `Hoy está parcial: datos de las ${new Date(HOY.generado).toLocaleTimeString("es", { hour: "2-digit", minute: "2-digit", timeZone: "America/Lima" })} (hora de Lima), comparados con ayer completo. ` + aviso;
+  if (per === "60" || (per === "mes" && p.ini < addDays(D.hasta, -59))) aviso = "Solo hay 60 días de historia por anuncio: este período no tiene comparación completa. " + aviso;
+  nodos.push(el("div", { class: "aviso-fuente" }, aviso));
   const orden = P.ordenAds || "gasto";
-  const ord = (arr) => [...arr].sort((a, b) => orden === "roas" ? ((b.ult7[0] ? b.ult7[4] / b.ult7[0] : 0) - (a.ult7[0] ? a.ult7[4] / a.ult7[0] : 0)) : orden === "compras" ? b.ult7[3] - a.ult7[3] : b.ult7[0] - a.ult7[0]);
+  const clave = (x) => orden === "roas" ? (x.ra[0] ? x.ra[4] / x.ra[0] : 0) : orden === "compras" ? x.ra[3] : x.ra[0];
   nodos.push(el("div", { class: "filtros" }, el("span", { class: "nota" }, "Ordenar por"),
     el("div", { class: "seg" }, [["gasto", "Inversión"], ["compras", "Compras"], ["roas", "ROAS"]].map(([k, n]) => el("button", { "aria-pressed": String(orden === k), onclick: () => { P.ordenAds = k; guardar(); pintar(); } }, n)))));
-  const meta = D.top?.meta?.anuncios || [];
-  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("meta")}` }), "Meta", el("small", {}, `${meta.length} anuncios con inversión`)));
-  nodos.push(meta.length ? el("div", { class: "ads" }, ord(meta).slice(0, 24).map((a) => adCard(a, "meta"))) : el("div", { class: "vacio" }, "Sin datos."));
-  const tt = D.top?.tiktok?.anuncios || [];
-  nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("tiktok")}` }), "TikTok", el("small", {}, "reglas de corte: retención a 2 s < 10%, $75 sin carrito, $110 sin compra")));
-  nodos.push(tt.length ? el("div", { class: "ads" }, ord(tt).slice(0, 24).map((a) => adCard(a, "tiktok"))) : el("div", { class: "vacio" }, "Sin anuncios con inversión."));
+  const seccion = (plat, titulo, sub) => {
+    const todos = itemsAds(plat).map((a) => ({ a, ra: sumAd(a.diario, r), rp: sumAd(a.diario, p) }));
+    const vivos = todos.filter((x) => x.ra[0] > 0).sort((x, y) => clave(y) - clave(x));
+    const solo = todos.filter((x) => x.ra[0] === 0 && x.rp[0] > 0).length;
+    nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL(plat)}` }), titulo,
+      el("small", {}, `${vivos.length} anuncios con inversión` + (solo ? ` · ${solo} gastaron solo en el período anterior` : "") + (sub ? " · " + sub : ""))));
+    nodos.push(vivos.length ? el("div", { class: "ads" }, vivos.slice(0, 24).map((x) => adCard(x.a, plat, x.ra, x.rp, per))) : el("div", { class: "vacio" }, "Sin anuncios con inversión en este período."));
+  };
+  seccion("meta", "Meta");
+  seccion("tiktok", "TikTok", "reglas de corte: retención a 2 s < 10%, $75 sin carrito, $110 sin compra");
   const g = D.top?.google || {};
+  const hg = hoyOk() ? (HOY.google_grupos || {}) : {};
+  const grupos = (g.grupos || []).map((x) => ({ ...x, ra: sumAd(fusion(x.diario, hg[x.id]?.fila), r), rp: sumAd(x.diario, p) })).filter((x) => x.ra[0] > 0);
   nodos.push(el("h2", {}, el("span", { class: "dot", style: `background:${COL("google")}` }), "Google · grupos de recursos de Performance Max"));
-  nodos.push(el("div", { class: "card" }, tabla([
+  nodos.push(el("div", { class: "card" }, grupos.length ? tabla([
     { t: "Grupo", v: (f) => f.nombre, f: (v, f) => el("span", {}, v, el("span", { class: "sub" }, f.campana)) },
-    { t: "Inversión 7 d", v: (f) => f.ult7[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(v, f.prev7[0], true)))) },
-    { t: "Compras", v: (f) => f.ult7[3], f: (v) => grp(v, 1) },
-    { t: "Costo/compra", v: (f) => K.cpa(f.ult7), f: (v) => usd(v, 2) },
-    { t: "ROAS plataforma", v: (f) => K.roas(f.ult7), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.prev7))))) },
-  ], (g.grupos || []).filter((x) => x.ult7[0] > 0), 1)));
+    { t: "Inversión", v: (f) => f.ra[0], f: (v, f) => el("span", {}, usd(v), el("span", { class: "sub" }, deltaTxt(delta(v, f.rp[0], true)))) },
+    { t: "Compras", v: (f) => f.ra[3], f: (v) => grp(v, 1) },
+    { t: "Costo/compra", v: (f) => K.cpa(f.ra), f: (v) => usd(v, 2) },
+    { t: "ROAS plataforma", v: (f) => K.roas(f.ra), f: (v, f) => el("span", {}, xx(v), el("span", { class: "sub" }, deltaTxt(delta(v, K.roas(f.rp))))) },
+  ], grupos, 1) : el("div", { class: "vacio" }, "Sin inversión en este período.")));
   nodos.push(el("h2", {}, "Google · productos de Shopping con más inversión"));
-  nodos.push(el("div", { class: "ads" }, (g.productos || []).slice(0, 16).map((pp) => {
-    const [c, cl, im, cv, va] = pp.ult7;
+  const hp = hoyOk() ? (HOY.google_productos || {}) : {};
+  const prods = (g.productos || []).map((x) => ({ ...x, ra: sumAd(fusion(x.diario, hp[x.item]?.fila), r), rp: sumAd(x.diario, p) }))
+    .filter((x) => x.ra[0] > 0).sort((x, y) => y.ra[0] - x.ra[0]).slice(0, 16);
+  nodos.push(prods.length ? el("div", { class: "ads" }, prods.map((pp) => {
+    const [c, cl, im, cv, va] = pp.ra, [pc, , , pcv, pva] = pp.rp;
     return el("div", { class: "ad" }, el("div", { class: "img" }, pp.img ? el("img", { src: pp.img, alt: "", loading: "lazy" }) : "sin imagen"),
       el("div", { class: "b" }, el("div", { class: "n" }, pp.titulo), el("div", { class: "c" }, pp.item),
-        el("dl", {}, [["Inversión", usd(c)], ["Clicks", grp(cl)], ["Compras", grp(cv, 1)], ["ROAS plat.", el("span", {}, xx(c ? va / c : null), " ", deltaTxt(delta(c ? va / c : null, pp.prev7[0] ? pp.prev7[4] / pp.prev7[0] : null)))]].map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)]))));
-  })));
+        el("dl", {}, [["Inversión", el("span", {}, usd(c), dl2(c, pc, true))], ["Clicks", grp(cl)], ["Compras", grp(cv, 1)], ["ROAS plat.", el("span", {}, xx(ratio(va, c)), dl2(ratio(va, c), ratio(pva, pc)))]].map(([k, v]) => [el("dt", {}, k), el("dd", {}, v)]))));
+  })) : el("div", { class: "vacio" }, "Sin inversión en este período."));
+  nodos.push(el("div", { class: "nota-p" }, "Los productos de Shopping son los 20 con más inversión de los últimos 7 y de los últimos 60 días."));
   return nodos;
 }
 
@@ -707,6 +761,7 @@ function pintar() {
 async function iniciar() {
   try { D = await (await fetch("data.json", { cache: "no-store" })).json(); }
   catch (e) { $("#meta").textContent = "No se pudieron cargar los datos."; return; }
+  try { const rh = await fetch("ads_hoy.json", { cache: "no-store" }); if (rh.ok) HOY = await rh.json(); } catch (e) {}
   const h = location.hash.slice(1); if (PANELES[h]) P.tab = h;
   const gen = new Date(D.generado);
   const caidas = Object.entries(D.fuentes || {}).filter(([, f]) => !f.ok).map(([k]) => k);
