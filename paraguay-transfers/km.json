@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T11:10:14.579Z",
+ "generated": "2026-10-08T13:10:18.267Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1438,
-   "ultimoKm": 98534
+   "ultimoKm": 98540
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 663,
-   "kmFuera": 1008,
+   "kmFuera": 1014,
    "viajes": 5,
-   "costoComb": 2402898,
+   "costoComb": 2411526,
    "pagado": 0
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 21,
-   "conFoto": 15
+   "lecturas": 23,
+   "conFoto": 17
   },
   {
    "chofer": "Gustavo",
@@ -100,6 +100,35 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-10-08",
+   "fechaFin": "2026-10-08",
+   "horaIni": "08:53",
+   "horaFin": null,
+   "kmIni": 98540,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.9,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehiculo a disposición",
+    "Vehiculo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -745,6 +774,29 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 98536,
+   "hasta": 98540,
+   "km": 4,
+   "fechaDesde": "2026-10-08",
+   "fechaHasta": "2026-10-08",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 98534,
+   "hasta": 98536,
+   "km": 2,
+   "fechaDesde": "2026-10-07",
+   "fechaHasta": "2026-10-08",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 98530,
    "hasta": 98534,
    "km": 4,
@@ -1292,6 +1344,14 @@
    "ruta": "Vehiculo a disposición",
    "km": null,
    "adelanto": null
+  },
+  {
+   "fecha": "2026-10-08",
+   "chofer": "Luis",
+   "vehiculo": "Voxy",
+   "ruta": "AERO-ASU",
+   "km": 40,
+   "adelanto": 46000
   },
   {
    "fecha": "2026-10-09",
