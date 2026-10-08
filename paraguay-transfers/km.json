@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T21:13:24.367Z",
+ "generated": "2026-10-08T11:10:14.579Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1438,
-   "ultimoKm": 98473
+   "ultimoKm": 98534
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -68,10 +68,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 533,
-   "kmFuera": 1004,
-   "viajes": 4,
-   "costoComb": 2210206,
+   "kmViajes": 663,
+   "kmFuera": 1008,
+   "viajes": 5,
+   "costoComb": 2402898,
    "pagado": 0
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 19,
-   "conFoto": 13
+   "lecturas": 21,
+   "conFoto": 15
   },
   {
    "chofer": "Gustavo",
@@ -108,12 +108,12 @@
    "fechaIni": "2026-10-07",
    "fechaFin": "2026-10-07",
    "horaIni": "10:34",
-   "horaFin": null,
+   "horaFin": "22:05",
    "kmIni": 98400,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 98530,
+   "km": 130,
    "tanqueIni": 0.5,
-   "tanqueFin": null,
+   "tanqueFin": 0.95,
    "traslados": [
     "Vehiculo a disposición",
     "Vehiculo a disposición"
@@ -122,7 +122,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 659400,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 186940,
    "cargas": [
     {
      "fecha": "2026-10-07",
@@ -132,7 +132,7 @@
    ],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -745,6 +745,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 98530,
+   "hasta": 98534,
+   "km": 4,
+   "fechaDesde": "2026-10-07",
+   "fechaHasta": "2026-10-07",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 98393,
    "hasta": 98400,
    "km": 7,
@@ -1274,14 +1285,6 @@
   }
  ],
  "proximos": [
-  {
-   "fecha": "2026-10-07",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
   {
    "fecha": "2026-10-08",
    "chofer": "Alfredo",
