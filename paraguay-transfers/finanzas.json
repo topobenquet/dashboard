@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T20:30:18.166Z",
+ "generated": "2026-10-08T22:30:23.642Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -105,15 +105,15 @@
   {
    "fecha": "2026-10-08",
    "in": 2861.38,
-   "out": 1220.69,
-   "n": 13,
+   "out": 1737.93,
+   "n": 15,
    "porFuente": {
     "Pagopar": 2763.1,
-    "WhatsApp · Pagos (Majo)": -1220.69,
+    "WhatsApp · Pagos (Majo)": -1737.93,
     "Transferencia": 98.28
    },
-   "neto": 1640.69,
-   "acum": 4453.28
+   "neto": 1123.45,
+   "acum": 3936.04
   }
  ],
  "movimientos": [
@@ -542,6 +542,34 @@
    "gs": 1150000,
    "rub": {
     "chofer": 198.28,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-08",
+   "t": "out",
+   "usd": 379.31,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 2200000,
+   "rub": {
+    "chofer": 379.31,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-08",
+   "t": "out",
+   "usd": 137.93,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Diferencia Van H1 / traslado 9/oct *5AM* PAX Gladys Asu PJC",
+   "gs": 800000,
+   "rub": {
+    "chofer": 137.93,
     "comb": 0,
     "peajes": 0,
     "otros": 0
