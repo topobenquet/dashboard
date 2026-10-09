@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T14:34:42.434Z",
+ "generated": "2026-10-09T16:30:17.699Z",
  "tc": 5730,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -118,16 +118,16 @@
   },
   {
    "fecha": "2026-10-09",
-   "in": 822.69,
+   "in": 1075.05,
    "out": 941.93,
-   "n": 6,
+   "n": 7,
    "porFuente": {
     "Pagopar": 734.03,
     "WhatsApp · Pagos (Majo)": -941.93,
-    "Transferencia": 88.66
+    "Transferencia": 341.02
    },
-   "neto": -119.24,
-   "acum": 3871.2
+   "neto": 133.12,
+   "acum": 4123.56
   }
  ],
  "movimientos": [
@@ -691,6 +691,14 @@
    "fuente": "Transferencia",
    "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en Pagos (Majo))",
    "gs": 570000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 252.36,
+   "fuente": "Transferencia",
+   "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en Pagos (Majo))",
+   "gs": 1446000
   },
   {
    "d": "2026-10-09",
