@@ -2,71 +2,439 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
+<style>body{margin:0}</style>
 <title>Bean Watch Bonus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#E8ECE8;--surface:#F6F8F5;--ink:#16201B;--muted:#55645C;--line:#C5CEC7;--accent:#0E6A5A;--accent-ink:#fff;--bad:#A93A25}
-@media (prefers-color-scheme: dark){:root{--bg:#101614;--surface:#18201D;--ink:#E4EBE6;--muted:#9AAAA1;--line:#2E3A35;--accent:#4DC2A5;--accent-ink:#0B1411;--bad:#EE7A63;color-scheme:dark}}
+/* Layout: una columna de trabajo. Arriba, entradas y resultado lado a lado; abajo, la semana, los hitos y la grilla. */
+:root{
+  --bg:#E8ECE8; --surface:#F6F8F5; --surface2:#DDE3DE; --ink:#16201B; --muted:#55645C; --line:#C5CEC7;
+  --accent:#0E6A5A; --accent-ink:#FFFFFF; --sun:#B77A00; --bad:#A93A25; --good:#177A4B;
+  --heat:14,106,90;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101614; --surface:#18201D; --surface2:#222C28; --ink:#E4EBE6; --muted:#9AAAA1; --line:#2E3A35;
+    --accent:#4DC2A5; --accent-ink:#0B1411; --sun:#E3AA3A; --bad:#EE7A63; --good:#5CCB92;
+    --heat:77,194,165; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101614; --surface:#18201D; --surface2:#222C28; --ink:#E4EBE6; --muted:#9AAAA1; --line:#2E3A35;
+  --accent:#4DC2A5; --accent-ink:#0B1411; --sun:#E3AA3A; --bad:#EE7A63; --good:#5CCB92;
+  --heat:77,194,165; color-scheme:dark;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;font-size:15px;min-height:100vh;display:grid;place-items:center;padding:24px 16px}
-#gate{width:100%;max-width:360px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px 24px}
-h1{font-size:24px;margin:0 0 4px;letter-spacing:-.01em}
-p{margin:0 0 18px;color:var(--muted);font-size:14px}
-label{display:block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
-input[type=text],input[type=password]{width:100%;padding:10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font-size:15px;margin-bottom:14px}
-.rem{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-bottom:16px}
-button{width:100%;padding:11px;border:0;border-radius:4px;background:var(--accent);color:var(--accent-ink);font-size:15px;font-weight:600;cursor:pointer}
-button:disabled{opacity:.6;cursor:default}
-input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-#err{color:var(--bad);font-size:13px;min-height:18px;margin-top:10px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.05}
+h2{font-size:21px}
+h3{font-size:16px}
+p{margin:0}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;min-width:0}
+.top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px}
+@media (max-width:760px){.top{grid-template-columns:minmax(0,1fr)}}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label,.lbl{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;align-items:center}
+input[type=number]{font-family:var(--mono);font-size:15px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);min-width:0}
+input[type=range]{width:100%;accent-color:var(--accent)}
+input:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.seg button{font:inherit;font-size:13px;padding:9px 8px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);font-weight:600}
+.big{font-family:var(--display);font-weight:700;font-size:clamp(52px,9vw,84px);line-height:1;letter-spacing:-.03em}
+.result{display:flex;flex-direction:column;gap:14px}
+.badge{display:inline-block;font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:3px;background:var(--surface2);border:1px solid var(--line)}
+.badge.warn{border-color:var(--bad);color:var(--bad)}
+.badge.ok{border-color:var(--good);color:var(--good)}
+.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;font-size:14px}
+.kv dt{color:var(--muted)} .kv dd{margin:0;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kv .strong{color:var(--ink);font-weight:600}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.split{grid-template-columns:1fr}}
+.mini{border:1px solid var(--line);border-radius:4px;padding:12px;background:var(--bg);display:flex;flex-direction:column;gap:2px}
+.mini .n{font-family:var(--mono);font-size:22px;font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.scroll{overflow-x:auto;max-width:100%}
+td input[type=number]{width:84px;padding:4px 6px;font-size:13px;text-align:right}
+td.partial{color:var(--sun)}
+.heat td{text-align:center;font-family:var(--mono);font-variant-numeric:tabular-nums;padding:7px 8px;border:1px solid var(--surface)}
+.heat th{background:transparent}
+.heat tr:hover td{outline:0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.bar{height:10px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent)}
+.ms{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.ms .head{display:flex;justify-content:space-between;gap:12px;font-size:13px;flex-wrap:wrap}
+svg text{fill:var(--muted);font-family:var(--mono);font-size:11px}
+details summary{cursor:pointer;font-weight:600;padding:2px 0}
+details .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:14px}
+ol.q{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.cols2{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px}
+@media (max-width:860px){.cols2{grid-template-columns:minmax(0,1fr)}}
+.tag{font-size:12px;color:var(--muted)}
 </style>
-</head>
-<body>
-<main id="gate">
-  <h1>Bean Watch Bonus</h1>
-  <p>Sign in to see the weekly results.</p>
-  <form id="login" autocomplete="on">
-    <label for="u">User</label><input type="text" id="u" autocomplete="username" required>
-    <label for="pw">Password</label><input type="password" id="pw" autocomplete="current-password" required>
-    <div class="rem"><input type="checkbox" id="rem" checked><label for="rem" style="margin:0;text-transform:none;letter-spacing:0;font-weight:400">Keep me signed in</label></div>
-    <button id="go" type="submit">Sign in</button>
-    <div id="err" role="alert"></div>
-  </form>
-</main>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Bean Watch · bonus on ad spend</span>
+    <h1>Bean Watch Bonus</h1>
+    <p class="muted">Live results of the agreed bonus, updated every morning from Stripe, Google Ads and Meta Ads. Use the scenario below to see what a different week would pay.</p>
+    <p class="tag" id="stamp"></p>
+  </header>
+
+  <section class="card">
+    <h2 style="margin-bottom:6px">Weekly results</h2>
+    <p class="muted" style="margin-bottom:12px">Monday to Sunday weeks. ROAS is net Stripe sales divided by Google + Meta spend; orders are reservations. The current week is provisional until it closes.</p>
+    <dl class="kv" id="tot" style="margin-bottom:14px"></dl>
+    <div class="scroll"><table id="weeks">
+      <thead><tr><th>Week</th><th>Status</th><th>Spend</th><th>Revenue</th><th>ROAS</th><th>Reservations</th><th>Bonus %</th><th>Bonus US$</th><th>Paid weekly</th><th>Deferred</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+
+  <section class="top">
+    <div class="card">
+      <h2 style="margin-bottom:6px">Scenario</h2>
+      <p class="tag" style="margin-bottom:14px">Starts from the projection for the current week.</p>
+
+      <div class="field"><label for="spend">Weekly ad spend (US$)</label>
+        <div class="row"><input type="range" id="spendR" min="1000" max="70000" step="500"><input type="number" id="spend" min="0" step="100"></div></div>
+      <div class="field"><label for="roas">Weekly ROAS (net sales ÷ spend)</label>
+        <div class="row"><input type="range" id="roasR" min="0.8" max="5" step="0.05"><input type="number" id="roas" min="0" step="0.05"></div><span class="tag">Net sales are spend × ROAS and include upsells.</span></div>
+      <div class="field"><label for="res">Reservations per week (the orders used for the bonus)</label>
+        <div class="row"><input type="range" id="resR" min="0" max="1500" step="10"><input type="number" id="res" min="0" step="10"></div></div>
+    </div>
+
+    <div class="card result" aria-live="polite">
+      <div>
+        <span class="eyebrow">Bonus for the week</span>
+        <div class="big" id="pct">0%</div>
+        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <span class="badge" id="basis"></span>
+          <span class="mono" id="usd" style="font-size:20px;font-weight:600"></span>
+        </div>
+      </div>
+      <div class="split">
+        <div class="mini"><span class="lbl">Paid weekly</span><span class="n" id="adv">$0</span><span class="tag" id="advNote"></span></div>
+        <div class="mini"><span class="lbl">Deferred</span><span class="n" id="def">$0</span><span class="tag">25% at 6K, 25% at 10K</span></div>
+      </div>
+      <dl class="kv">
+        <dt>Orders counted</dt><dd id="ord"></dd>
+        <dt>Net sales for the week</dt><dd id="sales"></dd>
+        <dt>Pure formula</dt><dd id="pure"></dd>
+        <dt>Sales cap (94%)</dt><dd id="cap"></dd>
+        <dt>Accrued monthly bonus (x52/12)</dt><dd id="mon"></dd>
+        <dt>Monthly bonus payable now</dt><dd id="monNow" class="strong"></dd>
+        <dt>Left for the brand after spend and bonus</dt><dd id="brand"></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="card">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:6px">
+      <h2>The current week</h2>
+      <span class="tag" id="wkTag"></span>
+    </div>
+    <p class="muted" style="margin-bottom:14px">Loaded from the daily data. You can edit any cell to try a what-if; the day in progress counts whatever is loaded or the pace, whichever is greater.</p>
+    <div class="cols2">
+      <div class="scroll">
+        <table id="wk">
+          <thead><tr><th>Day</th><th>Spend</th><th>Reservations</th><th>Revenue</th><th>Complete</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <dl class="kv" id="wkOut" style="align-content:start"></dl>
+    </div>
+    <div class="scroll" style="margin-top:18px"><svg id="chart" viewBox="0 0 640 230" width="100%" role="img" aria-label="Cumulative orders this week against the 200 target"></svg></div>
+    <div class="legend"><span>━ Actual cumulative</span><span>┅ Projection</span><span>── Pace needed to reach 200</span></div>
+  </section>
+
+  <section class="card">
+    <h2 style="margin-bottom:6px">Reservation milestones</h2>
+    <p class="muted" style="margin-bottom:14px">The deferred part is paid when these cumulative reservations are crossed, counting from the Sep 24 launch.</p>
+    <div class="field" style="max-width:300px"><label for="cum">Cumulative reservations today</label><input type="number" id="cum" min="0" step="1"></div>
+    <div id="ms"></div>
+  </section>
+
+  <section class="card">
+    <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:12px">
+      <h2>Bonus map</h2>
+      <div class="seg" style="width:220px" role="group" aria-label="Map unit">
+        <button type="button" id="mapPct" aria-pressed="true">% of spend</button>
+        <button type="button" id="mapUsd" aria-pressed="false">US$ per week</button>
+      </div>
+    </div>
+    <p class="muted" style="margin-bottom:12px">Rows: orders per week. Columns: ROAS. Includes the 3% floor and the sales cap. At ROAS 1.1 or below there is no bonus.</p>
+    <div class="scroll"><table class="heat" id="heat"></table></div>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>Formula parameters</summary>
+      <div class="grid">
+        <div class="field"><label for="pFloor">Floor (%)</label><input type="number" id="pFloor" step="0.5"></div>
+        <div class="field"><label for="pMin">Minimum ROAS</label><input type="number" id="pMin" step="0.05"></div>
+        <div class="field"><label for="pBase">Baseline orders</label><input type="number" id="pBase" step="10"></div>
+        <div class="field"><label for="pDiv">Orders divisor</label><input type="number" id="pDiv" step="10"></div>
+        <div class="field"><label for="pMult">Multiplier (%)</label><input type="number" id="pMult" step="0.5"></div>
+        <div class="field"><label for="pCap">Cap: spend + bonus, % of sales</label><input type="number" id="pCap" step="1"></div>
+        <div class="field"><label for="pAdv">Weekly upfront payment (%)</label><input type="number" id="pAdv" step="5"></div>
+        <div class="field"><label for="pH1">Milestone 1 (reservations)</label><input type="number" id="pH1" step="100"></div>
+        <div class="field"><label for="pH2">Milestone 2 (reservations)</label><input type="number" id="pH2" step="100"></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>How it is calculated</h2>
+    <p style="margin-top:8px">Weekly bonus = the greater of 3% and <span class="mono">(ROAS − 1.1) × ((orders − 200) ÷ 100) × 10%</span>, applied to that week's ad spend, and only if ROAS is above 1.1. It is then limited so that spend + bonus stays below 94% of sales, which sets a maximum of <span class="mono">0.94 × ROAS − 1</span>.</p>
+    <h3 style="margin-top:16px">Terms</h3>
+    <ol class="q">
+      <li>Agreed: ROAS is measured only with net Stripe sales divided by Google and Meta ad spend.</li>
+      <li>Agreed: Monday to Sunday weeks, paid weekly, at least 50%.</li>
+      <li>Agreed: the 6,000 and 10,000 reservations count from day one, Sep 24.</li>
+      <li>Agreed: an order is only the US$ 29 reservation. Upsells do not count as orders, but their revenue adds to sales and to ROAS.</li>
+      <li>Reference: at ROAS 1.3 the sales cap is 22%. A 40% bonus requires a ROAS of 1.49 or more.</li>
+    </ol>
+  </section>
+</div>
+
+<script>window.__BONUS__={"updated":"2026-10-09T10:32:01.192Z","today":"2026-10-08","start":"2026-10-05","serie":[{"date":"2026-09-24","spend":64.86,"res":1,"ups":0,"rev":29},{"date":"2026-09-25","spend":217.17,"res":2,"ups":0,"rev":58},{"date":"2026-09-26","spend":249.63,"res":1,"ups":0,"rev":29},{"date":"2026-09-27","spend":223.94,"res":4,"ups":1,"rev":365},{"date":"2026-09-28","spend":269.06,"res":2,"ups":0,"rev":58},{"date":"2026-09-29","spend":500.63,"res":9,"ups":2,"rev":801},{"date":"2026-09-30","spend":547.51,"res":7,"ups":1,"rev":492},{"date":"2026-10-01","spend":444.91,"res":5,"ups":2,"rev":723},{"date":"2026-10-02","spend":395.63,"res":17,"ups":5,"rev":1938},{"date":"2026-10-03","spend":781.31,"res":17,"ups":5,"rev":1938},{"date":"2026-10-04","spend":804.44,"res":25,"ups":4,"rev":1881},{"date":"2026-10-05","spend":889.2,"res":18,"ups":6,"rev":2256},{"date":"2026-10-06","spend":1022.56,"res":28,"ups":8,"rev":3124},{"date":"2026-10-07","spend":1356.21,"res":38,"ups":9,"rev":3684},{"date":"2026-10-08","spend":735.65,"res":43,"ups":11,"rev":4426}]};</script>
 <script>
-// The page content is encrypted (AES-256-GCM, PBKDF2 key from "user:password"), same scheme and
-// stored key as /beanwatch/, so signing in to one signs in to the other.
-var KEY_STORE='beanwatch-key';
-var $=function(s){return document.querySelector(s)};
-var b64=function(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})};
-var ENC=null;
-async function loadEnc(){ if(!ENC) ENC=await (await fetch('data.enc.json?v='+Date.now())).json(); return ENC; }
-async function deriveRaw(user,pass,e){
-  var base=await crypto.subtle.importKey('raw',new TextEncoder().encode(user+':'+pass),'PBKDF2',false,['deriveBits']);
-  return new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:b64(e.salt),iterations:e.iter},base,256));
-}
-async function decrypt(raw,e){
-  var key=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);
-  var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct));
-  return JSON.parse(new TextDecoder().decode(pt));
-}
-function show(p){ if(!p||!p.html) throw new Error('Unexpected data format. Refresh with Cmd+Shift+R.'); document.open(); document.write(p.html); document.close(); }
-(async function(){
-  var saved=null; try{saved=JSON.parse(localStorage.getItem(KEY_STORE)||sessionStorage.getItem(KEY_STORE)||'null')}catch(e){}
-  if(!saved){ $('#u').focus(); return; }
-  try{ var e=await loadEnc(); if(saved.salt!==e.salt) throw 0; show(await decrypt(b64(saved.k),e)); }
-  catch(err){ try{localStorage.removeItem(KEY_STORE);sessionStorage.removeItem(KEY_STORE)}catch(_){} }
+(function(){
+  var nf0=new Intl.NumberFormat('en-US',{maximumFractionDigits:0});
+  var nf1=new Intl.NumberFormat('en-US',{maximumFractionDigits:1,minimumFractionDigits:1});
+  var nf2=new Intl.NumberFormat('en-US',{maximumFractionDigits:2,minimumFractionDigits:2});
+  var usd=function(x){return '$'+nf0.format(Math.round(x));};
+  var pc=function(x){return nf1.format(x*100)+'%';};
+  var $=function(id){return document.getElementById(id);};
+
+  var P={floor:.03,minR:1.1,base:200,div:100,mult:.10,cap:.94,adv:.5,h1:6000,h2:10000};
+  var S={spend:7000,roas:3.0,res:250,cum:217,mapUsd:false};
+  var D=window.__BONUS__;
+  var DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function addDays(s,n){var t=new Date(s+'T00:00:00Z'); t.setUTCDate(t.getUTCDate()+n); return t.toISOString().slice(0,10);}
+  function mondayOf(s){var t=new Date(s+'T00:00:00Z'); return addDays(s,-((t.getUTCDay()+6)%7));}
+  function fd(s){var t=new Date(s+'T00:00:00Z'); return MON[t.getUTCMonth()]+' '+t.getUTCDate();}
+  var byDate={}; D.serie.forEach(function(x){byDate[x.date]=x;});
+  var lastDate=D.serie[D.serie.length-1].date;
+  var weekStart=lastDate>=D.start?mondayOf(lastDate):D.start;
+  var DAYS=[];
+  for(var k=0;k<7;k++){
+    var ds=addDays(weekStart,k), x=byDate[ds], lbl=DOW[k]+' '+new Date(ds+'T00:00:00Z').getUTCDate();
+    DAYS.push(x?{d:lbl,g:+(x.spend).toFixed(2),r:x.res,i:x.rev,c:ds<D.today}:{d:lbl});
+  }
+  S.cum=D.serie.reduce(function(a,x){return a+x.res;},0);
+  function persist(){}
+
+  function bonus(roas,orders){
+    var pure=(roas-P.minR)*((orders-P.base)/P.div)*P.mult;
+    var floored=roas<=P.minR?0:Math.max(P.floor,pure);
+    var cap=Math.max(0,P.cap*roas-1);
+    var pct=Math.min(floored,cap);
+    var basis=roas<=P.minR?'none':(cap<floored?'cap':(pure>P.floor?'formula':'floor'));
+    return {pure:pure,floored:floored,cap:cap,pct:pct,basis:basis};
+  }
+  var BASIS={none:['ROAS below minimum: no bonus','warn'],floor:['The 3% floor applies',''],formula:['The formula applies','ok'],cap:['The sales cap applies','warn']};
+
+  /* ---------- escenario ---------- */
+  function renderScenario(){
+    var o=S.res, b=bonus(S.roas,o), sales=S.spend*S.roas, bon=b.pct*S.spend;
+    $('pct').textContent=pc(b.pct);
+    var bs=BASIS[b.basis]; $('basis').textContent=bs[0]; $('basis').className='badge '+bs[1];
+    $('usd').textContent=usd(bon)+' per week';
+    $('adv').textContent=usd(bon*P.adv); $('advNote').textContent=nf0.format(P.adv*100)+'% of the bonus';
+    $('def').textContent=usd(bon*(1-P.adv));
+    $('ord').textContent=nf0.format(o);
+    $('sales').textContent=usd(sales);
+    $('pure').textContent=pc(b.pure);
+    $('cap').textContent=pc(b.cap);
+    $('mon').textContent=usd(bon*52/12);
+    $('monNow').textContent=usd(bon*P.adv*52/12);
+    $('brand').textContent=usd(sales-S.spend-bon);
+  }
+
+  /* ---------- semana ---------- */
+  function renderWeekTable(){
+    var tb=document.querySelector('#wk tbody'); tb.innerHTML='';
+    DAYS.forEach(function(x,k){
+      var tr=document.createElement('tr');
+      var has=x.r!==undefined&&x.r!==null&&x.r!=='';
+      var cells='<td>'+x.d+'</td>';
+      [['g','Spend'],['r','Reservations'],['i','Revenue']].forEach(function(f){
+        var v=(x[f[0]]===undefined||x[f[0]]===null)?'':x[f[0]];
+        cells+='<td class="'+(has&&!x.c?'partial':'')+'"><input type="number" min="0" step="any" data-k="'+k+'" data-f="'+f[0]+'" value="'+v+'" aria-label="'+f[1]+' '+x.d+'"></td>';
+      });
+      cells+='<td><input type="checkbox" data-k="'+k+'" data-f="c" '+(x.c?'checked':'')+' aria-label="Complete day '+x.d+'" style="accent-color:var(--accent)"></td>';
+      tr.innerHTML=cells; tb.appendChild(tr);
+    });
+  }
+  function num(v){return (v===undefined||v===null||v==='')?0:+v;}
+  function renderWeek(){
+    var loaded=DAYS.filter(function(x){return x.r!==undefined&&x.r!==null&&x.r!=='';});
+    var comp=loaded.filter(function(x){return x.c;});
+    var nLoaded=loaded.length, nComp=comp.length;
+    var sum=function(arr,f){return arr.reduce(function(a,x){return a+num(x[f]);},0);};
+    var oOf=function(x){return num(x.r);};
+    var oNow=loaded.reduce(function(a,x){return a+oOf(x);},0), gNow=sum(loaded,'g'), iNow=sum(loaded,'i');
+    var oC=comp.reduce(function(a,x){return a+oOf(x);},0), gC=sum(comp,'g'), iC=sum(comp,'i'), rC=sum(comp,'r');
+    var out=$('wkOut'), h='';
+    var row=function(k,v,s){h+='<dt>'+k+'</dt><dd'+(s?' class="strong"':'')+'>'+v+'</dd>';};
+    var roasNow=gNow>0?iNow/gNow:0;
+    row('Orders to date',nf0.format(oNow),true);
+    row('Spend to date',usd(gNow)); row('Net revenue to date',usd(iNow)); row('ROAS to date',nf2.format(roasNow)+'x');
+    row('Still needed for 200',nf0.format(Math.max(0,P.base-oNow)));
+    var bNow=bonus(roasNow,oNow);
+    row('If the week closed today',pc(bNow.pct)+' = '+usd(bNow.pct*gNow));
+    var chart={proj:null};
+    if(nComp>0){
+      var rrO=oC/nComp, rrG=gC/nComp, rrI=iC/nComp, rrR=rC/nComp;
+      var pO=oC,pG=gC,pI=iC,pR=rC,cum=[],run=0, projCum=[];
+      DAYS.forEach(function(x,k){
+        var has=x.r!==undefined&&x.r!==null&&x.r!=='';
+        var dO,dG,dI,dR;
+        if(has&&x.c){dO=oOf(x);dG=num(x.g);dI=num(x.i);dR=num(x.r);}
+        else if(has){dO=Math.max(oOf(x),rrO);dG=Math.max(num(x.g),rrG);dI=Math.max(num(x.i),rrI);dR=Math.max(num(x.r),rrR);
+                      pO+=dO;pG+=dG;pI+=dI;pR+=dR;}
+        else{dO=rrO;dG=rrG;dI=rrI;dR=rrR;pO+=dO;pG+=dG;pI+=dI;pR+=dR;}
+        run+=dO; projCum.push(run);
+      });
+      var pr=pG>0?pI/pG:0, bp=bonus(pr,pO);
+      row('Projected orders',nf0.format(pO),true);
+      row('Projected spend',usd(pG)); row('Projected ROAS',nf2.format(pr)+'x');
+      row('Reach 200?',pO>=P.base?'Yes':'No, short by '+nf0.format(P.base-pO));
+      row('Projected bonus',pc(bp.pct)+' = '+usd(bp.pct*pG),true);
+      chart.proj=projCum; chart.pR=pR; S._proj={o:pO,g:pG,r:pr};
+    }
+    out.innerHTML=h;
+    S._resWeek=chart.pR||0;
+    drawChart(loaded,chart.proj,oOf);
+  }
+  function drawChart(loaded,proj,oOf){
+    var W=640,H=230,L=44,R=14,T=14,B=30;
+    var ymax=Math.max(P.base*1.15,proj?proj[6]*1.1:0,loaded.reduce(function(a,x){return a+oOf(x);},0)*1.1);
+    ymax=Math.ceil(ymax/50)*50;
+    var X=function(d){return L+(W-L-R)*(d/7);}, Y=function(v){return T+(H-T-B)*(1-v/ymax);};
+    var s='';
+    for(var t=0;t<=ymax;t+=50){ s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(t)+'" y2="'+Y(t)+'" stroke="var(--line)" stroke-width="1"/><text x="'+(L-6)+'" y="'+(Y(t)+4)+'" text-anchor="end">'+t+'</text>'; }
+    DAYS.forEach(function(x,k){ s+='<text x="'+X(k+1)+'" y="'+(H-10)+'" text-anchor="end">'+x.d.split(' ')[0]+'</text>'; });
+    s+='<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(7)+'" y2="'+Y(P.base)+'" stroke="var(--sun)" stroke-width="1.5"/>';
+    s+='<text x="'+(X(7)-4)+'" y="'+(Y(P.base)-6)+'" text-anchor="end">'+P.base+'</text>';
+    if(proj){
+      var pts='M'+X(0)+','+Y(0); proj.forEach(function(v,k){pts+=' L'+X(k+1)+','+Y(v);});
+      s+='<path d="'+pts+'" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 4"/>';
+    }
+    var run=0,pts2='M'+X(0)+','+Y(0),last=null;
+    DAYS.forEach(function(x,k){
+      var has=x.r!==undefined&&x.r!==null&&x.r!=='';
+      if(has){ run+=oOf(x); pts2+=' L'+X(k+1)+','+Y(run); last=[X(k+1),Y(run),run]; }
+    });
+    if(last){ s+='<path d="'+pts2+'" fill="none" stroke="var(--accent)" stroke-width="2.5"/><circle cx="'+last[0]+'" cy="'+last[1]+'" r="4" fill="var(--accent)"/><text x="'+(last[0]+8)+'" y="'+(last[1]+4)+'">'+nf0.format(last[2])+'</text>'; }
+    if(proj){ s+='<text x="'+(X(7)-4)+'" y="'+(Y(proj[6])-6)+'" text-anchor="end">'+nf0.format(proj[6])+'</text>'; }
+    $('chart').innerHTML=s;
+  }
+
+  /* ---------- resultados semanales ---------- */
+  function renderWeeks(){
+    var rows='', accC=0, accAll=0, nC=0;
+    for(var ws=D.start; ws<=lastDate; ws=addDays(ws,7)){
+      var sp=0,rv=0,rs=0,n=0;
+      for(var k=0;k<7;k++){ var x=byDate[addDays(ws,k)]; if(x){sp+=x.spend;rv+=x.rev;rs+=x.res;n++;} }
+      if(!n) continue;
+      var closed=addDays(ws,6)<D.today, roas=sp>0?rv/sp:0, b=bonus(roas,rs), bon=b.pct*sp;
+      accAll+=bon; if(closed){accC+=bon;nC++;}
+      rows+='<tr'+(closed?'':' style="color:var(--muted)"')+'><td>'+fd(ws)+' to '+fd(addDays(ws,6))+'</td><td>'+(closed?'Closed':'In progress')+'</td><td>'+usd(sp)+'</td><td>'+usd(rv)+'</td><td>'+nf2.format(roas)+'x</td><td>'+nf0.format(rs)+'</td><td>'+pc(b.pct)+'</td><td>'+usd(bon)+'</td><td>'+usd(bon*P.adv)+'</td><td>'+usd(bon*(1-P.adv))+'</td></tr>';
+    }
+    document.querySelector('#weeks tbody').innerHTML=rows;
+    var t='';
+    var r=function(k,v,s){t+='<dt>'+k+'</dt><dd'+(s?' class="strong"':'')+'>'+v+'</dd>';};
+    r('Bonus accrued, closed weeks ('+nC+')',usd(accC),true);
+    r('Payable now, weekly portion ('+nf0.format(P.adv*100)+'%)',usd(accC*P.adv));
+    r('Deferred until the reservation milestones',usd(accC*(1-P.adv)));
+    r('Including the current week, to date',usd(accAll));
+    $('tot').innerHTML=t;
+  }
+
+  /* ---------- hitos ---------- */
+  function renderMilestones(){
+    var rw=S._resWeek||0, h='';
+    [[P.h1,'Milestone 1'],[P.h2,'Milestone 2']].forEach(function(m){
+      var p=Math.min(1,S.cum/m[0]), left=Math.max(0,m[0]-S.cum);
+      var wk=rw>0?left/rw:null;
+      h+='<div class="ms"><div class="head"><strong>'+m[1]+': '+nf0.format(m[0])+' reservations</strong><span class="mono">'+nf0.format(S.cum)+' ('+nf1.format(p*100)+'%)</span></div>'+
+         '<div class="bar" role="img" aria-label="'+nf1.format(p*100)+'% of '+m[1]+'"><i style="width:'+(p*100)+'%"></i></div>'+
+         '<span class="tag">Remaining: '+nf0.format(left)+'. '+(wk===null?'Load the week to estimate the timing.':'At the projected pace of '+nf0.format(rw)+' reservations per week: about '+nf0.format(wk)+' weeks ('+nf1.format(wk/4.345)+' months).')+'</span></div>';
+    });
+    $('ms').innerHTML=h;
+  }
+
+  /* ---------- mapa ---------- */
+  var ORD=[100,200,250,300,400,500,600,800,1000,1500], ROA=[1.1,1.2,1.3,1.5,1.75,2,2.5,3,3.5,4];
+  function renderHeat(){
+    var h='<thead><tr><th>Orders \\ ROAS</th>'+ROA.map(function(r){return '<th style="text-align:center">'+nf2.format(r)+'x</th>';}).join('')+'</tr></thead><tbody>';
+    ORD.forEach(function(o){
+      h+='<tr><th scope="row" style="text-align:left;color:var(--ink)">'+nf0.format(o)+'</th>';
+      ROA.forEach(function(r){
+        var p=bonus(r,o).pct, val=S.mapUsd?p*S.spend:p, t=Math.min(1,p/0.5);
+        var a=p>0?(0.12+0.78*t):0;
+        h+='<td style="background:rgba(var(--heat),'+a.toFixed(2)+');color:'+(a>0.55?'var(--accent-ink)':'var(--ink)')+'">'+(S.mapUsd?(p>0?usd(val):'-'):(p>0?nf1.format(p*100)+'%':'-'))+'</td>';
+      });
+      h+='</tr>';
+    });
+    $('heat').innerHTML=h+'</tbody>';
+  }
+
+  /* ---------- eventos ---------- */
+  function bindPair(nId,rId,key,scale){
+    var n=$(nId), r=$(rId);
+    var set=function(v,from){ if(isNaN(v))v=0; S[key]=v; if(from!==n)n.value=v; if(from!==r)r.value=v; };
+    n.value=S[key]; r.value=S[key];
+    n.addEventListener('input',function(){set(parseFloat(n.value),n);all();});
+    r.addEventListener('input',function(){set(parseFloat(r.value),r);all();});
+  }
+  (function(){ renderWeek(); if(S._proj){ S.spend=Math.round(S._proj.g/100)*100; S.roas=+S._proj.r.toFixed(2); S.res=Math.round(S._proj.o); } })();
+  bindPair('spend','spendR','spend'); bindPair('roas','roasR','roas'); bindPair('res','resR','res');
+  $('cum').value=S.cum; $('cum').addEventListener('input',function(){S.cum=parseFloat($('cum').value)||0;all();});
+  function setMap(u){ S.mapUsd=u; $('mapPct').setAttribute('aria-pressed',String(!u)); $('mapUsd').setAttribute('aria-pressed',String(u)); all(); }
+  $('mapPct').addEventListener('click',function(){setMap(false);});
+  $('mapUsd').addEventListener('click',function(){setMap(true);});
+  document.querySelector('#wk').addEventListener('input',function(e){
+    var t=e.target, k=+t.dataset.k, f=t.dataset.f; if(isNaN(k))return;
+    if(f==='c') DAYS[k].c=t.checked; else DAYS[k][f]=t.value===''?undefined:parseFloat(t.value);
+    renderWeek(); renderMilestones(); persist();
+  });
+  var map={pFloor:['floor',100],pMin:['minR',1],pBase:['base',1],pDiv:['div',1],pMult:['mult',100],pCap:['cap',100],pAdv:['adv',100],pH1:['h1',1],pH2:['h2',1]};
+  Object.keys(map).forEach(function(id){
+    var k=map[id][0], sc=map[id][1], el=$(id);
+    el.value=+(P[k]*sc).toFixed(4);
+    el.addEventListener('input',function(){ var v=parseFloat(el.value); if(!isNaN(v)){P[k]=v/sc; all();} });
+  });
+  function all(){ renderScenario(); renderWeek(); renderWeeks(); renderMilestones(); renderHeat(); }
+  var upd=new Date(D.updated);
+  $('stamp').textContent='Updated '+upd.toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})+' ET. Data through '+fd(lastDate)+(lastDate>=D.today?' (day in progress)':'')+'.';
+  $('wkTag').textContent='Week of '+fd(weekStart)+' to '+fd(addDays(weekStart,6))+'.';
+  renderWeek();
+  if(S._proj){ S.spend=Math.round(S._proj.g/100)*100; S.roas=+S._proj.r.toFixed(2); S.res=Math.round(S._proj.o); }
+  setMap(S.mapUsd); renderWeekTable(); all();
 })();
-$('#login').addEventListener('submit',async function(ev){
-  ev.preventDefault(); $('#err').textContent=''; $('#go').disabled=true; $('#go').textContent='Signing in...';
-  try{
-    var e=await loadEnc(); var raw=await deriveRaw($('#u').value.trim(),$('#pw').value,e), p;
-    try{ p=await decrypt(raw,e); }catch(_){ throw new Error('Wrong user or password.'); }
-    try{ var v=JSON.stringify({salt:e.salt,k:btoa(String.fromCharCode.apply(null,raw))}); ($('#rem').checked?localStorage:sessionStorage).setItem(KEY_STORE,v); }catch(_){}
-    show(p);
-  }catch(err){ $('#err').textContent=err.message||'Could not load data.'; $('#go').disabled=false; $('#go').textContent='Sign in'; }
-});
 </script>
-</body>
+
 </html>
