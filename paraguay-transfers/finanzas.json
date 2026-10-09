@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T18:30:12.056Z",
+ "generated": "2026-10-09T22:30:26.741Z",
  "tc": 5730,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 261.84,
-  "pagoparPendienteUsd": 8235.08,
+  "pagoparPendienteUsd": 8659.69,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -118,16 +118,16 @@
   },
   {
    "fecha": "2026-10-09",
-   "in": 1180.63,
-   "out": 2163.57,
-   "n": 9,
+   "in": 1605.24,
+   "out": 2329.37,
+   "n": 13,
    "porFuente": {
-    "Pagopar": 839.61,
-    "WhatsApp · Pagos (Majo)": -2163.57,
+    "Pagopar": 1264.22,
+    "WhatsApp · Pagos (Majo)": -2329.37,
     "Transferencia": 341.02
    },
-   "neto": -982.94,
-   "acum": 3007.5
+   "neto": -724.13,
+   "acum": 3266.31
   }
  ],
  "movimientos": [
@@ -361,6 +361,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Mark Rubino",
    "gs": 605000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 424.61,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Carolina Ramos",
+   "gs": 2433000
   },
   {
    "d": "2026-10-01",
@@ -699,6 +707,48 @@
    }
   },
   {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 26.18,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago propina traslado Emily. Chófer Alberto Mena",
+   "gs": 150000,
+   "rub": {
+    "chofer": 26.18,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 26.18,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago propina Guía Daniel Sánchez traslado Emily",
+   "gs": 150000,
+   "rub": {
+    "chofer": 26.18,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 113.44,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Ruben. Traslado Emily 10/10 03:00am",
+   "gs": 650000,
+   "rub": {
+    "chofer": 113.44,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.15,
@@ -836,8 +886,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 28,
-   "bruto": 8235.07,
+   "cobros": 29,
+   "bruto": 8659.68,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -852,8 +902,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 47187000,
-  "cobradoUsd": 8235.07,
+  "cobradoGs": 49620000,
+  "cobradoUsd": 8659.68,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -899,9 +949,9 @@
    },
    {
     "fecha": "2026-10-09",
-    "cobros": 3,
-    "gs": 4811000,
-    "usd": 839.61
+    "cobros": 4,
+    "gs": 7244000,
+    "usd": 1264.22
    }
   ],
   "pruebasExcluidas": 0,
@@ -909,8 +959,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 47187000,
-  "pendienteUsd": 8235.08
+  "pendienteGs": 49620000,
+  "pendienteUsd": 8659.69
  },
  "giros": [
   {
@@ -1017,7 +1067,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲47.2 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲49.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -1091,6 +1141,14 @@
    "gs": 500000,
    "usd": 87.26,
    "concepto": "Me ayudas con un pago de acá",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-09",
+   "grupo": "Pagos (Majo)",
+   "gs": 650000,
+   "usd": 113.44,
+   "concepto": "Falta enviarle a ruben por el traslado de emily",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
