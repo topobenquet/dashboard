@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T23:10:09.279Z",
+ "generated": "2026-10-09T00:40:08.361Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -1467,6 +1467,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "sinkm:Luis:2026-10-08:AERO-ASU",
+   "nivel": "grupo",
+   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado AERO-ASU del 08/10. Mandalas con el número escrito, por favor.",
+   "ts": 1791514799,
+   "fecha": "2026-10-08"
+  },
   {
    "key": "hueco:H1:98224:98389",
    "nivel": "juan",
