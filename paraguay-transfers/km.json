@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T13:10:17.986Z",
+ "generated": "2026-10-09T15:10:10.174Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -17,15 +17,15 @@
    "rendDefault": 10,
    "precioL": 10990,
    "precioFuente": "última carga con litros (07/10)",
-   "rend": 7.64,
+   "rend": 8.61,
    "rendFuente": "medido en 4 tanque(s) lleno a lleno",
    "tramos": [
     {
      "desde": 93451,
      "hasta": 94933,
      "km": 1482,
-     "litros": 178.5,
-     "rend": 8.3
+     "litros": 111.2,
+     "rend": 13.33
     },
     {
      "desde": 94933,
@@ -49,7 +49,7 @@
      "rend": 5.8
     }
    ],
-   "gsKm": 1438,
+   "gsKm": 1276,
    "ultimoKm": 98691
   },
   "Voxy": {
@@ -71,7 +71,7 @@
    "kmViajes": 802,
    "kmFuera": 1026,
    "viajes": 6,
-   "costoComb": 2628664,
+   "costoComb": 2332528,
    "pagado": 0
   },
   "Voxy": {
@@ -90,11 +90,6 @@
   },
   {
    "chofer": "Gustavo",
-   "lecturas": 0,
-   "conFoto": 0
-  },
-  {
-   "chofer": "Luis",
    "lecturas": 0,
    "conFoto": 0
   }
@@ -151,7 +146,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 199882,
+   "combustibleCorresponde": 177364,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -180,7 +175,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 659400,
-   "combustibleCorresponde": 186940,
+   "combustibleCorresponde": 165880,
    "cargas": [
     {
      "fecha": "2026-10-07",
@@ -215,7 +210,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 102098,
+   "combustibleCorresponde": 90596,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -244,7 +239,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 317798,
+   "combustibleCorresponde": 281996,
    "cargas": [],
    "faltanFotos": [
     97922,
@@ -276,7 +271,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 202758,
+   "combustibleCorresponde": 179916,
    "cargas": [],
    "faltanFotos": [
     97907
@@ -308,7 +303,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 143800,
+   "combustibleCorresponde": 127600,
    "cargas": [],
    "faltanFotos": [
     97662
@@ -338,7 +333,7 @@
    "desvio": 0.095,
    "combustiblePagado": null,
    "combustibleCargado": 900400,
-   "combustibleCorresponde": 1164780,
+   "combustibleCorresponde": 1033560,
    "cargas": [
     {
      "fecha": "2026-09-28",
@@ -382,7 +377,7 @@
    "desvio": -0.225,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 44578,
+   "combustibleCorresponde": 39556,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -411,7 +406,7 @@
    "desvio": 1,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 115040,
+   "combustibleCorresponde": 102080,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -440,7 +435,7 @@
    "desvio": -0.575,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 24446,
+   "combustibleCorresponde": 21692,
    "cargas": [],
    "faltanFotos": [
     95828
@@ -470,7 +465,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 116478,
+   "combustibleCorresponde": 103356,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -498,7 +493,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 63272,
+   "combustibleCorresponde": 56144,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -526,7 +521,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 97784,
+   "combustibleCorresponde": 86768,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -554,7 +549,7 @@
    "desvio": 0.009,
    "combustiblePagado": 800000,
    "combustibleCargado": 800000,
-   "combustibleCorresponde": 1088566,
+   "combustibleCorresponde": 965932,
    "cargas": [
     {
      "fecha": "2026-09-13",
@@ -593,7 +588,7 @@
    "desvio": 0.175,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 67586,
+   "combustibleCorresponde": 59972,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -621,7 +616,7 @@
    "desvio": 0.036,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 163932,
+   "combustibleCorresponde": 145464,
    "cargas": [],
    "faltanFotos": [
     94597
@@ -651,7 +646,7 @@
    "desvio": 0.001,
    "combustiblePagado": 728000,
    "combustibleCargado": 728008,
-   "combustibleCorresponde": 993658,
+   "combustibleCorresponde": 881716,
    "cargas": [
     {
      "fecha": "2026-09-07",
@@ -695,7 +690,7 @@
    "desvio": 0.148,
    "combustiblePagado": 800000,
    "combustibleCargado": 610000,
-   "combustibleCorresponde": 1238118,
+   "combustibleCorresponde": 1098636,
    "cargas": [
     {
      "fecha": "2026-09-04",
@@ -729,7 +724,7 @@
    "desvio": -0.012,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 980716,
+   "combustibleCorresponde": 870232,
    "cargas": [],
    "faltanFotos": [
     92230,
@@ -760,7 +755,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 132296,
+   "combustibleCorresponde": 117392,
    "cargas": [],
    "faltanFotos": [
     92116
@@ -788,7 +783,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 1222300,
+   "combustibleCorresponde": 1084600,
    "cargas": [],
    "faltanFotos": [
     91154,
@@ -1117,26 +1112,13 @@
   },
   {
    "vehiculo": "H1",
-   "desde": 94599,
-   "hasta": 94624,
-   "km": 25,
-   "fechaDesde": "2026-09-11",
-   "fechaHasta": "2026-09-11",
-   "choferes": [
-    "Luis",
-    "Gustavo"
-   ]
-  },
-  {
-   "vehiculo": "H1",
    "desde": 94597,
-   "hasta": 94599,
-   "km": 2,
+   "hasta": 94624,
+   "km": 27,
    "fechaDesde": "2026-09-09",
    "fechaHasta": "2026-09-11",
    "choferes": [
-    "Gustavo",
-    "Luis"
+    "Gustavo"
    ]
   },
   {
@@ -1310,17 +1292,6 @@
    "odo": 94933
   },
   {
-   "fecha": "2026-09-11",
-   "grupo": "Luis",
-   "vehiculo": "H1",
-   "moneda": "PYG",
-   "extranjera": false,
-   "gs": 699850,
-   "litros": 67.29,
-   "precioL": 10400,
-   "odo": 94599
-  },
-  {
    "fecha": "2026-09-08",
    "grupo": "Alfredo",
    "vehiculo": "H1",
@@ -1363,17 +1334,6 @@
    "litros": 19.72,
    "precioL": null,
    "odo": 93309
-  },
-  {
-   "fecha": "2026-09-01",
-   "grupo": "Luis",
-   "vehiculo": "H1",
-   "moneda": "PYG",
-   "extranjera": false,
-   "gs": 558780,
-   "litros": 53.73,
-   "precioL": 10400,
-   "odo": null
   }
  ],
  "proximos": [
@@ -1415,7 +1375,7 @@
    "vehiculo": "H1",
    "ruta": "Asunción Rent Suites Santa Teresa - Aero",
    "km": 40,
-   "adelanto": 63000
+   "adelanto": 56000
   },
   {
    "fecha": "2026-10-13",
@@ -1431,7 +1391,7 @@
    "vehiculo": "H1",
    "ruta": "AERO-ChâteauVictoriaHotel",
    "km": 40,
-   "adelanto": 63000
+   "adelanto": 56000
   },
   {
    "fecha": "2026-10-14",
@@ -1471,7 +1431,7 @@
    "vehiculo": "H1",
    "ruta": "ASU-PtoIguazu",
    "km": 750,
-   "adelanto": 1186000
+   "adelanto": 1053000
   },
   {
    "fecha": "2026-10-18",
@@ -1479,7 +1439,7 @@
    "vehiculo": "H1",
    "ruta": "Asu-Foz",
    "km": 690,
-   "adelanto": 1091000
+   "adelanto": 968000
   },
   {
    "fecha": "2026-10-18",
@@ -1491,13 +1451,6 @@
   }
  ],
  "alertas": [
-  {
-   "key": "sinkm:Luis:2026-10-08:AERO-ASU",
-   "nivel": "grupo",
-   "texto": "🚐 Luis, no encontré las fotos del km de INICIO y FINAL del traslado AERO-ASU del 08/10. Mandalas con el número escrito, por favor.",
-   "ts": 1791514799,
-   "fecha": "2026-10-08"
-  },
   {
    "key": "hueco:H1:98224:98389",
    "nivel": "juan",
