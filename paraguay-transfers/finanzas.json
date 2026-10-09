@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T10:20:16.669Z",
+ "generated": "2026-10-09T14:34:42.434Z",
  "tc": 5730,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-10-09",
   "itauGs": 43605,
-  "uenoGs": 29835519,
-  "uenoFecha": "2026-10-08",
+  "uenoGs": 19389519,
+  "uenoFecha": "2026-10-09",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 261.84,
-  "pagoparPendienteUsd": 7395.46,
+  "pagoparPendienteUsd": 8129.49,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -115,6 +115,19 @@
    },
    "neto": 1143.51,
    "acum": 3990.44
+  },
+  {
+   "fecha": "2026-10-09",
+   "in": 822.69,
+   "out": 941.93,
+   "n": 6,
+   "porFuente": {
+    "Pagopar": 734.03,
+    "WhatsApp · Pagos (Majo)": -941.93,
+    "Transferencia": 88.66
+   },
+   "neto": -119.24,
+   "acum": 3871.2
   }
  ],
  "movimientos": [
@@ -324,6 +337,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Pavel Hajek",
    "gs": 421000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 72.95,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Harvey Feldman",
+   "gs": 418000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 661.08,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Boletos.la",
+   "gs": 3788000
   },
   {
    "d": "2026-10-01",
@@ -606,6 +635,48 @@
    }
   },
   {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 52.36,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago SEÑA Driver Ruben Centurión. Traslado 15/Oct 8:20am.  Aero - Tryp. 17 Pasajeros - Pax",
+   "gs": 300000,
+   "rub": {
+    "chofer": 52.36,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 471.2,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Ruben Centurión",
+   "gs": 2700000,
+   "rub": {
+    "chofer": 471.2,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-09",
+   "t": "out",
+   "usd": 418.37,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Reintegro gustavo Paraguay transfers",
+   "gs": 2397270,
+   "rub": {
+    "chofer": 418.37,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.15,
@@ -620,6 +691,14 @@
    "fuente": "Transferencia",
    "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en Pagos (Majo))",
    "gs": 570000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 88.66,
+   "fuente": "Transferencia",
+   "det": "JOSE IGNACIO GWYNN PAROT (comprobante en GHL)",
+   "gs": 508000
   }
  ],
  "pnl": [
@@ -727,8 +806,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 25,
-   "bruto": 7395.46,
+   "cobros": 27,
+   "bruto": 8129.49,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -743,8 +822,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 42376000,
-  "cobradoUsd": 7395.46,
+  "cobradoGs": 46582000,
+  "cobradoUsd": 8129.49,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -787,6 +866,12 @@
     "cobros": 9,
     "gs": 16447000,
     "usd": 2870.33
+   },
+   {
+    "fecha": "2026-10-09",
+    "cobros": 2,
+    "gs": 4206000,
+    "usd": 734.03
    }
   ],
   "pruebasExcluidas": 0,
@@ -794,8 +879,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 42376000,
-  "pendienteUsd": 7395.46
+  "pendienteGs": 46582000,
+  "pendienteUsd": 8129.49
  },
  "giros": [
   {
@@ -902,7 +987,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲42.4 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲46.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -1014,6 +1099,13 @@
    "momento": "actual",
    "gs": 29835519,
    "usd": 5206.9
+  },
+  {
+   "fecha": "2026-10-09",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 19389519,
+   "usd": 3383.86
   }
  ]
 }
