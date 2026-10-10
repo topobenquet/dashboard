@@ -386,10 +386,121 @@ function renderCountries(root) {
   </div>`;
 }
 
+/* ════ RUTAS: nombre unificado ════ */
+// La planilla escribe la misma ruta de varias formas ("ASU-FOZ", "Asu-Foz",
+// "Asu - Foz", "PtoIguazú"/"PtoIguazu"). La clave ignora mayúsculas, tildes y
+// espacios alrededor del guion; el nombre que se muestra es la variante más
+// usada, con los códigos (ASU, FOZ, CDE, AERO) siempre en mayúscula.
+function rutaKey(r){
+  return String(r||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()
+    .replace(/\s*(-|→|>)\s*/g,"-").replace(/\s+/g," ").replace(/[.\s]+$/,"").trim();
+}
+let RUTA_LABEL=null;
+function rutaLabel(k){
+  if(!RUTA_LABEL){
+    const cnt={};
+    for(const t of DATA.trips){ const r=String(t.route||"").trim(), key=rutaKey(r); if(!key) continue;
+      (cnt[key]??={})[r]=(cnt[key][r]||0)+1; }
+    RUTA_LABEL={};
+    for(const key in cnt){
+      const best=Object.entries(cnt[key]).sort((a,b)=>b[1]-a[1])[0][0];
+      RUTA_LABEL[key]=best.replace(/\s*-\s*/g,"-").replace(/\b(asu|foz|cde|aero)\b/gi,s=>s.toUpperCase());
+    }
+  }
+  return RUTA_LABEL[k]||k;
+}
+
+/* ════ TRASLADOS POR RUTA (con selector de fechas) ════ */
+// Cuenta salidas por fecha de SALIDA. Un traslado cobrado en un mes y hecho en
+// otro figura en dos pestañas: se deduplica igual que en Próximos traslados.
+function salidaLoose(s){
+  const d=salidaDate(s); if(d) return d;
+  const m=String(s||"").match(/(\d{1,2})\/(\d{1,2})/);   // "18/04-20/04": sin año
+  if(!m) return null;
+  const x=new Date(new Date().getFullYear(),+m[2]-1,+m[1]);
+  return isNaN(x)?null:x;
+}
+let RV_TRIPS=null, RV_SINFECHA=0;
+function rvTrips(){
+  if(RV_TRIPS) return RV_TRIPS;
+  const porClave=new Map();
+  const puntaje=x=>(x.conductor?2:0)+(x.pago>0?1:0)+(x.restante>0?1:0);
+  for(const t of DATA.trips){
+    const key=rutaKey(t.route); if(!key) continue;
+    const s=salidaLoose(t.fechaSalida); if(!s){ RV_SINFECHA++; continue; }
+    const k=s.getTime()+"|"+String(t.cliente||"").trim().toLowerCase()+"|"+key;
+    const prev=porClave.get(k);
+    if(!prev||puntaje(t)>puntaje(prev)) porClave.set(k,{...t,s,key});
+  }
+  return RV_TRIPS=[...porClave.values()];
+}
+const ymd=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+function rvRango(p){
+  const n=new Date(), hoy=new Date(n.getFullYear(),n.getMonth(),n.getDate()), dia=86400000;
+  if(p==="hoy") return [hoy,hoy,"Hoy"];
+  if(p==="ayer"){ const a=new Date(hoy-dia); return [a,a,"Ayer"]; }
+  if(p==="7d") return [new Date(hoy-6*dia),hoy,"Últimos 7 días"];
+  if(p==="30d") return [new Date(hoy-29*dia),hoy,"Últimos 30 días"];
+  if(p==="mesant") return [new Date(hoy.getFullYear(),hoy.getMonth()-1,1),new Date(hoy.getFullYear(),hoy.getMonth(),0),"Mes anterior"];
+  if(p==="custom"){
+    const a=document.getElementById("rv-desde")?.value, b=document.getElementById("rv-hasta")?.value;
+    if(a&&b){ const [d1,d2]=[new Date(a+"T00:00"),new Date(b+"T00:00")].sort((x,y)=>x-y); return [d1,d2,"Personalizado"]; }
+  }
+  return [new Date(hoy.getFullYear(),hoy.getMonth(),1),new Date(hoy.getFullYear(),hoy.getMonth()+1,0),"Mes actual"];
+}
+let RV_P="mes";
+function renderRutasVolumen(){
+  const n=new Date(), min=new Date(n.getFullYear(),n.getMonth()-6,1);
+  const [d1,d2]=rvRango("mes");
+  const btn=(p,l)=>`<button type="button" class="mbtn" data-rv="${p}" aria-pressed="${p===RV_P}" style="${p===RV_P?"background:#1F4E78;":""}">${l}</button>`;
+  return `<div class="section" id="rv"><div class="section-title">Traslados por ruta</div>
+    <div class="chart-legend" id="rv-btns" style="margin-bottom:8px;flex-wrap:wrap;gap:6px;display:flex;align-items:center;">
+      ${btn("hoy","Hoy")}${btn("ayer","Ayer")}${btn("7d","7 días")}${btn("30d","30 días")}${btn("mes","Mes actual")}${btn("mesant","Mes anterior")}${btn("custom","Personalizado")}
+      <span id="rv-custom" style="display:none;font-size:11px;color:#6B7280;">
+        <input type="date" id="rv-desde" min="${ymd(min)}" value="${ymd(d1)}" style="font:inherit;font-size:11px;"> a
+        <input type="date" id="rv-hasta" min="${ymd(min)}" value="${ymd(d2)}" style="font:inherit;font-size:11px;">
+      </span>
+    </div>
+    <div id="rv-body"></div></div>`;
+}
+function pintarRV(){
+  const body=document.getElementById("rv-body"); if(!body) return;
+  document.getElementById("rv-custom").style.display=RV_P==="custom"?"inline":"none";
+  document.querySelectorAll("#rv-btns .mbtn").forEach(b=>{ const on=b.dataset.rv===RV_P;
+    b.setAttribute("aria-pressed",on); b.style.background=on?"#1F4E78":""; });
+  const [d1,d2,label]=rvRango(RV_P);
+  const fin=new Date(d2.getTime()+86400000);
+  const n=new Date(), hoy=new Date(n.getFullYear(),n.getMonth(),n.getDate());
+  const byR={};
+  for(const t of rvTrips()){
+    if(t.s<d1||t.s>=fin) continue;
+    const r=(byR[t.key]??={key:t.key,count:0,hechos:0,agend:0,rev:0});
+    r.count++; t.s<hoy?r.hechos++:r.agend++; r.rev+=t.pago||0;
+  }
+  const arr=Object.values(byR).sort((a,b)=>b.count-a.count||b.rev-a.rev);
+  const tot=arr.reduce((s,r)=>({count:s.count+r.count,hechos:s.hechos+r.hechos,agend:s.agend+r.agend,rev:s.rev+r.rev}),{count:0,hechos:0,agend:0,rev:0});
+  const fmt=d=>`${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}/${String(d.getFullYear()).slice(2)}`;
+  const rango=d1.getTime()===d2.getTime()?fmt(d1):`${fmt(d1)} al ${fmt(d2)}`;
+  if(!arr.length){ body.innerHTML=`<div class="info-box info-gray">${label} (${rango}): sin traslados con fecha de salida en ese rango.</div>`; return; }
+  const rows=arr.map((r,i)=>`<tr><td style="color:#6B7280;">${i+1}</td><td class="tl"><strong>${rutaLabel(r.key)}</strong></td>
+    <td style="color:#1F4E78;font-weight:600;">${r.count}</td><td>${r.hechos||"–"}</td><td>${r.agend||"–"}</td><td>${f$(r.rev)}</td></tr>`).join("");
+  body.innerHTML=`<div class="ft-wrap" style="max-height:440px;overflow-y:auto;"><table class="ft" style="min-width:420px;">
+      <colgroup><col style="width:6%"><col style="width:44%"><col style="width:13%"><col style="width:12%"><col style="width:12%"><col style="width:13%"></colgroup>
+      <thead><tr><th>#</th><th class="tl">Ruta</th><th>Traslados</th><th>Hechos</th><th>Agendados</th><th>Monto</th></tr></thead>
+      <tbody><tr class="hi"><td></td><td class="tl">Total · ${arr.length} ruta${arr.length!==1?"s":""}</td><td>${tot.count}</td><td>${tot.hechos||"–"}</td><td>${tot.agend||"–"}</td><td>${f$(tot.rev)}</td></tr>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;">${label}: ${rango}. Por fecha de SALIDA, cada traslado una vez aunque figure en dos pestañas de la planilla. Hechos = salida antes de hoy; agendados = de hoy en adelante.${RV_SINFECHA?` ${RV_SINFECHA} filas sin fecha de salida legible quedan afuera.`:""}</div>`;
+}
+function activarRV(){
+  const c=document.getElementById("rv"); if(!c) return;
+  c.addEventListener("click",e=>{ const b=e.target.closest("[data-rv]"); if(!b) return; RV_P=b.dataset.rv; pintarRV(); });
+  c.addEventListener("change",e=>{ if(e.target.type==="date"){ RV_P="custom"; pintarRV(); } });
+  pintarRV();
+}
+
 /* ════ RUTAS (retorna HTML para grid-2) ════ */
 function renderRoutes() {
   const byR={};
-  DATA.trips.forEach(t=>{ const r=(t.route||"").trim(); if(!r) return; if(!byR[r]) byR[r]={route:r,count:0,rev:0,gan:0}; byR[r].count++; byR[r].rev+=(t.pago||0); byR[r].gan+=(t.neto||0); });
+  DATA.trips.forEach(t=>{ const k=rutaKey(t.route); if(!k) return; if(!byR[k]) byR[k]={route:rutaLabel(k),count:0,rev:0,gan:0}; byR[k].count++; byR[k].rev+=(t.pago||0); byR[k].gan+=(t.neto||0); });
   const arr=Object.values(byR).map(r=>({...r,margen:r.rev>0?r.gan/r.rev:0,
     ganProm:r.count>0?r.gan/r.count:0})).sort((a,b)=>b.count-a.count).slice(0,12);
   if(!arr.length) return "";
@@ -654,10 +765,12 @@ async function init() {
   renderUpcoming(root);
   renderResenas(root);
   renderCountries(root);
+  root.innerHTML += renderRutasVolumen();
   root.innerHTML += `<div class="section grid-2">${renderRoutes()}${renderDrivers()}</div>`;
   // Va ÚLTIMO a propósito: cada `root.innerHTML +=` reserializa y reconstruye
   // todo el árbol, y se lleva puestos los listeners ya enganchados.
   activarMensual();
+  activarRV();
 }
 init();
 </script>
