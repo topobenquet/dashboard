@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-10T10:21:13.750Z",
+  "generated": "2026-10-10T19:13:11.591Z",
   "lastSyncLabel": "10 Oct 2026",
-  "currentMonth": "Septiembre",
+  "currentMonth": "Octubre",
   "months": [
     {
       "mes": "Enero",
@@ -129,7 +129,7 @@
       "gAds": 339,
       "meta": 108.64,
       "costoSheet": 7250,
-      "gananciaSheet": 0
+      "gananciaSheet": 8298
     },
     {
       "mes": "Septiembre",
@@ -146,6 +146,23 @@
       "meta": 286.07,
       "costoSheet": 317,
       "gananciaSheet": 45770,
+      "base": "caja"
+    },
+    {
+      "mes": "Octubre",
+      "leads": 113,
+      "reservas": 35,
+      "revenue": 10164.5,
+      "chofer": 5372.96,
+      "comb": 122.39,
+      "peajes": 0,
+      "comision": 12.37,
+      "reembolsos": 0,
+      "otros": 856.65,
+      "gAds": 134,
+      "meta": 40.95,
+      "costoSheet": 6211.04,
+      "gananciaSheet": 13995.779999999993,
       "base": "caja"
     }
   ],
@@ -212,6 +229,13 @@
       "clicks": 514,
       "impr": 2484,
       "conv": 53
+    },
+    {
+      "mes": "Octubre",
+      "spend": 133.99,
+      "clicks": 1716,
+      "impr": 30265,
+      "conv": 24
     }
   ],
   "trips": [
@@ -5523,6 +5547,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Aviadores del Chaco 2581 → Aeropuerto Silvio Pettirossi",
+      "cliente": "andré garcia",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 138,
+      "sena": 38,
+      "restante": 100,
+      "choferCost": 0,
+      "neto": 133.86,
+      "fechaReserva": "10/10/26",
+      "fechaSalida": "08/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-FOZ",
       "cliente": "carolina ramos mejia",
       "pais": "Ecuador",
@@ -5722,7 +5760,7 @@
       "route": "Edif.Burband-AERO",
       "cliente": "rose",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 95,
       "sena": 95,
       "restante": 0,
@@ -5855,6 +5893,20 @@
       "choferCost": 33,
       "neto": -45.9,
       "fechaReserva": "18/09/26",
+      "fechaSalida": "13/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Colonia Thompson/Ypané a Foz do Iguaçu y regreso a Colonia Thompson/Ypané",
+      "cliente": "francoise / franelaflamme",
+      "pais": "Suiza",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 707,
+      "sena": 218,
+      "restante": 489,
+      "choferCost": 0,
+      "neto": 685.79,
+      "fechaReserva": "10/10/26",
       "fechaSalida": "13/10/26"
     },
     {
@@ -6251,6 +6303,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "CDE al aeropuerto internacional de Foz",
+      "cliente": "victor cubas",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 182,
+      "sena": 100,
+      "restante": 82,
+      "choferCost": 0,
+      "neto": 176.54,
+      "fechaReserva": "10/10/26",
+      "fechaSalida": "26/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-FOZ",
       "cliente": "mark",
       "pais": "USA",
@@ -6448,7 +6514,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-10": 2,
+      "2026-10-10": 6,
       "2026-10-09": 15,
       "2026-10-08": 13,
       "2026-10-07": 20,
@@ -6493,32 +6559,15 @@
       "2026-09-01": 9
     },
     "ventas": {
-      "2026-09-01": 7,
-      "2026-09-02": 3,
-      "2026-09-03": 4,
-      "2026-09-05": 1,
-      "2026-09-07": 2,
-      "2026-09-08": 3,
-      "2026-09-10": 2,
-      "2026-09-14": 2,
-      "2026-09-15": 1,
-      "2026-09-16": 1,
-      "2026-09-17": 2,
-      "2026-09-18": 3,
-      "2026-09-19": 3,
-      "2026-09-21": 2,
-      "2026-09-23": 3,
-      "2026-09-13": 1,
-      "2026-09-24": 5,
-      "2026-09-25": 2,
-      "2026-09-22": 2,
-      "2026-09-26": 2,
-      "2026-09-04": 2,
-      "2026-09-27": 1,
-      "2026-09-28": 5,
-      "2026-09-09": 1,
-      "2026-09-30": 1,
-      "2026-09-12": 1
+      "2026-10-02": 2,
+      "2026-10-05": 5,
+      "2026-10-06": 4,
+      "2026-10-07": 5,
+      "2026-10-10": 4,
+      "2026-10-08": 8,
+      "2026-10-09": 5,
+      "2026-10-01": 1,
+      "2026-10-04": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -6789,14 +6838,14 @@
       "2026-10-06": 18.21,
       "2026-10-07": 17.49,
       "2026-10-08": 4.52,
-      "2026-10-09": 30.72,
-      "2026-10-10": 2.99
+      "2026-10-09": 30.91,
+      "2026-10-10": 19.87
     }
   },
   "resenas": {
     "count": 67,
     "rating": 5,
-    "actualizado": "2026-10-09T23:10:03.997Z",
+    "actualizado": "2026-10-10T16:10:08.142Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -6907,6 +6956,11 @@
         "fecha": "2026-10-09",
         "count": 67,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-10",
+        "count": 67,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -6945,6 +6999,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-10-10": 8,
       "2026-10-09": 21,
       "2026-10-08": 20,
       "2026-10-07": 22,
@@ -6999,11 +7054,10 @@
       "2026-09-29": 7,
       "2026-09-30": 10,
       "2026-10-01": 19,
-      "2026-10-05": 29,
-      "2026-10-10": 2
+      "2026-10-05": 29
     },
     "monthly": {
-      "Octubre": 162,
+      "Octubre": 168,
       "Septiembre": 213,
       "Agosto": 27
     }
