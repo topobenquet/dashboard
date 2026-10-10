@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T14:30:32.101Z",
+ "generated": "2026-10-10T16:30:38.026Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 261.84,
-  "pagoparPendienteUsd": 9111.71,
+  "pagoparPendienteUsd": 9151.92,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -131,14 +131,15 @@
   },
   {
    "fecha": "2026-10-10",
-   "in": 336.36,
-   "out": 0,
-   "n": 2,
+   "in": 376.57,
+   "out": 41.96,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 336.36
+    "Pagopar": 376.57,
+    "WhatsApp · Pagos (Majo)": -41.96
    },
-   "neto": 336.36,
-   "acum": 3708.48
+   "neto": 334.61,
+   "acum": 3706.73
   }
  ],
  "movimientos": [
@@ -404,6 +405,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Francoise Flecq-Choveaux",
    "gs": 1319000
+  },
+  {
+   "d": "2026-10-10",
+   "t": "in",
+   "usd": 40.21,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Andre Pereira de Morais Garcia",
+   "gs": 230000
   },
   {
    "d": "2026-10-01",
@@ -784,6 +793,20 @@
    }
   },
   {
+   "d": "2026-10-10",
+   "t": "out",
+   "usd": 41.96,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver José Berdén. Traslados 10/10 + 17/10 pax Marjo",
+   "gs": 240000,
+   "rub": {
+    "chofer": 41.96,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.53,
@@ -921,8 +944,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 32,
-   "bruto": 9111.73,
+   "cobros": 33,
+   "bruto": 9151.94,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -937,8 +960,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 52119000,
-  "cobradoUsd": 9111.73,
+  "cobradoGs": 52349000,
+  "cobradoUsd": 9151.94,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -990,9 +1013,9 @@
    },
    {
     "fecha": "2026-10-10",
-    "cobros": 2,
-    "gs": 1924000,
-    "usd": 336.36
+    "cobros": 3,
+    "gs": 2154000,
+    "usd": 376.57
    }
   ],
   "pruebasExcluidas": 0,
@@ -1000,8 +1023,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 52119000,
-  "pendienteUsd": 9111.71
+  "pendienteGs": 52349000,
+  "pendienteUsd": 9151.92
  },
  "giros": [
   {
@@ -1108,7 +1131,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲52.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲52.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
