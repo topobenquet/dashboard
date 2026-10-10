@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-10T00:30:15.265Z",
+ "generated": "2026-10-10T10:20:38.805Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
  "saldos": {
-  "fecha": "2026-10-09",
+  "fecha": "2026-10-10",
   "itauGs": 43605,
   "uenoGs": 19389519,
   "uenoFecha": "2026-10-09",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 566.59,
   "stripePendiente": 261.84,
-  "pagoparPendienteUsd": 8674.83,
+  "pagoparPendienteUsd": 8881.12,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -118,16 +118,27 @@
   },
   {
    "fecha": "2026-10-09",
-   "in": 1608.05,
+   "in": 1708.57,
    "out": 2333.44,
-   "n": 13,
+   "n": 14,
    "porFuente": {
-    "Pagopar": 1266.44,
+    "Pagopar": 1366.96,
     "WhatsApp · Pagos (Majo)": -2333.44,
     "Transferencia": 341.61
    },
-   "neto": -725.39,
-   "acum": 3271.6
+   "neto": -624.87,
+   "acum": 3372.12
+  },
+  {
+   "fecha": "2026-10-10",
+   "in": 105.77,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 105.77
+   },
+   "neto": 105.77,
+   "acum": 3477.89
   }
  ],
  "movimientos": [
@@ -369,6 +380,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Carolina Ramos",
    "gs": 2433000
+  },
+  {
+   "d": "2026-10-09",
+   "t": "in",
+   "usd": 100.52,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Nia Rose",
+   "gs": 575000
+  },
+  {
+   "d": "2026-10-10",
+   "t": "in",
+   "usd": 105.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Ronelle Kau'i Kahaku",
+   "gs": 605000
   },
   {
    "d": "2026-10-01",
@@ -886,8 +913,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 29,
-   "bruto": 8674.85,
+   "cobros": 31,
+   "bruto": 8881.14,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -902,8 +929,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 49620000,
-  "cobradoUsd": 8674.85,
+  "cobradoGs": 50800000,
+  "cobradoUsd": 8881.14,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -949,9 +976,15 @@
    },
    {
     "fecha": "2026-10-09",
-    "cobros": 4,
-    "gs": 7244000,
-    "usd": 1266.44
+    "cobros": 5,
+    "gs": 7819000,
+    "usd": 1366.96
+   },
+   {
+    "fecha": "2026-10-10",
+    "cobros": 1,
+    "gs": 605000,
+    "usd": 105.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -959,8 +992,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 49620000,
-  "pendienteUsd": 8674.83
+  "pendienteGs": 50800000,
+  "pendienteUsd": 8881.12
  },
  "giros": [
   {
@@ -1067,7 +1100,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲49.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲50.8 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
