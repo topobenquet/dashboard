@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T19:12:39.999Z",
+ "generated": "2026-10-10T19:24:21.361Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -119,15 +119,15 @@
   {
    "fecha": "2026-10-09",
    "in": 1708.57,
-   "out": 2333.44,
-   "n": 14,
+   "out": 1109.66,
+   "n": 13,
    "porFuente": {
     "Pagopar": 1366.96,
-    "WhatsApp · Pagos (Majo)": -2333.44,
+    "WhatsApp · Pagos (Majo)": -1109.66,
     "Transferencia": 341.61
    },
-   "neto": -624.87,
-   "acum": 3372.12
+   "neto": 598.91,
+   "acum": 4595.9
   },
   {
    "fecha": "2026-10-10",
@@ -139,7 +139,7 @@
     "WhatsApp · Pagos (Majo)": -41.96
    },
    "neto": 440.38,
-   "acum": 3812.5
+   "acum": 5036.28
   }
  ],
  "movimientos": [
@@ -739,20 +739,6 @@
    "gs": 2397270,
    "rub": {
     "chofer": 419.1,
-    "comb": 0,
-    "peajes": 0,
-    "otros": 0
-   }
-  },
-  {
-   "d": "2026-10-09",
-   "t": "out",
-   "usd": 1223.78,
-   "fuente": "WhatsApp · Pagos (Majo)",
-   "det": "Transferencia entre cuentas propias (ueno a Itaú)",
-   "gs": 7000000,
-   "rub": {
-    "chofer": 1223.78,
     "comb": 0,
     "peajes": 0,
     "otros": 0
