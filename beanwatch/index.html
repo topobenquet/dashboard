@@ -283,7 +283,7 @@ function render(d){
       {l:'Ad spend',v:usd(A1.spend),s:`Google ${usd(A1.spendG)} · Meta ${usd(A1.spendM)}`,
        cmp:B1?delta(A1.spend,B1.spend,true):''},
     ].map(k=>`<div class="kpi"><div class="l">${k.l}</div><div class="v"${k.vcol?` style="color:${k.vcol}"`:''}>${k.v}</div><div class="s">${k.s}</div>${k.cmp||''}</div>`).join('')
-      +`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">${R.lbl}: ${fdate(R.a[0])}${R.a[0]!==R.a[1]?' to '+fdate(R.a[1]):''}${nada?' · no activity in this range yet':''}. Sales and revenue come from Stripe, which is the official number. Everything below covers the whole campaign.</div>`;
+      +`<div style="grid-column:1/-1;font-size:10.5px;color:#8A8A8A;margin-top:-4px">${R.lbl}: ${fdate(R.a[0])}${R.a[0]!==R.a[1]?' to '+fdate(R.a[1]):''}${nada?' · no activity in this range yet':''}. Sales and revenue come from Stripe, which is the official number${ST&&ST.leido?` (last read ${new Date(ST.leido).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET; ad spend is live, so today's ROAS lags until the next read)`:''}. Everything below covers the whole campaign.</div>`;
     document.querySelectorAll('.rango button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.r===RANGO)));
     const fb=document.getElementById('funnelBox'); if(fb&&window.dibujarFunnel) fb.innerHTML=window.dibujarFunnel(A1);
     const ab=document.getElementById('acctBox'); if(ab&&window.dibujarCuenta) ab.innerHTML=window.dibujarCuenta(A1,R.lbl);
