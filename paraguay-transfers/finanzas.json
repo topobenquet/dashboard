@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T10:20:32.503Z",
+ "generated": "2026-10-11T16:30:29.622Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 564.51,
   "stripePendiente": 549.93,
-  "pagoparPendienteUsd": 9436.54,
+  "pagoparPendienteUsd": 9542.31,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -58,13 +58,14 @@
   {
    "fecha": "2026-10-04",
    "in": 215.03,
-   "out": 0,
-   "n": 1,
+   "out": 127.62,
+   "n": 2,
    "porFuente": {
-    "Pagopar": 215.03
+    "Pagopar": 215.03,
+    "WhatsApp · Alfredo": -127.62
    },
-   "neto": 215.03,
-   "acum": 220.61
+   "neto": 87.41,
+   "acum": 92.99
   },
   {
    "fecha": "2026-10-05",
@@ -76,7 +77,7 @@
     "WhatsApp · Pagos (Majo)": -270.98
    },
    "neto": 25.01,
-   "acum": 245.62
+   "acum": 118
   },
   {
    "fecha": "2026-10-06",
@@ -88,7 +89,7 @@
     "WhatsApp · Pagos (Majo)": -470.28
    },
    "neto": 1679.19,
-   "acum": 1924.81
+   "acum": 1797.19
   },
   {
    "fecha": "2026-10-07",
@@ -100,7 +101,7 @@
     "WhatsApp · Pagos (Majo)": -8.74
    },
    "neto": 927.1,
-   "acum": 2851.91
+   "acum": 2724.29
   },
   {
    "fecha": "2026-10-08",
@@ -114,7 +115,7 @@
     "Transferencia": 99.65
    },
    "neto": 1145.08,
-   "acum": 3996.99
+   "acum": 3869.37
   },
   {
    "fecha": "2026-10-09",
@@ -127,7 +128,7 @@
     "Transferencia": 341.61
    },
    "neto": 598.91,
-   "acum": 4595.9
+   "acum": 4468.28
   },
   {
    "fecha": "2026-10-10",
@@ -139,7 +140,18 @@
     "WhatsApp · Pagos (Majo)": -41.96
    },
    "neto": 619.23,
-   "acum": 5215.13
+   "acum": 5087.51
+  },
+  {
+   "fecha": "2026-10-11",
+   "in": 105.77,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 105.77
+   },
+   "neto": 105.77,
+   "acum": 5193.28
   }
  ],
  "movimientos": [
@@ -437,6 +449,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Ruby Trew",
    "gs": 418000
+  },
+  {
+   "d": "2026-10-11",
+   "t": "in",
+   "usd": 105.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Anna Júlia Borges de Moraes",
+   "gs": 605000
   },
   {
    "d": "2026-10-01",
@@ -817,6 +837,20 @@
    }
   },
   {
+   "d": "2026-10-04",
+   "t": "out",
+   "usd": 127.62,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Pago en PETROPAR CONMEBOL (combustible)",
+   "gs": 730012,
+   "rub": {
+    "chofer": 0,
+    "comb": 127.62,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.53,
@@ -954,8 +988,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 36,
-   "bruto": 9436.56,
+   "cobros": 37,
+   "bruto": 9542.33,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -970,8 +1004,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 53977000,
-  "cobradoUsd": 9436.56,
+  "cobradoGs": 54582000,
+  "cobradoUsd": 9542.33,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1026,6 +1060,12 @@
     "cobros": 6,
     "gs": 3782000,
     "usd": 661.19
+   },
+   {
+    "fecha": "2026-10-11",
+    "cobros": 1,
+    "gs": 605000,
+    "usd": 105.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -1033,8 +1073,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 53977000,
-  "pendienteUsd": 9436.54
+  "pendienteGs": 54582000,
+  "pendienteUsd": 9542.31
  },
  "giros": [
   {
@@ -1141,7 +1181,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲54 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲54.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -1231,6 +1271,14 @@
    "gs": 1319000,
    "usd": 230.59,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/x9xcbz (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-11",
+   "grupo": "Alfredo",
+   "gs": 90000,
+   "usd": 15.73,
+   "concepto": ". GS más IVA... Si agrego este monto a mi factura de todo el",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
