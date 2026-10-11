@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T16:30:29.622Z",
+ "generated": "2026-10-11T18:30:27.971Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,8 +12,8 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 564.51,
-  "stripePendiente": 549.93,
-  "pagoparPendienteUsd": 9542.31,
+  "stripePendiente": 2006.13,
+  "pagoparPendienteUsd": 9549.83,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -144,14 +144,15 @@
   },
   {
    "fecha": "2026-10-11",
-   "in": 105.77,
-   "out": 0,
-   "n": 1,
+   "in": 113.29,
+   "out": 190.38,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 105.77
+    "Pagopar": 113.29,
+    "WhatsApp · Pagos (Majo)": -190.38
    },
-   "neto": 105.77,
-   "acum": 5193.28
+   "neto": -77.09,
+   "acum": 5010.42
   }
  ],
  "movimientos": [
@@ -457,6 +458,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Anna Júlia Borges de Moraes",
    "gs": 605000
+  },
+  {
+   "d": "2026-10-11",
+   "t": "in",
+   "usd": 7.52,
+   "fuente": "Pagopar",
+   "det": "PIX · Anna Júlia  Borges de Moraes",
+   "gs": 43000
   },
   {
    "d": "2026-10-01",
@@ -851,6 +860,34 @@
    }
   },
   {
+   "d": "2026-10-11",
+   "t": "out",
+   "usd": 45.45,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Antonio Duarte. TRASLADO 11/10 CDE-FOZ Pax Anna",
+   "gs": 260000,
+   "rub": {
+    "chofer": 45.45,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-11",
+   "t": "out",
+   "usd": 144.93,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Christian 10/10 traslado Aeropuerto 99.000 · Reembolso Combustible 730.012",
+   "gs": 829012,
+   "rub": {
+    "chofer": 17.31,
+    "comb": 127.62,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.53,
@@ -988,8 +1025,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 37,
-   "bruto": 9542.33,
+   "cobros": 38,
+   "bruto": 9549.85,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1004,8 +1041,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 54582000,
-  "cobradoUsd": 9542.33,
+  "cobradoGs": 54625000,
+  "cobradoUsd": 9549.85,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1063,9 +1100,9 @@
    },
    {
     "fecha": "2026-10-11",
-    "cobros": 1,
-    "gs": 605000,
-    "usd": 105.77
+    "cobros": 2,
+    "gs": 648000,
+    "usd": 113.29
    }
   ],
   "pruebasExcluidas": 0,
@@ -1073,8 +1110,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 54582000,
-  "pendienteUsd": 9542.31
+  "pendienteGs": 54625000,
+  "pendienteUsd": 9549.83
  },
  "giros": [
   {
