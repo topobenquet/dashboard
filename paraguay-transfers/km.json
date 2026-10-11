@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T17:10:44.466Z",
+ "generated": "2026-10-11T19:10:29.172Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -72,7 +72,7 @@
    "kmFuera": 1077,
    "viajes": 8,
    "costoComb": 2653464,
-   "pagado": 0
+   "pagado": 730012
   },
   "Voxy": {
    "kmViajes": 0,
@@ -115,7 +115,7 @@
    ],
    "kmEsperado": null,
    "desvio": null,
-   "combustiblePagado": null,
+   "combustiblePagado": 730012,
    "combustibleCargado": null,
    "combustibleCorresponde": 132924,
    "cargas": [],
@@ -1520,6 +1520,13 @@
    "texto": "H1: 33 km sin traslado entre el 11/10 (km 98.946, Alfredo) y el 11/10 (km 98.979, Alfredo).",
    "ts": 1791733595,
    "fecha": "2026-10-11"
+  },
+  {
+   "key": "comb:H1:98840",
+   "nivel": "juan",
+   "texto": "H1, Alfredo, 10/10: se pagaron ₲730.012 de combustible y 106 km a ₲1.254/km dan ₲132.924 (+449%).",
+   "ts": 1791672330,
+   "fecha": "2026-10-10"
   },
   {
    "key": "hueco:H1:98224:98389",
