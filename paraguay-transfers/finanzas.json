@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T22:00:04.706Z",
+ "generated": "2026-10-11T22:30:13.599Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 564.51,
   "stripePendiente": 2006.13,
-  "pagoparPendienteUsd": 9549.83,
+  "pagoparPendienteUsd": 9719.06,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -144,15 +144,15 @@
   },
   {
    "fecha": "2026-10-11",
-   "in": 113.29,
+   "in": 282.52,
    "out": 190.38,
-   "n": 4,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 113.29,
+    "Pagopar": 282.52,
     "WhatsApp · Pagos (Majo)": -190.38
    },
-   "neto": -77.09,
-   "acum": 5010.42
+   "neto": 92.14,
+   "acum": 5179.65
   }
  ],
  "movimientos": [
@@ -466,6 +466,14 @@
    "fuente": "Pagopar",
    "det": "PIX · Anna Júlia  Borges de Moraes",
    "gs": 43000
+  },
+  {
+   "d": "2026-10-11",
+   "t": "in",
+   "usd": 169.23,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Timothy B. Totten",
+   "gs": 968000
   },
   {
    "d": "2026-10-01",
@@ -1025,8 +1033,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 38,
-   "bruto": 9549.85,
+   "cobros": 39,
+   "bruto": 9719.08,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1041,8 +1049,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 54625000,
-  "cobradoUsd": 9549.85,
+  "cobradoGs": 55593000,
+  "cobradoUsd": 9719.08,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1100,9 +1108,9 @@
    },
    {
     "fecha": "2026-10-11",
-    "cobros": 2,
-    "gs": 648000,
-    "usd": 113.29
+    "cobros": 3,
+    "gs": 1616000,
+    "usd": 282.52
    }
   ],
   "pruebasExcluidas": 0,
@@ -1110,8 +1118,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 54625000,
-  "pendienteUsd": 9549.83
+  "pendienteGs": 55593000,
+  "pendienteUsd": 9719.06
  },
  "giros": [
   {
@@ -1218,7 +1226,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲54.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲55.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
