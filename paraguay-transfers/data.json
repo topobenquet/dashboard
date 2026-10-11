@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T10:21:08.379Z",
+  "generated": "2026-10-11T22:00:51.191Z",
   "lastSyncLabel": "11 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 118,
-      "reservas": 33,
-      "revenue": 10343.35,
-      "chofer": 4149.18,
-      "comb": 122.39,
+      "leads": 124,
+      "reservas": 34,
+      "revenue": 10456.64,
+      "chofer": 4211.94,
+      "comb": 377.63,
       "peajes": 0,
       "comision": 12.37,
       "reembolsos": 0,
       "otros": 856.65,
-      "gAds": 139,
-      "meta": 43.05,
-      "costoSheet": 6134,
-      "gananciaSheet": 13500,
+      "gAds": 162,
+      "meta": 45.98,
+      "costoSheet": 6180,
+      "gananciaSheet": 13554,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 139.31,
-      "clicks": 2343,
-      "impr": 42478,
-      "conv": 25
+      "spend": 162.45,
+      "clicks": 4072,
+      "impr": 73896,
+      "conv": 26
     }
   ],
   "trips": [
@@ -5883,6 +5883,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Ciudad del Este",
+      "cliente": "anna júlia moraes",
+      "pais": "Brasil",
+      "conductor": "Antonio CDE",
+      "pago": 100,
+      "sena": 100,
+      "restante": 0,
+      "choferCost": 43,
+      "neto": 54.38,
+      "fechaReserva": "11/10/26",
+      "fechaSalida": "12/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "AERO-ChâteauVictoriaHotel",
       "cliente": "Angela",
       "pais": "España",
@@ -6472,7 +6486,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-11": 2,
+      "2026-10-11": 8,
       "2026-10-10": 9,
       "2026-10-09": 15,
       "2026-10-08": 13,
@@ -6525,7 +6539,8 @@
       "2026-10-10": 5,
       "2026-10-08": 8,
       "2026-10-09": 5,
-      "2026-10-01": 1
+      "2026-10-01": 1,
+      "2026-10-11": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -6798,13 +6813,13 @@
       "2026-10-08": 4.52,
       "2026-10-09": 30.96,
       "2026-10-10": 24.68,
-      "2026-10-11": 0.46
+      "2026-10-11": 23.6
     }
   },
   "resenas": {
-    "count": 67,
+    "count": 68,
     "rating": 5,
-    "actualizado": "2026-10-10T23:10:08.101Z",
+    "actualizado": "2026-10-11T20:10:03.871Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -6920,6 +6935,11 @@
         "fecha": "2026-10-10",
         "count": 67,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-11",
+        "count": 68,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -6958,7 +6978,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-10-11": 2,
+      "2026-10-11": 17,
       "2026-10-10": 14,
       "2026-10-09": 21,
       "2026-10-08": 20,
@@ -7017,7 +7037,7 @@
       "2026-10-05": 29
     },
     "monthly": {
-      "Octubre": 176,
+      "Octubre": 191,
       "Septiembre": 213,
       "Agosto": 27
     }
