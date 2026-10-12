@@ -48,6 +48,8 @@
   details p{color:var(--muted);margin:8px 0 0}
   .sticky{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%);display:none}
   .sticky .cta{max-width:448px;margin:0 auto;display:block}
+  .err{color:#b3261e;font-size:14px;margin:0;min-height:0}.err:empty{display:none}
+  .cta[disabled]{opacity:.6;cursor:wait}
   .note{background:#fff3c4;color:#5b4a00;font-size:12px;padding:8px 12px;text-align:center}
 </style>
 </head>
@@ -65,14 +67,15 @@
       <button type="button" data-modo="unica">Una vez</button>
     </div>
     <div class="amts" id="amts"></div>
-    <div class="otro" id="otro"><input type="text" inputmode="numeric" placeholder="Otro monto en Gs"></div>
+    <div class="otro" id="otro"><input type="text" id="otroMonto" inputmode="numeric" placeholder="Otro monto en Gs (mínimo 10.000)"></div>
   </div>
 
-  <form onsubmit="event.preventDefault();alert('En la versión real: va al pago de Pagopar.')">
-    <div><label>Nombre</label><input type="text" required autocomplete="name"></div>
-    <div><label>WhatsApp</label><input type="tel" required autocomplete="tel" placeholder="09xx xxx xxx"></div>
-    <div><label>Email</label><input type="email" required autocomplete="email"></div>
-    <label class="chk"><input type="checkbox" checked> Quiero recibir novedades del hogar por WhatsApp</label>
+  <form id="form" novalidate>
+    <div><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" required autocomplete="name"></div>
+    <div><label for="f-tel">WhatsApp</label><input id="f-tel" name="telefono" type="tel" required autocomplete="tel" placeholder="09xx xxx xxx"></div>
+    <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+    <label class="chk"><input type="checkbox" name="novedades" checked> Quiero recibir novedades del hogar por WhatsApp</label>
+    <p class="err" id="err" role="alert"></p>
     <button class="cta" id="cta">Ser padrino por Gs 100.000 al mes</button>
   </form>
   <p class="fine" id="fine">Podés cancelar cuando quieras. Pago seguro con Pagopar.</p>
@@ -126,7 +129,10 @@
       {gs:0,      txt:'Elegís vos cuánto'}
     ]
   };
-  let modo = 'mensual', sel = 1;
+  // API de cobro (donar-api/). Vacía = todavía no publicada.
+  const API = location.hostname === 'localhost' ? 'http://localhost:8780' : 'https://donar.jbenquet.com';
+  const qs = new URLSearchParams(location.search);
+  let modo = qs.get('modo') === 'unica' ? 'unica' : 'mensual', sel = 1;
   const fmt = n => 'Gs ' + n.toLocaleString('es-PY');
   function pintar(){
     document.querySelectorAll('.tog button').forEach(b => b.classList.toggle('on', b.dataset.modo === modo));
@@ -153,6 +159,33 @@
   document.getElementById('down').onclick = () => { modo = modo === 'mensual' ? 'unica' : 'mensual'; sel = 1; pintar(); document.getElementById('pick').scrollIntoView({behavior:'smooth'}); };
   const io = new IntersectionObserver(([e]) => document.getElementById('sticky').style.display = e.isIntersecting ? 'none' : 'block');
   io.observe(document.getElementById('cta'));
+
+  const err = t => document.getElementById('err').textContent = t || '';
+  document.getElementById('form').onsubmit = async e => {
+    e.preventDefault(); err('');
+    const f = e.target, m = MONTOS[modo][sel];
+    const monto = m.gs || parseInt((document.getElementById('otroMonto').value || '').replace(/\D/g, ''), 10) || 0;
+    if (f.nombre.value.trim().length < 3) return err('Escribí tu nombre.');
+    if (f.telefono.value.replace(/\D/g, '').length < 8) return err('Revisá el número de WhatsApp.');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return err('Revisá el email.');
+    if (monto < 10000) return err('El monto mínimo es Gs 10.000.');
+    if (modo === 'mensual') return err('El aporte mensual se habilita en estos días. Mientras tanto podés donar una sola vez.');
+    if (!API) return err('Maqueta: el cobro todavía no está conectado en esta dirección.');
+    const btn = document.getElementById('cta'), txt = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Abriendo el pago seguro...';
+    const datos = {nombre: f.nombre.value, telefono: f.telefono.value, email: f.email.value,
+                   novedades: f.novedades.checked, monto, modo};
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid'].forEach(k => { if (qs.get(k)) datos[k] = qs.get(k); });
+    try {
+      const r = await fetch(API + '/donar.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(datos)});
+      const j = await r.json();
+      if (j.ok && j.url) { location.href = j.url; return; }
+      err(j.error || 'No pudimos iniciar el pago. Probá de nuevo.');
+    } catch (_) {
+      err('No pudimos conectar. Revisá tu conexión y probá de nuevo.');
+    }
+    btn.disabled = false; btn.textContent = txt;
+  };
   pintar();
 </script>
 </body>
