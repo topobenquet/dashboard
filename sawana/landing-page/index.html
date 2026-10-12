@@ -303,7 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div>
       <p class="eyebrow">Z kim rozmawiasz</p>
-      <blockquote>„Nie sprzedaję marzeń o Bali. Przechodzę z Tobą przez liczby i mówię wprost, kiedy ta inwestycja nie ma sensu."</blockquote>
+      <blockquote>„Nie sprzedaję marzeń o Bali. Wspólnie sprawdzamy fakty i liczby, aby pomóc Ci wybrać inwestycję, która przyniesie realny zysk."</blockquote>
       <p class="who"><b>Iwona Rudnicka</b>Opiekun klienta na rynek polski · Sawana Developments</p>
     </div>
   </div>
@@ -386,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       var payload = Object.assign({
         phone: phone,
-        source: "pl-expose-landing",
+        source: "pl-oferta-landing",
         page: location.href
       }, utms());
 
@@ -407,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       var done = function(){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({event: "lead_submit", form_id: formId, lead_source: "pl-expose-landing"});
+        window.dataLayer.push({event: "lead_submit", form_id: formId, lead_source: "pl-oferta-landing"});
         if (window.fbq) fbq("track", "Lead", {content_name: "PL Oferta"});
         var fv = document.getElementById("formView"),
             tv = document.getElementById("thanksView");
