@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-11T22:01:34.073Z",
- "today": "2026-10-11",
+ "generated": "2026-10-12T10:21:15.692Z",
+ "today": "2026-10-12",
  "launch": "2026-09-15",
- "daysLive": 27,
+ "daysLive": 28,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -17,14 +17,14 @@
   "errors": []
  },
  "account": {
-  "spend": 6825.64,
-  "impr": 7234,
-  "clicks": 968,
+  "spend": 6844.86,
+  "impr": 7260,
+  "clicks": 972,
   "inquiries": 14,
   "form": 0,
   "search": 10,
   "callsAds": 4,
-  "phoneImpr": 277,
+  "phoneImpr": 279,
   "deals": 0,
   "quoted": 0,
   "booked": 0,
@@ -32,15 +32,15 @@
   "value": 0,
   "callrailCalls": 5,
   "callrailQualified": 3,
-  "sessions": 929,
-  "avinodeSearches": 605,
-  "avinodeOpenForm": 228,
+  "sessions": 935,
+  "avinodeSearches": 608,
+  "avinodeOpenForm": 230,
   "avinodeInquiries": 10
  },
  "groups": {
   "Charter": {
    "spend": 5966.56,
-   "impr": 4386,
+   "impr": 4389,
    "clicks": 571,
    "inquiries": 10,
    "form": 0,
@@ -49,14 +49,14 @@
    "phoneImpr": 146
   },
   "Brand": {
-   "spend": 859.08,
-   "impr": 2848,
-   "clicks": 397,
+   "spend": 878.3,
+   "impr": 2871,
+   "clicks": 401,
    "inquiries": 4,
    "form": 0,
    "search": 4,
    "callsAds": 0,
-   "phoneImpr": 131
+   "phoneImpr": 133
   }
  },
  "campaigns": [
@@ -66,11 +66,11 @@
    "group": "Brand",
    "slug": "brand-us",
    "short": "Brand",
-   "spend": 859.08,
-   "impr": 2848,
-   "clicks": 397,
+   "spend": 878.3,
+   "impr": 2871,
+   "clicks": 401,
    "conv": 4,
-   "phoneImpr": 131,
+   "phoneImpr": 133,
    "phoneCalls": 0,
    "form": 0,
    "search": 4,
@@ -80,9 +80,9 @@
    "inquiries": 4,
    "share": {
     "status": "ENABLED",
-    "is": 0.11495950050624368,
-    "lostRank": 0.41469794127573406,
-    "lostBudget": 0.4703425582180223,
+    "is": 0.11186140922062784,
+    "lostRank": 0.39619759636641344,
+    "lostBudget": 0.49194099441295874,
     "top": 0.0999
    },
    "status": "ENABLED"
@@ -94,7 +94,7 @@
    "slug": "charter-south-fl",
    "short": "Florida · local",
    "spend": 4903.39,
-   "impr": 3641,
+   "impr": 3644,
    "clicks": 485,
    "conv": 10,
    "phoneImpr": 137,
@@ -107,10 +107,10 @@
    "inquiries": 10,
    "share": {
     "status": "ENABLED",
-    "is": 0.7549256826823367,
-    "lostRank": 0.20186657449014864,
-    "lostBudget": 0.04320774282751469,
-    "top": 0.6598686484618044
+    "is": 0.7547299621603027,
+    "lostRank": 0.20227038183694532,
+    "lostBudget": 0.042999656002751976,
+    "top": 0.6597867217062263
    },
    "status": "ENABLED"
   },
@@ -649,8 +649,8 @@
    "date": "2026-10-11",
    "groups": {
     "Brand": {
-     "spend": 28.12,
-     "clicks": 6,
+     "spend": 47.34,
+     "clicks": 10,
      "inquiries": 0
     },
     "Charter": {
@@ -659,8 +659,8 @@
      "inquiries": 0
     }
    },
-   "spend": 28.12,
-   "clicks": 6,
+   "spend": 47.34,
+   "clicks": 10,
    "inquiries": 0
   }
  ],
@@ -671,9 +671,9 @@
    "group": "Brand",
    "adGroup": "Brand - Exact",
    "qs": null,
-   "impr": 2837,
-   "clicks": 394,
-   "spend": 828.11,
+   "impr": 2860,
+   "clicks": 398,
+   "spend": 847.33,
    "conv": 4
   },
   {
@@ -737,7 +737,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 9,
-   "impr": 161,
+   "impr": 163,
    "clicks": 26,
    "spend": 265.88,
    "conv": 1
@@ -803,7 +803,7 @@
    "group": "Charter",
    "adGroup": "Rental - Hire",
    "qs": 8,
-   "impr": 102,
+   "impr": 103,
    "clicks": 16,
    "spend": 113.02,
    "conv": 1
@@ -1117,7 +1117,7 @@
   },
   {
    "term": "private jet flights",
-   "impr": 449,
+   "impr": 451,
    "clicks": 96,
    "spend": 613.87,
    "conv": 4,
@@ -1125,7 +1125,7 @@
   },
   {
    "term": "private jet charter",
-   "impr": 389,
+   "impr": 391,
    "clicks": 65,
    "spend": 385.2,
    "conv": 2,
@@ -1141,9 +1141,9 @@
   },
   {
    "term": "charter flights",
-   "impr": 197,
-   "clicks": 27,
-   "spend": 195.43,
+   "impr": 200,
+   "clicks": 29,
+   "spend": 205.19,
    "conv": 2,
    "excluded": false
   },
@@ -1157,7 +1157,7 @@
   },
   {
    "term": "private plane charter",
-   "impr": 110,
+   "impr": 111,
    "clicks": 15,
    "spend": 45.92,
    "conv": 0,
@@ -1165,7 +1165,7 @@
   },
   {
    "term": "charter plane",
-   "impr": 109,
+   "impr": 110,
    "clicks": 9,
    "spend": 43.45,
    "conv": 0,
@@ -1181,7 +1181,7 @@
   },
   {
    "term": "charter flight",
-   "impr": 74,
+   "impr": 75,
    "clicks": 4,
    "spend": 25.44,
    "conv": 0,
@@ -1197,7 +1197,7 @@
   },
   {
    "term": "fly private",
-   "impr": 68,
+   "impr": 69,
    "clicks": 11,
    "spend": 75.32,
    "conv": 0,
@@ -1245,7 +1245,7 @@
   },
   {
    "term": "private charter",
-   "impr": 53,
+   "impr": 52,
    "clicks": 6,
    "spend": 44.9,
    "conv": 0,
@@ -1325,7 +1325,7 @@
   },
   {
    "term": "charter jet",
-   "impr": 35,
+   "impr": 36,
    "clicks": 4,
    "spend": 40.77,
    "conv": 0,
@@ -1365,7 +1365,7 @@
   },
   {
    "term": "private jet flight",
-   "impr": 29,
+   "impr": 30,
    "clicks": 3,
    "spend": 41.31,
    "conv": 0,
@@ -1428,6 +1428,14 @@
    "excluded": true
   },
   {
+   "term": "chartered flights",
+   "impr": 21,
+   "clicks": 2,
+   "spend": 8.53,
+   "conv": 0,
+   "excluded": false
+  },
+  {
    "term": "private jets for rent",
    "impr": 20,
    "clicks": 8,
@@ -1436,11 +1444,11 @@
    "excluded": false
   },
   {
-   "term": "chartered flights",
-   "impr": 20,
-   "clicks": 2,
-   "spend": 8.53,
-   "conv": 0,
+   "term": "book a private jet",
+   "impr": 19,
+   "clicks": 3,
+   "spend": 43.57,
+   "conv": 1,
    "excluded": false
   },
   {
@@ -1460,11 +1468,11 @@
    "excluded": false
   },
   {
-   "term": "book a private jet",
-   "impr": 18,
-   "clicks": 3,
-   "spend": 43.57,
-   "conv": 1,
+   "term": "charter a private jet",
+   "impr": 19,
+   "clicks": 1,
+   "spend": 1.9,
+   "conv": 0,
    "excluded": false
   },
   {
@@ -1480,14 +1488,6 @@
    "impr": 18,
    "clicks": 2,
    "spend": 17.98,
-   "conv": 0,
-   "excluded": false
-  },
-  {
-   "term": "charter a private jet",
-   "impr": 18,
-   "clicks": 1,
-   "spend": 1.9,
    "conv": 0,
    "excluded": false
   },
@@ -1711,9 +1711,9 @@
   },
   {
    "h": 20,
-   "clicks": 69,
+   "clicks": 71,
    "conv": 1,
-   "spend": 437.3
+   "spend": 447.06
   },
   {
    "h": 21,
@@ -1723,9 +1723,9 @@
   },
   {
    "h": 22,
-   "clicks": 46,
+   "clicks": 48,
    "conv": 1,
-   "spend": 359.95
+   "spend": 369.41
   },
   {
    "h": 23,
@@ -1736,16 +1736,16 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 1843,
+   "impr": 1849,
    "clicks": 234,
    "conv": 8,
    "spend": 2598.56
   },
   "MOBILE": {
-   "impr": 5296,
-   "clicks": 720,
+   "impr": 5316,
+   "clicks": 724,
    "conv": 6,
-   "spend": 4049.78
+   "spend": 4069
   },
   "TABLET": {
    "impr": 95,
@@ -1932,17 +1932,17 @@
    },
    {
     "path": "/",
-    "sessions": 394,
-    "engaged": 305,
-    "engagementSec": 3392,
-    "users": 361,
-    "search": 263,
-    "openForm": 85,
+    "sessions": 402,
+    "engaged": 309,
+    "engagementSec": 3421,
+    "users": 368,
+    "search": 267,
+    "openForm": 87,
     "inquiry": 5,
     "ads": {
-     "sessions": 359,
-     "search": 256,
-     "openForm": 80,
+     "sessions": 365,
+     "search": 259,
+     "openForm": 82,
      "inquiry": 4
     }
    },
@@ -2094,18 +2094,18 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 944,
-    "engaged": 747
+    "sessions": 949,
+    "engaged": 750
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 62,
+    "sessions": 63,
     "engaged": 8
    },
    {
     "sm": "(data not available)",
-    "sessions": 13,
-    "engaged": 9
+    "sessions": 14,
+    "engaged": 10
    },
    {
     "sm": "google / organic",
@@ -2251,8 +2251,8 @@
    },
    {
     "date": "2026-10-11",
-    "sessions": 2,
-    "ads": 1
+    "sessions": 9,
+    "ads": 6
    }
   ]
  },
@@ -2487,32 +2487,32 @@
  ],
  "weekly": {
   "current": {
-   "from": "2026-10-04",
-   "to": "2026-10-10",
-   "spend": 1360.54,
-   "clicks": 239,
-   "impr": 1655,
+   "from": "2026-10-05",
+   "to": "2026-10-11",
+   "spend": 1176.6,
+   "clicks": 209,
+   "impr": 1506,
    "inquiries": 0,
-   "sessions": 237
+   "sessions": 202
   },
   "previous": {
-   "from": "2026-09-27",
-   "to": "2026-10-03",
-   "spend": 1682.81,
-   "clicks": 282,
-   "impr": 2205,
+   "from": "2026-09-28",
+   "to": "2026-10-04",
+   "spend": 1724.95,
+   "clicks": 283,
+   "impr": 2056,
    "inquiries": 6,
-   "sessions": 267
+   "sessions": 276
   },
   "comparable": true,
   "availableFrom": "2026-09-29"
  },
  "pacing": {
   "month": "2026-10",
-  "spentToDate": 2071.2,
-  "avgDaily": 194.36,
-  "daysLeft": 21,
-  "projected": 6124.7,
+  "spentToDate": 2090.42,
+  "avgDaily": 168.09,
+  "daysLeft": 20,
+  "projected": 5452.13,
   "plan": 10168,
   "planDays": 31,
   "basedOnDays": 7
@@ -3215,11 +3215,11 @@
    },
    "2026-10-11": {
     "Search | Brand | US": {
-     "spend": 28.12,
-     "impr": 33,
-     "clicks": 6,
+     "spend": 47.34,
+     "impr": 56,
+     "clicks": 10,
      "conv": 0,
-     "phoneImpr": 0,
+     "phoneImpr": 2,
      "phoneCalls": 0,
      "form": 0,
      "search": 0,
@@ -3229,7 +3229,7 @@
     },
     "Search | Charter | South FL": {
      "spend": 0,
-     "impr": 14,
+     "impr": 17,
      "clicks": 0,
      "conv": 0,
      "phoneImpr": 0,
@@ -3422,17 +3422,17 @@
   "share": {
    "Search | Brand | US": {
     "status": "ENABLED",
-    "is": 0.11495950050624368,
-    "lostRank": 0.41469794127573406,
-    "lostBudget": 0.4703425582180223,
+    "is": 0.11186140922062784,
+    "lostRank": 0.39619759636641344,
+    "lostBudget": 0.49194099441295874,
     "top": 0.0999
    },
    "Search | Charter | South FL": {
     "status": "ENABLED",
-    "is": 0.7549256826823367,
-    "lostRank": 0.20186657449014864,
-    "lostBudget": 0.04320774282751469,
-    "top": 0.6598686484618044
+    "is": 0.7547299621603027,
+    "lostRank": 0.20227038183694532,
+    "lostBudget": 0.042999656002751976,
+    "top": 0.6597867217062263
    },
    "Search | Charter | FL Inbound": {
     "status": "PAUSED",
