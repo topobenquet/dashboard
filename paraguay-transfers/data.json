@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-11T22:00:51.191Z",
-  "lastSyncLabel": "11 Oct 2026",
+  "generated": "2026-10-12T10:20:36.455Z",
+  "lastSyncLabel": "12 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -151,18 +151,18 @@
     {
       "mes": "Octubre",
       "leads": 124,
-      "reservas": 34,
-      "revenue": 10456.64,
+      "reservas": 36,
+      "revenue": 12112.87,
       "chofer": 4211.94,
       "comb": 377.63,
       "peajes": 0,
-      "comision": 12.37,
+      "comision": 78.4,
       "reembolsos": 0,
       "otros": 856.65,
-      "gAds": 162,
-      "meta": 45.98,
-      "costoSheet": 6180,
-      "gananciaSheet": 13554,
+      "gAds": 169,
+      "meta": 48.25,
+      "costoSheet": 6185,
+      "gananciaSheet": 13679,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 162.45,
-      "clicks": 4072,
-      "impr": 73896,
+      "spend": 169.22,
+      "clicks": 4735,
+      "impr": 85786,
       "conv": 26
     }
   ],
@@ -5897,6 +5897,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "ASU-FOZ",
+      "cliente": "tim totten 🇵🇷 np4tt",
+      "pais": "Puerto Rico",
+      "conductor": "",
+      "pago": 160,
+      "sena": 160,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 155.2,
+      "fechaReserva": "11/10/26",
+      "fechaSalida": "12/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "AERO-ChâteauVictoriaHotel",
       "cliente": "Angela",
       "pais": "España",
@@ -6345,6 +6359,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "ASU-FOZ-ASU",
+      "cliente": "juan benquet",
+      "pais": "Uruguay",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "11/10/26",
+      "fechaSalida": "09/11/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-FOZ",
       "cliente": "mark",
       "pais": "USA",
@@ -6397,6 +6425,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "17/09/26",
+      "fechaSalida": ""
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-FOZ-ASU",
+      "cliente": "juan benquet",
+      "pais": "Uruguay",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "11/10/26",
       "fechaSalida": ""
     },
     {
@@ -6540,7 +6582,7 @@
       "2026-10-08": 8,
       "2026-10-09": 5,
       "2026-10-01": 1,
-      "2026-10-11": 1
+      "2026-10-11": 3
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -6813,13 +6855,14 @@
       "2026-10-08": 4.52,
       "2026-10-09": 30.96,
       "2026-10-10": 24.68,
-      "2026-10-11": 23.6
+      "2026-10-11": 29.92,
+      "2026-10-12": 0.44
     }
   },
   "resenas": {
     "count": 68,
     "rating": 5,
-    "actualizado": "2026-10-11T20:10:03.871Z",
+    "actualizado": "2026-10-11T23:10:02.074Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -6978,7 +7021,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-10-11": 17,
+      "2026-10-11": 20,
       "2026-10-10": 14,
       "2026-10-09": 21,
       "2026-10-08": 20,
@@ -7034,10 +7077,11 @@
       "2026-09-29": 7,
       "2026-09-30": 10,
       "2026-10-01": 19,
-      "2026-10-05": 29
+      "2026-10-05": 29,
+      "2026-10-12": 5
     },
     "monthly": {
-      "Octubre": 191,
+      "Octubre": 199,
       "Septiembre": 213,
       "Agosto": 27
     }
