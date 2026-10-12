@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T10:20:06.129Z",
+ "generated": "2026-10-12T12:30:22.797Z",
  "tc": 5720,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-10-12",
   "itauGs": 43605,
-  "uenoGs": 19389519,
-  "uenoFecha": "2026-10-09",
+  "uenoGs": 29489349,
+  "uenoFecha": "2026-10-12",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 564.51,
   "stripePendiente": 3427.1,
-  "pagoparPendienteUsd": 9719.06,
+  "pagoparPendienteUsd": 10075.52,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -154,6 +154,18 @@
    },
    "neto": 1579.14,
    "acum": 6666.65
+  },
+  {
+   "fecha": "2026-10-12",
+   "in": 356.47,
+   "out": 891.61,
+   "n": 3,
+   "porFuente": {
+    "Pagopar": 356.47,
+    "WhatsApp · Pagos (Majo)": -891.61
+   },
+   "neto": -535.14,
+   "acum": 6131.51
   }
  ],
  "movimientos": [
@@ -489,6 +501,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Timothy B. Totten",
    "gs": 968000
+  },
+  {
+   "d": "2026-10-12",
+   "t": "in",
+   "usd": 356.47,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Timothy B. Totten",
+   "gs": 2039000
   },
   {
    "d": "2026-10-01",
@@ -911,6 +931,34 @@
    }
   },
   {
+   "d": "2026-10-12",
+   "t": "out",
+   "usd": 472.03,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández. Traslado 13/oct 03Am - Tour ypane - Foz. Pax Francoise",
+   "gs": 2700000,
+   "rub": {
+    "chofer": 472.03,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-12",
+   "t": "out",
+   "usd": 419.58,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Fernando. Traslado 12/oct Asu Foz. Móvil H1. Pax: Tim",
+   "gs": 2400000,
+   "rub": {
+    "chofer": 419.58,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.53,
@@ -1048,8 +1096,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 39,
-   "bruto": 9719.08,
+   "cobros": 40,
+   "bruto": 10075.55,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1064,8 +1112,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 55593000,
-  "cobradoUsd": 9719.08,
+  "cobradoGs": 57632000,
+  "cobradoUsd": 10075.55,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1126,6 +1174,12 @@
     "cobros": 3,
     "gs": 1616000,
     "usd": 282.52
+   },
+   {
+    "fecha": "2026-10-12",
+    "cobros": 1,
+    "gs": 2039000,
+    "usd": 356.47
    }
   ],
   "pruebasExcluidas": 0,
@@ -1133,8 +1187,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 55593000,
-  "pendienteUsd": 9719.06
+  "pendienteGs": 57632000,
+  "pendienteUsd": 10075.52
  },
  "giros": [
   {
@@ -1241,7 +1295,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲55.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲57.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -1384,6 +1438,13 @@
    "momento": "actual",
    "gs": 19389519,
    "usd": 3389.78
+  },
+  {
+   "fecha": "2026-10-12",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 29489349,
+   "usd": 5155.48
   }
  ]
 }
