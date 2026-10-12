@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hacete padrino | Hogar Mborayhu</title>
+<style>
+  :root{--bg:#fbf7f1;--card:#fff;--ink:#2a2420;--muted:#6f655c;--brand:#d9622b;--brand-d:#b44c1d;--soft:#fdebdf;--line:#eadfd3;--ok:#2f7d4f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:480px;margin:0 auto;padding:0 16px 96px}
+  .ph{background:var(--soft);border:1px dashed var(--brand);color:var(--brand-d);font-size:13px;display:flex;align-items:center;justify-content:center;text-align:center}
+  .hero{height:140px;margin:0 -16px;border-radius:0 0 20px 20px}
+  h1{font-size:26px;line-height:1.15;margin:16px 0 6px}
+  .sub{color:var(--muted);margin:0 0 18px}
+  .tog{display:grid;grid-template-columns:1fr 1fr;background:#efe6dc;border-radius:12px;padding:4px;margin-bottom:14px}
+  .tog button{border:0;background:transparent;padding:10px;border-radius:9px;font:600 15px system-ui;color:var(--muted);cursor:pointer}
+  .tog button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px #0002}
+  .tag{white-space:nowrap;font-size:11px;background:var(--ok);color:#fff;border-radius:6px;padding:1px 6px;margin-left:4px;vertical-align:middle}
+  .amts{display:grid;gap:8px}
+  .amt{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 14px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+  .amt.on{border-color:var(--brand);background:#fff8f3}
+  .amt b{font-size:18px;white-space:nowrap}
+  .amt small{color:var(--muted);display:block}
+  .pop{font-size:11px;color:var(--brand-d);font-weight:700;display:block}
+  .otro{display:none}
+  .otro input{width:100%;padding:14px;border:2px solid var(--line);border-radius:14px;font:inherit}
+  form{margin-top:16px;display:grid;gap:10px}
+  label{font-size:13px;color:var(--muted)}
+  input[type=text],input[type=email],input[type=tel]{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--card)}
+  .chk{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--muted)}
+  .cta{background:var(--brand);color:#fff;border:0;border-radius:14px;padding:17px;font:700 17px system-ui;cursor:pointer;width:100%}
+  .cta:hover{background:var(--brand-d)}
+  .fine{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 0}
+  .down{display:block;text-align:center;margin:8px 0 0;color:var(--muted);font-size:14px;text-decoration:underline;cursor:pointer;background:none;border:0;width:100%}
+  section{margin-top:36px}
+  h2{font-size:20px;margin:0 0 12px}
+  .trust{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;font-size:14px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+  .stats div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 6px}
+  .stats b{display:block;font-size:22px;color:var(--brand-d)}
+  .stats span{font-size:12px;color:var(--muted)}
+  .who{display:flex;gap:14px;align-items:center}
+  .who .ph{width:84px;height:84px;border-radius:50%;flex:none}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+  summary{font-weight:600;cursor:pointer}
+  details p{color:var(--muted);margin:8px 0 0}
+  .sticky{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 30%);display:none}
+  .sticky .cta{max-width:448px;margin:0 auto;display:block}
+  .note{background:#fff3c4;color:#5b4a00;font-size:12px;padding:8px 12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="note">Maqueta. Los textos entre [corchetes] son datos a confirmar con la fundación.</div>
+<div class="wrap">
+  <div class="ph hero">[Video corto o foto del hogar, con chicos reales y autorización]</div>
+
+  <h1>Hacete padrino del Hogar Mborayhu</h1>
+  <p class="sub">Con tu aporte de cada mes, [N] niños de Caaguazú tienen comida, techo y escuela.</p>
+
+  <div id="pick">
+    <div class="tog" role="tablist">
+      <button type="button" class="on" data-modo="mensual">Mensual <span class="tag">Más impacto</span></button>
+      <button type="button" data-modo="unica">Una vez</button>
+    </div>
+    <div class="amts" id="amts"></div>
+    <div class="otro" id="otro"><input type="text" inputmode="numeric" placeholder="Otro monto en Gs"></div>
+  </div>
+
+  <form onsubmit="event.preventDefault();alert('En la versión real: va al pago de Pagopar.')">
+    <div><label>Nombre</label><input type="text" required autocomplete="name"></div>
+    <div><label>WhatsApp</label><input type="tel" required autocomplete="tel" placeholder="09xx xxx xxx"></div>
+    <div><label>Email</label><input type="email" required autocomplete="email"></div>
+    <label class="chk"><input type="checkbox" checked> Quiero recibir novedades del hogar por WhatsApp</label>
+    <button class="cta" id="cta">Ser padrino por Gs 100.000 al mes</button>
+  </form>
+  <p class="fine" id="fine">Podés cancelar cuando quieras. Pago seguro con Pagopar.</p>
+  <button class="down" id="down" type="button">Prefiero donar una sola vez</button>
+
+  <section>
+    <div class="trust">
+      <div class="ph" style="width:48px;height:48px;border-radius:10px;flex:none">logo</div>
+      <div>Fundación con personería jurídica, RUC 80031100-0.<br>Tarjeta, QR, transferencia y billeteras.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que hace tu aporte</h2>
+    <div class="stats">
+      <div><b>[N]</b><span>niños en el hogar</span></div>
+      <div><b>[N]</b><span>comidas por mes</span></div>
+      <div><b>[N]</b><span>años cuidando</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quién está detrás</h2>
+    <div class="who">
+      <div class="ph">[Foto de Zunilda]</div>
+      <p style="margin:0">"[Dos líneas de Zunilda, en primera persona, sobre por qué existe el hogar.]"<br><small style="color:var(--muted)">Zunilda Ramírez, presidenta</small></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Preguntas</h2>
+    <details><summary>¿Cómo cancelo mi aporte mensual?</summary><p>[Según cómo se cobre: desde el link de Pagopar o escribiéndonos por WhatsApp.]</p></details>
+    <details><summary>¿Recibo comprobante?</summary><p>[A confirmar con la contadora.]</p></details>
+    <details><summary>¿Puedo visitar el hogar?</summary><p>[Sí, coordinando con Zunilda por WhatsApp.]</p></details>
+    <details><summary>¿A dónde va mi plata?</summary><p>[Comida, escuela y salud de los chicos. Cada mes contamos en qué se usó.]</p></details>
+  </section>
+</div>
+<div class="sticky" id="sticky"><button class="cta" onclick="document.getElementById('pick').scrollIntoView({behavior:'smooth'})">Quiero ayudar</button></div>
+
+<script>
+  const MONTOS = {
+    mensual: [
+      {gs:50000,  txt:'[la merienda de un niño por un mes]'},
+      {gs:100000, txt:'[la comida de un niño por un mes]', pop:true},
+      {gs:200000, txt:'[comida y útiles de un niño por un mes]'}
+    ],
+    unica: [
+      {gs:100000, txt:'[una semana de comida para el hogar]'},
+      {gs:200000, txt:'[los útiles de [N] niños]', pop:true},
+      {gs:500000, txt:'[un mes de leche para todo el hogar]'},
+      {gs:0,      txt:'Elegís vos cuánto'}
+    ]
+  };
+  let modo = 'mensual', sel = 1;
+  const fmt = n => 'Gs ' + n.toLocaleString('es-PY');
+  function pintar(){
+    document.querySelectorAll('.tog button').forEach(b => b.classList.toggle('on', b.dataset.modo === modo));
+    const box = document.getElementById('amts'); box.innerHTML = '';
+    MONTOS[modo].forEach((m, i) => {
+      const b = document.createElement('button'); b.type = 'button';
+      b.className = 'amt' + (i === sel ? ' on' : '');
+      b.innerHTML = `<span>${m.pop ? '<span class="pop">El más elegido</span>' : ''}<small>${m.txt}</small></span><b>${m.gs ? fmt(m.gs) + (modo === 'mensual' ? '<small style="display:inline">/mes</small>' : '') : 'Otro'}</b>`;
+      b.onclick = () => { sel = i; pintar(); };
+      box.appendChild(b);
+    });
+    const m = MONTOS[modo][sel];
+    document.getElementById('otro').style.display = m.gs ? 'none' : 'block';
+    document.getElementById('cta').textContent = modo === 'mensual'
+      ? `Ser padrino por ${fmt(m.gs)} al mes`
+      : (m.gs ? `Donar ${fmt(m.gs)}` : 'Donar');
+    document.getElementById('fine').textContent = modo === 'mensual'
+      ? 'Podés cancelar cuando quieras. Pago seguro con Pagopar.'
+      : 'Pago seguro con Pagopar.';
+    const d = document.getElementById('down');
+    d.textContent = modo === 'mensual' ? 'Prefiero donar una sola vez' : 'Mejor, quiero ser padrino todos los meses';
+  }
+  document.querySelectorAll('.tog button').forEach(b => b.onclick = () => { modo = b.dataset.modo; sel = 1; pintar(); });
+  document.getElementById('down').onclick = () => { modo = modo === 'mensual' ? 'unica' : 'mensual'; sel = 1; pintar(); document.getElementById('pick').scrollIntoView({behavior:'smooth'}); };
+  const io = new IntersectionObserver(([e]) => document.getElementById('sticky').style.display = e.isIntersecting ? 'none' : 'block');
+  io.observe(document.getElementById('cta'));
+  pintar();
+</script>
+</body>
+</html>
