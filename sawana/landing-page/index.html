@@ -7,6 +7,14 @@
 <meta name="description" content="Willa na Bali od 159 000 EUR. 9-11% netto rocznie w euro. Odbierz oficjalne expose z cenami i wyliczeniem zwrotu.">
 <meta name="robots" content="noindex">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WW65THVB');</script>
+<!-- End Google Tag Manager -->
+
 <!-- ============================================================
      CONFIG. Lo unico que hay que tocar para poner esto en vivo.
      GHL_WEBHOOK: Workflows > New Workflow > Trigger "Inbound Webhook"
@@ -172,6 +180,10 @@ footer p{margin:0 0 10px;max-width:60em}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW65THVB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ================= HERO ================= -->
 <header class="hero">
@@ -394,6 +406,8 @@ footer p{margin:0 0 10px;max-width:60em}
       };
 
       var done = function(){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({event: "lead_submit", form_id: formId, lead_source: "pl-expose-landing"});
         if (window.fbq) fbq("track", "Lead", {content_name: "PL Expose"});
         var fv = document.getElementById("formView"),
             tv = document.getElementById("thanksView");
