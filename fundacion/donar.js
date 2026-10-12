@@ -46,7 +46,7 @@
           <label class="dn-chk"><input type="checkbox" name="novedades" checked> Quiero recibir novedades del hogar por WhatsApp</label>
           <p class="dn-err" role="alert"></p>
           <div class="dn-aviso" hidden></div>
-          <button class="dn-cta" type="submit"></button>
+          <button class="dn-cta dn-main" type="submit"></button>
         </form>
         <p class="dn-fine"></p>
         <button type="button" class="dn-down"></button>
@@ -83,13 +83,13 @@
       $('.dn-otro').hidden = !!m.gs;
       $('.dn-impacto').innerHTML = esc(m.txt || '');
       const n = monto();
-      $('.dn-cta').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
+      $('.dn-main').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
       $('.dn-fine').textContent = modo === 'mensual'
         ? 'Podés cancelar cuando quieras. Pago seguro con Pagopar.'
         : 'Pago seguro con Pagopar. Recibís la confirmación al instante.';
       $('.dn-down').textContent = modo === 'mensual' ? 'Prefiero donar una sola vez' : 'Mejor, quiero ayudar todos los meses';
       $('.dn-aviso').hidden = true;
-      $('.dn-cta').hidden = false;
+      $('.dn-main').hidden = false;
       err('');
     }
 
@@ -97,11 +97,11 @@
     $('.dn-down').onclick = () => { modo = modo === 'mensual' ? 'unica' : 'mensual'; sel = popular(modo); pintar(); };
     $('#dn-otro').addEventListener('input', () => {
       const n = monto();
-      $('.dn-cta').textContent = bUnica.replace('{monto}', n ? fmt(n) : '').trim();
+      $('.dn-main').textContent = bUnica.replace('{monto}', n ? fmt(n) : '').trim();
     });
 
-    async function cobrar(datos) {
-      const btn = $('.dn-cta'), txt = btn.textContent;
+    async function cobrar(datos, btn = $('.dn-main')) {
+      const txt = btn.textContent;
       btn.disabled = true;
       btn.textContent = 'Abriendo el pago seguro...';
       ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid'].forEach(k => { if (qs.get(k)) datos[k] = qs.get(k); });
@@ -133,8 +133,8 @@
         const av = $('.dn-aviso');
         av.innerHTML = `<p>El aporte mensual se activa en los próximos días. ¿Querés empezar hoy con una primera donación de <b>${fmt(n)}</b>? Te avisamos por WhatsApp cuando puedas hacerlo mensual.</p><button type="button" class="dn-cta dn-cta-alt">Donar ${fmt(n)} ahora</button>`;
         av.hidden = false;
-        $('.dn-cta').hidden = true;
-        av.querySelector('button').onclick = () => cobrar(datos);
+        $('.dn-main').hidden = true;
+        av.querySelector('button').onclick = e => cobrar(datos, e.currentTarget);
         return;
       }
       cobrar(datos);
