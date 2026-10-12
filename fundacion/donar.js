@@ -89,6 +89,7 @@
         : 'Pago seguro con Pagopar. Recibís la confirmación al instante.';
       $('.dn-down').textContent = modo === 'mensual' ? 'Prefiero donar una sola vez' : 'Mejor, quiero ayudar todos los meses';
       $('.dn-aviso').hidden = true;
+      $('.dn-cta').hidden = false;
       err('');
     }
 
@@ -132,6 +133,7 @@
         const av = $('.dn-aviso');
         av.innerHTML = `<p>El aporte mensual se activa en los próximos días. ¿Querés empezar hoy con una primera donación de <b>${fmt(n)}</b>? Te avisamos por WhatsApp cuando puedas hacerlo mensual.</p><button type="button" class="dn-cta dn-cta-alt">Donar ${fmt(n)} ahora</button>`;
         av.hidden = false;
+        $('.dn-cta').hidden = true;
         av.querySelector('button').onclick = () => cobrar(datos);
         return;
       }
