@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Oficjalne expose | Wille inwestycyjne na Bali | Sawana Developments</title>
-<meta name="description" content="Willa na Bali od 159 000 EUR. 9-11% netto rocznie w euro. Odbierz oficjalne expose z cenami i wyliczeniem zwrotu.">
+<title>Oficjalna oferta | Wille inwestycyjne na Bali | Sawana Developments</title>
+<meta name="description" content="Willa na Bali od 159 000 EUR. 9-11% netto rocznie w euro. Odbierz oficjalną ofertę z cenami i wyliczeniem zwrotu.">
 <meta name="robots" content="noindex">
 
 <!-- Google Tag Manager -->
@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="card" id="formCard">
       <div id="formView">
-        <h2>Odbierz oficjalne expose</h2>
+        <h2>Odbierz oficjalną ofertę</h2>
         <p class="sub">Ceny wszystkich dostępnych willi, metraże, terminy odbioru i pełne wyliczenie zwrotu. Jedno pole.</p>
         <form id="leadForm" novalidate>
           <div class="field">
@@ -209,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel"
                    placeholder="600 000 000" aria-label="Numer telefonu" required>
           </div>
-          <button class="btn" type="submit" id="submitBtn">Wyślij mi expose</button>
+          <button class="btn" type="submit" id="submitBtn">Wyślij mi ofertę</button>
           <p class="err" id="err" hidden></p>
           <p class="consent">Podając numer, zgadzasz się na kontakt ze strony Sawana Developments w sprawie tej oferty. W każdej chwili możesz zrezygnować.</p>
           <p class="sms">Ofertę wyślemy na WhatsApp w ciągu minuty.</p>
@@ -313,9 +313,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="close">
   <div class="wrap">
     <h2>Najlepsze jednostki rezerwowane są pierwsze</h2>
-    <p>W expose znajdziesz aktualną listę dostępnych willi z cenami. Zostaw numer, resztę zrobimy my.</p>
+    <p>W ofercie znajdziesz aktualną listę dostępnych willi z cenami. Zostaw numer, resztę zrobimy my.</p>
     <div class="card">
-      <h2>Odbierz oficjalne expose</h2>
+      <h2>Odbierz oficjalną ofertę</h2>
       <p class="sub">Jedno pole. Oferta przyjdzie na WhatsApp.</p>
       <form id="leadForm2" novalidate>
         <div class="field">
@@ -323,7 +323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="tel" id="phone2" inputmode="tel" autocomplete="tel"
                  placeholder="600 000 000" aria-label="Numer telefonu" required>
         </div>
-        <button class="btn" type="submit">Wyślij mi expose</button>
+        <button class="btn" type="submit">Wyślij mi ofertę</button>
         <p class="err" id="err2" hidden></p>
         <p class="consent">Podając numer, zgadzasz się na kontakt ze strony Sawana Developments w sprawie tej oferty.</p>
       </form>
@@ -408,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var done = function(){
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({event: "lead_submit", form_id: formId, lead_source: "pl-expose-landing"});
-        if (window.fbq) fbq("track", "Lead", {content_name: "PL Expose"});
+        if (window.fbq) fbq("track", "Lead", {content_name: "PL Oferta"});
         var fv = document.getElementById("formView"),
             tv = document.getElementById("thanksView");
         if (fv && tv && formId === "leadForm"){
@@ -435,7 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         body: JSON.stringify(payload)
       }).then(done).catch(function(){
         btn.disabled = false;
-        btn.textContent = "Wyślij mi expose";
+        btn.textContent = "Wyślij mi ofertę";
         err.textContent = "Coś poszło nie tak. Spróbuj jeszcze raz.";
         err.hidden = false;
       });
