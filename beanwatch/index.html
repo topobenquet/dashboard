@@ -70,7 +70,7 @@ table.t tr:hover td{background:#F7F8FC}
 .scroll{overflow-x:auto}
 .tall{max-height:460px;overflow-y:auto}
 .pill{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px;white-space:nowrap}
-.p-pm{background:#E4E9F7;color:#3D5498}.p-nb{background:#DDF0FF;color:#0068AD}.p-co{background:#F4ECDD;color:#7A5B25}.p-br{background:#ECECEC;color:#4F4F4F}
+.p-pm{background:#E4E9F7;color:#3D5498}.p-nb{background:#DDF0FF;color:#0068AD}.p-co{background:#F4ECDD;color:#7A5B25}.p-br{background:#ECECEC;color:#4F4F4F}.p-dg{background:#DFF3E8;color:#1E7049}
 .p-bad{background:#FBE3E0;color:var(--bad)}.p-ok{background:#E1F2E8;color:var(--good)}.p-warn{background:#FBEFD8;color:#8A5C0B}.p-mut{background:#EFEFEA;color:var(--mut)}
 .chart svg{display:block;width:100%;height:auto}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--mut);margin-top:6px}
@@ -136,9 +136,9 @@ const usd2=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':'$'+Number(n).toLocaleStri
 const pct=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':fm(n*100)+'%';
 const div=(a,b)=>b?a/b:null;
 const esc=(s)=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const C={'PMax':'#5B72B5','Non-Brand':'#0099FF','Competitor':'#C9A45C','Brand':'#A3A3A3',ink:'#111111'};
-const GL={'PMax':'Performance Max','Non-Brand':'Search, non-brand','Competitor':'Search, competitor','Brand':'Search, brand'};
-const pill=(g)=>`<span class="pill ${({'PMax':'p-pm','Non-Brand':'p-nb','Competitor':'p-co','Brand':'p-br'})[g]}">${esc(g)}</span>`;
+const C={'PMax':'#5B72B5','Non-Brand':'#0099FF','Competitor':'#C9A45C','Brand':'#A3A3A3','Demand Gen':'#2E9E6B','Other':'#7A7A7A',ink:'#111111'};
+const GL={'PMax':'Performance Max','Non-Brand':'Search, non-brand','Competitor':'Search, competitor','Brand':'Search, brand','Demand Gen':'Demand Gen','Other':'Other'};
+const pill=(g)=>`<span class="pill ${({'PMax':'p-pm','Non-Brand':'p-nb','Competitor':'p-co','Brand':'p-br','Demand Gen':'p-dg','Other':'p-br'})[g]}">${esc(g)}</span>`;
 const statusPill=(st)=>st==='ENABLED'?'<span class="pill p-ok">Active</span>':st==='PAUSED'?'<span class="pill p-mut">Paused</span>':st?`<span class="pill p-mut">${esc(st[0]+st.slice(1).toLowerCase())}</span>`:'–';
 const section=(k,t,note,body)=>`<div class="section"><div class="sec-t"><div><div class="k">${k}</div><h2>${t}</h2></div>${note?`<div class="note">${note}</div>`:''}</div>${body}</div>`;
 const fdate=(s)=>new Date(s+'T12:00:00').toLocaleString('en-US',{month:'short',day:'numeric'});
