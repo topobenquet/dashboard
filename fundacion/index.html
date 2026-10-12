@@ -54,10 +54,10 @@
 <body>
 <div class="note">Maqueta. Los textos entre [corchetes] son datos a confirmar con la fundación.</div>
 <div class="wrap">
-  <div class="ph hero">[Video corto o foto del hogar, con chicos reales y autorización]</div>
+  <div class="ph hero">[Video corto del hogar: la casa, la huerta, manos, chicos de espaldas. Sin caras identificables salvo que Zunilda confirme que se puede]</div>
 
   <h1>Hacete padrino del Hogar Mborayhu</h1>
-  <p class="sub">Con tu aporte de cada mes, [N] niños de Caaguazú tienen comida, techo y escuela.</p>
+  <p class="sub">12 niños y niñas que llegaron desde el abandono o la violencia tienen acá un hogar, comida, escuela y cariño mientras la justicia define su futuro. Tu aporte de cada mes lo sostiene.</p>
 
   <div id="pick">
     <div class="tog" role="tablist">
@@ -81,24 +81,24 @@
   <section>
     <div class="trust">
       <div class="ph" style="width:48px;height:48px;border-radius:10px;flex:none">logo</div>
-      <div>Fundación con personería jurídica, RUC 80031100-0.<br>Tarjeta, QR, transferencia y billeteras.</div>
+      <div>Fundación creada por Ley N° 3256/2004, habilitada por el Ministerio de la Niñez y la Adolescencia. RUC 80031100-0.<br>Tarjeta, transferencia, Tigo Money, Personal Pay, Zimple y más.</div>
     </div>
   </section>
 
   <section>
     <h2>Lo que hace tu aporte</h2>
     <div class="stats">
-      <div><b>[N]</b><span>niños en el hogar</span></div>
-      <div><b>[N]</b><span>comidas por mes</span></div>
-      <div><b>[N]</b><span>años cuidando</span></div>
+      <div><b>12</b><span>niños y niñas en el hogar</span></div>
+      <div><b>24 h</b><span>de cuidado, todos los días</span></div>
+      <div><b>23</b><span>años cuidando, desde 2003</span></div>
     </div>
   </section>
 
   <section>
     <h2>Quién está detrás</h2>
     <div class="who">
-      <div class="ph">[Foto de Zunilda]</div>
-      <p style="margin:0">"[Dos líneas de Zunilda, en primera persona, sobre por qué existe el hogar.]"<br><small style="color:var(--muted)">Zunilda Ramírez, presidenta</small></p>
+      <img src="zunilda.webp" alt="Zunilda Ramírez" style="width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none">
+      <p style="margin:0">"[Dos líneas de Zunilda en primera persona. Mientras tanto, de la misión del hogar: los cuidamos con amor maternal y paternal, que es la mejor medicina para ellos.]"<br><small style="color:var(--muted)">Zunilda Ramírez, presidenta</small></p>
     </div>
   </section>
 
@@ -106,8 +106,8 @@
     <h2>Preguntas</h2>
     <details><summary>¿Cómo cancelo mi aporte mensual?</summary><p>[Según cómo se cobre: desde el link de Pagopar o escribiéndonos por WhatsApp.]</p></details>
     <details><summary>¿Recibo comprobante?</summary><p>[A confirmar con la contadora.]</p></details>
-    <details><summary>¿Puedo visitar el hogar?</summary><p>[Sí, coordinando con Zunilda por WhatsApp.]</p></details>
-    <details><summary>¿A dónde va mi plata?</summary><p>[Comida, escuela y salud de los chicos. Cada mes contamos en qué se usó.]</p></details>
+    <details><summary>¿Puedo visitar el hogar?</summary><p>Sí. Estamos en la Ruta PY02, km 174,5, Caaguazú. Coordiná tu visita al 0982 141 153.</p></details>
+    <details><summary>¿A dónde va mi plata?</summary><p>A la comida, la escuela (los llevamos todos los días), la atención médica y psicológica, la ropa y las cuidadoras de los 12 chicos. Cada mes te contamos en qué se usó.</p></details>
   </section>
 </div>
 <div class="sticky" id="sticky"><button class="cta" onclick="document.getElementById('pick').scrollIntoView({behavior:'smooth'})">Quiero ayudar</button></div>
@@ -115,14 +115,14 @@
 <script>
   const MONTOS = {
     mensual: [
-      {gs:50000,  txt:'[la merienda de un niño por un mes]'},
-      {gs:100000, txt:'[la comida de un niño por un mes]', pop:true},
-      {gs:200000, txt:'[comida y útiles de un niño por un mes]'}
+      {gs:50000,  txt:'Más de medio día de cuidado completo de un niño'},
+      {gs:100000, txt:'Un día entero de un niño: comida, escuela, salud y cuidadoras', pop:true},
+      {gs:250000, txt:'Tres días completos de un niño, todos los meses'}
     ],
     unica: [
-      {gs:100000, txt:'[una semana de comida para el hogar]'},
-      {gs:200000, txt:'[los útiles de [N] niños]', pop:true},
-      {gs:500000, txt:'[un mes de leche para todo el hogar]'},
+      {gs:100000, txt:'Un día entero de un niño'},
+      {gs:250000, txt:'Tres días completos de un niño', pop:true},
+      {gs:1000000, txt:'Un día entero del hogar, para los 12 niños'},
       {gs:0,      txt:'Elegís vos cuánto'}
     ]
   };
