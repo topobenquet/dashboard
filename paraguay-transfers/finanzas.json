@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T20:30:07.093Z",
+ "generated": "2026-10-12T22:00:37.477Z",
  "tc": 5740,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 564.51,
-  "stripePendiente": 3427.1,
+  "stripePendiente": 3715.19,
   "pagoparPendienteUsd": 10610.8,
   "relay": null,
   "binance": null,
@@ -158,14 +158,14 @@
   {
    "fecha": "2026-10-12",
    "in": 925.61,
-   "out": 888.5,
-   "n": 6,
+   "out": 1202.09,
+   "n": 7,
    "porFuente": {
     "Pagopar": 925.61,
-    "WhatsApp · Pagos (Majo)": -888.5
+    "WhatsApp · Pagos (Majo)": -1202.09
    },
-   "neto": 37.11,
-   "acum": 6686.53
+   "neto": -276.48,
+   "acum": 6372.94
   }
  ],
  "movimientos": [
@@ -977,6 +977,20 @@
    "gs": 2400000,
    "rub": {
     "chofer": 418.12,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-12",
+   "t": "out",
+   "usd": 313.59,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Segovia. Traslado Asu Foz. 18/oct 5:30am. Pax: Eugenia Parma",
+   "gs": 1800000,
+   "rub": {
+    "chofer": 313.59,
     "comb": 0,
     "peajes": 0,
     "otros": 0
