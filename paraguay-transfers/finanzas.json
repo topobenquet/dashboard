@@ -1,18 +1,18 @@
 {
- "generated": "2026-10-13T00:30:25.941Z",
+ "generated": "2026-10-13T10:20:12.853Z",
  "tc": 5740,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
  "saldos": {
-  "fecha": "2026-10-12",
+  "fecha": "2026-10-13",
   "itauGs": 43605,
   "uenoGs": 29489349,
   "uenoFecha": "2026-10-12",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 826.35,
-  "stripePendiente": 3472.37,
+  "stripeDisponible": 824.13,
+  "stripePendiente": 3520.62,
   "pagoparPendienteUsd": 10610.8,
   "relay": null,
   "binance": null,
@@ -166,6 +166,17 @@
    },
    "neto": -276.48,
    "acum": 6372.94
+  },
+  {
+   "fecha": "2026-10-13",
+   "in": 209.06,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Transferencia": 209.06
+   },
+   "neto": 209.06,
+   "acum": 6582
   }
  ],
  "movimientos": [
@@ -1027,6 +1038,14 @@
    "fuente": "Transferencia",
    "det": "JOSE IGNACIO GWYNN PAROT (comprobante en GHL)",
    "gs": 508000
+  },
+  {
+   "d": "2026-10-13",
+   "t": "in",
+   "usd": 209.06,
+   "fuente": "Transferencia",
+   "det": "Tania Josefina Storm Escobar Y/o Josefina Escobar De Storm (comprobante en GHL)",
+   "gs": 1200000
   }
  ],
  "pnl": [
