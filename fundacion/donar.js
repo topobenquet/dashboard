@@ -12,7 +12,9 @@
  */
 (function () {
   const API = location.hostname === 'localhost' ? 'http://localhost:8780' : 'https://donar.jbenquet.com';
-  const MINIMO = 10000;
+  const MINIMO = 10000;           // donación única
+  const MINIMO_MENSUAL = 50000;   // aporte mensual
+  const BASE = (document.currentScript && document.currentScript.src || location.href).replace(/[^/]*$/, '');
   const qs = new URLSearchParams(location.search);
   const fmt = n => 'Gs ' + Number(n).toLocaleString('es-PY');
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
@@ -39,10 +41,8 @@
         <p class="dn-impacto" aria-live="polite"></p>
         <form class="dn-form" novalidate>
           <div class="dn-campo"><label class="dn-lbl" for="dn-nombre">Nombre y apellido</label><input id="dn-nombre" name="nombre" autocomplete="name" required></div>
-          <div class="dn-fila">
-            <div class="dn-campo"><label class="dn-lbl" for="dn-tel">WhatsApp</label><input id="dn-tel" name="telefono" type="tel" autocomplete="tel" placeholder="09xx xxx xxx" required></div>
-            <div class="dn-campo"><label class="dn-lbl" for="dn-email">Email</label><input id="dn-email" name="email" type="email" autocomplete="email" required></div>
-          </div>
+          <div class="dn-campo"><label class="dn-lbl" for="dn-tel">WhatsApp</label><input id="dn-tel" name="telefono" type="tel" autocomplete="tel" required></div>
+          <div class="dn-campo"><label class="dn-lbl" for="dn-email">Email</label><input id="dn-email" name="email" type="email" autocomplete="email" required></div>
           <label class="dn-chk"><input type="checkbox" name="novedades" checked> Quiero recibir novedades del hogar por WhatsApp</label>
           <p class="dn-err" role="alert"></p>
           <div class="dn-aviso" hidden></div>
@@ -54,6 +54,9 @@
       </div>`;
 
     const $ = s => el.querySelector(s);
+    const minimo = () => modo === 'mensual' ? (cfg.minimoMensual || MINIMO_MENSUAL) : MINIMO;
+    let iti = null;
+    telefonoInternacional($('#dn-tel')).then(x => { iti = x; });
     const err = t => { $('.dn-err').textContent = t || ''; };
 
     function monto() {
@@ -81,6 +84,7 @@
       });
       const m = cfg.montos[modo][sel];
       $('.dn-otro').hidden = !!m.gs;
+      $('#dn-otro').placeholder = 'Mínimo ' + fmt(minimo());
       $('.dn-impacto').innerHTML = esc(m.txt || '');
       const n = monto();
       $('.dn-main').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
@@ -97,7 +101,7 @@
     $('.dn-down').onclick = () => { modo = modo === 'mensual' ? 'unica' : 'mensual'; sel = popular(modo); pintar(); };
     $('#dn-otro').addEventListener('input', () => {
       const n = monto();
-      $('.dn-main').textContent = bUnica.replace('{monto}', n ? fmt(n) : '').trim();
+      $('.dn-main').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
     });
 
     async function cobrar(datos, btn = $('.dn-main')) {
@@ -122,10 +126,11 @@
       err('');
       const f = e.target, n = monto();
       if (f.nombre.value.trim().length < 3) return err('Escribí tu nombre.');
-      if (f.telefono.value.replace(/\D/g, '').length < 8) return err('Revisá el número de WhatsApp.');
+      if (iti ? !iti.isValidNumber() : f.telefono.value.replace(/\D/g, '').length < 8) return err('Revisá el número de WhatsApp.');
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return err('Revisá el email.');
-      if (n < MINIMO) return err('El monto mínimo es ' + fmt(MINIMO) + '.');
-      const datos = {nombre: f.nombre.value, telefono: f.telefono.value, email: f.email.value, novedades: f.novedades.checked, monto: n, modo: 'unica'};
+      if (n < minimo()) return err('El monto mínimo ' + (modo === 'mensual' ? 'mensual ' : '') + 'es ' + fmt(minimo()) + '.');
+      const telefono = iti ? iti.getNumber() : f.telefono.value;
+      const datos = {nombre: f.nombre.value, telefono, email: f.email.value, novedades: f.novedades.checked, monto: n, modo: 'unica'};
 
       // El padrinazgo mensual se habilita cuando Pagopar active las suscripciones.
       // Mientras tanto, se ofrece empezar hoy con el mismo monto.
@@ -149,6 +154,68 @@
       new IntersectionObserver(([e]) => sticky.classList.toggle('ver', !e.isIntersecting && e.boundingClientRect.top > 0))
         .observe(el);
     }
+  }
+
+  /* Teléfono con bandera y código de país (intl-tel-input, alojado en assets/iti).
+   * El país sale de la IP; el formato y el largo máximo, del país elegido. */
+  function cargar(tag, attrs) {
+    return new Promise((ok, mal) => {
+      const e = Object.assign(document.createElement(tag), attrs);
+      e.onload = ok; e.onerror = mal;
+      document.head.appendChild(e);
+    });
+  }
+
+  function paisPorIP(listo) {
+    const corte = ms => new Promise((_, mal) => setTimeout(mal, ms));
+    const iso = c => /^[A-Za-z]{2}$/.test(c || '') ? c.toLowerCase() : null;
+    Promise.race([fetch('https://api.country.is/').then(r => r.json()).then(j => iso(j.country)), corte(2500)])
+      .catch(() => Promise.race([fetch('https://get.geojs.io/v1/ip/country.json').then(r => r.json()).then(j => iso(j.country)), corte(2500)]))
+      .then(c => listo(c || 'py'), () => listo('py'));
+  }
+
+  async function telefonoInternacional(input) {
+    try {
+      await Promise.all([
+        cargar('link', {rel: 'stylesheet', href: BASE + 'assets/iti/css/intlTelInput.min.css'}),
+        window.intlTelInput ? null : cargar('script', {src: BASE + 'assets/iti/js/intlTelInput.min.js'}),
+      ]);
+    } catch (_) {
+      input.placeholder = '09xx xxx xxx';
+      return null;
+    }
+    // Nombres de países en castellano, con el traductor del propio navegador.
+    const i18n = {searchPlaceholder: 'Buscar país', zeroSearchResults: 'Sin resultados', oneSearchResult: '1 resultado',
+      multipleSearchResults: '${count} resultados', selectedCountryAriaLabel: 'País elegido', noCountrySelected: 'Elegí un país',
+      countryListAriaLabel: 'Lista de países'};
+    try {
+      const dn = new Intl.DisplayNames(['es'], {type: 'region'});
+      window.intlTelInput.getCountryData().forEach(c => { i18n[c.iso2] = dn.of(c.iso2.toUpperCase()); });
+    } catch (_) { /* quedan en inglés */ }
+    const iti = window.intlTelInput(input, {
+      initialCountry: 'auto',
+      geoIpLookup: paisPorIP,
+      countryOrder: ['py', 'ar', 'br', 'uy', 'bo', 'cl', 'us', 'es'],
+      separateDialCode: true,
+      strictMode: true,
+      i18n,
+      loadUtilsOnInit: BASE + 'assets/iti/js/utils.js',
+    });
+    // strictMode frena lo que se tipea, pero no lo que se pega: se recorta lo que sobra.
+    // El tope es el largo de un celular del país elegido (es para WhatsApp); el 0 inicial no cuenta.
+    input.addEventListener('input', () => {
+      const u = window.intlTelInput.utils;
+      if (!u) return;
+      const pais = iti.getSelectedCountryData();
+      const ej = u.getExampleNumber(pais.iso2, false, u.numberType.MOBILE, true) || '';
+      const tope = ej.replace(/\D/g, '').length - String(pais.dialCode || '').length;
+      const digitos = input.value.replace(/\D/g, '');
+      const sobran = digitos.replace(/^0/, '').length - tope;
+      if (tope > 0 && sobran > 0) {
+        iti.setNumber(digitos.slice(0, digitos.length - sobran));
+      }
+    });
+    return iti;
   }
 
   window.Donar = {montar};

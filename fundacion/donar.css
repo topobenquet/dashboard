@@ -36,3 +36,8 @@
 @media (max-width:640px){.dn-fila{grid-template-columns:1fr}}
 .dn-gs{white-space:nowrap}
 @media (max-width:420px){.dn-gs{font-size:15px}.dn-amt{padding:15px 4px 11px}}
+/* Teléfono con bandera (intl-tel-input) */
+.dn .iti{width:100%;display:block}
+.dn .iti__selected-country{border-radius:12px 0 0 12px}
+.dn .iti__dropdown-content{border-radius:12px;font-family:var(--dn-font,system-ui,sans-serif);font-size:15px}
+.dn .iti__search-input{padding:10px 12px}
