@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T10:20:12.853Z",
+ "generated": "2026-10-13T12:30:41.068Z",
  "tc": 5740,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,8 +7,8 @@
  "saldos": {
   "fecha": "2026-10-13",
   "itauGs": 43605,
-  "uenoGs": 29489349,
-  "uenoFecha": "2026-10-12",
+  "uenoGs": 23789349,
+  "uenoFecha": "2026-10-13",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 824.13,
@@ -170,13 +170,14 @@
   {
    "fecha": "2026-10-13",
    "in": 209.06,
-   "out": 0,
-   "n": 1,
+   "out": 20.91,
+   "n": 2,
    "porFuente": {
+    "WhatsApp · Pagos (Majo)": -20.91,
     "Transferencia": 209.06
    },
-   "neto": 209.06,
-   "acum": 6582
+   "neto": 188.15,
+   "acum": 6561.09
   }
  ],
  "movimientos": [
@@ -1008,6 +1009,20 @@
    }
   },
   {
+   "d": "2026-10-13",
+   "t": "out",
+   "usd": 20.91,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Elizabeth Arias. 13/10",
+   "gs": 120000,
+   "rub": {
+    "chofer": 20.91,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 217.77,
@@ -1451,6 +1466,22 @@
    "usd": 15.68,
    "concepto": ". GS más IVA... Si agrego este monto a mi factura de todo el",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-13",
+   "grupo": "Luis",
+   "gs": 30000,
+   "usd": 5.23,
+   "concepto": "peaje .......",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-13",
+   "grupo": "Pagos (Majo)",
+   "gs": 3080000,
+   "usd": 536.59,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/mk5c4s (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
@@ -1502,6 +1533,13 @@
    "momento": "actual",
    "gs": 29489349,
    "usd": 5137.52
+  },
+  {
+   "fecha": "2026-10-13",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 23789349,
+   "usd": 4144.49
   }
  ]
 }
