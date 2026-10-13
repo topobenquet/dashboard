@@ -20,6 +20,10 @@
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 
   function montar(el, cfg) {
+    // Texto del botón; sin monto todavía (Otro monto vacío) queda el verbo solo.
+    const textoBoton = n => n
+      ? (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', fmt(n)).replace(/\s+/g, ' ').trim()
+      : (modo === 'mensual' ? 'Ser padrino' : 'Donar');
     let modo = qs.get('modo') === 'unica' ? 'unica' : (cfg.modo || 'mensual');
     let sel = popular(modo);
     const bMensual = cfg.botonMensual || 'Ser padrino por {monto} al mes';
@@ -50,7 +54,7 @@
         </form>
         <p class="dn-fine"></p>
         <button type="button" class="dn-down"></button>
-        <div class="dn-medios">Tarjeta · Transferencia · Tigo Money · Personal Pay · Zimple · QR</div>
+        <div class="dn-medios">Tarjeta · Transferencia · Tigo Money · Personal Pay · QR</div>
       </div>`;
 
     const $ = s => el.querySelector(s);
@@ -87,7 +91,7 @@
       $('#dn-otro').placeholder = 'Mínimo ' + fmt(minimo());
       $('.dn-impacto').innerHTML = esc(m.txt || '');
       const n = monto();
-      $('.dn-main').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
+      $('.dn-main').textContent = textoBoton(n);
       $('.dn-fine').textContent = modo === 'mensual'
         ? 'Podés cancelar cuando quieras. Pago seguro con Pagopar.'
         : 'Pago seguro con Pagopar. Recibís la confirmación al instante.';
@@ -101,7 +105,7 @@
     $('.dn-down').onclick = () => { modo = modo === 'mensual' ? 'unica' : 'mensual'; sel = popular(modo); pintar(); };
     $('#dn-otro').addEventListener('input', () => {
       const n = monto();
-      $('.dn-main').textContent = (modo === 'mensual' ? bMensual : bUnica).replace('{monto}', n ? fmt(n) : '').replace(/\s+/g, ' ').trim();
+      $('.dn-main').textContent = textoBoton(n);
     });
 
     async function cobrar(datos, btn = $('.dn-main')) {
