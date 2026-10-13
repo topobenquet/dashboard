@@ -41,3 +41,20 @@
 .dn .iti__selected-country{border-radius:12px 0 0 12px}
 .dn .iti__dropdown-content{border-radius:12px;font-family:var(--dn-font,system-ui,sans-serif);font-size:15px}
 .dn .iti__search-input{padding:10px 12px}
+/* Barra de campaña (Donar.campana) */
+.cp{font-family:var(--dn-font,system-ui,sans-serif);color:var(--dn-ink,#222)}
+.cp-full{background:#fff;border:1px solid var(--dn-line,#e6e0d8);border-radius:20px;padding:20px 22px;box-shadow:0 18px 40px -28px rgba(0,0,0,.35)}
+.cp-mini{background:var(--dn-soft,#fdf0e1);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.cp-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.cp-nombre{color:var(--dn-ok-d,#2a7f27)}
+.cp-nombre::before{content:"🎄 "}
+.cp-dias{color:var(--dn-muted,#666);font-weight:600;text-transform:none;letter-spacing:0}
+.cp-montos{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:8px 0 10px}
+.cp-rec{font-size:30px;line-height:1;font-weight:800;color:var(--dn-ink,#222);font-variant-numeric:tabular-nums}
+.cp-mini .cp-rec{font-size:22px}
+.cp-montos span{color:var(--dn-muted,#666);font-size:15px}
+.cp-barra{height:14px;border-radius:999px;background:rgba(0,0,0,.08);overflow:hidden}
+.cp-mini .cp-barra{height:10px;background:rgba(0,0,0,.07)}
+.cp-barra i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--dn-ok,#39a935),#7cc84a);transition:width 1.4s cubic-bezier(.2,.8,.2,1);min-width:10px}
+.cp-pie{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:14px;color:var(--dn-muted,#666)}
+.cp-pie span:first-child{font-weight:700;color:var(--dn-ok-d,#2a7f27)}

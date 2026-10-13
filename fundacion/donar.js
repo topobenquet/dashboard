@@ -218,5 +218,43 @@
     return iti;
   }
 
-  window.Donar = {montar};
+  /* Barra de progreso de la campaña (donar-api/progreso.php).
+   *   Donar.campana(el)           versión grande
+   *   Donar.campana(el, {mini})   versión compacta, para la tarjeta
+   * Se anima al aparecer y se actualiza cada minuto. Si la API no responde, no muestra nada. */
+  function campana(el, opt = {}) {
+    let mostrado = 0;
+    const pinta = (d, animar) => {
+      const pct = Math.min(100, d.recaudado / d.meta * 100);
+      const dias = Math.max(0, Math.ceil((new Date(d.hasta) - Date.now()) / 864e5));
+      el.hidden = false;
+      el.classList.add('cp', opt.mini ? 'cp-mini' : 'cp-full');
+      el.innerHTML = `
+        <div class="cp-top"><span class="cp-nombre">${esc(d.nombre)}</span><span class="cp-dias">${dias > 1 ? 'Faltan ' + dias + ' días' : dias === 1 ? 'Último día' : 'Terminó'}</span></div>
+        <div class="cp-montos"><b class="cp-rec">${fmt(mostrado)}</b><span>recaudados de ${fmt(d.meta)}</span></div>
+        <div class="cp-barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><i></i></div>
+        <div class="cp-pie"><span>${pct < 1 && pct > 0 ? '1' : Math.floor(pct)}% de la meta</span><span>${d.donantes} ${d.donantes === 1 ? 'persona ya ayudó' : 'personas ya ayudaron'}</span></div>`;
+      const barra = el.querySelector('.cp-barra i'), rec = el.querySelector('.cp-rec');
+      if (animar === 'prep') return;
+      if (!animar) { barra.style.width = pct + '%'; rec.textContent = fmt(d.recaudado); mostrado = d.recaudado; return; }
+      requestAnimationFrame(() => requestAnimationFrame(() => { barra.style.width = pct + '%'; }));
+      const desde = mostrado, t0 = performance.now(), dur = 1400;
+      const paso = t => {
+        const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        rec.textContent = fmt(Math.round((desde + (d.recaudado - desde) * e) / 1000) * 1000);
+        if (k < 1) requestAnimationFrame(paso); else { rec.textContent = fmt(d.recaudado); mostrado = d.recaudado; }
+      };
+      requestAnimationFrame(paso);
+    };
+    const traer = () => fetch(API + '/progreso.php').then(r => r.json());
+    el.hidden = true;
+    traer().then(d => {
+      if (!d || !d.meta) return;
+      pinta(d, 'prep');
+      new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { obs.disconnect(); pinta(d, true); } }, {threshold: .3}).observe(el);
+      setInterval(() => traer().then(n => { if (n.recaudado !== mostrado) pinta(n, true); }).catch(() => {}), 60000);
+    }).catch(() => {});
+  }
+
+  window.Donar = {montar, campana};
 })();

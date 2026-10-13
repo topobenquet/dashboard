@@ -37,6 +37,7 @@
   .btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:16px 26px;font-size:17px;box-shadow:0 8px 24px -10px rgba(234,133,39,.8)}
   .btn:hover{background:var(--orange-d)}
   .hero-note{font-size:14px;color:var(--muted)}
+  .hero-campana{margin-top:28px;max-width:520px}
   .phone{position:relative;justify-self:center;width:min(340px,100%);aspect-ratio:9/16;border-radius:32px;overflow:hidden;background:#000;box-shadow:0 30px 60px -25px rgba(43,33,24,.55);border:8px solid #fff}
   .phone video{width:100%;height:100%;object-fit:cover}
   .phone button{position:absolute;right:12px;bottom:12px;border:0;border-radius:999px;background:rgba(255,255,255,.92);font:600 13px var(--sans);padding:8px 12px;cursor:pointer}
@@ -106,7 +107,7 @@
 </style>
 </head>
 <body>
-<div class="borrador">Borrador B1 · textos e impacto a confirmar con la fundación</div>
+<div class="borrador">Borrador B1 · textos e impacto a confirmar con la fundación · la barra de la campaña es una simulación</div>
 
 <div class="wrap">
   <header class="top">
@@ -116,13 +117,14 @@
 
   <div class="hero">
     <div>
-      <span class="kicker">● Caaguazú, Paraguay · desde 2003</span>
+      <span class="kicker">● Campaña de Navidad · Caaguazú, Paraguay</span>
       <h1>Ellos no eligieron su historia. <em>Vos podés elegir cómo sigue.</em></h1>
       <p class="lead">En el Hogar Mborayhu, 12 niños y niñas de 0 a 8 años que llegaron por orden judicial, después del abandono o la violencia, tienen techo, comida, escuela y cariño. Hoy necesitamos padrinos que lo sostengan todos los meses.</p>
       <div class="hero-cta">
         <a class="btn" href="#donar">Hacerme padrino</a>
         <span class="hero-note">Desde Gs 50.000 por mes · cancelás cuando quieras</span>
       </div>
+      <div id="campana" class="hero-campana"></div>
     </div>
     <div class="phone">
       <span class="sun"></span>
@@ -196,6 +198,7 @@
       <div class="tarjeta" id="donar">
         <h3>Sumate a la familia Mborayhu</h3>
         <p class="sub">Elegí cuánto querés aportar. Todo llega al hogar.</p>
+        <div id="campana-mini"></div>
         <div id="dn"></div>
       </div>
     </aside>
@@ -213,6 +216,15 @@
 
 <script src="../donar.js"></script>
 <script>
+  // Si la tarjeta es más alta que la pantalla, se fija con el botón a la vista, no con la parte de arriba.
+  const col = document.querySelector('.card-col');
+  const ajustar = () => { col.style.top = Math.min(20, innerHeight - col.offsetHeight - 20) + 'px'; };
+  addEventListener('resize', ajustar);
+  addEventListener('load', ajustar);
+  new ResizeObserver(ajustar).observe(col);
+  ajustar();
+  Donar.campana(document.getElementById('campana'));
+  Donar.campana(document.getElementById('campana-mini'), {mini: true});
   Donar.montar(document.getElementById('dn'), {
     montos: {
       mensual: [
