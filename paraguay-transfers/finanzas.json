@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T12:30:41.068Z",
+ "generated": "2026-10-13T18:30:29.733Z",
  "tc": 5740,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -170,14 +170,14 @@
   {
    "fecha": "2026-10-13",
    "in": 209.06,
-   "out": 20.91,
-   "n": 2,
+   "out": 673.35,
+   "n": 4,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -20.91,
+    "WhatsApp · Pagos (Majo)": -673.35,
     "Transferencia": 209.06
    },
-   "neto": 188.15,
-   "acum": 6561.09
+   "neto": -464.29,
+   "acum": 5908.65
   }
  ],
  "movimientos": [
@@ -1017,6 +1017,34 @@
    "gs": 120000,
    "rub": {
     "chofer": 20.91,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-13",
+   "t": "out",
+   "usd": 182.06,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Vendedor Enzo Dotto. Semana prueba + bono",
+   "gs": 1045000,
+   "rub": {
+    "chofer": 182.06,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-13",
+   "t": "out",
+   "usd": 470.38,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Juan. Traslados",
+   "gs": 2700000,
+   "rub": {
+    "chofer": 470.38,
     "comb": 0,
     "peajes": 0,
     "otros": 0
