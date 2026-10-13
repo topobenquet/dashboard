@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T23:10:12.443Z",
+ "generated": "2026-10-13T11:10:17.793Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1267,
-   "ultimoKm": 99007
+   "ultimoKm": 99102
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -68,10 +68,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 1039,
-   "kmFuera": 1105,
-   "viajes": 8,
-   "costoComb": 2716448,
+   "kmViajes": 1130,
+   "kmFuera": 1109,
+   "viajes": 9,
+   "costoComb": 2836813,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 33,
-   "conFoto": 27
+   "lecturas": 35,
+   "conFoto": 29
   },
   {
    "chofer": "Gustavo",
@@ -103,12 +103,12 @@
    "fechaIni": "2026-10-12",
    "fechaFin": "2026-10-12",
    "horaIni": "09:59",
-   "horaFin": null,
+   "horaFin": "23:13",
    "kmIni": 99007,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 99098,
+   "km": 91,
    "tanqueIni": 0.7,
-   "tanqueFin": null,
+   "tanqueFin": 0.75,
    "traslados": [
     "Vehiculo a disposición",
     "Asunción Rent Suites Santa Teresa - Aero",
@@ -119,7 +119,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 1131923,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 115297,
    "cargas": [
     {
      "fecha": "2026-10-12",
@@ -134,7 +134,7 @@
    ],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -875,6 +875,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 99098,
+   "hasta": 99102,
+   "km": 4,
+   "fechaDesde": "2026-10-12",
+   "fechaHasta": "2026-10-12",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99006,
    "hasta": 99007,
    "km": 1,
@@ -1513,22 +1524,6 @@
   }
  ],
  "proximos": [
-  {
-   "fecha": "2026-10-12",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-10-12",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Asunción Rent Suites Santa Teresa - Aero",
-   "km": 40,
-   "adelanto": 56000
-  },
   {
    "fecha": "2026-10-13",
    "chofer": "Alfredo",
