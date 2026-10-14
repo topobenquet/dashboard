@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-13T22:01:09.573Z",
-  "lastSyncLabel": "13 Oct 2026",
+  "generated": "2026-10-14T10:21:15.603Z",
+  "lastSyncLabel": "14 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 19019.63,
-      "chofer": 9575.15,
-      "comb": 833.23,
-      "peajes": 289.54,
+      "revenue": 19124.4,
+      "chofer": 9637.5,
+      "comb": 839.08,
+      "peajes": 291.58,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1044.13,
+      "otros": 1051.46,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 317,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 156,
-      "reservas": 38,
-      "revenue": 13263.05,
-      "chofer": 6072.68,
-      "comb": 376.32,
+      "leads": 160,
+      "reservas": 40,
+      "revenue": 13853.45,
+      "chofer": 6115.31,
+      "comb": 378.95,
       "peajes": 0,
       "comision": 78.4,
       "reembolsos": 0,
-      "otros": 853.66,
-      "gAds": 209,
-      "meta": 53.83,
+      "otros": 859.65,
+      "gAds": 219,
+      "meta": 55.86,
       "costoSheet": 8399,
-      "gananciaSheet": 11827,
+      "gananciaSheet": 11808,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 209.43,
-      "clicks": 8869,
-      "impr": 162712,
-      "conv": 37
+      "spend": 218.78,
+      "clicks": 9817,
+      "impr": 178961,
+      "conv": 39
     }
   ],
   "trips": [
@@ -6429,6 +6429,34 @@
     },
     {
       "mes": "Octubre",
+      "route": "FOZ-ASU",
+      "cliente": "pedro henriquez",
+      "pais": "RD",
+      "conductor": "",
+      "pago": 278,
+      "sena": 278,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 269.66,
+      "fechaReserva": "14/10/26",
+      "fechaSalida": "24/12/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-FOZ-PtoIguazu",
+      "cliente": "joann",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 206,
+      "sena": 206,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 199.82,
+      "fechaReserva": "13/10/26",
+      "fechaSalida": "25/12/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Aeropuerto Silvio Pettirossi → Itacurubí de la Cordillera",
       "cliente": "jacques bois",
       "pais": "Canadá",
@@ -6584,6 +6612,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-10-14": 4,
       "2026-10-13": 18,
       "2026-10-12": 14,
       "2026-10-11": 8,
@@ -6641,7 +6670,8 @@
       "2026-10-09": 5,
       "2026-10-01": 1,
       "2026-10-11": 3,
-      "2026-10-13": 1,
+      "2026-10-13": 2,
+      "2026-10-14": 1,
       "2026-10-12": 1
     },
     "gads": {
@@ -6917,13 +6947,14 @@
       "2026-10-10": 24.68,
       "2026-10-11": 29.92,
       "2026-10-12": 26.39,
-      "2026-10-13": 14.27
+      "2026-10-13": 19.35,
+      "2026-10-14": 4.27
     }
   },
   "resenas": {
     "count": 68,
     "rating": 5,
-    "actualizado": "2026-10-13T20:10:29.104Z",
+    "actualizado": "2026-10-13T23:10:01.914Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7150,10 +7181,11 @@
       "2026-09-30": 10,
       "2026-10-01": 19,
       "2026-10-05": 29,
-      "2026-10-13": 8
+      "2026-10-13": 13,
+      "2026-10-14": 1
     },
     "monthly": {
-      "Octubre": 229,
+      "Octubre": 235,
       "Septiembre": 213,
       "Agosto": 27
     }
