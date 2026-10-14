@@ -256,15 +256,15 @@
   /* ── Tabs ── */
   function setTab(name) {
     document.querySelectorAll("[data-tab]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === name)));
-    $("root").hidden = name !== "ops"; $("fin").hidden = name !== "fin"; if ($("km")) $("km").hidden = name !== "km";
+    $("root").hidden = name !== "ops"; $("fin").hidden = name !== "fin"; if ($("km")) $("km").hidden = name !== "km"; if ($("seo")) $("seo").hidden = name !== "seo";
     try { localStorage.setItem("pt-tab", name); } catch {}
     if (location.hash !== "#" + name) history.replaceState(null, "", "#" + name);
   }
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => setTab(b.dataset.tab)));
-    let t = ["#fin", "#ops", "#km"].includes(location.hash) ? location.hash.slice(1) : null;
+    let t = ["#fin", "#ops", "#km", "#seo"].includes(location.hash) ? location.hash.slice(1) : null;
     if (!t) { try { t = localStorage.getItem("pt-tab"); } catch {} }
-    setTab(["fin", "km"].includes(t) ? t : "ops");
+    setTab(["fin", "km", "seo"].includes(t) ? t : "ops");
     init();
   });
 })();
