@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T10:20:37.890Z",
+ "generated": "2026-10-14T12:30:26.623Z",
  "tc": 5700,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 824.13,
   "stripePendiente": 3530.07,
-  "pagoparPendienteUsd": 11246.84,
+  "pagoparPendienteUsd": 11580.53,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -182,14 +182,14 @@
   },
   {
    "fecha": "2026-10-14",
-   "in": 292.63,
+   "in": 626.31,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Pagopar": 292.63
+    "Pagopar": 626.31
    },
-   "neto": 292.63,
-   "acum": 6499.54
+   "neto": 626.31,
+   "acum": 6833.22
   }
  ],
  "movimientos": [
@@ -581,6 +581,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Pedro Henriquez",
    "gs": 1668000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 333.68,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sebastian Suhr",
+   "gs": 1902000
   },
   {
    "d": "2026-10-01",
@@ -1232,8 +1240,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 46,
-   "bruto": 11246.82,
+   "cobros": 47,
+   "bruto": 11580.5,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1248,8 +1256,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 64107000,
-  "cobradoUsd": 11246.82,
+  "cobradoGs": 66009000,
+  "cobradoUsd": 11580.5,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1325,9 +1333,9 @@
    },
    {
     "fecha": "2026-10-14",
-    "cobros": 1,
-    "gs": 1668000,
-    "usd": 292.63
+    "cobros": 2,
+    "gs": 3570000,
+    "usd": 626.31
    }
   ],
   "pruebasExcluidas": 0,
@@ -1335,8 +1343,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 64107000,
-  "pendienteUsd": 11246.84
+  "pendienteGs": 66009000,
+  "pendienteUsd": 11580.53
  },
  "giros": [
   {
@@ -1443,7 +1451,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲64.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲66 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
