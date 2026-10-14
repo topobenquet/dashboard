@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T12:30:26.623Z",
+ "generated": "2026-10-14T14:30:20.867Z",
  "tc": 5700,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 824.13,
   "stripePendiente": 3530.07,
-  "pagoparPendienteUsd": 11580.53,
+  "pagoparPendienteUsd": 11787.89,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -182,14 +182,15 @@
   },
   {
    "fecha": "2026-10-14",
-   "in": 626.31,
+   "in": 872.28,
    "out": 0,
-   "n": 2,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 626.31
+    "Pagopar": 833.68,
+    "Transferencia": 38.6
    },
-   "neto": 626.31,
-   "acum": 6833.22
+   "neto": 872.28,
+   "acum": 7079.19
   }
  ],
  "movimientos": [
@@ -589,6 +590,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sebastian Suhr",
    "gs": 1902000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 207.37,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · David Tooth",
+   "gs": 1182000
   },
   {
    "d": "2026-10-01",
@@ -1133,6 +1142,22 @@
    "fuente": "Transferencia",
    "det": "Tania Josefina Storm Escobar Y/o Josefina Escobar De Storm (comprobante en GHL)",
    "gs": 1200000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 24.56,
+   "fuente": "Transferencia",
+   "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en GHL)",
+   "gs": 140000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 14.04,
+   "fuente": "Transferencia",
+   "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en GHL)",
+   "gs": 80000
   }
  ],
  "pnl": [
@@ -1240,8 +1265,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 47,
-   "bruto": 11580.5,
+   "cobros": 48,
+   "bruto": 11787.87,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1256,8 +1281,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 66009000,
-  "cobradoUsd": 11580.5,
+  "cobradoGs": 67191000,
+  "cobradoUsd": 11787.87,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1333,9 +1358,9 @@
    },
    {
     "fecha": "2026-10-14",
-    "cobros": 2,
-    "gs": 3570000,
-    "usd": 626.31
+    "cobros": 3,
+    "gs": 4752000,
+    "usd": 833.68
    }
   ],
   "pruebasExcluidas": 0,
@@ -1343,8 +1368,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 66009000,
-  "pendienteUsd": 11580.53
+  "pendienteGs": 67191000,
+  "pendienteUsd": 11787.89
  },
  "giros": [
   {
@@ -1451,7 +1476,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲66 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲67.2 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
