@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T14:30:20.867Z",
+ "generated": "2026-10-14T18:30:45.937Z",
  "tc": 5700,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 824.13,
   "stripePendiente": 3530.07,
-  "pagoparPendienteUsd": 11787.89,
+  "pagoparPendienteUsd": 12471.05,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -182,15 +182,16 @@
   },
   {
    "fecha": "2026-10-14",
-   "in": 872.28,
-   "out": 0,
-   "n": 5,
+   "in": 1555.44,
+   "out": 2463.16,
+   "n": 7,
    "porFuente": {
-    "Pagopar": 833.68,
+    "Pagopar": 1516.84,
+    "WhatsApp · Pagos (Majo)": -2463.16,
     "Transferencia": 38.6
    },
-   "neto": 872.28,
-   "acum": 7079.19
+   "neto": -907.72,
+   "acum": 5299.19
   }
  ],
  "movimientos": [
@@ -598,6 +599,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · David Tooth",
    "gs": 1182000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 683.16,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Pedro Henriquez",
+   "gs": 3894000
   },
   {
    "d": "2026-10-01",
@@ -1104,6 +1113,20 @@
    }
   },
   {
+   "d": "2026-10-14",
+   "t": "out",
+   "usd": 2463.16,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 14040000,
+   "rub": {
+    "chofer": 2463.16,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 219.3,
@@ -1265,8 +1288,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 48,
-   "bruto": 11787.87,
+   "cobros": 49,
+   "bruto": 12471.03,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1281,8 +1304,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 67191000,
-  "cobradoUsd": 11787.87,
+  "cobradoGs": 71085000,
+  "cobradoUsd": 12471.03,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1358,9 +1381,9 @@
    },
    {
     "fecha": "2026-10-14",
-    "cobros": 3,
-    "gs": 4752000,
-    "usd": 833.68
+    "cobros": 4,
+    "gs": 8646000,
+    "usd": 1516.84
    }
   ],
   "pruebasExcluidas": 0,
@@ -1368,8 +1391,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 67191000,
-  "pendienteUsd": 11787.89
+  "pendienteGs": 71085000,
+  "pendienteUsd": 12471.05
  },
  "giros": [
   {
@@ -1476,7 +1499,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲67.2 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲71.1 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
