@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T20:30:39.057Z",
+ "generated": "2026-10-14T22:00:11.340Z",
  "tc": 5710,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -183,15 +183,15 @@
   {
    "fecha": "2026-10-14",
    "in": 2124.35,
-   "out": 3028.02,
-   "n": 10,
+   "out": 3091.07,
+   "n": 11,
    "porFuente": {
     "Pagopar": 2085.82,
-    "WhatsApp · Pagos (Majo)": -3028.02,
+    "WhatsApp · Pagos (Majo)": -3091.07,
     "Transferencia": 38.53
    },
-   "neto": -903.67,
-   "acum": 5295.35
+   "neto": -966.72,
+   "acum": 5232.3
   }
  ],
  "movimientos": [
@@ -1163,6 +1163,20 @@
    }
   },
   {
+   "d": "2026-10-14",
+   "t": "out",
+   "usd": 63.05,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver INGRID DOMINGUEZ Traslado 09:15 13/14/15-oct  Pax: Tania Storm",
+   "gs": 360000,
+   "rub": {
+    "chofer": 63.05,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.91,
@@ -1649,6 +1663,14 @@
    "gs": 3080000,
    "usd": 539.4,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/mk5c4s (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-14",
+   "grupo": "Pagos (Majo)",
+   "gs": 2250000,
+   "usd": 394.05,
+   "concepto": "• 2026-10-15 gabriel - primundo Hotel → Aeropuerto: Gs",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
