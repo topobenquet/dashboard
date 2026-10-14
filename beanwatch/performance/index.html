@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Bean Watch · Ads Performance</title>
+<link rel="icon" href="logo.png">
+<style>
+:root{--navy:#111;--gold:#8AA0DB;--bg:#F6F6F3;--card:#fff;--ink:#1A1A1A;--mut:#6E6E6E;--line:#E4E4DE;--blue:#0099FF;--meta:#1877F2;--goog:#E8710A;--good:#2E8B57;--warn:#C98A1B;--bad:#C0392B;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:13px;line-height:1.45}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px 50px}
+header.top{background:var(--navy);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+header.top img{height:32px;width:32px;border-radius:50%;display:block}
+header.top .brand{font-family:Georgia,serif;font-size:20px}
+header.top .ttl{font-size:12px;color:#C9C9C9;letter-spacing:.12em;text-transform:uppercase}
+header.top a{color:#DCE3F5;font-size:12px;text-decoration:none;margin-left:14px}
+header.top .meta{font-size:11.5px;color:#C9C9C9;text-align:right}
+.bar{position:sticky;top:0;z-index:20;background:rgba(246,246,243,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar .wrap{padding-top:9px;padding-bottom:9px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff}
+.seg button{font:inherit;font-size:12px;padding:6px 11px;border:0;background:none;cursor:pointer;color:var(--ink);border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed=true]{background:var(--navy);color:#fff}
+.bar input[type=date]{font:inherit;font-size:12px;padding:4px 7px;border:1px solid var(--line);border-radius:7px}
+.bar .note{font-size:11.5px;color:var(--mut)}
+nav.jump a{font-size:11.5px;color:#5B72B5;text-decoration:none;margin-right:12px;font-weight:600}
+.section{margin-top:26px}
+.sec-t{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px;flex-wrap:wrap}
+.sec-t h2{font-family:Georgia,serif;font-size:18px;color:var(--navy)}
+.sec-t .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#5B72B5;font-weight:700}
+.sub{font-size:11.5px;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.05);padding:14px 16px}
+.grid{display:grid;gap:12px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1000px){.g2,.g3{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:10px 12px}
+.kpi.m{border-top-color:var(--meta)}.kpi.g{border-top-color:var(--goog)}.kpi.s{border-top-color:var(--good)}
+.kpi .l{font-size:9.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.kpi .v{font-family:Georgia,serif;font-size:23px;color:var(--navy);margin-top:2px;font-variant-numeric:tabular-nums}
+.kpi .s2{font-size:10.5px;color:var(--mut);margin-top:2px}
+.up{color:var(--good);font-weight:600}.dn{color:var(--bad);font-weight:600}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{text-align:left;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:8px 9px;border-bottom:1.5px solid var(--navy);white-space:nowrap;cursor:pointer;user-select:none;position:sticky;top:0;background:#fff}
+table.t th.n,table.t td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.t td{padding:6px 9px;border-bottom:1px solid #F0F0EA;vertical-align:middle}
+table.t tr:hover td{background:#F7F8FC}
+table.t th.on::after{content:" ▾";color:#5B72B5}table.t th.on.asc::after{content:" ▴"}
+.scroll{overflow:auto;max-height:560px}
+.pill{display:inline-block;font-size:10px;padding:1px 7px;border-radius:10px;background:#EEF1F8;color:#37507F;font-weight:600}
+.pill.act{background:#E3F4EA;color:#1F6B42}.pill.off{background:#F1F1EE;color:#777}.pill.iss{background:#FBEFD8;color:#8A5A07}
+.meterbar{display:inline-block;height:7px;border-radius:4px;background:var(--gold);vertical-align:middle;margin-right:6px}
+.ads{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.ad{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.ad .im{aspect-ratio:4/5;background:#EFEFEA;position:relative;overflow:hidden}
+.ad .im img{width:100%;height:100%;object-fit:cover;display:block}
+.ad .rk{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.75);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px}
+.ad .roas{position:absolute;right:8px;top:8px;background:#fff;color:var(--navy);font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.ad .b{padding:10px 12px;font-size:12px}
+.ad .nm{font-weight:700;font-size:13px;word-break:break-word}
+.ad .cp{color:var(--mut);font-size:11px;margin:1px 0 7px}
+.ad dl{display:grid;grid-template-columns:1fr 1fr;gap:3px 10px}.ad dt{color:var(--mut)}.ad dd{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.ad .copy{margin-top:8px;padding-top:7px;border-top:1px solid #F0F0EA;font-size:11.5px;color:#444}
+.ad .copy b{display:block;color:var(--navy)}
+.ad details summary{cursor:pointer;color:#5B72B5;font-size:11px;margin-top:3px}
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.filters select,.filters input{font:inherit;font-size:12px;padding:5px 8px;border:1px solid var(--line);border-radius:7px;background:#fff}
+.mx{border-collapse:collapse;font-size:11px}
+.mx th{font-size:9.5px;color:var(--mut);padding:3px 5px;font-weight:600;white-space:nowrap}
+.mx td{padding:0;border:1px solid #fff}
+.mx td.nm{padding:3px 8px 3px 0;white-space:nowrap;max-width:210px;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.mx td.c{width:46px;min-width:46px;height:26px;text-align:center;font-variant-numeric:tabular-nums;font-size:10.5px}
+.legend span{display:inline-block;padding:1px 8px;border-radius:9px;font-size:10.5px;margin-right:4px}
+.alert{background:#FBEFD8;border:1px solid #F0D9A8;color:#6B4A0A;border-radius:8px;padding:8px 12px;font-size:12px;margin:8px 0}
+.empty{color:var(--mut);padding:16px;text-align:center;background:#F7F7F4;border-radius:8px}
+.tags span{display:inline-block;background:#F0F2F8;border-radius:6px;padding:1px 7px;margin:0 4px 4px 0;font-size:11px}
+.imgs{display:flex;gap:6px;flex-wrap:wrap}.imgs img{height:70px;border-radius:5px;border:1px solid var(--line)}
+details.gd summary{cursor:pointer;font-weight:600;color:#37507F}
+footer{margin-top:30px;font-size:11px;color:var(--mut);border-top:1px solid var(--line);padding-top:12px}
+#gate{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}
+#gate form{background:#fff;border-radius:12px;padding:26px 24px;width:100%;max-width:340px;display:flex;flex-direction:column;gap:10px;text-align:center}
+#gate img{width:48px;height:48px;border-radius:50%;margin:0 auto 2px}
+#gate h1{font-family:Georgia,serif;font-size:19px;color:var(--navy)}
+#gate p{font-size:12px;color:var(--mut);margin-bottom:6px}
+#gate input{font:inherit;font-size:14px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;width:100%}
+#gate button{font:inherit;font-size:14px;font-weight:600;padding:10px;border:0;border-radius:8px;background:var(--navy);color:#fff;cursor:pointer}
+#gate button:disabled{opacity:.6}
+#gate label{font-size:12px;color:var(--mut);display:flex;gap:6px;align-items:center;justify-content:center}
+#gate label input{width:auto}#gate .err{color:var(--bad);font-size:12px;min-height:16px}
+</style>
+</head>
+<body>
+<div id="gate"><form id="login" autocomplete="on">
+  <img src="logo.png" alt=""><h1>Bean Watch</h1><p>Ads Performance</p>
+  <input id="u" name="username" autocomplete="username" placeholder="User" required>
+  <input id="pw" name="password" type="password" autocomplete="current-password" placeholder="Password" required>
+  <label><input type="checkbox" id="rem" checked> Keep me signed in on this device</label>
+  <button id="go" type="submit">Sign in</button><div class="err" id="err"></div>
+</form></div>
+<header class="top"><div class="wrap">
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><img src="logo.png" alt=""><span class="brand">Bean Watch</span><span class="ttl">Ads Performance</span><a href="../">← Dashboard</a></div>
+  <div class="meta" id="meta">Loading…</div>
+</div></header>
+<div class="bar"><div class="wrap">
+  <div class="seg" id="rng"></div>
+  <span id="cust" style="display:none"><input type="date" id="d1"> – <input type="date" id="d2"></span>
+  <span class="note" id="rnote"></span>
+  <nav class="jump" style="margin-left:auto"><a href="#s-daily">Daily</a><a href="#s-meta">Meta ads</a><a href="#s-copy">Ad copy</a><a href="#s-google">Google</a><a href="#s-plat">Platforms</a><a href="#s-demo">Demographics</a><a href="#s-geo">Geography</a></nav>
+</div></div>
+<div class="wrap" id="root"></div>
+
+<script>
+const $=(s)=>document.querySelector(s);
+const fm=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':Math.round(Number(n)).toLocaleString('en-US');
+const usd=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':'$'+fm(n);
+const usd2=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const xx=(n)=>n==null||isNaN(n)||!isFinite(n)?'–':Number(n).toFixed(2)+'x';
+const pc=(n,d=1)=>n==null||isNaN(n)||!isFinite(n)?'–':(n*100).toFixed(d)+'%';
+const esc=(s)=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dv=(a,b)=>b?a/b:null;
+const KEY_STORE='beanwatch-key';
+const b64=(s)=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+let ENC=null,D=null;
+async function loadEnc(){ if(!ENC) ENC=await (await fetch('performance.enc.json?v='+Date.now())).json(); return ENC; }
+async function deriveRaw(user,pass,e){ const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(user+':'+pass),'PBKDF2',false,['deriveBits']); return new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:b64(e.salt),iterations:e.iter},base,256)); }
+async function decrypt(raw,e){ const key=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']); const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct)); return JSON.parse(new TextDecoder().decode(pt)); }
+function showDash(d){ if(!d||!d.meta) throw new Error('Unexpected data format.'); document.getElementById('gate').remove(); D=d; init(); }
+(async()=>{ let saved=null; try{saved=JSON.parse(localStorage.getItem(KEY_STORE)||sessionStorage.getItem(KEY_STORE)||'null')}catch(e){}
+  if(!saved){ $('#u').focus(); return; }
+  try{ const e=await loadEnc(); if(saved.salt!==e.salt) throw 0; showDash(await decrypt(b64(saved.k),e)); }catch(e){ try{localStorage.removeItem(KEY_STORE);sessionStorage.removeItem(KEY_STORE)}catch(_){} } })();
+$('#login').addEventListener('submit',async(ev)=>{ ev.preventDefault(); $('#err').textContent=''; $('#go').disabled=true; $('#go').textContent='Signing in…';
+  try{ const e=await loadEnc(); const raw=await deriveRaw($('#u').value.trim(),$('#pw').value,e); let d; try{ d=await decrypt(raw,e); }catch(_){ throw new Error('Wrong user or password.'); }
+    try{ const v=JSON.stringify({salt:e.salt,k:btoa(String.fromCharCode(...raw))}); ($('#rem').checked?localStorage:sessionStorage).setItem(KEY_STORE,v); }catch(_){}
+    showDash(d); }catch(err){ $('#err').textContent=err.message||'Could not load data.'; $('#go').disabled=false; $('#go').textContent='Sign in'; } });
+
+// ───────── fechas ─────────
+const addD=(d,n)=>{const t=new Date(d+'T00:00:00Z');t.setUTCDate(t.getUTCDate()+n);return t.toISOString().slice(0,10)};
+const diffD=(a,b)=>Math.round((new Date(b+'T00:00:00Z')-new Date(a+'T00:00:00Z'))/864e5);
+const dayList=(a,b)=>{const o=[];for(let d=a;d<=b;d=addD(d,1))o.push(d);return o};
+const fshort=(d)=>new Date(d+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'});
+const S={rng:'7',ini:null,fin:null,sort:{},ads:{sort:'spend',camp:'all',status:'all',min:25},mx:'roas',mxn:16,cons:'both'};
+const PRE=[['today','Today'],['yest','Yesterday'],['7','Last 7 days'],['30','Last 30 days'],['all','Since launch'],['custom','Custom']];
+function range(){
+  const to=D.to; let ini,fin;
+  if(S.rng==='today'){ini=fin=to}else if(S.rng==='yest'){ini=fin=addD(to,-1)}else if(S.rng==='7'){ini=addD(to,-6);fin=to}
+  else if(S.rng==='30'){ini=addD(to,-29);fin=to}else if(S.rng==='all'){ini=D.from;fin=to}else{ini=S.ini||addD(to,-6);fin=S.fin||to}
+  if(ini<D.from)ini=D.from; if(fin>to)fin=to; if(ini>fin)ini=fin;
+  const n=diffD(ini,fin)+1; return {ini,fin,n,pini:addD(ini,-n),pfin:addD(ini,-1)};
+}
+const inR=(d,r)=>d>=r.ini&&d<=r.fin, inP=(d,r)=>d>=r.pini&&d<=r.pfin;
+
+// ───────── agregadores ─────────
+const z=(n)=>Array(n).fill(0);
+const addv=(a,b)=>{for(let i=0;i<a.length;i++)a[i]+=(+b[i]||0);return a};
+// Meta: [spend,clicks,impr,lpv,ic,purch,value]; Google: [spend,clicks,impr,conv,value]
+function sumAd(a,r,prev){let t=z(7);for(const[d,v]of Object.entries(a.daily))if(prev?inP(d,r):inR(d,r))addv(t,v);return t}
+const metaTot=(r,prev)=>{let t=z(7);for(const x of D.meta.dev)if(prev?inP(x[0],r):inR(x[0],r))addv(t,x.slice(2));return t};
+const gTot=(r,prev)=>{let t=z(5);for(const c of D.google.campaigns)for(const[d,v]of Object.entries(c.daily))if(prev?inP(d,r):inR(d,r))addv(t,v);return t};
+const stripeTot=(r,prev)=>{const s=D.stripe?.days||{};let t=[0,0,0],days=0;for(const d of dayList(prev?r.pini:r.ini,prev?r.pfin:r.fin)){const v=s[d];if(v){t[0]+=v.reservas;t[1]+=v.upsells;t[2]+=v.ingresos;days++}}return {t,days}};
+const dlt=(a,b,inv)=>{if(!b||a==null)return '';const r=(a-b)/b;if(!isFinite(r))return '';const up=r>=0,good=inv?!up:up;return ` <span class="${good?'up':'dn'}">${up?'▲':'▼'}${Math.abs(r*100).toFixed(0)}%</span>`};
+
+// ───────── tablas ─────────
+// cols: {t,v:(row)=>valor,f:(val,row)=>html,n:bool}
+function tbl(id,cols,rows,o={}){
+  const st=S.sort[id]||(o.def!=null?{c:o.def,asc:!!o.asc}:null);
+  let rs=rows.slice();
+  if(st){const c=cols[st.c];rs.sort((a,b)=>{const x=c.v(a),y=c.v(b);const nx=x==null||(typeof x==='number'&&!isFinite(x)),ny=y==null||(typeof y==='number'&&!isFinite(y));if(nx&&ny)return 0;if(nx)return 1;if(ny)return -1;return (typeof x==='string'?x.localeCompare(y):x-y)*(st.asc?1:-1)})}
+  if(o.limit)rs=rs.slice(0,o.limit);
+  const h=cols.map((c,i)=>`<th class="${c.n?'n':''} ${st&&st.c===i?'on'+(st.asc?' asc':''):''}" data-sort="${id}:${i}:${c.asc?1:0}">${c.t}</th>`).join('');
+  const b=rs.map(r=>'<tr>'+cols.map(c=>{const v=c.v(r);return `<td class="${c.n?'n':''}">${c.f?c.f(v,r):esc(v)}</td>`}).join('')+'</tr>').join('');
+  return `<div class="${o.noscroll?'':'scroll'}"><table class="t"><thead><tr>${h}</tr></thead><tbody>${b||`<tr><td colspan="${cols.length}" class="empty">No data in this period.</td></tr>`}</tbody></table></div>`;
+}
+document.addEventListener('click',(e)=>{
+  const th=e.target.closest('th[data-sort]'); if(th){const[id,c,asc]=th.dataset.sort.split(':');const cur=S.sort[id];S.sort[id]=cur&&cur.c==+c?{c:+c,asc:!cur.asc}:{c:+c,asc:asc==='1'};render();return}
+  const b=e.target.closest('[data-rng]'); if(b){S.rng=b.dataset.rng;render();return}
+  const m=e.target.closest('[data-set]'); if(m){const[k,v]=m.dataset.set.split('=');S[k]=v;render();return}
+});
+document.addEventListener('change',(e)=>{
+  const t=e.target; if(t.id==='d1'||t.id==='d2'){S.ini=$('#d1').value||S.ini;S.fin=$('#d2').value||S.fin;render();return}
+  if(t.dataset.f){const[a,b]=t.dataset.f.split('.');S[a][b]=b==='min'?+t.value:t.value;render()}
+});
+
+// ───────── métricas por fila ─────────
+const M7=(v)=>({spend:v[0],clicks:v[1],impr:v[2],lpv:v[3],ic:v[4],p:v[5],val:v[6],roas:dv(v[6],v[0]),cpa:dv(v[0],v[5]),ctr:dv(v[1],v[2]),cpm:dv(v[0],v[2])*1000,cpc:dv(v[0],v[1])});
+const G5=(v)=>({spend:v[0],clicks:v[1],impr:v[2],conv:v[3],val:v[4],cpa:dv(v[0],v[3]),roas:dv(v[4],v[0]),ctr:dv(v[1],v[2]),cpc:dv(v[0],v[1])});
+
+function init(){
+  $('#meta').innerHTML=`<div>Meta + Google Ads · data through <b>${fshort(D.to)}</b></div><div>Updated ${new Date(D.generated).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</div>`;
+  $('#d1').min=$('#d2').min=D.from;$('#d1').max=$('#d2').max=D.to;
+  render();
+}
+function render(){
+  const r=range();
+  $('#rng').innerHTML=PRE.map(([k,n])=>`<button data-rng="${k}" aria-pressed="${S.rng===k}">${n}</button>`).join('');
+  $('#cust').style.display=S.rng==='custom'?'':'none'; $('#d1').value=r.ini;$('#d2').value=r.fin;
+  $('#rnote').textContent=`${fshort(r.ini)}${r.n>1?' – '+fshort(r.fin):''} · vs ${fshort(r.pini)}${r.n>1?' – '+fshort(r.pfin):''}`;
+  const y=window.scrollY;
+  $('#root').innerHTML=[kpis(r),daily(r),metaAds(r),copyBoard(r),googleSec(r),platSec(r),demoSec(r),geoSec(r),notes()].join('');
+  window.scrollTo(0,y);
+}
+
+// ───────── KPIs ─────────
+function kpis(r){
+  const m=M7(metaTot(r)),mp=M7(metaTot(r,1)),g=G5(gTot(r)),gp=G5(gTot(r,1));
+  const st=stripeTot(r),sp=stripeTot(r,1);
+  const spend=m.spend+g.spend,spendP=mp.spend+gp.spend;
+  const stripeSpend=(()=>{let s=0;const sd=D.stripe?.days||{};for(const d of dayList(r.ini,r.fin))if(sd[d]){s+=(D.meta.dev.filter(x=>x[0]===d).reduce((a,x)=>a+x[2],0))+gDay(d)}return s})();
+  const sroas=dv(st.t[2],stripeSpend);
+  return `<div class="kpis">
+  <div class="kpi"><div class="l">Total spend</div><div class="v">${usd(spend)}</div><div class="s2">Meta + Google${dlt(spend,spendP,1)}</div></div>
+  <div class="kpi m"><div class="l">Meta spend</div><div class="v">${usd(m.spend)}</div><div class="s2">${pc(dv(m.spend,spend),0)} of total${dlt(m.spend,mp.spend,1)}</div></div>
+  <div class="kpi m"><div class="l">Meta purchases</div><div class="v">${fm(m.p)}</div><div class="s2">${usd2(m.cpa)} each · ROAS ${xx(m.roas)}${dlt(m.p,mp.p)}</div></div>
+  <div class="kpi g"><div class="l">Google spend</div><div class="v">${usd(g.spend)}</div><div class="s2">${pc(dv(g.spend,spend),0)} of total${dlt(g.spend,gp.spend,1)}</div></div>
+  <div class="kpi g"><div class="l">Google reservations</div><div class="v">${fm(g.conv)}</div><div class="s2">${usd2(g.cpa)} each · ROAS ${xx(g.roas)}${dlt(g.conv,gp.conv)}</div></div>
+  <div class="kpi s"><div class="l">Stripe reservations</div><div class="v">${st.days?fm(st.t[0]):'–'}</div><div class="s2">${st.days?`${usd(st.t[2])} · ROAS ${xx(sroas)} on ${st.days} day${st.days>1?'s':''}`:'No Stripe data for this range'}${st.days&&sp.days?dlt(st.t[0],sp.t[0]):''}</div></div>
+  </div>`+(st.days&&D.stripe?`<div class="sub" style="margin-top:6px">Stripe data read ${new Date(D.stripe.read).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET; the last day can be partial. Meta ROAS uses Meta's own purchase value (the $29 reservation is counted flat, so it understates upsells) and Meta counts about 1.5x the purchases Stripe records.</div>`:'');
+}
+const gDayCache={};
+function gDay(d){if(!gDayCache.m){gDayCache.m={};for(const c of D.google.campaigns)for(const[dd,v]of Object.entries(c.daily))gDayCache.m[dd]=(gDayCache.m[dd]||0)+v[0]}return gDayCache.m[d]||0}
+
+// ───────── diario ─────────
+function daily(r){
+  const days=dayList(r.ini,r.fin).reverse();
+  const md={},gd={};for(const x of D.meta.dev){const a=md[x[0]]=md[x[0]]||z(7);addv(a,x.slice(2))}
+  for(const c of D.google.campaigns)for(const[d,v]of Object.entries(c.daily)){const a=gd[d]=gd[d]||z(5);addv(a,v)}
+  const sd=D.stripe?.days||{};
+  const rows=days.map(d=>{const m=M7(md[d]||z(7)),g=G5(gd[d]||z(5)),s=sd[d];const sp=m.spend+g.spend;return {d,m,g,s,sp,sroas:s?dv(s.ingresos,sp):null,scpa:s?dv(sp,s.reservas):null}});
+  const chart=barChart(rows.slice().reverse());
+  const cols=[{t:'Date',v:x=>x.d,f:(v)=>fshort(v)},
+    {t:'Meta spend',n:1,v:x=>x.m.spend,f:usd},{t:'Meta purch.',n:1,v:x=>x.m.p,f:fm},{t:'Meta $/purch.',n:1,asc:1,v:x=>x.m.cpa,f:usd2},{t:'Meta ROAS',n:1,v:x=>x.m.roas,f:xx},
+    {t:'Google spend',n:1,v:x=>x.g.spend,f:usd},{t:'Google reserv.',n:1,v:x=>x.g.conv,f:(v)=>fm(v)},{t:'Google $/res.',n:1,asc:1,v:x=>x.g.cpa,f:usd2},
+    {t:'Total spend',n:1,v:x=>x.sp,f:usd},{t:'Stripe reserv.',n:1,v:x=>x.s?x.s.reservas:null,f:(v)=>v==null?'–':fm(v)},{t:'Stripe revenue',n:1,v:x=>x.s?x.s.ingresos:null,f:(v)=>v==null?'–':usd(v)},
+    {t:'$ per reservation',n:1,asc:1,v:x=>x.scpa,f:usd2},{t:'Blended ROAS',n:1,v:x=>x.sroas,f:(v)=>`<b>${xx(v)}</b>`}];
+  return `<div class="section" id="s-daily"><div class="sec-t"><div><span class="k">Day by day</span><h2>Spend, results and ROAS per day</h2></div><span class="sub">Meta dates follow the ad account time zone (Pacific); Google follows New York.</span></div>
+  <div class="card" style="margin-bottom:12px">${chart}</div><div class="card">${tbl('daily',cols,rows,{def:0})}</div></div>`;
+}
+function barChart(rows){
+  if(!rows.length)return '';const W=1200,H=190,P={l:46,r:46,t:10,b:24};
+  const mx=Math.max(1,...rows.map(x=>x.sp)),rm=Math.max(1,...rows.map(x=>x.sroas||0,),...rows.map(x=>x.m.roas||0));
+  const bw=Math.min(40,(W-P.l-P.r)/rows.length*0.7),x=(i)=>P.l+(i+.5)*(W-P.l-P.r)/rows.length,y=(v)=>H-P.b-(H-P.t-P.b)*v/mx,yr=(v)=>H-P.b-(H-P.t-P.b)*v/rm;
+  let g='';for(let i=0;i<=4;i++){const v=mx*i/4;g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${y(v)}" y2="${y(v)}" stroke="#EEE"/><text x="${P.l-6}" y="${y(v)+3}" text-anchor="end" font-size="9.5" fill="#8A8A8A">$${fm(v)}</text>`}
+  rows.forEach((d,i)=>{const hm=H-P.b-y(d.m.spend),hg=H-P.b-y(d.g.spend);g+=`<rect x="${x(i)-bw/2}" y="${y(d.m.spend)}" width="${bw}" height="${hm}" fill="#1877F2" rx="2"><title>${fshort(d.d)} Meta $${fm(d.m.spend)}</title></rect><rect x="${x(i)-bw/2}" y="${y(d.m.spend)-hg}" width="${bw}" height="${hg}" fill="#E8710A" rx="2"><title>${fshort(d.d)} Google $${fm(d.g.spend)}</title></rect><text x="${x(i)}" y="${H-8}" text-anchor="middle" font-size="9.5" fill="#8A8A8A">${rows.length>24&&i%2?'':fshort(d.d).replace(' ',' ')}</text>`});
+  const pts=rows.map((d,i)=>d.sroas!=null?`${x(i)},${yr(d.sroas)}`:null).filter(Boolean);
+  if(pts.length)g+=`<polyline fill="none" stroke="#111" stroke-width="2" points="${pts.join(' ')}"/>`+rows.map((d,i)=>d.sroas!=null?`<circle cx="${x(i)}" cy="${yr(d.sroas)}" r="3" fill="#111"><title>${fshort(d.d)} blended ROAS ${xx(d.sroas)}</title></circle>`:'').join('');
+  g+=`<text x="${W-P.r+6}" y="${P.t+8}" font-size="9.5" fill="#111">ROAS ${rm.toFixed(1)}x</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg><div class="sub"><span style="color:#1877F2">■</span> Meta spend &nbsp; <span style="color:#E8710A">■</span> Google spend &nbsp; <b>●</b> Blended ROAS (Stripe revenue / total spend)</div>`;
+}
+
+// ───────── anuncios de Meta ─────────
+function metaRows(r){return D.meta.ads.map(a=>({a,v:M7(sumAd(a,r)),p:M7(sumAd(a,r,1))}))}
+function metaAds(r){
+  const F=S.ads;const camps=[...new Set(D.meta.ads.map(a=>a.camp))];
+  let rs=metaRows(r).filter(x=>x.v.spend>=F.min&&(F.camp==='all'||x.a.camp===F.camp)&&(F.status==='all'||(F.status==='active')===(x.a.status==='ACTIVE')));
+  const key={spend:x=>x.v.spend,roas:x=>x.v.roas??-1,p:x=>x.v.p,cpa:x=>x.v.cpa==null?1e9:-x.v.cpa,ctr:x=>x.v.ctr??-1,val:x=>x.v.val};
+  rs.sort((a,b)=>key[F.sort](b)-key[F.sort](a));
+  const sortBtn=[['spend','Spend'],['roas','ROAS'],['p','Purchases'],['cpa','Cost / purchase'],['ctr','CTR'],['val','Value']].map(([k,n])=>`<button data-set="ads.sort=${k}" aria-pressed="${F.sort===k}">${n}</button>`).join('');
+  const cards=rs.slice(0,36).map((x,i)=>adCard(x,i+1,r)).join('');
+  const sel=(name,opts,val)=>`<select data-f="ads.${name}">${opts.map(([k,n])=>`<option value="${esc(k)}"${val==k?' selected':''}>${esc(n)}</option>`).join('')}</select>`;
+  return `<div class="section" id="s-meta"><div class="sec-t"><div><span class="k">Meta</span><h2>Top performing ads</h2></div><span class="sub">${rs.length} ads with at least ${usd(F.min)} spend in the period</span></div>
+  <div class="filters"><span class="sub">Sort by</span><div class="seg" id="adsort">${sortBtn.replace(/data-set="ads\.sort=(\w+)"/g,'data-set="ads_sort=$1"')}</div>
+   ${sel('camp',[['all','All campaigns'],...camps.map(c=>[c,c])],F.camp)} ${sel('status',[['all','All statuses'],['active','Active only'],['paused','Paused / other']],F.status)}
+   <span class="sub">Min spend $</span><input type="number" data-f="ads.min" value="${F.min}" style="width:70px"></div>
+  <div class="ads">${cards||'<div class="empty">No ads match.</div>'}</div>
+  <div class="card" style="margin-top:14px"><div class="sec-t"><h2 style="font-size:15px">Ad × day matrix</h2><div class="seg">${[['roas','ROAS'],['spend','Spend'],['p','Purchases'],['cpa','$ / purchase']].map(([k,n])=>`<button data-set="mx=${k}" aria-pressed="${S.mx===k}">${n}</button>`).join('')}</div></div>${matrix(rs.slice(0,18),r)}</div></div>`;
+}
+document.addEventListener('click',(e)=>{const b=e.target.closest('[data-set^="ads_sort"]');if(b){S.ads.sort=b.dataset.set.split('=')[1];render()}},true);
+function adCard(x,rank,r){
+  const a=x.a,v=x.v,p=x.p,c=a.cr||{};const st=a.status==='ACTIVE'?['act','Active']:a.status==='PAUSED'?['off','Paused']:a.status==='WITH_ISSUES'?['iss','With issues']:['off',a.status];
+  return `<div class="ad"><div class="im"><img src="${a.img}" loading="lazy" alt=""><span class="rk">#${rank}</span><span class="roas">${xx(v.roas)}</span></div>
+  <div class="b"><div class="nm">${esc(a.name)} <span class="pill ${st[0]}">${st[1]}</span></div><div class="cp">${esc(a.adset)} · ${esc(a.camp.replace('Bean-',''))}</div>
+  <dl><dt>Spend</dt><dd>${usd(v.spend)}${dlt(v.spend,p.spend,1)}</dd><dt>Purchases</dt><dd>${fm(v.p)}${dlt(v.p,p.p)}</dd><dt>$ / purchase</dt><dd>${usd2(v.cpa)}${dlt(v.cpa,p.cpa,1)}</dd><dt>ROAS (Meta)</dt><dd>${xx(v.roas)}${dlt(v.roas,p.roas)}</dd>
+  <dt>CTR (link)</dt><dd>${pc(v.ctr,2)}</dd><dt>CPM</dt><dd>${usd2(v.cpm)}</dd><dt>Click→LPV</dt><dd>${pc(dv(v.lpv,v.clicks),0)}</dd><dt>LPV→checkout</dt><dd>${pc(dv(v.ic,v.lpv),1)}</dd></dl>
+  ${c.title?`<div class="copy"><b>${esc(c.title)}</b>${esc((c.body||'').slice(0,150))}${(c.body||'').length>150?`<details><summary>Full copy</summary>${esc(c.body).replace(/\n/g,'<br>')}<br><i>${esc(c.desc||'')}</i> · CTA ${esc(c.cta||'')}</details>`:`<br><i>${esc(c.desc||'')}</i>`}</div>`:''}</div></div>`;
+}
+function matrix(rs,r){
+  const days=dayList(Math.max(r.ini,addD(r.fin,-20))<r.ini?r.ini:(diffD(r.ini,r.fin)>20?addD(r.fin,-20):r.ini),r.fin);
+  const m=S.mx;const val=(a,d)=>{const t=a.daily[d];if(!t)return null;const v=M7(t);return m==='roas'?(v.spend>=3?v.roas:null):m==='spend'?v.spend:m==='p'?v.p:(v.p?v.cpa:null)};
+  const col=(v)=>{if(v==null)return '#F4F4F0';if(m==='roas')return v>=3?'#7CCB9A':v>=2?'#B6E2C6':v>=1.2?'#FFF1C2':'#F6C9C0';if(m==='cpa')return v<=18?'#7CCB9A':v<=28?'#B6E2C6':v<=40?'#FFF1C2':'#F6C9C0';if(m==='spend'){return `rgba(91,114,181,${Math.min(.85,.1+v/1500)})`}return `rgba(46,139,87,${Math.min(.85,.1+v/60)})`};
+  const f=(v)=>v==null?'':m==='roas'?v.toFixed(1):m==='cpa'?'$'+v.toFixed(0):m==='spend'?'$'+fm(v):fm(v);
+  const head='<tr><th></th>'+days.map(d=>`<th>${fshort(d)}</th>`).join('')+'</tr>';
+  const body=rs.map(x=>`<tr><td class="nm" title="${esc(x.a.name)} · ${esc(x.a.adset)}">${esc(x.a.name.replace('AD-',''))}</td>${days.map(d=>{const v=val(x.a,d);return `<td class="c" style="background:${col(v)}">${f(v)}</td>`}).join('')}</tr>`).join('');
+  return `<div style="overflow:auto"><table class="mx">${head}${body}</table></div><div class="sub legend" style="margin-top:6px">${m==='roas'?'ROAS (Meta value / spend, days with $3+ spend): <span style="background:#7CCB9A">3x+</span><span style="background:#B6E2C6">2-3x</span><span style="background:#FFF1C2">1.2-2x</span><span style="background:#F6C9C0">under 1.2x</span>':m==='cpa'?'Cost per Meta purchase: <span style="background:#7CCB9A">≤$18</span><span style="background:#B6E2C6">≤$28</span><span style="background:#FFF1C2">≤$40</span><span style="background:#F6C9C0">over $40</span>':'Darker = more'}</div>`;
+}
+
+// ───────── copy ─────────
+function copyBoard(r){
+  const g={};for(const x of metaRows(r)){const c=x.a.cr||{};const k=c.title||'(no headline)';const o=g[k]=g[k]||{title:k,body:c.body,desc:c.desc,ads:[],v:z(7)};o.ads.push(x.a.name.replace('AD-',''));addv(o.v,[x.v.spend,x.v.clicks,x.v.impr,x.v.lpv,x.v.ic,x.v.p,x.v.val])}
+  const rows=Object.values(g).filter(o=>o.v[0]>=10).map(o=>({...o,m:M7(o.v)}));
+  const mc=[{t:'Headline',v:x=>x.title,f:(v,x)=>`<b>${esc(v)}</b><div class="sub">${esc((x.body||'').slice(0,170))}${(x.body||'').length>170?'…':''}</div>`},
+    {t:'Ads',n:1,v:x=>x.ads.length,f:(v,x)=>`<span title="${esc(x.ads.join(', '))}">${v}</span>`},{t:'Spend',n:1,v:x=>x.m.spend,f:usd},{t:'Purch.',n:1,v:x=>x.m.p,f:fm},{t:'$ / purch.',n:1,asc:1,v:x=>x.m.cpa,f:usd2},{t:'ROAS',n:1,v:x=>x.m.roas,f:xx},{t:'CTR',n:1,v:x=>x.m.ctr,f:(v)=>pc(v,2)}];
+  const L=D.google.labels.map(l=>{let a=[0,0,0];for(const[d,v]of Object.entries(l.daily))if(inR(d,r))addv(a,v);return {f:l.f,t:l.t,i:a[0],c:a[1],cv:a[2],ctr:dv(a[1],a[0])}}).filter(l=>l.i>0);
+  const hl=L.filter(l=>l.f==='HEADLINE'),dl=L.filter(l=>l.f==='DESCRIPTION');
+  const lc=[{t:'Text',v:x=>x.t},{t:'Impr.',n:1,v:x=>x.i,f:fm},{t:'Clicks',n:1,v:x=>x.c,f:fm},{t:'CTR',n:1,v:x=>x.ctr,f:(v)=>pc(v,1)},{t:'Reserv.',n:1,v:x=>x.cv,f:(v)=>fm(v)}];
+  const dg=D.google.dgAds.map(a=>{let t=z(5);for(const[d,v]of Object.entries(a.daily))if(inR(d,r))addv(t,v);return {a,v:G5(t)}});
+  return `<div class="section" id="s-copy"><div class="sec-t"><div><span class="k">Ad copy</span><h2>Which messages win</h2></div><span class="sub">Same date range as above.</span></div>
+  <div class="grid g2"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · by headline</h2></div>${tbl('copymeta',mc,rows,{def:2})}</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Google Search (brand RSA) · headlines</h2></div><div class="sub" style="margin-bottom:6px">Impressions, clicks and reservations credited to each headline when it is shown (Google does not give asset ratings on this account yet).</div>${tbl('hl',lc,hl,{def:1})}
+  <div class="sec-t" style="margin-top:12px"><h2 style="font-size:15px">Descriptions</h2></div>${tbl('dl',lc,dl,{def:1,noscroll:1})}</div></div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Demand Gen ads</h2></div>${dg.length?tbl('dgad',[{t:'Ad',v:x=>x.a.adGroup,f:(v,x)=>`<b>${esc(v)}</b><div class="tags" style="margin-top:4px">${x.a.headlines.map(h=>`<span>${esc(h)}</span>`).join('')}</div><div class="sub">${x.a.descriptions.map(esc).join(' · ')}</div>`},{t:'Spend',n:1,v:x=>x.v.spend,f:usd},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CPC',n:1,asc:1,v:x=>x.v.cpc,f:usd2},{t:'Reserv.',n:1,v:x=>x.v.conv,f:fm}],dg,{noscroll:1}):'<div class="empty">No Demand Gen ads.</div>'}</div></div>`;
+}
+
+// ───────── Google ─────────
+function googleSec(r){
+  const cs=D.google.campaigns.map(c=>{let t=z(5),p=z(5);for(const[d,v]of Object.entries(c.daily)){if(inR(d,r))addv(t,v);if(inP(d,r))addv(p,v)}return {c,v:G5(t),p:G5(p)}}).filter(x=>x.v.spend>0||x.p.spend>0);
+  const cc=[{t:'Campaign',v:x=>x.c.name,f:(v,x)=>`<b>${esc(v)}</b> <span class="pill">${esc(x.c.type.replace('PERFORMANCE_MAX','PMax').replace('DEMAND_GEN','Demand Gen'))}</span>`},{t:'Spend',n:1,v:x=>x.v.spend,f:(v,x)=>usd(v)+dlt(v,x.p.spend,1)},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CPC',n:1,asc:1,v:x=>x.v.cpc,f:usd2},{t:'Reserv.',n:1,v:x=>x.v.conv,f:(v,x)=>fm(v)+dlt(v,x.p.conv)},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2},{t:'Value',n:1,v:x=>x.v.val,f:usd},{t:'ROAS',n:1,v:x=>x.v.roas,f:xx}];
+  const ag=D.google.assetGroups.map(g=>{let t=z(5),p=z(5);for(const[d,v]of Object.entries(g.daily)){if(inR(d,r))addv(t,v);if(inP(d,r))addv(p,v)}return {g,v:G5(t),p:G5(p)}}).filter(x=>x.v.spend>0||x.p.spend>0);
+  const ac=[{t:'Asset group',v:x=>x.g.name,f:(v,x)=>`<details class="gd"><summary>${esc(v)} <span class="pill ${x.g.status==='ENABLED'?'act':'off'}">${esc(x.g.status.toLowerCase())}</span></summary>${assetDetail(x.g)}</details>`},{t:'Spend',n:1,v:x=>x.v.spend,f:(v,x)=>usd(v)+dlt(v,x.p.spend,1)},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'Reserv.',n:1,v:x=>x.v.conv,f:(v,x)=>fm(v)+dlt(v,x.p.conv)},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2},{t:'ROAS',n:1,v:x=>x.v.roas,f:xx}];
+  const sa=D.google.searchAds.map(a=>{let t=z(5);for(const[d,v]of Object.entries(a.daily))if(inR(d,r))addv(t,v);return {a,v:G5(t)}}).filter(x=>x.v.spend>0);
+  const sc=[{t:'Search ad',v:x=>x.a.adGroup,f:(v,x)=>`<details class="gd"><summary>${esc(x.a.campaign)} · ${esc(v)}</summary><div class="tags" style="margin-top:6px">${x.a.headlines.map(h=>`<span>${esc(h)}</span>`).join('')}</div><div class="sub">${x.a.descriptions.map(esc).join('<br>')}</div></details>`},{t:'Spend',n:1,v:x=>x.v.spend,f:usd},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CTR',n:1,v:x=>x.v.ctr,f:(v)=>pc(v,1)},{t:'Reserv.',n:1,v:x=>x.v.conv,f:fm},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2}];
+  return `<div class="section" id="s-google"><div class="sec-t"><div><span class="k">Google Ads</span><h2>Campaigns, asset groups and ads</h2></div><span class="sub">Conversions = the "Reservation" conversion action (fixed value $75 in Google).</span></div>
+  <div class="card">${tbl('gc',cc,cs,{def:1,noscroll:1})}</div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Performance Max asset groups (click a name to see its copy and images)</h2></div>${tbl('ag',ac,ag,{def:1,noscroll:1})}</div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Search ads</h2></div>${sa.length?tbl('sa',sc,sa,{def:1,noscroll:1}):'<div class="empty">No Search ad spend in this period.</div>'}</div></div>`;
+}
+function assetDetail(g){const t=g.assets.text||{},im=g.assets.img||[];const L=[['HEADLINE','Headlines'],['LONG_HEADLINE','Long headlines'],['DESCRIPTION','Descriptions']];
+  return L.map(([k,n])=>t[k]?`<div style="margin-top:6px"><b>${n}</b><div class="tags">${t[k].map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`:'').join('')+(im.length?`<div style="margin-top:6px"><b>Images</b> <span class="sub">(${im.length})</span><div class="imgs">${im.slice(0,24).map(i=>`<img src="${esc(i.u)}" loading="lazy" alt="">`).join('')}</div></div>`:'')}
+
+// ───────── plataformas / ubicaciones / dispositivos ─────────
+const PLAT={facebook:'Facebook',instagram:'Instagram',threads:'Threads',whatsapp:'WhatsApp',audience_network:'Audience Network',messenger:'Messenger',unknown:'Other'};
+const fmt=(pos)=>/reels/.test(pos)?'Reels':/stor/.test(pos)?'Stories':/(^|_)feed|profile_feed|explore/.test(pos)?'Feed':/instream/.test(pos)?'In-stream video':'Other';
+const POSN=(pos)=>pos.replace(/^(facebook|instagram|threads)_?/,'').replace(/_/g,' ')||'feed';
+function grp(rows,keyf,idx0){const o={};for(const x of rows){const k=keyf(x);if(k==null)continue;addv(o[k]=o[k]||z(7),x.slice(idx0))}return Object.entries(o).map(([k,v])=>({k,v:M7(v)}))}
+const mcols=(label,first)=>[{t:label,v:x=>x.k,f:first},{t:'Spend',n:1,v:x=>x.v.spend,f:(v,x)=>`<span class="meterbar" style="width:${Math.max(2,Math.round(x.share*70))}px"></span>${usd(v)}`},{t:'Share',n:1,v:x=>x.share,f:(v)=>pc(v,0)},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CTR',n:1,v:x=>x.v.ctr,f:(v)=>pc(v,2)},{t:'Purch.',n:1,v:x=>x.v.p,f:fm},{t:'$ / purch.',n:1,asc:1,v:x=>x.v.cpa,f:usd2},{t:'ROAS',n:1,v:x=>x.v.roas,f:xx},{t:'Checkout rate',n:1,v:x=>dv(x.v.ic,x.v.lpv),f:(v)=>pc(v,1)}];
+function metaTable(id,rows,label,namer){const tot=rows.reduce((a,x)=>a+x.v.spend,0);rows.forEach(x=>x.share=dv(x.v.spend,tot)||0);return tbl(id,mcols(label,namer||((v)=>esc(v))),rows,{def:1,noscroll:1})}
+function platSec(r){
+  const pl=D.meta.pl.filter(x=>inR(x[0],r));
+  const byPlat=grp(pl,x=>PLAT[x[1]]||x[1],3), byFmt=grp(pl,x=>fmt(x[2]),3), byPos=grp(pl,x=>(PLAT[x[1]]||x[1])+' · '+POSN(x[2]),3);
+  const dv1=grp(D.meta.dev.filter(x=>inR(x[0],r)),x=>({mobile_app:'Mobile app',mobile_web:'Mobile web',desktop:'Desktop',unknown:'Other'})[x[1]]||x[1],2);
+  const di=grp(D.meta.idev.filter(x=>inR(x[0],r)),x=>({iphone:'iPhone',android_smartphone:'Android phone',ipad:'iPad',android_tablet:'Android tablet',desktop:'Desktop',ipod:'iPod',other:'Other'})[x[1]]||x[1],2);
+  const DG=(k)=>({iphone:'Mobile',android_smartphone:'Mobile',ipod:'Mobile',ipad:'Tablet',android_tablet:'Tablet',desktop:'Desktop'})[k]||'Other';
+  const mg=grp(D.meta.idev.filter(x=>inR(x[0],r)),x=>DG(x[1]),2);
+  const gdv={};for(const x of D.google.device)if(inR(x[0],r)){const k={MOBILE:'Mobile',TABLET:'Tablet',DESKTOP:'Desktop',CONNECTED_TV:'Connected TV'}[x[1]]||x[1];addv(gdv[k]=gdv[k]||z(5),x.slice(3))}
+  const gn={};for(const x of D.google.network)if(inR(x[0],r)){const k={SEARCH:'Google Search',SEARCH_PARTNERS:'Search partners',YOUTUBE:'YouTube',DISCOVER:'Discover',CONTENT:'Display network',GMAIL:'Gmail',MIXED:'Cross-network (PMax)'}[x[1]]||x[1];addv(gn[k]=gn[k]||z(5),x.slice(3))}
+  const gcols=(label)=>[{t:label,v:x=>x.k},{t:'Spend',n:1,v:x=>x.v.spend,f:usd},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CPC',n:1,asc:1,v:x=>x.v.cpc,f:usd2},{t:'Reserv.',n:1,v:x=>x.v.conv,f:fm},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2}];
+  const keys=['Mobile','Tablet','Desktop','Connected TV','Other'];const mm=Object.fromEntries(mg.map(x=>[x.k,x.v])),gg=Object.fromEntries(Object.entries(gdv).map(([k,v])=>[k,G5(v)]));
+  const cons=keys.filter(k=>mm[k]||gg[k]).map(k=>({k,m:mm[k],g:gg[k],tot:(mm[k]?.spend||0)+(gg[k]?.spend||0)}));const ctot=cons.reduce((a,x)=>a+x.tot,0);
+  const cc=[{t:'Device',v:x=>x.k},{t:'Combined spend',n:1,v:x=>x.tot,f:(v)=>`<span class="meterbar" style="width:${Math.max(2,Math.round(dv(v,ctot)*70))}px"></span>${usd(v)} <span class="sub">${pc(dv(v,ctot),0)}</span>`},{t:'Meta spend',n:1,v:x=>x.m?.spend,f:usd},{t:'Meta $ / purch.',n:1,asc:1,v:x=>x.m?.cpa,f:usd2},{t:'Meta ROAS',n:1,v:x=>x.m?.roas,f:xx},{t:'Google spend',n:1,v:x=>x.g?.spend,f:usd},{t:'Google $ / reserv.',n:1,asc:1,v:x=>x.g?.cpa,f:usd2},{t:'Google CPC',n:1,asc:1,v:x=>x.g?.cpc,f:usd2}];
+  const rowsG=(o)=>Object.entries(o).map(([k,v])=>({k,v:G5(v)}));
+  return `<div class="section" id="s-plat"><div class="sec-t"><div><span class="k">Platforms, placements and devices</span><h2>Where the money works best</h2></div><span class="sub">Meta placements and devices come straight from Meta; Google devices and networks from Google Ads.</span></div>
+  <div class="grid g2"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · Facebook vs Instagram</h2></div>${metaTable('pp',byPlat,'Platform')}</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · Feed vs Reels vs Stories</h2></div>${metaTable('pf',byFmt,'Format')}</div></div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Meta · every placement</h2></div>${metaTable('ppos',byPos,'Platform · placement')}</div>
+  <div class="grid g2" style="margin-top:12px"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · device (app, web, desktop)</h2></div>${metaTable('md',dv1,'Device type')}</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · device model</h2></div>${metaTable('mi',di,'Device')}</div></div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Mobile vs tablet vs desktop · Meta and Google together</h2></div>${tbl('dcons',cc,cons,{def:1,noscroll:1})}</div>
+  <div class="grid g2" style="margin-top:12px"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Google · device</h2></div>${tbl('gdev',gcols('Device'),rowsG(gdv),{def:1,noscroll:1})}</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Google · network</h2></div>${tbl('gnet',gcols('Network'),rowsG(gn),{def:1,noscroll:1})}</div></div></div>`;
+}
+
+// ───────── demografía consolidada ─────────
+const AGEG={'AGE_RANGE_18_24':'18-24','AGE_RANGE_25_34':'25-34','AGE_RANGE_35_44':'35-44','AGE_RANGE_45_54':'45-54','AGE_RANGE_55_64':'55-64','AGE_RANGE_65_UP':'65+','AGE_RANGE_UNDETERMINED':'Unknown'};
+const GENG={MALE:'Male',FEMALE:'Female',UNDETERMINED:'Unknown'};
+const INCG={INCOME_RANGE_0_50:'Lower 50%',INCOME_RANGE_50_60:'41-50%',INCOME_RANGE_60_70:'31-40%',INCOME_RANGE_70_80:'21-30%',INCOME_RANGE_80_90:'11-20%',INCOME_RANGE_90_UP:'Top 10%',INCOME_RANGE_UNDETERMINED:'Unknown'};
+function consolidate(metaRows,googleRows,order){ // metaRows: [{k,v:[7]}], googleRows: [{k,v:[5]}]
+  const m={},g={};for(const x of metaRows)m[x.k]=x.v;for(const x of googleRows)g[x.k]=x.v;
+  const keys=[...new Set([...Object.keys(m),...Object.keys(g)])];
+  const rows=keys.map(k=>({k,m:m[k]||null,g:g[k]?G5(g[k]):null}));rows.forEach(x=>{x.tot=(x.m?.spend||0)+(x.g?.spend||0)});
+  const tot=rows.reduce((a,x)=>a+x.tot,0);rows.forEach(x=>x.share=dv(x.tot,tot)||0);
+  if(order)rows.sort((a,b)=>(order.indexOf(a.k)<0?99:order.indexOf(a.k))-(order.indexOf(b.k)<0?99:order.indexOf(b.k)));
+  return rows;
+}
+const ccols=(label)=>{const sh=S.cons;return [{t:label,v:x=>x.k,f:(v)=>`<b>${esc(v)}</b>`},
+  {t:'Combined spend',n:1,v:x=>x.tot,f:(v,x)=>`<span class="meterbar" style="width:${Math.max(2,Math.round(x.share*80))}px"></span>${usd(v)}`},{t:'Share',n:1,v:x=>x.share,f:(v)=>pc(v,0)},
+  {t:'Meta spend',n:1,v:x=>x.m?.spend,f:usd},{t:'Meta purch.',n:1,v:x=>x.m?.p,f:fm},{t:'Meta $/purch.',n:1,asc:1,v:x=>x.m?.cpa,f:usd2},{t:'Meta ROAS',n:1,v:x=>x.m?.roas,f:xx},{t:'Meta CTR',n:1,v:x=>x.m?.ctr,f:(v)=>pc(v,2)},
+  {t:'Google spend',n:1,v:x=>x.g?.spend,f:usd},{t:'Google reserv.',n:1,v:x=>x.g?.conv,f:(v)=>v==null?'–':fm(v)},{t:'Google $/res.',n:1,asc:1,v:x=>x.g?.cpa,f:usd2},{t:'Google CPC',n:1,asc:1,v:x=>x.g?.cpc,f:usd2}]};
+function gAgg(rows,keyf,r){const o={};for(const x of rows)if(inR(x[0],r)){const k=keyf(x[1]);if(k==null)continue;addv(o[k]=o[k]||z(5),x.slice(3))}return Object.entries(o).map(([k,v])=>({k,v}))}
+function demoSec(r){
+  const ag=D.meta.ag.filter(x=>inR(x[0],r));
+  const mg=grp(ag,x=>({male:'Male',female:'Female',unknown:'Unknown'})[x[2]]||x[2],3),ma=grp(ag,x=>x[1]==='Unknown'?'Unknown':x[1],3);
+  const gg=gAgg(D.google.gender,k=>GENG[k]||k,r),ga=gAgg(D.google.age,k=>AGEG[k]||k,r),gi=gAgg(D.google.income,k=>INCG[k]||k,r);
+  const gender=consolidate(mg,gg,['Female','Male','Unknown']),age=consolidate(ma,ga,['18-24','25-34','35-44','45-54','55-64','65+','Unknown']);
+  const ages=['18-24','25-34','35-44','45-54','55-64','65+'];
+  // matriz edad x género (Meta): costo por compra
+  const mat={};for(const x of ag){const k=x[1]+'|'+x[2];addv(mat[k]=mat[k]||z(7),x.slice(3))}
+  const cell=(a,gname)=>{const v=mat[a+'|'+gname];if(!v)return '<td class="c"></td>';const m=M7(v);const c=m.p>=3?(m.cpa<=22?'#7CCB9A':m.cpa<=32?'#B6E2C6':m.cpa<=45?'#FFF1C2':'#F6C9C0'):'#F4F4F0';return `<td class="c" style="background:${c};width:92px" title="${usd(m.spend)} spend, ${fm(m.p)} purchases">${m.p>=3?usd2(m.cpa):'–'}<div style="font-size:9px;color:#666">${usd(m.spend)}</div></td>`};
+  const mx=`<table class="mx"><tr><th></th><th>Female</th><th>Male</th><th>Unknown</th></tr>${ages.map(a=>`<tr><td class="nm">${a}</td>${cell(a,'female')}${cell(a,'male')}${cell(a,'unknown')}</tr>`).join('')}</table>`;
+  const inc=gi.map(x=>({k:x.k,v:G5(x.v)}));const itot=inc.reduce((a,x)=>a+x.v.spend,0);
+  const icols=[{t:'Household income (US percentile)',v:x=>x.k,f:(v)=>`<b>${v}</b>`},{t:'Spend',n:1,v:x=>x.v.spend,f:(v)=>`<span class="meterbar" style="width:${Math.max(2,Math.round(dv(v,itot)*80))}px"></span>${usd(v)}`},{t:'Share',n:1,v:x=>dv(x.v.spend,itot),f:(v)=>pc(v,0)},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CPC',n:1,asc:1,v:x=>x.v.cpc,f:usd2},{t:'Reserv.',n:1,v:x=>x.v.conv,f:fm},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2}];
+  const order=['Top 10%','11-20%','21-30%','31-40%','41-50%','Lower 50%','Unknown'];inc.sort((a,b)=>order.indexOf(a.k)-order.indexOf(b.k));
+  return `<div class="section" id="s-demo"><div class="sec-t"><div><span class="k">Demographics</span><h2>Who responds, Meta and Google together</h2></div><span class="sub">Spend adds up across platforms. Conversions stay separate because each platform counts its own.</span></div>
+  <div class="alert">Google only reports demographics for Search and Demand Gen. <b>Performance Max (about 70% of Google spend) has no demographic data</b>, so the Google columns cover Brand Search and Demand Gen only. Meta covers all of its spend.</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Gender</h2></div>${tbl('gender',ccols('Gender'),gender,{noscroll:1})}</div>
+  <div class="card" style="margin-top:12px"><div class="sec-t"><h2 style="font-size:15px">Age</h2></div>${tbl('age',ccols('Age'),age,{noscroll:1})}</div>
+  <div class="grid g2" style="margin-top:12px"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Meta · cost per purchase by age and gender</h2></div><div style="overflow:auto">${mx}</div><div class="sub legend" style="margin-top:6px"><span style="background:#7CCB9A">≤$22</span><span style="background:#B6E2C6">≤$32</span><span style="background:#FFF1C2">≤$45</span><span style="background:#F6C9C0">over $45</span> (cells need 3+ purchases)</div></div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Household income · Google only</h2></div>${tbl('inc',icols,inc,{noscroll:1})}<div class="sub" style="margin-top:6px">Meta does not report household income. Google infers it by area, and "Unknown" is usually about half the impressions.</div></div></div></div>`;
+}
+
+// ───────── geografía ─────────
+const STATE_FIX={'Washington, District of Columbia':'District of Columbia'};
+function geoSec(r){
+  const mr={};for(const x of D.meta.reg)if(inR(x[0],r)){const k=STATE_FIX[x[1]]||x[1];const a=mr[k]=mr[k]||[0,0,0];a[0]+=x[2];a[1]+=x[3];a[2]+=x[4]}
+  const gr={};for(const x of D.google.region)if(inR(x[0],r)){const a=gr[x[1]]=gr[x[1]]||z(5);addv(a,x.slice(3))}
+  const keys=[...new Set([...Object.keys(mr),...Object.keys(gr)])].filter(k=>k&&k!=='Unknown');
+  const rows=keys.map(k=>{const m=mr[k],g=gr[k]?G5(gr[k]):null;return {k,ms:m?m[0]:0,mi:m?m[1]:0,mc:m?m[2]:0,g,tot:(m?m[0]:0)+(g?g.spend:0)}});
+  const tot=rows.reduce((a,x)=>a+x.tot,0);rows.forEach(x=>x.share=dv(x.tot,tot)||0);
+  const cols=[{t:'State',v:x=>x.k,f:(v)=>`<b>${esc(v)}</b>`},{t:'Combined spend',n:1,v:x=>x.tot,f:(v,x)=>`<span class="meterbar" style="width:${Math.max(2,Math.round(x.share*600))}px"></span>${usd(v)}`},{t:'Share',n:1,v:x=>x.share,f:(v)=>pc(v,1)},
+   {t:'Meta spend',n:1,v:x=>x.ms,f:usd},{t:'Meta clicks',n:1,v:x=>x.mc,f:fm},{t:'Meta CPC',n:1,asc:1,v:x=>dv(x.ms,x.mc),f:usd2},{t:'Meta CTR',n:1,v:x=>dv(x.mc,x.mi),f:(v)=>pc(v,2)},
+   {t:'Google spend',n:1,v:x=>x.g?.spend,f:usd},{t:'Google clicks',n:1,v:x=>x.g?.clicks,f:fm},{t:'Google CPC',n:1,asc:1,v:x=>x.g?.cpc,f:usd2},{t:'Google reserv.',n:1,v:x=>x.g?.conv,f:(v)=>v==null?'–':fm(v)},{t:'Google $/res.',n:1,asc:1,v:x=>x.g?.cpa,f:usd2}];
+  const agg=(list,top)=>{const o={};for(const x of list)if(inR(x[0],r)){const a=o[x[1]]=o[x[1]]||z(5);addv(a,x.slice(3))}return Object.entries(o).map(([k,v])=>({k,v:G5(v)})).sort((a,b)=>b.v.spend-a.v.spend).slice(0,top)};
+  const gcols=(label)=>[{t:label,v:x=>x.k,f:(v)=>`<b>${esc(v)}</b>`},{t:'Spend',n:1,v:x=>x.v.spend,f:usd},{t:'Clicks',n:1,v:x=>x.v.clicks,f:fm},{t:'CPC',n:1,asc:1,v:x=>x.v.cpc,f:usd2},{t:'Reserv.',n:1,v:x=>x.v.conv,f:fm},{t:'$ / reserv.',n:1,asc:1,v:x=>x.v.cpa,f:usd2}];
+  return `<div class="section" id="s-geo"><div class="sec-t"><div><span class="k">Geography</span><h2>States, metros and cities</h2></div><span class="sub">Click any header to sort.</span></div>
+  <div class="alert">Meta only reports spend, clicks and impressions by state: it does not return purchases by region. Google reports conversions by location, but with few reservations per state the cost per reservation is noisy.</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">By state · Meta and Google together</h2></div>${tbl('state',cols,rows,{def:1})}</div>
+  <div class="grid g2" style="margin-top:12px"><div class="card"><div class="sec-t"><h2 style="font-size:15px">Google · top metro areas (DMA)</h2></div>${tbl('metro',gcols('Metro'),agg(D.google.metro,70),{def:1})}</div>
+  <div class="card"><div class="sec-t"><h2 style="font-size:15px">Google · top cities</h2></div>${tbl('city',gcols('City'),agg(D.google.city,150),{def:1})}</div></div></div>`;
+}
+function notes(){return `<footer><b>How to read this page.</b> Meta ROAS and purchase counts are Meta's own: it counts the $29 reservation as a flat value and records roughly 1.5x the purchases Stripe does, so compare ads against each other rather than against Stripe. Google reservations come from the "Reservation" conversion action. Stripe numbers are the money actually collected and are only available per day, not per ad. Meta no longer returns DMA breakdowns and does not report household income or cities; those come from Google only. Data refreshes from Meta through the connector and from Google through the API.</footer>`}
+</script>
+</body>
+</html>
