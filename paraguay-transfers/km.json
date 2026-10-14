@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T23:10:02.157Z",
+ "generated": "2026-10-14T11:10:22.718Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1267,
-   "ultimoKm": 99107
+   "ultimoKm": 99208
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -68,10 +68,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 1130,
-   "kmFuera": 1114,
-   "viajes": 9,
-   "costoComb": 2843148,
+   "kmViajes": 1227,
+   "kmFuera": 1118,
+   "viajes": 10,
+   "costoComb": 2971115,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 36,
-   "conFoto": 30
+   "lecturas": 38,
+   "conFoto": 32
   },
   {
    "chofer": "Gustavo",
@@ -103,12 +103,12 @@
    "fechaIni": "2026-10-13",
    "fechaFin": "2026-10-13",
    "horaIni": "12:33",
-   "horaFin": null,
+   "horaFin": "21:42",
    "kmIni": 99107,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 99204,
+   "km": 97,
    "tanqueIni": 0.87,
-   "tanqueFin": null,
+   "tanqueFin": 0.65,
    "traslados": [
     "Vehiculo a disposición",
     "Vehiculo a disposición"
@@ -117,11 +117,11 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 122899,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -904,6 +904,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 99204,
+   "hasta": 99208,
+   "km": 4,
+   "fechaDesde": "2026-10-13",
+   "fechaHasta": "2026-10-13",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99102,
    "hasta": 99107,
    "km": 5,
@@ -1564,14 +1575,6 @@
   }
  ],
  "proximos": [
-  {
-   "fecha": "2026-10-13",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
   {
    "fecha": "2026-10-14",
    "chofer": "Alfredo",
