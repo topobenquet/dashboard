@@ -264,7 +264,6 @@
     const pinta = (d, animar) => {
       const pct = Math.min(100, d.recaudado / d.meta * 100);
       const dias = Math.max(0, Math.ceil((new Date(d.hasta) - Date.now()) / 864e5));
-      el.hidden = false;
       el.classList.add('cp', opt.mini ? 'cp-mini' : 'cp-full');
       el.innerHTML = `
         <div class="cp-top"><span class="cp-nombre">${esc(d.nombre)}</span><span class="cp-dias">${dias > 1 ? 'Faltan ' + dias + ' días' : dias === 1 ? 'Último día' : 'Terminó'}</span></div>
@@ -284,13 +283,17 @@
       requestAnimationFrame(paso);
     };
     const traer = () => fetch(API + '/progreso.php').then(r => r.json());
-    el.hidden = true;
+    // Invisible pero ocupando su lugar (la página le reserva el alto): si se ocultara del todo,
+    // el contenido de abajo saltaría al aparecer la barra.
+    el.style.visibility = 'hidden';
+    const sinDatos = () => { el.hidden = true; };
     traer().then(d => {
-      if (!d || !d.meta) return;
+      if (!d || !d.meta) return sinDatos();
       pinta(d, 'prep');
+      el.style.visibility = '';
       new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { obs.disconnect(); pinta(d, true); } }, {threshold: .3}).observe(el);
       setInterval(() => traer().then(n => { if (n.recaudado !== mostrado) pinta(n, true); }).catch(() => {}), 60000);
-    }).catch(() => {});
+    }).catch(sinDatos);
   }
 
   window.Donar = {montar, campana, MEDIOS, ICONOS, API, fmt};
