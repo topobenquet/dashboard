@@ -15,6 +15,21 @@
   const MINIMO = 10000;           // donación única
   const MINIMO_MENSUAL = 50000;   // aporte mensual
   const BASE = (document.currentScript && document.currentScript.src || location.href).replace(/[^/]*$/, '');
+  // Medios de pago de nuestra página (IDs de Pagopar; el checkout abre directo en el elegido).
+  const MEDIOS = [
+    {id: 26, nombre: 'Tarjeta', detalle: 'Crédito o débito', ico: 'tarjeta'},
+    {id: 24, nombre: 'QR', detalle: 'Con la app de tu banco', ico: 'qr'},
+    {id: 11, nombre: 'Transferencia', detalle: 'Desde tu banco', ico: 'banco'},
+    {id: 10, nombre: 'Tigo Money', detalle: 'Billetera', ico: 'billetera'},
+    {id: 12, nombre: 'Personal Pay', detalle: 'Billetera', ico: 'billetera'},
+    {id: 29, nombre: 'QR ueno', detalle: 'Con la app de ueno', ico: 'qr'},
+  ];
+  const ICONOS = {
+    tarjeta: '<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19M6 15h4"/></svg>',
+    qr: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v7h-4M14 18v3"/></svg>',
+    banco: '<svg viewBox="0 0 24 24"><path d="M3 9.5 12 4l9 5.5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20.5h18"/></svg>',
+    billetera: '<svg viewBox="0 0 24 24"><path d="M4 7.5h14.5A1.5 1.5 0 0 1 20 9v9.5a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M4 7.5 15.5 4v3.5M16 14h.5"/></svg>',
+  };
   const qs = new URLSearchParams(location.search);
   const fmt = n => 'Gs ' + Number(n).toLocaleString('es-PY');
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
@@ -47,6 +62,12 @@
           <div class="dn-campo"><label class="dn-lbl" for="dn-nombre">Nombre y apellido</label><input id="dn-nombre" name="nombre" autocomplete="name" required></div>
           <div class="dn-campo"><label class="dn-lbl" for="dn-tel">WhatsApp</label><input id="dn-tel" name="telefono" type="tel" autocomplete="tel" required></div>
           <div class="dn-campo"><label class="dn-lbl" for="dn-email">Email</label><input id="dn-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="dn-campo"><span class="dn-lbl">¿Cómo querés pagar?</span>
+            <div class="dn-medios-sel" role="radiogroup">${MEDIOS.map((m, i) => `
+              <label class="dn-medio"><input type="radio" name="forma_pago" value="${m.id}"${i ? '' : ' checked'}>
+                <span class="dn-medio-ico">${ICONOS[m.ico]}</span><span class="dn-medio-txt"><b>${m.nombre}</b><small>${m.detalle}</small></span></label>`).join('')}
+            </div>
+          </div>
           <label class="dn-chk"><input type="checkbox" name="novedades" checked> Quiero recibir novedades del hogar por WhatsApp</label>
           <p class="dn-err" role="alert"></p>
           <div class="dn-aviso" hidden></div>
@@ -54,7 +75,7 @@
         </form>
         <p class="dn-fine"></p>
         <button type="button" class="dn-down"></button>
-        <div class="dn-medios">Tarjeta · Transferencia · Tigo Money · Personal Pay · QR</div>
+        <div class="dn-medios">🔒 Pago seguro procesado por Pagopar</div>
       </div>`;
 
     const $ = s => el.querySelector(s);
@@ -116,6 +137,9 @@
       try {
         const r = await fetch(API + '/donar.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(datos)});
         const j = await r.json();
+        // El pago sigue en nuestra página de pago, con el checkout de Pagopar embebido.
+        // Va en el host de la API: es el único dominio donde Pagopar deja embeber su checkout.
+        if (j.ok && j.hash) { location.href = API + '/pagar/?h=' + j.hash + '&f=' + datos.forma_pago; return; }
         if (j.ok && j.url) { location.href = j.url; return; }
         err(j.error || 'No pudimos iniciar el pago. Probá de nuevo.');
       } catch (_) {
@@ -134,7 +158,8 @@
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) return err('Revisá el email.');
       if (n < minimo()) return err('El monto mínimo ' + (modo === 'mensual' ? 'mensual ' : '') + 'es ' + fmt(minimo()) + '.');
       const telefono = iti ? iti.getNumber() : f.telefono.value;
-      const datos = {nombre: f.nombre.value, telefono, email: f.email.value, novedades: f.novedades.checked, monto: n, modo: 'unica'};
+      const forma_pago = Number((f.querySelector('input[name=forma_pago]:checked') || {}).value || 26);
+      const datos = {forma_pago, nombre: f.nombre.value, telefono, email: f.email.value, novedades: f.novedades.checked, monto: n, modo: 'unica'};
 
       // El padrinazgo mensual se habilita cuando Pagopar active las suscripciones.
       // Mientras tanto, se ofrece empezar hoy con el mismo monto.
@@ -260,5 +285,5 @@
     }).catch(() => {});
   }
 
-  window.Donar = {montar, campana};
+  window.Donar = {montar, campana, MEDIOS, ICONOS, API, fmt};
 })();

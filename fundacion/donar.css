@@ -58,3 +58,14 @@
 .cp-barra i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--dn-ok,#39a935),#7cc84a);transition:width 1.4s cubic-bezier(.2,.8,.2,1);min-width:10px}
 .cp-pie{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:14px;color:var(--dn-muted,#666)}
 .cp-pie span:first-child{font-weight:700;color:var(--dn-ok-d,#2a7f27)}
+/* Medios de pago */
+.dn-medios-sel{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dn-medio{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;border:2px solid var(--dn-line,#e6e0d8);border-radius:14px;padding:12px 6px 10px;cursor:pointer;background:#fff;transition:border-color .15s,background .15s}
+.dn-medio input{position:absolute;opacity:0;pointer-events:none}
+.dn-medio:has(input:checked){border-color:var(--dn-accent,#ea8527);background:var(--dn-sel,#fff7ee);box-shadow:0 0 0 3px var(--dn-ring,rgba(234,133,39,.15))}
+.dn-medio:has(input:focus-visible){outline:2px solid var(--dn-accent,#ea8527);outline-offset:2px}
+.dn-medio-ico svg{width:26px;height:26px;fill:none;stroke:var(--dn-ink,#222);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.dn-medio:has(input:checked) .dn-medio-ico svg{stroke:var(--dn-accent-d,#c9661a)}
+.dn-medio-txt b{display:block;font-size:14px;line-height:1.2}
+.dn-medio-txt small{display:block;font-size:11px;color:var(--dn-muted,#666);line-height:1.25}
+@media (max-width:420px){.dn-medios-sel{grid-template-columns:repeat(2,1fr)}}
