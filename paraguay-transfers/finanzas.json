@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T14:30:20.677Z",
+ "generated": "2026-10-15T18:30:37.943Z",
  "tc": 5730,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-10-15",
   "itauGs": 43605,
-  "uenoGs": 20696640,
+  "uenoGs": 8336640,
   "uenoFecha": "2026-10-15",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 4344.75,
   "stripePendiente": 295.95,
-  "pagoparPendienteUsd": 15302.97,
+  "pagoparPendienteUsd": 15468.76,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -196,15 +196,15 @@
   },
   {
    "fecha": "2026-10-15",
-   "in": 2230.19,
-   "out": 41.88,
-   "n": 3,
+   "in": 2395.98,
+   "out": 62.82,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 2230.19,
-    "WhatsApp · Pagos (Majo)": -41.88
+    "Pagopar": 2395.98,
+    "WhatsApp · Pagos (Majo)": -62.82
    },
-   "neto": 2188.31,
-   "acum": 6964.74
+   "neto": 2333.16,
+   "acum": 7109.59
   }
  ],
  "movimientos": [
@@ -667,6 +667,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sean McKeown",
    "gs": 357000
+  },
+  {
+   "d": "2026-10-15",
+   "t": "in",
+   "usd": 165.79,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Sueli T Bonatti Buhatem",
+   "gs": 950000
   },
   {
    "d": "2026-10-01",
@@ -1257,6 +1265,20 @@
    }
   },
   {
+   "d": "2026-10-15",
+   "t": "out",
+   "usd": 20.94,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver INGRID DOMINGUEZ Traslado 15/10 15:30 - PAX IVAN",
+   "gs": 120000,
+   "rub": {
+    "chofer": 20.94,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.15,
@@ -1418,8 +1440,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 54,
-   "bruto": 15302.93,
+   "cobros": 55,
+   "bruto": 15468.72,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1434,8 +1456,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 87686000,
-  "cobradoUsd": 15302.93,
+  "cobradoGs": 88636000,
+  "cobradoUsd": 15468.72,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1517,9 +1539,9 @@
    },
    {
     "fecha": "2026-10-15",
-    "cobros": 2,
-    "gs": 12779000,
-    "usd": 2230.19
+    "cobros": 3,
+    "gs": 13729000,
+    "usd": 2395.98
    }
   ],
   "pruebasExcluidas": 0,
@@ -1527,8 +1549,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 87686000,
-  "pendienteUsd": 15302.97
+  "pendienteGs": 88636000,
+  "pendienteUsd": 15468.76
  },
  "giros": [
   {
@@ -1635,7 +1657,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲87.7 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲88.6 millones cobrados por Pagopar sin acreditar."
   },
   {
    "nivel": "warn",
@@ -1778,6 +1800,14 @@
    "usd": 314.14,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/ygjy3k (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-15",
+   "grupo": "Luis",
+   "gs": 30000,
+   "usd": 5.24,
+   "concepto": "peaje......",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
@@ -1843,6 +1873,13 @@
    "momento": "actual",
    "gs": 20696640,
    "usd": 3611.98
+  },
+  {
+   "fecha": "2026-10-15",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 8336640,
+   "usd": 1454.91
   }
  ]
 }
