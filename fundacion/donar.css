@@ -69,3 +69,5 @@
 .dn-medio-txt b{display:block;font-size:14px;line-height:1.2}
 .dn-medio-txt small{display:block;font-size:11px;color:var(--dn-muted,#666);line-height:1.25}
 @media (max-width:420px){.dn-medios-sel{grid-template-columns:repeat(2,1fr)}}
+/* Mensual con link de suscripción: solo montos y botón (los datos los pide Pagopar) */
+.dn-solo-link .dn-form .dn-campo,.dn-solo-link .dn-form .dn-chk{display:none}

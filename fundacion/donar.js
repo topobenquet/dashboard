@@ -116,14 +116,18 @@
         box.appendChild(b);
       });
       const m = cfg.montos[modo][sel];
+      // Mensual con link de suscripción de Pagopar: los datos y la tarjeta los pide Pagopar, acá no.
+      el.classList.toggle('dn-solo-link', !!(modo === 'mensual' && m.link));
       $('.dn-otro').hidden = !!m.gs;
       $('#dn-otro').placeholder = 'Mínimo ' + fmt(minimo());
       $('.dn-impacto').innerHTML = esc(m.txt || '');
       const n = monto();
       $('.dn-main').textContent = textoBoton(n);
-      $('.dn-fine').textContent = modo === 'mensual'
-        ? 'Podés cancelar cuando quieras. Pago seguro con Pagopar.'
-        : 'Pago seguro con Pagopar. Recibís la confirmación al instante.';
+      $('.dn-fine').textContent = modo === 'mensual' && m.link
+        ? 'Lo activás con tu tarjeta en la página segura de Pagopar. Podés cancelar cuando quieras.'
+        : modo === 'mensual'
+          ? 'Podés cancelar cuando quieras. Pago seguro con Pagopar.'
+          : 'Pago seguro con Pagopar. Recibís la confirmación al instante.';
       $('.dn-down').textContent = modo === 'mensual' ? 'Prefiero donar una sola vez' : 'Mejor, quiero ayudar todos los meses';
       $('.dn-aviso').hidden = true;
       $('.dn-main').hidden = false;
@@ -160,6 +164,11 @@
     $('.dn-form').onsubmit = e => {
       e.preventDefault();
       err('');
+      const elegido = cfg.montos[modo][sel];
+      if (modo === 'mensual' && elegido.link) {
+        location.href = elegido.link;
+        return;
+      }
       const f = e.target, n = monto();
       if (f.nombre.value.trim().length < 3) return err('Escribí tu nombre.');
       if (iti ? !iti.isValidNumber() : f.telefono.value.replace(/\D/g, '').length < 8) return err('Revisá el número de WhatsApp.');

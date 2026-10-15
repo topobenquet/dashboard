@@ -54,7 +54,7 @@
   .sec-lead{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 26px}
   .pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .pilar{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-  .pilar img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .pilar img{aspect-ratio:4/3;object-fit:cover;width:100%;height:auto}
   .pilar div{padding:16px 18px 20px}
   .pilar h3{margin:0 0 6px;font-size:18px}
   .pilar p{margin:0;color:var(--muted);font-size:15px}
@@ -260,10 +260,9 @@
   Donar.montar(document.getElementById('dn'), {
     montos: {
       mensual: [
-        {gs: 50000,  txt: 'Más de medio día de cuidado completo de un niño, todos los meses.'},
-        {gs: 100000, txt: 'Un día entero de un niño: comida, escuela, salud y cuidadoras. Todos los meses.', pop: true},
-        {gs: 250000, txt: 'Tres días completos de un niño, todos los meses.'},
-        {gs: 0,      txt: 'Elegí cuánto querés aportar cada mes. El mínimo es Gs 20.000.'}
+        {gs: 50000,  txt: 'Más de medio día de cuidado completo de un niño, todos los meses.', link: 'https://suscripcion.pagopar.com/oz'},
+        {gs: 100000, txt: 'Un día entero de un niño: comida, escuela, salud y cuidadoras. Todos los meses.', pop: true, link: 'https://suscripcion.pagopar.com/oy'},
+        {gs: 250000, txt: 'Tres días completos de un niño, todos los meses.', link: 'https://suscripcion.pagopar.com/p0'}
       ],
       unica: [
         {gs: 100000,  txt: 'Un día entero de un niño en el hogar.'},
@@ -271,8 +270,7 @@
         {gs: 1000000, txt: 'Un día entero del hogar, para los 12 niños.'},
         {gs: 0,       txt: 'Cualquier monto ayuda. El mínimo es Gs 10.000.'}
       ]
-    },
-    minimoMensual: 20000
+    }
   });
 </script>
 </body>
