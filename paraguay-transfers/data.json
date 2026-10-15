@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T10:20:46.715Z",
+  "generated": "2026-10-15T22:01:24.979Z",
   "lastSyncLabel": "15 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 19098.14,
-      "chofer": 9621.8,
-      "comb": 837.61,
-      "peajes": 291.07,
+      "revenue": 19045.68,
+      "chofer": 9590.64,
+      "comb": 834.69,
+      "peajes": 290.04,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1049.63,
+      "otros": 1045.95,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 317,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 174,
-      "reservas": 46,
-      "revenue": 16062.15,
-      "chofer": 10039.7,
-      "comb": 378.3,
+      "leads": 182,
+      "reservas": 48,
+      "revenue": 19304.64,
+      "chofer": 10158.22,
+      "comb": 376.97,
       "peajes": 0,
       "comision": 91.9,
       "reembolsos": 0,
-      "otros": 858.15,
-      "gAds": 241,
-      "meta": 59.46,
-      "costoSheet": 9409,
-      "gananciaSheet": 14028,
+      "otros": 855.15,
+      "gAds": 257,
+      "meta": 61.24,
+      "costoSheet": 10893,
+      "gananciaSheet": 13104,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 240.69,
-      "clicks": 12465,
-      "impr": 227465,
-      "conv": 43
+      "spend": 256.63,
+      "clicks": 14160,
+      "impr": 259742,
+      "conv": 44
     }
   ],
   "trips": [
@@ -5288,8 +5288,8 @@
       "pago": 417,
       "sena": 150,
       "restante": 267,
-      "choferCost": 0,
-      "neto": 404.49,
+      "choferCost": 82,
+      "neto": 322.52,
       "fechaReserva": "31/08/26",
       "fechaSalida": "04/10/26"
     },
@@ -5561,6 +5561,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "",
+      "cliente": "guillermo sosa",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 197,
+      "sena": 100,
+      "restante": 97,
+      "choferCost": 0,
+      "neto": 191.09,
+      "fechaReserva": "08/10/26",
+      "fechaSalida": "08/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-FOZ",
       "cliente": "carolina ramos mejia",
       "pais": "Ecuador",
@@ -5764,8 +5778,8 @@
       "pago": 95,
       "sena": 95,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 92.15,
+      "choferCost": 11,
+      "neto": 80.67,
       "fechaReserva": "09/10/26",
       "fechaSalida": "10/10/26"
     },
@@ -5890,8 +5904,8 @@
       "pago": 254,
       "sena": 100,
       "restante": 154,
-      "choferCost": 0,
-      "neto": 246.38,
+      "choferCost": 41,
+      "neto": 205.4,
       "fechaReserva": "10/10/26",
       "fechaSalida": "12/10/26"
     },
@@ -6037,20 +6051,6 @@
     },
     {
       "mes": "Octubre",
-      "route": "Bus terminal Asunción → Life Santa Teresa",
-      "cliente": "kenny dudek",
-      "pais": "Australia",
-      "conductor": "",
-      "pago": 49,
-      "sena": 49,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 47.53,
-      "fechaReserva": "14/10/26",
-      "fechaSalida": "14/10/26"
-    },
-    {
-      "mes": "Octubre",
       "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
       "cliente": "Tania Storm",
       "pais": "Paraguay",
@@ -6072,8 +6072,8 @@
       "pago": 254,
       "sena": 100,
       "restante": 154,
-      "choferCost": 0,
-      "neto": 246.38,
+      "choferCost": 41,
+      "neto": 205.4,
       "fechaReserva": "10/10/26",
       "fechaSalida": "15/10/26"
     },
@@ -6086,8 +6086,8 @@
       "pago": 417,
       "sena": 100,
       "restante": 317,
-      "choferCost": 20,
-      "neto": 384.82,
+      "choferCost": 197,
+      "neto": 207.77,
       "fechaReserva": "08/09/26",
       "fechaSalida": "15/10/26"
     },
@@ -6100,8 +6100,8 @@
       "pago": 69,
       "sena": 69,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 66.93,
+      "choferCost": 13,
+      "neto": 53.82,
       "fechaReserva": "28/09/26",
       "fechaSalida": "15/10/26"
     },
@@ -6149,43 +6149,57 @@
     },
     {
       "mes": "Octubre",
-      "route": "AERO-ASU",
-      "cliente": "g",
-      "pais": "Paraguay",
-      "conductor": "",
-      "pago": 197,
-      "sena": 100,
-      "restante": 97,
-      "choferCost": 0,
-      "neto": 191.09,
-      "fechaReserva": "07/10/26",
+      "route": "Hotel La Mision - Hangar",
+      "cliente": "ivan s",
+      "pais": "Emiratos Árabes",
+      "conductor": "Ingrid Domínguez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 20,
+      "neto": 19.67,
+      "fechaReserva": "14/10/26",
       "fechaSalida": "15/10/26"
     },
     {
       "mes": "Octubre",
-      "route": "",
+      "route": "Vuelo ASU-CDE",
       "cliente": "ivan s",
       "pais": "Emiratos Árabes",
-      "conductor": "",
+      "conductor": "Inflight Aviation",
       "pago": 1099,
       "sena": 1099,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 1066.03,
+      "choferCost": 790,
+      "neto": 275.97,
       "fechaReserva": "14/10/26",
+      "fechaSalida": "15/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Hotel Excelsior-Embajada Brasil - Hotel Excelsior",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 157,
+      "sena": 157,
+      "restante": 0,
+      "choferCost": 49,
+      "neto": 0,
+      "fechaReserva": "15/10/26",
       "fechaSalida": "15/10/26"
     },
     {
       "mes": "Octubre",
       "route": "ChâteauVictoriaHotel-AERO",
       "cliente": "Oliver Martin",
-      "pais": "",
-      "conductor": "",
+      "pais": "UK",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 32.21,
       "sena": 0,
       "restante": 32.21,
-      "choferCost": 0,
-      "neto": 32.21,
+      "choferCost": 36,
+      "neto": -3.86,
       "fechaReserva": "28/09/26",
       "fechaSalida": "16/10/26"
     },
@@ -6219,15 +6233,15 @@
     },
     {
       "mes": "Octubre",
-      "route": "ASU-PtoIguazu",
+      "route": "A Loft-PtoIguazu",
       "cliente": "Hisaaki Takei",
       "pais": "Japón",
       "conductor": "Juan Vera CDE",
       "pago": 300,
       "sena": 300,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 291,
+      "choferCost": 213,
+      "neto": 77.89,
       "fechaReserva": "01/09/26",
       "fechaSalida": "17/10/26"
     },
@@ -6285,6 +6299,20 @@
       "choferCost": 0,
       "neto": 685.79,
       "fechaReserva": "10/10/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Asunción Rent Suites - AERO",
+      "cliente": "Olivia Lovelace (Kenny Dudek)",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "14/10/26",
       "fechaSalida": "18/10/26"
     },
     {
@@ -6377,11 +6405,11 @@
       "cliente": "gabriel - primundo",
       "pais": "Brasil",
       "conductor": "",
-      "pago": 544,
+      "pago": 701,
       "sena": 544,
-      "restante": 0,
+      "restante": 157,
       "choferCost": 0,
-      "neto": 527.68,
+      "neto": 679.97,
       "fechaReserva": "14/10/26",
       "fechaSalida": "18/10/26"
     },
@@ -6425,6 +6453,20 @@
       "choferCost": 0,
       "neto": 178,
       "fechaReserva": "28/08/26",
+      "fechaSalida": "19/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Asunción → Asunción (multi-stop shopping)",
+      "cliente": "sean",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 197,
+      "sena": 59,
+      "restante": 138,
+      "choferCost": 0,
+      "neto": 191.09,
+      "fechaReserva": "15/10/26",
       "fechaSalida": "19/10/26"
     },
     {
@@ -6738,7 +6780,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-15": 3,
+      "2026-10-15": 11,
       "2026-10-14": 15,
       "2026-10-13": 18,
       "2026-10-12": 14,
@@ -6791,15 +6833,16 @@
       "2026-10-02": 2,
       "2026-10-05": 4,
       "2026-10-06": 3,
-      "2026-10-07": 5,
+      "2026-10-07": 4,
       "2026-10-10": 5,
-      "2026-10-08": 8,
+      "2026-10-08": 9,
       "2026-10-09": 5,
       "2026-10-01": 1,
       "2026-10-11": 3,
       "2026-10-12": 2,
       "2026-10-13": 2,
-      "2026-10-14": 6
+      "2026-10-14": 6,
+      "2026-10-15": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7076,13 +7119,13 @@
       "2026-10-12": 26.39,
       "2026-10-13": 19.35,
       "2026-10-14": 25.54,
-      "2026-10-15": 0.63
+      "2026-10-15": 16.58
     }
   },
   "resenas": {
-    "count": 70,
+    "count": 72,
     "rating": 5,
-    "actualizado": "2026-10-14T23:10:16.950Z",
+    "actualizado": "2026-10-15T20:10:29.069Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7218,6 +7261,11 @@
         "fecha": "2026-10-14",
         "count": 70,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-15",
+        "count": 72,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7316,10 +7364,10 @@
       "2026-10-05": 29,
       "2026-10-13": 13,
       "2026-10-14": 22,
-      "2026-10-15": 2
+      "2026-10-15": 12
     },
     "monthly": {
-      "Octubre": 258,
+      "Octubre": 268,
       "Septiembre": 213,
       "Agosto": 27
     }
