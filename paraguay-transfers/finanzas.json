@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T22:00:11.340Z",
+ "generated": "2026-10-15T00:30:09.753Z",
  "tc": 5710,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -11,9 +11,9 @@
   "uenoFecha": "2026-10-13",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 824.13,
-  "stripePendiente": 3530.07,
-  "pagoparPendienteUsd": 13020.84,
+  "stripeDisponible": 4344.75,
+  "stripePendiente": 295.95,
+  "pagoparPendienteUsd": 13118.56,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -182,19 +182,27 @@
   },
   {
    "fecha": "2026-10-14",
-   "in": 2124.35,
-   "out": 3091.07,
-   "n": 11,
+   "in": 2522.07,
+   "out": 3935.09,
+   "n": 15,
    "porFuente": {
-    "Pagopar": 2085.82,
-    "WhatsApp · Pagos (Majo)": -3091.07,
+    "Stripe": 300,
+    "Pagopar": 2183.54,
+    "WhatsApp · Pagos (Majo)": -3935.09,
     "Transferencia": 38.53
    },
-   "neto": -966.72,
-   "acum": 5232.3
+   "neto": -1413.02,
+   "acum": 4786
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 300,
+   "fuente": "Stripe",
+   "det": "Ivan"
+  },
   {
    "d": "2026-10-11",
    "t": "in",
@@ -615,6 +623,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sueli T Bonatti Buhatem",
    "gs": 3264000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 51.49,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Kenny Dudek",
+   "gs": 294000
+  },
+  {
+   "d": "2026-10-14",
+   "t": "in",
+   "usd": 46.23,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · JORGE LUIZ DA SILVA JUNIOR",
+   "gs": 264000
   },
   {
    "d": "2026-10-01",
@@ -1177,6 +1201,20 @@
    }
   },
   {
+   "d": "2026-10-14",
+   "t": "out",
+   "usd": 844.02,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Vuelo 15/10 Asu Cde Pax Ivan",
+   "gs": 4819350,
+   "rub": {
+    "chofer": 844.02,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 218.91,
@@ -1330,16 +1368,16 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 3,
-   "bruto": 1734,
-   "comision": 78.4,
+   "cobros": 4,
+   "bruto": 2034,
+   "comision": 91.9,
    "pct": 4.52,
    "nota": "medido cobro por cobro"
   },
   {
    "riel": "Pagopar",
-   "cobros": 50,
-   "bruto": 13020.8,
+   "cobros": 52,
+   "bruto": 13118.52,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1354,8 +1392,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 74349000,
-  "cobradoUsd": 13020.8,
+  "cobradoGs": 74907000,
+  "cobradoUsd": 13118.52,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1431,9 +1469,9 @@
    },
    {
     "fecha": "2026-10-14",
-    "cobros": 5,
-    "gs": 11910000,
-    "usd": 2085.82
+    "cobros": 7,
+    "gs": 12468000,
+    "usd": 2183.54
    }
   ],
   "pruebasExcluidas": 0,
@@ -1441,8 +1479,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 74349000,
-  "pendienteUsd": 13020.84
+  "pendienteGs": 74907000,
+  "pendienteUsd": 13118.56
  },
  "giros": [
   {
@@ -1549,7 +1587,11 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲74.3 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲74.9 millones cobrados por Pagopar sin acreditar."
+  },
+  {
+   "nivel": "warn",
+   "texto": "$4,345 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
