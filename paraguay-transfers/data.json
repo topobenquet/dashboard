@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-14T22:00:58.362Z",
-  "lastSyncLabel": "14 Oct 2026",
+  "generated": "2026-10-15T10:20:46.715Z",
+  "lastSyncLabel": "15 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 167,
-      "reservas": 43,
-      "revenue": 15664.43,
-      "chofer": 9195.68,
+      "leads": 174,
+      "reservas": 46,
+      "revenue": 16062.15,
+      "chofer": 10039.7,
       "comb": 378.3,
       "peajes": 0,
-      "comision": 78.4,
+      "comision": 91.9,
       "reembolsos": 0,
       "otros": 858.15,
-      "gAds": 231,
-      "meta": 58.2,
-      "costoSheet": 9128,
-      "gananciaSheet": 13143,
+      "gAds": 241,
+      "meta": 59.46,
+      "costoSheet": 9409,
+      "gananciaSheet": 14028,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 231.27,
-      "clicks": 11565,
-      "impr": 210355,
-      "conv": 40
+      "spend": 240.69,
+      "clicks": 12465,
+      "impr": 227465,
+      "conv": 43
     }
   ],
   "trips": [
@@ -6037,6 +6037,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Bus terminal Asunción → Life Santa Teresa",
+      "cliente": "kenny dudek",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "14/10/26",
+      "fechaSalida": "14/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Villa Aurelia/CodasThompson/Viila Aurelia",
       "cliente": "Tania Storm",
       "pais": "Paraguay",
@@ -6145,6 +6159,20 @@
       "choferCost": 0,
       "neto": 191.09,
       "fechaReserva": "07/10/26",
+      "fechaSalida": "15/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "",
+      "cliente": "ivan s",
+      "pais": "Emiratos Árabes",
+      "conductor": "",
+      "pago": 1099,
+      "sena": 1099,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 1066.03,
+      "fechaReserva": "14/10/26",
       "fechaSalida": "15/10/26"
     },
     {
@@ -6436,8 +6464,8 @@
       "pago": 100,
       "sena": 100,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 97,
+      "choferCost": 246,
+      "neto": -148.61,
       "fechaReserva": "12/09/26",
       "fechaSalida": "22/10/26"
     },
@@ -6482,6 +6510,20 @@
       "neto": 176.54,
       "fechaReserva": "10/10/26",
       "fechaSalida": "26/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "City tour en Asunción",
+      "cliente": "jorge",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 44,
+      "sena": 44,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 42.68,
+      "fechaReserva": "14/10/26",
+      "fechaSalida": "30/10/26"
     },
     {
       "mes": "Octubre",
@@ -6696,7 +6738,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-14": 11,
+      "2026-10-15": 3,
+      "2026-10-14": 15,
       "2026-10-13": 18,
       "2026-10-12": 14,
       "2026-10-11": 8,
@@ -6756,7 +6799,7 @@
       "2026-10-11": 3,
       "2026-10-12": 2,
       "2026-10-13": 2,
-      "2026-10-14": 3
+      "2026-10-14": 6
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7032,13 +7075,14 @@
       "2026-10-11": 29.92,
       "2026-10-12": 26.39,
       "2026-10-13": 19.35,
-      "2026-10-14": 16.75
+      "2026-10-14": 25.54,
+      "2026-10-15": 0.63
     }
   },
   "resenas": {
     "count": 70,
     "rating": 5,
-    "actualizado": "2026-10-14T20:10:01.960Z",
+    "actualizado": "2026-10-14T23:10:16.950Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7271,10 +7315,11 @@
       "2026-10-01": 19,
       "2026-10-05": 29,
       "2026-10-13": 13,
-      "2026-10-14": 17
+      "2026-10-14": 22,
+      "2026-10-15": 2
     },
     "monthly": {
-      "Octubre": 251,
+      "Octubre": 258,
       "Septiembre": 213,
       "Agosto": 27
     }
