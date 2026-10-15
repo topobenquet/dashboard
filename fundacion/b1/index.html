@@ -81,6 +81,13 @@
   .tarjeta{background:var(--paper);border-radius:24px;padding:26px;box-shadow:0 24px 60px -30px rgba(43,33,24,.45);border:1px solid var(--line)}
   .tarjeta h3{font-family:var(--serif);font-size:26px;line-height:1.15;margin:0 0 6px}
   .tarjeta .sub{color:var(--muted);font-size:15px;margin:0 0 18px}
+  /* Burbuja de WhatsApp para hablar con la fundación */
+  .wa{position:fixed;right:20px;bottom:20px;z-index:10;display:flex;align-items:center;gap:10px;text-decoration:none}
+  .wa-btn{width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.45);transition:transform .15s}
+  .wa:hover .wa-btn{transform:scale(1.06)}
+  .wa-btn svg{width:32px;height:32px;fill:#fff}
+  .wa-globo{background:#fff;color:var(--ink);font:600 14px var(--sans);padding:10px 14px;border-radius:14px 14px 4px 14px;box-shadow:0 10px 26px -10px rgba(0,0,0,.35);opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap}
+  .wa.saluda .wa-globo{opacity:1;transform:none}
   footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--muted);font-size:14px}
   footer .wrap{display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
 
@@ -94,6 +101,8 @@
     .cuerpo{grid-template-columns:1fr;gap:0}
     .card-col{position:static;order:-1;margin-bottom:56px}
     .dn-sticky.ver{display:block}
+    .wa{bottom:86px;right:14px}
+    .wa-btn{width:52px;height:52px}
   }
   @media (max-width:640px){
     .wrap{padding:0 16px}
@@ -210,6 +219,12 @@
 
 <button class="dn-sticky" type="button">Quiero ser padrino</button>
 
+<a class="wa" id="wa" href="https://wa.me/595982141153?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20de%20donaciones%20del%20Hogar%20Mborayhu%20y%20quiero%20ayudar.%20%C2%BFMe%20cuentan%20c%C3%B3mo%3F" target="_blank" rel="noopener" aria-label="Escribile al Hogar Mborayhu por WhatsApp">
+  <span class="wa-globo">¿Preguntas? Escribinos 👋</span>
+  <span class="wa-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.15c-.24.68-1.43 1.32-1.97 1.37-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.83 2 .9 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.07 1.31 2.36 1.46.29.15.46.12.63-.07.17-.19.73-.85.92-1.14.19-.29.39-.24.66-.15.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.12.07.7-.17 1.38z"/></svg></span>
+</a>
+
+
 <footer>
   <div class="wrap">
     <span>Fundación Mborayhu Tesai ha Vy'a Don Tito Rodas Roga · RUC 80031100-0</span>
@@ -226,6 +241,8 @@
   addEventListener('load', ajustar);
   new ResizeObserver(ajustar).observe(col);
   ajustar();
+  // La burbuja de WhatsApp saluda una vez, a los 8 segundos, y se calla a los 6.
+  setTimeout(() => { const w = document.getElementById('wa'); w.classList.add('saluda'); setTimeout(() => w.classList.remove('saluda'), 6000); }, 8000);
   Donar.campana(document.getElementById('campana'));
   Donar.campana(document.getElementById('campana-mini'), {mini: true});
   Donar.montar(document.getElementById('dn'), {
