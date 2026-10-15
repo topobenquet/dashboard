@@ -6,13 +6,15 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Hacete padrino | Hogar Mborayhu</title>
 <meta name="description" content="12 niños y niñas de 0 a 8 años encuentran un hogar en Caaguazú. Sostenelo todos los meses.">
+<link rel="preconnect" href="https://donar.jbenquet.com" crossorigin>
+<link rel="icon" href="../assets/logo.webp" type="image/webp">
 <link rel="preload" href="../assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/fonts.css">
 <link rel="stylesheet" href="../donar.css">
 <style>
   :root{
     --bg:#fffaf3; --paper:#fff; --ink:#2b2118; --muted:#6e6157; --line:#efe3d3;
-    --orange:#ea8527; --orange-d:#c9661a; --green:#39a935; --green-d:#2a7f27; --sun:#ffd23f; --soft:#fdf0e1;
+    --orange:#b85a12; --orange-d:#9c4a0c; --green:#39a935; --green-d:#1f6b1d; --sun:#ffd23f; --soft:#fdf0e1;
     --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,-apple-system,"Segoe UI",sans-serif;
     --dn-ink:var(--ink); --dn-muted:var(--muted); --dn-line:var(--line); --dn-accent:var(--orange); --dn-accent-d:var(--orange-d); --dn-ok:var(--green); --dn-ok-d:var(--green-d); --dn-soft:var(--soft); --dn-font:var(--sans);
   }
@@ -37,7 +39,8 @@
   .btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;border-radius:14px;padding:16px 26px;font-size:17px;box-shadow:0 8px 24px -10px rgba(234,133,39,.8)}
   .btn:hover{background:var(--orange-d)}
   .hero-note{font-size:14px;color:var(--muted)}
-  .hero-campana{margin-top:28px;max-width:520px}
+  .hero-campana{margin-top:28px;max-width:520px;min-height:132px}
+  #campana-mini{min-height:118px;margin-bottom:16px}
   .phone{position:relative;justify-self:center;width:min(340px,100%);aspect-ratio:9/16;border-radius:32px;overflow:hidden;background:#000;box-shadow:0 30px 60px -25px rgba(43,33,24,.55);border:8px solid #fff}
   .phone video{width:100%;height:100%;object-fit:cover}
   .phone button{position:absolute;right:12px;bottom:12px;border:0;border-radius:999px;background:rgba(255,255,255,.92);font:600 13px var(--sans);padding:8px 12px;cursor:pointer}
@@ -122,9 +125,9 @@
 </head>
 <body>
 
-<div class="wrap">
+<main class="wrap">
   <header class="top">
-    <img src="../assets/logo.png" alt="Hogar Mborayhu" width="75" height="46">
+    <img src="../assets/logo.webp" alt="Hogar Mborayhu" width="75" height="46">
     <a class="mini" href="#donar">Quiero ayudar</a>
   </header>
 
@@ -140,7 +143,7 @@
     </div>
     <div class="phone">
       <span class="sun"></span>
-      <video src="../assets/reel.mp4" poster="../assets/reel-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <video id="reel" data-src="../assets/reel.mp4" poster="../assets/reel-poster.webp" muted loop playsinline preload="none" width="324" height="576"></video>
       <button type="button" onclick="const v=this.previousElementSibling;v.muted=!v.muted;this.textContent=v.muted?'Activar sonido':'Silenciar'">Activar sonido</button>
     </div>
   </div>
@@ -151,9 +154,9 @@
         <h2>Lo que hace tu aporte, cada mes</h2>
         <p class="sec-lead">Mantener el hogar cuesta Gs 1.000.000 por día. Cada padrino cubre una parte, y juntos sostenemos el mes entero.</p>
         <div class="pilares">
-          <div class="pilar"><img src="../assets/hogar-02.jpg" alt="La huerta del hogar" loading="lazy"><div><h3>Comida de verdad</h3><p>Muchos llegan desnutridos. Acá comen comida casera, hecha por nuestra cocinera con verduras de la huerta del hogar.</p></div></div>
-          <div class="pilar"><img src="../assets/hogar-10.jpg" alt="Una cuna del hogar" loading="lazy"><div><h3>Salud y contención</h3><p>Al llegar, cada niño recibe un chequeo completo y acompañamiento psicológico.</p></div></div>
-          <div class="pilar"><img src="../assets/pintar.jpg" alt="Un niño dibujando" loading="lazy"><div><h3>Escuela todos los días</h3><p>Los llevamos y traemos cada día, para que su historia no les quite también el futuro.</p></div></div>
+          <div class="pilar"><img src="../assets/comedor.webp" alt="El comedor del hogar" loading="lazy" width="640" height="480"><div><h3>Comida de verdad</h3><p>Muchos llegan desnutridos. Acá comen comida casera, hecha por nuestra cocinera con verduras de la huerta del hogar.</p></div></div>
+          <div class="pilar"><img src="../assets/manos.webp" alt="La mano de una cuidadora sosteniendo la de un niño" loading="lazy" width="640" height="480"><div><h3>Salud y contención</h3><p>Al llegar, cada niño recibe un chequeo completo y acompañamiento psicológico.</p></div></div>
+          <div class="pilar"><img src="../assets/tarea.webp" alt="Zunilda ayudando a una niña con la tarea" loading="lazy" width="640" height="480"><div><h3>Escuela todos los días</h3><p>Los llevamos y traemos cada día, para que su historia no les quite también el futuro.</p></div></div>
         </div>
       </section>
 
@@ -161,15 +164,15 @@
         <h2>Un hogar, no una institución</h2>
         <p class="sec-lead">Patio para jugar, una huerta, cunas y camas propias, y personas que los cuidan con amor de mamá y papá mientras la justicia define su futuro.</p>
         <div class="mosaico">
-          <img src="../assets/hogar-12.jpg" alt="Un niño durmiendo en su cuna" loading="lazy" style="object-position:70% 60%">
-          <img src="../assets/juego.jpg" alt="Una nena jugando en el patio del hogar" loading="lazy">
-          <img src="../assets/hogar-06.jpg" alt="La casa del hogar" loading="lazy">
+          <img src="../assets/flores.webp" alt="Una niña del hogar mirando las flores del jardín" loading="lazy" width="640" height="597">
+          <img src="../assets/cuna.webp" alt="Una niña abrazando su peluche en la cuna" loading="lazy" width="520" height="693">
+          <img src="../assets/jardin.webp" alt="Chicos caminando por el jardín del hogar" loading="lazy" width="480" height="544">
         </div>
       </section>
 
       <section>
         <div class="cita">
-          <img src="../assets/zunilda.jpg" alt="Zunilda Ramírez" loading="lazy">
+          <img src="../assets/zunilda.webp" alt="Zunilda Ramírez" loading="lazy" width="120" height="120">
           <div>
             <blockquote>“Los cuidamos con amor maternal y paternal, que es lo que más necesitan y la mejor medicina para ellos.”</blockquote>
             <cite>Zunilda Ramírez, presidenta del Hogar Mborayhu</cite>
@@ -192,7 +195,7 @@
             <li>Reconocida por DICUIDA, SEPRELAD y la Abogacía del Tesoro</li>
             <li>RUC 80031100-0 · pagos procesados por Pagopar</li>
           </ul>
-          <img src="../assets/certificado.jpg" alt="Reconocimiento de DICUIDA al Hogar Mborayhu" loading="lazy">
+          <img src="../assets/certificado.webp" alt="Reconocimiento de DICUIDA al Hogar Mborayhu" loading="lazy">
         </div>
       </section>
 
@@ -215,7 +218,7 @@
       </div>
     </aside>
   </div>
-</div>
+</main>
 
 <button class="dn-sticky" type="button">Quiero ser padrino</button>
 
@@ -241,6 +244,15 @@
   addEventListener('load', ajustar);
   new ResizeObserver(ajustar).observe(col);
   ajustar();
+  // El video (pesado) recién se pide cuando la página terminó de cargar y está a la vista.
+  addEventListener('load', () => {
+    const v = document.getElementById('reel');
+    new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return v.pause();
+      if (!v.src) v.src = v.dataset.src;
+      v.play().catch(() => {});
+    }, {threshold: .25}).observe(v);
+  });
   // La burbuja de WhatsApp saluda una vez, a los 8 segundos, y se calla a los 6.
   setTimeout(() => { const w = document.getElementById('wa'); w.classList.add('saluda'); setTimeout(() => w.classList.remove('saluda'), 6000); }, 8000);
   Donar.campana(document.getElementById('campana'));

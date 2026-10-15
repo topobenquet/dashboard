@@ -9,7 +9,7 @@
 .dn-amt.on{border-color:var(--dn-accent,#ea8527);background:var(--dn-sel,#fff7ee);box-shadow:0 0 0 3px var(--dn-ring,rgba(234,133,39,.15))}
 .dn-gs{display:block;font-weight:700;font-size:17px}
 .dn-mes{display:block;font-size:12px;color:var(--dn-muted,#666)}
-.dn-pop{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--dn-ok,#39a935);color:#fff;font-size:10px;font-weight:700;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.dn-pop{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--dn-ok-d,#2a7f27);color:#fff;font-size:10px;font-weight:700;border-radius:999px;padding:2px 8px;white-space:nowrap}
 .dn-otro{margin-top:10px}
 .dn-impacto{background:var(--dn-soft,#fdf0e1);border-radius:12px;padding:12px 14px;font-size:15px;margin:14px 0 4px;min-height:24px}
 .dn-impacto:empty{display:none}

@@ -80,8 +80,16 @@
 
     const $ = s => el.querySelector(s);
     const minimo = () => modo === 'mensual' ? (cfg.minimoMensual || MINIMO_MENSUAL) : MINIMO;
-    let iti = null;
-    telefonoInternacional($('#dn-tel')).then(x => { iti = x; });
+    // El módulo de teléfono pesa (264 KB con los formatos): se carga recién cuando la tarjeta
+    // se acerca a la pantalla o cuando tocan el campo, no al abrir la página.
+    let iti = null, itiPedido = false;
+    const cargarTelefono = () => {
+      if (itiPedido) return;
+      itiPedido = true;
+      telefonoInternacional($('#dn-tel')).then(x => { iti = x; });
+    };
+    $('#dn-tel').addEventListener('focus', cargarTelefono, {once: true});
+    new IntersectionObserver(([e], obs) => { if (e.isIntersecting) { obs.disconnect(); cargarTelefono(); } }, {rootMargin: '300px'}).observe(el);
     const err = t => { $('.dn-err').textContent = t || ''; };
 
     function monto() {
@@ -261,7 +269,7 @@
       el.innerHTML = `
         <div class="cp-top"><span class="cp-nombre">${esc(d.nombre)}</span><span class="cp-dias">${dias > 1 ? 'Faltan ' + dias + ' días' : dias === 1 ? 'Último día' : 'Terminó'}</span></div>
         <div class="cp-montos"><b class="cp-rec">${fmt(mostrado)}</b><span>recaudados de ${fmt(d.meta)}</span></div>
-        <div class="cp-barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><i></i></div>
+        <div class="cp-barra" role="progressbar" aria-label="Progreso de la campaña" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><i></i></div>
         <div class="cp-pie"><span>${pct < 1 && pct > 0 ? '1' : Math.floor(pct)}% de la meta</span><span>${d.donantes} ${d.donantes === 1 ? 'persona ya ayudó' : 'personas ya ayudaron'}</span></div>`;
       const barra = el.querySelector('.cp-barra i'), rec = el.querySelector('.cp-rec');
       if (animar === 'prep') return;
