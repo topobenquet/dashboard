@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T12:30:20.368Z",
+ "generated": "2026-10-16T14:30:18.011Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -209,13 +209,14 @@
   {
    "fecha": "2026-10-16",
    "in": 0,
-   "out": 57.02,
-   "n": 1,
+   "out": 192.38,
+   "n": 2,
    "porFuente": {
-    "WhatsApp · Alfredo": -57.02
+    "WhatsApp · Alfredo": -57.02,
+    "WhatsApp · Luis": -135.36
    },
-   "neto": -57.02,
-   "acum": 7816.48
+   "neto": -192.38,
+   "acum": 7681.12
   }
  ],
  "movimientos": [
@@ -1326,6 +1327,20 @@
    }
   },
   {
+   "d": "2026-10-16",
+   "t": "out",
+   "usd": 135.36,
+   "fuente": "WhatsApp · Luis",
+   "det": "Pago Driver Luis Vazquez",
+   "gs": 781000,
+   "rub": {
+    "chofer": 135.36,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 216.64,
@@ -1864,6 +1879,22 @@
    "gs": 45000,
    "usd": 7.8,
    "concepto": "Buen Día... El translado de anoche todo bien... Llegó con un",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 2727000,
+   "usd": 472.62,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/h58yb9 (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-16",
+   "grupo": "Pagos (Majo)",
+   "gs": 208000,
+   "usd": 36.05,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/trhnhg (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
