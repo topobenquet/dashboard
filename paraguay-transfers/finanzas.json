@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T16:30:40.726Z",
+ "generated": "2026-10-16T18:30:33.493Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.7,
   "stripePendiente": 263.42,
-  "pagoparPendienteUsd": 16250.78,
+  "pagoparPendienteUsd": 16406.24,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -208,16 +208,16 @@
   },
   {
    "fecha": "2026-10-16",
-   "in": 0.03,
+   "in": 155.46,
    "out": 192.38,
    "n": 3,
    "porFuente": {
+    "Pagopar": 155.46,
     "WhatsApp · Alfredo": -57.02,
-    "WhatsApp · Luis": -135.36,
-    "Transferencia": 0.03
+    "WhatsApp · Luis": -135.36
    },
-   "neto": -192.35,
-   "acum": 7681.15
+   "neto": -36.92,
+   "acum": 7836.58
   }
  ],
  "movimientos": [
@@ -696,6 +696,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Ivan Strukov",
    "gs": 5131000
+  },
+  {
+   "d": "2026-10-16",
+   "t": "in",
+   "usd": 155.46,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Hisaaki Takei",
+   "gs": 897000
   },
   {
    "d": "2026-10-01",
@@ -1396,14 +1404,6 @@
    "fuente": "Transferencia",
    "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en GHL)",
    "gs": 80000
-  },
-  {
-   "d": "2026-10-16",
-   "t": "in",
-   "usd": 0.03,
-   "fuente": "Transferencia",
-   "det": "BEGREEN S.A (comprobante en GHL)",
-   "gs": 150
   }
  ],
  "pnl": [
@@ -1511,8 +1511,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 56,
-   "bruto": 16250.74,
+   "cobros": 57,
+   "bruto": 16406.2,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1527,8 +1527,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 93767000,
-  "cobradoUsd": 16250.74,
+  "cobradoGs": 94664000,
+  "cobradoUsd": 16406.2,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1613,6 +1613,12 @@
     "cobros": 4,
     "gs": 18860000,
     "usd": 3268.62
+   },
+   {
+    "fecha": "2026-10-16",
+    "cobros": 1,
+    "gs": 897000,
+    "usd": 155.46
    }
   ],
   "pruebasExcluidas": 0,
@@ -1620,8 +1626,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 93767000,
-  "pendienteUsd": 16250.78
+  "pendienteGs": 94664000,
+  "pendienteUsd": 16406.24
  },
  "giros": [
   {
@@ -1734,7 +1740,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲93.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲94.7 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
