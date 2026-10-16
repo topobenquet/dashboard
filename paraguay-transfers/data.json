@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16T10:20:59.768Z",
+  "generated": "2026-10-16T22:01:36.240Z",
   "lastSyncLabel": "16 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 19045.68,
-      "chofer": 9590.64,
-      "comb": 834.69,
-      "peajes": 290.04,
+      "revenue": 18942.01,
+      "chofer": 9529.01,
+      "comb": 828.9,
+      "peajes": 288.04,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1045.95,
+      "otros": 1038.71,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 317,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 185,
-      "reservas": 48,
-      "revenue": 19304.64,
-      "chofer": 10158.22,
-      "comb": 376.97,
+      "leads": 201,
+      "reservas": 50,
+      "revenue": 19675.55,
+      "chofer": 10860.45,
+      "comb": 374.36,
       "peajes": 0,
       "comision": 91.9,
       "reembolsos": 0,
-      "otros": 855.15,
-      "gAds": 263,
-      "meta": 63.89,
-      "costoSheet": 10893,
-      "gananciaSheet": 13082,
+      "otros": 849.22,
+      "gAds": 273,
+      "meta": 65.45,
+      "costoSheet": 11332,
+      "gananciaSheet": 13604,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 263.04,
-      "clicks": 15117,
-      "impr": 278733,
-      "conv": 44
+      "spend": 273.48,
+      "clicks": 16767,
+      "impr": 310179,
+      "conv": 48
     }
   ],
   "trips": [
@@ -6233,15 +6233,29 @@
     },
     {
       "mes": "Octubre",
+      "route": "Feria-Hotel.Excelsior",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "16/10/26",
+      "fechaSalida": "16/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "A Loft-PtoIguazu",
       "cliente": "Hisaaki Takei",
       "pais": "Japón",
       "conductor": "Juan Vera CDE",
-      "pago": 300,
+      "pago": 447,
       "sena": 300,
-      "restante": 0,
+      "restante": 147,
       "choferCost": 213,
-      "neto": 77.89,
+      "neto": 220.48,
       "fechaReserva": "01/09/26",
       "fechaSalida": "17/10/26"
     },
@@ -6278,13 +6292,41 @@
       "route": "AERO-ASU",
       "cliente": "marjo mäenpäã",
       "pais": "Finlandia",
-      "conductor": "",
+      "conductor": "José Berdén",
       "pago": 83,
       "sena": 49,
       "restante": 34,
       "choferCost": 0,
       "neto": 80.51,
       "fechaReserva": "06/10/26",
+      "fechaSalida": "17/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Hotel.Excelsior-Feria",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "16/10/26",
+      "fechaSalida": "17/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Feria-Hotel.Excelsior",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "16/10/26",
       "fechaSalida": "17/10/26"
     },
     {
@@ -6306,7 +6348,7 @@
       "route": "Asunción Rent Suites - AERO",
       "cliente": "Olivia Lovelace (Kenny Dudek)",
       "pais": "Australia",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 49,
       "sena": 49,
       "restante": 0,
@@ -6401,16 +6443,58 @@
     },
     {
       "mes": "Octubre",
+      "route": "Hotel.Excelsior-Feria",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "16/10/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Feria-Hotel.Excelsior",
+      "cliente": "gabriel - primundo",
+      "pais": "Brasil",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "16/10/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Hotel → Aeropuerto",
       "cliente": "gabriel - primundo",
       "pais": "Brasil",
-      "conductor": "",
-      "pago": 701,
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 1018,
       "sena": 544,
-      "restante": 157,
+      "restante": 474,
       "choferCost": 0,
-      "neto": 679.97,
+      "neto": 987.46,
       "fechaReserva": "14/10/26",
+      "fechaSalida": "18/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Desde Asuncion",
+      "cliente": "esteban rigoni",
+      "pais": "Paraguay",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 497,
+      "sena": 150,
+      "restante": 347,
+      "choferCost": 295,
+      "neto": 187.01,
+      "fechaReserva": "16/10/26",
       "fechaSalida": "18/10/26"
     },
     {
@@ -6432,7 +6516,7 @@
       "route": "ASU-FOZ",
       "cliente": "antje dometzky",
       "pais": "Alemania",
-      "conductor": "",
+      "conductor": "Alfredo Sánchez PT",
       "pago": 397,
       "sena": 120,
       "restante": 277,
@@ -6460,12 +6544,12 @@
       "route": "Asunción → Asunción (multi-stop shopping)",
       "cliente": "sean",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 197,
       "sena": 59,
       "restante": 138,
-      "choferCost": 0,
-      "neto": 191.09,
+      "choferCost": 115,
+      "neto": 76.34,
       "fechaReserva": "15/10/26",
       "fechaSalida": "19/10/26"
     },
@@ -6780,7 +6864,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-16": 2,
+      "2026-10-16": 18,
       "2026-10-15": 12,
       "2026-10-14": 15,
       "2026-10-13": 18,
@@ -6843,7 +6927,8 @@
       "2026-10-12": 2,
       "2026-10-13": 2,
       "2026-10-14": 6,
-      "2026-10-15": 2
+      "2026-10-15": 2,
+      "2026-10-16": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7121,13 +7206,13 @@
       "2026-10-13": 19.35,
       "2026-10-14": 25.54,
       "2026-10-15": 22.25,
-      "2026-10-16": 0.73
+      "2026-10-16": 11.17
     }
   },
   "resenas": {
     "count": 72,
     "rating": 5,
-    "actualizado": "2026-10-15T23:10:01.408Z",
+    "actualizado": "2026-10-16T20:10:08.766Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7268,6 +7353,11 @@
         "fecha": "2026-10-15",
         "count": 72,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-16",
+        "count": 72,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7306,6 +7396,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-10-16": 18,
       "2026-10-12": 27,
       "2026-10-11": 20,
       "2026-10-10": 14,
@@ -7366,11 +7457,10 @@
       "2026-10-05": 29,
       "2026-10-13": 13,
       "2026-10-14": 22,
-      "2026-10-15": 21,
-      "2026-10-16": 2
+      "2026-10-15": 21
     },
     "monthly": {
-      "Octubre": 279,
+      "Octubre": 295,
       "Septiembre": 213,
       "Agosto": 27
     }

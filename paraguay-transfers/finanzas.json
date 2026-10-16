@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T20:30:25.721Z",
+ "generated": "2026-10-16T22:00:35.598Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,9 +7,9 @@
  "saldos": {
   "fecha": "2026-10-16",
   "itauGs": 43605,
-  "uenoGs": 7816640,
+  "uenoGs": 26870646,
   "uenoFecha": "2026-10-16",
-  "uenoMomento": "actual",
+  "uenoMomento": "cierre",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.7,
   "stripePendiente": 263.42,
@@ -209,16 +209,16 @@
   {
    "fecha": "2026-10-16",
    "in": 490.64,
-   "out": 383.02,
-   "n": 5,
+   "out": 772.62,
+   "n": 6,
    "porFuente": {
     "Pagopar": 490.64,
     "WhatsApp · Alfredo": -57.02,
     "WhatsApp · Luis": -135.36,
-    "WhatsApp · Pagos (Majo)": -190.64
+    "WhatsApp · Pagos (Majo)": -580.24
    },
-   "neto": 107.62,
-   "acum": 7981.12
+   "neto": -281.98,
+   "acum": 7591.52
   }
  ],
  "movimientos": [
@@ -1373,6 +1373,20 @@
    }
   },
   {
+   "d": "2026-10-16",
+   "t": "out",
+   "usd": 389.6,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández",
+   "gs": 2248000,
+   "rub": {
+    "chofer": 389.6,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 216.64,
@@ -2029,6 +2043,13 @@
    "momento": "actual",
    "gs": 7816640,
    "usd": 1354.7
+  },
+  {
+   "fecha": "2026-10-16",
+   "cuenta": "ueno",
+   "momento": "cierre",
+   "gs": 26870646,
+   "usd": 4656.96
   }
  ]
 }
