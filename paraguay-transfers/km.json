@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T11:10:17.000Z",
+ "generated": "2026-10-16T17:10:13.700Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -16,7 +16,7 @@
    "precioDefault": 10400,
    "rendDefault": 10,
    "precioL": 8990,
-   "precioFuente": "última carga con litros (14/10)",
+   "precioFuente": "última carga con litros (16/10)",
    "rend": 8.61,
    "rendFuente": "medido en 4 tanque(s) lleno a lleno",
    "tramos": [
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1044,
-   "ultimoKm": 99420
+   "ultimoKm": 99491
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1294,
-   "kmFuera": 1263,
+   "kmFuera": 1334,
    "viajes": 11,
-   "costoComb": 2669508,
+   "costoComb": 2743632,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 43,
-   "conFoto": 37
+   "lecturas": 44,
+   "conFoto": 38
   },
   {
    "chofer": "Gustavo",
@@ -939,6 +939,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 99420,
+   "hasta": 99491,
+   "km": 71,
+   "fechaDesde": "2026-10-16",
+   "fechaHasta": "2026-10-16",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99392,
    "hasta": 99420,
    "km": 28,
@@ -1444,6 +1455,17 @@
  ],
  "cargas": [
   {
+   "fecha": "2026-10-16",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 382525,
+   "litros": 42.55,
+   "precioL": 8990,
+   "odo": 99491
+  },
+  {
    "fecha": "2026-10-14",
    "grupo": "Alfredo",
    "vehiculo": "H1",
@@ -1696,6 +1718,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:99420:99491",
+   "nivel": "juan",
+   "texto": "H1: 71 km sin traslado entre el 16/10 (km 99.420, Alfredo) y el 16/10 (km 99.491, Alfredo).",
+   "ts": 1792166406,
+   "fecha": "2026-10-16"
+  },
   {
    "key": "hueco:H1:99280:99392",
    "nivel": "juan",
