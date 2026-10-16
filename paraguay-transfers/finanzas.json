@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T22:00:35.598Z",
+ "generated": "2026-10-16T22:30:32.794Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.7,
   "stripePendiente": 263.42,
-  "pagoparPendienteUsd": 16741.42,
+  "pagoparPendienteUsd": 16793.24,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -208,17 +208,17 @@
   },
   {
    "fecha": "2026-10-16",
-   "in": 490.64,
+   "in": 542.46,
    "out": 772.62,
-   "n": 6,
+   "n": 7,
    "porFuente": {
-    "Pagopar": 490.64,
+    "Pagopar": 542.46,
     "WhatsApp · Alfredo": -57.02,
     "WhatsApp · Luis": -135.36,
     "WhatsApp · Pagos (Majo)": -580.24
    },
-   "neto": -281.98,
-   "acum": 7591.52
+   "neto": -230.16,
+   "acum": 7643.34
   }
  ],
  "movimientos": [
@@ -713,6 +713,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sueli T Bonatti Buhatem",
    "gs": 1934000
+  },
+  {
+   "d": "2026-10-16",
+   "t": "in",
+   "usd": 51.82,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Juan Cruz Viotti",
+   "gs": 299000
   },
   {
    "d": "2026-10-01",
@@ -1548,8 +1556,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 58,
-   "bruto": 16741.38,
+   "cobros": 59,
+   "bruto": 16793.2,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1564,8 +1572,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 96598000,
-  "cobradoUsd": 16741.38,
+  "cobradoGs": 96897000,
+  "cobradoUsd": 16793.2,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1653,9 +1661,9 @@
    },
    {
     "fecha": "2026-10-16",
-    "cobros": 2,
-    "gs": 2831000,
-    "usd": 490.64
+    "cobros": 3,
+    "gs": 3130000,
+    "usd": 542.46
    }
   ],
   "pruebasExcluidas": 0,
@@ -1663,8 +1671,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 96598000,
-  "pendienteUsd": 16741.42
+  "pendienteGs": 96897000,
+  "pendienteUsd": 16793.24
  },
  "giros": [
   {
@@ -1777,7 +1785,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲96.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲96.9 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
