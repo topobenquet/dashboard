@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T10:20:36.475Z",
+ "generated": "2026-10-17T12:30:06.916Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "cierre",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.7,
-  "stripePendiente": 355.85,
+  "stripePendiente": 838.57,
   "pagoparPendienteUsd": 16829.29,
   "relay": null,
   "binance": null,
@@ -219,9 +219,27 @@
    },
    "neto": -194.11,
    "acum": 7679.39
+  },
+  {
+   "fecha": "2026-10-17",
+   "in": 454,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Stripe": 454
+   },
+   "neto": 454,
+   "acum": 8133.39
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-10-17",
+   "t": "in",
+   "usd": 454,
+   "fuente": "Stripe",
+   "det": "GEMA BERNAL HERNANDEZ"
+  },
   {
    "d": "2026-10-14",
    "t": "in",
@@ -1556,10 +1574,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 4,
-   "bruto": 2034,
-   "comision": 91.9,
-   "pct": 4.52,
+   "cobros": 5,
+   "bruto": 2488,
+   "comision": 114.43,
+   "pct": 4.6,
    "nota": "medido cobro por cobro"
   },
   {
