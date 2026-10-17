@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-16T22:01:36.240Z",
-  "lastSyncLabel": "16 Oct 2026",
+  "generated": "2026-10-17T10:21:13.775Z",
+  "lastSyncLabel": "17 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 201,
-      "reservas": 50,
-      "revenue": 19675.55,
+      "leads": 205,
+      "reservas": 51,
+      "revenue": 19763.42,
       "chofer": 10860.45,
       "comb": 374.36,
       "peajes": 0,
       "comision": 91.9,
       "reembolsos": 0,
       "otros": 849.22,
-      "gAds": 273,
-      "meta": 65.45,
-      "costoSheet": 11332,
-      "gananciaSheet": 13604,
+      "gAds": 281,
+      "meta": 66.92,
+      "costoSheet": 11333,
+      "gananciaSheet": 13635,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 273.48,
-      "clicks": 16767,
-      "impr": 310179,
-      "conv": 48
+      "spend": 281.04,
+      "clicks": 17625,
+      "impr": 327672,
+      "conv": 50
     }
   ],
   "trips": [
@@ -6583,6 +6583,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Aeropuerto de Asunción a General Eugenio Alejandrino Garay 658, Villa Morra",
+      "cliente": "j",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "16/10/26",
+      "fechaSalida": "21/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Pto Iguazu - ASU",
       "cliente": "philip",
       "pais": "Australia",
@@ -6860,11 +6874,40 @@
       "neto": 0,
       "fechaReserva": "01/09/26",
       "fechaSalida": ""
+    },
+    {
+      "mes": "Diciembre",
+      "route": "FOZ-ASU",
+      "cliente": "pedro henriquez",
+      "pais": "RD",
+      "conductor": "",
+      "pago": 278,
+      "sena": 278,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 269.66,
+      "fechaReserva": "14/10/26",
+      "fechaSalida": "24/12/26"
+    },
+    {
+      "mes": "Diciembre",
+      "route": "ASU-FOZ-PtoIguazu",
+      "cliente": "joann",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 206,
+      "sena": 206,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 199.82,
+      "fechaReserva": "13/10/26",
+      "fechaSalida": "25/12/26"
     }
   ],
   "daily": {
     "leads": {
-      "2026-10-16": 18,
+      "2026-10-17": 2,
+      "2026-10-16": 20,
       "2026-10-15": 12,
       "2026-10-14": 15,
       "2026-10-13": 18,
@@ -6928,7 +6971,7 @@
       "2026-10-13": 2,
       "2026-10-14": 6,
       "2026-10-15": 2,
-      "2026-10-16": 2
+      "2026-10-16": 3
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7206,13 +7249,14 @@
       "2026-10-13": 19.35,
       "2026-10-14": 25.54,
       "2026-10-15": 22.25,
-      "2026-10-16": 11.17
+      "2026-10-16": 16.86,
+      "2026-10-17": 1.88
     }
   },
   "resenas": {
     "count": 72,
     "rating": 5,
-    "actualizado": "2026-10-16T20:10:08.766Z",
+    "actualizado": "2026-10-16T23:10:01.555Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7396,7 +7440,8 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-10-16": 18,
+      "2026-10-17": 3,
+      "2026-10-16": 20,
       "2026-10-12": 27,
       "2026-10-11": 20,
       "2026-10-10": 14,
@@ -7460,7 +7505,7 @@
       "2026-10-15": 21
     },
     "monthly": {
-      "Octubre": 295,
+      "Octubre": 300,
       "Septiembre": 213,
       "Agosto": 27
     }
