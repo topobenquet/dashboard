@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T00:40:01.952Z",
+ "generated": "2026-10-18T11:10:38.876Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1044,
-   "ultimoKm": 99590
+   "ultimoKm": 99719
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1294,
-   "kmFuera": 1433,
+   "kmFuera": 1562,
    "viajes": 11,
-   "costoComb": 2846988,
+   "costoComb": 2981664,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 45,
-   "conFoto": 39
+   "lecturas": 47,
+   "conFoto": 41
   },
   {
    "chofer": "Gustavo",
@@ -939,6 +939,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 99590,
+   "hasta": 99719,
+   "km": 129,
+   "fechaDesde": "2026-10-17",
+   "fechaHasta": "2026-10-17",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99491,
    "hasta": 99590,
    "km": 99,
@@ -1688,22 +1699,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-10-17",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-10-17",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "ASU-PtoIguazu",
-   "km": 750,
-   "adelanto": 861000
-  },
-  {
    "fecha": "2026-10-18",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -1730,24 +1725,10 @@
  ],
  "alertas": [
   {
-   "key": "sinkm:Alfredo:2026-10-17:Vehiculo a disposición",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado Vehiculo a disposición del 17/10. Mandalas con el número escrito, por favor.",
-   "ts": 1792292399,
-   "fecha": "2026-10-17"
-  },
-  {
-   "key": "sinkm:Alfredo:2026-10-17:ASU-PtoIguazu",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado ASU-PtoIguazu del 17/10. Mandalas con el número escrito, por favor.",
-   "ts": 1792292399,
-   "fecha": "2026-10-17"
-  },
-  {
-   "key": "sinkm:Alfredo:2026-10-17:Vehiculo a disposición",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado Vehiculo a disposición del 17/10. Mandalas con el número escrito, por favor.",
-   "ts": 1792292399,
+   "key": "hueco:H1:99590:99719",
+   "nivel": "juan",
+   "texto": "H1: 129 km sin traslado entre el 17/10 (km 99.590, Alfredo) y el 17/10 (km 99.719, Alfredo).",
+   "ts": 1792285579,
    "fecha": "2026-10-17"
   },
   {
