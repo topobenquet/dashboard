@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T12:30:23.096Z",
+ "generated": "2026-10-18T14:30:18.091Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -7,13 +7,13 @@
  "saldos": {
   "fecha": "2026-10-18",
   "itauGs": 43605,
-  "uenoGs": 26870646,
-  "uenoFecha": "2026-10-16",
-  "uenoMomento": "cierre",
+  "uenoGs": 18120646,
+  "uenoFecha": "2026-10-18",
+  "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.02,
   "stripePendiente": 904.23,
-  "pagoparPendienteUsd": 17594.8,
+  "pagoparPendienteUsd": 19286.31,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -236,14 +236,14 @@
   },
   {
    "fecha": "2026-10-18",
-   "in": 337.26,
+   "in": 2028.77,
    "out": 0,
-   "n": 2,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 337.26
+    "Pagopar": 2028.77
    },
-   "neto": 337.26,
-   "acum": 7451.44
+   "neto": 2028.77,
+   "acum": 9142.95
   }
  ],
  "movimientos": [
@@ -808,6 +808,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
    "gs": 421000
+  },
+  {
+   "d": "2026-10-18",
+   "t": "in",
+   "usd": 1691.51,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Silvia Almeida",
+   "gs": 9760000
   },
   {
    "d": "2026-10-01",
@@ -1679,8 +1687,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 65,
-   "bruto": 17594.76,
+   "cobros": 66,
+   "bruto": 19286.27,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1695,8 +1703,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 101522000,
-  "cobradoUsd": 17594.76,
+  "cobradoGs": 111282000,
+  "cobradoUsd": 19286.27,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1796,9 +1804,9 @@
    },
    {
     "fecha": "2026-10-18",
-    "cobros": 2,
-    "gs": 1946000,
-    "usd": 337.26
+    "cobros": 3,
+    "gs": 11706000,
+    "usd": 2028.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -1806,8 +1814,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 101522000,
-  "pendienteUsd": 17594.8
+  "pendienteGs": 111282000,
+  "pendienteUsd": 19286.31
  },
  "giros": [
   {
@@ -1920,7 +1928,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲101.5 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲111.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2123,6 +2131,14 @@
    "usd": 366.9,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/ewvzra (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-18",
+   "grupo": "Pagos (Majo)",
+   "gs": 1690000,
+   "usd": 292.89,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/hvw3nn (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
  "saldosHistorial": [
@@ -2209,6 +2225,13 @@
    "momento": "cierre",
    "gs": 26870646,
    "usd": 4656.96
+  },
+  {
+   "fecha": "2026-10-18",
+   "cuenta": "ueno",
+   "momento": "actual",
+   "gs": 18120646,
+   "usd": 3140.49
   }
  ]
 }
