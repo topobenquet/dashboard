@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T10:21:07.268Z",
+  "generated": "2026-10-18T22:01:22.825Z",
   "lastSyncLabel": "18 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 221,
-      "reservas": 53,
-      "revenue": 21412.25,
-      "chofer": 10860.45,
+      "leads": 226,
+      "reservas": 54,
+      "revenue": 23176.72,
+      "chofer": 10891.65,
       "comb": 374.36,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2798.96,
-      "gAds": 297,
-      "meta": 71.08,
-      "costoSheet": 11378,
-      "gananciaSheet": 13770,
+      "gAds": 312,
+      "meta": 73.29,
+      "costoSheet": 11428,
+      "gananciaSheet": 15389,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 296.95,
-      "clicks": 20436,
-      "impr": 380410,
-      "conv": 65
+      "spend": 312.14,
+      "clicks": 22338,
+      "impr": 415702,
+      "conv": 79
     }
   ],
   "trips": [
@@ -3652,7 +3652,7 @@
       "restante": 0,
       "choferCost": 197,
       "neto": 100,
-      "fechaReserva": "24/08/26",
+      "fechaReserva": "",
       "fechaSalida": "04/09/26"
     },
     {
@@ -3764,7 +3764,7 @@
       "restante": 0,
       "choferCost": 21,
       "neto": 26,
-      "fechaReserva": "20/08/26",
+      "fechaReserva": "",
       "fechaSalida": "09/09/26"
     },
     {
@@ -3778,7 +3778,7 @@
       "restante": 0,
       "choferCost": 16,
       "neto": 30,
-      "fechaReserva": "20/08/26",
+      "fechaReserva": "",
       "fechaSalida": "09/09/26"
     },
     {
@@ -3848,7 +3848,7 @@
       "restante": 0,
       "choferCost": 13,
       "neto": 33,
-      "fechaReserva": "20/08/26",
+      "fechaReserva": "",
       "fechaSalida": "12/09/26"
     },
     {
@@ -6391,11 +6391,11 @@
       "cliente": "Sílvia Almeida",
       "pais": "Portugal",
       "conductor": "William Salinas",
-      "pago": 2399,
+      "pago": 3999,
       "sena": 2399,
-      "restante": 0,
+      "restante": 1600,
       "choferCost": 1311,
-      "neto": 1015.55,
+      "neto": 2567.55,
       "fechaReserva": "02/09/26",
       "fechaSalida": "18/10/26"
     },
@@ -6607,6 +6607,20 @@
       "choferCost": 0,
       "neto": 47.53,
       "fechaReserva": "16/10/26",
+      "fechaSalida": "21/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Aeropuerto de Asunción a General Eugenio Alejandrino Garay 658, Villa Morra",
+      "cliente": "jimmy nasopoulos",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 66.93,
+      "fechaReserva": "18/10/26",
       "fechaSalida": "21/10/26"
     },
     {
@@ -6934,7 +6948,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-18": 4,
+      "2026-10-18": 9,
       "2026-10-17": 14,
       "2026-10-16": 20,
       "2026-10-15": 12,
@@ -7001,7 +7015,8 @@
       "2026-10-14": 6,
       "2026-10-15": 2,
       "2026-10-16": 3,
-      "2026-10-17": 2
+      "2026-10-17": 2,
+      "2026-10-18": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7281,13 +7296,13 @@
       "2026-10-15": 22.25,
       "2026-10-16": 16.86,
       "2026-10-17": 16.09,
-      "2026-10-18": 1.7
+      "2026-10-18": 16.89
     }
   },
   "resenas": {
     "count": 73,
     "rating": 5,
-    "actualizado": "2026-10-17T23:10:12.867Z",
+    "actualizado": "2026-10-18T20:10:08.454Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7438,6 +7453,11 @@
         "fecha": "2026-10-17",
         "count": 73,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-18",
+        "count": 73,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7539,10 +7559,10 @@
       "2026-10-13": 13,
       "2026-10-14": 22,
       "2026-10-15": 21,
-      "2026-10-18": 1
+      "2026-10-18": 7
     },
     "monthly": {
-      "Octubre": 312,
+      "Octubre": 318,
       "Septiembre": 213,
       "Agosto": 27
     }
