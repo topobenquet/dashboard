@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T22:00:07.341Z",
+ "generated": "2026-10-18T00:30:40.686Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -222,15 +222,17 @@
   },
   {
    "fecha": "2026-10-17",
-   "in": 829.39,
-   "out": 0,
-   "n": 3,
+   "in": 1262.67,
+   "out": 1949.74,
+   "n": 6,
    "porFuente": {
     "Stripe": 454,
-    "Pagopar": 375.39
+    "Pagopar": 375.39,
+    "WhatsApp · Pagos (Majo)": -1949.74,
+    "Transferencia": 433.28
    },
-   "neto": 829.39,
-   "acum": 8508.78
+   "neto": -687.07,
+   "acum": 6992.32
   }
  ],
  "movimientos": [
@@ -1438,6 +1440,34 @@
    }
   },
   {
+   "d": "2026-10-17",
+   "t": "out",
+   "usd": 1733.1,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Hugo Leandro Fernandez Rodriguez (Banco Itaú)",
+   "gs": 10000000,
+   "rub": {
+    "chofer": 0,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 1733.1
+   }
+  },
+  {
+   "d": "2026-10-17",
+   "t": "out",
+   "usd": 216.64,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Hugo Leandro Fernandez Rodriguez (Banco Itaú)",
+   "gs": 1250000,
+   "rub": {
+    "chofer": 0,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 216.64
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 216.64,
@@ -1492,6 +1522,14 @@
    "fuente": "Transferencia",
    "det": "FLORENTIN GIMENEZ, CARLOS DANIEL (comprobante en GHL)",
    "gs": 80000
+  },
+  {
+   "d": "2026-10-17",
+   "t": "in",
+   "usd": 433.28,
+   "fuente": "Transferencia",
+   "det": "WILLIAM ROLANDO SALINAS TORRES (comprobante en GHL)",
+   "gs": 2500000
   }
  ],
  "pnl": [
