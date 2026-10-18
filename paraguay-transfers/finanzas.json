@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T14:30:18.091Z",
+ "generated": "2026-10-18T16:30:21.529Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -237,13 +237,14 @@
   {
    "fecha": "2026-10-18",
    "in": 2028.77,
-   "out": 0,
-   "n": 3,
+   "out": 31.2,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 2028.77
+    "Pagopar": 2028.77,
+    "WhatsApp · Pagos (Majo)": -31.2
    },
-   "neto": 2028.77,
-   "acum": 9142.95
+   "neto": 1997.57,
+   "acum": 9111.75
   }
  ],
  "movimientos": [
@@ -1515,6 +1516,20 @@
     "comb": 0,
     "peajes": 0,
     "otros": 216.64
+   }
+  },
+  {
+   "d": "2026-10-18",
+   "t": "out",
+   "usd": 31.2,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago Driver Hugo Fernández Traslado 19/10 01:15am / H1 / Pax Didier",
+   "gs": 180000,
+   "rub": {
+    "chofer": 31.2,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
    }
   },
   {
