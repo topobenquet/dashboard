@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T10:20:28.268Z",
+ "generated": "2026-10-18T12:30:23.096Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.02,
   "stripePendiente": 904.23,
-  "pagoparPendienteUsd": 17521.84,
+  "pagoparPendienteUsd": 17594.8,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -236,14 +236,14 @@
   },
   {
    "fecha": "2026-10-18",
-   "in": 264.3,
+   "in": 337.26,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Pagopar": 264.3
+    "Pagopar": 337.26
    },
-   "neto": 264.3,
-   "acum": 7378.48
+   "neto": 337.26,
+   "acum": 7451.44
   }
  ],
  "movimientos": [
@@ -800,6 +800,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Françoise flecq",
    "gs": 1525000
+  },
+  {
+   "d": "2026-10-18",
+   "t": "in",
+   "usd": 72.96,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
+   "gs": 421000
   },
   {
    "d": "2026-10-01",
@@ -1671,8 +1679,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 64,
-   "bruto": 17521.8,
+   "cobros": 65,
+   "bruto": 17594.76,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1687,8 +1695,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 101101000,
-  "cobradoUsd": 17521.8,
+  "cobradoGs": 101522000,
+  "cobradoUsd": 17594.76,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1788,9 +1796,9 @@
    },
    {
     "fecha": "2026-10-18",
-    "cobros": 1,
-    "gs": 1525000,
-    "usd": 264.3
+    "cobros": 2,
+    "gs": 1946000,
+    "usd": 337.26
    }
   ],
   "pruebasExcluidas": 0,
@@ -1798,8 +1806,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 101101000,
-  "pendienteUsd": 17521.84
+  "pendienteGs": 101522000,
+  "pendienteUsd": 17594.8
  },
  "giros": [
   {
@@ -1912,7 +1920,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲101.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲101.5 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2106,6 +2114,14 @@
    "gs": 2250000,
    "usd": 389.95,
    "concepto": "• 18/10 Hotel → Aeropuerto: propongo Gs",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-18",
+   "grupo": "Pagos (Majo)",
+   "gs": 2117000,
+   "usd": 366.9,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/ewvzra (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
