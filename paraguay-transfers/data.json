@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-17T22:00:54.062Z",
-  "lastSyncLabel": "17 Oct 2026",
+  "generated": "2026-10-18T10:21:07.268Z",
+  "lastSyncLabel": "18 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
     {
@@ -14,7 +14,7 @@
       "comision": 87,
       "reembolsos": 0,
       "otros": 73,
-      "gAds": 153,
+      "gAds": 385,
       "meta": 0,
       "costoSheet": 1247,
       "gananciaSheet": 1515
@@ -30,7 +30,7 @@
       "comision": 261,
       "reembolsos": 0,
       "otros": 116,
-      "gAds": 292,
+      "gAds": 239,
       "meta": 21.69,
       "costoSheet": 6252,
       "gananciaSheet": 2645
@@ -46,7 +46,7 @@
       "comision": 217,
       "reembolsos": 0,
       "otros": 5,
-      "gAds": 367,
+      "gAds": 368,
       "meta": 156.48,
       "costoSheet": 5047,
       "gananciaSheet": 1897
@@ -62,7 +62,7 @@
       "comision": 124,
       "reembolsos": 0,
       "otros": 5,
-      "gAds": 535,
+      "gAds": 431,
       "meta": 114.87,
       "costoSheet": 3400,
       "gananciaSheet": 1779
@@ -78,7 +78,7 @@
       "comision": 151,
       "reembolsos": 0,
       "otros": 7,
-      "gAds": 464,
+      "gAds": 353,
       "meta": 89.94,
       "costoSheet": 2898,
       "gananciaSheet": 2131
@@ -94,7 +94,7 @@
       "comision": 129,
       "reembolsos": 0,
       "otros": 81,
-      "gAds": 182,
+      "gAds": 242,
       "meta": 0,
       "costoSheet": 2209,
       "gananciaSheet": 1487
@@ -110,7 +110,7 @@
       "comision": 221,
       "reembolsos": 0,
       "otros": 98,
-      "gAds": 133,
+      "gAds": 139,
       "meta": 0,
       "costoSheet": 4656,
       "gananciaSheet": 2648
@@ -126,7 +126,7 @@
       "comision": 418,
       "reembolsos": 23,
       "otros": 234,
-      "gAds": 274,
+      "gAds": 339,
       "meta": 108.64,
       "costoSheet": 7250,
       "gananciaSheet": 8298
@@ -142,7 +142,7 @@
       "comision": 128.85,
       "reembolsos": 0,
       "otros": 1038.71,
-      "gAds": 167,
+      "gAds": 425,
       "meta": 286.07,
       "costoSheet": 317,
       "gananciaSheet": 45770,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 214,
-      "reservas": 51,
-      "revenue": 20592.81,
+      "leads": 221,
+      "reservas": 53,
+      "revenue": 21412.25,
       "chofer": 10860.45,
       "comb": 374.36,
       "peajes": 0,
-      "comision": 114.43,
+      "comision": 117.77,
       "reembolsos": 0,
-      "otros": 849.22,
-      "gAds": 279,
-      "meta": 69.56,
-      "costoSheet": 11372,
-      "gananciaSheet": 13596,
+      "otros": 2798.96,
+      "gAds": 297,
+      "meta": 71.08,
+      "costoSheet": 11378,
+      "gananciaSheet": 13770,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 281.04,
-      "clicks": 17625,
-      "impr": 327672,
-      "conv": 50
+      "spend": 296.95,
+      "clicks": 20436,
+      "impr": 380410,
+      "conv": 65
     }
   ],
   "trips": [
@@ -6499,6 +6499,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Albor Apartments (avenida Felipe Molas López casi Del Chaco) a aeropuerto Silvio",
+      "cliente": "didier pare",
+      "pais": "Canadá",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "17/10/26",
+      "fechaSalida": "19/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Asunción Rent Suites Santa Teresa - Aero",
       "cliente": "Kenny Dudek",
       "pais": "Australia",
@@ -6635,6 +6649,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "09/07/26",
+      "fechaSalida": "24/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU City tour",
+      "cliente": "megan",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 147,
+      "sena": 50,
+      "restante": 97,
+      "choferCost": 0,
+      "neto": 142.59,
+      "fechaReserva": "17/10/26",
       "fechaSalida": "24/10/26"
     },
     {
@@ -6906,7 +6934,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-17": 11,
+      "2026-10-18": 4,
+      "2026-10-17": 14,
       "2026-10-16": 20,
       "2026-10-15": 12,
       "2026-10-14": 15,
@@ -6971,7 +7000,8 @@
       "2026-10-13": 2,
       "2026-10-14": 6,
       "2026-10-15": 2,
-      "2026-10-16": 3
+      "2026-10-16": 3,
+      "2026-10-17": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7250,13 +7280,14 @@
       "2026-10-14": 25.54,
       "2026-10-15": 22.25,
       "2026-10-16": 16.86,
-      "2026-10-17": 1.88
+      "2026-10-17": 16.09,
+      "2026-10-18": 1.7
     }
   },
   "resenas": {
     "count": 73,
     "rating": 5,
-    "actualizado": "2026-10-17T20:10:13.168Z",
+    "actualizado": "2026-10-17T23:10:12.867Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7445,7 +7476,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-10-17": 12,
+      "2026-10-17": 14,
       "2026-10-16": 20,
       "2026-10-12": 27,
       "2026-10-11": 20,
@@ -7507,10 +7538,11 @@
       "2026-10-05": 29,
       "2026-10-13": 13,
       "2026-10-14": 22,
-      "2026-10-15": 21
+      "2026-10-15": 21,
+      "2026-10-18": 1
     },
     "monthly": {
-      "Octubre": 309,
+      "Octubre": 312,
       "Septiembre": 213,
       "Agosto": 27
     }
