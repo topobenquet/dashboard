@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T23:10:17.020Z",
+ "generated": "2026-10-19T11:10:17.555Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1044,
-   "ultimoKm": 99799
+   "ultimoKm": 99824
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1294,
-   "kmFuera": 1642,
+   "kmFuera": 1667,
    "viajes": 11,
-   "costoComb": 3065184,
+   "costoComb": 3091284,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 49,
-   "conFoto": 43
+   "lecturas": 50,
+   "conFoto": 44
   },
   {
    "chofer": "Gustavo",
@@ -939,6 +939,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 99799,
+   "hasta": 99824,
+   "km": 25,
+   "fechaDesde": "2026-10-18",
+   "fechaHasta": "2026-10-19",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99787,
    "hasta": 99799,
    "km": 12,
@@ -1720,22 +1731,6 @@
   }
  ],
  "proximos": [
-  {
-   "fecha": "2026-10-18",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Asu-Foz",
-   "km": 690,
-   "adelanto": 792000
-  },
-  {
-   "fecha": "2026-10-18",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehiculo a disposición",
-   "km": null,
-   "adelanto": null
-  },
   {
    "fecha": "2026-10-19",
    "chofer": "Alfredo",
