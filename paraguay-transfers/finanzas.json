@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T14:30:31.514Z",
+ "generated": "2026-10-19T18:30:33.462Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 640.02,
   "stripePendiente": 941.21,
-  "pagoparPendienteUsd": 19432.24,
+  "pagoparPendienteUsd": 20164.99,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -248,14 +248,14 @@
   },
   {
    "fecha": "2026-10-19",
-   "in": 145.93,
+   "in": 878.68,
    "out": 0,
-   "n": 1,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 145.93
+    "Pagopar": 878.68
    },
-   "neto": 145.93,
-   "acum": 9257.68
+   "neto": 878.68,
+   "acum": 9990.43
   }
  ],
  "movimientos": [
@@ -836,6 +836,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Sean McKeown",
    "gs": 842000
+  },
+  {
+   "d": "2026-10-19",
+   "t": "in",
+   "usd": 292.89,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Antje Dometzky",
+   "gs": 1690000
+  },
+  {
+   "d": "2026-10-19",
+   "t": "in",
+   "usd": 439.86,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · CARLOS GONZÁLEZ",
+   "gs": 2538000
   },
   {
    "d": "2026-10-01",
@@ -1721,8 +1737,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 67,
-   "bruto": 19432.2,
+   "cobros": 69,
+   "bruto": 20164.95,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1737,8 +1753,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 112124000,
-  "cobradoUsd": 19432.2,
+  "cobradoGs": 116352000,
+  "cobradoUsd": 20164.95,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -1844,9 +1860,9 @@
    },
    {
     "fecha": "2026-10-19",
-    "cobros": 1,
-    "gs": 842000,
-    "usd": 145.93
+    "cobros": 3,
+    "gs": 5070000,
+    "usd": 878.68
    }
   ],
   "pruebasExcluidas": 0,
@@ -1854,8 +1870,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 112124000,
-  "pendienteUsd": 19432.24
+  "pendienteGs": 116352000,
+  "pendienteUsd": 20164.99
  },
  "giros": [
   {
@@ -1968,7 +1984,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲112.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲116.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
