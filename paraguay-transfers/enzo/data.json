@@ -1,0 +1,331 @@
+{
+ "generated": "2026-10-19T23:27:34.630Z",
+ "hoy": "2026-10-19",
+ "reglas": {
+  "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
+  "desde": "2026-10",
+  "vendedor": "Enzo",
+  "pctBase": 0.02,
+  "escalones": [
+   {
+    "nombre": "Meta 1",
+    "facturacion": 18000,
+    "bono": 100
+   },
+   {
+    "nombre": "Meta 2",
+    "facturacion": 23000,
+    "bono": 250
+   },
+   {
+    "nombre": "Meta 3",
+    "facturacion": 30000,
+    "bono": 450
+   }
+  ],
+  "ticketAlto": {
+   "minimo": 300,
+   "bono": 10
+  },
+  "margenMinimo": 0.35,
+  "ritmoSemanal": [
+   4200,
+   5400
+  ],
+  "diaDePago": 10,
+  "bonoDesde": "2026-11"
+ },
+ "meses": [
+  {
+   "mes": "2026-10",
+   "enCurso": true,
+   "diasMes": 31,
+   "diasPasados": 19,
+   "ventas": 22,
+   "facturacion": 7817,
+   "proyeccion": 12754.05,
+   "base": 156.34,
+   "escalon": null,
+   "bonoEscalon": 0,
+   "siguiente": {
+    "nombre": "Meta 1",
+    "falta": 10183,
+    "bono": 100
+   },
+   "ticketsAltos": 7,
+   "bonoTicket": 70,
+   "margen": 0.3788,
+   "margenOk": true,
+   "sinCostos": 10,
+   "bonoAplica": false,
+   "bonoTotal": 70,
+   "total": 156.34,
+   "pendienteCobro": 0,
+   "semanas": [
+    {
+     "lunes": "2026-10-05",
+     "monto": 3442
+    },
+    {
+     "lunes": "2026-10-12",
+     "monto": 3187
+    },
+    {
+     "lunes": "2026-10-19",
+     "monto": 1188
+    }
+   ],
+   "detalle": [
+    {
+     "reserva": "2026-10-19",
+     "salida": "2026-12-30",
+     "cliente": "carlos",
+     "ruta": "ASU-FOZ",
+     "tipo": "Traslado",
+     "monto": 1188,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-16",
+     "salida": "2026-10-18",
+     "cliente": "esteban",
+     "ruta": "Desde Asuncion",
+     "tipo": "Traslado",
+     "monto": 497,
+     "margen": 0.38,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-15",
+     "salida": "2026-10-19",
+     "cliente": "sean",
+     "ruta": "Asunción → Asunción (multi-stop shopping)",
+     "tipo": "Traslado",
+     "monto": 197,
+     "margen": 0.39,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-14",
+     "salida": "2026-10-14",
+     "cliente": "gabriel",
+     "ruta": "Hotel → Aeropuerto",
+     "tipo": "Traslado",
+     "monto": 0,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-14",
+     "salida": "2026-10-15",
+     "cliente": "ivan",
+     "ruta": "Hotel La Mision - Hangar",
+     "tipo": "Traslado",
+     "monto": 49,
+     "margen": 0.4,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-14",
+     "salida": "2026-10-15",
+     "cliente": "ivan",
+     "ruta": "Vuelo ASU-CDE",
+     "tipo": "Taxi Aereo",
+     "monto": 1099,
+     "margen": 0.25,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-14",
+     "salida": "2026-10-18",
+     "cliente": "gabriel",
+     "ruta": "Hotel → Aeropuerto",
+     "tipo": "Traslado",
+     "monto": 1018,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-14",
+     "salida": "2026-12-24",
+     "cliente": "pedro",
+     "ruta": "FOZ-ASU",
+     "tipo": "Traslado",
+     "monto": 278,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-13",
+     "salida": "2026-10-14",
+     "cliente": "alexandra",
+     "ruta": "Bus terminal, Asunción → Life Santa Teresa",
+     "tipo": "Traslado",
+     "monto": 49,
+     "margen": 0.57,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-10",
+     "salida": "2026-10-08",
+     "cliente": "andré",
+     "ruta": "Aviadores del Chaco 2581 → Aeropuerto Silvio Pettirossi",
+     "tipo": "Traslado",
+     "monto": 138,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-10",
+     "salida": "2026-10-18",
+     "cliente": "francoise",
+     "ruta": "Colonia Thompson/Ypané a Foz do Iguaçu y regreso a Colonia T",
+     "tipo": "Tour",
+     "monto": 707,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-10",
+     "salida": "2026-10-26",
+     "cliente": "victor",
+     "ruta": "CDE al aeropuerto internacional de Foz",
+     "tipo": "Traslado",
+     "monto": 182,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-09",
+     "salida": "2026-10-10",
+     "cliente": "rose",
+     "ruta": "Edif.Burband-AERO",
+     "tipo": "Traslado",
+     "monto": 95,
+     "margen": 0.85,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-09",
+     "salida": "2026-10-22",
+     "cliente": "j.",
+     "ruta": "AERO-ASU",
+     "tipo": "Traslado",
+     "monto": 69,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-09",
+     "salida": null,
+     "cliente": "deon",
+     "ruta": "Hotel.Factoria-AERO",
+     "tipo": "Traslado",
+     "monto": 69,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-08",
+     "salida": "2026-10-08",
+     "cliente": "guillermo",
+     "ruta": "",
+     "tipo": "Traslado",
+     "monto": 197,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-08",
+     "salida": "2026-10-09",
+     "cliente": "gladys",
+     "ruta": "ASU-Hotel.Pedro",
+     "tipo": "Traslado",
+     "monto": 776,
+     "margen": 0.34,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-08",
+     "salida": "2026-10-10",
+     "cliente": "emily",
+     "ruta": "Esplendor by Wyndham → Aeropuerto Silvio Pettirossi",
+     "tipo": "Traslado",
+     "monto": 149,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-08",
+     "salida": "2026-10-14",
+     "cliente": "david",
+     "ruta": "AERO-ASU",
+     "tipo": "Traslado",
+     "monto": 98,
+     "margen": 0.77,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-07",
+     "salida": "2026-10-08",
+     "cliente": "Guillermo",
+     "ruta": "A disposición - Aero",
+     "tipo": "A disposición",
+     "monto": 197,
+     "margen": 0.63,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-07",
+     "salida": "2026-10-08",
+     "cliente": "andré",
+     "ruta": "AERO-ASU",
+     "tipo": "Traslado",
+     "monto": 138,
+     "margen": 0.89,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-07",
+     "salida": "2026-10-09",
+     "cliente": "carolina",
+     "ruta": "ASU-FOZ",
+     "tipo": "Tour",
+     "monto": 627,
+     "margen": 0.32,
+     "alto": true,
+     "saldo": 0
+    }
+   ]
+  }
+ ],
+ "sinReserva": 0,
+ "restoEquipo": {
+  "Juan": 1723,
+  "María José": 1930.02,
+  "Bot": 1942,
+  "Sin asignar": 684.92
+ }
+}

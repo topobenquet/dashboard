@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Metas de Enzo</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#14171c;--mut:#5f6773;--line:#e3e6eb;--acc:#0b6bcb;--ok:#13824a;--warn:#b26b00;--bad:#c0362c;--track:#e9edf2;--fill:#0b6bcb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1216;--card:#181c22;--tx:#e8ebef;--mut:#9aa3ae;--line:#2a3039;--acc:#5aa9f5;--ok:#3fbf7f;--warn:#e0a443;--bad:#ef6b61;--track:#262c35;--fill:#4c9ef0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:22px;margin:0}
+.sub{color:var(--mut);font-size:13px;margin-top:2px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 14px;font:inherit;font-size:13px;cursor:pointer}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px}
+.card h2{font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);margin:0 0 12px;font-weight:600}
+.big{font-size:34px;font-weight:700;letter-spacing:-.01em}
+.big small{font-size:15px;color:var(--mut);font-weight:500}
+.msg{margin-top:6px;font-size:15px}
+.bar{position:relative;height:16px;background:var(--track);border-radius:8px;margin:34px 0 30px}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--fill);border-radius:8px}
+.bar .proj{position:absolute;top:0;bottom:0;border-right:2px dashed var(--mut)}
+.mk{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--tx);opacity:.55}
+.mk span{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11px;color:var(--mut)}
+.mk .t{top:-20px}.mk .b{bottom:-20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:12px}
+.kpi .l{font-size:12px;color:var(--mut)}
+.kpi .v{font-size:22px;font-weight:700;margin-top:2px}
+.kpi .n{font-size:12px;color:var(--mut);margin-top:2px}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+.pay{width:100%;border-collapse:collapse}
+.pay td{padding:7px 0;border-bottom:1px solid var(--line)}
+.pay td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pay tr.tot td{font-weight:700;border-bottom:0;font-size:17px}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+.weeks{display:flex;gap:10px;align-items:flex-end;height:170px;margin-top:8px;position:relative}
+.wk{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.wk .c{width:100%;max-width:70px;background:var(--fill);border-radius:6px 6px 0 0}
+.wk .a{font-size:12px;font-weight:600;margin-bottom:3px}
+.wk .d{font-size:11px;color:var(--mut);height:18px;line-height:18px;margin-top:4px}
+.ref{position:absolute;left:0;right:0;border-top:1px dashed var(--mut);font-size:10px;color:var(--mut)}
+.ref span{position:absolute;right:0;top:-14px}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:6px 6px 6px 0;border-bottom:1px solid var(--line)}
+.tbl td{padding:7px 6px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl td.r,.tbl th.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:var(--track);color:var(--tx)}
+.scroll{overflow-x:auto}
+ul.rules{margin:0;padding-left:18px}ul.rules li{margin:4px 0}
+@media (max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.big{font-size:28px}.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Metas de Enzo</h1>
+  <div class="sub" id="sub">Paraguay Transfers · cargando…</div>
+  <div class="tabs" id="tabs"></div>
+  <div id="app"></div>
+</div>
+<script>
+const $=(s)=>document.querySelector(s);
+const usd=(x)=>'USD '+Math.round(x).toLocaleString('es-PY');
+const usd2=(x)=>'USD '+(Math.round(x*100)/100).toLocaleString('es-PY',{minimumFractionDigits:2,maximumFractionDigits:2});
+const MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+const nomMes=(ym)=>{const[y,m]=ym.split('-');return MES[+m-1]+' '+y};
+const dm=(d)=>d?d.slice(8,10)+'/'+d.slice(5,7):'sin fecha';
+let D,sel;
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;sel=d.meses[0].mes;render()}).catch(()=>{$('#app').innerHTML='<div class="card">No pude leer los datos.</div>'});
+function render(){
+  const g=new Date(D.generated);
+  $('#sub').textContent='Paraguay Transfers · actualizado '+g.toLocaleString('es-PY',{timeZone:'America/Asuncion',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (hora PY)';
+  $('#tabs').innerHTML=D.meses.map(m=>`<button class="${m.mes===sel?'on':''}" data-m="${m.mes}">${nomMes(m.mes)}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{sel=b.dataset.m;render()});
+  const R=D.reglas,m=D.meses.find(x=>x.mes===sel),E=R.escalones,top=E[E.length-1].facturacion*1.1;
+  const pct=(x)=>Math.min(100,x/top*100);
+  let msg;
+  if(m.siguiente&&m.escalon) msg=`Llegaste a <b>${m.escalon}</b>. Te faltan <b>${usd(m.siguiente.falta)}</b> para ${m.siguiente.nombre} (bono USD ${m.siguiente.bono}).`;
+  else if(m.siguiente) msg=`Te faltan <b>${usd(m.siguiente.falta)}</b> para ${m.siguiente.nombre} (bono USD ${m.siguiente.bono}).`;
+  else msg=`Pasaste la última meta. 🏆`;
+  if(m.enCurso){const dr=m.diasMes-m.diasPasados; if(m.siguiente&&dr>0) msg+=` Quedan ${dr} días: son ${usd(m.siguiente.falta/dr)} por día.`; msg+=` Al ritmo actual cerrás el mes en <b>${usd(m.proyeccion)}</b>.`}
+  const margenTxt=m.margen===null?'sin datos':Math.round(m.margen*100)+'%';
+  const margenCls=m.margenOk===null?'':m.margenOk?'ok':'bad';
+  const bonoNota=!m.bonoAplica?`<div class="note">⚠️ ${nomMes(m.mes)} es el mes de entrada (empezaste el 7/10): se paga el 2% base y el bono queda como referencia. Rige desde ${nomMes(R.bonoDesde)}.</div>`:'';
+  const margenNota=m.margenOk===false?`<div class="note bad">El margen del mes está debajo del ${Math.round(R.margenMinimo*100)}%: el bono no se paga, el 2% base sí.</div>`:'';
+  const wmax=Math.max(R.ritmoSemanal[1]*1.25,...m.semanas.map(s=>s.monto),1);
+  const weeks=m.semanas.length?`<div class="weeks">${R.ritmoSemanal.map((r,i)=>`<div class="ref" style="bottom:${r/wmax*120+22}px"><span>${i?'ritmo Meta 2':'ritmo Meta 1'} ${usd(r)}</span></div>`).join('')}${m.semanas.map(s=>`<div class="wk"><div class="a">${usd(s.monto)}</div><div class="c" style="height:${s.monto/wmax*120}px"></div><div class="d">sem. ${dm(s.lunes)}</div></div>`).join('')}</div>`:'<div class="note">Todavía no hay ventas este mes.</div>';
+  $('#app').innerHTML=`
+  <div class="card">
+    <h2>Facturación de ${nomMes(m.mes)}</h2>
+    <div class="big">${usd(m.facturacion)} <small>· ${m.ventas} ventas</small></div>
+    <div class="msg">${msg}</div>
+    <div class="bar"><div class="fill" style="width:${pct(m.facturacion)}%"></div>${m.enCurso&&m.proyeccion>m.facturacion?`<div class="proj" style="width:${pct(m.proyeccion)}%" title="proyección"></div>`:''}
+      ${E.map(e=>`<div class="mk" style="left:${pct(e.facturacion)}%"><span class="t">${e.nombre}</span><span class="b">${usd(e.facturacion)} · +${e.bono}</span></div>`).join('')}
+    </div>
+    <div class="grid">
+      <div class="kpi"><div class="l">Proyección fin de mes</div><div class="v">${usd(m.proyeccion)}</div><div class="n">${m.enCurso?`día ${m.diasPasados} de ${m.diasMes}`:'mes cerrado'}</div></div>
+      <div class="kpi"><div class="l">Ventas de USD ${R.ticketAlto.minimo}+</div><div class="v">${m.ticketsAltos}</div><div class="n">+USD ${R.ticketAlto.bono} cada una</div></div>
+      <div class="kpi"><div class="l">Margen bruto</div><div class="v ${margenCls}">${margenTxt}</div><div class="n">piso ${Math.round(R.margenMinimo*100)}%${m.sinCostos?` · ${m.sinCostos} sin costo cargado`:''}</div></div>
+      <div class="kpi"><div class="l">Comisión estimada</div><div class="v">${usd(m.total)}</div><div class="n">se paga el día ${R.diaDePago} del mes siguiente</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Tu comisión de ${nomMes(m.mes)}</h2>
+    <table class="pay">
+      <tr><td>Base: ${Math.round(R.pctBase*100)}% de ${usd(m.facturacion)}</td><td>${usd2(m.base)}</td></tr>
+      <tr><td>Bono por escalón ${m.escalon?'('+m.escalon+')':'(todavía ninguno)'}</td><td>${m.bonoAplica&&m.margenOk!==false?usd2(m.bonoEscalon):'<s>'+usd2(m.bonoEscalon)+'</s>'}</td></tr>
+      <tr><td>Ventas de USD ${R.ticketAlto.minimo}+: ${m.ticketsAltos} × ${R.ticketAlto.bono}</td><td>${m.bonoAplica&&m.margenOk!==false?usd2(m.bonoTicket):'<s>'+usd2(m.bonoTicket)+'</s>'}</td></tr>
+      <tr class="tot"><td>Total estimado</td><td>${usd2(m.total)}</td></tr>
+    </table>
+    ${bonoNota}${margenNota}
+    <div class="note">Es una estimación: el número final sale del cierre del mes, con lo cobrado y sin cancelaciones.${m.pendienteCobro?` Hay ${usd(m.pendienteCobro)} de saldo pendiente de cobro.`:''}</div>
+  </div>
+  <div class="card">
+    <h2>Ritmo semanal</h2>
+    ${weeks}
+    <div class="note">Las semanas van de lunes a domingo, por fecha de reserva. Es una guía para ver si vas encaminado: el bono es mensual.</div>
+  </div>
+  <div class="card">
+    <h2>Tus ventas de ${nomMes(m.mes)}</h2>
+    <div class="scroll"><table class="tbl">
+      <tr><th>Reserva</th><th>Cliente</th><th>Servicio</th><th class="hide-m">Salida</th><th class="r">Monto</th><th class="r hide-m">Margen</th></tr>
+      ${m.detalle.map(v=>`<tr><td>${dm(v.reserva)}</td><td>${v.cliente}</td><td>${v.ruta||v.tipo||''} ${v.alto?'<span class="pill">USD '+R.ticketAlto.minimo+'+</span>':''}</td><td class="hide-m">${dm(v.salida)}</td><td class="r">${usd(v.monto)}</td><td class="r hide-m">${v.margen===null?'<span class="note">s/costo</span>':Math.round(v.margen*100)+'%'}</td></tr>`).join('')||'<tr><td colspan="6" class="note">Sin ventas todavía.</td></tr>'}
+    </table></div>
+    <div class="note">Cuenta como tuya una venta si escribiste en la conversación del cliente en GHL (columna "Vendedor (cerró)" de la planilla). Si falta alguna, avisale a Juan.</div>
+  </div>
+  <div class="card">
+    <h2>Reglas</h2>
+    <ul class="rules">
+      <li>Base: ${Math.round(R.pctBase*100)}% de todo lo que facturás.</li>
+      <li>Bono por escalón (se cobra el más alto alcanzado): ${E.map(e=>`${e.nombre} ${usd(e.facturacion)} → USD ${e.bono}`).join(' · ')}.</li>
+      <li>USD ${R.ticketAlto.bono} extra por cada venta de USD ${R.ticketAlto.minimo} o más.</li>
+      <li>El bono se paga solo si el margen bruto de tus ventas del mes es ${Math.round(R.margenMinimo*100)}% o más.</li>
+      <li>Una venta cuenta en el mes en que se reservó. Si se cancela o se reembolsa, se descuenta.</li>
+      <li>Se paga el día ${R.diaDePago} del mes siguiente, con el mes conciliado.</li>
+    </ul>
+  </div>`;
+}
+</script>
+</body>
+</html>
