@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T18:30:33.462Z",
+ "generated": "2026-10-19T20:30:10.242Z",
  "tc": 5770,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -249,13 +249,14 @@
   {
    "fecha": "2026-10-19",
    "in": 878.68,
-   "out": 0,
-   "n": 3,
+   "out": 32.93,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 878.68
+    "Pagopar": 878.68,
+    "WhatsApp · Pagos (Majo)": -32.93
    },
-   "neto": 878.68,
-   "acum": 9990.43
+   "neto": 845.75,
+   "acum": 9957.5
   }
  ],
  "movimientos": [
@@ -1565,6 +1566,20 @@
     "comb": 0,
     "peajes": 0,
     "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-19",
+   "t": "out",
+   "usd": 32.93,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Hugo Leandro Fernandez Rodriguez (Banco Itaú)",
+   "gs": 190000,
+   "rub": {
+    "chofer": 0,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 32.93
    }
   },
   {
