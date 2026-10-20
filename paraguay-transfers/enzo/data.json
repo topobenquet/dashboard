@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T14:30:20.427Z",
+ "generated": "2026-10-20T22:30:11.070Z",
  "hoy": "2026-10-20",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 20,
-   "ventas": 23,
-   "facturacion": 8524,
-   "proyeccion": 13212.2,
-   "base": 170.48,
+   "ventas": 24,
+   "facturacion": 9324,
+   "proyeccion": 14452.2,
+   "base": 186.48,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9476,
+    "falta": 8676,
     "bono": 100
    },
-   "ticketsAltos": 8,
-   "bonoTicket": 80,
+   "ticketsAltos": 9,
+   "bonoTicket": 90,
    "margen": 0.3788,
    "margenOk": true,
-   "sinCostos": 11,
+   "sinCostos": 12,
    "bonoAplica": false,
-   "bonoTotal": 80,
-   "total": 170.48,
+   "bonoTotal": 90,
+   "total": 186.48,
    "pendienteCobro": 0,
    "semanas": [
     {
@@ -72,7 +72,7 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 1895
+     "monto": 2695
     }
    ],
    "detalle": [
@@ -83,6 +83,17 @@
      "ruta": "",
      "tipo": "Traslado",
      "monto": 707,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-20",
+     "salida": "2026-10-26",
+     "cliente": "dr",
+     "ruta": "AERO-CDE",
+     "tipo": "Traslado",
+     "monto": 800,
      "margen": null,
      "alto": true,
      "saldo": 0
@@ -337,6 +348,6 @@
   "Juan": 1723,
   "María José": 1930.02,
   "Bot": 1942,
-  "Sin asignar": 684.92
+  "Sin asignar": 3195.92
  }
 }
