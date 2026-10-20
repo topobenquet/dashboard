@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T00:40:11.593Z",
+ "generated": "2026-10-20T11:10:19.204Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1324,
-   "ultimoKm": 100290
+   "ultimoKm": 100545
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1294,
-   "kmFuera": 2133,
+   "kmFuera": 2388,
    "viajes": 11,
-   "costoComb": 4537348,
+   "costoComb": 4874968,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 52,
-   "conFoto": 46
+   "lecturas": 53,
+   "conFoto": 47
   },
   {
    "chofer": "Gustavo",
@@ -939,6 +939,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 100290,
+   "hasta": 100545,
+   "km": 255,
+   "fechaDesde": "2026-10-19",
+   "fechaHasta": "2026-10-20",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 99885,
    "hasta": 100290,
    "km": 405,
@@ -1774,17 +1785,15 @@
    "odo": 93309
   }
  ],
- "proximos": [
-  {
-   "fecha": "2026-10-19",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "ASU-FOZ",
-   "km": 690,
-   "adelanto": 1005000
-  }
- ],
+ "proximos": [],
  "alertas": [
+  {
+   "key": "hueco:H1:100290:100545",
+   "nivel": "juan",
+   "texto": "H1: 255 km sin traslado entre el 19/10 (km 100.290, Alfredo) y el 20/10 (km 100.545, Alfredo).",
+   "ts": 1792479845,
+   "fecha": "2026-10-20"
+  },
   {
    "key": "hueco:H1:99885:100290",
    "nivel": "juan",
