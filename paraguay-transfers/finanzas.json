@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T18:30:33.085Z",
+ "generated": "2026-10-20T20:30:40.332Z",
  "tc": 5780,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -262,13 +262,14 @@
   {
    "fecha": "2026-10-20",
    "in": 587.37,
-   "out": 0,
-   "n": 2,
+   "out": 257.78,
+   "n": 6,
    "porFuente": {
-    "Pagopar": 587.37
+    "Pagopar": 587.37,
+    "WhatsApp · Pagos (Majo)": -257.78
    },
-   "neto": 587.37,
-   "acum": 10670.56
+   "neto": 329.59,
+   "acum": 10412.78
   }
  ],
  "movimientos": [
@@ -1608,6 +1609,62 @@
     "comb": 0,
     "peajes": 0,
     "otros": 32.87
+   }
+  },
+  {
+   "d": "2026-10-20",
+   "t": "out",
+   "usd": 41.52,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Ingrid Dominguez (comp. 437154)",
+   "gs": 240000,
+   "rub": {
+    "chofer": 41.52,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-20",
+   "t": "out",
+   "usd": 155.71,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Traslado Gwynn",
+   "gs": 900000,
+   "rub": {
+    "chofer": 155.71,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-20",
+   "t": "out",
+   "usd": 17.3,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Traslado juan cruz",
+   "gs": 100000,
+   "rub": {
+    "chofer": 17.3,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-20",
+   "t": "out",
+   "usd": 43.25,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Daniel Oscar Amarilla Wunderli (Banco Basa)",
+   "gs": 250000,
+   "rub": {
+    "chofer": 0,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 43.25
    }
   },
   {
