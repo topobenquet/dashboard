@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T15:10:15.288Z",
+ "generated": "2026-10-21T11:10:01.977Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -1824,6 +1824,13 @@
  ],
  "proximos": [],
  "alertas": [
+  {
+   "key": "final:H1:100549",
+   "nivel": "grupo",
+   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 20/10 a las 11:26 (km inicio 100.549). Mandá la foto del tablero con el número.",
+   "ts": 1792506375,
+   "fecha": "2026-10-20"
+  },
   {
    "key": "hueco:H1:100290:100545",
    "nivel": "juan",
