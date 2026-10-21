@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T10:21:00.934Z",
+ "generated": "2026-10-21T22:00:57.242Z",
  "today": "2026-10-21",
  "launch": "2026-09-15",
  "daysLive": 37,
@@ -17,14 +17,14 @@
   "errors": []
  },
  "account": {
-  "spend": 11657.86,
-  "impr": 13159,
-  "clicks": 1357,
+  "spend": 12132.58,
+  "impr": 13770,
+  "clicks": 1392,
   "inquiries": 14,
   "form": 0,
   "search": 10,
   "callsAds": 4,
-  "phoneImpr": 619,
+  "phoneImpr": 661,
   "deals": 0,
   "quoted": 0,
   "booked": 0,
@@ -32,25 +32,25 @@
   "value": 0,
   "callrailCalls": 6,
   "callrailQualified": 4,
-  "sessions": 1285,
-  "avinodeSearches": 752,
-  "avinodeOpenForm": 266,
+  "sessions": 1294,
+  "avinodeSearches": 755,
+  "avinodeOpenForm": 267,
   "avinodeInquiries": 10
  },
  "groups": {
   "Charter": {
-   "spend": 10649.29,
-   "impr": 10078,
-   "clicks": 928,
+   "spend": 11124.01,
+   "impr": 10688,
+   "clicks": 963,
    "inquiries": 10,
    "form": 0,
    "search": 6,
    "callsAds": 4,
-   "phoneImpr": 476
+   "phoneImpr": 518
   },
   "Brand": {
    "spend": 1008.57,
-   "impr": 3081,
+   "impr": 3082,
    "clicks": 429,
    "inquiries": 4,
    "form": 0,
@@ -67,7 +67,7 @@
    "slug": "brand-us",
    "short": "Brand",
    "spend": 1008.57,
-   "impr": 3081,
+   "impr": 3082,
    "clicks": 429,
    "conv": 4,
    "phoneImpr": 143,
@@ -93,11 +93,11 @@
    "group": "Charter",
    "slug": "charter-south-fl",
    "short": "Florida · local",
-   "spend": 9586.12,
-   "impr": 9333,
-   "clicks": 842,
+   "spend": 10060.84,
+   "impr": 9943,
+   "clicks": 877,
    "conv": 10,
-   "phoneImpr": 467,
+   "phoneImpr": 509,
    "phoneCalls": 0,
    "form": 0,
    "search": 6,
@@ -107,10 +107,10 @@
    "inquiries": 10,
    "share": {
     "status": "ENABLED",
-    "is": 0.5796894156109522,
-    "lostRank": 0.40753984470780547,
-    "lostBudget": 0.012770739681242338,
-    "top": 0.46322026971802205
+    "is": 0.5766423357664233,
+    "lostRank": 0.41085891410858916,
+    "lostBudget": 0.0124987501249875,
+    "top": 0.46025397460253975
    },
    "status": "ENABLED"
   },
@@ -799,6 +799,24 @@
    "spend": 595.04,
    "clicks": 45,
    "inquiries": 0
+  },
+  {
+   "date": "2026-10-21",
+   "groups": {
+    "Brand": {
+     "spend": 0,
+     "clicks": 0,
+     "inquiries": 0
+    },
+    "Charter": {
+     "spend": 474.72,
+     "clicks": 35,
+     "inquiries": 0
+    }
+   },
+   "spend": 474.72,
+   "clicks": 35,
+   "inquiries": 0
   }
  ],
  "keywords": [
@@ -830,20 +848,9 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 10,
-   "impr": 252,
-   "clicks": 57,
-   "spend": 600.52,
-   "conv": 4
-  },
-  {
-   "kw": "jet charter",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": 8,
-   "impr": 341,
-   "clicks": 39,
-   "spend": 438.53,
+   "impr": 1068,
+   "clicks": 52,
+   "spend": 629.94,
    "conv": 0
   },
   {
@@ -852,9 +859,20 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 10,
-   "impr": 667,
-   "clicks": 32,
-   "spend": 381.04,
+   "impr": 259,
+   "clicks": 58,
+   "spend": 609.85,
+   "conv": 4
+  },
+  {
+   "kw": "jet charter",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Charter - Core",
+   "qs": 8,
+   "impr": 345,
+   "clicks": 40,
+   "spend": 463.39,
    "conv": 0
   },
   {
@@ -869,6 +887,39 @@
    "conv": 0
   },
   {
+   "kw": "charter flights",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Charter - Core",
+   "qs": 8,
+   "impr": 426,
+   "clicks": 28,
+   "spend": 341.32,
+   "conv": 0
+  },
+  {
+   "kw": "charter a jet",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Charter - Core",
+   "qs": 9,
+   "impr": 214,
+   "clicks": 29,
+   "spend": 338.41,
+   "conv": 1
+  },
+  {
+   "kw": "private jet charter",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Charter - Core",
+   "qs": 10,
+   "impr": 223,
+   "clicks": 29,
+   "spend": 337.66,
+   "conv": 1
+  },
+  {
    "kw": "private flights",
    "campaign": "Florida · local",
    "group": "Charter",
@@ -880,45 +931,12 @@
    "conv": 0
   },
   {
-   "kw": "charter flights",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": 8,
-   "impr": 398,
-   "clicks": 26,
-   "spend": 329.62,
-   "conv": 0
-  },
-  {
-   "kw": "private jet charter",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": 10,
-   "impr": 221,
-   "clicks": 28,
-   "spend": 326.75,
-   "conv": 1
-  },
-  {
-   "kw": "charter a jet",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": 9,
-   "impr": 206,
-   "clicks": 28,
-   "spend": 315.69,
-   "conv": 1
-  },
-  {
    "kw": "private plane rental",
    "campaign": "Florida · local",
    "group": "Charter",
    "adGroup": "Rental - Hire",
    "qs": 10,
-   "impr": 134,
+   "impr": 136,
    "clicks": 24,
    "spend": 229.03,
    "conv": 0
@@ -990,6 +1008,17 @@
    "conv": 1
   },
   {
+   "kw": "private jet miami",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Cities - Miami",
+   "qs": 8,
+   "impr": 174,
+   "clicks": 11,
+   "spend": 128,
+   "conv": 0
+  },
+  {
    "kw": "private flights near me",
    "campaign": "Florida · local",
    "group": "Charter",
@@ -1006,20 +1035,31 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 5,
-   "impr": 88,
+   "impr": 90,
    "clicks": 9,
    "spend": 126.05,
    "conv": 0
   },
   {
-   "kw": "private jet miami",
+   "kw": "private airlines companies",
    "campaign": "Florida · local",
    "group": "Charter",
-   "adGroup": "Cities - Miami",
-   "qs": 8,
-   "impr": 149,
+   "adGroup": "Charter - Core",
+   "qs": null,
+   "impr": 128,
+   "clicks": 9,
+   "spend": 116.05,
+   "conv": 0
+  },
+  {
+   "kw": "private jet charter west palm beach",
+   "campaign": "Florida · local",
+   "group": "Charter",
+   "adGroup": "Cities - Palm Beach & Boca",
+   "qs": 6,
+   "impr": 132,
    "clicks": 10,
-   "spend": 113.98,
+   "spend": 114.51,
    "conv": 0
   },
   {
@@ -1056,25 +1096,14 @@
    "conv": 0
   },
   {
-   "kw": "private airlines companies",
+   "kw": "rent a private jet",
    "campaign": "Florida · local",
    "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": null,
-   "impr": 120,
+   "adGroup": "Rental - Hire",
+   "qs": 10,
+   "impr": 38,
    "clicks": 8,
-   "spend": 101.84,
-   "conv": 0
-  },
-  {
-   "kw": "private jet charter west palm beach",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Cities - Palm Beach & Boca",
-   "qs": 6,
-   "impr": 104,
-   "clicks": 9,
-   "spend": 100.22,
+   "spend": 102.2,
    "conv": 0
   },
   {
@@ -1083,7 +1112,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 8,
-   "impr": 28,
+   "impr": 30,
    "clicks": 6,
    "spend": 97.92,
    "conv": 0
@@ -1097,17 +1126,6 @@
    "impr": 62,
    "clicks": 7,
    "spend": 91.78,
-   "conv": 0
-  },
-  {
-   "kw": "rent a private jet",
-   "campaign": "Florida · local",
-   "group": "Charter",
-   "adGroup": "Rental - Hire",
-   "qs": 10,
-   "impr": 37,
-   "clicks": 7,
-   "spend": 80.73,
    "conv": 0
   },
   {
@@ -1127,7 +1145,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 10,
-   "impr": 30,
+   "impr": 32,
    "clicks": 6,
    "spend": 79.93,
    "conv": 0
@@ -1171,7 +1189,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 8,
-   "impr": 118,
+   "impr": 125,
    "clicks": 7,
    "spend": 71.01,
    "conv": 0
@@ -1232,14 +1250,14 @@
    "conv": 0
   },
   {
-   "kw": "private charter flights",
+   "kw": "private jets miami",
    "campaign": "Florida · local",
    "group": "Charter",
-   "adGroup": "Charter - Core",
-   "qs": 7,
-   "impr": 43,
+   "adGroup": "Cities - Miami",
+   "qs": 8,
+   "impr": 108,
    "clicks": 4,
-   "spend": 51.98,
+   "spend": 54.29,
    "conv": 0
   }
  ],
@@ -1254,17 +1272,17 @@
   },
   {
    "term": "private jet flights",
-   "impr": 479,
-   "clicks": 101,
-   "spend": 661.25,
+   "impr": 483,
+   "clicks": 102,
+   "spend": 670.58,
    "conv": 4,
    "excluded": false
   },
   {
    "term": "private jet charter",
-   "impr": 441,
-   "clicks": 68,
-   "spend": 430.43,
+   "impr": 443,
+   "clicks": 69,
+   "spend": 441.34,
    "conv": 2,
    "excluded": false
   },
@@ -1317,18 +1335,18 @@
    "excluded": false
   },
   {
-   "term": "charter flight",
-   "impr": 83,
-   "clicks": 4,
-   "spend": 25.44,
+   "term": "jet",
+   "impr": 89,
+   "clicks": 0,
+   "spend": 0,
    "conv": 0,
    "excluded": false
   },
   {
-   "term": "jet",
-   "impr": 82,
-   "clicks": 0,
-   "spend": 0,
+   "term": "charter flight",
+   "impr": 83,
+   "clicks": 4,
+   "spend": 25.44,
    "conv": 0,
    "excluded": false
   },
@@ -1349,6 +1367,14 @@
    "excluded": false
   },
   {
+   "term": "jet charter",
+   "impr": 72,
+   "clicks": 10,
+   "spend": 90.68,
+   "conv": 0,
+   "excluded": false
+  },
+  {
    "term": "private jet companies",
    "impr": 72,
    "clicks": 6,
@@ -1357,18 +1383,18 @@
    "excluded": false
   },
   {
-   "term": "jet charter",
-   "impr": 70,
-   "clicks": 9,
-   "spend": 65.82,
-   "conv": 0,
-   "excluded": false
-  },
-  {
    "term": "private flight",
    "impr": 65,
    "clicks": 8,
    "spend": 51.12,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "solairus aviation",
+   "impr": 63,
+   "clicks": 2,
+   "spend": 27.58,
    "conv": 0,
    "excluded": false
   },
@@ -1393,14 +1419,6 @@
    "impr": 59,
    "clicks": 6,
    "spend": 44.9,
-   "conv": 0,
-   "excluded": false
-  },
-  {
-   "term": "solairus aviation",
-   "impr": 58,
-   "clicks": 2,
-   "spend": 27.58,
    "conv": 0,
    "excluded": false
   },
@@ -1533,10 +1551,26 @@
    "excluded": false
   },
   {
+   "term": "book private jet",
+   "impr": 28,
+   "clicks": 2,
+   "spend": 27.68,
+   "conv": 0,
+   "excluded": false
+  },
+  {
    "term": "chartered flight",
    "impr": 28,
    "clicks": 2,
    "spend": 14.84,
+   "conv": 0,
+   "excluded": false
+  },
+  {
+   "term": "magnifica air",
+   "impr": 27,
+   "clicks": 2,
+   "spend": 27.61,
    "conv": 0,
    "excluded": false
   },
@@ -1562,6 +1596,14 @@
    "clicks": 3,
    "spend": 43.57,
    "conv": 1,
+   "excluded": false
+  },
+  {
+   "term": "fly exclusive",
+   "impr": 25,
+   "clicks": 3,
+   "spend": 41.09,
+   "conv": 0,
    "excluded": false
   },
   {
@@ -1597,18 +1639,18 @@
    "excluded": false
   },
   {
-   "term": "magnifica air",
+   "term": "air flight charters",
    "impr": 24,
-   "clicks": 2,
-   "spend": 27.61,
+   "clicks": 1,
+   "spend": 25.69,
    "conv": 0,
    "excluded": false
   },
   {
-   "term": "book private jet",
+   "term": "tradewind",
    "impr": 24,
-   "clicks": 1,
-   "spend": 4.96,
+   "clicks": 2,
+   "spend": 19.95,
    "conv": 0,
    "excluded": false
   },
@@ -1621,10 +1663,10 @@
    "excluded": false
   },
   {
-   "term": "tradewind",
-   "impr": 23,
-   "clicks": 2,
-   "spend": 19.95,
+   "term": "private jet services",
+   "impr": 22,
+   "clicks": 4,
+   "spend": 72.06,
    "conv": 0,
    "excluded": false
   },
@@ -1637,10 +1679,10 @@
    "excluded": false
   },
   {
-   "term": "air flight charters",
+   "term": "premier private jets",
    "impr": 22,
-   "clicks": 1,
-   "spend": 25.69,
+   "clicks": 0,
+   "spend": 0,
    "conv": 0,
    "excluded": false
   },
@@ -1661,26 +1703,10 @@
    "excluded": false
   },
   {
-   "term": "premier private jets",
-   "impr": 21,
-   "clicks": 0,
-   "spend": 0,
-   "conv": 0,
-   "excluded": false
-  },
-  {
-   "term": "private jet services",
+   "term": "thrive aviation",
    "impr": 20,
-   "clicks": 4,
-   "spend": 72.06,
-   "conv": 0,
-   "excluded": false
-  },
-  {
-   "term": "fly exclusive",
-   "impr": 20,
-   "clicks": 3,
-   "spend": 41.09,
+   "clicks": 1,
+   "spend": 13.07,
    "conv": 0,
    "excluded": false
   },
@@ -1713,14 +1739,6 @@
    "impr": 19,
    "clicks": 2,
    "spend": 3.94,
-   "conv": 0,
-   "excluded": false
-  },
-  {
-   "term": "thrive aviation",
-   "impr": 18,
-   "clicks": 1,
-   "spend": 13.07,
    "conv": 0,
    "excluded": false
   }
@@ -1776,63 +1794,63 @@
   },
   {
    "h": 8,
-   "clicks": 44,
+   "clicks": 46,
    "conv": 0,
-   "spend": 395.8
+   "spend": 424.18
   },
   {
    "h": 9,
-   "clicks": 59,
+   "clicks": 63,
    "conv": 0,
-   "spend": 526.26
+   "spend": 572.35
   },
   {
    "h": 10,
-   "clicks": 86,
+   "clicks": 89,
    "conv": 0,
-   "spend": 827.04
+   "spend": 875.37
   },
   {
    "h": 11,
-   "clicks": 103,
+   "clicks": 106,
    "conv": 2,
-   "spend": 1053.91
+   "spend": 1096.25
   },
   {
    "h": 12,
-   "clicks": 77,
+   "clicks": 84,
    "conv": 0,
-   "spend": 729.48
+   "spend": 817.82
   },
   {
    "h": 13,
-   "clicks": 106,
+   "clicks": 109,
    "conv": 0,
-   "spend": 972.54
+   "spend": 1026.47
   },
   {
    "h": 14,
-   "clicks": 98,
+   "clicks": 102,
    "conv": 2,
-   "spend": 939.47
+   "spend": 982.01
   },
   {
    "h": 15,
-   "clicks": 112,
+   "clicks": 115,
    "conv": 2,
-   "spend": 997.62
+   "spend": 1045.26
   },
   {
    "h": 16,
-   "clicks": 92,
+   "clicks": 95,
    "conv": 0,
-   "spend": 791.02
+   "spend": 828.85
   },
   {
    "h": 17,
-   "clicks": 100,
+   "clicks": 103,
    "conv": 0,
-   "spend": 775.67
+   "spend": 814.97
   },
   {
    "h": 18,
@@ -1873,10 +1891,10 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 7576,
-   "clicks": 597,
+   "impr": 8187,
+   "clicks": 632,
    "conv": 8,
-   "spend": 7309.74
+   "spend": 7784.46
   },
   "MOBILE": {
    "impr": 5487,
@@ -2066,31 +2084,31 @@
   "pages": [
    {
     "path": "/florida",
-    "sessions": 822,
-    "engaged": 609,
-    "engagementSec": 12678,
-    "users": 769,
-    "search": 420,
-    "openForm": 150,
+    "sessions": 832,
+    "engaged": 616,
+    "engagementSec": 12802,
+    "users": 778,
+    "search": 423,
+    "openForm": 151,
     "inquiry": 6,
     "ads": {
-     "sessions": 793,
-     "search": 416,
-     "openForm": 149,
+     "sessions": 803,
+     "search": 419,
+     "openForm": 150,
      "inquiry": 6
     }
    },
    {
     "path": "/",
-    "sessions": 440,
+    "sessions": 439,
     "engaged": 339,
     "engagementSec": 3782,
-    "users": 398,
+    "users": 397,
     "search": 289,
     "openForm": 93,
     "inquiry": 5,
     "ads": {
-     "sessions": 399,
+     "sessions": 398,
      "search": 281,
      "openForm": 88,
      "inquiry": 4
@@ -2244,8 +2262,8 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 1311,
-    "engaged": 991
+    "sessions": 1320,
+    "engaged": 997
    },
    {
     "sm": "(direct) / (none)",
@@ -2453,6 +2471,11 @@
     "date": "2026-10-20",
     "sessions": 42,
     "ads": 39
+   },
+   {
+    "date": "2026-10-21",
+    "sessions": 10,
+    "ads": 10
    }
   ]
  },
@@ -2709,7 +2732,7 @@
  },
  "pacing": {
   "month": "2026-10",
-  "spentToDate": 6903.42,
+  "spentToDate": 7378.14,
   "avgDaily": 550.32,
   "daysLeft": 11,
   "projected": 12956.91,
@@ -3553,6 +3576,34 @@
      "booked": 0
     }
    },
+   "2026-10-21": {
+    "Search | Brand | US": {
+     "spend": 0,
+     "impr": 1,
+     "clicks": 0,
+     "conv": 0,
+     "phoneImpr": 0,
+     "phoneCalls": 0,
+     "form": 0,
+     "search": 0,
+     "call": 0,
+     "quoted": 0,
+     "booked": 0
+    },
+    "Search | Charter | South FL": {
+     "spend": 474.72,
+     "impr": 610,
+     "clicks": 35,
+     "conv": 0,
+     "phoneImpr": 42,
+     "phoneCalls": 0,
+     "form": 0,
+     "search": 0,
+     "call": 0,
+     "quoted": 0,
+     "booked": 0
+    }
+   },
    "2026-09-17": {
     "Search | Charter | South FL": {
      "spend": 111.68,
@@ -3816,10 +3867,10 @@
    },
    "Search | Charter | South FL": {
     "status": "ENABLED",
-    "is": 0.5796894156109522,
-    "lostRank": 0.40753984470780547,
-    "lostBudget": 0.012770739681242338,
-    "top": 0.46322026971802205
+    "is": 0.5766423357664233,
+    "lostRank": 0.41085891410858916,
+    "lostBudget": 0.0124987501249875,
+    "top": 0.46025397460253975
    },
    "Search | Charter | FL Inbound": {
     "status": "PAUSED",
