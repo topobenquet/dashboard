@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T14:30:07.754Z",
+ "generated": "2026-10-22T16:51:00.322Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -11,7 +11,7 @@
   "uenoFecha": "2026-10-18",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 1589.67,
+  "stripeDisponible": 89.67,
   "stripePendiente": 475.37,
   "pagoparPendienteUsd": 21422.59,
   "relay": null,
@@ -2222,6 +2222,12 @@
   {
    "fecha": "2026-09-01",
    "monto": 5000,
+   "tipo": "standard",
+   "fee": 0
+  },
+  {
+   "fecha": "2026-10-22",
+   "monto": 1500,
    "tipo": "standard",
    "fee": 0
   },
