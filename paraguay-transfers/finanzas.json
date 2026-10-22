@@ -1,19 +1,19 @@
 {
- "generated": "2026-10-22T00:30:07.329Z",
+ "generated": "2026-10-22T12:30:40.000Z",
  "tc": 5750,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
  "saldos": {
-  "fecha": "2026-10-21",
+  "fecha": "2026-10-22",
   "itauGs": 43605,
   "uenoGs": 18120646,
   "uenoFecha": "2026-10-18",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1589.67,
-  "stripePendiente": 381.03,
-  "pagoparPendienteUsd": 21470.61,
+  "stripePendiente": 475.37,
+  "pagoparPendienteUsd": 21608.87,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -273,15 +273,26 @@
   },
   {
    "fecha": "2026-10-21",
-   "in": 134.78,
+   "in": 273.04,
    "out": 295.65,
-   "n": 3,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 134.78,
+    "Pagopar": 273.04,
     "WhatsApp · Pagos (Majo)": -295.65
    },
-   "neto": -160.87,
-   "acum": 10517.41
+   "neto": -22.61,
+   "acum": 10655.67
+  },
+  {
+   "fecha": "2026-10-22",
+   "in": 0,
+   "out": 173.91,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -173.91
+   },
+   "neto": -173.91,
+   "acum": 10481.76
   }
  ],
  "movimientos": [
@@ -934,6 +945,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · En Lim",
    "gs": 230000
+  },
+  {
+   "d": "2026-10-21",
+   "t": "in",
+   "usd": 138.26,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Kenny Dudek",
+   "gs": 795000
   },
   {
    "d": "2026-10-01",
@@ -1776,6 +1795,20 @@
    }
   },
   {
+   "d": "2026-10-22",
+   "t": "out",
+   "usd": 173.91,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Gustavo Pereira",
+   "gs": 1000000,
+   "rub": {
+    "chofer": 173.91,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 217.39,
@@ -1953,8 +1986,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 76,
-   "bruto": 21470.63,
+   "cobros": 77,
+   "bruto": 21608.89,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1969,8 +2002,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 123456000,
-  "cobradoUsd": 21470.63,
+  "cobradoGs": 124251000,
+  "cobradoUsd": 21608.89,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2088,9 +2121,9 @@
    },
    {
     "fecha": "2026-10-21",
-    "cobros": 2,
-    "gs": 775000,
-    "usd": 134.78
+    "cobros": 3,
+    "gs": 1570000,
+    "usd": 273.04
    }
   ],
   "pruebasExcluidas": 0,
@@ -2098,8 +2131,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 123456000,
-  "pendienteUsd": 21470.61
+  "pendienteGs": 124251000,
+  "pendienteUsd": 21608.87
  },
  "giros": [
   {
@@ -2212,7 +2245,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲123.5 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲124.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2470,6 +2503,14 @@
    "gs": 60000,
    "usd": 10.43,
    "concepto": ". Viático",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-22",
+   "grupo": "Pagos (Majo)",
+   "gs": 539000,
+   "usd": 93.74,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/dse55v (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
