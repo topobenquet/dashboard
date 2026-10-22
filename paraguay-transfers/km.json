@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T11:10:01.977Z",
+ "generated": "2026-10-22T17:10:02.082Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -566,6 +566,7 @@
    "tanqueIni": 0.85,
    "tanqueFin": 0.9,
    "traslados": [
+    "Aero-Dazzler-Aero",
     "Aero-Yacht",
     "Aero-Dazzler"
    ],
@@ -885,6 +886,8 @@
    "tanqueIni": null,
    "tanqueFin": null,
    "traslados": [
+    "Aero-Asu",
+    "Asu - Ita Kambuchi",
     "Asu - Foz"
    ],
    "kmEsperado": 690,
@@ -945,9 +948,12 @@
    "km": 850,
    "tanqueIni": null,
    "tanqueFin": null,
-   "traslados": [],
-   "kmEsperado": null,
-   "desvio": null,
+   "traslados": [
+    "Tour Foz",
+    "Aero-HotelNobile"
+   ],
+   "kmEsperado": 690,
+   "desvio": 0.232,
    "combustiblePagado": null,
    "combustibleCargado": null,
    "combustibleCorresponde": 1125400,
@@ -1974,7 +1980,7 @@
   {
    "key": "desvio:H1:95850",
    "nivel": "juan",
-   "texto": "H1, Alfredo, 23/09 (Aero-Yacht + Aero-Dazzler): 80 km reales contra 40 km esperados (+100%).",
+   "texto": "H1, Alfredo, 23/09 (Aero-Dazzler-Aero + Aero-Yacht + Aero-Dazzler): 80 km reales contra 40 km esperados (+100%).",
    "ts": 1790171290,
    "fecha": "2026-09-23"
   },
@@ -2005,6 +2011,13 @@
    "texto": "H1: 114 km sin traslado entre el 29/08 (km 92.116, Gustavo) y el 30/08 (km 92.230, Gustavo).",
    "ts": 1788122161,
    "fecha": "2026-08-30"
+  },
+  {
+   "key": "desvio:H1:91154",
+   "nivel": "juan",
+   "texto": "H1, Alfredo, 24/08 (Tour Foz + Aero-HotelNobile): 850 km reales contra 690 km esperados (+23%).",
+   "ts": 1787779864,
+   "fecha": "2026-08-26"
   }
  ]
 }
