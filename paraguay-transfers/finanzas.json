@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T18:30:23.825Z",
+ "generated": "2026-10-22T22:00:37.327Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 89.67,
   "stripePendiente": 475.37,
-  "pagoparPendienteUsd": 21422.59,
+  "pagoparPendienteUsd": 21615.17,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -285,14 +285,15 @@
   },
   {
    "fecha": "2026-10-22",
-   "in": 0,
-   "out": 448.27,
-   "n": 3,
+   "in": 192.58,
+   "out": 912.06,
+   "n": 7,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -448.27
+    "Pagopar": 192.58,
+    "WhatsApp · Pagos (Majo)": -912.06
    },
-   "neto": -448.27,
-   "acum": 10137.62
+   "neto": -719.48,
+   "acum": 9866.41
   }
  ],
  "movimientos": [
@@ -953,6 +954,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Kenny Dudek",
    "gs": 795000
+  },
+  {
+   "d": "2026-10-22",
+   "t": "in",
+   "usd": 141.03,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Laura Mazman",
+   "gs": 818000
+  },
+  {
+   "d": "2026-10-22",
+   "t": "in",
+   "usd": 51.55,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Liliana Espinola",
+   "gs": 299000
   },
   {
    "d": "2026-10-01",
@@ -1837,6 +1854,34 @@
    }
   },
   {
+   "d": "2026-10-22",
+   "t": "out",
+   "usd": 46.55,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transfer aeropuerto Lim 23/10",
+   "gs": 270000,
+   "rub": {
+    "chofer": 46.55,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-22",
+   "t": "out",
+   "usd": 417.24,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Saldo traslados Australia",
+   "gs": 2420000,
+   "rub": {
+    "chofer": 417.24,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 215.52,
@@ -2014,8 +2059,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 77,
-   "bruto": 21422.59,
+   "cobros": 79,
+   "bruto": 21615.17,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2030,8 +2075,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 124251000,
-  "cobradoUsd": 21422.59,
+  "cobradoGs": 125368000,
+  "cobradoUsd": 21615.17,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2152,6 +2197,12 @@
     "cobros": 3,
     "gs": 1570000,
     "usd": 270.7
+   },
+   {
+    "fecha": "2026-10-22",
+    "cobros": 2,
+    "gs": 1117000,
+    "usd": 192.58
    }
   ],
   "pruebasExcluidas": 0,
@@ -2159,8 +2210,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 124251000,
-  "pendienteUsd": 21422.59
+  "pendienteGs": 125368000,
+  "pendienteUsd": 21615.17
  },
  "giros": [
   {
@@ -2279,7 +2330,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲124.3 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲125.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2553,6 +2604,14 @@
    "gs": 300000,
    "usd": 51.72,
    "concepto": "2 dias + de combustible",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-22",
+   "grupo": "Alfredo",
+   "gs": 20000,
+   "usd": 3.45,
+   "concepto": "Allí lo que va a quedar pendiente es el pago de GS por 9 hor",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],

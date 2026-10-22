@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22T16:51:30.108Z",
+  "generated": "2026-10-22T22:01:20.006Z",
   "lastSyncLabel": "22 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 268,
-      "reservas": 60,
-      "revenue": 25444.08,
-      "chofer": 11659.91,
-      "comb": 372.42,
+      "leads": 273,
+      "reservas": 62,
+      "revenue": 25636.66,
+      "chofer": 12261.63,
+      "comb": 510.35,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2998.27,
-      "gAds": 390,
-      "meta": 89.53,
-      "costoSheet": 11477,
-      "gananciaSheet": 17032,
+      "gAds": 396,
+      "meta": 90.15,
+      "costoSheet": 11478,
+      "gananciaSheet": 17061,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 389.94,
-      "clicks": 28250,
-      "impr": 527840,
+      "spend": 395.72,
+      "clicks": 28518,
+      "impr": 533595,
       "conv": 112
     }
   ],
@@ -6723,6 +6723,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "Calle Alto Paraguay casi Universitarios del Chaco hasta el aeropuerto",
+      "cliente": "liliana espinola",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "22/10/26",
+      "fechaSalida": "24/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "CDE al aeropuerto internacional de Foz",
       "cliente": "victor cubas",
       "pais": "Paraguay",
@@ -6762,6 +6776,20 @@
       "neto": 42.68,
       "fechaReserva": "14/10/26",
       "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-FOZ",
+      "cliente": "miss mazman",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 447,
+      "sena": 134,
+      "restante": 313,
+      "choferCost": 0,
+      "neto": 433.59,
+      "fechaReserva": "22/10/26",
+      "fechaSalida": "01/11/26"
     },
     {
       "mes": "Octubre",
@@ -6888,6 +6916,20 @@
       "neto": 66.93,
       "fechaReserva": "09/10/26",
       "fechaSalida": ""
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-FOZ",
+      "cliente": "miss mazman",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 447,
+      "sena": 134,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 433.59,
+      "fechaReserva": "46317",
+      "fechaSalida": "46327"
     },
     {
       "mes": "Noviembre",
@@ -7242,7 +7284,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-22": 7,
+      "2026-10-22": 12,
       "2026-10-21": 14,
       "2026-10-20": 9,
       "2026-10-19": 12,
@@ -7317,6 +7359,7 @@
       "2026-10-17": 2,
       "2026-10-18": 1,
       "2026-10-21": 1,
+      "2026-10-22": 2,
       "2026-10-19": 1
     },
     "gads": {
@@ -7601,13 +7644,13 @@
       "2026-10-19": 33.17,
       "2026-10-20": 19.11,
       "2026-10-21": 19.21,
-      "2026-10-22": 2.05
+      "2026-10-22": 7.84
     }
   },
   "resenas": {
     "count": 74,
     "rating": 5,
-    "actualizado": "2026-10-22T16:10:11.953Z",
+    "actualizado": "2026-10-22T20:10:21.797Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7821,6 +7864,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-10-22": 10,
       "2026-10-17": 14,
       "2026-10-16": 20,
       "2026-10-12": 27,
@@ -7828,7 +7872,7 @@
       "2026-10-10": 14,
       "2026-10-09": 21,
       "2026-10-08": 20,
-      "2026-10-07": 22,
+      "2026-10-07": 23,
       "2026-10-06": 13,
       "2026-10-04": 16,
       "2026-10-03": 15,
@@ -7887,11 +7931,10 @@
       "2026-10-18": 9,
       "2026-10-19": 14,
       "2026-10-20": 9,
-      "2026-10-21": 14,
-      "2026-10-22": 6
+      "2026-10-21": 14
     },
     "monthly": {
-      "Octubre": 363,
+      "Octubre": 368,
       "Septiembre": 213,
       "Agosto": 27
     }
