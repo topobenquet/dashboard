@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T16:51:00.322Z",
+ "generated": "2026-10-22T18:30:23.825Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -286,13 +286,13 @@
   {
    "fecha": "2026-10-22",
    "in": 0,
-   "out": 172.41,
-   "n": 1,
+   "out": 448.27,
+   "n": 3,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -172.41
+    "WhatsApp · Pagos (Majo)": -448.27
    },
-   "neto": -172.41,
-   "acum": 10413.48
+   "neto": -448.27,
+   "acum": 10137.62
   }
  ],
  "movimientos": [
@@ -1809,6 +1809,34 @@
    }
   },
   {
+   "d": "2026-10-22",
+   "t": "out",
+   "usd": 137.93,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Wellington Navarro (concepto desconocido)",
+   "gs": 800000,
+   "rub": {
+    "chofer": 137.93,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-22",
+   "t": "out",
+   "usd": 137.93,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "2 días + combustible",
+   "gs": 800000,
+   "rub": {
+    "chofer": 0,
+    "comb": 137.93,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 215.52,
@@ -2517,6 +2545,14 @@
    "gs": 539000,
    "usd": 92.93,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/dse55v (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-22",
+   "grupo": "Pagos (Majo)",
+   "gs": 300000,
+   "usd": 51.72,
+   "concepto": "2 dias + de combustible",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
