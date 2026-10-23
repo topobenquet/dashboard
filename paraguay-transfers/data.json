@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T10:20:37.397Z",
+  "generated": "2026-10-23T22:00:50.450Z",
   "lastSyncLabel": "23 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 273,
-      "reservas": 62,
-      "revenue": 28140.97,
+      "leads": 283,
+      "reservas": 66,
+      "revenue": 28456.83,
       "chofer": 12261.63,
       "comb": 510.35,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2998.27,
-      "gAds": 402,
+      "gAds": 407,
       "meta": 91.45,
-      "costoSheet": 11478,
-      "gananciaSheet": 17047,
+      "costoSheet": 14627,
+      "gananciaSheet": 18223,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 401.79,
-      "clicks": 28750,
-      "impr": 539022,
-      "conv": 112
+      "spend": 407.42,
+      "clicks": 28888,
+      "impr": 542127,
+      "conv": 113
     }
   ],
   "trips": [
@@ -2337,7 +2337,7 @@
       "choferCost": 2700,
       "neto": 483,
       "fechaReserva": "09/07/26",
-      "fechaSalida": "24/10/26 - 31/10/26"
+      "fechaSalida": "31/10/26 - 07/11/26"
     },
     {
       "mes": "Julio",
@@ -6670,7 +6670,7 @@
       "route": "AERO-ASU",
       "cliente": "j. i. gwynn",
       "pais": "Paraguay",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 69,
       "sena": 0,
       "restante": 0,
@@ -6684,7 +6684,7 @@
       "route": "AERO-ASU-AERO",
       "cliente": "lim en",
       "pais": "Singapur",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 127,
       "sena": 38,
       "restante": 89,
@@ -6695,24 +6695,10 @@
     },
     {
       "mes": "Octubre",
-      "route": "Tour personalizado",
-      "cliente": "Natalie M",
-      "pais": "USA",
-      "conductor": "Daniel Sánchez",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "09/07/26",
-      "fechaSalida": "24/10/26"
-    },
-    {
-      "mes": "Octubre",
       "route": "ASU City tour",
       "cliente": "megan",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 147,
       "sena": 50,
       "restante": 97,
@@ -6726,13 +6712,27 @@
       "route": "Calle Alto Paraguay casi Universitarios del Chaco hasta el aeropuerto",
       "cliente": "liliana espinola",
       "pais": "Paraguay",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 49,
       "sena": 49,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 47.53,
+      "choferCost": 21,
+      "neto": 26.48,
       "fechaReserva": "22/10/26",
+      "fechaSalida": "24/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-FOZ",
+      "cliente": "mike tripp",
+      "pais": "USA",
+      "conductor": "Juan Vera CDE",
+      "pago": 397,
+      "sena": 100,
+      "restante": 297,
+      "choferCost": 246,
+      "neto": 139.48,
+      "fechaReserva": "23/10/26",
       "fechaSalida": "24/10/26"
     },
     {
@@ -6765,6 +6765,34 @@
     },
     {
       "mes": "Octubre",
+      "route": "Paseo del Solar 744 casi San Roque Gonzalez, Lambaré - Aeropuerto Silvio Pettiro",
+      "cliente": "marcial",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 51.58,
+      "sena": 51.58,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 50.03,
+      "fechaReserva": "23/10/26",
+      "fechaSalida": "26/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-Formosa",
+      "cliente": "norma",
+      "pais": "Paraguay",
+      "conductor": "Elizabeth Arias",
+      "pago": 88,
+      "sena": 88,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 85.36,
+      "fechaReserva": "23/10/26",
+      "fechaSalida": "27/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "City tour en Asunción",
       "cliente": "jorge",
       "pais": "Brasil",
@@ -6776,6 +6804,34 @@
       "neto": 42.68,
       "fechaReserva": "14/10/26",
       "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-PtoIguazu",
+      "cliente": "marco",
+      "pais": "Italia",
+      "conductor": "",
+      "pago": 507,
+      "sena": 152,
+      "restante": 355,
+      "choferCost": 0,
+      "neto": 491.79,
+      "fechaReserva": "23/10/26",
+      "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Tour personalizado",
+      "cliente": "Natalie M",
+      "pais": "USA",
+      "conductor": "Daniel Sánchez",
+      "pago": 3281,
+      "sena": 900,
+      "restante": 2381,
+      "choferCost": 2700,
+      "neto": 430.55,
+      "fechaReserva": "09/07/26",
+      "fechaSalida": "31/10/26"
     },
     {
       "mes": "Octubre",
@@ -7284,6 +7340,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-10-23": 10,
       "2026-10-22": 12,
       "2026-10-21": 14,
       "2026-10-20": 9,
@@ -7360,6 +7417,7 @@
       "2026-10-18": 1,
       "2026-10-21": 1,
       "2026-10-22": 2,
+      "2026-10-23": 4,
       "2026-10-19": 1
     },
     "gads": {
@@ -7644,13 +7702,14 @@
       "2026-10-19": 33.17,
       "2026-10-20": 19.11,
       "2026-10-21": 19.21,
-      "2026-10-22": 13.9
+      "2026-10-22": 13.9,
+      "2026-10-23": 5.63
     }
   },
   "resenas": {
     "count": 74,
     "rating": 5,
-    "actualizado": "2026-10-22T23:10:04.469Z",
+    "actualizado": "2026-10-23T20:10:01.633Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7826,6 +7885,11 @@
         "fecha": "2026-10-22",
         "count": 74,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-23",
+        "count": 74,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7932,10 +7996,10 @@
       "2026-10-19": 14,
       "2026-10-20": 9,
       "2026-10-21": 14,
-      "2026-10-23": 2
+      "2026-10-23": 13
     },
     "monthly": {
-      "Octubre": 370,
+      "Octubre": 381,
       "Septiembre": 213,
       "Agosto": 27
     }
