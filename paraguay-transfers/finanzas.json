@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T10:20:07.093Z",
+ "generated": "2026-10-23T12:30:10.736Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 470.7,
   "stripePendiente": 94.34,
-  "pagoparPendienteUsd": 24119.48,
+  "pagoparPendienteUsd": 24279.48,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -297,14 +297,14 @@
   },
   {
    "fecha": "2026-10-23",
-   "in": 2504.31,
+   "in": 2664.31,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Pagopar": 2504.31
+    "Pagopar": 2664.31
    },
-   "neto": 2504.31,
-   "acum": 12370.72
+   "neto": 2664.31,
+   "acum": 12530.72
   }
  ],
  "movimientos": [
@@ -989,6 +989,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Natalie Martin",
    "gs": 14525000
+  },
+  {
+   "d": "2026-10-23",
+   "t": "in",
+   "usd": 160,
+   "fuente": "Pagopar",
+   "det": "QR ueno · Marco Gatti",
+   "gs": 928000
   },
   {
    "d": "2026-10-01",
@@ -2078,8 +2086,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 80,
-   "bruto": 24119.48,
+   "cobros": 81,
+   "bruto": 24279.48,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2094,8 +2102,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 139893000,
-  "cobradoUsd": 24119.48,
+  "cobradoGs": 140821000,
+  "cobradoUsd": 24279.48,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2225,9 +2233,9 @@
    },
    {
     "fecha": "2026-10-23",
-    "cobros": 1,
-    "gs": 14525000,
-    "usd": 2504.31
+    "cobros": 2,
+    "gs": 15453000,
+    "usd": 2664.31
    }
   ],
   "pruebasExcluidas": 0,
@@ -2235,8 +2243,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 139893000,
-  "pendienteUsd": 24119.48
+  "pendienteGs": 140821000,
+  "pendienteUsd": 24279.48
  },
  "giros": [
   {
@@ -2355,7 +2363,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲139.9 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲140.8 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2637,6 +2645,14 @@
    "gs": 20000,
    "usd": 3.45,
    "concepto": "Allí lo que va a quedar pendiente es el pago de GS por 9 hor",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 592000,
+   "usd": 102.07,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/xdu3gc (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
