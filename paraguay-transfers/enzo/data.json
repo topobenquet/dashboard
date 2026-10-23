@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T18:30:28.912Z",
+ "generated": "2026-10-23T20:30:22.366Z",
  "hoy": "2026-10-23",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 23,
-   "ventas": 28,
-   "facturacion": 10443,
-   "proyeccion": 14075.35,
-   "base": 208.86,
+   "ventas": 29,
+   "facturacion": 10494.58,
+   "proyeccion": 14144.87,
+   "base": 209.89,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 7557,
+    "falta": 7505.42,
     "bono": 100
    },
    "ticketsAltos": 11,
    "bonoTicket": 110,
    "margen": 0.3762,
    "margenOk": true,
-   "sinCostos": 15,
+   "sinCostos": 16,
    "bonoAplica": false,
    "bonoTotal": 110,
-   "total": 208.86,
+   "total": 209.89,
    "pendienteCobro": 0,
    "semanas": [
     {
@@ -72,7 +72,7 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 3814
+     "monto": 3865.58
     }
    ],
    "detalle": [
@@ -85,6 +85,17 @@
      "monto": 397,
      "margen": 0.35,
      "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-23",
+     "salida": "2026-10-26",
+     "cliente": "marcial",
+     "ruta": "Paseo del Solar 744 casi San Roque Gonzalez, Lambaré - Aerop",
+     "tipo": "Traslado",
+     "monto": 51.58,
+     "margen": null,
+     "alto": false,
      "saldo": 0
     },
     {
