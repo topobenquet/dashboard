@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T18:30:34.736Z",
+ "generated": "2026-10-23T20:30:27.785Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -297,14 +297,15 @@
   },
   {
    "fecha": "2026-10-23",
-   "in": 2769.48,
+   "in": 2820.17,
    "out": 0,
-   "n": 3,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 2769.48
+    "Pagopar": 2769.48,
+    "Transferencia": 50.69
    },
-   "neto": 2769.48,
-   "acum": 12635.89
+   "neto": 2820.17,
+   "acum": 12686.58
   }
  ],
  "movimientos": [
@@ -1987,6 +1988,14 @@
    "fuente": "Transferencia",
    "det": "Tania Josefina Storm Escobar Y/o Josefina Escobar De Storm (comprobante en GHL)",
    "gs": 800000
+  },
+  {
+   "d": "2026-10-23",
+   "t": "in",
+   "usd": 50.69,
+   "fuente": "Transferencia",
+   "det": "Marcial (comprobante en GHL)",
+   "gs": 294000
   }
  ],
  "pnl": [
