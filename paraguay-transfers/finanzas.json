@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T16:30:08.578Z",
+ "generated": "2026-10-23T18:30:34.736Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,8 +12,8 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 470.7,
-  "stripePendiente": 200.16,
-  "pagoparPendienteUsd": 24279.48,
+  "stripePendiente": 248.41,
+  "pagoparPendienteUsd": 24384.66,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -297,14 +297,14 @@
   },
   {
    "fecha": "2026-10-23",
-   "in": 2664.31,
+   "in": 2769.48,
    "out": 0,
-   "n": 2,
+   "n": 3,
    "porFuente": {
-    "Pagopar": 2664.31
+    "Pagopar": 2769.48
    },
-   "neto": 2664.31,
-   "acum": 12530.72
+   "neto": 2769.48,
+   "acum": 12635.89
   }
  ],
  "movimientos": [
@@ -997,6 +997,14 @@
    "fuente": "Pagopar",
    "det": "QR ueno · Marco Gatti",
    "gs": 928000
+  },
+  {
+   "d": "2026-10-23",
+   "t": "in",
+   "usd": 105.17,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Michael Tripp",
+   "gs": 610000
   },
   {
    "d": "2026-10-01",
@@ -2086,8 +2094,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 81,
-   "bruto": 24279.48,
+   "cobros": 82,
+   "bruto": 24384.65,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2102,8 +2110,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 140821000,
-  "cobradoUsd": 24279.48,
+  "cobradoGs": 141431000,
+  "cobradoUsd": 24384.65,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2233,9 +2241,9 @@
    },
    {
     "fecha": "2026-10-23",
-    "cobros": 2,
-    "gs": 15453000,
-    "usd": 2664.31
+    "cobros": 3,
+    "gs": 16063000,
+    "usd": 2769.48
    }
   ],
   "pruebasExcluidas": 0,
@@ -2243,8 +2251,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 140821000,
-  "pendienteUsd": 24279.48
+  "pendienteGs": 141431000,
+  "pendienteUsd": 24384.66
  },
  "giros": [
   {
@@ -2363,7 +2371,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲140.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲141.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2653,6 +2661,14 @@
    "gs": 592000,
    "usd": 102.07,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/xdu3gc (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 1812000,
+   "usd": 312.41,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/9czzr9 (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
