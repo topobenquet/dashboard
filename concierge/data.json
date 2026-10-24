@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-23T22:01:38.396Z",
-  "lastSyncLabel": "23 Oct 2026",
+  "generated": "2026-10-24T10:21:29.224Z",
+  "lastSyncLabel": "24 Oct 2026",
   "year": 2026,
   "currentMonth": "Octubre",
   "account": {
@@ -281,20 +281,20 @@
     {
       "mes": "Octubre",
       "ym": "2026-10",
-      "spend": 4073.3,
-      "clicks": 1169,
-      "impr": 9130,
+      "spend": 4091.74,
+      "clicks": 1180,
+      "impr": 9172,
       "actions": {
         "Calls from ads": 13,
-        "Chat Lead": 339,
-        "Get a Callback": 346.7,
+        "Chat Lead": 344,
+        "Get a Callback": 350.7,
         "Local actions - Directions": 10,
         "Local actions - Other engagements": 3,
         "Local actions - Website visits": 7,
         "Number Pool Calls": 12,
         "Clicks to call": 4
       },
-      "contacto": 715,
+      "contacto": 724,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5487,16 +5487,31 @@
       "leads": 0
     },
     "2026-10-23": {
-      "spend": 112.09,
-      "clicks": 32,
-      "impr": 229,
+      "spend": 127.62,
+      "clicks": 42,
+      "impr": 266,
       "actions": {
         "Calls from ads": 3,
-        "Chat Lead": 7,
-        "Get a Callback": 4,
+        "Chat Lead": 8,
+        "Get a Callback": 6,
         "Number Pool Calls": 1
       },
-      "contacto": 15,
+      "contacto": 18,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-10-24": {
+      "spend": 2.91,
+      "clicks": 1,
+      "impr": 5,
+      "actions": {
+        "Chat Lead": 4,
+        "Get a Callback": 2
+      },
+      "contacto": 6,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5523,10 +5538,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1293.93,
-      "clicks": 523,
-      "impr": 4235,
-      "contacto": 314,
+      "spend": 1312.37,
+      "clicks": 534,
+      "impr": 4277,
+      "contacto": 323,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5711,9 +5726,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1293.93,
-        "clicks": 523,
-        "impr": 4235
+        "spend": 1312.37,
+        "clicks": 534,
+        "impr": 4277
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
@@ -5727,6 +5742,11 @@
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-10-24": {
+        "contacts": 1,
+        "paid": 1,
+        "opps": 1
+      },
       "2026-10-23": {
         "contacts": 6,
         "paid": 6,
@@ -7255,14 +7275,14 @@
       },
       {
         "ym": "2026-10",
-        "contacts": 231,
-        "paid": 216,
-        "opps": 217
+        "contacts": 232,
+        "paid": 217,
+        "opps": 218
       }
     ],
     "stages": {
       "2026-10": {
-        "New Leads": 217
+        "New Leads": 218
       },
       "2026-09": {
         "New Leads": 229,
@@ -7336,11 +7356,11 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-10-23",
+    "lastContact": "2026-10-24",
     "totals": {
       "contactos": 2500,
       "opps": 2500,
-      "oppsPaid": 2262
+      "oppsPaid": 2263
     }
   },
   "monday": {
@@ -7491,7 +7511,7 @@
       },
       {
         "ym": "2026-10",
-        "items": 221,
+        "items": 222,
         "assessments": 16,
         "cohortAssessed": 5
       }
@@ -7560,7 +7580,7 @@
         "Waiting EDD": 13,
         "Has assessment scheduled": 5,
         "POS developed": 1,
-        "New Leads": 4
+        "New Leads": 5
       }
     },
     "passed": {
@@ -7639,7 +7659,7 @@
         "MAP referral pending": 56,
         "Waiting EDD": 14,
         "Has assessment scheduled": 5,
-        "New Leads": 5,
+        "New Leads": 6,
         "POS developed": 1
       }
     },
@@ -7654,8 +7674,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1755,
-      "paid": 1464,
+      "items": 1757,
+      "paid": 1465,
       "logs": 3601
     }
   }
