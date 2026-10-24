@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-24T10:21:03.849Z",
+  "generated": "2026-10-24T22:01:17.603Z",
   "lastSyncLabel": "24 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 286,
-      "reservas": 66,
-      "revenue": 28456.83,
-      "chofer": 12261.63,
+      "leads": 290,
+      "reservas": 67,
+      "revenue": 28922.86,
+      "chofer": 12313.35,
       "comb": 510.35,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2998.27,
-      "gAds": 415,
+      "gAds": 423,
       "meta": 91.45,
-      "costoSheet": 14627,
-      "gananciaSheet": 18209,
+      "costoSheet": 14628,
+      "gananciaSheet": 18257,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 415.16,
-      "clicks": 29212,
-      "impr": 548027,
+      "spend": 422.75,
+      "clicks": 29441,
+      "impr": 552315,
       "conv": 113
     }
   ],
@@ -6793,6 +6793,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "ASU-AERO",
+      "cliente": "diegofp",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "24/10/26",
+      "fechaSalida": "27/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "City tour en Asunción",
       "cliente": "jorge",
       "pais": "Brasil",
@@ -7340,7 +7354,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-24": 3,
+      "2026-10-24": 7,
       "2026-10-23": 10,
       "2026-10-22": 12,
       "2026-10-21": 14,
@@ -7419,6 +7433,7 @@
       "2026-10-21": 1,
       "2026-10-22": 2,
       "2026-10-23": 4,
+      "2026-10-24": 1,
       "2026-10-19": 1
     },
     "gads": {
@@ -7704,13 +7719,14 @@
       "2026-10-20": 19.11,
       "2026-10-21": 19.21,
       "2026-10-22": 13.9,
-      "2026-10-23": 13.37
+      "2026-10-23": 13.39,
+      "2026-10-24": 7.58
     }
   },
   "resenas": {
-    "count": 74,
+    "count": 75,
     "rating": 5,
-    "actualizado": "2026-10-23T23:10:06.396Z",
+    "actualizado": "2026-10-24T20:10:02.111Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7891,6 +7907,11 @@
         "fecha": "2026-10-23",
         "count": 74,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-24",
+        "count": 75,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7998,10 +8019,10 @@
       "2026-10-20": 9,
       "2026-10-21": 14,
       "2026-10-23": 17,
-      "2026-10-24": 1
+      "2026-10-24": 10
     },
     "monthly": {
-      "Octubre": 386,
+      "Octubre": 395,
       "Septiembre": 213,
       "Agosto": 27
     }

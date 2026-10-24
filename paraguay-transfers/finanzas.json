@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T18:30:15.380Z",
+ "generated": "2026-10-24T22:00:10.115Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -310,13 +310,14 @@
   {
    "fecha": "2026-10-24",
    "in": 466.03,
-   "out": 0,
-   "n": 3,
+   "out": 51.72,
+   "n": 4,
    "porFuente": {
-    "Pagopar": 466.03
+    "Pagopar": 466.03,
+    "WhatsApp · Pagos (Majo)": -51.72
    },
-   "neto": 466.03,
-   "acum": 13152.61
+   "neto": 414.31,
+   "acum": 13100.89
   }
  ],
  "movimientos": [
@@ -1947,6 +1948,20 @@
    "gs": 2420000,
    "rub": {
     "chofer": 417.24,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-24",
+   "t": "out",
+   "usd": 51.72,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Luis Milciades Vazquez Caceres (concepto desconocido)",
+   "gs": 300000,
+   "rub": {
+    "chofer": 51.72,
     "comb": 0,
     "peajes": 0,
     "otros": 0
