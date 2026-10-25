@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T10:20:34.970Z",
+  "generated": "2026-10-25T22:01:05.404Z",
   "lastSyncLabel": "25 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 293,
+      "leads": 298,
       "reservas": 67,
-      "revenue": 28922.86,
+      "revenue": 29150.96,
       "chofer": 12313.35,
       "comb": 510.35,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2998.27,
-      "gAds": 428,
+      "gAds": 434,
       "meta": 91.45,
-      "costoSheet": 14628,
-      "gananciaSheet": 18244,
+      "costoSheet": 14630,
+      "gananciaSheet": 18314,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 428.35,
-      "clicks": 29649,
-      "impr": 556279,
-      "conv": 113
+      "spend": 434.38,
+      "clicks": 29740,
+      "impr": 558749,
+      "conv": 114
     }
   ],
   "trips": [
@@ -6769,11 +6769,11 @@
       "cliente": "marcial",
       "pais": "Paraguay",
       "conductor": "",
-      "pago": 51.58,
+      "pago": 124.21,
       "sena": 51.58,
-      "restante": 0,
+      "restante": 72.63,
       "choferCost": 0,
-      "neto": 50.03,
+      "neto": 120.48,
       "fechaReserva": "23/10/26",
       "fechaSalida": "26/10/26"
     },
@@ -7354,7 +7354,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-25": 2,
+      "2026-10-25": 7,
       "2026-10-24": 8,
       "2026-10-23": 10,
       "2026-10-22": 12,
@@ -7721,13 +7721,14 @@
       "2026-10-21": 19.21,
       "2026-10-22": 13.9,
       "2026-10-23": 13.39,
-      "2026-10-24": 13.18
+      "2026-10-24": 13.33,
+      "2026-10-25": 5.88
     }
   },
   "resenas": {
-    "count": 75,
+    "count": 77,
     "rating": 5,
-    "actualizado": "2026-10-24T23:10:29.095Z",
+    "actualizado": "2026-10-25T20:10:01.101Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7913,6 +7914,11 @@
         "fecha": "2026-10-24",
         "count": 75,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-25",
+        "count": 77,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8021,10 +8027,10 @@
       "2026-10-21": 14,
       "2026-10-23": 17,
       "2026-10-24": 14,
-      "2026-10-25": 1
+      "2026-10-25": 9
     },
     "monthly": {
-      "Octubre": 400,
+      "Octubre": 408,
       "Septiembre": 213,
       "Agosto": 27
     }
