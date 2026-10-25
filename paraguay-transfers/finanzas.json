@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T12:30:17.346Z",
+ "generated": "2026-10-25T20:30:06.601Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 470.7,
-  "stripePendiente": 248.41,
+  "stripePendiente": 370.46,
   "pagoparPendienteUsd": 24850.69,
   "relay": null,
   "binance": null,
@@ -318,6 +318,17 @@
    },
    "neto": 414.31,
    "acum": 13100.89
+  },
+  {
+   "fecha": "2026-10-25",
+   "in": 71.38,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Transferencia": 71.38
+   },
+   "neto": 71.38,
+   "acum": 13172.27
   }
  ],
  "movimientos": [
@@ -2046,6 +2057,14 @@
    "fuente": "Transferencia",
    "det": "Marcial (comprobante en GHL)",
    "gs": 294000
+  },
+  {
+   "d": "2026-10-25",
+   "t": "in",
+   "usd": 71.38,
+   "fuente": "Transferencia",
+   "det": "Marcial (comprobante en GHL)",
+   "gs": 414000
   }
  ],
  "pnl": [
