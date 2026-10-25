@@ -2701,6 +2701,66 @@
     "PC": 40,
     "Other": 0
    }
+  },
+  "2026-10-25": {
+   "numOfDays": 1,
+   "takenAt": "2026-10-25T10:21:13.538Z",
+   "pages": [
+    {
+     "path": "/",
+     "sessions": 1,
+     "bots": 0,
+     "scrollW": 16,
+     "scrollN": 1,
+     "active": 127,
+     "total": 131,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": 16
+    },
+    {
+     "path": "/florida",
+     "sessions": 22,
+     "bots": 1,
+     "scrollW": 880,
+     "scrollN": 22,
+     "active": 1836,
+     "total": 2949,
+     "dead": 2,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": 40
+    },
+    {
+     "path": "/teterboro",
+     "sessions": 0,
+     "bots": 1,
+     "scrollW": 0,
+     "scrollN": 0,
+     "active": 0,
+     "total": 0,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": null
+    }
+   ],
+   "devices": {
+    "Mobile": 9,
+    "Tablet": 1,
+    "PC": 26,
+    "Other": 0
+   }
   }
  }
 }
