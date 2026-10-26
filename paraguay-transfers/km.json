@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T17:10:02.082Z",
+ "generated": "2026-10-26T21:10:02.259Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -70,7 +70,7 @@
   "H1": {
    "kmViajes": 1294,
    "kmFuera": 2392,
-   "viajes": 11,
+   "viajes": 12,
    "costoComb": 4880264,
    "pagado": 730012
   },
@@ -101,12 +101,12 @@
     "Alfredo"
    ],
    "fechaIni": "2026-10-20",
-   "fechaFin": "2026-10-20",
+   "fechaFin": "2026-10-21",
    "horaIni": "11:26",
-   "horaFin": null,
+   "horaFin": "08:10",
    "kmIni": 100549,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 100549,
+   "km": 0,
    "tanqueIni": 0.3,
    "tanqueFin": null,
    "traslados": [],
@@ -114,11 +114,11 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 0,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": true
   },
   {
@@ -518,6 +518,35 @@
      "litros": 9.11
     }
    ],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-09-26",
+   "fechaFin": "2026-09-27",
+   "horaIni": "06:01",
+   "horaFin": "08:10",
+   "kmIni": 95994,
+   "kmFin": 95994,
+   "km": 0,
+   "tanqueIni": 0.75,
+   "tanqueFin": null,
+   "traslados": [
+    "Dazzler - Aero",
+    "Sheraton -AERO"
+   ],
+   "kmEsperado": 40,
+   "desvio": -1,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 0,
+   "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
    "abierto": false,
@@ -939,29 +968,59 @@
    "choferes": [
     "Alfredo"
    ],
-   "fechaIni": "2026-08-24",
+   "fechaIni": "2026-08-26",
    "fechaFin": "2026-08-26",
-   "horaIni": "03:38",
+   "horaIni": "15:49",
    "horaFin": "18:31",
-   "kmIni": 91154,
+   "kmIni": 91960,
    "kmFin": 92004,
-   "km": 850,
+   "km": 44,
    "tanqueIni": null,
    "tanqueFin": null,
    "traslados": [
-    "Tour Foz",
     "Aero-HotelNobile"
    ],
-   "kmEsperado": 690,
-   "desvio": 0.232,
+   "kmEsperado": 40,
+   "desvio": 0.1,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 1125400,
+   "combustibleCorresponde": 58256,
+   "cargas": [],
+   "faltanFotos": [
+    91960,
+    92004
+   ],
+   "sinFinal": false,
+   "abierto": false,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-08-24",
+   "fechaFin": "2026-08-25",
+   "horaIni": "03:38",
+   "horaFin": "19:44",
+   "kmIni": 91154,
+   "kmFin": 91921,
+   "km": 767,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Tour Foz"
+   ],
+   "kmEsperado": 690,
+   "desvio": 0.112,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": 1015508,
    "cargas": [],
    "faltanFotos": [
     91154,
     91593,
-    92004
+    91921
    ],
    "sinFinal": false,
    "abierto": false,
@@ -1395,12 +1454,11 @@
    "desde": 95994,
    "hasta": 96031,
    "km": 37,
-   "fechaDesde": "2026-09-26",
+   "fechaDesde": "2026-09-27",
    "fechaHasta": "2026-09-28",
    "choferes": [
     "Alfredo"
-   ],
-   "sinFinal": true
+   ]
   },
   {
    "vehiculo": "H1",
@@ -1582,6 +1640,29 @@
     "Alfredo",
     "Gustavo"
    ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 91921,
+   "hasta": 91960,
+   "km": 39,
+   "fechaDesde": "2026-08-25",
+   "fechaHasta": "2026-08-26",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 90954,
+   "hasta": 91154,
+   "km": 200,
+   "fechaDesde": "2026-08-21",
+   "fechaHasta": "2026-08-24",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
   }
  ],
  "cargas": [
@@ -1831,13 +1912,6 @@
  "proximos": [],
  "alertas": [
   {
-   "key": "final:H1:100549",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 20/10 a las 11:26 (km inicio 100.549). Mandá la foto del tablero con el número.",
-   "ts": 1792506375,
-   "fecha": "2026-10-20"
-  },
-  {
    "key": "hueco:H1:100290:100545",
    "nivel": "juan",
    "texto": "H1: 255 km sin traslado entre el 19/10 (km 100.290, Alfredo) y el 20/10 (km 100.545, Alfredo).",
@@ -1971,11 +2045,25 @@
    "fecha": "2026-10-01"
   },
   {
+   "key": "retrocede:3EB0A71C1BE36773DAAE29",
+   "nivel": "juan",
+   "texto": "H1: el km 96.031 (Alfredo, 29/09) es menor que el anterior 96.506.",
+   "ts": 1790680225,
+   "fecha": "2026-09-29"
+  },
+  {
    "key": "hueco:H1:95994:96031",
    "nivel": "juan",
-   "texto": "H1: 37 km sin traslado entre el 26/09 (km 95.994, Alfredo) y el 28/09 (km 96.031, Alfredo); no hubo km final.",
+   "texto": "H1: 37 km sin traslado entre el 27/09 (km 95.994, Alfredo) y el 28/09 (km 96.031, Alfredo).",
    "ts": 1790596783,
    "fecha": "2026-09-28"
+  },
+  {
+   "key": "desvio:H1:95994",
+   "nivel": "juan",
+   "texto": "H1, Alfredo, 26/09 (Dazzler - Aero + Sheraton -AERO): 0 km reales contra 40 km esperados (-100%).",
+   "ts": 1790507406,
+   "fecha": "2026-09-27"
   },
   {
    "key": "desvio:H1:95850",
@@ -2013,11 +2101,18 @@
    "fecha": "2026-08-30"
   },
   {
-   "key": "desvio:H1:91154",
+   "key": "hueco:H1:91921:91960",
    "nivel": "juan",
-   "texto": "H1, Alfredo, 24/08 (Tour Foz + Aero-HotelNobile): 850 km reales contra 690 km esperados (+23%).",
-   "ts": 1787779864,
+   "texto": "H1: 39 km sin traslado entre el 25/08 (km 91.921, Alfredo) y el 26/08 (km 91.960, Alfredo).",
+   "ts": 1787770192,
    "fecha": "2026-08-26"
+  },
+  {
+   "key": "hueco:H1:90954:91154",
+   "nivel": "juan",
+   "texto": "H1: 200 km sin traslado entre el 21/08 (km 90.954, Alfredo) y el 24/08 (km 91.154, Alfredo); no hubo km final.",
+   "ts": 1787553494,
+   "fecha": "2026-08-24"
   }
  ]
 }
