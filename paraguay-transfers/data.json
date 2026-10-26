@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T10:20:40.444Z",
+  "generated": "2026-10-26T22:00:48.363Z",
   "lastSyncLabel": "26 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 18865.17,
-      "chofer": 9483.34,
-      "comb": 824.62,
-      "peajes": 286.55,
+      "revenue": 18372.67,
+      "chofer": 9190.57,
+      "comb": 797.12,
+      "peajes": 277.01,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1033.34,
+      "otros": 998.89,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 301,
+      "leads": 307,
       "reservas": 67,
-      "revenue": 29150.96,
-      "chofer": 12313.35,
-      "comb": 510.35,
+      "revenue": 28432.46,
+      "chofer": 12167.93,
+      "comb": 493.34,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
-      "otros": 2998.27,
-      "gAds": 438,
+      "otros": 2898.34,
+      "gAds": 441,
       "meta": 91.45,
       "costoSheet": 14876,
-      "gananciaSheet": 18059,
+      "gananciaSheet": 18058,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 438.44,
-      "clicks": 30008,
-      "impr": 564277,
+      "spend": 440.71,
+      "clicks": 30101,
+      "impr": 567059,
       "conv": 114
     }
   ],
@@ -6796,7 +6796,7 @@
       "route": "ASU-AERO",
       "cliente": "diegofp",
       "pais": "Argentina",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 49,
       "sena": 49,
       "restante": 0,
@@ -7354,7 +7354,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-26": 3,
+      "2026-10-26": 9,
       "2026-10-25": 7,
       "2026-10-24": 8,
       "2026-10-23": 10,
@@ -7723,13 +7723,14 @@
       "2026-10-22": 13.9,
       "2026-10-23": 13.39,
       "2026-10-24": 13.33,
-      "2026-10-25": 9.94
+      "2026-10-25": 9.99,
+      "2026-10-26": 2.21
     }
   },
   "resenas": {
-    "count": 77,
+    "count": 78,
     "rating": 5,
-    "actualizado": "2026-10-25T23:10:21.795Z",
+    "actualizado": "2026-10-26T20:10:05.423Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7920,9 +7921,20 @@
         "fecha": "2026-10-25",
         "count": 77,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-26",
+        "count": 78,
+        "rating": 5
       }
     ],
     "ultimas": [
+      {
+        "autor": "Gemma Bernal",
+        "rating": 5,
+        "fecha": "2026-10-17T16:32:49.416695339Z",
+        "texto": "Solicitamos un Transfer desde el aeropuerto y todo fue perfecto.\nA pesar de llegar nuestro vuelo con retraso, el chófer estaba allí esperando nuestra llegada.\nNuestro chófer, Alfredo, muy atento.\nRecomendable 100%"
+      },
       {
         "autor": "Andres Lopez",
         "rating": 5,
@@ -7936,22 +7948,16 @@
         "texto": "Excelente servicio de transfers. Siempre que viajo a Paraguay lo uso. Es seguro, los coches están perfectas condiciones de limpieza, los choferes son muy agradables y están a disposición absoluta.\n10/10!\nGracias !"
       },
       {
-        "autor": "Juana Galeano",
+        "autor": "Juan Antonio González Gonzales",
         "rating": 5,
-        "fecha": "2026-08-05T12:08:47.219342036Z",
-        "texto": "Experiencia perfecta.\nPersonas sumamente atentos y empaticos.\nEternamente agradecida a ustedes."
+        "fecha": "2026-08-07T12:41:33.451496243Z",
+        "texto": "Excelente servicio: rápido, confiable y siempre dispuesto a brindar la mejor atención. 🇵🇾👏\n\nSerán nuestros aliados durante nuestra estadía en Paraguay, donde hemos llegado para competir en triatlón. 🏊‍♂️🚴‍♂️🏃‍♂️\n\nEllos estarán a cargo de nuestro transporte día a día, acompañándonos en cada traslado durante esta experiencia.\n\n¡Gracias por la confianza, el apoyo y el excelente servicio! 🙌🇩🇴"
       },
       {
         "autor": "Alfredo David Sanchez Vargas",
         "rating": 5,
         "fecha": "2026-05-26T16:32:49.419894101Z",
         "texto": "Exelente Servicio... Atención Profesional... Vehículos confortables y en muy buenas condiciones... Más que recomendado!!!"
-      },
-      {
-        "autor": "Martin Vial",
-        "rating": 5,
-        "fecha": "2026-05-17T22:21:28.923254381Z",
-        "texto": "Excelente servicio, siempre muy puntuales y con muy buena disposición."
       }
     ]
   },
@@ -8028,10 +8034,11 @@
       "2026-10-21": 14,
       "2026-10-23": 17,
       "2026-10-24": 14,
-      "2026-10-25": 12
+      "2026-10-25": 12,
+      "2026-10-26": 9
     },
     "monthly": {
-      "Octubre": 411,
+      "Octubre": 420,
       "Septiembre": 213,
       "Agosto": 27
     }
