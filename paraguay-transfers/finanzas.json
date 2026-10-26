@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T12:30:18.363Z",
+ "generated": "2026-10-26T14:30:15.930Z",
  "tc": 5800,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -330,6 +330,17 @@
    },
    "neto": 228.1,
    "acum": 13328.99
+  },
+  {
+   "fecha": "2026-10-26",
+   "in": 0,
+   "out": 234.48,
+   "n": 2,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -234.48
+   },
+   "neto": -234.48,
+   "acum": 13094.51
   }
  ],
  "movimientos": [
@@ -1982,6 +1993,34 @@
    "gs": 300000,
    "rub": {
     "chofer": 51.72,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-26",
+   "t": "out",
+   "usd": 122.41,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Daniel Oscar Amarilla Wunderli (concepto no especificado)",
+   "gs": 710000,
+   "rub": {
+    "chofer": 122.41,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-26",
+   "t": "out",
+   "usd": 112.07,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia ueno a Gustavo Pereira",
+   "gs": 650000,
+   "rub": {
+    "chofer": 112.07,
     "comb": 0,
     "peajes": 0,
     "otros": 0
