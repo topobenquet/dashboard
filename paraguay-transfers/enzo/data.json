@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T20:30:01.792Z",
+ "generated": "2026-10-26T00:30:30.018Z",
  "hoy": "2026-10-25",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -54,9 +54,9 @@
    },
    "ticketsAltos": 11,
    "bonoTicket": 110,
-   "margen": 0.3762,
+   "margen": 0.4219,
    "margenOk": true,
-   "sinCostos": 16,
+   "sinCostos": 15,
    "bonoAplica": false,
    "bonoTotal": 110,
    "total": 211.34,
@@ -149,7 +149,7 @@
      "ruta": "AERO-CDE",
      "tipo": "Traslado",
      "monto": 800,
-     "margen": null,
+     "margen": 0.66,
      "alto": true,
      "saldo": 0
     },
