@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T16:30:29.490Z",
+ "generated": "2026-10-27T18:30:12.468Z",
  "hoy": "2026-10-27",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 27,
-   "ventas": 30,
-   "facturacion": 10773.21,
-   "proyeccion": 12369.24,
-   "base": 215.46,
+   "ventas": 29,
+   "facturacion": 10685.21,
+   "proyeccion": 12268.2,
+   "base": 213.7,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 7226.79,
+    "falta": 7314.79,
     "bono": 100
    },
    "ticketsAltos": 11,
    "bonoTicket": 110,
    "margen": 0.4219,
    "margenOk": true,
-   "sinCostos": 16,
+   "sinCostos": 15,
    "bonoAplica": false,
    "bonoTotal": 110,
-   "total": 215.46,
+   "total": 213.7,
    "pendienteCobro": 0,
    "semanas": [
     {
@@ -72,7 +72,7 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 3938.21
+     "monto": 3850.21
     },
     {
      "lunes": "2026-10-26",
@@ -109,17 +109,6 @@
      "ruta": "Paseo del Solar 744 casi San Roque Gonzalez, Lambaré - Aerop",
      "tipo": "Traslado",
      "monto": 124.21,
-     "margen": null,
-     "alto": false,
-     "saldo": 0
-    },
-    {
-     "reserva": "2026-10-23",
-     "salida": "2026-10-27",
-     "cliente": "norma",
-     "ruta": "ASU-Formosa",
-     "tipo": "Traslado",
-     "monto": 88,
      "margen": null,
      "alto": false,
      "saldo": 0
