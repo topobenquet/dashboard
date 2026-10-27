@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T10:20:33.895Z",
+ "generated": "2026-10-27T16:30:35.815Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 719.11,
   "stripePendiente": 137.71,
-  "pagoparPendienteUsd": 24754.41,
+  "pagoparPendienteUsd": 24971.02,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -342,6 +342,17 @@
    },
    "neto": -98.64,
    "acum": 13047.73
+  },
+  {
+   "fecha": "2026-10-27",
+   "in": 216.61,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 216.61
+   },
+   "neto": 216.61,
+   "acum": 13264.34
   }
  ],
  "movimientos": [
@@ -1082,6 +1093,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Pablo Antonio Arce Granda",
    "gs": 1008000
+  },
+  {
+   "d": "2026-10-27",
+   "t": "in",
+   "usd": 216.61,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Norma noemi jara",
+   "gs": 1278000
   },
   {
    "d": "2026-10-01",
@@ -2243,8 +2262,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 87,
-   "bruto": 24754.4,
+   "cobros": 88,
+   "bruto": 24971.01,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2259,8 +2278,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 146051000,
-  "cobradoUsd": 24754.4,
+  "cobradoGs": 147329000,
+  "cobradoUsd": 24971.01,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2411,6 +2430,12 @@
     "cobros": 1,
     "gs": 1008000,
     "usd": 170.85
+   },
+   {
+    "fecha": "2026-10-27",
+    "cobros": 1,
+    "gs": 1278000,
+    "usd": 216.61
    }
   ],
   "pruebasExcluidas": 0,
@@ -2418,8 +2443,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 146051000,
-  "pendienteUsd": 24754.41
+  "pendienteGs": 147329000,
+  "pendienteUsd": 24971.02
  },
  "giros": [
   {
@@ -2538,7 +2563,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲146.1 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲147.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
