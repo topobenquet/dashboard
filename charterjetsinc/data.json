@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-26T22:01:45.336Z",
- "today": "2026-10-26",
+ "generated": "2026-10-27T10:21:40.115Z",
+ "today": "2026-10-27",
  "launch": "2026-09-15",
- "daysLive": 42,
+ "daysLive": 43,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -17,14 +17,14 @@
   "errors": []
  },
  "account": {
-  "spend": 14496.55,
-  "impr": 16559,
-  "clicks": 1570,
+  "spend": 14568.2,
+  "impr": 16604,
+  "clicks": 1576,
   "inquiries": 16,
   "form": 0,
   "search": 12,
   "callsAds": 4,
-  "phoneImpr": 832,
+  "phoneImpr": 836,
   "deals": 0,
   "quoted": 0,
   "booked": 0,
@@ -32,21 +32,21 @@
   "value": 0,
   "callrailCalls": 6,
   "callrailQualified": 4,
-  "sessions": 1458,
-  "avinodeSearches": 819,
-  "avinodeOpenForm": 283,
+  "sessions": 1481,
+  "avinodeSearches": 828,
+  "avinodeOpenForm": 286,
   "avinodeInquiries": 12
  },
  "groups": {
   "Charter": {
-   "spend": 13487.98,
-   "impr": 13476,
-   "clicks": 1141,
+   "spend": 13559.63,
+   "impr": 13521,
+   "clicks": 1147,
    "inquiries": 12,
    "form": 0,
    "search": 8,
    "callsAds": 4,
-   "phoneImpr": 689
+   "phoneImpr": 693
   },
   "Brand": {
    "spend": 1008.57,
@@ -93,11 +93,11 @@
    "group": "Charter",
    "slug": "charter-south-fl",
    "short": "Florida · local",
-   "spend": 12424.81,
-   "impr": 12731,
-   "clicks": 1055,
+   "spend": 12496.46,
+   "impr": 12776,
+   "clicks": 1061,
    "conv": 12,
-   "phoneImpr": 680,
+   "phoneImpr": 684,
    "phoneCalls": 0,
    "form": 0,
    "search": 8,
@@ -107,10 +107,10 @@
    "inquiries": 12,
    "share": {
     "status": "ENABLED",
-    "is": 0.5448629889378931,
-    "lostRank": 0.44609934205769647,
-    "lostBudget": 0.009037669004410382,
-    "top": 0.4313498662424987
+    "is": 0.537455734132389,
+    "lostRank": 0.44994551893217105,
+    "lostBudget": 0.012598746935439935,
+    "top": 0.42604195042222825
    },
    "status": "ENABLED"
   },
@@ -874,13 +874,13 @@
    "date": "2026-10-26",
    "groups": {
     "Charter": {
-     "spend": 374.3,
-     "clicks": 29,
+     "spend": 445.95,
+     "clicks": 35,
      "inquiries": 0
     }
    },
-   "spend": 374.3,
-   "clicks": 29,
+   "spend": 445.95,
+   "clicks": 35,
    "inquiries": 0
   }
  ],
@@ -902,9 +902,9 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 10,
-   "impr": 2896,
-   "clicks": 174,
-   "spend": 2081.15,
+   "impr": 2914,
+   "clicks": 179,
+   "spend": 2145.63,
    "conv": 1
   },
   {
@@ -968,7 +968,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 8,
-   "impr": 551,
+   "impr": 555,
    "clicks": 32,
    "spend": 387.66,
    "conv": 0
@@ -1001,7 +1001,7 @@
    "group": "Charter",
    "adGroup": "Rental - Hire",
    "qs": 10,
-   "impr": 143,
+   "impr": 145,
    "clicks": 24,
    "spend": 229.03,
    "conv": 0
@@ -1067,7 +1067,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": 8,
-   "impr": 269,
+   "impr": 277,
    "clicks": 13,
    "spend": 153.25,
    "conv": 0
@@ -1144,7 +1144,7 @@
    "group": "Charter",
    "adGroup": "Charter - Core",
    "qs": null,
-   "impr": 179,
+   "impr": 181,
    "clicks": 10,
    "spend": 130.34,
    "conv": 0
@@ -1177,7 +1177,7 @@
    "group": "Charter",
    "adGroup": "Rental - Hire",
    "qs": 10,
-   "impr": 193,
+   "impr": 192,
    "clicks": 9,
    "spend": 115.08,
    "conv": 1
@@ -1221,9 +1221,9 @@
    "group": "Charter",
    "adGroup": "Cities - Miami",
    "qs": 5,
-   "impr": 167,
-   "clicks": 6,
-   "spend": 81.85,
+   "impr": 168,
+   "clicks": 7,
+   "spend": 89.02,
    "conv": 0
   },
   {
@@ -1353,7 +1353,7 @@
   },
   {
    "term": "private flights",
-   "impr": 235,
+   "impr": 237,
    "clicks": 35,
    "spend": 213.96,
    "conv": 2,
@@ -1409,7 +1409,7 @@
   },
   {
    "term": "solairus aviation",
-   "impr": 98,
+   "impr": 101,
    "clicks": 4,
    "spend": 46.6,
    "conv": 0,
@@ -1913,15 +1913,15 @@
   },
   {
    "h": 17,
-   "clicks": 122,
+   "clicks": 124,
    "conv": 0,
-   "spend": 1050.92
+   "spend": 1070.03
   },
   {
    "h": 18,
-   "clicks": 112,
+   "clicks": 116,
    "conv": 5,
-   "spend": 848.34
+   "spend": 900.88
   },
   {
    "h": 19,
@@ -1956,10 +1956,10 @@
  ],
  "devices": {
   "DESKTOP": {
-   "impr": 10976,
-   "clicks": 810,
+   "impr": 11021,
+   "clicks": 816,
    "conv": 10,
-   "spend": 10148.43
+   "spend": 10220.08
   },
   "MOBILE": {
    "impr": 5487,
@@ -2149,26 +2149,26 @@
   "pages": [
    {
     "path": "/florida",
-    "sessions": 995,
-    "engaged": 739,
-    "engagementSec": 16320,
-    "users": 935,
-    "search": 486,
-    "openForm": 167,
+    "sessions": 1018,
+    "engaged": 758,
+    "engagementSec": 16692,
+    "users": 957,
+    "search": 495,
+    "openForm": 170,
     "inquiry": 8,
     "ads": {
-     "sessions": 965,
-     "search": 482,
-     "openForm": 166,
+     "sessions": 988,
+     "search": 491,
+     "openForm": 169,
      "inquiry": 8
     }
    },
    {
     "path": "/",
-    "sessions": 442,
+    "sessions": 443,
     "engaged": 340,
-    "engagementSec": 3785,
-    "users": 399,
+    "engagementSec": 3787,
+    "users": 400,
     "search": 290,
     "openForm": 93,
     "inquiry": 5,
@@ -2327,12 +2327,12 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 1488,
-    "engaged": 1122
+    "sessions": 1512,
+    "engaged": 1141
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 68,
+    "sessions": 69,
     "engaged": 9
    },
    {
@@ -2564,8 +2564,8 @@
    },
    {
     "date": "2026-10-26",
-    "sessions": 9,
-    "ads": 9
+    "sessions": 33,
+    "ads": 32
    }
   ]
  },
@@ -2800,32 +2800,32 @@
  ],
  "weekly": {
   "current": {
-   "from": "2026-10-19",
-   "to": "2026-10-25",
-   "spend": 3718.74,
-   "clicks": 276,
-   "impr": 4301,
+   "from": "2026-10-20",
+   "to": "2026-10-26",
+   "spend": 3505.38,
+   "clicks": 264,
+   "impr": 4193,
    "inquiries": 2,
-   "sessions": 253
+   "sessions": 239
   },
   "previous": {
-   "from": "2026-10-12",
-   "to": "2026-10-18",
-   "spend": 3558.65,
-   "clicks": 293,
-   "impr": 4326,
+   "from": "2026-10-13",
+   "to": "2026-10-19",
+   "spend": 3870.88,
+   "clicks": 298,
+   "impr": 4803,
    "inquiries": 0,
-   "sessions": 277
+   "sessions": 279
   },
   "comparable": true,
   "availableFrom": "2026-09-29"
  },
  "pacing": {
   "month": "2026-10",
-  "spentToDate": 9742.11,
-  "avgDaily": 531.25,
-  "daysLeft": 6,
-  "projected": 12555.3,
+  "spentToDate": 9813.76,
+  "avgDaily": 500.77,
+  "daysLeft": 5,
+  "projected": 12317.6,
   "plan": 10168,
   "planDays": 31,
   "basedOnDays": 7
@@ -4008,11 +4008,11 @@
    },
    "2026-10-26": {
     "Search | Charter | South FL": {
-     "spend": 374.3,
-     "impr": 672,
-     "clicks": 29,
+     "spend": 445.95,
+     "impr": 717,
+     "clicks": 35,
      "conv": 0,
-     "phoneImpr": 42,
+     "phoneImpr": 46,
      "phoneCalls": 0,
      "form": 0,
      "search": 0,
@@ -4032,10 +4032,10 @@
    },
    "Search | Charter | South FL": {
     "status": "ENABLED",
-    "is": 0.5448629889378931,
-    "lostRank": 0.44609934205769647,
-    "lostBudget": 0.009037669004410382,
-    "top": 0.4313498662424987
+    "is": 0.537455734132389,
+    "lostRank": 0.44994551893217105,
+    "lostBudget": 0.012598746935439935,
+    "top": 0.42604195042222825
    },
    "Search | Charter | FL Inbound": {
     "status": "PAUSED",
