@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T10:21:01.473Z",
+  "generated": "2026-10-27T22:01:03.718Z",
   "lastSyncLabel": "27 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 308,
-      "reservas": 67,
-      "revenue": 28871.05,
-      "chofer": 12374.18,
+      "leads": 317,
+      "reservas": 68,
+      "revenue": 29139.19,
+      "chofer": 14113.16,
       "comb": 501.7,
       "peajes": 0,
       "comision": 117.77,
       "reembolsos": 0,
       "otros": 2947.44,
-      "gAds": 441,
+      "gAds": 447,
       "meta": 91.45,
-      "costoSheet": 14876,
-      "gananciaSheet": 18056,
+      "costoSheet": 14881,
+      "gananciaSheet": 18218,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 440.73,
-      "clicks": 30101,
-      "impr": 567077,
+      "spend": 447.38,
+      "clicks": 30108,
+      "impr": 567128,
       "conv": 114
     }
   ],
@@ -6779,20 +6779,6 @@
     },
     {
       "mes": "Octubre",
-      "route": "ASU-Formosa",
-      "cliente": "norma",
-      "pais": "Paraguay",
-      "conductor": "Elizabeth Arias",
-      "pago": 88,
-      "sena": 88,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 85.36,
-      "fechaReserva": "23/10/26",
-      "fechaSalida": "27/10/26"
-    },
-    {
-      "mes": "Octubre",
       "route": "ASU-AERO",
       "cliente": "diegofp",
       "pais": "Argentina",
@@ -6803,6 +6789,20 @@
       "choferCost": 0,
       "neto": 47.53,
       "fechaReserva": "24/10/26",
+      "fechaSalida": "27/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-Formosa",
+      "cliente": "norma",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 206,
+      "sena": 206,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 199.82,
+      "fechaReserva": "27/10/26",
       "fechaSalida": "27/10/26"
     },
     {
@@ -6845,6 +6845,20 @@
       "choferCost": 2700,
       "neto": 430.55,
       "fechaReserva": "09/07/26",
+      "fechaSalida": "31/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-ASU",
+      "cliente": "emil",
+      "pais": "Bulgaria",
+      "conductor": "",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "27/10/26",
       "fechaSalida": "31/10/26"
     },
     {
@@ -7354,7 +7368,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-27": 1,
+      "2026-10-27": 10,
       "2026-10-26": 9,
       "2026-10-25": 7,
       "2026-10-24": 8,
@@ -7435,8 +7449,9 @@
       "2026-10-18": 1,
       "2026-10-21": 1,
       "2026-10-22": 2,
-      "2026-10-23": 4,
+      "2026-10-23": 3,
       "2026-10-24": 1,
+      "2026-10-27": 2,
       "2026-10-19": 1
     },
     "gads": {
@@ -7726,13 +7741,13 @@
       "2026-10-24": 13.33,
       "2026-10-25": 9.99,
       "2026-10-26": 2.23,
-      "2026-10-27": 0
+      "2026-10-27": 6.65
     }
   },
   "resenas": {
-    "count": 79,
+    "count": 82,
     "rating": 5,
-    "actualizado": "2026-10-26T23:10:08.977Z",
+    "actualizado": "2026-10-27T20:10:30.213Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7928,6 +7943,11 @@
         "fecha": "2026-10-26",
         "count": 79,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-27",
+        "count": 82,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -7944,6 +7964,12 @@
         "texto": "Un viaje sin perfecto y con mucha seguridad, además del apoyo en el paso desde Paraguay a Brasil. 100% recomendable! Agradecidos de Gustavo, nuestro conductor en esta a oportunidad."
       },
       {
+        "autor": "Isela Díaz",
+        "rating": 5,
+        "fecha": "2026-08-26T20:29:25.995642280Z",
+        "texto": "Contratamos el servicio para el tour a las Cataratas de Iguazú y lo recomendamos al 100! Son muy accesibles en cuanto el sistema de pago y los precios nos parecieron acorde con el buen servicio que dan. El vehículo de traslado nos pareció muy cómodo a mi familia y a mi (somos 3) y el señor Alfredo fue muy profesional y es una persona muy agradable. Nos sugirió otros lugares interesantes para visit"
+      },
+      {
         "autor": "daniela hernández",
         "rating": 5,
         "fecha": "2026-08-22T00:58:25.727763243Z",
@@ -7954,12 +7980,6 @@
         "rating": 5,
         "fecha": "2026-08-07T12:41:33.451496243Z",
         "texto": "Excelente servicio: rápido, confiable y siempre dispuesto a brindar la mejor atención. 🇵🇾👏\n\nSerán nuestros aliados durante nuestra estadía en Paraguay, donde hemos llegado para competir en triatlón. 🏊‍♂️🚴‍♂️🏃‍♂️\n\nEllos estarán a cargo de nuestro transporte día a día, acompañándonos en cada traslado durante esta experiencia.\n\n¡Gracias por la confianza, el apoyo y el excelente servicio! 🙌🇩🇴"
-      },
-      {
-        "autor": "Ignacio Horne",
-        "rating": 5,
-        "fecha": "2026-03-20T17:34:14.232205478Z",
-        "texto": "Excelente servicio, autos de primera calidad con muy buen chofer. Muchas gracias"
       }
     ]
   },
@@ -8038,10 +8058,10 @@
       "2026-10-24": 14,
       "2026-10-25": 12,
       "2026-10-26": 15,
-      "2026-10-27": 1
+      "2026-10-27": 17
     },
     "monthly": {
-      "Octubre": 427,
+      "Octubre": 443,
       "Septiembre": 213,
       "Agosto": 27
     }
