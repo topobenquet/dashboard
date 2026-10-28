@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T10:20:06.795Z",
+ "generated": "2026-10-28T12:30:18.520Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 841.16,
   "stripePendiente": 15.66,
-  "pagoparPendienteUsd": 25193.34,
+  "pagoparPendienteUsd": 25825.09,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -354,6 +354,17 @@
    },
    "neto": -1480.88,
    "acum": 11638.45
+  },
+  {
+   "fecha": "2026-10-28",
+   "in": 631.74,
+   "out": 0,
+   "n": 2,
+   "porFuente": {
+    "Pagopar": 631.74
+   },
+   "neto": 631.74,
+   "acum": 12270.19
   }
  ],
  "movimientos": [
@@ -1110,6 +1121,22 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Emil Dermendzhiev",
    "gs": 304000
+  },
+  {
+   "d": "2026-10-28",
+   "t": "in",
+   "usd": 189.42,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · SEKUREST SERVICES SRL",
+   "gs": 1110000
+  },
+  {
+   "d": "2026-10-28",
+   "t": "in",
+   "usd": 442.32,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · SANDRA BURLANDO",
+   "gs": 2592000
   },
   {
    "d": "2026-10-01",
@@ -2285,8 +2312,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 89,
-   "bruto": 25193.36,
+   "cobros": 91,
+   "bruto": 25825.1,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2301,8 +2328,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 147633000,
-  "cobradoUsd": 25193.36,
+  "cobradoGs": 151335000,
+  "cobradoUsd": 25825.1,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2459,6 +2486,12 @@
     "cobros": 2,
     "gs": 1582000,
     "usd": 269.97
+   },
+   {
+    "fecha": "2026-10-28",
+    "cobros": 2,
+    "gs": 3702000,
+    "usd": 631.74
    }
   ],
   "pruebasExcluidas": 0,
@@ -2466,8 +2499,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 147633000,
-  "pendienteUsd": 25193.34
+  "pendienteGs": 151335000,
+  "pendienteUsd": 25825.09
  },
  "giros": [
   {
@@ -2586,7 +2619,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲147.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲151.3 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -2932,6 +2965,14 @@
    "gs": 501000,
    "usd": 85.49,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/y5eemy (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-28",
+   "grupo": "Pagos (Majo)",
+   "gs": 2592000,
+   "usd": 442.32,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/wx8rgp (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
