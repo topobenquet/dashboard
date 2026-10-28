@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T12:30:18.520Z",
+ "generated": "2026-10-28T14:30:35.487Z",
  "tc": 5860,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -11,9 +11,9 @@
   "uenoFecha": "2026-10-18",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 841.16,
+  "stripeDisponible": 435.16,
   "stripePendiente": 15.66,
-  "pagoparPendienteUsd": 25825.09,
+  "pagoparPendienteUsd": 25876.96,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -357,14 +357,15 @@
   },
   {
    "fecha": "2026-10-28",
-   "in": 631.74,
-   "out": 0,
-   "n": 2,
+   "in": 683.62,
+   "out": 328.5,
+   "n": 5,
    "porFuente": {
-    "Pagopar": 631.74
+    "Pagopar": 683.62,
+    "WhatsApp · Pagos (Majo)": -328.5
    },
-   "neto": 631.74,
-   "acum": 12270.19
+   "neto": 355.12,
+   "acum": 11993.57
   }
  ],
  "movimientos": [
@@ -1137,6 +1138,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · SANDRA BURLANDO",
    "gs": 2592000
+  },
+  {
+   "d": "2026-10-28",
+   "t": "in",
+   "usd": 51.88,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Graciela Ruiz",
+   "gs": 304000
   },
   {
    "d": "2026-10-01",
@@ -2119,6 +2128,34 @@
    }
   },
   {
+   "d": "2026-10-28",
+   "t": "out",
+   "usd": 191.98,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Enzo Maximiliano Dotto Lird (concepto desconocido)",
+   "gs": 1125000,
+   "rub": {
+    "chofer": 191.98,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-28",
+   "t": "out",
+   "usd": 136.52,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Enzo Maximiliano Dotto Lird",
+   "gs": 800000,
+   "rub": {
+    "chofer": 136.52,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 213.31,
@@ -2312,8 +2349,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 91,
-   "bruto": 25825.1,
+   "cobros": 92,
+   "bruto": 25876.98,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2328,8 +2365,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 151335000,
-  "cobradoUsd": 25825.1,
+  "cobradoGs": 151639000,
+  "cobradoUsd": 25876.98,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2489,9 +2526,9 @@
    },
    {
     "fecha": "2026-10-28",
-    "cobros": 2,
-    "gs": 3702000,
-    "usd": 631.74
+    "cobros": 3,
+    "gs": 4006000,
+    "usd": 683.62
    }
   ],
   "pruebasExcluidas": 0,
@@ -2499,8 +2536,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 151335000,
-  "pendienteUsd": 25825.09
+  "pendienteGs": 151639000,
+  "pendienteUsd": 25876.96
  },
  "giros": [
   {
@@ -2594,6 +2631,12 @@
    "fee": 0
   },
   {
+   "fecha": "2026-10-28",
+   "monto": 400,
+   "tipo": "instant",
+   "fee": 6
+  },
+  {
    "fecha": "2026-10-22",
    "monto": 1500,
    "tipo": "standard",
@@ -2619,7 +2662,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲151.3 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲151.6 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
