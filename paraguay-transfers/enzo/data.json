@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T12:30:12.689Z",
+ "generated": "2026-10-28T14:30:22.743Z",
  "hoy": "2026-10-28",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 28,
-   "ventas": 29,
-   "facturacion": 10685.21,
-   "proyeccion": 11830.05,
-   "base": 213.7,
+   "ventas": 31,
+   "facturacion": 10788.21,
+   "proyeccion": 11944.09,
+   "base": 215.76,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 7314.79,
+    "falta": 7211.79,
     "bono": 100
    },
    "ticketsAltos": 11,
    "bonoTicket": 110,
    "margen": 0.4219,
    "margenOk": true,
-   "sinCostos": 15,
+   "sinCostos": 17,
    "bonoAplica": false,
    "bonoTotal": 110,
-   "total": 213.7,
+   "total": 215.76,
    "pendienteCobro": 0,
    "semanas": [
     {
@@ -72,14 +72,25 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 3850.21
+     "monto": 3904.21
     },
     {
      "lunes": "2026-10-26",
-     "monto": 206
+     "monto": 255
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-10-28",
+     "salida": "2026-10-28",
+     "cliente": "cami",
+     "ruta": "ASU-AERO",
+     "tipo": "Traslado",
+     "monto": 49,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-10-27",
      "salida": "2026-10-27",
@@ -155,6 +166,17 @@
      "monto": 800,
      "margen": 0.66,
      "alto": true,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-20",
+     "salida": "2026-10-30",
+     "cliente": "rona",
+     "ruta": "AERO-ASU",
+     "tipo": "Traslado",
+     "monto": 54,
+     "margen": null,
+     "alto": false,
      "saldo": 0
     },
     {
@@ -404,9 +426,9 @@
  ],
  "sinReserva": 1,
  "restoEquipo": {
-  "Juan": 2767,
+  "Juan": 3264,
   "María José": 1930.02,
-  "Bot": 2089,
-  "Sin asignar": 3195.92
+  "Bot": 2158,
+  "Sin asignar": 3249.92
  }
 }
