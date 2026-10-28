@@ -2849,6 +2849,65 @@
     "PC": 43,
     "Other": 0
    }
+  },
+  "2026-10-28": {
+   "numOfDays": 1,
+   "takenAt": "2026-10-28T10:21:21.546Z",
+   "pages": [
+    {
+     "path": "/florida",
+     "sessions": 3,
+     "bots": 0,
+     "scrollW": 32,
+     "scrollN": 3,
+     "active": 15,
+     "total": 15,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": 10.7
+    },
+    {
+     "path": "/miami",
+     "sessions": 0,
+     "bots": 1,
+     "scrollW": 0,
+     "scrollN": 0,
+     "active": 0,
+     "total": 0,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": null
+    },
+    {
+     "path": "/",
+     "sessions": 0,
+     "bots": 2,
+     "scrollW": 0,
+     "scrollN": 0,
+     "active": 0,
+     "total": 0,
+     "dead": 0,
+     "rage": 0,
+     "quickback": 0,
+     "scriptErr": 0,
+     "excessiveScroll": 0,
+     "errorClick": 0,
+     "scroll": null
+    }
+   ],
+   "devices": {
+    "Mobile": 2,
+    "PC": 13,
+    "Other": 0
+   }
   }
  }
 }
