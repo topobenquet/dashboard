@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T21:10:02.259Z",
+ "generated": "2026-10-28T23:10:03.888Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -1909,7 +1909,16 @@
    "odo": 93309
   }
  ],
- "proximos": [],
+ "proximos": [
+  {
+   "fecha": "2026-10-29",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "Itauguá a Puerto Iguazú",
+   "km": 750,
+   "adelanto": 1092000
+  }
+ ],
  "alertas": [
   {
    "key": "hueco:H1:100290:100545",
