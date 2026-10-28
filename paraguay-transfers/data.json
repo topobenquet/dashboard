@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28T10:20:39.721Z",
+  "generated": "2026-10-28T22:00:49.499Z",
   "lastSyncLabel": "28 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 18713.92,
-      "chofer": 9393.4,
-      "comb": 816.17,
-      "peajes": 283.62,
+      "revenue": 18639.38,
+      "chofer": 9349.16,
+      "comb": 812.01,
+      "peajes": 282.17,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1022.75,
+      "otros": 1017.52,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 319,
-      "reservas": 68,
-      "revenue": 29320.67,
-      "chofer": 14209.51,
-      "comb": 505.14,
+      "leads": 331,
+      "reservas": 74,
+      "revenue": 30036.73,
+      "chofer": 14777.83,
+      "comb": 502.55,
       "peajes": 0,
-      "comision": 117.77,
+      "comision": 121.11,
       "reembolsos": 0,
-      "otros": 2967.57,
-      "gAds": 452,
+      "otros": 2952.45,
+      "gAds": 458,
       "meta": 91.45,
-      "costoSheet": 14881,
-      "gananciaSheet": 18207,
+      "costoSheet": 14904,
+      "gananciaSheet": 18938,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 452.38,
-      "clicks": 30112,
-      "impr": 567137,
+      "spend": 458.18,
+      "clicks": 30116,
+      "impr": 567165,
       "conv": 114
     }
   ],
@@ -6695,6 +6695,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "AERO-ASU",
+      "cliente": "rona vibar",
+      "pais": "Filipinas",
+      "conductor": "",
+      "pago": 54,
+      "sena": 54,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 52.38,
+      "fechaReserva": "20/10/26",
+      "fechaSalida": "23/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU City tour",
       "cliente": "megan",
       "pais": "USA",
@@ -6796,7 +6810,7 @@
       "route": "ASU-Formosa",
       "cliente": "norma",
       "pais": "Paraguay",
-      "conductor": "",
+      "conductor": "Elizabeth Arias",
       "pago": 206,
       "sena": 206,
       "restante": 0,
@@ -6804,6 +6818,34 @@
       "neto": 199.82,
       "fechaReserva": "27/10/26",
       "fechaSalida": "27/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-AERO",
+      "cliente": "cami briñoccoli",
+      "pais": "Argentina",
+      "conductor": "Luis Vásquez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "28/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "Itauguá a Puerto Iguazú",
+      "cliente": "sastesitour",
+      "pais": "Italia",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 597,
+      "sena": 179,
+      "restante": 418,
+      "choferCost": 0,
+      "neto": 579.09,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "29/10/26"
     },
     {
       "mes": "Octubre",
@@ -6831,6 +6873,20 @@
       "choferCost": 0,
       "neto": 491.79,
       "fechaReserva": "23/10/26",
+      "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-ASU",
+      "cliente": "rona vibar",
+      "pais": "Filipinas",
+      "conductor": "",
+      "pago": 54,
+      "sena": 54,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 52.38,
+      "fechaReserva": "20/10/26",
       "fechaSalida": "30/10/26"
     },
     {
@@ -6874,6 +6930,20 @@
       "neto": 433.59,
       "fechaReserva": "22/10/26",
       "fechaSalida": "01/11/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-ASU",
+      "cliente": "shereen al-jouabeh",
+      "pais": "Jordania",
+      "conductor": "",
+      "pago": 98,
+      "sena": 98,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 95.06,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "02/11/26"
     },
     {
       "mes": "Octubre",
@@ -6947,6 +7017,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "ASU-FOZ-Hotel.Loi",
+      "cliente": "farooq sheikh",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 497,
+      "sena": 149,
+      "restante": 348,
+      "choferCost": 0,
+      "neto": 482.09,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "26/12/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-FOZ",
       "cliente": "carlos fernando gonzalez",
       "pais": "Paraguay",
@@ -7002,6 +7086,20 @@
       "fechaSalida": ""
     },
     {
+      "mes": "Octubre",
+      "route": "",
+      "cliente": "ruby trew",
+      "pais": "Australia",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 66.93,
+      "fechaReserva": "10/10/26",
+      "fechaSalida": ""
+    },
+    {
       "mes": "Noviembre",
       "route": "ASU-FOZ",
       "cliente": "miss mazman",
@@ -7014,6 +7112,20 @@
       "neto": 433.59,
       "fechaReserva": "46317",
       "fechaSalida": "46327"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "AERO-ASU",
+      "cliente": "shereen al-jouabeh",
+      "pais": "Jordania",
+      "conductor": "",
+      "pago": 98,
+      "sena": 98,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 95.06,
+      "fechaReserva": "46323",
+      "fechaSalida": "46328"
     },
     {
       "mes": "Noviembre",
@@ -7129,13 +7241,27 @@
     },
     {
       "mes": "Noviembre",
+      "route": "PtoIguazu-ASU",
+      "cliente": "marco",
+      "pais": "Italia",
+      "conductor": "",
+      "pago": 507,
+      "sena": 152,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 491.79,
+      "fechaReserva": "23/10/26",
+      "fechaSalida": "11/11/26"
+    },
+    {
+      "mes": "Noviembre",
       "route": "Posadas - ASU",
       "cliente": "samuel pruczanski",
       "pais": "Argentina",
       "conductor": "Hugo Segovia",
       "pago": 793,
       "sena": 793,
-      "restante": 0,
+      "restante": 180.72,
       "choferCost": 409.84,
       "neto": 359.37,
       "fechaReserva": "14/09/26",
@@ -7353,6 +7479,20 @@
     },
     {
       "mes": "Diciembre",
+      "route": "ASU-FOZ-Hotel.Loi",
+      "cliente": "farooq sheikh",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 497,
+      "sena": 149,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 482.09,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "26/12/26"
+    },
+    {
+      "mes": "Diciembre",
       "route": "ASU-FOZ",
       "cliente": "carlos fernando gonzalez",
       "pais": "Paraguay",
@@ -7368,7 +7508,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-28": 2,
+      "2026-10-28": 14,
       "2026-10-27": 10,
       "2026-10-26": 9,
       "2026-10-25": 7,
@@ -7435,7 +7575,7 @@
       "2026-10-05": 4,
       "2026-10-06": 3,
       "2026-10-07": 4,
-      "2026-10-10": 5,
+      "2026-10-10": 6,
       "2026-10-08": 9,
       "2026-10-09": 5,
       "2026-10-01": 1,
@@ -7445,7 +7585,7 @@
       "2026-10-14": 6,
       "2026-10-15": 2,
       "2026-10-16": 3,
-      "2026-10-20": 4,
+      "2026-10-20": 5,
       "2026-10-17": 2,
       "2026-10-18": 1,
       "2026-10-21": 1,
@@ -7453,6 +7593,7 @@
       "2026-10-23": 3,
       "2026-10-24": 1,
       "2026-10-27": 2,
+      "2026-10-28": 4,
       "2026-10-19": 1
     },
     "gads": {
@@ -7742,13 +7883,14 @@
       "2026-10-24": 13.33,
       "2026-10-25": 9.99,
       "2026-10-26": 2.23,
-      "2026-10-27": 11.65
+      "2026-10-27": 11.65,
+      "2026-10-28": 5.8
     }
   },
   "resenas": {
     "count": 82,
     "rating": 5,
-    "actualizado": "2026-10-27T23:10:22.313Z",
+    "actualizado": "2026-10-28T20:10:01.299Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -7949,6 +8091,11 @@
         "fecha": "2026-10-27",
         "count": 82,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-28",
+        "count": 82,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8059,10 +8206,11 @@
       "2026-10-24": 14,
       "2026-10-25": 12,
       "2026-10-26": 15,
-      "2026-10-27": 20
+      "2026-10-27": 20,
+      "2026-10-28": 9
     },
     "monthly": {
-      "Octubre": 446,
+      "Octubre": 455,
       "Septiembre": 213,
       "Agosto": 27
     }
