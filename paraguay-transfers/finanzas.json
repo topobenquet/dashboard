@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T18:30:09.131Z",
+ "generated": "2026-10-28T20:30:29.679Z",
  "tc": 5890,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 435.16,
   "stripePendiente": 81.32,
-  "pagoparPendienteUsd": 25745.16,
+  "pagoparPendienteUsd": 25848.39,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -357,16 +357,16 @@
   },
   {
    "fecha": "2026-10-28",
-   "in": 749.14,
-   "out": 555.81,
-   "n": 7,
+   "in": 852.37,
+   "out": 640.7,
+   "n": 9,
    "porFuente": {
     "Stripe": 69,
-    "Pagopar": 680.14,
-    "WhatsApp · Pagos (Majo)": -555.81
+    "Pagopar": 783.37,
+    "WhatsApp · Pagos (Majo)": -640.7
    },
-   "neto": 193.33,
-   "acum": 11785.56
+   "neto": 211.67,
+   "acum": 11803.9
   }
  ],
  "movimientos": [
@@ -1154,6 +1154,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Graciela Ruiz",
    "gs": 304000
+  },
+  {
+   "d": "2026-10-28",
+   "t": "in",
+   "usd": 103.23,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Shereen Al-Jouabeh",
+   "gs": 608000
   },
   {
    "d": "2026-10-01",
@@ -2178,6 +2186,20 @@
    }
   },
   {
+   "d": "2026-10-28",
+   "t": "out",
+   "usd": 84.89,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transferencia a Sergia Alegre Bustamante (concepto: Desconocido)",
+   "gs": 500000,
+   "rub": {
+    "chofer": 84.89,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 212.22,
@@ -2371,8 +2393,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 92,
-   "bruto": 25745.19,
+   "cobros": 93,
+   "bruto": 25848.42,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2387,8 +2409,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 151639000,
-  "cobradoUsd": 25745.19,
+  "cobradoGs": 152247000,
+  "cobradoUsd": 25848.42,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2548,9 +2570,9 @@
    },
    {
     "fecha": "2026-10-28",
-    "cobros": 3,
-    "gs": 4006000,
-    "usd": 680.14
+    "cobros": 4,
+    "gs": 4614000,
+    "usd": 783.37
    }
   ],
   "pruebasExcluidas": 0,
@@ -2558,8 +2580,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 151639000,
-  "pendienteUsd": 25745.16
+  "pendienteGs": 152247000,
+  "pendienteUsd": 25848.39
  },
  "giros": [
   {
@@ -2684,7 +2706,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲151.6 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲152.2 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
