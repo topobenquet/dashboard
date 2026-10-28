@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T16:30:32.986Z",
+ "generated": "2026-10-28T18:30:09.131Z",
  "tc": 5890,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 435.16,
-  "stripePendiente": 15.66,
+  "stripePendiente": 81.32,
   "pagoparPendienteUsd": 25745.16,
   "relay": null,
   "binance": null,
@@ -357,18 +357,26 @@
   },
   {
    "fecha": "2026-10-28",
-   "in": 680.14,
+   "in": 749.14,
    "out": 555.81,
-   "n": 6,
+   "n": 7,
    "porFuente": {
+    "Stripe": 69,
     "Pagopar": 680.14,
     "WhatsApp · Pagos (Majo)": -555.81
    },
-   "neto": 124.33,
-   "acum": 11716.56
+   "neto": 193.33,
+   "acum": 11785.56
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-10-28",
+   "t": "in",
+   "usd": 69,
+   "fuente": "Stripe",
+   "det": "Payment for invoice 000193"
+  },
   {
    "d": "2026-10-17",
    "t": "in",
@@ -2355,9 +2363,9 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 6,
-   "bruto": 2557,
-   "comision": 117.77,
+   "cobros": 7,
+   "bruto": 2626,
+   "comision": 121.11,
    "pct": 4.61,
    "nota": "medido cobro por cobro"
   },
