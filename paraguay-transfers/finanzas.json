@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-29T00:30:07.088Z",
+ "generated": "2026-10-29T10:20:38.324Z",
  "tc": 5880,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
  "mesLabel": "Octubre 2026",
  "saldos": {
-  "fecha": "2026-10-28",
+  "fecha": "2026-10-29",
   "itauGs": 43605,
   "uenoGs": 18120646,
   "uenoFecha": "2026-10-18",
@@ -367,6 +367,17 @@
    },
    "neto": 211.91,
    "acum": 11819.45
+  },
+  {
+   "fecha": "2026-10-29",
+   "in": 397,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Binance": 397
+   },
+   "neto": 397,
+   "acum": 12216.45
   }
  ],
  "movimientos": [
@@ -418,6 +429,13 @@
    "usd": 247,
    "fuente": "Stripe",
    "det": "Payment for invoice 000186"
+  },
+  {
+   "d": "2026-10-29",
+   "t": "in",
+   "usd": 397,
+   "fuente": "Binance",
+   "det": "depósito USDT"
   },
   {
    "d": "2026-10-02",
@@ -2401,8 +2419,8 @@
   },
   {
    "riel": "Binance",
-   "cobros": 0,
-   "bruto": 0,
+   "cobros": 1,
+   "bruto": 397,
    "comision": null,
    "pct": null,
    "nota": "sin medir"
