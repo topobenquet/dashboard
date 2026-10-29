@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-28T22:01:43.887Z",
- "today": "2026-10-28",
+ "generated": "2026-10-29T10:21:49.595Z",
+ "today": "2026-10-29",
  "launch": "2026-09-15",
- "daysLive": 44,
+ "daysLive": 45,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -32,9 +32,9 @@
   "value": 0,
   "callrailCalls": 6,
   "callrailQualified": 4,
-  "sessions": 1484,
+  "sessions": 1485,
   "avinodeSearches": 828,
-  "avinodeOpenForm": 286,
+  "avinodeOpenForm": 287,
   "avinodeInquiries": 12
  },
  "groups": {
@@ -107,10 +107,10 @@
    "inquiries": 12,
    "share": {
     "status": "PAUSED",
-    "is": 0.48237004725554344,
-    "lostRank": 0.4059130013328487,
-    "lostBudget": 0.1117169514116079,
-    "top": 0.3819217254331758
+    "is": 0.46905364819504153,
+    "lostRank": 0.39479418173252456,
+    "lostBudget": 0.1361521700724339,
+    "top": 0.37141511100641894
    },
    "status": "PAUSED"
   },
@@ -2175,26 +2175,26 @@
   "pages": [
    {
     "path": "/florida",
-    "sessions": 1022,
+    "sessions": 1024,
     "engaged": 761,
     "engagementSec": 16714,
-    "users": 961,
+    "users": 962,
     "search": 495,
-    "openForm": 170,
+    "openForm": 171,
     "inquiry": 8,
     "ads": {
-     "sessions": 992,
+     "sessions": 993,
      "search": 491,
-     "openForm": 169,
+     "openForm": 170,
      "inquiry": 8
     }
    },
    {
     "path": "/",
-    "sessions": 445,
+    "sessions": 446,
     "engaged": 340,
     "engagementSec": 3787,
-    "users": 402,
+    "users": 403,
     "search": 291,
     "openForm": 93,
     "inquiry": 5,
@@ -2270,6 +2270,38 @@
     }
    },
    {
+    "path": "/privacy",
+    "sessions": 2,
+    "engaged": 0,
+    "engagementSec": 0,
+    "users": 2,
+    "search": 0,
+    "openForm": 0,
+    "inquiry": 0,
+    "ads": {
+     "sessions": 0,
+     "search": 0,
+     "openForm": 0,
+     "inquiry": 0
+    }
+   },
+   {
+    "path": "/terms",
+    "sessions": 2,
+    "engaged": 0,
+    "engagementSec": 0,
+    "users": 2,
+    "search": 0,
+    "openForm": 0,
+    "inquiry": 0,
+    "ads": {
+     "sessions": 0,
+     "search": 0,
+     "openForm": 0,
+     "inquiry": 0
+    }
+   },
+   {
     "path": "/florida-search",
     "sessions": 1,
     "engaged": 0,
@@ -2302,42 +2334,10 @@
     }
    },
    {
-    "path": "/privacy",
-    "sessions": 1,
-    "engaged": 0,
-    "engagementSec": 0,
-    "users": 1,
-    "search": 0,
-    "openForm": 0,
-    "inquiry": 0,
-    "ads": {
-     "sessions": 0,
-     "search": 0,
-     "openForm": 0,
-     "inquiry": 0
-    }
-   },
-   {
     "path": "/search",
     "sessions": 1,
     "engaged": 0,
     "engagementSec": 2,
-    "users": 1,
-    "search": 0,
-    "openForm": 0,
-    "inquiry": 0,
-    "ads": {
-     "sessions": 0,
-     "search": 0,
-     "openForm": 0,
-     "inquiry": 0
-    }
-   },
-   {
-    "path": "/terms",
-    "sessions": 1,
-    "engaged": 0,
-    "engagementSec": 0,
     "users": 1,
     "search": 0,
     "openForm": 0,
@@ -2353,12 +2353,12 @@
   "sources": [
    {
     "sm": "google / cpc",
-    "sessions": 1516,
+    "sessions": 1517,
     "engaged": 1144
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 71,
+    "sessions": 75,
     "engaged": 9
    },
    {
@@ -2600,8 +2600,13 @@
    },
    {
     "date": "2026-10-28",
-    "sessions": 3,
-    "ads": 1
+    "sessions": 7,
+    "ads": 2
+   },
+   {
+    "date": "2026-10-29",
+    "sessions": 1,
+    "ads": 0
    }
   ]
  },
@@ -2836,22 +2841,22 @@
  ],
  "weekly": {
   "current": {
-   "from": "2026-10-21",
-   "to": "2026-10-27",
-   "spend": 2941.76,
-   "clicks": 222,
-   "impr": 3503,
+   "from": "2026-10-22",
+   "to": "2026-10-28",
+   "spend": 2399.82,
+   "clicks": 181,
+   "impr": 2738,
    "inquiries": 2,
-   "sessions": 203
+   "sessions": 162
   },
   "previous": {
-   "from": "2026-10-14",
-   "to": "2026-10-20",
-   "spend": 3852.22,
-   "clicks": 291,
-   "impr": 4771,
+   "from": "2026-10-15",
+   "to": "2026-10-21",
+   "spend": 3832.95,
+   "clicks": 288,
+   "impr": 4784,
    "inquiries": 0,
-   "sessions": 267
+   "sessions": 265
   },
   "comparable": true,
   "availableFrom": "2026-09-29"
@@ -2859,9 +2864,9 @@
  "pacing": {
   "month": "2026-10",
   "spentToDate": 9859.55,
-  "avgDaily": 420.25,
-  "daysLeft": 4,
-  "projected": 11526.19,
+  "avgDaily": 342.83,
+  "daysLeft": 3,
+  "projected": 10888.04,
   "plan": 10168,
   "planDays": 31,
   "basedOnDays": 7
@@ -4098,10 +4103,10 @@
    },
    "Search | Charter | South FL": {
     "status": "PAUSED",
-    "is": 0.48237004725554344,
-    "lostRank": 0.4059130013328487,
-    "lostBudget": 0.1117169514116079,
-    "top": 0.3819217254331758
+    "is": 0.46905364819504153,
+    "lostRank": 0.39479418173252456,
+    "lostBudget": 0.1361521700724339,
+    "top": 0.37141511100641894
    },
    "Search | Charter | FL Inbound": {
     "status": "PAUSED",
