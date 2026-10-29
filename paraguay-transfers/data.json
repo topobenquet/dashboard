@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T10:21:08.598Z",
+  "generated": "2026-10-29T22:01:03.397Z",
   "lastSyncLabel": "29 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 18664.11,
-      "chofer": 9363.88,
-      "comb": 813.38,
-      "peajes": 282.65,
+      "revenue": 18325.22,
+      "chofer": 9162.39,
+      "comb": 794.48,
+      "peajes": 276.07,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1019.28,
+      "otros": 995.57,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 333,
-      "reservas": 74,
-      "revenue": 30480.26,
-      "chofer": 14802.93,
-      "comb": 503.4,
+      "leads": 342,
+      "reservas": 76,
+      "revenue": 29928.37,
+      "chofer": 14632.28,
+      "comb": 666.12,
       "peajes": 0,
       "comision": 121.11,
       "reembolsos": 0,
-      "otros": 2957.48,
-      "gAds": 463,
+      "otros": 2888.7,
+      "gAds": 470,
       "meta": 91.45,
-      "costoSheet": 14904,
-      "gananciaSheet": 18928,
+      "costoSheet": 14918,
+      "gananciaSheet": 19392,
       "base": "caja"
     }
   ],
@@ -232,9 +232,9 @@
     },
     {
       "mes": "Octubre",
-      "spend": 462.75,
-      "clicks": 30120,
-      "impr": 567185,
+      "spend": 469.85,
+      "clicks": 30125,
+      "impr": 567228,
       "conv": 114
     }
   ],
@@ -6793,6 +6793,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "CDE al aeropuerto internacional de Foz",
+      "cliente": "victor cubas",
+      "pais": "Paraguay",
+      "conductor": "Juan Vera CDE",
+      "pago": 82,
+      "sena": 82,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 79.54,
+      "fechaReserva": "29/10/26",
+      "fechaSalida": "26/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "ASU-AERO",
       "cliente": "diegofp",
       "pais": "Argentina",
@@ -6880,13 +6894,27 @@
       "route": "AERO-ASU",
       "cliente": "rona vibar",
       "pais": "Filipinas",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 54,
       "sena": 54,
       "restante": 0,
       "choferCost": 0,
       "neto": 52.38,
       "fechaReserva": "20/10/26",
+      "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "AERO-CDE",
+      "cliente": "yao",
+      "pais": "Tailandia",
+      "conductor": "Alfredo Jara",
+      "pago": 397,
+      "sena": 397,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 385.09,
+      "fechaReserva": "29/10/26",
       "fechaSalida": "30/10/26"
     },
     {
@@ -7508,7 +7536,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-29": 2,
+      "2026-10-29": 11,
       "2026-10-28": 14,
       "2026-10-27": 10,
       "2026-10-26": 9,
@@ -7592,6 +7620,7 @@
       "2026-10-21": 1,
       "2026-10-22": 2,
       "2026-10-23": 3,
+      "2026-10-29": 2,
       "2026-10-24": 1,
       "2026-10-27": 2,
       "2026-10-28": 4,
@@ -7886,13 +7915,13 @@
       "2026-10-26": 2.23,
       "2026-10-27": 11.65,
       "2026-10-28": 10.37,
-      "2026-10-29": 0
+      "2026-10-29": 7.1
     }
   },
   "resenas": {
     "count": 82,
     "rating": 5,
-    "actualizado": "2026-10-28T23:10:03.821Z",
+    "actualizado": "2026-10-29T20:10:02.138Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8098,6 +8127,11 @@
         "fecha": "2026-10-28",
         "count": 82,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-29",
+        "count": 82,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8210,10 +8244,10 @@
       "2026-10-26": 15,
       "2026-10-27": 20,
       "2026-10-28": 12,
-      "2026-10-29": 2
+      "2026-10-29": 14
     },
     "monthly": {
-      "Octubre": 460,
+      "Octubre": 472,
       "Septiembre": 213,
       "Agosto": 27
     }
