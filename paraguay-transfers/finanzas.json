@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T16:30:20.785Z",
+ "generated": "2026-10-29T18:30:27.261Z",
  "tc": 6020,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 450.82,
-  "stripePendiente": 65.66,
+  "stripePendiente": 102.64,
   "pagoparPendienteUsd": 25376.74,
   "relay": null,
   "binance": null,
@@ -371,15 +371,15 @@
   {
    "fecha": "2026-10-29",
    "in": 483.54,
-   "out": 173.59,
-   "n": 3,
+   "out": 348.01,
+   "n": 4,
    "porFuente": {
     "Binance": 397,
     "Pagopar": 86.54,
-    "WhatsApp · Pagos (Majo)": -173.59
+    "WhatsApp · Pagos (Majo)": -348.01
    },
-   "neto": 309.95,
-   "acum": 11915.69
+   "neto": 135.53,
+   "acum": 11741.27
   }
  ],
  "movimientos": [
@@ -2242,6 +2242,20 @@
    }
   },
   {
+   "d": "2026-10-29",
+   "t": "out",
+   "usd": 174.42,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "combustible + honorarios + IVA 600.000",
+   "gs": 1050000,
+   "rub": {
+    "chofer": 0,
+    "comb": 174.42,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 207.64,
@@ -3124,6 +3138,14 @@
    "gs": 2255000,
    "usd": 374.58,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/sxepcd (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-29",
+   "grupo": "Pagos (Majo)",
+   "gs": 2521000,
+   "usd": 418.77,
+   "concepto": "Link: https://paraguaytransfers.com/pagopar/4tn8bx (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
