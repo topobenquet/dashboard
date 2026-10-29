@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T10:23:04.101Z",
+ "generated": "2026-10-29T14:30:02.610Z",
  "hoy": "2026-10-29",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 29,
-   "ventas": 32,
-   "facturacion": 11295.21,
-   "proyeccion": 12074.19,
-   "base": 225.9,
+   "ventas": 33,
+   "facturacion": 11377.21,
+   "proyeccion": 12161.85,
+   "base": 227.54,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 6704.79,
+    "falta": 6622.79,
     "bono": 100
    },
    "ticketsAltos": 12,
    "bonoTicket": 120,
    "margen": 0.4219,
    "margenOk": true,
-   "sinCostos": 18,
+   "sinCostos": 19,
    "bonoAplica": false,
    "bonoTotal": 120,
-   "total": 225.9,
+   "total": 227.54,
    "pendienteCobro": 355,
    "semanas": [
     {
@@ -76,10 +76,21 @@
     },
     {
      "lunes": "2026-10-26",
-     "monto": 255
+     "monto": 337
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-10-29",
+     "salida": "2026-10-26",
+     "cliente": "victor",
+     "ruta": "CDE al aeropuerto internacional de Foz",
+     "tipo": "Traslado",
+     "monto": 82,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-10-28",
      "salida": "2026-10-28",
