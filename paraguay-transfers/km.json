@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T23:10:03.888Z",
+ "generated": "2026-10-29T11:10:17.743Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1324,
-   "ultimoKm": 100549
+   "ultimoKm": 100582
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -69,9 +69,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1294,
-   "kmFuera": 2392,
+   "kmFuera": 2425,
    "viajes": 12,
-   "costoComb": 4880264,
+   "costoComb": 4923956,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 54,
-   "conFoto": 48
+   "lecturas": 55,
+   "conFoto": 49
   },
   {
    "chofer": "Gustavo",
@@ -95,6 +95,34 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-10-29",
+   "fechaFin": "2026-10-29",
+   "horaIni": "06:21",
+   "horaFin": null,
+   "kmIni": 100582,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Itauguá a Puerto Iguazú"
+   ],
+   "kmEsperado": 750,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -1030,6 +1058,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 100549,
+   "hasta": 100582,
+   "km": 33,
+   "fechaDesde": "2026-10-21",
+   "fechaHasta": "2026-10-29",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 100545,
    "hasta": 100549,
    "km": 4,
@@ -1920,6 +1959,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:100549:100582",
+   "nivel": "juan",
+   "texto": "H1: 33 km sin traslado entre el 21/10 (km 100.549, Alfredo) y el 29/10 (km 100.582, Alfredo).",
+   "ts": 1793265661,
+   "fecha": "2026-10-29"
+  },
   {
    "key": "hueco:H1:100290:100545",
    "nivel": "juan",
