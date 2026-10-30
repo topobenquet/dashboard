@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T10:22:35.427Z",
+ "generated": "2026-10-30T14:30:01.854Z",
  "hoy": "2026-10-30",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -42,24 +42,24 @@
    "diasMes": 31,
    "diasPasados": 30,
    "ventas": 34,
-   "facturacion": 11774.21,
-   "proyeccion": 12166.68,
-   "base": 235.48,
+   "facturacion": 11464.05,
+   "proyeccion": 11846.19,
+   "base": 229.28,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 6225.79,
+    "falta": 6535.95,
     "bono": 100
    },
-   "ticketsAltos": 13,
-   "bonoTicket": 130,
+   "ticketsAltos": 12,
+   "bonoTicket": 120,
    "margen": 0.4219,
    "margenOk": true,
    "sinCostos": 20,
    "bonoAplica": false,
-   "bonoTotal": 130,
-   "total": 235.48,
+   "bonoTotal": 120,
+   "total": 229.28,
    "pendienteCobro": 355,
    "semanas": [
     {
@@ -72,7 +72,7 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 4411.21
+     "monto": 4101.05
     },
     {
      "lunes": "2026-10-26",
@@ -149,12 +149,12 @@
     {
      "reserva": "2026-10-23",
      "salida": "2026-10-30",
-     "cliente": "marco",
-     "ruta": "ASU-PtoIguazu",
+     "cliente": "marcial",
+     "ruta": "AERO-Lambare",
      "tipo": "Traslado",
-     "monto": 507,
+     "monto": 196.84,
      "margen": null,
-     "alto": true,
+     "alto": false,
      "saldo": 0
     },
     {
@@ -457,11 +457,12 @@
    ]
   }
  ],
- "sinReserva": 1,
+ "sinReserva": 2,
  "restoEquipo": {
   "Juan": 3264,
   "María José": 1930.02,
-  "Bot": 2158,
-  "Sin asignar": 3249.92
+  "Bot": 2261,
+  "Sin asignar": 3249.92,
+  "#VALUE! (Function MULTIPLY parameter 2 expects number values. But '% comisión Enzo' is a text and cannot be coerced to a number.)": 447
  }
 }
