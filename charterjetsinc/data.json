@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T10:21:28.549Z",
+ "generated": "2026-10-30T22:01:57.368Z",
  "today": "2026-10-30",
  "launch": "2026-09-15",
  "daysLive": 46,
@@ -30,8 +30,8 @@
   "booked": 0,
   "margin": 0,
   "value": 0,
-  "callrailCalls": 6,
-  "callrailQualified": 4,
+  "callrailCalls": 7,
+  "callrailQualified": 5,
   "sessions": 1485,
   "avinodeSearches": 829,
   "avinodeOpenForm": 287,
@@ -2004,6 +2004,19 @@
   "inTrial": false,
   "calls": [
    {
+    "at": "2026-10-30T11:35:51.924-04:00",
+    "date": "2026-10-30",
+    "hourET": 11,
+    "duration": 92,
+    "answered": true,
+    "firstCall": true,
+    "origin": "Website, other source",
+    "campaign": null,
+    "keyword": null,
+    "landing": "/",
+    "device": "Desktop"
+   },
+   {
     "at": "2026-10-19T15:09:25.383-04:00",
     "date": "2026-10-19",
     "hourET": 15,
@@ -2191,10 +2204,10 @@
    },
    {
     "path": "/",
-    "sessions": 447,
+    "sessions": 448,
     "engaged": 340,
     "engagementSec": 3787,
-    "users": 404,
+    "users": 405,
     "search": 290,
     "openForm": 93,
     "inquiry": 5,
@@ -2358,7 +2371,7 @@
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 77,
+    "sessions": 78,
     "engaged": 9
    },
    {
@@ -2606,6 +2619,11 @@
    {
     "date": "2026-10-29",
     "sessions": 3,
+    "ads": 0
+   },
+   {
+    "date": "2026-10-30",
+    "sessions": 1,
     "ads": 0
    }
   ]
