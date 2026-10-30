@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T17:10:20.592Z",
+ "generated": "2026-10-30T23:10:42.599Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1344,
-   "ultimoKm": 101310
+   "ultimoKm": 101357
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -68,10 +68,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 2017,
+   "kmViajes": 2064,
    "kmFuera": 2430,
-   "viajes": 13,
-   "costoComb": 5976768,
+   "viajes": 14,
+   "costoComb": 6039936,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 58,
-   "conFoto": 52
+   "lecturas": 59,
+   "conFoto": 53
   },
   {
    "chofer": "Gustavo",
@@ -103,24 +103,25 @@
    "fechaIni": "2026-10-30",
    "fechaFin": "2026-10-30",
    "horaIni": "13:26",
-   "horaFin": null,
+   "horaFin": "18:27",
    "kmIni": 101310,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 101357,
+   "km": 47,
    "tanqueIni": 0.62,
-   "tanqueFin": null,
+   "tanqueFin": 0.6,
    "traslados": [
+    "City tour en Asunción",
     "AERO-CDE"
    ],
-   "kmEsperado": 654,
+   "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 63168,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -139,10 +140,11 @@
    "tanqueFin": 0.75,
    "traslados": [
     "Itauguá a Puerto Iguazú",
+    "City tour en Asunción",
     "AERO-CDE"
    ],
-   "kmEsperado": 750,
-   "desvio": -0.036,
+   "kmEsperado": null,
+   "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 659997,
    "combustibleCorresponde": 971712,
@@ -2026,7 +2028,31 @@
    "fecha": "2026-10-30",
    "chofer": "Alfredo",
    "vehiculo": "H1",
+   "ruta": "City tour en Asunción",
+   "km": null,
+   "adelanto": null
+  },
+  {
+   "fecha": "2026-10-30",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
    "ruta": "AERO-CDE",
+   "km": 654,
+   "adelanto": 967000
+  },
+  {
+   "fecha": "2026-11-01",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "ASU-FOZ",
+   "km": 690,
+   "adelanto": 1020000
+  },
+  {
+   "fecha": "2026-11-01",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "ASU-CDE",
    "km": 654,
    "adelanto": 967000
   }
