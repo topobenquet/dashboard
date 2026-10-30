@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T20:30:12.381Z",
+ "generated": "2026-10-30T22:00:20.302Z",
  "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -384,15 +384,15 @@
   {
    "fecha": "2026-10-30",
    "in": 775.25,
-   "out": 602.01,
-   "n": 7,
+   "out": 899,
+   "n": 8,
    "porFuente": {
     "Pagopar": 706.02,
-    "WhatsApp · Pagos (Majo)": -602.01,
+    "WhatsApp · Pagos (Majo)": -899,
     "Transferencia": 69.23
    },
-   "neto": 173.24,
-   "acum": 11972.76
+   "neto": -123.75,
+   "acum": 11675.77
   }
  ],
  "movimientos": [
@@ -2335,6 +2335,20 @@
    }
   },
   {
+   "d": "2026-10-30",
+   "t": "out",
+   "usd": 296.99,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transfer Foz asu 1/11 Tony",
+   "gs": 1776000,
+   "rub": {
+    "chofer": 296.99,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 209.03,
@@ -3271,6 +3285,14 @@
    "gs": 60000,
    "usd": 10.03,
    "concepto": "3.- . Lavadero",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-30",
+   "grupo": "Alfredo",
+   "gs": 20000,
+   "usd": 3.34,
+   "concepto": "Estacionamiento City Tour [doc:Documento 36.pdf]",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],

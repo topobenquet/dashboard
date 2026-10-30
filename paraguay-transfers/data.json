@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T10:20:46.021Z",
+  "generated": "2026-10-30T22:01:03.685Z",
   "lastSyncLabel": "30 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,19 +150,19 @@
     },
     {
       "mes": "Octubre",
-      "leads": 348,
-      "reservas": 76,
-      "revenue": 30108.28,
-      "chofer": 14730.16,
+      "leads": 354,
+      "reservas": 78,
+      "revenue": 30883.53,
+      "chofer": 15629.16,
       "comb": 670.59,
       "peajes": 0,
       "comision": 121.11,
       "reembolsos": 0,
       "otros": 2908.02,
-      "gAds": 468,
+      "gAds": 476,
       "meta": 91.45,
-      "costoSheet": 14918,
-      "gananciaSheet": 19387,
+      "costoSheet": 14912,
+      "gananciaSheet": 19186,
       "base": "caja"
     }
   ],
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 467.98,
-      "clicks": 30124,
-      "impr": 567228,
-      "conv": 114
+      "spend": 476.29,
+      "clicks": 30129,
+      "impr": 567258,
+      "conv": 115
     }
   ],
   "trips": [
@@ -6866,27 +6866,13 @@
       "route": "City tour en Asunción",
       "cliente": "jorge",
       "pais": "Brasil",
-      "conductor": "",
-      "pago": 44,
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 147,
       "sena": 44,
-      "restante": 0,
+      "restante": 103,
       "choferCost": 0,
-      "neto": 42.68,
+      "neto": 142.59,
       "fechaReserva": "14/10/26",
-      "fechaSalida": "30/10/26"
-    },
-    {
-      "mes": "Octubre",
-      "route": "ASU-PtoIguazu",
-      "cliente": "marco",
-      "pais": "Italia",
-      "conductor": "",
-      "pago": 507,
-      "sena": 152,
-      "restante": 355,
-      "choferCost": 0,
-      "neto": 491.79,
-      "fechaReserva": "23/10/26",
       "fechaSalida": "30/10/26"
     },
     {
@@ -6919,6 +6905,20 @@
     },
     {
       "mes": "Octubre",
+      "route": "AERO-Lambare",
+      "cliente": "marcial",
+      "pais": "Paraguay",
+      "conductor": "Luis Vásquez",
+      "pago": 196.84,
+      "sena": 51.58,
+      "restante": 145.26,
+      "choferCost": 0,
+      "neto": 190.93,
+      "fechaReserva": "23/10/26",
+      "fechaSalida": "30/10/26"
+    },
+    {
+      "mes": "Octubre",
       "route": "Tour personalizado",
       "cliente": "Natalie M",
       "pais": "USA",
@@ -6936,7 +6936,7 @@
       "route": "AERO-ASU",
       "cliente": "emil",
       "pais": "Bulgaria",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 49,
       "sena": 49,
       "restante": 0,
@@ -6950,7 +6950,7 @@
       "route": "ASU-FOZ",
       "cliente": "miss mazman",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Alfredo Jara",
       "pago": 447,
       "sena": 134,
       "restante": 313,
@@ -6964,14 +6964,28 @@
       "route": "AERO-ASU",
       "cliente": "shereen al-jouabeh",
       "pais": "Jordania",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 98,
       "sena": 98,
       "restante": 0,
       "choferCost": 0,
       "neto": 95.06,
       "fechaReserva": "28/10/26",
-      "fechaSalida": "02/11/26"
+      "fechaSalida": "01/11/26"
+    },
+    {
+      "mes": "Octubre",
+      "route": "ASU-CDE",
+      "cliente": "roey",
+      "pais": "Chipre",
+      "conductor": "",
+      "pago": 400,
+      "sena": 120,
+      "restante": 280,
+      "choferCost": 0,
+      "neto": 388,
+      "fechaReserva": "30/10/26",
+      "fechaSalida": "01/11/26"
     },
     {
       "mes": "Octubre",
@@ -7128,32 +7142,74 @@
       "fechaSalida": ""
     },
     {
+      "mes": "Octubre",
+      "route": "FOZ-ASU",
+      "cliente": "tony",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 447,
+      "sena": 447,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 433.59,
+      "fechaReserva": "30/10/26",
+      "fechaSalida": "01/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "FOZ-ASU",
+      "cliente": "tony",
+      "pais": "USA",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 447,
+      "sena": 447,
+      "restante": 0,
+      "choferCost": 307,
+      "neto": 126.57,
+      "fechaReserva": "30/10/26",
+      "fechaSalida": "01/11/26"
+    },
+    {
       "mes": "Noviembre",
       "route": "ASU-FOZ",
       "cliente": "miss mazman",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Alfredo Jara",
       "pago": 447,
       "sena": 134,
-      "restante": 0,
+      "restante": 313,
       "choferCost": 0,
       "neto": 433.59,
-      "fechaReserva": "46317",
-      "fechaSalida": "46327"
+      "fechaReserva": "22/10/26",
+      "fechaSalida": "01/11/26"
     },
     {
       "mes": "Noviembre",
       "route": "AERO-ASU",
       "cliente": "shereen al-jouabeh",
       "pais": "Jordania",
-      "conductor": "",
+      "conductor": "HUGO FERNANDEZ",
       "pago": 98,
       "sena": 98,
       "restante": 0,
       "choferCost": 0,
       "neto": 95.06,
-      "fechaReserva": "46323",
-      "fechaSalida": "46328"
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "01/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-CDE",
+      "cliente": "roey",
+      "pais": "Chipre",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 400,
+      "sena": 120,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 388,
+      "fechaReserva": "30/10/26",
+      "fechaSalida": "01/11/26"
     },
     {
       "mes": "Noviembre",
@@ -7199,6 +7255,20 @@
     },
     {
       "mes": "Noviembre",
+      "route": "ASU-AERO",
+      "cliente": "shereen al-jouabeh",
+      "pais": "Jordania",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 98,
+      "sena": 98,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 95.06,
+      "fechaReserva": "28/10/26",
+      "fechaSalida": "06/11/26"
+    },
+    {
+      "mes": "Noviembre",
       "route": "Vehículo a disposición",
       "cliente": "Carlos Antezana",
       "pais": "Japón",
@@ -7227,20 +7297,6 @@
     },
     {
       "mes": "Noviembre",
-      "route": "ASU-FOZ-ASU",
-      "cliente": "juan benquet",
-      "pais": "Uruguay",
-      "conductor": "",
-      "pago": 0,
-      "sena": 0,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
-      "fechaReserva": "11/10/26",
-      "fechaSalida": "09/11/26"
-    },
-    {
-      "mes": "Noviembre",
       "route": "Vehículo a disposición",
       "cliente": "Carlos Antezana",
       "pais": "Japón",
@@ -7251,6 +7307,20 @@
       "choferCost": 0,
       "neto": 197,
       "fechaReserva": "20/10/26",
+      "fechaSalida": "09/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-FOZ-ASU",
+      "cliente": "juan benquet",
+      "pais": "Uruguay",
+      "conductor": "",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "11/10/26",
       "fechaSalida": "09/11/26"
     },
     {
@@ -7536,7 +7606,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-10-30": 4,
+      "2026-10-30": 10,
       "2026-10-29": 13,
       "2026-10-28": 14,
       "2026-10-27": 10,
@@ -7625,6 +7695,7 @@
       "2026-10-24": 1,
       "2026-10-27": 2,
       "2026-10-28": 4,
+      "2026-10-30": 2,
       "2026-10-19": 1
     },
     "gads": {
@@ -7916,13 +7987,14 @@
       "2026-10-26": 2.23,
       "2026-10-27": 11.65,
       "2026-10-28": 10.37,
-      "2026-10-29": 5.23
+      "2026-10-29": 5.23,
+      "2026-10-30": 8.31
     }
   },
   "resenas": {
     "count": 82,
     "rating": 5,
-    "actualizado": "2026-10-29T23:10:04.463Z",
+    "actualizado": "2026-10-30T20:10:29.060Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8133,6 +8205,11 @@
         "fecha": "2026-10-29",
         "count": 82,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-30",
+        "count": 82,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8245,10 +8322,11 @@
       "2026-10-26": 15,
       "2026-10-27": 20,
       "2026-10-28": 12,
-      "2026-10-29": 16
+      "2026-10-29": 16,
+      "2026-10-30": 9
     },
     "monthly": {
-      "Octubre": 474,
+      "Octubre": 483,
       "Septiembre": 213,
       "Agosto": 27
     }
