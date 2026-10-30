@@ -1,5 +1,5 @@
 /* Paraguay Transfers: pestaña SEO
- * Lee seo.json (lo genera content-publisher/src/seo/pt-gsc-semanal.mjs cada lunes desde Search Console, la
+ * Lee seo.json (lo genera content-publisher/src/seo/pt-gsc-semanal.mjs todos los días desde Search Console, la
  * inspección de URLs y GA4) y pinta en #seo. Independiente de las otras pestañas: si falla, lo demás sigue.
  */
 (function () {
@@ -23,9 +23,9 @@
 
   function kpis() {
     const L = S.last, P = S.prev, ih = S.index?.hist || [], ia = ih.at(-1), ib = ih.at(-2), g = S.ga4 && !S.ga4.error ? S.ga4.total : null;
-    return `<div class="section"><div class="section-title">Semana ${dm(L.start)} a ${dm(L.end)} · Search Console</div>
+    return `<div class="section"><div class="section-title">Últimos 7 días con datos: ${dm(L.start)} a ${dm(L.end)} · Search Console</div>
       <div class="kpi-row kpi-row-5">
-        ${kpi("Clics de la semana", fN(L.c), `${delta(L.c, P.c)} vs semana anterior (${fN(P.c)})`)}
+        ${kpi("Clics de 7 días", fN(L.c), `${delta(L.c, P.c)} vs los 7 anteriores (${fN(P.c)})`)}
         ${kpi("Impresiones", fN(L.i), `${delta(L.i, P.i)} vs ${fN(P.i)}`)}
         ${kpi("Clics 4 semanas", fN(S.w4.c), `${delta(S.w4.c, S.w4prev.c)} vs las 4 anteriores · CTR ${fP(S.w4.ctr)}%`)}
         ${kpi("URLs indexadas", ia ? `${ia.ok}/${ia.total}` : "–", ib ? `antes ${ib.ok}/${ib.total} (${dm(ib.date)})` : "del sitemap")}
@@ -147,7 +147,7 @@
       + pagesTable() + queriesTable() + opportunities() + indexing()
       + `<div class="section"><div class="section-title">Países · 4 semanas</div><div class="ft-wrap"><table class="ft" style="min-width:0"><thead><tr><th class="tl">País</th><th>Clics</th><th>Δ</th><th>Impr.</th><th>Δ</th><th>Pos.</th></tr></thead><tbody>${S.countries.map((c) => `<tr><td class="tl">${c.k.toUpperCase()}</td><td>${fN(c.c)}</td><td>${delta(c.c, c.cPrev)}</td><td>${fN(c.i)}</td><td>${delta(c.i, c.iPrev)}</td><td>${fP(c.pos)}</td></tr>`).join("")}</tbody></table></div>
         <div class="info-box info-gray" style="margin-top:8px">Dispositivos: ${S.devices.map((d) => `${d.k.toLowerCase()} ${fN(d.c)} clics (CTR ${fP(d.ctr)}%)`).join(" · ")}</div></div>`
-      + `<div class="info-box info-gray">Se actualiza solo los lunes. Semanas de lunes a domingo; Search Console tarda 2 días en cerrar los datos. Datos al ${new Date(S.generated).toLocaleString("es")}.</div>`;
+      + `<div class="info-box info-gray">Se actualiza todos los días. Cada columna es un bloque de 7 días (la fecha es el primer día) y el último termina en el día más reciente que Search Console ya cerró, que va 2 o 3 días atrás de hoy. Datos al ${new Date(S.generated).toLocaleString("es")}.</div>`;
     document.querySelectorAll("[data-seo-metric]").forEach((b) => b.addEventListener("click", () => { const [id, m] = b.dataset.seoMetric.split(":"); state.metric[id] = m; const y = window.scrollY; render(); window.scrollTo(0, y); }));
   }
 
