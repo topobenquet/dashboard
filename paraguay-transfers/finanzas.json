@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T18:30:36.713Z",
+ "generated": "2026-10-30T20:30:12.381Z",
  "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -384,15 +384,15 @@
   {
    "fecha": "2026-10-30",
    "in": 775.25,
-   "out": 351.17,
-   "n": 6,
+   "out": 602.01,
+   "n": 7,
    "porFuente": {
     "Pagopar": 706.02,
-    "WhatsApp · Pagos (Majo)": -351.17,
+    "WhatsApp · Pagos (Majo)": -602.01,
     "Transferencia": 69.23
    },
-   "neto": 424.08,
-   "acum": 12223.6
+   "neto": 173.24,
+   "acum": 11972.76
   }
  ],
  "movimientos": [
@@ -2315,6 +2315,20 @@
    "gs": 800000,
    "rub": {
     "chofer": 133.78,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-10-30",
+   "t": "out",
+   "usd": 250.84,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "asu Foz 1/11 miss mazman",
+   "gs": 1500000,
+   "rub": {
+    "chofer": 250.84,
     "comb": 0,
     "peajes": 0,
     "otros": 0
