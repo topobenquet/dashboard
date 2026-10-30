@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T16:30:39.766Z",
+ "generated": "2026-10-30T18:30:36.713Z",
  "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 516.48,
   "stripePendiente": 48.18,
-  "pagoparPendienteUsd": 26126.09,
+  "pagoparPendienteUsd": 26252.51,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -383,16 +383,16 @@
   },
   {
    "fecha": "2026-10-30",
-   "in": 648.83,
-   "out": 217.39,
-   "n": 4,
+   "in": 775.25,
+   "out": 351.17,
+   "n": 6,
    "porFuente": {
-    "Pagopar": 579.6,
-    "WhatsApp · Pagos (Majo)": -217.39,
+    "Pagopar": 706.02,
+    "WhatsApp · Pagos (Majo)": -351.17,
     "Transferencia": 69.23
    },
-   "neto": 431.44,
-   "acum": 12230.96
+   "neto": 424.08,
+   "acum": 12223.6
   }
  ],
  "movimientos": [
@@ -1219,6 +1219,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jorge luiz da silva junior",
    "gs": 649000
+  },
+  {
+   "d": "2026-10-30",
+   "t": "in",
+   "usd": 126.42,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Roey hatzvi",
+   "gs": 756000
   },
   {
    "d": "2026-10-01",
@@ -2299,6 +2307,20 @@
    }
   },
   {
+   "d": "2026-10-30",
+   "t": "out",
+   "usd": 133.78,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Transfer a Clorinda",
+   "gs": 800000,
+   "rub": {
+    "chofer": 133.78,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-10-01",
    "t": "in",
    "usd": 209.03,
@@ -2500,8 +2522,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 96,
-   "bruto": 26126.08,
+   "cobros": 97,
+   "bruto": 26252.5,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2516,8 +2538,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 156234000,
-  "cobradoUsd": 26126.08,
+  "cobradoGs": 156990000,
+  "cobradoUsd": 26252.5,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2689,9 +2711,9 @@
    },
    {
     "fecha": "2026-10-30",
-    "cobros": 2,
-    "gs": 3466000,
-    "usd": 579.6
+    "cobros": 3,
+    "gs": 4222000,
+    "usd": 706.02
    }
   ],
   "pruebasExcluidas": 0,
@@ -2699,8 +2721,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 156234000,
-  "pendienteUsd": 26126.09
+  "pendienteGs": 156990000,
+  "pendienteUsd": 26252.51
  },
  "giros": [
   {
@@ -2825,7 +2847,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲156.2 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲157 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
