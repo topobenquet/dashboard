@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T12:30:36.690Z",
+ "generated": "2026-10-30T14:30:08.111Z",
  "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-10",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 516.48,
   "stripePendiente": 73.96,
-  "pagoparPendienteUsd": 25546.49,
+  "pagoparPendienteUsd": 26126.09,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -383,14 +383,16 @@
   },
   {
    "fecha": "2026-10-30",
-   "in": 0,
+   "in": 648.83,
    "out": 217.39,
-   "n": 1,
+   "n": 4,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -217.39
+    "Pagopar": 579.6,
+    "WhatsApp · Pagos (Majo)": -217.39,
+    "Transferencia": 69.23
    },
-   "neto": -217.39,
-   "acum": 11582.13
+   "neto": 431.44,
+   "acum": 12230.96
   }
  ],
  "movimientos": [
@@ -1201,6 +1203,22 @@
    "fuente": "Pagopar",
    "det": "Pago QR · Victor Cubas",
    "gs": 521000
+  },
+  {
+   "d": "2026-10-30",
+   "t": "in",
+   "usd": 471.07,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Anthony J Heinz",
+   "gs": 2817000
+  },
+  {
+   "d": "2026-10-30",
+   "t": "in",
+   "usd": 108.53,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Jorge luiz da silva junior",
+   "gs": 649000
   },
   {
    "d": "2026-10-01",
@@ -2367,6 +2385,14 @@
    "fuente": "Transferencia",
    "det": "Marcial (comprobante en GHL)",
    "gs": 414000
+  },
+  {
+   "d": "2026-10-30",
+   "t": "in",
+   "usd": 69.23,
+   "fuente": "Transferencia",
+   "det": "Marcial (comprobante en GHL)",
+   "gs": 414000
   }
  ],
  "pnl": [
@@ -2474,8 +2500,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 94,
-   "bruto": 25546.48,
+   "cobros": 96,
+   "bruto": 26126.08,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -2490,8 +2516,8 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 152768000,
-  "cobradoUsd": 25546.48,
+  "cobradoGs": 156234000,
+  "cobradoUsd": 26126.08,
   "diario": [
    {
     "fecha": "2026-10-02",
@@ -2660,6 +2686,12 @@
     "cobros": 1,
     "gs": 521000,
     "usd": 87.12
+   },
+   {
+    "fecha": "2026-10-30",
+    "cobros": 2,
+    "gs": 3466000,
+    "usd": 579.6
    }
   ],
   "pruebasExcluidas": 0,
@@ -2667,8 +2699,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 152768000,
-  "pendienteUsd": 25546.49
+  "pendienteGs": 156234000,
+  "pendienteUsd": 26126.09
  },
  "giros": [
   {
@@ -2793,7 +2825,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "₲152.8 millones cobrados por Pagopar sin acreditar."
+   "texto": "₲156.2 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -3179,6 +3211,30 @@
    "gs": 655000,
    "usd": 109.53,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/xdja9m (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-30",
+   "grupo": "Alfredo",
+   "gs": 600000,
+   "usd": 100.33,
+   "concepto": "1.- . Gasoil",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-30",
+   "grupo": "Alfredo",
+   "gs": 136000,
+   "usd": 22.74,
+   "concepto": "2.- . Peajes",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-10-30",
+   "grupo": "Alfredo",
+   "gs": 60000,
+   "usd": 10.03,
+   "concepto": "3.- . Lavadero",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
