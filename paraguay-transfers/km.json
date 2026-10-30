@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T00:40:40.164Z",
+ "generated": "2026-10-30T11:10:22.104Z",
  "mes": "2026-10",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1344,
-   "ultimoKm": 101051
+   "ultimoKm": 101305
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -68,10 +68,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 1294,
+   "kmViajes": 2017,
    "kmFuera": 2425,
-   "viajes": 12,
-   "costoComb": 4998336,
+   "viajes": 13,
+   "costoComb": 5970048,
    "pagado": 730012
   },
   "Voxy": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 56,
-   "conFoto": 50
+   "lecturas": 57,
+   "conFoto": 51
   },
   {
    "chofer": "Gustavo",
@@ -101,22 +101,23 @@
     "Alfredo"
    ],
    "fechaIni": "2026-10-29",
-   "fechaFin": "2026-10-29",
+   "fechaFin": "2026-10-30",
    "horaIni": "06:21",
-   "horaFin": null,
+   "horaFin": "03:37",
    "kmIni": 100582,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 101305,
+   "km": 723,
    "tanqueIni": null,
-   "tanqueFin": null,
+   "tanqueFin": 0.75,
    "traslados": [
-    "Itauguá a Puerto Iguazú"
+    "Itauguá a Puerto Iguazú",
+    "AERO-CDE"
    ],
    "kmEsperado": 750,
-   "desvio": null,
+   "desvio": -0.036,
    "combustiblePagado": null,
    "combustibleCargado": 659997,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 971712,
    "cargas": [
     {
      "fecha": "2026-10-29",
@@ -131,7 +132,7 @@
    ],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -1982,14 +1983,6 @@
   }
  ],
  "proximos": [
-  {
-   "fecha": "2026-10-29",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Itauguá a Puerto Iguazú",
-   "km": 750,
-   "adelanto": 1109000
-  },
   {
    "fecha": "2026-10-30",
    "chofer": "Alfredo",
