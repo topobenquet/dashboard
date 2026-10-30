@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T14:30:01.854Z",
+ "generated": "2026-10-30T16:30:30.288Z",
  "hoy": "2026-10-30",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 31,
    "diasPasados": 30,
-   "ventas": 34,
-   "facturacion": 11464.05,
-   "proyeccion": 11846.19,
-   "base": 229.28,
+   "ventas": 36,
+   "facturacion": 12358.05,
+   "proyeccion": 12769.99,
+   "base": 247.16,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 6535.95,
+    "falta": 5641.95,
     "bono": 100
    },
-   "ticketsAltos": 12,
-   "bonoTicket": 120,
-   "margen": 0.4219,
+   "ticketsAltos": 14,
+   "bonoTicket": 140,
+   "margen": 0.4106,
    "margenOk": true,
-   "sinCostos": 20,
+   "sinCostos": 21,
    "bonoAplica": false,
-   "bonoTotal": 120,
-   "total": 229.28,
+   "bonoTotal": 140,
+   "total": 247.16,
    "pendienteCobro": 355,
    "semanas": [
     {
@@ -72,14 +72,25 @@
     },
     {
      "lunes": "2026-10-19",
-     "monto": 4101.05
+     "monto": 4548.05
     },
     {
      "lunes": "2026-10-26",
-     "monto": 734
+     "monto": 1181
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-10-30",
+     "salida": "2026-11-01",
+     "cliente": "tony",
+     "ruta": "FOZ-ASU",
+     "tipo": "Traslado",
+     "monto": 447,
+     "margen": 0.28,
+     "alto": true,
+     "saldo": 0
+    },
     {
      "reserva": "2026-10-29",
      "salida": "2026-10-26",
@@ -167,6 +178,17 @@
      "margen": null,
      "alto": true,
      "saldo": 355
+    },
+    {
+     "reserva": "2026-10-22",
+     "salida": "2026-11-01",
+     "cliente": "miss",
+     "ruta": "ASU-FOZ",
+     "tipo": "Traslado",
+     "monto": 447,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
     },
     {
      "reserva": "2026-10-21",
@@ -457,12 +479,11 @@
    ]
   }
  ],
- "sinReserva": 2,
+ "sinReserva": 0,
  "restoEquipo": {
   "Juan": 3264,
   "María José": 1930.02,
-  "Bot": 2261,
-  "Sin asignar": 3249.92,
-  "#VALUE! (Function MULTIPLY parameter 2 expects number values. But '% comisión Enzo' is a text and cannot be coerced to a number.)": 447
+  "Bot": 2457,
+  "Sin asignar": 3249.92
  }
 }
