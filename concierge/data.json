@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-29T22:01:42.639Z",
-  "lastSyncLabel": "29 Oct 2026",
+  "generated": "2026-10-30T10:21:14.213Z",
+  "lastSyncLabel": "30 Oct 2026",
   "year": 2026,
   "currentMonth": "Octubre",
   "account": {
@@ -281,20 +281,20 @@
     {
       "mes": "Octubre",
       "ym": "2026-10",
-      "spend": 4980.42,
-      "clicks": 1476,
-      "impr": 11258,
+      "spend": 5036.07,
+      "clicks": 1497,
+      "impr": 11427,
       "actions": {
         "Calls from ads": 14,
-        "Chat Lead": 420,
-        "Get a Callback": 424.6,
+        "Chat Lead": 428,
+        "Get a Callback": 439.6,
         "Local actions - Directions": 11,
         "Local actions - Other engagements": 3,
         "Local actions - Website visits": 12,
         "Number Pool Calls": 16,
         "Clicks to call": 4
       },
-      "contacto": 879,
+      "contacto": 902,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5494,10 +5494,10 @@
       "actions": {
         "Calls from ads": 3,
         "Chat Lead": 8,
-        "Get a Callback": 6,
+        "Get a Callback": 6.04,
         "Number Pool Calls": 1
       },
-      "contacto": 18,
+      "contacto": 18.04,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5586,15 +5586,27 @@
       "leads": 0
     },
     "2026-10-29": {
-      "spend": 198.22,
-      "clicks": 59,
-      "impr": 430,
+      "spend": 241.48,
+      "clicks": 76,
+      "impr": 582,
       "actions": {
-        "Chat Lead": 12,
-        "Get a Callback": 8,
+        "Chat Lead": 20,
+        "Get a Callback": 22.96,
         "Number Pool Calls": 1
       },
-      "contacto": 21,
+      "contacto": 43.96,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-10-30": {
+      "spend": 12.39,
+      "clicks": 4,
+      "impr": 17,
+      "actions": {},
+      "contacto": 0,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5610,7 +5622,7 @@
       "spend": 2221.13,
       "clicks": 585,
       "impr": 4184,
-      "contacto": 343,
+      "contacto": 351,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5621,10 +5633,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1564.76,
-      "clicks": 651,
-      "impr": 5126,
-      "contacto": 380,
+      "spend": 1620.41,
+      "clicks": 672,
+      "impr": 5295,
+      "contacto": 395,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5809,9 +5821,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1564.76,
-        "clicks": 651,
-        "impr": 5126
+        "spend": 1620.41,
+        "clicks": 672,
+        "impr": 5295
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
@@ -5825,10 +5837,15 @@
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-10-30": {
+        "contacts": 2,
+        "paid": 2,
+        "opps": 2
+      },
       "2026-10-29": {
-        "contacts": 12,
-        "paid": 11,
-        "opps": 11
+        "contacts": 14,
+        "paid": 13,
+        "opps": 13
       },
       "2026-10-28": {
         "contacts": 12,
@@ -7383,14 +7400,14 @@
       },
       {
         "ym": "2026-10",
-        "contacts": 283,
-        "paid": 263,
-        "opps": 264
+        "contacts": 287,
+        "paid": 267,
+        "opps": 268
       }
     ],
     "stages": {
       "2026-10": {
-        "New Leads": 264
+        "New Leads": 268
       },
       "2026-09": {
         "New Leads": 229,
@@ -7464,7 +7481,7 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-10-29",
+    "lastContact": "2026-10-30",
     "totals": {
       "contactos": 2500,
       "opps": 2500,
@@ -7622,7 +7639,7 @@
       },
       {
         "ym": "2026-10",
-        "items": 268,
+        "items": 272,
         "assessments": 21,
         "cohortAssessed": 7
       }
@@ -7690,7 +7707,7 @@
         "MAP referral pending": 50,
         "Has assessment scheduled": 7,
         "POS developed": 2,
-        "New Leads": 2
+        "New Leads": 6
       }
     },
     "passed": {
@@ -7769,7 +7786,7 @@
         "MAP referral pending": 75,
         "Waiting EDD": 19,
         "Has assessment scheduled": 7,
-        "New Leads": 4,
+        "New Leads": 8,
         "POS developed": 2
       }
     },
@@ -7784,8 +7801,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1809,
-      "paid": 1509,
+      "items": 1813,
+      "paid": 1513,
       "logs": 3734
     }
   }
