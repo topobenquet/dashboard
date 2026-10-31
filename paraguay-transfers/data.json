@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T10:20:44.469Z",
+  "generated": "2026-10-31T22:00:47.916Z",
   "lastSyncLabel": "31 Oct 2026",
   "currentMonth": "Octubre",
   "months": [
@@ -150,7 +150,7 @@
     },
     {
       "mes": "Octubre",
-      "leads": 354,
+      "leads": 359,
       "reservas": 78,
       "revenue": 31261.31,
       "chofer": 15841.09,
@@ -159,7 +159,7 @@
       "comision": 121.11,
       "reembolsos": 0,
       "otros": 2947.44,
-      "gAds": 476,
+      "gAds": 478,
       "meta": 91.45,
       "costoSheet": 14912,
       "gananciaSheet": 19178,
@@ -232,10 +232,10 @@
     },
     {
       "mes": "Octubre",
-      "spend": 476.29,
-      "clicks": 30129,
-      "impr": 567260,
-      "conv": 115
+      "spend": 477.76,
+      "clicks": 30132,
+      "impr": 567273,
+      "conv": 116
     }
   ],
   "trips": [
@@ -7606,6 +7606,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-10-31": 5,
       "2026-10-30": 10,
       "2026-10-29": 13,
       "2026-10-28": 14,
@@ -7988,13 +7989,14 @@
       "2026-10-27": 11.65,
       "2026-10-28": 10.37,
       "2026-10-29": 5.23,
-      "2026-10-30": 8.31
+      "2026-10-30": 8.31,
+      "2026-10-31": 1.47
     }
   },
   "resenas": {
-    "count": 82,
+    "count": 83,
     "rating": 5,
-    "actualizado": "2026-10-30T23:10:29.572Z",
+    "actualizado": "2026-10-31T20:10:19.086Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8210,9 +8212,20 @@
         "fecha": "2026-10-30",
         "count": 82,
         "rating": 5
+      },
+      {
+        "fecha": "2026-10-31",
+        "count": 83,
+        "rating": 5
       }
     ],
     "ultimas": [
+      {
+        "autor": "Rodrigo Pereira",
+        "rating": 5,
+        "fecha": "2026-10-25T00:03:16.897856509Z",
+        "texto": "Súper recomendable !! Un éxito. Muy buen servicio"
+      },
       {
         "autor": "Gemma Bernal",
         "rating": 5,
@@ -8236,12 +8249,6 @@
         "rating": 5,
         "fecha": "2026-08-22T00:58:25.727763243Z",
         "texto": "Excelente servicio de transfers. Siempre que viajo a Paraguay lo uso. Es seguro, los coches están perfectas condiciones de limpieza, los choferes son muy agradables y están a disposición absoluta.\n10/10!\nGracias !"
-      },
-      {
-        "autor": "Juan Antonio González Gonzales",
-        "rating": 5,
-        "fecha": "2026-08-07T12:41:33.451496243Z",
-        "texto": "Excelente servicio: rápido, confiable y siempre dispuesto a brindar la mejor atención. 🇵🇾👏\n\nSerán nuestros aliados durante nuestra estadía en Paraguay, donde hemos llegado para competir en triatlón. 🏊‍♂️🚴‍♂️🏃‍♂️\n\nEllos estarán a cargo de nuestro transporte día a día, acompañándonos en cada traslado durante esta experiencia.\n\n¡Gracias por la confianza, el apoyo y el excelente servicio! 🙌🇩🇴"
       }
     ]
   },
@@ -8323,10 +8330,11 @@
       "2026-10-27": 20,
       "2026-10-28": 12,
       "2026-10-29": 16,
-      "2026-10-30": 11
+      "2026-10-30": 11,
+      "2026-10-31": 10
     },
     "monthly": {
-      "Octubre": 485,
+      "Octubre": 495,
       "Septiembre": 213,
       "Agosto": 27
     }
