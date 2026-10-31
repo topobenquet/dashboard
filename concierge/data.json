@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T10:21:09.783Z",
+  "generated": "2026-10-31T22:01:34.459Z",
   "lastSyncLabel": "31 Oct 2026",
   "year": 2026,
   "currentMonth": "Octubre",
@@ -281,20 +281,20 @@
     {
       "mes": "Octubre",
       "ym": "2026-10",
-      "spend": 5287.78,
-      "clicks": 1565,
-      "impr": 11858,
+      "spend": 5323.01,
+      "clicks": 1577,
+      "impr": 11958,
       "actions": {
         "Calls from ads": 14,
-        "Chat Lead": 441,
-        "Get a Callback": 455.6,
+        "Chat Lead": 443,
+        "Get a Callback": 458.6,
         "Local actions - Directions": 11,
         "Local actions - Other engagements": 3,
         "Local actions - Website visits": 12,
         "Number Pool Calls": 16,
         "Clicks to call": 4
       },
-      "contacto": 931,
+      "contacto": 936,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5617,11 +5617,14 @@
       "leads": 0
     },
     "2026-10-31": {
-      "spend": 7.49,
-      "clicks": 5,
-      "impr": 7,
-      "actions": {},
-      "contacto": 0,
+      "spend": 42.72,
+      "clicks": 17,
+      "impr": 107,
+      "actions": {
+        "Chat Lead": 2,
+        "Get a Callback": 3
+      },
+      "contacto": 5,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5648,10 +5651,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1688.3,
-      "clicks": 700,
-      "impr": 5447,
-      "contacto": 408,
+      "spend": 1723.53,
+      "clicks": 712,
+      "impr": 5547,
+      "contacto": 413,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5836,9 +5839,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1688.3,
-        "clicks": 700,
-        "impr": 5447
+        "spend": 1723.53,
+        "clicks": 712,
+        "impr": 5547
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
@@ -5852,6 +5855,11 @@
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-10-31": {
+        "contacts": 2,
+        "paid": 2,
+        "opps": 2
+      },
       "2026-10-30": {
         "contacts": 10,
         "paid": 10,
@@ -7415,14 +7423,14 @@
       },
       {
         "ym": "2026-10",
-        "contacts": 295,
-        "paid": 275,
-        "opps": 276
+        "contacts": 297,
+        "paid": 277,
+        "opps": 278
       }
     ],
     "stages": {
       "2026-10": {
-        "New Leads": 276
+        "New Leads": 278
       },
       "2026-09": {
         "New Leads": 229,
@@ -7496,7 +7504,7 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-10-30",
+    "lastContact": "2026-10-31",
     "totals": {
       "contactos": 2500,
       "opps": 2500,
@@ -7654,7 +7662,7 @@
       },
       {
         "ym": "2026-10",
-        "items": 280,
+        "items": 282,
         "assessments": 22,
         "cohortAssessed": 8
       }
@@ -7722,7 +7730,7 @@
         "MAP referral pending": 53,
         "Has assessment scheduled": 8,
         "POS developed": 2,
-        "New Leads": 3
+        "New Leads": 5
       }
     },
     "passed": {
@@ -7801,7 +7809,7 @@
         "MAP referral pending": 80,
         "Waiting EDD": 19,
         "Has assessment scheduled": 8,
-        "New Leads": 5,
+        "New Leads": 7,
         "POS developed": 2
       }
     },
@@ -7816,8 +7824,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1821,
-      "paid": 1519,
+      "items": 1823,
+      "paid": 1521,
       "logs": 3756
     }
   }
