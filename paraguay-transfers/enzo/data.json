@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31T10:22:29.286Z",
- "hoy": "2026-10-31",
+ "generated": "2026-11-01T10:23:03.959Z",
+ "hoy": "2026-11-01",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
   "desde": "2026-10",
@@ -37,8 +37,36 @@
  },
  "meses": [
   {
-   "mes": "2026-10",
+   "mes": "2026-11",
    "enCurso": true,
+   "diasMes": 30,
+   "diasPasados": 1,
+   "ventas": 0,
+   "facturacion": 0,
+   "proyeccion": 0,
+   "base": 0,
+   "escalon": null,
+   "bonoEscalon": 0,
+   "siguiente": {
+    "nombre": "Meta 1",
+    "falta": 18000,
+    "bono": 100
+   },
+   "ticketsAltos": 0,
+   "bonoTicket": 0,
+   "margen": null,
+   "margenOk": null,
+   "sinCostos": 0,
+   "bonoAplica": true,
+   "bonoTotal": 0,
+   "total": 0,
+   "pendienteCobro": 0,
+   "semanas": [],
+   "detalle": []
+  },
+  {
+   "mes": "2026-10",
+   "enCurso": false,
    "diasMes": 31,
    "diasPasados": 31,
    "ventas": 37,
@@ -491,10 +519,5 @@
   }
  ],
  "sinReserva": 0,
- "restoEquipo": {
-  "Juan": 3264,
-  "María José": 1930.02,
-  "Bot": 2457,
-  "Sin asignar": 3249.92
- }
+ "restoEquipo": {}
 }
