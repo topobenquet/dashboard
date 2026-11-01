@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T11:10:12.111Z",
+ "generated": "2026-11-01T19:10:29.027Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 0,
-   "conFoto": 0
+   "lecturas": 1,
+   "conFoto": 1
   },
   {
    "chofer": "Gustavo",
@@ -2042,6 +2042,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "salto:AC810AD624F57DC885EDEED9508060C3",
+   "nivel": "juan",
+   "texto": "H1: el km 37.331 (Alfredo, 01/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "ts": 1793558431,
+   "fecha": "2026-11-01"
+  },
   {
    "key": "hueco:H1:100549:100582",
    "nivel": "juan",
