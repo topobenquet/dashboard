@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T14:30:06.250Z",
+ "generated": "2026-11-01T18:30:21.978Z",
  "tc": 5900,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,14 +12,50 @@
   "uenoMomento": null,
   "uenoFuente": "finanzas-manual.json",
   "stripeDisponible": 516.48,
-  "stripePendiente": 2566.14,
-  "pagoparPendienteUsd": 0,
+  "stripePendiente": 2805.68,
+  "pagoparPendienteUsd": 72.54,
   "relay": null,
   "binance": null,
   "payoneer": null
  },
- "caja": [],
- "movimientos": [],
+ "caja": [
+  {
+   "fecha": "2026-11-01",
+   "in": 72.54,
+   "out": 169.49,
+   "n": 2,
+   "porFuente": {
+    "Pagopar": 72.54,
+    "WhatsApp · Alfredo": -169.49
+   },
+   "neto": -96.95,
+   "acum": -96.95
+  }
+ ],
+ "movimientos": [
+  {
+   "d": "2026-11-01",
+   "t": "in",
+   "usd": 72.54,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
+   "gs": 428000
+  },
+  {
+   "d": "2026-11-01",
+   "t": "out",
+   "usd": 169.49,
+   "fuente": "WhatsApp · Alfredo",
+   "det": "Transferencia ueno a Alfredo David Sanchez Vargas",
+   "gs": 1000000,
+   "rub": {
+    "chofer": 169.49,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  }
+ ],
  "pnl": [
   {
    "mes": "2026-08",
@@ -125,8 +161,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 0,
-   "bruto": 0,
+   "cobros": 1,
+   "bruto": 72.54,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -141,16 +177,23 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 0,
-  "cobradoUsd": 0,
-  "diario": [],
+  "cobradoGs": 428000,
+  "cobradoUsd": 72.54,
+  "diario": [
+   {
+    "fecha": "2026-11-01",
+    "cobros": 1,
+    "gs": 428000,
+    "usd": 72.54
+   }
+  ],
   "pruebasExcluidas": 0,
   "liquida": "martes y viernes",
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 0,
-  "pendienteUsd": 0
+  "pendienteGs": 428000,
+  "pendienteUsd": 72.54
  },
  "giros": [
   {
@@ -281,6 +324,54 @@
    "gs": 1941000,
    "usd": 328.98,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/kzmyba (hoy Gs. ",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 300000,
+   "usd": 50.85,
+   "concepto": ". Pago",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 80000,
+   "usd": 13.56,
+   "concepto": "Viático",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 136000,
+   "usd": 23.05,
+   "concepto": ".peaje",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 60000,
+   "usd": 10.17,
+   "concepto": ". lavadero",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 20000,
+   "usd": 3.39,
+   "concepto": ". parking",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-01",
+   "grupo": "Alfredo",
+   "gs": 154000,
+   "usd": 26.1,
+   "concepto": "Sobran , podes usar para hotel si hace falta",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
