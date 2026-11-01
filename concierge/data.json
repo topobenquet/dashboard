@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-31T22:01:34.459Z",
-  "lastSyncLabel": "31 Oct 2026",
+  "generated": "2026-11-01T10:21:37.168Z",
+  "lastSyncLabel": "1 Nov 2026",
   "year": 2026,
-  "currentMonth": "Octubre",
+  "currentMonth": "Noviembre",
   "account": {
     "id": "7869452872",
     "name": "Concierge Home Care of Maryland",
@@ -281,20 +281,34 @@
     {
       "mes": "Octubre",
       "ym": "2026-10",
-      "spend": 5323.01,
-      "clicks": 1577,
-      "impr": 11958,
+      "spend": 5341.48,
+      "clicks": 1584,
+      "impr": 11979,
       "actions": {
         "Calls from ads": 14,
-        "Chat Lead": 443,
-        "Get a Callback": 458.6,
-        "Local actions - Directions": 11,
+        "Chat Lead": 449,
+        "Get a Callback": 462.6,
+        "Local actions - Directions": 12,
         "Local actions - Other engagements": 3,
         "Local actions - Website visits": 12,
         "Number Pool Calls": 16,
         "Clicks to call": 4
       },
-      "contacto": 936,
+      "contacto": 946,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    {
+      "mes": "Noviembre",
+      "ym": "2026-11",
+      "spend": 1.63,
+      "clicks": 1,
+      "impr": 6,
+      "actions": {},
+      "contacto": 0,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5558,10 +5572,10 @@
       "impr": 408,
       "actions": {
         "Chat Lead": 19,
-        "Get a Callback": 13,
+        "Get a Callback": 14,
         "Number Pool Calls": 1
       },
-      "contacto": 33,
+      "contacto": 34,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5607,7 +5621,8 @@
       "impr": 441,
       "actions": {
         "Chat Lead": 12,
-        "Get a Callback": 14
+        "Get a Callback": 14,
+        "Local actions - Directions": 1
       },
       "contacto": 26,
       "descartados": 0,
@@ -5617,14 +5632,26 @@
       "leads": 0
     },
     "2026-10-31": {
-      "spend": 42.72,
-      "clicks": 17,
-      "impr": 107,
+      "spend": 61.19,
+      "clicks": 24,
+      "impr": 128,
       "actions": {
-        "Chat Lead": 2,
-        "Get a Callback": 3
+        "Chat Lead": 8,
+        "Get a Callback": 6
       },
-      "contacto": 5,
+      "contacto": 14,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-11-01": {
+      "spend": 1.63,
+      "clicks": 1,
+      "impr": 6,
+      "actions": {},
+      "contacto": 0,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5634,41 +5661,13 @@
   },
   "campaigns": [
     {
-      "name": "Search Campaign Maryland",
-      "status": "ENABLED",
-      "tipo": "SEARCH",
-      "spend": 2404.95,
-      "clicks": 625,
-      "impr": 4463,
-      "contacto": 367,
-      "descartados": 0,
-      "assessment": 0,
-      "pipeline": 0,
-      "admit": 0,
-      "leads": 0
-    },
-    {
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1723.53,
-      "clicks": 712,
-      "impr": 5547,
-      "contacto": 413,
-      "descartados": 0,
-      "assessment": 0,
-      "pipeline": 0,
-      "admit": 0,
-      "leads": 0
-    },
-    {
-      "name": "Search Campaign Maryland Maximize Conversion Value",
-      "status": "ENABLED",
-      "tipo": "SEARCH",
-      "spend": 1194.51,
-      "clicks": 240,
-      "impr": 1948,
-      "contacto": 156,
+      "spend": 1.63,
+      "clicks": 1,
+      "impr": 6,
+      "contacto": 0,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5839,9 +5838,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1723.53,
-        "clicks": 712,
-        "impr": 5547
+        "spend": 1742,
+        "clicks": 719,
+        "impr": 5568
       },
       {
         "name": "Search Campaign Maryland Maximize Conversion Value",
@@ -5850,11 +5849,25 @@
         "clicks": 240,
         "impr": 1948
       }
+    ],
+    "2026-11": [
+      {
+        "name": "Search Campaign Maryland (evenings/weekends)",
+        "status": "ENABLED",
+        "spend": 1.63,
+        "clicks": 1,
+        "impr": 6
+      }
     ]
   },
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-11-01": {
+        "contacts": 1,
+        "paid": 1,
+        "opps": 1
+      },
       "2026-10-31": {
         "contacts": 2,
         "paid": 2,
@@ -7426,9 +7439,18 @@
         "contacts": 297,
         "paid": 277,
         "opps": 278
+      },
+      {
+        "ym": "2026-11",
+        "contacts": 1,
+        "paid": 1,
+        "opps": 1
       }
     ],
     "stages": {
+      "2026-11": {
+        "New Leads": 1
+      },
       "2026-10": {
         "New Leads": 278
       },
@@ -7504,11 +7526,11 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-10-31",
+    "lastContact": "2026-11-01",
     "totals": {
       "contactos": 2500,
       "opps": 2500,
-      "oppsPaid": 2262
+      "oppsPaid": 2263
     }
   },
   "monday": {
@@ -7665,6 +7687,12 @@
         "items": 282,
         "assessments": 22,
         "cohortAssessed": 8
+      },
+      {
+        "ym": "2026-11",
+        "items": 1,
+        "assessments": 0,
+        "cohortAssessed": 0
       }
     ],
     "stages": {
@@ -7731,6 +7759,9 @@
         "Has assessment scheduled": 8,
         "POS developed": 2,
         "New Leads": 5
+      },
+      "2026-11": {
+        "New Leads": 1
       }
     },
     "passed": {
@@ -7811,6 +7842,9 @@
         "Has assessment scheduled": 8,
         "New Leads": 7,
         "POS developed": 2
+      },
+      "2026-11": {
+        "New Leads": 1
       }
     },
     "stageOrder": [
@@ -7824,8 +7858,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 1823,
-      "paid": 1521,
+      "items": 1824,
+      "paid": 1522,
       "logs": 3756
     }
   }
