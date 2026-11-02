@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T11:10:05.005Z",
+ "generated": "2026-11-02T13:10:07.851Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -50,7 +50,7 @@
     }
    ],
    "gsKm": 1344,
-   "ultimoKm": 101357
+   "ultimoKm": 38000
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 1,
-   "conFoto": 1
+   "lecturas": 2,
+   "conFoto": 2
   },
   {
    "chofer": "Gustavo",
@@ -2026,9 +2026,16 @@
  "proximos": [],
  "alertas": [
   {
-   "key": "salto:AC810AD624F57DC885EDEED9508060C3",
+   "key": "retrocede:ACC846BB428F45ACF49FC5DDE6AEE5A6",
    "nivel": "juan",
-   "texto": "H1: el km 37.331 (Alfredo, 01/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "texto": "H1: el km 38.000 (Alfredo, 02/11) es menor que el anterior 101.357.",
+   "ts": 1793618429,
+   "fecha": "2026-11-02"
+  },
+  {
+   "key": "retrocede:AC810AD624F57DC885EDEED9508060C3",
+   "nivel": "juan",
+   "texto": "H1: el km 37.331 (Alfredo, 01/11) es menor que el anterior 101.357.",
    "ts": 1793558431,
    "fecha": "2026-11-01"
   },
