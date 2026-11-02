@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T14:30:28.348Z",
+ "generated": "2026-11-02T18:30:02.407Z",
  "hoy": "2026-11-02",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,28 +41,45 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 2,
-   "ventas": 0,
-   "facturacion": 0,
-   "proyeccion": 0,
-   "base": 0,
+   "ventas": 1,
+   "facturacion": 467,
+   "proyeccion": 7005,
+   "base": 9.34,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 18000,
+    "falta": 17533,
     "bono": 100
    },
-   "ticketsAltos": 0,
-   "bonoTicket": 0,
+   "ticketsAltos": 1,
+   "bonoTicket": 10,
    "margen": null,
    "margenOk": null,
-   "sinCostos": 0,
+   "sinCostos": 1,
    "bonoAplica": true,
-   "bonoTotal": 0,
-   "total": 0,
-   "pendienteCobro": 0,
-   "semanas": [],
-   "detalle": []
+   "bonoTotal": 10,
+   "total": 19.34,
+   "pendienteCobro": 317,
+   "semanas": [
+    {
+     "lunes": "2026-11-02",
+     "monto": 467
+    }
+   ],
+   "detalle": [
+    {
+     "reserva": "2026-11-02",
+     "salida": "2026-12-26",
+     "cliente": "cheri",
+     "ruta": "ASU-PtoIguazu",
+     "tipo": "Traslado",
+     "monto": 467,
+     "margen": null,
+     "alto": true,
+     "saldo": 317
+    }
+   ]
   },
   {
    "mes": "2026-10",
