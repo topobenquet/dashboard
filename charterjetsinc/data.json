@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T22:01:58.452Z",
- "today": "2026-11-01",
+ "generated": "2026-11-02T10:21:22.329Z",
+ "today": "2026-11-02",
  "launch": "2026-09-15",
- "daysLive": 48,
+ "daysLive": 49,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -2182,10 +2182,10 @@
   "pages": [
    {
     "path": "/florida",
-    "sessions": 1028,
+    "sessions": 1031,
     "engaged": 762,
-    "engagementSec": 16725,
-    "users": 965,
+    "engagementSec": 16731,
+    "users": 968,
     "search": 496,
     "openForm": 171,
     "inquiry": 8,
@@ -2198,10 +2198,10 @@
    },
    {
     "path": "/",
-    "sessions": 451,
+    "sessions": 452,
     "engaged": 340,
     "engagementSec": 3789,
-    "users": 408,
+    "users": 409,
     "search": 290,
     "openForm": 93,
     "inquiry": 5,
@@ -2365,7 +2365,7 @@
    },
    {
     "sm": "(direct) / (none)",
-    "sessions": 84,
+    "sessions": 86,
     "engaged": 9
    },
    {
@@ -2385,6 +2385,16 @@
    },
    {
     "sm": "(not set)",
+    "sessions": 1,
+    "engaged": 0
+   },
+   {
+    "sm": "bing / organic",
+    "sessions": 1,
+    "engaged": 0
+   },
+   {
+    "sm": "duckduckgo / organic",
     "sessions": 1,
     "engaged": 0
    }
@@ -2627,6 +2637,11 @@
    },
    {
     "date": "2026-11-01",
+    "sessions": 4,
+    "ads": 0
+   },
+   {
+    "date": "2026-11-02",
     "sessions": 1,
     "ads": 0
    }
@@ -2863,22 +2878,22 @@
  ],
  "weekly": {
   "current": {
-   "from": "2026-10-25",
-   "to": "2026-10-31",
-   "spend": 866.42,
-   "clicks": 65,
-   "impr": 1138,
+   "from": "2026-10-26",
+   "to": "2026-11-01",
+   "spend": 491.74,
+   "clicks": 39,
+   "impr": 789,
    "inquiries": 0,
-   "sessions": 62
+   "sessions": 38
   },
   "previous": {
-   "from": "2026-10-18",
-   "to": "2026-10-24",
-   "spend": 3802.61,
-   "clicks": 284,
-   "impr": 4300,
+   "from": "2026-10-19",
+   "to": "2026-10-25",
+   "spend": 3718.74,
+   "clicks": 276,
+   "impr": 4301,
    "inquiries": 2,
-   "sessions": 255
+   "sessions": 253
   },
   "comparable": true,
   "availableFrom": "2026-09-29"
@@ -2887,8 +2902,8 @@
   "month": "2026-11",
   "spentToDate": 0,
   "avgDaily": 328,
-  "daysLeft": 30,
-  "projected": 9840,
+  "daysLeft": 29,
+  "projected": 9512,
   "plan": 9840,
   "planDays": 30,
   "basedOnDays": 0
