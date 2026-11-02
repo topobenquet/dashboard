@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T10:22:31.875Z",
+ "generated": "2026-11-02T14:30:28.348Z",
  "hoy": "2026-11-02",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -82,13 +82,13 @@
    },
    "ticketsAltos": 15,
    "bonoTicket": 150,
-   "margen": 0.4106,
+   "margen": 0.40840000000000004,
    "margenOk": true,
-   "sinCostos": 22,
+   "sinCostos": 21,
    "bonoAplica": false,
    "bonoTotal": 150,
    "total": 255.16,
-   "pendienteCobro": 635,
+   "pendienteCobro": 668,
    "semanas": [
     {
      "lunes": "2026-10-05",
@@ -128,7 +128,7 @@
      "monto": 400,
      "margen": null,
      "alto": true,
-     "saldo": 280
+     "saldo": 0
     },
     {
      "reserva": "2026-10-29",
@@ -225,9 +225,9 @@
      "ruta": "ASU-FOZ",
      "tipo": "Traslado",
      "monto": 447,
-     "margen": null,
+     "margen": 0.38,
      "alto": true,
-     "saldo": 0
+     "saldo": 313
     },
     {
      "reserva": "2026-10-21",
@@ -520,6 +520,6 @@
  ],
  "sinReserva": 0,
  "restoEquipo": {
-  "Bot": 69
+  "Bot": 138
  }
 }
