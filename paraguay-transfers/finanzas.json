@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T14:30:40.427Z",
+ "generated": "2026-11-02T16:30:34.165Z",
  "tc": 5980,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -13,7 +13,7 @@
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 586.98,
   "stripePendiente": 3192.64,
-  "pagoparPendienteUsd": 71.57,
+  "pagoparPendienteUsd": 401.34,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -30,6 +30,17 @@
    },
    "neto": -95.65,
    "acum": -95.65
+  },
+  {
+   "fecha": "2026-11-02",
+   "in": 329.77,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Pagopar": 329.77
+   },
+   "neto": 329.77,
+   "acum": 234.12
   }
  ],
  "movimientos": [
@@ -40,6 +51,14 @@
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
    "gs": 428000
+  },
+  {
+   "d": "2026-11-02",
+   "t": "in",
+   "usd": 329.77,
+   "fuente": "Pagopar",
+   "det": "Tarjetas de crédito y débito · Laura Mazman",
+   "gs": 1972000
   },
   {
    "d": "2026-11-01",
@@ -161,8 +180,8 @@
   },
   {
    "riel": "Pagopar",
-   "cobros": 1,
-   "bruto": 71.57,
+   "cobros": 2,
+   "bruto": 401.34,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -177,14 +196,20 @@
   }
  ],
  "pagopar": {
-  "cobradoGs": 428000,
-  "cobradoUsd": 71.57,
+  "cobradoGs": 2400000,
+  "cobradoUsd": 401.34,
   "diario": [
    {
     "fecha": "2026-11-01",
     "cobros": 1,
     "gs": 428000,
     "usd": 71.57
+   },
+   {
+    "fecha": "2026-11-02",
+    "cobros": 1,
+    "gs": 1972000,
+    "usd": 329.77
    }
   ],
   "pruebasExcluidas": 0,
@@ -192,8 +217,8 @@
   "acreditadoGs": 0,
   "acreditaciones": [],
   "comision": null,
-  "pendienteGs": 428000,
-  "pendienteUsd": 71.57
+  "pendienteGs": 2400000,
+  "pendienteUsd": 401.34
  },
  "giros": [
   {
@@ -315,6 +340,10 @@
   {
    "nivel": "crit",
    "texto": "Cuota 2/11 del seguro de la H1 vencida el 12/08, saldo ₲621.258."
+  },
+  {
+   "nivel": "warn",
+   "texto": "₲2.4 millones cobrados por Pagopar sin acreditar."
   }
  ],
  "aDefinir": [
@@ -372,6 +401,22 @@
    "gs": 154000,
    "usd": 25.75,
    "concepto": "Sobran , podes usar para hotel si hace falta",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-02",
+   "grupo": "Alfredo",
+   "gs": 80000,
+   "usd": 13.38,
+   "concepto": "viático...",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-02",
+   "grupo": "Alfredo",
+   "gs": 80000,
+   "usd": 13.38,
+   "concepto": "Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
