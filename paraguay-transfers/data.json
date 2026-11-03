@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-02T22:00:59.946Z",
-  "lastSyncLabel": "2 Nov 2026",
+  "generated": "2026-11-03T10:20:54.691Z",
+  "lastSyncLabel": "3 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
     {
@@ -135,13 +135,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 18420.47,
-      "chofer": 9218.95,
-      "comb": 799.79,
-      "peajes": 277.92,
+      "revenue": 18492.69,
+      "chofer": 9261.91,
+      "comb": 803.82,
+      "peajes": 279.33,
       "comision": 128.85,
       "reembolsos": 0,
-      "otros": 1002.24,
+      "otros": 1007.3,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -152,13 +152,13 @@
       "mes": "Octubre",
       "leads": 362,
       "reservas": 78,
-      "revenue": 33063.53,
-      "chofer": 15629.16,
-      "comb": 670.59,
+      "revenue": 33204,
+      "chofer": 15707.94,
+      "comb": 673.95,
       "peajes": 0,
       "comision": 184.63,
       "reembolsos": 0,
-      "otros": 2908.02,
+      "otros": 2922.68,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
@@ -167,10 +167,10 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 18,
-      "reservas": 2,
-      "revenue": 559.37,
-      "chofer": 200.66,
+      "leads": 19,
+      "reservas": 3,
+      "revenue": 862.68,
+      "chofer": 201.68,
       "comb": 0,
       "peajes": 0,
       "comision": 0,
@@ -178,8 +178,8 @@
       "otros": 0,
       "gAds": 12,
       "meta": 0,
-      "costoSheet": 1530.46,
-      "gananciaSheet": 5362.28,
+      "costoSheet": 1896.59,
+      "gananciaSheet": 5191.09,
       "base": "caja"
     }
   ],
@@ -258,7 +258,7 @@
       "mes": "Noviembre",
       "spend": 11.72,
       "clicks": 9,
-      "impr": 50,
+      "impr": 52,
       "conv": 2
     }
   ],
@@ -7201,7 +7201,7 @@
       "conductor": "Alfredo Jara",
       "pago": 447,
       "sena": 134,
-      "restante": 0,
+      "restante": 313,
       "choferCost": 263,
       "neto": 170.43,
       "fechaReserva": "22/10/26",
@@ -7216,8 +7216,8 @@
       "pago": 98,
       "sena": 98,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 95.06,
+      "choferCost": 25,
+      "neto": 70.06,
       "fechaReserva": "28/10/26",
       "fechaSalida": "01/11/26"
     },
@@ -7230,8 +7230,8 @@
       "pago": 400,
       "sena": 120,
       "restante": 280,
-      "choferCost": 0,
-      "neto": 388,
+      "choferCost": 132,
+      "neto": 256.42,
       "fechaReserva": "30/10/26",
       "fechaSalida": "01/11/26"
     },
@@ -7244,8 +7244,8 @@
       "pago": 69,
       "sena": 69,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 66.93,
+      "choferCost": 35,
+      "neto": 31.84,
       "fechaReserva": "01/11/26",
       "fechaSalida": "03/11/26"
     },
@@ -7258,8 +7258,8 @@
       "pago": 197,
       "sena": 300,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 188,
+      "choferCost": 42,
+      "neto": 145.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "03/11/26"
     },
@@ -7272,8 +7272,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 197,
+      "choferCost": 42,
+      "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "04/11/26"
     },
@@ -7286,8 +7286,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 197,
+      "choferCost": 42,
+      "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "05/11/26"
     },
@@ -7314,8 +7314,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 197,
+      "choferCost": 42,
+      "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "06/11/26"
     },
@@ -7359,6 +7359,20 @@
       "choferCost": 0,
       "neto": 0,
       "fechaReserva": "11/10/26",
+      "fechaSalida": "09/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-FOZ",
+      "cliente": "•:• alelí •:•",
+      "pais": "Suiza",
+      "conductor": "",
+      "pago": 201.4,
+      "sena": 201.4,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 195.36,
+      "fechaReserva": "02/11/26",
       "fechaSalida": "09/11/26"
     },
     {
@@ -7686,6 +7700,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-11-03": 1,
       "2026-11-02": 10,
       "2026-11-01": 8
     },
@@ -7725,7 +7740,7 @@
     },
     "ventas": {
       "2026-11-01": 1,
-      "2026-11-02": 1
+      "2026-11-02": 2
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -8026,7 +8041,7 @@
   "resenas": {
     "count": 83,
     "rating": 5,
-    "actualizado": "2026-11-02T20:10:01.141Z",
+    "actualizado": "2026-11-02T23:10:12.041Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8295,7 +8310,8 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-11-02": 27,
+      "2026-11-03": 8,
+      "2026-11-02": 35,
       "2026-10-22": 10,
       "2026-10-17": 14,
       "2026-10-16": 20,
@@ -8376,7 +8392,7 @@
       "2026-11-01": 15
     },
     "monthly": {
-      "Noviembre": 42,
+      "Noviembre": 58,
       "Octubre": 498,
       "Septiembre": 213,
       "Agosto": 27

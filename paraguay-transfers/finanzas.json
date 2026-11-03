@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-03T00:30:06.369Z",
+ "generated": "2026-11-03T10:20:13.250Z",
  "tc": 5950,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
  "saldos": {
-  "fecha": "2026-11-02",
+  "fecha": "2026-11-03",
   "itauGs": 43605,
   "uenoGs": 33209646,
   "uenoFecha": "2026-11-02",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 561.2,
-  "stripePendiente": 3218.42,
+  "stripePendiente": 3266.67,
   "pagoparPendienteUsd": 562.18,
   "relay": null,
   "binance": null,
@@ -33,16 +33,16 @@
   },
   {
    "fecha": "2026-11-02",
-   "in": 597.81,
+   "in": 790.75,
    "out": 33.61,
-   "n": 4,
+   "n": 5,
    "porFuente": {
     "Pagopar": 490.25,
     "WhatsApp · Pagos (Majo)": -33.61,
-    "Transferencia": 107.56
+    "Transferencia": 300.5
    },
-   "neto": 564.2,
-   "acum": 468.06
+   "neto": 757.14,
+   "acum": 661
   }
  ],
  "movimientos": [
@@ -105,6 +105,14 @@
    "fuente": "Transferencia",
    "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
    "gs": 640000
+  },
+  {
+   "d": "2026-11-02",
+   "t": "in",
+   "usd": 192.94,
+   "fuente": "Transferencia",
+   "det": "•:• Alelí •:• (comprobante en GHL)",
+   "gs": 1148000
   }
  ],
  "pnl": [
