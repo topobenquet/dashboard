@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T23:10:12.115Z",
+ "generated": "2026-11-03T11:10:33.144Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -85,8 +85,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 2,
-   "conFoto": 2
+   "lecturas": 3,
+   "conFoto": 3
   },
   {
    "chofer": "Gustavo",
@@ -2050,6 +2050,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "salto:AC61302F8A1FCFD70CAC01ED3CB8238E",
+   "nivel": "juan",
+   "texto": "H1: el km 101.357 (Alfredo, 03/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "ts": 1793692620,
+   "fecha": "2026-11-03"
+  },
   {
    "key": "retrocede:ACC846BB428F45ACF49FC5DDE6AEE5A6",
    "nivel": "juan",
