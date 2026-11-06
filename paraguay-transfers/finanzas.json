@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T22:00:17.851Z",
+ "generated": "2026-11-06T22:30:05.155Z",
  "tc": 6600,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1470.99,
-  "stripePendiente": 1558.09,
+  "stripePendiente": 2504.23,
   "pagoparPendienteUsd": 506.82,
   "relay": null,
   "binance": null,
@@ -79,17 +79,24 @@
   },
   {
    "fecha": "2026-11-06",
-   "in": 560,
+   "in": 1550,
    "out": 0,
-   "n": 3,
+   "n": 4,
    "porFuente": {
-    "Stripe": 560
+    "Stripe": 1550
    },
-   "neto": 560,
-   "acum": 1718.91
+   "neto": 1550,
+   "acum": 2708.91
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-06",
+   "t": "in",
+   "usd": 990,
+   "fuente": "Stripe",
+   "det": "Roland Reisinger "
+  },
   {
    "d": "2026-11-06",
    "t": "in",
@@ -298,10 +305,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 6,
-   "bruto": 1123,
-   "comision": 51.23,
-   "pct": 4.56,
+   "cobros": 7,
+   "bruto": 2113,
+   "comision": 95.09,
+   "pct": 4.5,
    "nota": "medido cobro por cobro"
   },
   {
