@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T23:10:23.470Z",
+ "generated": "2026-11-06T11:10:19.785Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1502,
-   "ultimoKm": 101446
+   "ultimoKm": 101500
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -76,9 +76,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 77,
-   "kmFuera": 12,
+   "kmFuera": 66,
    "viajes": 2,
-   "costoComb": 133678,
+   "costoComb": 214786,
    "pagado": 0
   },
   "Voxy": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 8,
-   "conFoto": 8
+   "lecturas": 9,
+   "conFoto": 9
   },
   {
    "chofer": "Gustavo",
@@ -107,14 +107,14 @@
    "choferes": [
     "Alfredo"
    ],
-   "fechaIni": "2026-11-05",
-   "fechaFin": "2026-11-05",
-   "horaIni": "08:40",
+   "fechaIni": "2026-11-06",
+   "fechaFin": "2026-11-06",
+   "horaIni": "08:06",
    "horaFin": null,
-   "kmIni": 101446,
+   "kmIni": 101500,
    "kmFin": null,
    "km": null,
-   "tanqueIni": 0.9,
+   "tanqueIni": 0.65,
    "tanqueFin": null,
    "traslados": [
     "Vehículo a disposición"
@@ -1197,6 +1197,18 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 101446,
+   "hasta": 101500,
+   "km": 54,
+   "fechaDesde": "2026-11-05",
+   "fechaHasta": "2026-11-06",
+   "choferes": [
+    "Alfredo"
+   ],
+   "sinFinal": true
+  },
+  {
+   "vehiculo": "H1",
    "desde": 101440,
    "hasta": 101446,
    "km": 6,
@@ -2155,14 +2167,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-11-05",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehículo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-11-06",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -2260,6 +2264,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:101446:101500",
+   "nivel": "juan",
+   "texto": "H1: 54 km sin traslado entre el 05/11 (km 101.446, Alfredo) y el 06/11 (km 101.500, Alfredo); no hubo km final.",
+   "ts": 1793963194,
+   "fecha": "2026-11-06"
+  },
   {
    "key": "retrocede:ACC846BB428F45ACF49FC5DDE6AEE5A6",
    "nivel": "juan",
