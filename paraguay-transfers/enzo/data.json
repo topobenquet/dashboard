@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T14:30:02.133Z",
+ "generated": "2026-11-06T18:30:07.938Z",
  "hoy": "2026-11-06",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -130,30 +130,30 @@
    "enCurso": false,
    "diasMes": 31,
    "diasPasados": 31,
-   "ventas": 37,
-   "facturacion": 12758.05,
-   "proyeccion": 12758.05,
-   "base": 255.16,
+   "ventas": 38,
+   "facturacion": 12895.05,
+   "proyeccion": 12895.05,
+   "base": 257.9,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 5241.95,
+    "falta": 5104.95,
     "bono": 100
    },
    "ticketsAltos": 15,
    "bonoTicket": 150,
    "margen": 0.42310000000000003,
    "margenOk": true,
-   "sinCostos": 20,
+   "sinCostos": 21,
    "bonoAplica": false,
    "bonoTotal": 150,
-   "total": 255.16,
+   "total": 257.9,
    "pendienteCobro": 355,
    "semanas": [
     {
      "lunes": "2026-10-05",
-     "monto": 3442
+     "monto": 3579
     },
     {
      "lunes": "2026-10-12",
@@ -540,6 +540,17 @@
      "tipo": "Traslado",
      "monto": 98,
      "margen": 0.77,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-10-08",
+     "salida": "2027-01-19",
+     "cliente": "jacques",
+     "ruta": "Aeropuerto Silvio Pettirossi → Itacurubí de la Cordillera",
+     "tipo": "Traslado",
+     "monto": 137,
+     "margen": null,
      "alto": false,
      "saldo": 0
     },
