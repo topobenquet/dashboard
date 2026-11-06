@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T10:22:34.697Z",
+ "generated": "2026-11-06T12:30:15.738Z",
  "hoy": "2026-11-06",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,33 +41,44 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 6,
-   "ventas": 4,
-   "facturacion": 1931.4,
-   "proyeccion": 9657,
-   "base": 38.63,
+   "ventas": 5,
+   "facturacion": 2020.4,
+   "proyeccion": 10102,
+   "base": 40.41,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 16068.6,
+    "falta": 15979.6,
     "bono": 100
    },
    "ticketsAltos": 2,
    "bonoTicket": 20,
    "margen": null,
    "margenOk": null,
-   "sinCostos": 4,
+   "sinCostos": 5,
    "bonoAplica": true,
    "bonoTotal": 20,
-   "total": 58.63,
+   "total": 60.41,
    "pendienteCobro": 1086,
    "semanas": [
     {
      "lunes": "2026-11-02",
-     "monto": 1931.4
+     "monto": 2020.4
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-06",
+     "salida": "2026-11-06",
+     "cliente": "michael",
+     "ruta": "Home Palace Tower - Silvio Pettirossi Airport",
+     "tipo": "Traslado",
+     "monto": 89,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-05",
      "salida": "2026-12-31",
