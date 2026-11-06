@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T20:30:38.642Z",
+ "generated": "2026-11-06T22:00:17.851Z",
  "tc": 6600,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1470.99,
-  "stripePendiente": 1387.27,
+  "stripePendiente": 1558.09,
   "pagoparPendienteUsd": 506.82,
   "relay": null,
   "binance": null,
@@ -79,17 +79,24 @@
   },
   {
    "fecha": "2026-11-06",
-   "in": 381,
+   "in": 560,
    "out": 0,
-   "n": 2,
+   "n": 3,
    "porFuente": {
-    "Stripe": 381
+    "Stripe": 560
    },
-   "neto": 381,
-   "acum": 1539.91
+   "neto": 560,
+   "acum": 1718.91
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-06",
+   "t": "in",
+   "usd": 179,
+   "fuente": "Stripe",
+   "det": "Rita de Cássia Buoro Cosenza"
+  },
   {
    "d": "2026-11-06",
    "t": "in",
@@ -291,9 +298,9 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 5,
-   "bruto": 944,
-   "comision": 43.05,
+   "cobros": 6,
+   "bruto": 1123,
+   "comision": 51.23,
    "pct": 4.56,
    "nota": "medido cobro por cobro"
   },
