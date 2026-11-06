@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T14:30:08.264Z",
+ "generated": "2026-11-06T18:30:13.858Z",
  "tc": 6600,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1470.99,
-  "stripePendiente": 988.93,
+  "stripePendiente": 1176.96,
   "pagoparPendienteUsd": 506.82,
   "relay": null,
   "binance": null,
@@ -574,6 +574,14 @@
    "gs": 12000,
    "usd": 1.82,
    "concepto": "el litro el combustible no entra",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-06",
+   "grupo": "Alfredo",
+   "gs": 8000,
+   "usd": 1.21,
+   "concepto": "Agrégale un GS por el parking delultimo Aero",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
