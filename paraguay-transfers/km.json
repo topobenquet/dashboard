@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T23:10:29.516Z",
+ "generated": "2026-11-07T11:10:01.908Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -2167,14 +2167,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-11-06",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehículo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-11-08",
    "chofer": "Gustavo",
    "vehiculo": "H1",
@@ -2284,6 +2276,13 @@
    "key": "hueco:H1:101446:101500",
    "nivel": "juan",
    "texto": "H1: 54 km sin traslado entre el 05/11 (km 101.446, Alfredo) y el 06/11 (km 101.500, Alfredo); no hubo km final.",
+   "ts": 1793963194,
+   "fecha": "2026-11-06"
+  },
+  {
+   "key": "final:H1:101500",
+   "nivel": "grupo",
+   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 06/11 a las 08:06 (km inicio 101.500). Mandá la foto del tablero con el número.",
    "ts": 1793963194,
    "fecha": "2026-11-06"
   },
