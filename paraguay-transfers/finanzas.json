@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T12:30:07.219Z",
+ "generated": "2026-11-07T14:30:10.265Z",
  "tc": 6600,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1470.99,
-  "stripePendiente": 2802.11,
+  "stripePendiente": 3302.46,
   "pagoparPendienteUsd": 506.82,
   "relay": null,
   "binance": null,
@@ -87,9 +87,28 @@
    },
    "neto": 1819,
    "acum": 2977.91
+  },
+  {
+   "fecha": "2026-11-07",
+   "in": 582.24,
+   "out": 0,
+   "n": 2,
+   "porFuente": {
+    "Stripe": 143,
+    "Transferencia": 439.24
+   },
+   "neto": 582.24,
+   "acum": 3560.15
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-07",
+   "t": "in",
+   "usd": 143,
+   "fuente": "Stripe",
+   "det": "Cathy Li"
+  },
   {
    "d": "2026-11-06",
    "t": "in",
@@ -213,6 +232,14 @@
    "fuente": "Transferencia",
    "det": "•:• Alelí •:• (comprobante en GHL)",
    "gs": 1148000
+  },
+  {
+   "d": "2026-11-07",
+   "t": "in",
+   "usd": 439.24,
+   "fuente": "Transferencia",
+   "det": "•:• Alelí •:• (comprobante en GHL)",
+   "gs": 2899000
   }
  ],
  "pnl": [
@@ -312,10 +339,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 8,
-   "bruto": 2382,
-   "comision": 103.19,
-   "pct": 4.33,
+   "cobros": 9,
+   "bruto": 2525,
+   "comision": 109.78,
+   "pct": 4.35,
    "nota": "medido cobro por cobro"
   },
   {
@@ -667,6 +694,70 @@
    "gs": 250000,
    "usd": 37.88,
    "concepto": "• Viaje a disposición (lunes):",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 350000,
+   "usd": 53.03,
+   "concepto": "- Viaje:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 80000,
+   "usd": 12.12,
+   "concepto": "- Viático:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 136000,
+   "usd": 20.61,
+   "concepto": "- Peaje:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 250000,
+   "usd": 37.88,
+   "concepto": "- Viaje a disposición (lunes):",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 350000,
+   "usd": 53.03,
+   "concepto": "• Viaje09/11: + IVA 35.000 = 385.000",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 80000,
+   "usd": 12.12,
+   "concepto": "• Viático: + IVA 8.000 = 88.000",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 136000,
+   "usd": 20.61,
+   "concepto": "• Peaje:",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-07",
+   "grupo": "Pagos (Majo)",
+   "gs": 50000,
+   "usd": 7.58,
+   "concepto": "• Estacionamiento:",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
