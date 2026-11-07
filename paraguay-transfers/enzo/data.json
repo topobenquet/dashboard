@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-06T22:02:41.804Z",
- "hoy": "2026-11-06",
+ "generated": "2026-11-07T10:21:56.009Z",
+ "hoy": "2026-11-07",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
   "desde": "2026-10",
@@ -40,10 +40,10 @@
    "mes": "2026-11",
    "enCurso": true,
    "diasMes": 30,
-   "diasPasados": 6,
+   "diasPasados": 7,
    "ventas": 5,
    "facturacion": 2466,
-   "proyeccion": 12330,
+   "proyeccion": 10568.57,
    "base": 49.32,
    "escalon": null,
    "bonoEscalon": 0,
@@ -593,6 +593,6 @@
  "sinReserva": 0,
  "restoEquipo": {
   "Bot": 138,
-  "Sin asignar": 597
+  "Sin asignar": 866
  }
 }
