@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T14:30:03.819Z",
+ "generated": "2026-11-07T16:30:12.485Z",
  "hoy": "2026-11-07",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -54,9 +54,9 @@
    },
    "ticketsAltos": 3,
    "bonoTicket": 30,
-   "margen": null,
-   "margenOk": null,
-   "sinCostos": 6,
+   "margen": 0.6075,
+   "margenOk": true,
+   "sinCostos": 5,
    "bonoAplica": true,
    "bonoTotal": 30,
    "total": 82.18,
@@ -86,7 +86,7 @@
      "ruta": "Home Palace Tower - Silvio Pettirossi Airport",
      "tipo": "Traslado",
      "monto": 89,
-     "margen": null,
+     "margen": 0.61,
      "alto": false,
      "saldo": 0
     },
