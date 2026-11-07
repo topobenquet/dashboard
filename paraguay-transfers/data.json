@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T10:20:43.911Z",
+  "generated": "2026-11-07T22:01:03.196Z",
   "lastSyncLabel": "7 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -167,19 +167,19 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 62,
-      "reservas": 9,
-      "revenue": 3159.73,
+      "leads": 65,
+      "reservas": 10,
+      "revenue": 3741.97,
       "chofer": 181.82,
       "comb": 0,
       "peajes": 0,
-      "comision": 103.19,
+      "comision": 109.78,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 29,
+      "gAds": 30,
       "meta": 0,
-      "costoSheet": 2422.32,
-      "gananciaSheet": 7268.67,
+      "costoSheet": 2196.58,
+      "gananciaSheet": 7637.41,
       "base": "caja"
     }
   ],
@@ -256,9 +256,9 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 29.01,
-      "clicks": 22,
-      "impr": 172,
+      "spend": 30.01,
+      "clicks": 23,
+      "impr": 181,
       "conv": 4
     }
   ],
@@ -7342,8 +7342,8 @@
       "pago": 89,
       "sena": 89,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 86.33,
+      "choferCost": 32,
+      "neto": 54.07,
       "fechaReserva": "06/11/26",
       "fechaSalida": "06/11/26"
     },
@@ -7359,6 +7359,20 @@
       "choferCost": 0,
       "neto": 404.49,
       "fechaReserva": "17/09/26",
+      "fechaSalida": "08/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "AERO-FOZ",
+      "cliente": "cathy",
+      "pais": "Taiwán",
+      "conductor": "Juan Vera CDE",
+      "pago": 143,
+      "sena": 143,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 138.71,
+      "fechaReserva": "07/11/26",
       "fechaSalida": "08/11/26"
     },
     {
@@ -7383,7 +7397,7 @@
       "conductor": "Alfredo Sánchez PT",
       "pago": 647,
       "sena": 201.4,
-      "restante": 0,
+      "restante": 509,
       "choferCost": 0,
       "neto": 627.59,
       "fechaReserva": "02/11/26",
@@ -7440,8 +7454,8 @@
       "pago": 793,
       "sena": 793,
       "restante": 181,
-      "choferCost": 409.84,
-      "neto": 359.37,
+      "choferCost": 278.69,
+      "neto": 490.52,
       "fechaReserva": "14/09/26",
       "fechaSalida": "10/11/26"
     },
@@ -7464,7 +7478,7 @@
       "route": "Posadas - ASU",
       "cliente": "samuel pruczanski",
       "pais": "Argentina",
-      "conductor": "Alfredo Jara",
+      "conductor": "Hugo Segovia",
       "pago": 793,
       "sena": 793,
       "restante": 0,
@@ -7618,12 +7632,12 @@
       "route": "ASU - Posadas",
       "cliente": "samuel pruczanski",
       "pais": "Argentina",
-      "conductor": "Hugo Segovia",
+      "conductor": "Alfredo Jara",
       "pago": 0,
       "sena": 0,
       "restante": 0,
-      "choferCost": 409.84,
-      "neto": -409.84,
+      "choferCost": 278.69,
+      "neto": -278.69,
       "fechaReserva": "14/09/26",
       "fechaSalida": "19/11/26"
     },
@@ -7826,7 +7840,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-07": 2,
+      "2026-11-07": 5,
       "2026-11-06": 9,
       "2026-11-05": 13,
       "2026-11-04": 5,
@@ -7872,6 +7886,7 @@
       "2026-11-01": 1,
       "2026-11-03": 1,
       "2026-11-06": 3,
+      "2026-11-07": 1,
       "2026-11-02": 2,
       "2026-11-04": 1,
       "2026-11-05": 1
@@ -8173,13 +8188,14 @@
       "2026-11-03": 2.88,
       "2026-11-04": 4.96,
       "2026-11-05": 4.34,
-      "2026-11-06": 5.11
+      "2026-11-06": 5.11,
+      "2026-11-07": 1
     }
   },
   "resenas": {
     "count": 85,
     "rating": 5,
-    "actualizado": "2026-11-06T23:10:30.083Z",
+    "actualizado": "2026-11-07T20:10:02.272Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8430,6 +8446,11 @@
         "fecha": "2026-11-06",
         "count": 85,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-07",
+        "count": 85,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8550,10 +8571,11 @@
       "2026-10-31": 13,
       "2026-11-01": 15,
       "2026-11-04": 23,
-      "2026-11-06": 16
+      "2026-11-06": 16,
+      "2026-11-07": 13
     },
     "monthly": {
-      "Noviembre": 143,
+      "Noviembre": 156,
       "Octubre": 508,
       "Septiembre": 213,
       "Agosto": 27
