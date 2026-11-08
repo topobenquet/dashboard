@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T23:10:07.820Z",
+ "generated": "2026-11-08T17:10:36.087Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1502,
-   "ultimoKm": 101555
+   "ultimoKm": 101556
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -75,10 +75,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 77,
+   "kmViajes": 133,
    "kmFuera": 66,
-   "viajes": 2,
-   "costoComb": 214786,
+   "viajes": 3,
+   "costoComb": 298898,
    "pagado": 0
   },
   "Voxy": {
@@ -97,38 +97,40 @@
   },
   {
    "chofer": "Gustavo",
-   "lecturas": 0,
-   "conFoto": 0
+   "lecturas": 1,
+   "conFoto": 1
   }
  ],
  "viajes": [
   {
    "vehiculo": "H1",
    "choferes": [
-    "Alfredo"
+    "Alfredo",
+    "Gustavo"
    ],
    "fechaIni": "2026-11-06",
-   "fechaFin": "2026-11-06",
+   "fechaFin": "2026-11-08",
    "horaIni": "08:06",
-   "horaFin": null,
+   "horaFin": "13:56",
    "kmIni": 101500,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 101556,
+   "km": 56,
    "tanqueIni": 0.65,
    "tanqueFin": null,
    "traslados": [
-    "Vehículo a disposición"
+    "Vehículo a disposición",
+    "ASU-FOZ"
    ],
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 84112,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
-   "inferido": false
+   "abierto": false,
+   "inferido": true
   },
   {
    "vehiculo": "H1",
@@ -2276,13 +2278,6 @@
    "key": "hueco:H1:101446:101500",
    "nivel": "juan",
    "texto": "H1: 54 km sin traslado entre el 05/11 (km 101.446, Alfredo) y el 06/11 (km 101.500, Alfredo); no hubo km final.",
-   "ts": 1793963194,
-   "fecha": "2026-11-06"
-  },
-  {
-   "key": "final:H1:101500",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, falta el km FINAL del viaje que arrancó el 06/11 a las 08:06 (km inicio 101.500). Mandá la foto del tablero con el número.",
    "ts": 1793963194,
    "fecha": "2026-11-06"
   },
