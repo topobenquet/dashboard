@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-08T00:30:11.575Z",
+ "generated": "2026-11-08T10:20:06.793Z",
  "tc": 6600,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
  "saldos": {
-  "fecha": "2026-11-07",
+  "fecha": "2026-11-08",
   "itauGs": 43605,
   "uenoGs": 7124475,
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1470.99,
-  "stripePendiente": 3698.13,
+  "stripePendiente": 4017.13,
   "pagoparPendienteUsd": 506.82,
   "relay": null,
   "binance": null,
@@ -99,9 +99,27 @@
    },
    "neto": 716.24,
    "acum": 3694.15
+  },
+  {
+   "fecha": "2026-11-08",
+   "in": 334,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Stripe": 334
+   },
+   "neto": 334,
+   "acum": 4028.15
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-08",
+   "t": "in",
+   "usd": 334,
+   "fuente": "Stripe",
+   "det": "Cathy Li"
+  },
   {
    "d": "2026-11-07",
    "t": "in",
@@ -346,10 +364,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 10,
-   "bruto": 2659,
-   "comision": 113.97,
-   "pct": 4.29,
+   "cobros": 11,
+   "bruto": 2993,
+   "comision": 128.97,
+   "pct": 4.31,
    "nota": "medido cobro por cobro"
   },
   {
