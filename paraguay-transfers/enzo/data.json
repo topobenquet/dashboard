@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T16:30:12.485Z",
+ "generated": "2026-11-08T00:30:07.295Z",
  "hoy": "2026-11-07",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,30 +41,30 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 7,
-   "ventas": 6,
-   "facturacion": 2609,
-   "proyeccion": 11181.43,
-   "base": 52.18,
+   "ventas": 7,
+   "facturacion": 2743,
+   "proyeccion": 11755.71,
+   "base": 54.86,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 15391,
+    "falta": 15257,
     "bono": 100
    },
    "ticketsAltos": 3,
    "bonoTicket": 30,
    "margen": 0.6075,
    "margenOk": true,
-   "sinCostos": 5,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 30,
-   "total": 82.18,
+   "total": 84.86,
    "pendienteCobro": 1086,
    "semanas": [
     {
      "lunes": "2026-11-02",
-     "monto": 2609
+     "monto": 2743
     }
    ],
    "detalle": [
@@ -75,6 +75,17 @@
      "ruta": "AERO-FOZ",
      "tipo": "Traslado",
      "monto": 143,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-07",
+     "salida": "2027-03-07",
+     "cliente": "diane",
+     "ruta": "Areguá → Foz do Iguaçu",
+     "tipo": "Traslado",
+     "monto": 134,
      "margen": null,
      "alto": false,
      "saldo": 0
