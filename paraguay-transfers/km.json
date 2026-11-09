@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T17:10:36.087Z",
+ "generated": "2026-11-09T11:10:28.331Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1502,
-   "ultimoKm": 101556
+   "ultimoKm": 102237
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -76,9 +76,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 133,
-   "kmFuera": 66,
+   "kmFuera": 747,
    "viajes": 3,
-   "costoComb": 298898,
+   "costoComb": 1321760,
    "pagado": 0
   },
   "Voxy": {
@@ -97,11 +97,39 @@
   },
   {
    "chofer": "Gustavo",
-   "lecturas": 1,
-   "conFoto": 1
+   "lecturas": 2,
+   "conFoto": 2
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-11-09",
+   "fechaFin": "2026-11-09",
+   "horaIni": "02:34",
+   "horaFin": null,
+   "kmIni": 102237,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehículo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": true
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -1199,6 +1227,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 101556,
+   "hasta": 102237,
+   "km": 681,
+   "fechaDesde": "2026-11-08",
+   "fechaHasta": "2026-11-09",
+   "choferes": [
+    "Gustavo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 101446,
    "hasta": 101500,
    "km": 54,
@@ -2169,14 +2208,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-11-08",
-   "chofer": "Gustavo",
-   "vehiculo": "H1",
-   "ruta": "ASU-FOZ",
-   "km": 690,
-   "adelanto": 1140000
-  },
-  {
    "fecha": "2026-11-09",
    "chofer": "Gustavo",
    "vehiculo": "H1",
@@ -2274,6 +2305,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:101556:102237",
+   "nivel": "juan",
+   "texto": "H1: 681 km sin traslado entre el 08/11 (km 101.556, Gustavo) y el 09/11 (km 102.237, Gustavo).",
+   "ts": 1794202493,
+   "fecha": "2026-11-09"
+  },
   {
    "key": "hueco:H1:101446:101500",
    "nivel": "juan",
