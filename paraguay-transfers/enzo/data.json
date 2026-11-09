@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T10:22:12.319Z",
+ "generated": "2026-11-09T12:30:22.751Z",
  "hoy": "2026-11-09",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -42,29 +42,29 @@
    "diasMes": 30,
    "diasPasados": 9,
    "ventas": 7,
-   "facturacion": 2743,
-   "proyeccion": 9143.33,
-   "base": 54.86,
+   "facturacion": 3077,
+   "proyeccion": 10256.67,
+   "base": 61.54,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 15257,
+    "falta": 14923,
     "bono": 100
    },
-   "ticketsAltos": 3,
-   "bonoTicket": 30,
+   "ticketsAltos": 4,
+   "bonoTicket": 40,
    "margen": 0.6075,
    "margenOk": true,
    "sinCostos": 6,
    "bonoAplica": true,
-   "bonoTotal": 30,
-   "total": 84.86,
+   "bonoTotal": 40,
+   "total": 101.54,
    "pendienteCobro": 1086,
    "semanas": [
     {
      "lunes": "2026-11-02",
-     "monto": 2743
+     "monto": 3077
     }
    ],
    "detalle": [
@@ -74,9 +74,9 @@
      "cliente": "cathy",
      "ruta": "AERO-FOZ",
      "tipo": "Traslado",
-     "monto": 143,
+     "monto": 477,
      "margen": null,
-     "alto": false,
+     "alto": true,
      "saldo": 0
     },
     {
