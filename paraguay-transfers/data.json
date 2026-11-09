@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T15:56:41.420Z",
+  "generated": "2026-11-09T16:48:02.001Z",
   "lastSyncLabel": "9 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -210,13 +210,13 @@
       "leads": 74,
       "reservas": 11,
       "revenue": 4209.97,
-      "chofer": 181.82,
+      "chofer": 1966.22,
       "comb": 0,
       "peajes": 0,
-      "comision": 128.97,
+      "comision": 288.51,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 40,
+      "gAds": 45,
       "meta": 0,
       "costoSheet": 2206.6,
       "gananciaSheet": 7955.98,
@@ -224,7 +224,7 @@
       "ventasPy": 1,
       "ventasExt": 10,
       "ventasSinCruce": 0,
-      "base": "caja"
+      "base": "caja+costos-planilla"
     }
   ],
   "adsMonthly": [
@@ -300,9 +300,9 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 40.24,
-      "clicks": 29,
-      "impr": 226,
+      "spend": 44.55,
+      "clicks": 31,
+      "impr": 236,
       "conv": 4
     }
   ],
@@ -8261,13 +8261,13 @@
       "2026-11-06": 5.11,
       "2026-11-07": 1,
       "2026-11-08": 4.41,
-      "2026-11-09": 5.82
+      "2026-11-09": 10.13
     }
   },
   "resenas": {
     "count": 86,
     "rating": 5,
-    "actualizado": "2026-11-09T12:10:29.648Z",
+    "actualizado": "2026-11-09T16:10:05.087Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8537,6 +8537,12 @@
     ],
     "ultimas": [
       {
+        "autor": "Norma",
+        "rating": 5,
+        "fecha": "2026-10-27T17:02:14.846492751Z",
+        "texto": "Muy buen servicio puntual ,buen auto conductora me toco en este viaje excelente seguro lo voy a volvet a utilizar"
+      },
+      {
         "autor": "Rodrigo Pereira",
         "rating": 5,
         "fecha": "2026-10-25T00:03:16.897856509Z",
@@ -8547,12 +8553,6 @@
         "rating": 5,
         "fecha": "2026-10-17T16:32:49.416695339Z",
         "texto": "Solicitamos un Transfer desde el aeropuerto y todo fue perfecto.\nA pesar de llegar nuestro vuelo con retraso, el chófer estaba allí esperando nuestra llegada.\nNuestro chófer, Alfredo, muy atento.\nRecomendable 100%"
-      },
-      {
-        "autor": "Andres Lopez",
-        "rating": 5,
-        "fecha": "2026-08-31T23:49:34.848065146Z",
-        "texto": "Un viaje sin perfecto y con mucha seguridad, además del apoyo en el paso desde Paraguay a Brasil. 100% recomendable! Agradecidos de Gustavo, nuestro conductor en esta a oportunidad."
       },
       {
         "autor": "Isela Díaz",
@@ -8656,10 +8656,10 @@
       "2026-11-06": 16,
       "2026-11-07": 16,
       "2026-11-08": 17,
-      "2026-11-09": 5
+      "2026-11-09": 7
     },
     "monthly": {
-      "Noviembre": 181,
+      "Noviembre": 183,
       "Octubre": 508,
       "Septiembre": 213,
       "Agosto": 27
