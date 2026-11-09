@@ -257,7 +257,9 @@ function renderMonthly(root) {
         <col style="width:10%"><col style="width:8%"><col style="width:12%"><col style="width:9%"><col style="width:12%"></colgroup>
       <thead><tr><th>Mes</th><th>Leads</th><th>Ventas</th><th>Revenue</th><th>%Cierre</th>
         <th>G.Ads</th><th>Meta</th><th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+      <tbody>${rows}</tbody></table></div>
+    ${(()=>{ const cur=DATA.months[DATA.months.length-1]; return cur.base==="caja+costos-planilla"
+      ? `<div class="info-box info-gray" style="margin-top:8px;">${cur.mes} (mes en curso): revenue = lo cobrado en el mes (caja); costos = los de la planilla, porque los pagos con comprobante llegan después. Al cerrar el mes pasa a caja completa, como Septiembre y Octubre.</div>` : ""; })()}</div>`;
 }
 
 // Leads paraguayos (teléfono +595) contra extranjeros: los paraguayos cierran mucho menos y
