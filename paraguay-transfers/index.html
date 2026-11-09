@@ -219,7 +219,7 @@ function renderCurrentKPIs(root) {
       ${kpi(`Ventas 1-${dom}`, cm.ven, badge(cm.ven,pm.ven)+" vs "+prevM.mes, `${per}: ${pm.ven}`, "kpi-green")}
       ${kpi(`Margen 1-${dom}`, fp(cm.margen), badge(cm.margen,pm.margen)+" vs "+prevM.mes, `${per}: ${fp(pm.margen)}`)}
       ${kpi(`Ticket 1-${dom}`, cm.ven>0?f$(cm.ticket):"–", badge(cm.ticket,pm.ticket)+" vs "+prevM.mes, `${per}: ${pm.ven>0?f$(pm.ticket):"–"}`)}
-      ${kpi(`% Cierre 1-${dom}`, cm.leads>0?fp(cm.cierre):"–", badge(cm.cierre,pm.cierre)+" vs "+prevM.mes, `${cm.leads} leads · ${cm.ven} ventas`)}
+      ${kpi(`% Cierre 1-${dom}`, cm.leads>0?fp(cm.cierre):"–", badge(cm.cierre,pm.cierre)+" vs "+prevM.mes, `${cm.leads} leads${DATA.daily?.leadsPy&&cm.leads>0?` (${fp0(sumDays(DATA.daily.leadsPy,dom)/cm.leads)} PY)`:""} · ${cm.ven} ventas`)}
       ${kpi(`CAC 1-${dom}`, cm.cac>0?f$(cm.cac):"–", (cm.cac>0&&pm.cac>0)?badge(cm.cac,pm.cac,true)+" vs "+prevM.mes:"", `ads/venta · ${per}: ${pm.cac>0?f$(pm.cac):"–"}`)}
       ${kpi(`ROAS 1-${dom}`, cm.roas>0?cm.roas.toFixed(1)+"x":"–", "", `revenue/ads · ${per}: ${pm.roas>0?pm.roas.toFixed(1)+"x":"–"}`)}
       ${kpi(`Proyección ${curM.mes}`, f$(proj), `al día ${dom}/${dim}`, `a ritmo actual`)}
@@ -260,6 +260,31 @@ function renderMonthly(root) {
       <tbody>${rows}</tbody></table></div></div>`;
 }
 
+// Leads paraguayos (teléfono +595) contra extranjeros: los paraguayos cierran mucho menos y
+// bajan el %cierre total. Las ventas se cruzan con el lead por nombre del cliente; las que no
+// cruzan con ningún lead quedan en "sin cruce" y no entran en ningún %cierre de segmento.
+function renderLeadsPY(root) {
+  const M = DATA.months.filter(m => m.leadsPy != null && m.leads > 0);
+  if(!M.length) return;
+  const cls = (x) => x>=0.12?"pos":"neu";
+  let rows="";
+  M.forEach(m=>{
+    const ext=m.leads-m.leadsPy, cpy=m.leadsPy>0?m.ventasPy/m.leadsPy:null, cex=ext>0?m.ventasExt/ext:null;
+    rows+=`<tr><td><strong>${m.mes}</strong></td><td>${m.leads}</td>
+      <td>${m.leadsPy}</td><td>${fp0(m.leadsPy/m.leads)}</td>
+      <td class="${cpy!==null?cls(cpy):""}">${cpy!==null?fp(cpy):"–"} <span class="neu">(${m.ventasPy})</span></td>
+      <td>${ext}</td>
+      <td class="${cex!==null?cls(cex):""}">${cex!==null?fp(cex):"–"} <span class="neu">(${m.ventasExt})</span></td>
+      <td class="neu">${m.ventasSinCruce||"–"}</td></tr>`;
+  });
+  root.innerHTML += `<div class="section"><div class="section-title">Leads: paraguayos vs extranjeros</div>
+    <div class="ft-wrap"><table class="ft" style="min-width:560px;">
+      <colgroup><col style="width:14%"><col style="width:9%"><col style="width:12%"><col style="width:9%"><col style="width:15%"><col style="width:12%"><col style="width:15%"><col style="width:14%"></colgroup>
+      <thead><tr><th>Mes</th><th>Leads</th><th>Paraguayos</th><th>% PY</th><th>Cierre PY (ventas)</th><th>Extranjeros</th><th>Cierre ext. (ventas)</th><th>Ventas sin cruce</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    <div class="info-box info-gray" style="margin-top:8px;">Paraguayo = lead con teléfono +595 (el país de GHL no sirve: viene "PY" en casi todos). Cada venta de la planilla se cruza con su lead por nombre del cliente; las que no aparecen en GHL quedan en "sin cruce", por eso las ventas de un segmento no suman exactamente las del mes.</div></div>`;
+}
+
 function renderAdsTable(root) {
   const A = DATA.adsMonthly || [];
   if(!A.length) return;
@@ -282,24 +307,32 @@ function renderDaily(root) {
   const leads=DATA.daily?.leads||{}, ventas=DATA.daily?.ventas||{};
   const dates=Object.keys(leads).sort();
   if(!dates.length) return;
-  let rows="", totL=0, totV=0;
+  // Leads paraguayos (teléfono +595): si el data.json todavía no los trae, las columnas no se muestran.
+  const pyMap=DATA.daily?.leadsPy, hayPy=!!pyMap;
+  let rows="", totL=0, totV=0, totP=0;
   dates.forEach(d=>{
-    const l=leads[d]||0, v=ventas[d]||0; totL+=l; totV+=v;
+    const l=leads[d]||0, v=ventas[d]||0, p=hayPy?(pyMap[d]||0):0; totL+=l; totV+=v; totP+=p;
     const cd=l>0?v/l:null;
     rows+=`<tr><td>${d.slice(8,10)}/${d.slice(5,7)}</td><td><strong>${l}</strong></td>
+      ${hayPy?`<td>${p||"–"}</td><td class="neu">${l>0?fp0(p/l):"–"}</td>`:""}
       <td class="${v>0?"pos":""}">${v>0?v:"–"}</td>
       <td class="${cd!==null&&cd>=0.12?"pos":"neu"}">${cd!==null?fp(cd):"–"}</td></tr>`;
   });
   // Total del mes: suma en leads y ventas; en %Cierre, el promedio (ventas/leads).
   rows+=`<tr class="hi"><td>Total</td><td>${totL}</td>
+    ${hayPy?`<td>${totP}</td><td>${totL>0?fp0(totP/totL):"–"}</td>`:""}
     <td class="${totV>0?"pos":""}">${totV}</td>
     <td class="${totL>0&&totV/totL>=0.12?"pos":"neu"}">${totL>0?fp(totV/totL):"–"}</td></tr>`;
+  const cols = hayPy
+    ? `<col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:16%"><col style="width:20%">`
+    : `<col style="width:22%"><col style="width:26%"><col style="width:24%"><col style="width:28%">`;
   root.innerHTML += `<div class="section"><div class="section-title">${m.mes} 2026 — día a día (leads y cierre)</div>
     ${chartDaily(leads, ventas, dates)}
-    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:300px;">
-      <colgroup><col style="width:22%"><col style="width:26%"><col style="width:24%"><col style="width:28%"></colgroup>
-      <thead><tr><th>Fecha</th><th>Leads</th><th>Ventas</th><th>%Cierre día</th></tr></thead>
-      <tbody>${rows}</tbody></table></div></div>`;
+    <div class="ft-wrap"><table class="ft nowrap1" style="min-width:${hayPy?380:300}px;">
+      <colgroup>${cols}</colgroup>
+      <thead><tr><th>Fecha</th><th>Leads</th>${hayPy?`<th>Paraguayos</th><th>% PY</th>`:""}<th>Ventas</th><th>%Cierre día</th></tr></thead>
+      <tbody>${rows}</tbody></table></div>
+    ${hayPy?`<div class="info-box info-gray" style="margin-top:8px;">Paraguayos = leads con teléfono +595. Están incluidos en Leads.</div>`:""}</div>`;
 }
 
 // Transfers Argentina: consultas que llegan por el WhatsApp de PT pero piden un
@@ -761,6 +794,7 @@ async function init() {
     `<span class="dot"></span> Última actualización: <strong>${DATA.lastSyncLabel||gen.toLocaleString("es")}</strong>`;
   renderCurrentKPIs(root);
   renderMonthly(root);
+  renderLeadsPY(root);
   renderAdsTable(root);
   renderDaily(root);
   renderArgentina(root);

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T10:20:58.095Z",
+  "generated": "2026-11-09T15:53:29.215Z",
   "lastSyncLabel": "9 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -17,7 +17,11 @@
       "gAds": 385,
       "meta": 0,
       "costoSheet": 1247,
-      "gananciaSheet": 1515
+      "gananciaSheet": 1515,
+      "leadsPy": 68,
+      "ventasPy": 1,
+      "ventasExt": 6,
+      "ventasSinCruce": 2
     },
     {
       "mes": "Febrero",
@@ -33,7 +37,11 @@
       "gAds": 239,
       "meta": 21.69,
       "costoSheet": 6252,
-      "gananciaSheet": 2645
+      "gananciaSheet": 2645,
+      "leadsPy": 60,
+      "ventasPy": 1,
+      "ventasExt": 13,
+      "ventasSinCruce": 9
     },
     {
       "mes": "Marzo",
@@ -49,7 +57,11 @@
       "gAds": 368,
       "meta": 156.48,
       "costoSheet": 5047,
-      "gananciaSheet": 1897
+      "gananciaSheet": 1897,
+      "leadsPy": 103,
+      "ventasPy": 3,
+      "ventasExt": 7,
+      "ventasSinCruce": 8
     },
     {
       "mes": "Abril",
@@ -65,7 +77,11 @@
       "gAds": 431,
       "meta": 114.87,
       "costoSheet": 3400,
-      "gananciaSheet": 1779
+      "gananciaSheet": 1779,
+      "leadsPy": 44,
+      "ventasPy": 1,
+      "ventasExt": 9,
+      "ventasSinCruce": 4
     },
     {
       "mes": "Mayo",
@@ -81,7 +97,11 @@
       "gAds": 353,
       "meta": 89.94,
       "costoSheet": 2898,
-      "gananciaSheet": 2131
+      "gananciaSheet": 2131,
+      "leadsPy": 55,
+      "ventasPy": 3,
+      "ventasExt": 14,
+      "ventasSinCruce": 4
     },
     {
       "mes": "Junio",
@@ -97,7 +117,11 @@
       "gAds": 242,
       "meta": 0,
       "costoSheet": 2209,
-      "gananciaSheet": 1487
+      "gananciaSheet": 1487,
+      "leadsPy": 61,
+      "ventasPy": 2,
+      "ventasExt": 8,
+      "ventasSinCruce": 8
     },
     {
       "mes": "Julio",
@@ -113,7 +137,11 @@
       "gAds": 139,
       "meta": 0,
       "costoSheet": 4656,
-      "gananciaSheet": 2648
+      "gananciaSheet": 2648,
+      "leadsPy": 53,
+      "ventasPy": 2,
+      "ventasExt": 17,
+      "ventasSinCruce": 1
     },
     {
       "mes": "Agosto",
@@ -129,7 +157,11 @@
       "gAds": 339,
       "meta": 108.64,
       "costoSheet": 7271,
-      "gananciaSheet": 8215
+      "gananciaSheet": 8215,
+      "leadsPy": 105,
+      "ventasPy": 3,
+      "ventasExt": 47,
+      "ventasSinCruce": 8
     },
     {
       "mes": "Septiembre",
@@ -146,40 +178,52 @@
       "meta": 286.07,
       "costoSheet": 9160,
       "gananciaSheet": 11965,
+      "leadsPy": 138,
+      "ventasPy": 7,
+      "ventasExt": 47,
+      "ventasSinCruce": 7,
       "base": "caja"
     },
     {
       "mes": "Octubre",
       "leads": 362,
       "reservas": 78,
-      "revenue": 30446.41,
-      "chofer": 14160.95,
-      "comb": 607.59,
+      "revenue": 29178.83,
+      "chofer": 2143.34,
+      "comb": 106.07,
       "peajes": 0,
       "comision": 184.63,
       "reembolsos": 0,
-      "otros": 2634.85,
+      "otros": 469.7,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
       "gananciaSheet": 19178,
+      "leadsPy": 155,
+      "ventasPy": 16,
+      "ventasExt": 60,
+      "ventasSinCruce": 2,
       "base": "caja"
     },
     {
       "mes": "Noviembre",
-      "leads": 71,
+      "leads": 74,
       "reservas": 11,
-      "revenue": 4209.97,
-      "chofer": 181.82,
+      "revenue": 3499.82,
+      "chofer": 0,
       "comb": 0,
       "peajes": 0,
       "comision": 128.97,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 36,
+      "gAds": 40,
       "meta": 0,
-      "costoSheet": 2196.58,
-      "gananciaSheet": 7632,
+      "costoSheet": 2206.6,
+      "gananciaSheet": 7955.98,
+      "leadsPy": 16,
+      "ventasPy": 1,
+      "ventasExt": 10,
+      "ventasSinCruce": 0,
       "base": "caja"
     }
   ],
@@ -256,9 +300,9 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 35.92,
-      "clicks": 27,
-      "impr": 210,
+      "spend": 40.24,
+      "clicks": 29,
+      "impr": 226,
       "conv": 4
     }
   ],
@@ -7367,11 +7411,11 @@
       "cliente": "cathy",
       "pais": "Taiwán",
       "conductor": "Juan Vera CDE",
-      "pago": 143,
+      "pago": 477,
       "sena": 143,
       "restante": 334,
       "choferCost": 0,
-      "neto": 138.71,
+      "neto": 462.69,
       "fechaReserva": "07/11/26",
       "fechaSalida": "08/11/26"
     },
@@ -7854,6 +7898,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-11-09": 3,
       "2026-11-08": 5,
       "2026-11-07": 6,
       "2026-11-06": 9,
@@ -7896,6 +7941,16 @@
       "2026-10-03": 7,
       "2026-10-02": 11,
       "2026-10-01": 7
+    },
+    "leadsPy": {
+      "2026-11-08": 1,
+      "2026-11-07": 2,
+      "2026-11-06": 2,
+      "2026-11-05": 2,
+      "2026-11-04": 2,
+      "2026-11-03": 2,
+      "2026-11-02": 2,
+      "2026-11-01": 3
     },
     "ventas": {
       "2026-11-01": 1,
@@ -8206,13 +8261,13 @@
       "2026-11-06": 5.11,
       "2026-11-07": 1,
       "2026-11-08": 4.41,
-      "2026-11-09": 1.5
+      "2026-11-09": 5.82
     }
   },
   "resenas": {
-    "count": 85,
+    "count": 66,
     "rating": 5,
-    "actualizado": "2026-11-08T23:10:01.207Z",
+    "actualizado": "2026-10-08T20:10:03.532Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8318,176 +8373,9 @@
         "fecha": "2026-10-08",
         "count": 66,
         "rating": 5
-      },
-      {
-        "fecha": "2026-10-09",
-        "count": 67,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-10",
-        "count": 67,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-11",
-        "count": 68,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-12",
-        "count": 68,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-13",
-        "count": 68,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-14",
-        "count": 70,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-15",
-        "count": 72,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-16",
-        "count": 72,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-17",
-        "count": 73,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-18",
-        "count": 73,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-19",
-        "count": 74,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-20",
-        "count": 74,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-21",
-        "count": 74,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-22",
-        "count": 74,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-23",
-        "count": 74,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-24",
-        "count": 75,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-25",
-        "count": 77,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-26",
-        "count": 79,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-27",
-        "count": 82,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-28",
-        "count": 82,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-29",
-        "count": 82,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-30",
-        "count": 82,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-10-31",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-01",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-02",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-03",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-04",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-05",
-        "count": 83,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-06",
-        "count": 85,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-07",
-        "count": 85,
-        "rating": 5
-      },
-      {
-        "fecha": "2026-11-08",
-        "count": 85,
-        "rating": 5
       }
     ],
     "ultimas": [
-      {
-        "autor": "Rodrigo Pereira",
-        "rating": 5,
-        "fecha": "2026-10-25T00:03:16.897856509Z",
-        "texto": "Súper recomendable !! Un éxito. Muy buen servicio"
-      },
-      {
-        "autor": "Gemma Bernal",
-        "rating": 5,
-        "fecha": "2026-10-17T16:32:49.416695339Z",
-        "texto": "Solicitamos un Transfer desde el aeropuerto y todo fue perfecto.\nA pesar de llegar nuestro vuelo con retraso, el chófer estaba allí esperando nuestra llegada.\nNuestro chófer, Alfredo, muy atento.\nRecomendable 100%"
-      },
       {
         "autor": "Andres Lopez",
         "rating": 5,
@@ -8495,34 +8383,46 @@
         "texto": "Un viaje sin perfecto y con mucha seguridad, además del apoyo en el paso desde Paraguay a Brasil. 100% recomendable! Agradecidos de Gustavo, nuestro conductor en esta a oportunidad."
       },
       {
-        "autor": "Isela Díaz",
-        "rating": 5,
-        "fecha": "2026-08-26T20:29:25.995642280Z",
-        "texto": "Contratamos el servicio para el tour a las Cataratas de Iguazú y lo recomendamos al 100! Son muy accesibles en cuanto el sistema de pago y los precios nos parecieron acorde con el buen servicio que dan. El vehículo de traslado nos pareció muy cómodo a mi familia y a mi (somos 3) y el señor Alfredo fue muy profesional y es una persona muy agradable. Nos sugirió otros lugares interesantes para visit"
-      },
-      {
         "autor": "daniela hernández",
         "rating": 5,
         "fecha": "2026-08-22T00:58:25.727763243Z",
         "texto": "Excelente servicio de transfers. Siempre que viajo a Paraguay lo uso. Es seguro, los coches están perfectas condiciones de limpieza, los choferes son muy agradables y están a disposición absoluta.\n10/10!\nGracias !"
+      },
+      {
+        "autor": "Juana Galeano",
+        "rating": 5,
+        "fecha": "2026-08-05T12:08:47.219342036Z",
+        "texto": "Experiencia perfecta.\nPersonas sumamente atentos y empaticos.\nEternamente agradecida a ustedes."
+      },
+      {
+        "autor": "Alfredo David Sanchez Vargas",
+        "rating": 5,
+        "fecha": "2026-05-26T16:32:49.419894101Z",
+        "texto": "Exelente Servicio... Atención Profesional... Vehículos confortables y en muy buenas condiciones... Más que recomendado!!!"
+      },
+      {
+        "autor": "Martin Vial",
+        "rating": 5,
+        "fecha": "2026-05-17T22:21:28.923254381Z",
+        "texto": "Excelente servicio, siempre muy puntuales y con muy buena disposición."
       }
     ]
   },
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
-      "2026-11-05": 22,
-      "2026-11-03": 32,
-      "2026-11-02": 35,
-      "2026-10-22": 11,
-      "2026-10-17": 14,
-      "2026-10-16": 20,
-      "2026-10-12": 27,
-      "2026-10-11": 20,
-      "2026-10-10": 14,
-      "2026-10-09": 21,
-      "2026-10-08": 20,
-      "2026-10-07": 23,
+      "2026-11-05": 1,
+      "2026-11-03": 13,
+      "2026-11-02": 12,
+      "2026-10-22": 1,
+      "2026-10-17": 5,
+      "2026-10-16": 7,
+      "2026-10-12": 7,
+      "2026-10-11": 4,
+      "2026-10-10": 1,
+      "2026-10-09": 3,
+      "2026-10-08": 12,
+      "2026-10-07": 22,
       "2026-10-06": 14,
       "2026-10-04": 16,
       "2026-10-03": 15,
@@ -8574,33 +8474,11 @@
       "2026-09-29": 7,
       "2026-09-30": 10,
       "2026-10-01": 19,
-      "2026-10-05": 30,
-      "2026-10-13": 16,
-      "2026-10-14": 22,
-      "2026-10-15": 21,
-      "2026-10-18": 9,
-      "2026-10-19": 14,
-      "2026-10-20": 10,
-      "2026-10-21": 14,
-      "2026-10-23": 17,
-      "2026-10-24": 15,
-      "2026-10-25": 12,
-      "2026-10-26": 15,
-      "2026-10-27": 20,
-      "2026-10-28": 13,
-      "2026-10-29": 16,
-      "2026-10-30": 12,
-      "2026-10-31": 13,
-      "2026-11-01": 15,
-      "2026-11-04": 23,
-      "2026-11-06": 16,
-      "2026-11-07": 16,
-      "2026-11-08": 17,
-      "2026-11-09": 3
+      "2026-10-05": 30
     },
     "monthly": {
-      "Noviembre": 179,
-      "Octubre": 508,
+      "Noviembre": 26,
+      "Octubre": 161,
       "Septiembre": 213,
       "Agosto": 27
     }
