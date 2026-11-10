@@ -46,27 +46,31 @@ header{position:sticky;top:0;z-index:30;background:#fff;box-shadow:0 1px 0 var(-
 .hphone small{display:block;color:var(--ok);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 
 /* hero: copy left, form right; mobile: copy + form above the fold */
-.hero{position:relative;background:linear-gradient(90deg,#0b0f5c 0%,rgba(11,15,92,.92) 45%,rgba(11,15,92,.55) 100%),url(img/hero.webp) right 25%/cover no-repeat,#0b0f5c;color:#fff;padding:56px 0 64px}
+.hero{position:relative;background:linear-gradient(90deg,#0b0f5c 0%,rgba(11,15,92,.92) 45%,rgba(11,15,92,.55) 100%),url(img/hero.webp) right 25%/cover no-repeat,#0b0f5c;color:#fff;padding:48px 0;min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);display:flex;align-items:center}
+.hero>.wrap{width:100%}
 .hero-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center}
-.hero h1{font-size:clamp(34px,4.4vw,56px);line-height:1.05}
+.hero h1{font-size:clamp(40px,5vw,68px);line-height:1.05}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:7px 14px;font-weight:700;font-size:14px;margin-bottom:22px}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.25)}
 .hl{display:inline-block;background:var(--coral);color:#fff;padding:0 12px;border-radius:6px;transform:rotate(-1.5deg)}
-.hero p{color:#d6d9fb;font-size:18px;margin:16px 0 0;max-width:480px}
-.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-weight:700;font-size:14px;color:#fff}
+.hero p{color:#d6d9fb;font-size:20px;line-height:1.55;margin:22px 0 0;max-width:520px}
+.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:32px;font-weight:700;font-size:15px;color:#fff}
 .trust span{display:flex;align-items:center;gap:6px}
 .trust b{color:#ffb020;letter-spacing:2px}
 
 /* callback card (inside the hero) */
-.card{background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.3);padding:24px}
+.card{background:#fff;color:var(--ink);border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.3);padding:30px}
+.card .sub{color:var(--muted);font-size:14px;margin:4px 0 0}
 .card h3{font-size:22px}
 .live{display:inline-flex;align-items:center;gap:8px;color:var(--ok);font-weight:800;font-size:13px;margin:6px 0 14px}
 .live:before{content:"";width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .seg{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.seg label{border:1.5px solid var(--line);border-radius:12px;padding:9px 6px;text-align:center;font-weight:800;font-size:14px;cursor:pointer}
+.seg label{border:1.5px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center;font-weight:800;font-size:14px;cursor:pointer}
 .seg input{display:none}
 .seg label:has(input:checked){border-color:var(--coral);background:#fff3ee;color:var(--coral)}
-.form input[type=text],.form input[type=tel]{min-width:0;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit}
-.form button{grid-column:1/-1;justify-content:center;padding:15px;font-size:17px}
+.form input[type=text],.form input[type=tel]{min-width:0;padding:15px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit}
+.form button{grid-column:1/-1;justify-content:center;padding:17px;font-size:18px}
 .fine{grid-column:1/-1;font-size:11px;color:#8a90b0;line-height:1.4}
 .ok{grid-column:1/-1;color:var(--ok);font-weight:800}
 
@@ -149,10 +153,12 @@ body.scrolled .chat{opacity:1;pointer-events:auto}
 
 @media (max-width:1000px){
   .links{display:none}
-  .hero{background:linear-gradient(180deg,rgba(11,15,92,.8),#0b0f5c 60%),url(img/hero.webp) center 20%/cover;padding:24px 0 32px}
-  .hero-grid{gap:18px}
-  .hero p{font-size:16px;margin-top:8px}
-  .trust{display:none}
+  .hero{background:linear-gradient(180deg,rgba(11,15,92,.78),#0b0f5c 62%),url(img/hero.webp) center 20%/cover;padding:28px 0}
+  .hero-grid{gap:22px}
+  .hero p{font-size:16px;margin-top:10px}
+  .eyebrow{margin-bottom:14px;font-size:13px;padding:6px 12px}
+  .trust{gap:12px;margin-top:14px;font-size:13px}
+  .trust span:last-child{display:none}
   .hero-grid,.about,.why,.proc{grid-template-columns:1fr}
   .grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}
   .quote{right:12px;width:auto;left:12px}
@@ -162,8 +168,9 @@ body.scrolled .chat{opacity:1;pointer-events:auto}
   .top{display:none}
   .hphone small{display:none}.hcta .btn{display:none}
   .grid4{grid-template-columns:1fr}
-  .hero h1{font-size:30px}
-  .card{padding:16px}
+  .hero{min-height:calc(100vh - 60px);min-height:calc(100svh - 60px)}
+  .hero h1{font-size:34px}
+  .card{padding:18px}
   .card h3{font-size:19px}
   .live{margin:4px 0 10px}
   .seg label{padding:8px 4px;font-size:13px}
@@ -176,6 +183,14 @@ body.scrolled .chat{opacity:1;pointer-events:auto}
   .callbar{display:none;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px}
   .callbar a{justify-content:center;padding:13px}
   body.scrolled .callbar{display:grid}
+}
+@media (max-width:640px) and (max-height:720px){
+  .hero{padding:16px 0}.hero-grid{gap:14px}
+  .eyebrow,.trust,.card .sub{display:none}
+  .hero h1{font-size:30px}
+  .seg label{padding:8px 4px}
+  .form input[type=text],.form input[type=tel]{padding:12px}
+  .form button{padding:14px}
 }
 </style>
 </head>
@@ -190,12 +205,14 @@ body.scrolled .chat{opacity:1;pointer-events:auto}
 <section class="hero" id="book">
   <div class="wrap hero-grid">
     <div>
+      <div class="eyebrow">Answering now · 24/7</div>
       <h1>Heat out? <span class="hl">Fixed today.</span></h1>
-      <p>Licensed local techs. We answer 24/7.</p>
+      <p>Furnace, heat pump and AC repair from licensed local techs. Most repairs done on the first visit.</p>
       <div class="trust"><span><b>★★★★★</b> [4.9] on Google</span><span>✓ Licensed & insured</span><span>✓ Upfront pricing</span></div>
     </div>
     <form class="card" onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false;this.querySelector('button').textContent='Calling you now…'">
       <h3>Get a call back in 60 seconds</h3>
+      <p class="sub">Tell us what's going on and we'll get you scheduled.</p>
       <div class="live">Booking team available now</div>
       <div class="form">
         <div class="seg">
