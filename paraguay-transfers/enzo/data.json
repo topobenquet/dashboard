@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T12:30:02.886Z",
+ "generated": "2026-11-10T16:30:02.690Z",
  "hoy": "2026-11-10",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 10,
-   "ventas": 9,
-   "facturacion": 3577,
-   "proyeccion": 10731,
-   "base": 71.54,
+   "ventas": 10,
+   "facturacion": 3774,
+   "proyeccion": 11322,
+   "base": 75.48,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 14423,
+    "falta": 14226,
     "bono": 100
    },
    "ticketsAltos": 5,
    "bonoTicket": 50,
    "margen": 0.7173999999999999,
    "margenOk": true,
-   "sinCostos": 6,
+   "sinCostos": 7,
    "bonoAplica": true,
    "bonoTotal": 50,
-   "total": 121.54,
+   "total": 125.48,
    "pendienteCobro": 1086,
    "semanas": [
     {
@@ -68,7 +68,7 @@
     },
     {
      "lunes": "2026-11-09",
-     "monto": 500
+     "monto": 697
     }
    ],
    "detalle": [
@@ -79,6 +79,17 @@
      "ruta": "Edificio San Gabriel, Ciudad del Este to the Brazilian site ",
      "tipo": "Traslado",
      "monto": 182,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-10",
+     "salida": "2026-11-20",
+     "cliente": "angela",
+     "ruta": "Terminal de Ómnibus de Asunción → destino no especificado",
+     "tipo": "Traslado",
+     "monto": 197,
      "margen": null,
      "alto": false,
      "saldo": 0
@@ -640,7 +651,7 @@
  ],
  "sinReserva": 0,
  "restoEquipo": {
-  "Bot": 138,
+  "Bot": 207,
   "Sin asignar": 866
  }
 }
