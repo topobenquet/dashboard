@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summit Heating & Air | Furnace & AC Repair in Austin, TX</title>
+<meta name="description" content="24/7 heating and air conditioning repair, installation and maintenance in Austin, TX. Call now or get a call back in 60 seconds.">
+<link rel="preload" as="image" href="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b0f5c;--navy2:#151c9c;--ink:#0b0f3a;--muted:#5d6488;--coral:#ff6a3d;--coral2:#ff8a63;--lav:#eef0ff;--line:#e3e6f5;--white:#fff;--ok:#16a34a}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Manrope,system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3{margin:0;line-height:1.12;letter-spacing:-.02em;font-weight:800}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:99px;padding:6px 14px;font-size:13px;font-weight:700;color:var(--muted)}
+.pill:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--coral)}
+.btn{display:inline-flex;align-items:center;gap:12px;border-radius:99px;font-weight:800;font-size:15px;padding:6px 6px 6px 22px;border:0;cursor:pointer;white-space:nowrap}
+.btn i{width:38px;height:38px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-style:normal;font-size:18px}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-coral{background:var(--coral);color:#fff;padding:13px 24px}
+h2.title{font-size:clamp(28px,3.4vw,44px);margin:14px 0 14px}
+.lead{color:var(--muted);font-size:17px;max-width:620px}
+section{padding:96px 0}
+
+/* top + header */
+.top{border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.top .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.top b{color:var(--coral)}
+header{position:sticky;top:0;z-index:30;background:#fff;box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--navy)}
+.logo span{width:34px;height:34px;border-radius:8px;background:var(--navy);position:relative}
+.logo span:after{content:"";position:absolute;right:-5px;bottom:-5px;width:16px;height:16px;border-radius:4px;background:var(--coral)}
+.links{display:flex;gap:28px;font-weight:700;font-size:15px}
+.links a:hover{color:var(--coral)}
+.hcta{display:flex;align-items:center;gap:16px}
+.hphone{font-weight:800;font-size:15px;text-align:right;line-height:1.2}
+.hphone small{display:block;color:var(--ok);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(100deg,#11169a 0%,#0b0f5c 45%,#0b0f5c 55%,rgba(11,15,92,.0) 100%),url(img/hero.webp) right 20%/52% auto no-repeat,#0b0f5c;color:#fff;padding:80px 0 150px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,5.6vw,72px);line-height:1.08}
+.hl{display:inline-block;background:linear-gradient(90deg,var(--coral),#ff8a63);color:#fff;padding:0 16px;border-radius:6px;transform:rotate(-1.5deg);margin:4px 0}
+.hl.dark{background:#070a3d;box-shadow:inset 0 0 0 2px rgba(255,106,61,.6)}
+.hero p{color:#c9cdf5;font-size:18px;max-width:520px;margin:22px 0 30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.tel{font-weight:800;font-size:18px;color:#fff;display:flex;align-items:center;gap:10px}
+.tel span{width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.4);display:grid;place-items:center}
+.frame{position:relative;height:440px}
+.frame .outline{position:absolute;inset:20px 40px 0 60px;border:3px solid rgba(255,255,255,.85);border-radius:46px}
+.chip{position:absolute;background:var(--coral);color:#fff;font-weight:800;font-size:13px;padding:8px 14px;border-radius:99px;box-shadow:0 0 0 5px rgba(255,106,61,.25)}
+.review{position:absolute;right:0;bottom:30px;width:200px;background:var(--navy);border-radius:18px;padding:18px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.review .s{color:#ff8a63;letter-spacing:3px}
+.review b{display:block;font-size:24px}
+.review small{color:#c9cdf5}
+
+/* callback card */
+.cb{position:relative;z-index:5;margin-top:-90px}
+.card{background:#fff;border-radius:24px;box-shadow:0 30px 70px rgba(11,15,92,.18);padding:30px;display:grid;grid-template-columns:.9fr 1.6fr;gap:30px;align-items:center}
+.card h3{font-size:26px}
+.card p{color:var(--muted);margin:8px 0 0;font-size:15px}
+.live{display:inline-flex;align-items:center;gap:8px;color:var(--ok);font-weight:800;font-size:13px;margin-top:12px}
+.live:before{content:"";width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.seg{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.seg label{border:1.5px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-weight:800;font-size:14px;cursor:pointer}
+.seg input{display:none}
+.seg label:has(input:checked){border-color:var(--coral);background:#fff3ee;color:var(--coral)}
+.form input[type=text],.form input[type=tel]{grid-column:span 2;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit}
+.form button{grid-column:1/-1;justify-content:center;padding:15px;font-size:16px}
+.fine{grid-column:1/-1;font-size:11px;color:#8a90b0;line-height:1.4}
+.ok{grid-column:1/-1;color:var(--ok);font-weight:800}
+
+/* about */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:end;margin-top:30px}
+.stat{background:var(--lav);border-radius:30px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+.stat .num{font-size:110px;font-weight:800;color:var(--navy);line-height:.9}
+.stat small{display:block;color:var(--muted);font-weight:700;margin-top:14px}
+.stat .side{writing-mode:vertical-rl;transform:rotate(180deg);background:#fff;border-radius:16px;padding:18px 10px;font-weight:800;color:var(--navy)}
+.photo{border-radius:30px;overflow:hidden;position:relative}
+.photo img{width:100%;height:340px;object-fit:cover}
+.photo .btn{position:absolute;left:18px;bottom:18px}
+
+/* services */
+.services{background:var(--lav)}
+.center{text-align:center}.center .lead{margin:0 auto}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.svc{background:#fff;border-radius:24px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(11,15,92,.12)}
+.svc .im{height:170px;position:relative;background:var(--navy)}
+.svc .im img{width:100%;height:100%;object-fit:cover;border-bottom-right-radius:60px}
+.svc .ic{position:absolute;left:22px;bottom:-26px;width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:24px;border:4px solid #fff}
+.svc .bd{padding:40px 22px 24px}
+.svc h3{font-size:19px}
+.svc p{color:var(--muted);font-size:14px;margin:8px 0 14px}
+.svc a{font-weight:800;font-size:14px;color:var(--navy)}
+.svc a:after{content:" ↗";color:var(--coral)}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.whyimg{position:relative}
+.whyimg img{border-radius:30px;width:100%;height:520px;object-fit:cover}
+.quote{position:absolute;right:-20px;bottom:30px;width:300px;background:linear-gradient(160deg,#151c9c,#0b0f5c);color:#fff;border-radius:22px;padding:24px;font-weight:700;font-size:17px;line-height:1.4}
+.quote:before{content:"“";display:block;color:var(--coral);font-size:48px;line-height:.6;margin-bottom:6px}
+.quote small{display:block;margin-top:12px;color:#c9cdf5;font-weight:600;font-size:13px}
+.feat{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:14px;box-shadow:0 8px 20px rgba(11,15,92,.05)}
+.feat i{flex:none;width:52px;height:52px;border-radius:50%;background:var(--lav);display:grid;place-items:center;font-style:normal;font-size:22px}
+.feat b{display:block;font-size:17px}
+.feat span{color:var(--muted);font-size:14px}
+
+/* process */
+.proc{background:linear-gradient(120deg,#0b0f5c,#151c9c);border-radius:36px;color:#fff;display:grid;grid-template-columns:1fr .9fr;overflow:hidden}
+.proc .l{padding:64px 56px}
+.proc .pill{background:transparent;border-color:rgba(255,255,255,.3);color:#c9cdf5}
+.st{display:grid;grid-template-columns:40px 1fr;gap:6px 16px;margin-top:26px;padding-left:4px}
+.st em{font-style:normal;color:#9aa1e8;font-weight:800;font-size:13px;padding-top:4px}
+.st b{font-size:19px}
+.st span{grid-column:2;color:#c9cdf5;font-size:14px}
+.st.on b{border-left:3px solid var(--coral);padding-left:12px;margin-left:-15px}
+.proc .r{position:relative;min-height:440px;background:url(img/van.webp) center/cover}
+.timer{position:absolute;left:30px;top:40px;background:#fff;color:var(--navy);border-radius:18px;padding:20px 22px;box-shadow:8px 8px 0 var(--coral);font-weight:700}
+.timer b{font-size:46px;display:block;line-height:1}
+
+/* reviews + area + faq */
+.rv{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.stars{color:#ffb020;letter-spacing:3px}
+.rv p{margin:10px 0;font-size:15px}
+.rv small{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chips span{background:var(--lav);border-radius:99px;padding:8px 16px;font-weight:700;font-size:14px;color:var(--navy)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:800;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary:after{content:"+";color:var(--coral);font-size:22px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);margin:10px 0 0}
+.final{background:var(--navy);color:#fff;border-radius:36px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.final p{color:#c9cdf5;margin:8px 0 0}
+footer{background:#070a3d;color:#9aa1e8;font-size:14px;padding:40px 0;margin-top:96px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.note{font-size:12px;color:#8a90b0;margin-top:12px}
+
+/* chat + mobile bar */
+.chat{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.bubble{background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px rgba(11,15,92,.18);border-radius:16px 16px 4px 16px;padding:12px 14px;max-width:250px;font-size:14px}
+.bubble b{display:block;font-size:12px;color:var(--coral)}
+.fab{width:60px;height:60px;border-radius:50%;background:var(--coral);border:0;color:#fff;font-size:26px;cursor:pointer;box-shadow:0 12px 28px rgba(255,106,61,.45)}
+.callbar{display:none}
+
+@media (max-width:1000px){
+  .links{display:none}
+  .hero{background:linear-gradient(180deg,rgba(11,15,92,.82),#0b0f5c 70%),url(img/hero.webp) center top/cover;padding:60px 0 120px}
+  .hero-grid,.card,.about,.why,.proc{grid-template-columns:1fr}
+  .frame{display:none}
+  .grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}
+  .quote{right:12px;width:auto;left:12px}
+  .proc .l{padding:40px 26px}
+}
+@media (max-width:640px){
+  .top{display:none}
+  .hphone small{display:none}.hcta .btn{display:none}
+  .grid4{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr 1fr}.seg{grid-template-columns:1fr 1fr}
+  .form input[type=text],.form input[type=tel]{grid-column:1/-1}
+  section{padding:64px 0}
+  .stat .num{font-size:88px}
+  .bubble{display:none}
+  .chat{bottom:84px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px}
+  .callbar a{justify-content:center;padding:13px}
+  body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span>📍 [Street address], Austin, TX · License #[XXXX]</span><span><b>●</b> Phones answered 24/7, nights and weekends</span></div></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="#"><span></span>Summit Heating & Air</a>
+  <nav class="links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How it works</a><a href="#area">Service area</a><a href="#faq">FAQ</a></nav>
+  <div class="hcta"><a class="hphone" href="tel:+15125550142"><small>● Answering now</small>(512) 555-0142</a><a class="btn btn-coral" href="#book">Book Service</a></div>
+</div></header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1><span class="hl">Heat Out?</span><br><span class="hl dark">We'll Fix It</span><br>Today, Not Next Week</h1>
+      <p>Furnace, heat pump and AC repair from licensed local techs. We answer on the first ring, day or night, and get you on the schedule in under two minutes.</p>
+      <div class="ctas">
+        <a class="btn btn-light" href="#book">Get a Call Back <i>↗</i></a>
+        <a class="tel" href="tel:+15125550142"><span>📞</span>(512) 555-0142</a>
+      </div>
+    </div>
+    <div class="frame">
+      <div class="outline"></div>
+      <div class="chip" style="left:30px;top:70px">No-Heat Repair</div>
+      <div class="chip" style="left:44%;top:56%">24/7 Emergency</div>
+      <div class="review"><div class="s">★★★★★</div><b>[4.9] / 5</b><small>[N] Google reviews</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap cb">
+  <form class="card" id="book" onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false;this.querySelector('button').textContent='Calling you now…'">
+    <div><h3>Get a call back in 60 seconds</h3><p>Tell us what's going on. Our booking team calls you right away to get you scheduled.</p><div class="live">Booking team available now</div></div>
+    <div class="form">
+      <div class="seg">
+        <label><input type="radio" name="t" checked>🔥 No heat</label>
+        <label><input type="radio" name="t">❄️ AC issue</label>
+        <label><input type="radio" name="t">🛠 Tune-up</label>
+        <label><input type="radio" name="t">🏠 New system</label>
+      </div>
+      <input type="text" placeholder="Your name" required>
+      <input type="tel" placeholder="Mobile phone" required>
+      <button class="btn btn-coral" type="submit">Call me now</button>
+      <div class="ok" hidden>● Sarah is calling you now</div>
+      <div class="fine">By submitting you agree to receive calls and texts about your request. Msg/data rates may apply. Reply STOP to opt out.</div>
+    </div>
+  </form>
+</div>
+
+<section style="padding-top:80px">
+  <div class="wrap">
+    <span class="pill">About us</span>
+    <h2 class="title" style="max-width:820px">Reliable heating and cooling for Austin homes and businesses</h2>
+    <div class="about">
+      <div class="stat"><div><div class="num">[15]</div><small>Years serving Austin</small><div style="margin-top:14px;font-weight:800;color:var(--navy)">★ [4.9] <small style="display:inline">from [N] reviews</small></div></div><div class="side">Licensed & Insured</div></div>
+      <div>
+        <p class="lead" style="margin:0 0 18px">Family-owned, upfront pricing, and technicians who show up when they say they will. Most repairs are done on the first visit because every truck carries common parts.</p>
+        <div class="photo"><img src="img/furnace.webp" alt="Technician repairing a furnace" loading="lazy" width="1100" height="615"><a class="btn btn-navy" href="#book">Book a visit <i>↗</i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap center">
+    <span class="pill">Our services</span>
+    <h2 class="title">Heating, cooling and everything in between</h2>
+    <p class="lead">One call covers it, 24/7.</p>
+    <div class="grid4" style="text-align:left">
+      <div class="svc"><div class="im"><img src="img/repair.webp" alt="Furnace repair" loading="lazy" width="700" height="875"><div class="ic">🔥</div></div><div class="bd"><h3>Furnace Repair</h3><p>No heat, short cycling, odd smells or noises. Gas and electric, all brands.</p><a href="#book">Book now</a></div></div>
+      <div class="svc"><div class="im"><img src="img/heatpump.webp" alt="Heat pump service" loading="lazy" width="700" height="700"><div class="ic">♨️</div></div><div class="bd"><h3>Heat Pumps</h3><p>Repair, replacement and seasonal service for heat pumps and dual-fuel systems.</p><a href="#book">Book now</a></div></div>
+      <div class="svc"><div class="im"><img src="img/hero.webp" alt="AC repair" loading="lazy" width="900" height="1195" style="object-position:50% 30%"><div class="ic">❄️</div></div><div class="bd"><h3>AC Repair</h3><p>Warm air, frozen lines, a unit that won't start. Diagnosed and fixed fast.</p><a href="#book">Book now</a></div></div>
+      <div class="svc"><div class="im"><img src="img/furnace.webp" alt="New system installation" loading="lazy" width="1100" height="615"><div class="ic">🏠</div></div><div class="bd"><h3>New Systems</h3><p>Free in-home estimate, three clear options and financing available.</p><a href="#book">Get an estimate</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap why">
+    <div class="whyimg"><img src="img/handshake.webp" alt="Technician greeting a homeowner" loading="lazy" width="800" height="1000"><div class="quote">Every job, big or small, gets our best work. That's a promise.<small>[Owner name], Owner</small></div></div>
+    <div>
+      <span class="pill">Why choose us</span>
+      <h2 class="title">Trusted by Austin homeowners to keep the heat on</h2>
+      <p class="lead">A real answer every time you call, a clear price before we start, and work we stand behind.</p>
+      <div class="feat"><i>🛡</i><div><b>Certified technicians</b><span>Licensed, background-checked and trained on every major brand.</span></div></div>
+      <div class="feat"><i>🌙</i><div><b>24/7 emergency service</b><span>Every call answered, nights, weekends and holidays.</span></div></div>
+      <div class="feat"><i>💲</i><div><b>Upfront pricing</b><span>You approve the price before any work begins. No surprises.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding-top:0">
+  <div class="wrap"><div class="proc">
+    <div class="l">
+      <span class="pill">How it works</span>
+      <h2 class="title" style="color:#fff">From "it's broken" to "it's fixed"</h2>
+      <div class="st on"><em>.01</em><b>Call or tap "Call me now"</b><span>We answer on the first ring and ask a few quick questions.</span></div>
+      <div class="st"><em>.02</em><b>Pick a time</b><span>Confirmed arrival window, plus a text and a reminder.</span></div>
+      <div class="st"><em>.03</em><b>We fix it right</b><span>Your tech explains the problem and price before starting.</span></div>
+      <div class="st"><em>.04</em><b>Stay comfortable</b><span>Join the Comfort Club and skip the emergencies.</span></div>
+    </div>
+    <div class="r"><div class="timer"><b>&lt;2 min</b>to get you booked</div></div>
+  </div></div>
+</section>
+
+<section style="background:var(--lav)">
+  <div class="wrap center">
+    <span class="pill">Reviews</span>
+    <h2 class="title">What our customers say</h2>
+    <div class="grid3" style="text-align:left">
+      <div class="rv"><div class="stars">★★★★★</div><p>"[Real Google review from the client.]"</p><small>[First name] · Google</small></div>
+      <div class="rv"><div class="stars">★★★★★</div><p>"[Real Google review from the client.]"</p><small>[First name] · Google</small></div>
+      <div class="rv"><div class="stars">★★★★★</div><p>"[Real Google review from the client.]"</p><small>[First name] · Google</small></div>
+    </div>
+    <div class="note">Template note: use the client's real Google reviews only. Never invent reviews.</div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap why">
+    <div>
+      <span class="pill">Service area</span>
+      <h2 class="title">Proudly serving Austin and nearby</h2>
+      <p class="lead">Within about 30 miles of Austin? We cover you.</p>
+      <div class="chips"><span>Austin</span><span>Round Rock</span><span>Cedar Park</span><span>Pflugerville</span><span>Georgetown</span><span>Leander</span><span>Kyle</span><span>Buda</span><span>Lakeway</span></div>
+    </div>
+    <div id="faq">
+      <details open><summary>Do you really answer at night and on weekends?</summary><p>Yes. Every call is answered, 24/7. Emergencies are flagged to our on-call team right away.</p></details>
+      <details><summary>How much is a service call?</summary><p>Our diagnostic visit is $[89], waived if you go ahead with the repair. You always get the price first.</p></details>
+      <details><summary>Repair or replace?</summary><p>Your tech gives you honest options. If replacing makes more sense, the estimate is free.</p></details>
+      <details><summary>Do you offer financing?</summary><p>Yes, on new system installations, with approved credit.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="final">
+  <div><h2 style="font-size:clamp(26px,3vw,38px)">Don't spend another night without heat</h2><p>Call now or tap the button. We'll get you on the schedule in under two minutes.</p></div>
+  <a class="btn btn-light" href="#book">Get a Call Back <i>↗</i></a>
+</div></div>
+
+<footer><div class="wrap"><div><b style="color:#fff">Summit Heating & Air</b><br>[Street address], Austin, TX · License #[XXXX]</div><div>Office Mon-Fri 8am-6pm · Phones answered 24/7<br>© 2026 Summit Heating & Air</div></div></footer>
+
+<div class="chat"><div class="bubble"><b>Sarah · Summit Heating & Air</b>Hi! Is your heat out? I can get a tech scheduled right now.</div><button class="fab" aria-label="Chat with Sarah">💬</button></div>
+<div class="callbar"><a class="btn btn-coral" href="tel:+15125550142">📞 Call now</a><a class="btn btn-navy" href="#book" style="padding:13px">Book online</a></div>
+</body>
+</html>
