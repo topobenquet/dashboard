@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T23:10:12.353Z",
+ "generated": "2026-11-10T11:10:13.962Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1340,
-   "ultimoKm": 39057
+   "ultimoKm": 102296
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -75,10 +75,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 133,
+   "kmViajes": 192,
    "kmFuera": 747,
-   "viajes": 3,
-   "costoComb": 1179200,
+   "viajes": 4,
+   "costoComb": 1258260,
    "pagado": 0
   },
   "Voxy": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 13,
-   "conFoto": 13
+   "lecturas": 16,
+   "conFoto": 16
   },
   {
    "chofer": "Gustavo",
@@ -105,19 +105,20 @@
   {
    "vehiculo": "H1",
    "choferes": [
-    "Gustavo"
+    "Alfredo"
    ],
-   "fechaIni": "2026-11-09",
-   "fechaFin": "2026-11-09",
-   "horaIni": "02:34",
+   "fechaIni": "2026-11-10",
+   "fechaFin": "2026-11-10",
+   "horaIni": "07:55",
    "horaFin": null,
-   "kmIni": 102237,
+   "kmIni": 102296,
    "kmFin": null,
    "km": null,
-   "tanqueIni": null,
+   "tanqueIni": 0.9,
    "tanqueFin": null,
    "traslados": [
-    "Vehículo a disposición"
+    "Vehículo a disposición",
+    "Posadas - ASU"
    ],
    "kmEsperado": null,
    "desvio": null,
@@ -128,6 +129,44 @@
    "faltanFotos": [],
    "sinFinal": false,
    "abierto": true,
+   "inferido": false
+  },
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo",
+    "Alfredo"
+   ],
+   "fechaIni": "2026-11-09",
+   "fechaFin": "2026-11-10",
+   "horaIni": "02:34",
+   "horaFin": "07:55",
+   "kmIni": 102237,
+   "kmFin": 102296,
+   "km": 59,
+   "tanqueIni": null,
+   "tanqueFin": 0.9,
+   "traslados": [
+    "Vehículo a disposición",
+    "ASU-FOZ",
+    "Vehículo a disposición",
+    "Posadas - ASU"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": 200000,
+   "combustibleCorresponde": 79060,
+   "cargas": [
+    {
+     "fecha": "2026-11-09",
+     "gs": 200000,
+     "litros": 19.51
+    }
+   ],
+   "faltanFotos": [],
+   "sinFinal": true,
+   "abierto": false,
    "inferido": true
   },
   {
@@ -2219,22 +2258,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-11-09",
-   "chofer": "Gustavo",
-   "vehiculo": "H1",
-   "ruta": "Vehículo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
-   "fecha": "2026-11-09",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "ASU-FOZ",
-   "km": 690,
-   "adelanto": 1017000
-  },
-  {
    "fecha": "2026-11-10",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -2324,6 +2347,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "retrocede:AC0BDF192C807EA2079E9AC809C227B2",
+   "nivel": "juan",
+   "texto": "H1: el km 39.314 (Alfredo, 09/11) es menor que el anterior 102.237.",
+   "ts": 1794279065,
+   "fecha": "2026-11-09"
+  },
   {
    "key": "retrocede:ACB92C12C864569712642A4569A59D7A",
    "nivel": "juan",
