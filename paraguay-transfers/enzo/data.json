@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T20:30:08.924Z",
+ "generated": "2026-11-10T22:02:43.060Z",
  "hoy": "2026-11-10",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,7 +41,7 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 10,
-   "ventas": 9,
+   "ventas": 10,
    "facturacion": 3456,
    "proyeccion": 10368,
    "base": 69.12,
@@ -90,6 +90,17 @@
      "ruta": "Terminal de Ómnibus de Asunción → destino no especificado",
      "tipo": "Traslado",
      "monto": 197,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-10",
+     "salida": null,
+     "cliente": "taryn",
+     "ruta": "ASU-FOZ-ASU",
+     "tipo": "Traslado",
+     "monto": 0,
      "margen": null,
      "alto": false,
      "saldo": 0
