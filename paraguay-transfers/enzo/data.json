@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T20:30:14.693Z",
+ "generated": "2026-11-10T00:30:15.775Z",
  "hoy": "2026-11-09",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,33 +41,48 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 9,
-   "ventas": 7,
-   "facturacion": 3077,
-   "proyeccion": 10256.67,
-   "base": 61.54,
+   "ventas": 8,
+   "facturacion": 3395,
+   "proyeccion": 11316.67,
+   "base": 67.9,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 14923,
+    "falta": 14605,
     "bono": 100
    },
-   "ticketsAltos": 4,
-   "bonoTicket": 40,
+   "ticketsAltos": 5,
+   "bonoTicket": 50,
    "margen": 0.7173999999999999,
    "margenOk": true,
-   "sinCostos": 4,
+   "sinCostos": 5,
    "bonoAplica": true,
-   "bonoTotal": 40,
-   "total": 101.54,
+   "bonoTotal": 50,
+   "total": 117.9,
    "pendienteCobro": 1086,
    "semanas": [
     {
      "lunes": "2026-11-02",
      "monto": 3077
+    },
+    {
+     "lunes": "2026-11-09",
+     "monto": 318
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-09",
+     "salida": "2026-11-10",
+     "cliente": "emanuel🕷️",
+     "ruta": "ASU-Formosa",
+     "tipo": "Traslado",
+     "monto": 318,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-07",
      "salida": "2026-11-08",
