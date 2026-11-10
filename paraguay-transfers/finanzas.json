@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T20:30:14.908Z",
+ "generated": "2026-11-10T22:00:09.092Z",
  "tc": 6300,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 3578.18,
-  "stripePendiente": 3389.16,
+  "stripePendiente": 3864.95,
   "pagoparPendienteUsd": 530.95,
   "relay": null,
   "binance": null,
@@ -114,17 +114,24 @@
   },
   {
    "fecha": "2026-11-10",
-   "in": 448,
+   "in": 946,
    "out": 0,
-   "n": 3,
+   "n": 4,
    "porFuente": {
-    "Stripe": 448
+    "Stripe": 946
    },
-   "neto": 448,
-   "acum": 5946.9
+   "neto": 946,
+   "acum": 6444.9
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-10",
+   "t": "in",
+   "usd": 498,
+   "fuente": "Stripe",
+   "det": "Cassandra Rae Thorburn"
+  },
   {
    "d": "2026-11-10",
    "t": "in",
@@ -405,10 +412,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 14,
-   "bruto": 3441,
-   "comision": 149.59,
-   "pct": 4.35,
+   "cobros": 15,
+   "bruto": 3939,
+   "comision": 171.8,
+   "pct": 4.36,
    "nota": "medido cobro por cobro"
   },
   {
