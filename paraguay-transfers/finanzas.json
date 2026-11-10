@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-09T22:00:09.029Z",
- "tc": 6600,
+ "generated": "2026-11-10T00:30:27.231Z",
+ "tc": 6300,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
@@ -11,9 +11,9 @@
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 1822.02,
-  "stripePendiente": 4149.43,
-  "pagoparPendienteUsd": 506.82,
+  "stripeDisponible": 3578.22,
+  "stripePendiente": 2393.23,
+  "pagoparPendienteUsd": 530.95,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -21,28 +21,28 @@
  "caja": [
   {
    "fecha": "2026-11-01",
-   "in": 64.85,
-   "out": 151.52,
+   "in": 67.94,
+   "out": 158.73,
    "n": 2,
    "porFuente": {
-    "Pagopar": 64.85,
-    "WhatsApp · Alfredo": -151.52
+    "Pagopar": 67.94,
+    "WhatsApp · Alfredo": -158.73
    },
-   "neto": -86.67,
-   "acum": -86.67
+   "neto": -90.79,
+   "acum": -90.79
   },
   {
    "fecha": "2026-11-02",
-   "in": 712.88,
-   "out": 30.3,
+   "in": 746.83,
+   "out": 31.75,
    "n": 5,
    "porFuente": {
-    "Pagopar": 441.97,
-    "WhatsApp · Pagos (Majo)": -30.3,
-    "Transferencia": 270.91
+    "Pagopar": 463.02,
+    "WhatsApp · Pagos (Majo)": -31.75,
+    "Transferencia": 283.81
    },
-   "neto": 682.58,
-   "acum": 595.91
+   "neto": 715.08,
+   "acum": 624.29
   },
   {
    "fecha": "2026-11-03",
@@ -53,7 +53,7 @@
     "Stripe": 69
    },
    "neto": 69,
-   "acum": 664.91
+   "acum": 693.29
   },
   {
    "fecha": "2026-11-04",
@@ -64,7 +64,7 @@
     "Stripe": 330
    },
    "neto": 330,
-   "acum": 994.91
+   "acum": 1023.29
   },
   {
    "fecha": "2026-11-05",
@@ -75,30 +75,31 @@
     "Stripe": 164
    },
    "neto": 164,
-   "acum": 1158.91
+   "acum": 1187.29
   },
   {
    "fecha": "2026-11-06",
-   "in": 1819,
+   "in": 3240.45,
    "out": 0,
-   "n": 5,
+   "n": 6,
    "porFuente": {
-    "Stripe": 1819
+    "Stripe": 1819,
+    "Transferencia": 1421.45
    },
-   "neto": 1819,
-   "acum": 2977.91
+   "neto": 3240.45,
+   "acum": 4427.74
   },
   {
    "fecha": "2026-11-07",
-   "in": 716.24,
+   "in": 737.16,
    "out": 0,
    "n": 3,
    "porFuente": {
     "Stripe": 277,
-    "Transferencia": 439.24
+    "Transferencia": 460.16
    },
-   "neto": 716.24,
-   "acum": 3694.15
+   "neto": 737.16,
+   "acum": 5164.9
   },
   {
    "fecha": "2026-11-08",
@@ -109,7 +110,7 @@
     "Stripe": 334
    },
    "neto": 334,
-   "acum": 4028.15
+   "acum": 5498.9
   }
  ],
  "movimientos": [
@@ -193,7 +194,7 @@
   {
    "d": "2026-11-01",
    "t": "in",
-   "usd": 64.85,
+   "usd": 67.94,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
    "gs": 428000
@@ -201,7 +202,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 298.79,
+   "usd": 313.02,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Laura Mazman",
    "gs": 1972000
@@ -209,7 +210,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 143.18,
+   "usd": 150,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Cheri Cooper",
    "gs": 945000
@@ -217,12 +218,12 @@
   {
    "d": "2026-11-01",
    "t": "out",
-   "usd": 151.52,
+   "usd": 158.73,
    "fuente": "WhatsApp · Alfredo",
    "det": "Transferencia ueno a Alfredo David Sanchez Vargas",
    "gs": 1000000,
    "rub": {
-    "chofer": 151.52,
+    "chofer": 158.73,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -231,12 +232,12 @@
   {
    "d": "2026-11-02",
    "t": "out",
-   "usd": 30.3,
+   "usd": 31.75,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Transfer luque-aer",
    "gs": 200000,
    "rub": {
-    "chofer": 30.3,
+    "chofer": 31.75,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -245,7 +246,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 96.97,
+   "usd": 101.59,
    "fuente": "Transferencia",
    "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
    "gs": 640000
@@ -253,7 +254,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 173.94,
+   "usd": 182.22,
    "fuente": "Transferencia",
    "det": "•:• Alelí •:• (comprobante en GHL)",
    "gs": 1148000
@@ -261,10 +262,18 @@
   {
    "d": "2026-11-07",
    "t": "in",
-   "usd": 439.24,
+   "usd": 460.16,
    "fuente": "Transferencia",
    "det": "•:• Alelí •:• (comprobante en GHL)",
    "gs": 2899000
+  },
+  {
+   "d": "2026-11-06",
+   "t": "in",
+   "usd": 1421.45,
+   "fuente": "Transferencia",
+   "det": "FRONTESUR E.A.S. (comprobante en GHL)",
+   "gs": 8955131
   }
  ],
  "pnl": [
@@ -373,7 +382,7 @@
   {
    "riel": "Pagopar",
    "cobros": 3,
-   "bruto": 506.82,
+   "bruto": 530.96,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -389,19 +398,19 @@
  ],
  "pagopar": {
   "cobradoGs": 3345000,
-  "cobradoUsd": 506.82,
+  "cobradoUsd": 530.96,
   "diario": [
    {
     "fecha": "2026-11-01",
     "cobros": 1,
     "gs": 428000,
-    "usd": 64.85
+    "usd": 67.94
    },
    {
     "fecha": "2026-11-02",
     "cobros": 2,
     "gs": 2917000,
-    "usd": 441.97
+    "usd": 463.02
    }
   ],
   "pruebasExcluidas": 0,
@@ -410,7 +419,7 @@
   "acreditaciones": [],
   "comision": null,
   "pendienteGs": 3345000,
-  "pendienteUsd": 506.82
+  "pendienteUsd": 530.95
  },
  "giros": [
   {
@@ -542,6 +551,10 @@
   {
    "nivel": "warn",
    "texto": "₲3.3 millones cobrados por Pagopar sin acreditar."
+  },
+  {
+   "nivel": "warn",
+   "texto": "$3,578 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
@@ -549,7 +562,7 @@
    "fecha": "2026-11-01",
    "grupo": "Pagos (Majo)",
    "gs": 1941000,
-   "usd": 294.09,
+   "usd": 308.1,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/kzmyba (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -557,7 +570,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 300000,
-   "usd": 45.45,
+   "usd": 47.62,
    "concepto": ". Pago",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -565,7 +578,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -573,7 +586,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 136000,
-   "usd": 20.61,
+   "usd": 21.59,
    "concepto": ".peaje",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -581,7 +594,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 60000,
-   "usd": 9.09,
+   "usd": 9.52,
    "concepto": ". lavadero",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -589,7 +602,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 20000,
-   "usd": 3.03,
+   "usd": 3.17,
    "concepto": ". parking",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -597,7 +610,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 154000,
-   "usd": 23.33,
+   "usd": 24.44,
    "concepto": "Sobran , podes usar para hotel si hace falta",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -605,7 +618,7 @@
    "fecha": "2026-11-02",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "viático...",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -613,7 +626,7 @@
    "fecha": "2026-11-02",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -621,7 +634,7 @@
    "fecha": "2026-11-03",
    "grupo": "Pagos (Majo)",
    "gs": 70000,
-   "usd": 10.61,
+   "usd": 11.11,
    "concepto": "31/10/26 aeropuerto hotel guaraní",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -629,7 +642,7 @@
    "fecha": "2026-11-03",
    "grupo": "Pagos (Majo)",
    "gs": 70000,
-   "usd": 10.61,
+   "usd": 11.11,
    "concepto": "04/11/26 aeropuerto hotel Cecilia.",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -637,7 +650,7 @@
    "fecha": "2026-11-04",
    "grupo": "Pagos (Majo)",
    "gs": 449000,
-   "usd": 68.03,
+   "usd": 71.27,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/4a7j7c (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -645,7 +658,7 @@
    "fecha": "2026-11-05",
    "grupo": "Juan CDE",
    "gs": 12000,
-   "usd": 1.82,
+   "usd": 1.9,
    "concepto": "el litro el combustible no entra",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -653,7 +666,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 8000,
-   "usd": 1.21,
+   "usd": 1.27,
    "concepto": "Agrégale un GS por el parking delultimo Aero",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -661,7 +674,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 50000,
-   "usd": 7.58,
+   "usd": 7.94,
    "concepto": "Estacionamiento mas o menos",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -669,7 +682,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 350000,
-   "usd": 53.03,
+   "usd": 55.56,
    "concepto": "• Viaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -677,7 +690,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "• Viático:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -685,7 +698,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 136000,
-   "usd": 20.61,
+   "usd": 21.59,
    "concepto": "• Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -693,7 +706,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 50000,
-   "usd": 7.58,
+   "usd": 7.94,
    "concepto": "• Estacionamiento:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -701,7 +714,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 350000,
-   "usd": 53.03,
+   "usd": 55.56,
    "concepto": "• Viaje: + IVA 35.000 = 385.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -709,7 +722,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "• Viático: + IVA 8.000 = 88.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -717,7 +730,7 @@
    "fecha": "2026-11-06",
    "grupo": "Gustavo",
    "gs": 250000,
-   "usd": 37.88,
+   "usd": 39.68,
    "concepto": "• Viaje a disposición (lunes):",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -725,7 +738,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 350000,
-   "usd": 53.03,
+   "usd": 55.56,
    "concepto": "- Viaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -733,7 +746,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "- Viático:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -741,7 +754,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 136000,
-   "usd": 20.61,
+   "usd": 21.59,
    "concepto": "- Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -749,7 +762,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 250000,
-   "usd": 37.88,
+   "usd": 39.68,
    "concepto": "- Viaje a disposición (lunes):",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -757,7 +770,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 350000,
-   "usd": 53.03,
+   "usd": 55.56,
    "concepto": "• Viaje09/11: + IVA 35.000 = 385.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -765,7 +778,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 80000,
-   "usd": 12.12,
+   "usd": 12.7,
    "concepto": "• Viático: + IVA 8.000 = 88.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -773,7 +786,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 136000,
-   "usd": 20.61,
+   "usd": 21.59,
    "concepto": "• Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -781,7 +794,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 50000,
-   "usd": 7.58,
+   "usd": 7.94,
    "concepto": "• Estacionamiento:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -789,7 +802,7 @@
    "fecha": "2026-11-09",
    "grupo": "Pagos (Majo)",
    "gs": 1700000,
-   "usd": 257.58,
+   "usd": 269.84,
    "concepto": "10/11 viaje samuel pruczanski Posadas-ASU () [doc:Comprobant",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -797,7 +810,7 @@
    "fecha": "2026-11-09",
    "grupo": "Pagos (Majo)",
    "gs": 160000,
-   "usd": 24.24,
+   "usd": 25.4,
    "concepto": "10 al 13 de noviembre viaje a disposición Carlos Antezana ( ",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -805,7 +818,7 @@
    "fecha": "2026-11-09",
    "grupo": "Pagos (Majo)",
    "gs": 50000,
-   "usd": 7.58,
+   "usd": 7.94,
    "concepto": "menos de estacionamiento que no se uso en foz",
    "motivo": "mencionado en el chat, sin comprobante"
   }
@@ -816,14 +829,14 @@
    "cuenta": "ueno",
    "momento": "actual",
    "gs": 33209646,
-   "usd": 5031.76
+   "usd": 5271.37
   },
   {
    "fecha": "2026-11-06",
    "cuenta": "ueno",
    "momento": "actual",
    "gs": 7124475,
-   "usd": 1079.47
+   "usd": 1130.87
   }
  ]
 }
