@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T10:22:21.597Z",
+ "generated": "2026-11-10T12:30:02.886Z",
  "hoy": "2026-11-10",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,25 +41,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 10,
-   "ventas": 8,
-   "facturacion": 3395,
-   "proyeccion": 10185,
-   "base": 67.9,
+   "ventas": 9,
+   "facturacion": 3577,
+   "proyeccion": 10731,
+   "base": 71.54,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 14605,
+    "falta": 14423,
     "bono": 100
    },
    "ticketsAltos": 5,
    "bonoTicket": 50,
    "margen": 0.7173999999999999,
    "margenOk": true,
-   "sinCostos": 5,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 50,
-   "total": 117.9,
+   "total": 121.54,
    "pendienteCobro": 1086,
    "semanas": [
     {
@@ -68,10 +68,21 @@
     },
     {
      "lunes": "2026-11-09",
-     "monto": 318
+     "monto": 500
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-10",
+     "salida": "2026-11-10",
+     "cliente": "petra",
+     "ruta": "Edificio San Gabriel, Ciudad del Este to the Brazilian site ",
+     "tipo": "Traslado",
+     "monto": 182,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-09",
      "salida": "2026-11-10",
