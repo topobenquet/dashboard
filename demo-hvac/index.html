@@ -45,38 +45,28 @@ header{position:sticky;top:0;z-index:30;background:#fff;box-shadow:0 1px 0 var(-
 .hphone{font-weight:800;font-size:15px;text-align:right;line-height:1.2}
 .hphone small{display:block;color:var(--ok);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 
-/* hero */
-.hero{position:relative;background:linear-gradient(100deg,#11169a 0%,#0b0f5c 45%,#0b0f5c 55%,rgba(11,15,92,.0) 100%),url(img/hero.webp) right 20%/52% auto no-repeat,#0b0f5c;color:#fff;padding:80px 0 150px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(40px,5.6vw,72px);line-height:1.08}
-.hl{display:inline-block;background:linear-gradient(90deg,var(--coral),#ff8a63);color:#fff;padding:0 16px;border-radius:6px;transform:rotate(-1.5deg);margin:4px 0}
-.hl.dark{background:#070a3d;box-shadow:inset 0 0 0 2px rgba(255,106,61,.6)}
-.hero p{color:#c9cdf5;font-size:18px;max-width:520px;margin:22px 0 30px}
-.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.tel{font-weight:800;font-size:18px;color:#fff;display:flex;align-items:center;gap:10px}
-.tel span{width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.4);display:grid;place-items:center}
-.frame{position:relative;height:440px}
-.frame .outline{position:absolute;inset:20px 40px 0 60px;border:3px solid rgba(255,255,255,.85);border-radius:46px}
-.chip{position:absolute;background:var(--coral);color:#fff;font-weight:800;font-size:13px;padding:8px 14px;border-radius:99px;box-shadow:0 0 0 5px rgba(255,106,61,.25)}
-.review{position:absolute;right:0;bottom:30px;width:200px;background:var(--navy);border-radius:18px;padding:18px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.35)}
-.review .s{color:#ff8a63;letter-spacing:3px}
-.review b{display:block;font-size:24px}
-.review small{color:#c9cdf5}
+/* hero: copy left, form right; mobile: copy + form above the fold */
+.hero{position:relative;background:linear-gradient(90deg,#0b0f5c 0%,rgba(11,15,92,.92) 45%,rgba(11,15,92,.55) 100%),url(img/hero.webp) right 25%/cover no-repeat,#0b0f5c;color:#fff;padding:56px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,4.4vw,56px);line-height:1.05}
+.hl{display:inline-block;background:var(--coral);color:#fff;padding:0 12px;border-radius:6px;transform:rotate(-1.5deg)}
+.hero p{color:#d6d9fb;font-size:18px;margin:16px 0 0;max-width:480px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-weight:700;font-size:14px;color:#fff}
+.trust span{display:flex;align-items:center;gap:6px}
+.trust b{color:#ffb020;letter-spacing:2px}
 
-/* callback card */
-.cb{position:relative;z-index:5;margin-top:-90px}
-.card{background:#fff;border-radius:24px;box-shadow:0 30px 70px rgba(11,15,92,.18);padding:30px;display:grid;grid-template-columns:.9fr 1.6fr;gap:30px;align-items:center}
-.card h3{font-size:26px}
-.card p{color:var(--muted);margin:8px 0 0;font-size:15px}
-.live{display:inline-flex;align-items:center;gap:8px;color:var(--ok);font-weight:800;font-size:13px;margin-top:12px}
+/* callback card (inside the hero) */
+.card{background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.3);padding:24px}
+.card h3{font-size:22px}
+.live{display:inline-flex;align-items:center;gap:8px;color:var(--ok);font-weight:800;font-size:13px;margin:6px 0 14px}
 .live:before{content:"";width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
-.form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.seg{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.seg label{border:1.5px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-weight:800;font-size:14px;cursor:pointer}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{border:1.5px solid var(--line);border-radius:12px;padding:9px 6px;text-align:center;font-weight:800;font-size:14px;cursor:pointer}
 .seg input{display:none}
 .seg label:has(input:checked){border-color:var(--coral);background:#fff3ee;color:var(--coral)}
-.form input[type=text],.form input[type=tel]{grid-column:span 2;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit}
-.form button{grid-column:1/-1;justify-content:center;padding:15px;font-size:16px}
+.form input[type=text],.form input[type=tel]{min-width:0;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit}
+.form button{grid-column:1/-1;justify-content:center;padding:15px;font-size:17px}
 .fine{grid-column:1/-1;font-size:11px;color:#8a90b0;line-height:1.4}
 .ok{grid-column:1/-1;color:var(--ok);font-weight:800}
 
@@ -150,7 +140,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .note{font-size:12px;color:#8a90b0;margin-top:12px}
 
 /* chat + mobile bar */
-.chat{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.chat{position:fixed;right:20px;bottom:20px;z-index:50;display:flex;flex-direction:column;align-items:flex-end;gap:10px;opacity:0;pointer-events:none;transition:opacity .3s}
+body.scrolled .chat{opacity:1;pointer-events:auto}
 .bubble{background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px rgba(11,15,92,.18);border-radius:16px 16px 4px 16px;padding:12px 14px;max-width:250px;font-size:14px}
 .bubble b{display:block;font-size:12px;color:var(--coral)}
 .fab{width:60px;height:60px;border-radius:50%;background:var(--coral);border:0;color:#fff;font-size:26px;cursor:pointer;box-shadow:0 12px 28px rgba(255,106,61,.45)}
@@ -158,9 +149,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 @media (max-width:1000px){
   .links{display:none}
-  .hero{background:linear-gradient(180deg,rgba(11,15,92,.82),#0b0f5c 70%),url(img/hero.webp) center top/cover;padding:60px 0 120px}
-  .hero-grid,.card,.about,.why,.proc{grid-template-columns:1fr}
-  .frame{display:none}
+  .hero{background:linear-gradient(180deg,rgba(11,15,92,.8),#0b0f5c 60%),url(img/hero.webp) center 20%/cover;padding:24px 0 32px}
+  .hero-grid{gap:18px}
+  .hero p{font-size:16px;margin-top:8px}
+  .trust{display:none}
+  .hero-grid,.about,.why,.proc{grid-template-columns:1fr}
   .grid4{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}
   .quote{right:12px;width:auto;left:12px}
   .proc .l{padding:40px 26px}
@@ -169,21 +162,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .top{display:none}
   .hphone small{display:none}.hcta .btn{display:none}
   .grid4{grid-template-columns:1fr}
-  .form{grid-template-columns:1fr 1fr}.seg{grid-template-columns:1fr 1fr}
-  .form input[type=text],.form input[type=tel]{grid-column:1/-1}
+  .hero h1{font-size:30px}
+  .card{padding:16px}
+  .card h3{font-size:19px}
+  .live{margin:4px 0 10px}
+  .seg label{padding:8px 4px;font-size:13px}
+  .fine{font-size:10px}
+  .nav{height:60px}.logo{font-size:16px;white-space:nowrap}.logo span{width:28px;height:28px}.hphone{white-space:nowrap;font-size:14px}
   section{padding:64px 0}
   .stat .num{font-size:88px}
   .bubble{display:none}
   .chat{bottom:84px}
-  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px}
+  .callbar{display:none;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:10px}
   .callbar a{justify-content:center;padding:13px}
-  body{padding-bottom:72px}
+  body.scrolled .callbar{display:grid}
 }
 </style>
 </head>
 <body>
-
-<div class="top"><div class="wrap"><span>📍 [Street address], Austin, TX · License #[XXXX]</span><span><b>●</b> Phones answered 24/7, nights and weekends</span></div></div>
 
 <header><div class="wrap nav">
   <a class="logo" href="#"><span></span>Summit Heating & Air</a>
@@ -191,43 +187,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="hcta"><a class="hphone" href="tel:+15125550142"><small>● Answering now</small>(512) 555-0142</a><a class="btn btn-coral" href="#book">Book Service</a></div>
 </div></header>
 
-<section class="hero">
+<section class="hero" id="book">
   <div class="wrap hero-grid">
     <div>
-      <h1><span class="hl">Heat Out?</span><br><span class="hl dark">We'll Fix It</span><br>Today, Not Next Week</h1>
-      <p>Furnace, heat pump and AC repair from licensed local techs. We answer on the first ring, day or night, and get you on the schedule in under two minutes.</p>
-      <div class="ctas">
-        <a class="btn btn-light" href="#book">Get a Call Back <i>↗</i></a>
-        <a class="tel" href="tel:+15125550142"><span>📞</span>(512) 555-0142</a>
+      <h1>Heat out? <span class="hl">Fixed today.</span></h1>
+      <p>Licensed local techs. We answer 24/7.</p>
+      <div class="trust"><span><b>★★★★★</b> [4.9] on Google</span><span>✓ Licensed & insured</span><span>✓ Upfront pricing</span></div>
+    </div>
+    <form class="card" onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false;this.querySelector('button').textContent='Calling you now…'">
+      <h3>Get a call back in 60 seconds</h3>
+      <div class="live">Booking team available now</div>
+      <div class="form">
+        <div class="seg">
+          <label><input type="radio" name="t" checked>🔥 No heat</label>
+          <label><input type="radio" name="t">❄️ AC issue</label>
+          <label><input type="radio" name="t">🛠 Tune-up</label>
+          <label><input type="radio" name="t">🏠 New system</label>
+        </div>
+        <input type="text" placeholder="Your name" autocomplete="name" required>
+        <input type="tel" placeholder="Mobile phone" autocomplete="tel" required>
+        <button class="btn btn-coral" type="submit">Call me now</button>
+        <div class="ok" hidden>● Sarah is calling you now</div>
+        <div class="fine">By submitting you agree to receive calls and texts about your request. Msg/data rates may apply. Reply STOP to opt out.</div>
       </div>
-    </div>
-    <div class="frame">
-      <div class="outline"></div>
-      <div class="chip" style="left:30px;top:70px">No-Heat Repair</div>
-      <div class="chip" style="left:44%;top:56%">24/7 Emergency</div>
-      <div class="review"><div class="s">★★★★★</div><b>[4.9] / 5</b><small>[N] Google reviews</small></div>
-    </div>
+    </form>
   </div>
 </section>
-
-<div class="wrap cb">
-  <form class="card" id="book" onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false;this.querySelector('button').textContent='Calling you now…'">
-    <div><h3>Get a call back in 60 seconds</h3><p>Tell us what's going on. Our booking team calls you right away to get you scheduled.</p><div class="live">Booking team available now</div></div>
-    <div class="form">
-      <div class="seg">
-        <label><input type="radio" name="t" checked>🔥 No heat</label>
-        <label><input type="radio" name="t">❄️ AC issue</label>
-        <label><input type="radio" name="t">🛠 Tune-up</label>
-        <label><input type="radio" name="t">🏠 New system</label>
-      </div>
-      <input type="text" placeholder="Your name" required>
-      <input type="tel" placeholder="Mobile phone" required>
-      <button class="btn btn-coral" type="submit">Call me now</button>
-      <div class="ok" hidden>● Sarah is calling you now</div>
-      <div class="fine">By submitting you agree to receive calls and texts about your request. Msg/data rates may apply. Reply STOP to opt out.</div>
-    </div>
-  </form>
-</div>
 
 <section style="padding-top:80px">
   <div class="wrap">
@@ -324,5 +309,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <div class="chat"><div class="bubble"><b>Sarah · Summit Heating & Air</b>Hi! Is your heat out? I can get a tech scheduled right now.</div><button class="fab" aria-label="Chat with Sarah">💬</button></div>
 <div class="callbar"><a class="btn btn-coral" href="tel:+15125550142">📞 Call now</a><a class="btn btn-navy" href="#book" style="padding:13px">Book online</a></div>
+<script>addEventListener("scroll",function(){document.body.classList.toggle("scrolled",scrollY>500)},{passive:true})</script>
 </body>
 </html>
