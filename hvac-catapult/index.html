@@ -317,13 +317,14 @@ function render(){
     const avg=(name,keys)=>{const r=pick(name,keys);return r.n?r.s/r.n:null};
     const tot=(name,keys)=>pick(name,keys).s;
     const scroll=avg('ScrollDepth',['averageScrollDepth','AverageScrollDepth']);
-    const eng=avg('EngagementTime',['activeTime','ActiveTime']);
     const ses=tot('Traffic',['totalSessionCount','TotalSessionCount']);
+    const bots=tot('Traffic',['totalBotSessionCount']);
+    const eng=ses?tot('EngagementTime',['activeTime','ActiveTime'])/ses:null;
     const rage=tot('RageClickCount',['subTotal','sessionsWithMetricPercentage']);
     const dead=tot('DeadClickCount',['subTotal']);
     const qb=tot('QuickbackClick',['subTotal']);
     $('#clarity').innerHTML=`<div class="mini">
-      <div><div class="sub">Sesiones</div><div class="val">${fm(ses)}</div></div>
+      <div><div class="sub">Sesiones</div><div class="val">${fm(ses)}</div><div class="sub">${bots?fm(bots)+' marcadas como bot':''}</div></div>
       <div><div class="sub">Scroll promedio</div><div class="val">${scroll!=null?scroll.toFixed(0)+'%':'–'}</div></div>
       <div><div class="sub">Tiempo activo</div><div class="val">${eng!=null?Math.round(eng)+' s':'–'}</div></div>
       <div><div class="sub">Clics de enojo</div><div class="val">${fm(rage)}</div></div>
