@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T15:10:31.909Z",
+ "generated": "2026-11-11T21:10:36.647Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 18,
-   "conFoto": 18
+   "lecturas": 19,
+   "conFoto": 19
   },
   {
    "chofer": "Gustavo",
@@ -2331,6 +2331,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "salto:ACB71F6EEFB0C7173284847A04194DB3",
+   "nivel": "juan",
+   "texto": "H1: el km 102.353 (Alfredo, 11/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "ts": 1794424672,
+   "fecha": "2026-11-11"
+  },
   {
    "key": "salto:ACC926EEAE07EFC1EC6FADBC0C3033F7",
    "nivel": "juan",
