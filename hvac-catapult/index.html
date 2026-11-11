@@ -198,7 +198,7 @@ let R={a:null,b:null};
 function initRange(){
   const saved=(()=>{try{return localStorage.getItem('hvac-range')}catch(e){return null}})();
   if(saved&&[...$('#range').options].some(o=>o.value===saved)) $('#range').value=saved;
-  $('#d2').value=D.today; $('#d1').value=shift(D.today,-13); $('#d1').min=$('#d2').min=D.from; $('#d1').max=$('#d2').max=D.today;
+  $('#d2').value=D.today; $('#d1').value=D.from; $('#d1').min=$('#d2').min=D.from; $('#d1').max=$('#d2').max=D.today;
   $('#range').onchange=()=>{try{localStorage.setItem('hvac-range',$('#range').value)}catch(e){} render()};
   $('#d1').onchange=$('#d2').onchange=render;
 }
@@ -206,8 +206,8 @@ function computeRange(){
   const v=$('#range').value, t=D.today; $('#customBox').hidden=v!=='custom';
   if(v==='today') return {a:t,b:t,label:'Hoy'};
   if(v==='yesterday'){const y=shift(t,-1);return {a:y,b:y,label:'Ayer'}}
-  if(v==='custom'){let a=$('#d1').value||t,b=$('#d2').value||t; if(a>b)[a,b]=[b,a]; return {a,b,label:`${fdate(a)} a ${fdate(b)}`}}
-  const n=Number(v); return {a:shift(t,-(n-1)),b:t,label:`Últimos ${n} días`};
+  if(v==='custom'){let a=$('#d1').value||t,b=$('#d2').value||t; if(a>b)[a,b]=[b,a]; if(a<D.from)a=D.from; return {a,b,label:`${fdate(a)} a ${fdate(b)}`}}
+  const n=Number(v); const a0=shift(t,-(n-1)); return {a:a0<D.from?D.from:a0,b:t,label:`Últimos ${n} días`+(a0<D.from?` (desde el ${fdate(D.from)})`:'')};
 }
 
 // ---------- agregadores ----------
