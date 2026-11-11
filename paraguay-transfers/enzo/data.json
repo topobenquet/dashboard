@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T22:02:43.060Z",
+ "generated": "2026-11-11T00:30:22.739Z",
  "hoy": "2026-11-10",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -54,9 +54,9 @@
    },
    "ticketsAltos": 4,
    "bonoTicket": 40,
-   "margen": 0.7173999999999999,
+   "margen": 0.6786,
    "margenOk": true,
-   "sinCostos": 6,
+   "sinCostos": 5,
    "bonoAplica": true,
    "bonoTotal": 40,
    "total": 109.12,
@@ -79,7 +79,7 @@
      "ruta": "Edificio San Gabriel, Ciudad del Este to the Brazilian site ",
      "tipo": "Traslado",
      "monto": 182,
-     "margen": null,
+     "margen": 0.42,
      "alto": false,
      "saldo": 0
     },
@@ -202,13 +202,13 @@
    },
    "ticketsAltos": 15,
    "bonoTicket": 150,
-   "margen": 0.42310000000000003,
+   "margen": 0.4229,
    "margenOk": true,
-   "sinCostos": 21,
+   "sinCostos": 20,
    "bonoAplica": false,
    "bonoTotal": 150,
    "total": 257.9,
-   "pendienteCobro": 355,
+   "pendienteCobro": 0,
    "semanas": [
     {
      "lunes": "2026-10-05",
@@ -334,9 +334,9 @@
      "ruta": "PtoIguazu-ASU",
      "tipo": "Traslado",
      "monto": 507,
-     "margen": null,
+     "margen": 0.42,
      "alto": true,
-     "saldo": 355
+     "saldo": 0
     },
     {
      "reserva": "2026-10-22",
