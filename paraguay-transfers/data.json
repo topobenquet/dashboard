@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T10:20:53.429Z",
+  "generated": "2026-11-11T22:01:16.601Z",
   "lastSyncLabel": "11 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -207,22 +207,22 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 96,
-      "reservas": 14,
-      "revenue": 7033.86,
-      "chofer": 2359.07,
+      "leads": 107,
+      "reservas": 15,
+      "revenue": 7876.86,
+      "chofer": 2242.07,
       "comb": 0,
-      "peajes": 22,
-      "comision": 278.16,
+      "peajes": 46,
+      "comision": 317.04,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 55,
+      "gAds": 85,
       "meta": 0,
-      "costoSheet": 2625.32,
-      "gananciaSheet": 7171.69,
-      "leadsPy": 22,
+      "costoSheet": 2672.3,
+      "gananciaSheet": 8420.71,
+      "leadsPy": 26,
       "ventasPy": 1,
-      "ventasExt": 13,
+      "ventasExt": 14,
       "ventasSinCruce": 0,
       "base": "caja+costos-planilla"
     }
@@ -300,9 +300,9 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 54.99,
-      "clicks": 38,
-      "impr": 284,
+      "spend": 84.72,
+      "clicks": 44,
+      "impr": 312,
       "conv": 5
     }
   ],
@@ -7260,8 +7260,8 @@
       "pago": 400,
       "sena": 120,
       "restante": 280,
-      "choferCost": 132,
-      "neto": 256.42,
+      "choferCost": 53,
+      "neto": 293.96,
       "fechaReserva": "30/10/26",
       "fechaSalida": "01/11/26"
     },
@@ -7288,8 +7288,8 @@
       "pago": 197,
       "sena": 300,
       "restante": 241,
-      "choferCost": 42,
-      "neto": 145.89,
+      "choferCost": 28,
+      "neto": 138.88,
       "fechaReserva": "20/10/26",
       "fechaSalida": "03/11/26"
     },
@@ -7316,7 +7316,7 @@
       "pago": 197,
       "sena": 0,
       "restante": 187,
-      "choferCost": 42,
+      "choferCost": 28,
       "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "04/11/26"
@@ -7330,8 +7330,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 255,
-      "choferCost": 42,
-      "neto": 154.89,
+      "choferCost": 28,
+      "neto": 146.12,
       "fechaReserva": "20/10/26",
       "fechaSalida": "05/11/26"
     },
@@ -7358,7 +7358,7 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 42,
+      "choferCost": 28,
       "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "06/11/26"
@@ -7414,8 +7414,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 40,
-      "neto": 156.68,
+      "choferCost": 44,
+      "neto": 153.14,
       "fechaReserva": "20/10/26",
       "fechaSalida": "09/11/26"
     },
@@ -7426,8 +7426,8 @@
       "pais": "Suiza",
       "conductor": "Alfredo Sánchez PT",
       "pago": 647,
-      "sena": 201.4,
-      "restante": 509,
+      "sena": 201,
+      "restante": 446,
       "choferCost": 48,
       "neto": 579.2,
       "fechaReserva": "02/11/26",
@@ -7442,7 +7442,7 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 42,
+      "choferCost": 28,
       "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "10/11/26"
@@ -7512,8 +7512,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 197,
+      "choferCost": 28,
+      "neto": 154.89,
       "fechaReserva": "20/10/26",
       "fechaSalida": "11/11/26"
     },
@@ -7525,7 +7525,7 @@
       "conductor": "Juan Vera CDE",
       "pago": 100,
       "sena": 100,
-      "restante": 0,
+      "restante": 317,
       "choferCost": 0,
       "neto": 97,
       "fechaReserva": "09/10/26",
@@ -7592,13 +7592,41 @@
       "route": "ASU-CDE",
       "cliente": "roberto",
       "pais": "Paraguay",
-      "conductor": "",
+      "conductor": "Gabriela Gutierrez",
       "pago": 1099,
       "sena": 330,
       "restante": 0,
       "choferCost": 0,
       "neto": 1066.03,
       "fechaReserva": "04/11/26",
+      "fechaSalida": "16/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "CDE",
+      "cliente": "roberto",
+      "pais": "Paraguay",
+      "conductor": "",
+      "pago": 197,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 191.09,
+      "fechaReserva": "04/11/26",
+      "fechaSalida": "16/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-CDE",
+      "cliente": "andreas baumgartner",
+      "pais": "Emiratos Árabes",
+      "conductor": "Gabriela Gutierrez",
+      "pago": 1099,
+      "sena": 329,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 1066.03,
+      "fechaReserva": "11/11/26",
       "fechaSalida": "16/11/26"
     },
     {
@@ -7704,7 +7732,7 @@
       "route": "FOZ-ASU",
       "cliente": "James B Simpson",
       "pais": "USA",
-      "conductor": "",
+      "conductor": "Antonio CDE",
       "pago": 417,
       "sena": 417,
       "restante": 0,
@@ -7912,7 +7940,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-11": 1,
+      "2026-11-11": 12,
       "2026-11-10": 16,
       "2026-11-09": 8,
       "2026-11-08": 5,
@@ -7959,6 +7987,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
+      "2026-11-11": 4,
       "2026-11-10": 3,
       "2026-11-09": 3,
       "2026-11-08": 1,
@@ -7978,6 +8007,7 @@
       "2026-11-02": 2,
       "2026-11-10": 3,
       "2026-11-04": 1,
+      "2026-11-11": 1,
       "2026-11-05": 1
     },
     "gads": {
@@ -8281,13 +8311,14 @@
       "2026-11-07": 1,
       "2026-11-08": 4.41,
       "2026-11-09": 18.95,
-      "2026-11-10": 1.62
+      "2026-11-10": 1.62,
+      "2026-11-11": 29.73
     }
   },
   "resenas": {
     "count": 87,
     "rating": 5,
-    "actualizado": "2026-11-10T23:10:22.178Z",
+    "actualizado": "2026-11-11T20:10:02.017Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8558,6 +8589,11 @@
         "fecha": "2026-11-10",
         "count": 87,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-11",
+        "count": 87,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8580,16 +8616,16 @@
         "texto": "Solicitamos un Transfer desde el aeropuerto y todo fue perfecto.\nA pesar de llegar nuestro vuelo con retraso, el chófer estaba allí esperando nuestra llegada.\nNuestro chófer, Alfredo, muy atento.\nRecomendable 100%"
       },
       {
+        "autor": "Roberto Galeano",
+        "rating": 5,
+        "fecha": "2026-09-21T12:26:03.900054023Z",
+        "texto": "Excelente servicio, recomendado por la puntualidad , amabilidad y buen trato. Que sigan los éxitos y hasta un pronto reencuentro ."
+      },
+      {
         "autor": "Isela Díaz",
         "rating": 5,
         "fecha": "2026-08-26T20:29:25.995642280Z",
         "texto": "Contratamos el servicio para el tour a las Cataratas de Iguazú y lo recomendamos al 100! Son muy accesibles en cuanto el sistema de pago y los precios nos parecieron acorde con el buen servicio que dan. El vehículo de traslado nos pareció muy cómodo a mi familia y a mi (somos 3) y el señor Alfredo fue muy profesional y es una persona muy agradable. Nos sugirió otros lugares interesantes para visit"
-      },
-      {
-        "autor": "daniela hernández",
-        "rating": 5,
-        "fecha": "2026-08-22T00:58:25.727763243Z",
-        "texto": "Excelente servicio de transfers. Siempre que viajo a Paraguay lo uso. Es seguro, los coches están perfectas condiciones de limpieza, los choferes son muy agradables y están a disposición absoluta.\n10/10!\nGracias !"
       }
     ]
   },
@@ -8683,10 +8719,10 @@
       "2026-11-07": 16,
       "2026-11-08": 17,
       "2026-11-09": 12,
-      "2026-11-11": 1
+      "2026-11-11": 6
     },
     "monthly": {
-      "Noviembre": 212,
+      "Noviembre": 217,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
