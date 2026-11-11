@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T11:10:29.562Z",
+ "generated": "2026-11-11T15:10:31.909Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 17,
-   "conFoto": 17
+   "lecturas": 18,
+   "conFoto": 18
   },
   {
    "chofer": "Gustavo",
@@ -2331,6 +2331,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "salto:ACC926EEAE07EFC1EC6FADBC0C3033F7",
+   "nivel": "juan",
+   "texto": "H1: el km 162.244 (Alfredo, 11/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "ts": 1794408116,
+   "fecha": "2026-11-11"
+  },
   {
    "key": "retrocede:AC0BDF192C807EA2079E9AC809C227B2",
    "nivel": "juan",
