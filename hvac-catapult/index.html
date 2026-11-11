@@ -133,7 +133,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px}
       <div id="clarity"></div>
     </section>
     <section class="card">
-      <div class="head"><div><h2>Tráfico de la landing (GA4)</h2><div class="sub">demo.hvaccatapult.com</div></div></div>
+      <div class="head"><div><h2>Tráfico de la landing (GA4)</h2><div class="sub">demo.hvaccatapult.com, solo Estados Unidos. GA4 también cuenta visitas automáticas (Clarity marca la mayoría como bots), por eso da más sesiones que clics.</div></div></div>
       <div id="ga"></div>
     </section>
   </div>
@@ -263,7 +263,7 @@ function render(){
     ['Ventas',fm(X.c.sales),delta(X.c.sales,P.c.sales)],
     ['Ingresos',usd(X.c.revenue),delta(X.c.revenue,P.c.revenue)],
     ['ROAS',m.spend?(X.c.revenue/m.spend).toFixed(2).replace('.',',')+'x':'–',''],
-    ['Visitas a la landing',fm(X.g.demoSessions),delta(X.g.demoSessions,P.g.demoSessions)],
+    ['Visitas a la landing (Meta)',fm(m.lpv),delta(m.lpv,pm.lpv)],
     ['CTR (clic en enlace)',m.impr?pct(m.clicks/m.impr,2):'–',delta(m.impr?m.clicks/m.impr:0,pm.impr?pm.clicks/pm.impr:0)],
     ['CPC',m.clicks?usd(m.spend/m.clicks,2):'–',delta(m.clicks?m.spend/m.clicks:0,pm.clicks?pm.spend/pm.clicks:0,true)],
     ['CPM',m.impr?usd(m.spend/m.impr*1000,2):'–',delta(m.impr?m.spend/m.impr*1000:0,pm.impr?pm.spend/pm.impr*1000:0,true)],
@@ -276,7 +276,7 @@ function render(){
   const steps=[
     ['Impresiones','Meta',m.impr],
     ['Clics en el anuncio','Meta',m.clicks],
-    ['Llegaron a la landing','GA4, sesiones que vienen de Meta',X.g.fbSessions],
+    ['Llegaron a la landing','Meta, la página terminó de cargar',m.lpv],
     ['Bajaron por la página','GA4, scroll al 90%',X.g.demoScroll],
     ['Pidieron la demo','Formulario: GHL o llamada de Sarah',leads],
     ['Sarah los llamó','Retell',X.r.demoCalls],
@@ -290,7 +290,7 @@ function render(){
   const w=(v)=>v?Math.max(3,Math.sqrt(v/fmax)*100):0;
   let fh='';
   steps.forEach(([n,src,v],i)=>{
-    if(i>0){const pv=steps[i-1][2]; fh+=`<div class="fdrop">${!pv?'':v>pv?'↑ más que el paso anterior: Meta y GA4 cuentan distinto (un clic puede abrir más de una sesión)':`↓ ${pct(v/pv)} pasó al siguiente paso${pv>v?` · se perdieron ${fm(pv-v)}`:''}`}</div>`;}
+    if(i>0){const pv=steps[i-1][2]; fh+=`<div class="fdrop">${!pv?'':v>pv?'↑ más que el paso anterior':`↓ ${pct(v/pv)} pasó al siguiente paso${pv>v?` · se perdieron ${fm(pv-v)}`:''}`}</div>`;}
     const wd=w(v); const shade=i<2?'var(--seq5)':i<4?'var(--s1)':i<7?'var(--seq7)':'var(--s3)';
     fh+=`<div class="fstep"><div class="fname">${n}<small>${src}</small></div><div class="fbar" title="${esc(n)}: ${fm(v)}"><i style="width:${wd}%;background:${shade}"></i><span class="${wd<14?'out':''}" style="${wd<14?`left:calc(${wd}% + 8px)`:''}">${fm(v)}</span></div><div class="frate">${i?`<b>${pct(steps[0][2]?v/steps[0][2]:NaN,2)}</b> del total`:'<b>100%</b>'}</div></div>`;
   });
