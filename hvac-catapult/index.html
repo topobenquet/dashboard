@@ -226,6 +226,8 @@ function metaAgg(a,b){
 function all(a,b){
   const g=sumDays(D.ga4?.days,a,b,['demoSessions','demoUsers','demoEngaged','demoEngSecs','demoViews','demoScroll','demoFormStart','goSessions']);
   const pages=sumMap(D.ga4?.pages,a,b);
+  const fbSessions=Object.entries(sumMap(D.ga4?.sources,a,b)).filter(([k])=>/^(fb|facebook|ig|instagram|meta)/i.test(k)).reduce((s,[,v])=>s+v,0);
+  g.fbSessions=fbSessions;
   const c=sumDays(D.crm?.days,a,b,['leads','leadsMeta','callsBooked','callsShowed','onboardingBooked','sales','revenue']);
   const r=sumDays(D.retell?.days,a,b,['demoCalls','demoConnected','demoSuccess','demoVoicemail','demoSecs','inboundCalls','inboundConnected','inboundSecs','otherCalls','cost']);
   const m=metaAgg(a,b);
@@ -274,7 +276,7 @@ function render(){
   const steps=[
     ['Impresiones','Meta',m.impr],
     ['Clics en el anuncio','Meta',m.clicks],
-    ['Llegaron a la landing','GA4, sesiones del demo',X.g.demoSessions],
+    ['Llegaron a la landing','GA4, sesiones que vienen de Meta',X.g.fbSessions],
     ['Bajaron por la página','GA4, scroll al 90%',X.g.demoScroll],
     ['Pidieron la demo','Formulario: GHL o llamada de Sarah',leads],
     ['Sarah los llamó','Retell',X.r.demoCalls],
@@ -288,11 +290,11 @@ function render(){
   const w=(v)=>v?Math.max(3,Math.sqrt(v/fmax)*100):0;
   let fh='';
   steps.forEach(([n,src,v],i)=>{
-    if(i>0){const pv=steps[i-1][2]; fh+=`<div class="fdrop">${!pv?'':v>pv?'↑ más que el paso anterior: también entra tráfico de otras fuentes':`↓ ${pct(v/pv)} pasó al siguiente paso${pv>v?` · se perdieron ${fm(pv-v)}`:''}`}</div>`;}
+    if(i>0){const pv=steps[i-1][2]; fh+=`<div class="fdrop">${!pv?'':v>pv?'↑ más que el paso anterior: Meta y GA4 cuentan distinto (un clic puede abrir más de una sesión)':`↓ ${pct(v/pv)} pasó al siguiente paso${pv>v?` · se perdieron ${fm(pv-v)}`:''}`}</div>`;}
     const wd=w(v); const shade=i<2?'var(--seq5)':i<4?'var(--s1)':i<7?'var(--seq7)':'var(--s3)';
     fh+=`<div class="fstep"><div class="fname">${n}<small>${src}</small></div><div class="fbar" title="${esc(n)}: ${fm(v)}"><i style="width:${wd}%;background:${shade}"></i><span class="${wd<14?'out':''}" style="${wd<14?`left:calc(${wd}% + 8px)`:''}">${fm(v)}</span></div><div class="frate">${i?`<b>${pct(steps[0][2]?v/steps[0][2]:NaN,2)}</b> del total`:'<b>100%</b>'}</div></div>`;
   });
-  $('#funnel').innerHTML=fh+`<div class="sub" style="margin-top:8px">El ancho de las barras usa escala de raíz cuadrada para que los pasos chicos se vean. Leads y ventas incluyen todas las fuentes, no solo Meta (de Meta: ${fm(X.c.leadsMeta)} leads).</div>`;
+  $('#funnel').innerHTML=fh+`<div class="sub" style="margin-top:8px">El ancho de las barras usa escala de raíz cuadrada para que los pasos chicos se vean. Solo Estados Unidos, desde el relanzamiento del 10/11. Leads y ventas incluyen todas las fuentes, no solo Meta (de Meta: ${fm(X.c.leadsMeta)} leads).</div>`;
 
   // series por dia
   const dias=daysBetween(rg.a,rg.b);
@@ -363,7 +365,7 @@ function render(){
     cl.slice(0,80).map(c=>`<tr><td>${new Date(c.at).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td><td>${c.type==='demo'?'Demo':c.type==='inbound'?'Entrante':'Otra'}</td><td>${esc(c.name||'–')}</td><td>${dur(c.secs)}</td><td>${c.voicemail?'<span class="tag">Buzón</span>':c.secs<20?'<span class="tag no">No atendió</span>':c.success?'<span class="tag ok">Exitosa</span>':'<span class="tag">Incompleta</span>'}</td><td>${esc(c.sentiment||'–')}</td><td class="wrap">${esc(c.summary||'')}</td></tr>`).join('')
   }</tbody></table>`:'<div class="empty">Sin llamadas en este rango.</div>';
 
-  $('#foot').innerHTML=`Datos desde el ${fdate(D.from)}. Fuentes: Meta Ads, GA4 (propiedad HVAC Catapult), Microsoft Clarity, Retell y GoHighLevel. Las compras de prueba de menos de $50 no cuentan como ventas.${D.errors?.length?`<br>Avisos de la última actualización: ${esc(D.errors.join(' · '))}`:''}`;
+  $('#foot').innerHTML=`Datos desde el ${fdate(D.from)}, solo de Estados Unidos (se excluye Paraguay y el resto de los países). Fuentes: Meta Ads, GA4 (propiedad HVAC Catapult), Microsoft Clarity, Retell y GoHighLevel. Las compras de prueba de menos de $50 no cuentan como ventas.${D.errors?.length?`<br>Avisos de la última actualización: ${esc(D.errors.join(' · '))}`:''}`;
 }
 
 // ---------- grafico de barras/lineas con tooltip ----------
