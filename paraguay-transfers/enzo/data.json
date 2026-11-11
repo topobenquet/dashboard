@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T10:22:08.087Z",
+ "generated": "2026-11-11T14:30:01.638Z",
  "hoy": "2026-11-11",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -41,30 +41,30 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 11,
-   "ventas": 10,
-   "facturacion": 3456,
-   "proyeccion": 9425.45,
-   "base": 69.12,
+   "ventas": 11,
+   "facturacion": 3653,
+   "proyeccion": 9962.73,
+   "base": 73.06,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 14544,
+    "falta": 14347,
     "bono": 100
    },
    "ticketsAltos": 4,
    "bonoTicket": 40,
    "margen": 0.6786,
    "margenOk": true,
-   "sinCostos": 5,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 40,
-   "total": 109.12,
-   "pendienteCobro": 1086,
+   "total": 113.06,
+   "pendienteCobro": 1283,
    "semanas": [
     {
      "lunes": "2026-11-02",
-     "monto": 3077
+     "monto": 3274
     },
     {
      "lunes": "2026-11-09",
@@ -161,6 +161,17 @@
      "saldo": 769
     },
     {
+     "reserva": "2026-11-04",
+     "salida": "2026-11-16",
+     "cliente": "roberto",
+     "ruta": "CDE",
+     "tipo": "A disposición",
+     "monto": 197,
+     "margen": null,
+     "alto": false,
+     "saldo": 197
+    },
+    {
      "reserva": "2026-11-02",
      "salida": "2026-11-09",
      "cliente": "•:•",
@@ -202,7 +213,7 @@
    },
    "ticketsAltos": 15,
    "bonoTicket": 150,
-   "margen": 0.4229,
+   "margen": 0.42840000000000006,
    "margenOk": true,
    "sinCostos": 20,
    "bonoAplica": false,
@@ -246,7 +257,7 @@
      "ruta": "ASU-CDE",
      "tipo": "Traslado",
      "monto": 400,
-     "margen": 0.64,
+     "margen": 0.73,
      "alto": true,
      "saldo": 0
     },
