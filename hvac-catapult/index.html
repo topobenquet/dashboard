@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HVAC Catapult · Panel</title>
+<style>
+:root{color-scheme:light;
+  --bg:#f4f4f2;--surface:#fcfcfb;--line:#e4e3de;--grid:#ecebe7;--ink:#0b0b0b;--ink2:#52514e;--muted:#8a8984;
+  --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--good:#1f8a4c;--bad:#c53d3d;--seq1:#cfe1f6;--seq5:#2a78d6;--seq7:#174d8f}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;
+  --bg:#121211;--surface:#1a1a19;--line:#2e2e2b;--grid:#262624;--ink:#f0efec;--ink2:#c3c2b7;--muted:#8f8e86;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--good:#4cb877;--bad:#e66767;--seq1:#1f3550;--seq5:#3987e5;--seq7:#9cc4f2}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#121211;--surface:#1a1a19;--line:#2e2e2b;--grid:#262624;--ink:#f0efec;--ink2:#c3c2b7;--muted:#8f8e86;
+  --s1:#3987e5;--s2:#d95926;--s3:#199e70;--good:#4cb877;--bad:#e66767;--seq1:#1f3550;--seq5:#3987e5;--seq7:#9cc4f2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:22px;margin:0;letter-spacing:-.01em}
+h2{font-size:15px;margin:0 0 4px}
+.sub{color:var(--muted);font-size:12px}
+.top{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select,input[type=date],button{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+button{cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.chip{font-size:12px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:3px 10px;color:var(--ink2)}
+.chip b{color:var(--ink)}
+.chip.warn{border-color:#e0a100;color:var(--ink)}
+.grid{display:grid;gap:12px}
+.kpis{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));margin-bottom:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
+.kpi .lab{font-size:12px;color:var(--ink2)}
+.kpi .val{font-size:26px;font-weight:650;letter-spacing:-.02em;margin:2px 0}
+.kpi .cmp{font-size:12px;color:var(--muted)}
+.up{color:var(--good)}.down{color:var(--bad)}
+.two{grid-template-columns:1fr 1fr}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+section.card{margin-bottom:12px}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+/* funnel */
+.fun{display:grid;gap:6px}
+.fstep{display:grid;grid-template-columns:200px 1fr 130px;gap:12px;align-items:center}
+@media (max-width:700px){.fstep{grid-template-columns:110px 1fr 84px}}
+.fname{font-size:13px;color:var(--ink2)}
+.fname small{display:block;color:var(--muted);font-size:11px}
+.fbar{height:34px;background:var(--grid);border-radius:4px;position:relative;overflow:hidden}
+.fbar i{position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--s1)}
+.fbar span{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-weight:650;color:#fff;font-size:13px;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.fbar span.out{color:var(--ink);text-shadow:none}
+.frate{font-size:12px;color:var(--ink2);text-align:right}
+.frate b{color:var(--ink);font-size:14px}
+.fdrop{font-size:11px;color:var(--muted);padding-left:212px;margin:-2px 0 2px}
+@media (max-width:700px){.fdrop{padding-left:122px}}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{font-weight:600;color:var(--ink2);text-align:right;border-bottom:1px solid var(--line);padding:7px 8px;white-space:nowrap;font-size:12px}
+td{text-align:right;border-bottom:1px solid var(--grid);padding:7px 8px;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td.wrap{white-space:normal;text-align:left;color:var(--ink2);min-width:260px}
+.tw{overflow-x:auto}
+.thumb{width:40px;height:50px;object-fit:cover;border-radius:4px;vertical-align:middle;margin-right:8px;background:var(--grid)}
+.adn{display:flex;align-items:center}
+.tag{display:inline-block;font-size:11px;border-radius:99px;padding:1px 8px;border:1px solid var(--line);color:var(--ink2)}
+.tag.ok{border-color:var(--good);color:var(--good)}.tag.no{border-color:var(--bad);color:var(--bad)}
+.mini{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.mini>div{border:1px solid var(--grid);border-radius:10px;padding:10px}
+.mini .val{font-size:20px;font-weight:650}
+.empty{color:var(--muted);font-size:13px;padding:14px;border:1px dashed var(--line);border-radius:10px}
+/* chart */
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink2);margin-bottom:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:12px;box-shadow:0 6px 18px rgba(0,0,0,.12);display:none;white-space:nowrap;z-index:5}
+.bars{display:grid;gap:6px}
+.brow{display:grid;grid-template-columns:150px 1fr 60px;gap:10px;align-items:center;font-size:12px}
+.brow .bb{height:14px;background:var(--grid);border-radius:4px;overflow:hidden}
+.brow .bb i{display:block;height:100%;background:var(--s1);border-radius:4px}
+.brow span:last-child{text-align:right}
+/* login */
+#gate{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:20}
+#login{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;width:min(340px,92vw);display:grid;gap:10px}
+#login input[type=text],#login input[type=password]{font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+#err{color:var(--bad);font-size:13px;min-height:18px}
+footer{color:var(--muted);font-size:12px;margin-top:18px}
+</style>
+</head>
+<body>
+<div id="gate"><form id="login" autocomplete="on">
+  <h1>HVAC Catapult</h1><div class="sub">Panel de control. Ingresá para ver los datos.</div>
+  <input id="u" type="text" placeholder="Usuario" autocomplete="username" required>
+  <input id="pw" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+  <label class="sub"><input id="rem" type="checkbox" checked> Mantener la sesión</label>
+  <button id="go" type="submit">Entrar</button><div id="err"></div>
+</form></div>
+
+<div class="wrap" id="app" hidden>
+  <div class="top">
+    <div><h1>HVAC Catapult · Panel</h1><div class="sub" id="upd"></div></div>
+    <div class="filters">
+      <select id="range" aria-label="Rango de fechas">
+        <option value="today">Hoy</option><option value="yesterday">Ayer</option>
+        <option value="7" selected>Últimos 7 días</option><option value="30">Últimos 30 días</option>
+        <option value="custom">Personalizado</option>
+      </select>
+      <span id="customBox" hidden><input type="date" id="d1"> a <input type="date" id="d2"></span>
+    </div>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="grid kpis" id="kpis"></div>
+
+  <section class="card">
+    <div class="head"><div><h2>Embudo completo</h2><div class="sub">Del anuncio al pago. Cada barra se compara con el paso anterior.</div></div><div class="sub" id="funRange"></div></div>
+    <div class="fun" id="funnel"></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>Inversión y leads por día</h2><div class="sub">Pasá el mouse para ver el detalle de cada día.</div></div></div>
+    <div class="grid two"><div class="chart" id="chSpend"></div><div class="chart" id="chLeads"></div></div>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>Anuncios de Meta</h2><div class="sub">Ordenados por leads y después por clics. Los leads del CRM se cruzan por utm_content.</div></div></div>
+    <div class="tw" id="ads"></div>
+  </section>
+
+  <div class="grid two">
+    <section class="card">
+      <div class="head"><div><h2>Comportamiento en la landing (Clarity)</h2><div class="sub" id="clarSub">demo.hvaccatapult.com</div></div></div>
+      <div id="clarity"></div>
+    </section>
+    <section class="card">
+      <div class="head"><div><h2>Tráfico de la landing (GA4)</h2><div class="sub">demo.hvaccatapult.com</div></div></div>
+      <div id="ga"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="head"><div><h2>Llamadas de Sarah (Retell)</h2><div class="sub">Demo: Sarah llama al lead a los segundos de dejar el teléfono.</div></div></div>
+    <div id="callsKpi" class="mini" style="margin-bottom:12px"></div>
+    <div class="tw" id="calls"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const $=(s)=>document.querySelector(s);
+const esc=(s)=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nf=new Intl.NumberFormat('es-AR');
+const fm=(n)=>nf.format(Math.round(n||0));
+const usd=(n,d=0)=>'$'+(n||0).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=(x,d=1)=>Number.isFinite(x)?(x*100).toFixed(d).replace('.',',')+'%':'–';
+const TZ='America/New_York';
+const dayOf=(t)=>new Date(t).toLocaleDateString('en-CA',{timeZone:TZ});
+const shift=(ymd,n)=>{const d=new Date(ymd+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+const daysBetween=(a,b)=>{const o=[];for(let d=a;d<=b;d=shift(d,1))o.push(d);return o};
+const fdate=(ymd)=>new Date(ymd+'T12:00:00Z').toLocaleDateString('es-AR',{day:'numeric',month:'short',timeZone:'UTC'});
+const AD_IMG={'11-foto-dueno':1,'12-foto-sotano':1,'13-foto-van':1,'14-foto-oficina':1,'15-foto-casa-fria':1,'16-foto-escuchala':1,'01-poster':1,'02-csr-5pm':1,'03-furnace-call-her':1,'04-missed-calls':1,'05-sms-voicemail':1,'06-booked-while-you-slept':1,'07-paid-for-that-call':1,'08-answering-service':1};
+
+// ---------- login (datos cifrados AES-256-GCM, clave PBKDF2 de usuario:contraseña) ----------
+const KEY_STORE='hvac-catapult-key';
+const b64=(s)=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+let ENC=null, D=null;
+async function loadEnc(){ if(!ENC) ENC=await (await fetch('data.enc.json?v='+Date.now())).json(); return ENC; }
+async function deriveRaw(user,pass,e){
+  const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(user+':'+pass),'PBKDF2',false,['deriveBits']);
+  return new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',salt:b64(e.salt),iterations:e.iter},base,256));
+}
+async function decrypt(raw,e){
+  const key=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(e.iv)},key,b64(e.ct));
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+function show(d){ D=d; $('#gate').remove(); $('#app').hidden=false; initRange(); render(); }
+(async()=>{
+  let saved=null; try{saved=JSON.parse(localStorage.getItem(KEY_STORE)||sessionStorage.getItem(KEY_STORE)||'null')}catch(e){}
+  if(!saved){ $('#u').focus(); return; }
+  try{ const e=await loadEnc(); if(saved.salt!==e.salt) throw 0; show(await decrypt(b64(saved.k),e)); }
+  catch(e){ try{localStorage.removeItem(KEY_STORE);sessionStorage.removeItem(KEY_STORE)}catch(_){} }
+})();
+$('#login').addEventListener('submit',async(ev)=>{
+  ev.preventDefault(); $('#err').textContent=''; $('#go').disabled=true; $('#go').textContent='Entrando…';
+  try{
+    const e=await loadEnc(); const raw=await deriveRaw($('#u').value.trim(),$('#pw').value,e);
+    let d; try{ d=await decrypt(raw,e); }catch(_){ throw new Error('Usuario o contraseña incorrectos.'); }
+    try{ ($('#rem').checked?localStorage:sessionStorage).setItem(KEY_STORE,JSON.stringify({salt:e.salt,k:btoa(String.fromCharCode(...raw))})); }catch(_){}
+    show(d);
+  }catch(err){ $('#err').textContent=err.message||'No se pudieron cargar los datos.'; $('#go').disabled=false; $('#go').textContent='Entrar'; }
+});
+
+// ---------- rango ----------
+let R={a:null,b:null};
+function initRange(){
+  const saved=(()=>{try{return localStorage.getItem('hvac-range')}catch(e){return null}})();
+  if(saved&&[...$('#range').options].some(o=>o.value===saved)) $('#range').value=saved;
+  $('#d2').value=D.today; $('#d1').value=shift(D.today,-13); $('#d1').min=$('#d2').min=D.from; $('#d1').max=$('#d2').max=D.today;
+  $('#range').onchange=()=>{try{localStorage.setItem('hvac-range',$('#range').value)}catch(e){} render()};
+  $('#d1').onchange=$('#d2').onchange=render;
+}
+function computeRange(){
+  const v=$('#range').value, t=D.today; $('#customBox').hidden=v!=='custom';
+  if(v==='today') return {a:t,b:t,label:'Hoy'};
+  if(v==='yesterday'){const y=shift(t,-1);return {a:y,b:y,label:'Ayer'}}
+  if(v==='custom'){let a=$('#d1').value||t,b=$('#d2').value||t; if(a>b)[a,b]=[b,a]; return {a,b,label:`${fdate(a)} a ${fdate(b)}`}}
+  const n=Number(v); return {a:shift(t,-(n-1)),b:t,label:`Últimos ${n} días`};
+}
+
+// ---------- agregadores ----------
+const sumDays=(obj,a,b,keys)=>{const o={};for(const k of keys)o[k]=0;for(const [d,v] of Object.entries(obj||{})){if(d<a||d>b)continue;for(const k of keys)o[k]+=v[k]||0}return o};
+const sumMap=(obj,a,b)=>{const o={};for(const [d,m] of Object.entries(obj||{})){if(d<a||d>b)continue;for(const [k,v] of Object.entries(m))o[k]=(o[k]||0)+v}return o};
+function metaAgg(a,b){
+  const t={spend:0,impr:0,reach:0,clicks:0,lpv:0,leads:0}, ads={}, byDay={};
+  for(const r of D.meta?.rows||[]){ if(r.date<a||r.date>b) continue;
+    for(const k in t) t[k]+=r[k]||0;
+    const x=(ads[r.adId]||={adId:r.adId,ad:r.ad,campaign:r.campaign,spend:0,impr:0,clicks:0,lpv:0,leads:0});
+    for(const k of ['spend','impr','clicks','lpv','leads']) x[k]+=r[k]||0;
+    const y=(byDay[r.date]||={spend:0,clicks:0,leads:0}); y.spend+=r.spend||0; y.clicks+=r.clicks||0; y.leads+=r.leads||0;
+  }
+  return {t,ads:Object.values(ads),byDay};
+}
+function all(a,b){
+  const g=sumDays(D.ga4?.days,a,b,['demoSessions','demoUsers','demoEngaged','demoEngSecs','demoViews','demoScroll','demoFormStart','goSessions']);
+  const pages=sumMap(D.ga4?.pages,a,b);
+  const c=sumDays(D.crm?.days,a,b,['leads','leadsMeta','callsBooked','callsShowed','onboardingBooked','sales','revenue']);
+  const r=sumDays(D.retell?.days,a,b,['demoCalls','demoConnected','demoSuccess','demoVoicemail','demoSecs','inboundCalls','inboundConnected','inboundSecs','otherCalls','cost']);
+  const m=metaAgg(a,b);
+  return {g,pages,c,r,m};
+}
+
+// ---------- render ----------
+function delta(cur,prev,inverse){
+  if(!prev) return '<span class="cmp">sin datos del período anterior</span>';
+  const ch=(cur-prev)/prev, good=inverse?ch<0:ch>0, cls=ch===0?'':good?'up':'down';
+  return `<span class="cmp"><span class="${cls}">${ch>=0?'▲':'▼'} ${pct(Math.abs(ch),0)}</span> vs período anterior</span>`;
+}
+function render(){
+  const rg=computeRange(); R=rg;
+  const len=daysBetween(rg.a,rg.b).length, pa=shift(rg.a,-len), pb=shift(rg.a,-1);
+  const X=all(rg.a,rg.b), P=all(pa,pb);
+  const upd=new Date(D.generated);
+  $('#upd').textContent=`Actualizado ${upd.toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})} (hora de Nueva York). Se actualiza cada 2 horas.`;
+  $('#funRange').textContent=rg.label;
+
+  // estado de las fuentes
+  const s=D.sources, chip=(n,ok,txt)=>`<span class="chip${ok?'':' warn'}">${n}: <b>${txt}</b></span>`;
+  const metaTxt=s.meta==='api'?'en vivo':s.meta?`congelado al ${D.meta?.updated?new Date(D.meta.updated).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'último dato'}`:'sin conexión';
+  $('#chips').innerHTML=chip('Meta',s.meta==='api',metaTxt)+chip('GA4',s.ga4,s.ga4?'en vivo':'sin conexión')+chip('Clarity',s.clarity,s.clarity?'en vivo':'falta el token')+chip('Retell',s.retell,s.retell?'en vivo':'sin conexión')+chip('GoHighLevel',s.ghl,s.ghl?'en vivo':'sin conexión');
+
+  // KPIs
+  const m=X.m.t, pm=P.m.t, leads=Math.max(X.c.leads,X.r.demoCalls), pleads=Math.max(P.c.leads,P.r.demoCalls);
+  const K=[
+    ['Inversión Meta',usd(m.spend,2),delta(m.spend,pm.spend)],
+    ['Leads (pidieron demo)',fm(leads),delta(leads,pleads)],
+    ['Costo por lead',leads?usd(m.spend/leads,2):'–',delta(leads?m.spend/leads:0,pleads?pm.spend/pleads:0,true)],
+    ['Llamadas agendadas',fm(X.c.callsBooked),delta(X.c.callsBooked,P.c.callsBooked)],
+    ['Ventas',fm(X.c.sales),delta(X.c.sales,P.c.sales)],
+    ['Ingresos',usd(X.c.revenue),delta(X.c.revenue,P.c.revenue)],
+    ['ROAS',m.spend?(X.c.revenue/m.spend).toFixed(2).replace('.',',')+'x':'–',''],
+    ['Visitas a la landing',fm(X.g.demoSessions),delta(X.g.demoSessions,P.g.demoSessions)],
+    ['CTR (clic en enlace)',m.impr?pct(m.clicks/m.impr,2):'–',delta(m.impr?m.clicks/m.impr:0,pm.impr?pm.clicks/pm.impr:0)],
+    ['CPC',m.clicks?usd(m.spend/m.clicks,2):'–',delta(m.clicks?m.spend/m.clicks:0,pm.clicks?pm.spend/pm.clicks:0,true)],
+    ['CPM',m.impr?usd(m.spend/m.impr*1000,2):'–',delta(m.impr?m.spend/m.impr*1000:0,pm.impr?pm.spend/pm.impr*1000:0,true)],
+    ['Costo por venta',X.c.sales?usd(m.spend/X.c.sales):'–',''],
+  ];
+  $('#kpis').innerHTML=K.map(([l,v,c])=>`<div class="card kpi"><div class="lab">${l}</div><div class="val">${v}</div>${c}</div>`).join('');
+
+  // embudo
+  const checkout=X.pages['/checkout']||0, paid=X.c.sales;
+  const steps=[
+    ['Impresiones','Meta',m.impr],
+    ['Clics en el anuncio','Meta',m.clicks],
+    ['Llegaron a la landing','GA4, sesiones del demo',X.g.demoSessions],
+    ['Bajaron por la página','GA4, scroll al 90%',X.g.demoScroll],
+    ['Pidieron la demo','Formulario: GHL o llamada de Sarah',leads],
+    ['Sarah los llamó','Retell',X.r.demoCalls],
+    ['Atendieron a Sarah','Retell, 20 s o más',X.r.demoConnected],
+    ['Agendaron llamada de venta','Calendario de GHL',X.c.callsBooked],
+    ['Entraron al checkout','GA4, /checkout',checkout],
+    ['Pagaron','Órdenes de GHL',paid],
+  ];
+  const fmax=Math.max(...steps.map(x=>x[2]),1);
+  // escala raiz: con impresiones en miles, los pasos de abajo no desaparecen
+  const w=(v)=>v?Math.max(3,Math.sqrt(v/fmax)*100):0;
+  let fh='';
+  steps.forEach(([n,src,v],i)=>{
+    if(i>0){const pv=steps[i-1][2]; fh+=`<div class="fdrop">${!pv?'':v>pv?'↑ más que el paso anterior: también entra tráfico de otras fuentes':`↓ ${pct(v/pv)} pasó al siguiente paso${pv>v?` · se perdieron ${fm(pv-v)}`:''}`}</div>`;}
+    const wd=w(v); const shade=i<2?'var(--seq5)':i<4?'var(--s1)':i<7?'var(--seq7)':'var(--s3)';
+    fh+=`<div class="fstep"><div class="fname">${n}<small>${src}</small></div><div class="fbar" title="${esc(n)}: ${fm(v)}"><i style="width:${wd}%;background:${shade}"></i><span class="${wd<14?'out':''}" style="${wd<14?`left:calc(${wd}% + 8px)`:''}">${fm(v)}</span></div><div class="frate">${i?`<b>${pct(steps[0][2]?v/steps[0][2]:NaN,2)}</b> del total`:'<b>100%</b>'}</div></div>`;
+  });
+  $('#funnel').innerHTML=fh+`<div class="sub" style="margin-top:8px">El ancho de las barras usa escala de raíz cuadrada para que los pasos chicos se vean. Leads y ventas incluyen todas las fuentes, no solo Meta (de Meta: ${fm(X.c.leadsMeta)} leads).</div>`;
+
+  // series por dia
+  const dias=daysBetween(rg.a,rg.b);
+  const sp=dias.map(d=>({d,v:X.m.byDay[d]?.spend||0}));
+  const ld=dias.map(d=>({d,a:D.crm?.days?.[d]?.leads||0,b:D.retell?.days?.[d]?.demoConnected||0}));
+  chart('#chSpend',sp,[{k:'v',name:'Inversión Meta',color:'var(--s1)',fmt:(v)=>usd(v,2)}]);
+  chart('#chLeads',ld,[{k:'a',name:'Leads',color:'var(--s1)',fmt:fm},{k:'b',name:'Atendieron a Sarah',color:'var(--s2)',fmt:fm}]);
+
+  // anuncios
+  const lsrc=sumMap(D.crm?.leadSources,rg.a,rg.b);
+  const ads=X.m.ads.map(a=>{const key=Object.keys(AD_IMG).find(k=>a.ad.startsWith(k));return {...a,crm:lsrc[key||a.ad]||0,img:key?`https://app.hvaccatapult.com/ad-img/${key}-4x5.png`:''}})
+    .sort((x,y)=>(y.leads+y.crm)-(x.leads+x.crm)||y.clicks-x.clicks||y.spend-x.spend);
+  $('#ads').innerHTML=ads.length?`<table><thead><tr><th>Anuncio</th><th>Inversión</th><th>Impresiones</th><th>Clics</th><th>CTR</th><th>CPC</th><th>Visitas</th><th>Leads (pixel)</th><th>Leads (CRM)</th><th>Costo por lead</th></tr></thead><tbody>${
+    ads.map(a=>{const L=Math.max(a.leads,a.crm);return `<tr><td><div class="adn">${a.img?`<img class="thumb" loading="lazy" src="${a.img}" alt="">`:''}<div>${esc(a.ad)}<div class="sub">${esc(a.campaign||'')}</div></div></div></td><td>${usd(a.spend,2)}</td><td>${fm(a.impr)}</td><td>${fm(a.clicks)}</td><td>${a.impr?pct(a.clicks/a.impr,2):'–'}</td><td>${a.clicks?usd(a.spend/a.clicks,2):'–'}</td><td>${fm(a.lpv)}</td><td>${fm(a.leads)}</td><td>${fm(a.crm)}</td><td>${L?usd(a.spend/L,2):'–'}</td></tr>`}).join('')
+  }</tbody></table>`:'<div class="empty">Sin entrega de Meta en este rango.</div>';
+
+  // clarity
+  const cd=Object.entries(D.clarity?.days||{}).filter(([d])=>d>=rg.a&&d<=rg.b);
+  if(!cd.length){ $('#clarity').innerHTML=`<div class="empty">${D.sources.clarity?'Clarity guarda una foto por día desde que se conectó; no hay fotos en este rango.':'Falta el token de exportación de Clarity (proyecto xxu34c4rgh). Con el token aparecen acá la profundidad de scroll, el tiempo activo y los clics de frustración.'}</div>`; }
+  else {
+    const pick=(name,keys)=>{let s=0,n=0;for(const [,snap] of cd){const o=snap.demo?.[name]||{};for(const k of keys){if(o[k]!=null){s+=o[k];n++;break}}}return {s,n}};
+    const avg=(name,keys)=>{const r=pick(name,keys);return r.n?r.s/r.n:null};
+    const tot=(name,keys)=>pick(name,keys).s;
+    const scroll=avg('ScrollDepth',['averageScrollDepth','AverageScrollDepth']);
+    const eng=avg('EngagementTime',['activeTime','ActiveTime']);
+    const ses=tot('Traffic',['totalSessionCount','TotalSessionCount']);
+    const rage=tot('RageClickCount',['subTotal','sessionsWithMetricPercentage']);
+    const dead=tot('DeadClickCount',['subTotal']);
+    const qb=tot('QuickbackClick',['subTotal']);
+    $('#clarity').innerHTML=`<div class="mini">
+      <div><div class="sub">Sesiones</div><div class="val">${fm(ses)}</div></div>
+      <div><div class="sub">Scroll promedio</div><div class="val">${scroll!=null?scroll.toFixed(0)+'%':'–'}</div></div>
+      <div><div class="sub">Tiempo activo</div><div class="val">${eng!=null?Math.round(eng)+' s':'–'}</div></div>
+      <div><div class="sub">Clics de enojo</div><div class="val">${fm(rage)}</div></div>
+      <div><div class="sub">Clics sin respuesta</div><div class="val">${fm(dead)}</div></div>
+      <div><div class="sub">Volvieron atrás rápido</div><div class="val">${fm(qb)}</div></div></div>
+      <div class="sub" style="margin-top:8px">Clarity entrega ventanas de 24 horas: cada día es la última foto de ese día (${cd.length} día${cd.length>1?'s':''} en el rango).</div>`;
+  }
+
+  // GA4
+  const g=X.g, er=g.demoSessions?g.demoEngaged/g.demoSessions:NaN;
+  const srcs=Object.entries(sumMap(D.ga4?.sources,rg.a,rg.b)).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const dev=Object.entries(sumMap(D.ga4?.devices,rg.a,rg.b)).sort((a,b)=>b[1]-a[1]);
+  const bars=(rows)=>{const mx=Math.max(...rows.map(r=>r[1]),1);return `<div class="bars">${rows.map(([n,v])=>`<div class="brow"><span title="${esc(n)}">${esc(n.length>22?n.slice(0,21)+'…':n)}</span><div class="bb"><i style="width:${v/mx*100}%"></i></div><span>${fm(v)}</span></div>`).join('')}</div>`};
+  $('#ga').innerHTML=`<div class="mini" style="margin-bottom:12px">
+    <div><div class="sub">Sesiones</div><div class="val">${fm(g.demoSessions)}</div></div>
+    <div><div class="sub">Usuarios</div><div class="val">${fm(g.demoUsers)}</div></div>
+    <div><div class="sub">Tasa de interacción</div><div class="val">${pct(er,0)}</div></div>
+    <div><div class="sub">Tiempo por sesión</div><div class="val">${g.demoSessions?Math.round(g.demoEngSecs/g.demoSessions)+' s':'–'}</div></div>
+    <div><div class="sub">Scroll al 90%</div><div class="val">${g.demoSessions?pct(g.demoScroll/g.demoSessions,0):'–'}</div></div></div>
+    ${srcs.length?`<div class="sub" style="margin-bottom:6px">Fuente / medio</div>${bars(srcs)}`:''}
+    ${dev.length?`<div class="sub" style="margin:12px 0 6px">Dispositivo</div>${bars(dev)}`:''}`;
+
+  // llamadas
+  const r=X.r, prom=r.demoConnected?Math.round(r.demoSecs/r.demoConnected):0;
+  $('#callsKpi').innerHTML=`
+    <div><div class="sub">Llamadas de demo</div><div class="val">${fm(r.demoCalls)}</div></div>
+    <div><div class="sub">Atendidas</div><div class="val">${fm(r.demoConnected)}</div><div class="sub">${r.demoCalls?pct(r.demoConnected/r.demoCalls,0):''}</div></div>
+    <div><div class="sub">Buzón de voz</div><div class="val">${fm(r.demoVoicemail)}</div></div>
+    <div><div class="sub">Exitosas (según Retell)</div><div class="val">${fm(r.demoSuccess)}</div></div>
+    <div><div class="sub">Duración promedio</div><div class="val">${prom?Math.floor(prom/60)+':'+String(prom%60).padStart(2,'0'):'–'}</div></div>
+    <div><div class="sub">Entrantes</div><div class="val">${fm(r.inboundCalls)}</div></div>
+    <div><div class="sub">Costo Retell</div><div class="val">${usd(r.cost,2)}</div></div>`;
+  const cl=(D.retell?.list||[]).filter(c=>c.day>=rg.a&&c.day<=rg.b);
+  const dur=(s)=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+  $('#calls').innerHTML=cl.length?`<table><thead><tr><th>Cuándo</th><th>Tipo</th><th>Lead</th><th>Duración</th><th>Resultado</th><th>Ánimo</th><th style="text-align:left">Resumen</th></tr></thead><tbody>${
+    cl.slice(0,80).map(c=>`<tr><td>${new Date(c.at).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td><td>${c.type==='demo'?'Demo':c.type==='inbound'?'Entrante':'Otra'}</td><td>${esc(c.name||'–')}</td><td>${dur(c.secs)}</td><td>${c.voicemail?'<span class="tag">Buzón</span>':c.secs<20?'<span class="tag no">No atendió</span>':c.success?'<span class="tag ok">Exitosa</span>':'<span class="tag">Incompleta</span>'}</td><td>${esc(c.sentiment||'–')}</td><td class="wrap">${esc(c.summary||'')}</td></tr>`).join('')
+  }</tbody></table>`:'<div class="empty">Sin llamadas en este rango.</div>';
+
+  $('#foot').innerHTML=`Datos desde el ${fdate(D.from)}. Fuentes: Meta Ads, GA4 (propiedad HVAC Catapult), Microsoft Clarity, Retell y GoHighLevel. Las compras de prueba de menos de $50 no cuentan como ventas.${D.errors?.length?`<br>Avisos de la última actualización: ${esc(D.errors.join(' · '))}`:''}`;
+}
+
+// ---------- grafico de barras/lineas con tooltip ----------
+function chart(sel,rows,series){
+  const el=$(sel), W=560,H=220,pl=44,pr=12,pt=10,pb=26, iw=W-pl-pr, ih=H-pt-pb;
+  const mx=Math.max(...rows.flatMap(r=>series.map(s=>r[s.k]||0)),1);
+  const nice=(v)=>{const p=Math.pow(10,Math.floor(Math.log10(v)));const n=v/p;return (n<=1?1:n<=2?2:n<=5?5:10)*p};
+  const isCount=series[0].fmt===fm; const top=isCount?Math.max(4,Math.ceil(mx/4)*4):nice(mx), y=(v)=>pt+ih-(v/top)*ih, n=rows.length, bw=iw/n;
+  let g='';
+  for(let i=0;i<=4;i++){const v=top*i/4, yy=y(v); g+=`<line x1="${pl}" x2="${W-pr}" y1="${yy}" y2="${yy}" stroke="var(--grid)"/><text x="${pl-6}" y="${yy+4}" text-anchor="end" font-size="10" fill="var(--muted)">${series[0].fmt===fm?fm(v):series[0].fmt(v).replace('.00','')}</text>`;}
+  const step=Math.ceil(n/7);
+  rows.forEach((r,i)=>{ if(i%step===0||i===n-1) g+=`<text x="${pl+bw*i+bw/2}" y="${H-8}" text-anchor="middle" font-size="10" fill="var(--muted)">${fdate(r.d)}</text>`; });
+  const gap=2, sw=Math.max(2,(bw-gap*(series.length+1))/series.length);
+  series.forEach((s,j)=>{ rows.forEach((r,i)=>{const v=r[s.k]||0; if(!v) return; const x=pl+bw*i+gap+j*(sw+gap), yy=y(v), h=pt+ih-yy;
+    g+=`<path d="M${x},${pt+ih} V${yy+Math.min(4,h)} Q${x},${yy} ${x+Math.min(4,sw/2)},${yy} H${x+sw-Math.min(4,sw/2)} Q${x+sw},${yy} ${x+sw},${yy+Math.min(4,h)} V${pt+ih} Z" fill="${s.color}"/>`;}); });
+  g+=`<line x1="${pl}" x2="${W-pr}" y1="${pt+ih}" y2="${pt+ih}" stroke="var(--line)"/>`;
+  g+=`<rect id="hov" x="0" y="${pt}" width="${bw}" height="${ih}" fill="var(--ink)" opacity="0" />`;
+  const legend=series.length>1?`<div class="legend">${series.map(s=>`<span><i style="background:${s.color}"></i>${s.name}</span>`).join('')}</div>`:`<div class="legend"><span>${series[0].name}</span></div>`;
+  el.innerHTML=legend+`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(series.map(s=>s.name).join(' y '))} por día">${g}</svg>`;
+  const svg=el.querySelector('svg'), hov=svg.querySelector('#hov'), tip=$('#tip');
+  svg.addEventListener('mousemove',(ev)=>{const b=svg.getBoundingClientRect(), sx=(ev.clientX-b.left)/b.width*W, i=Math.floor((sx-pl)/bw);
+    if(i<0||i>=n){hov.setAttribute('opacity',0);tip.style.display='none';return}
+    hov.setAttribute('x',pl+bw*i); hov.setAttribute('opacity',.06);
+    const r=rows[i]; tip.innerHTML=`<b>${fdate(r.d)}</b><br>`+series.map(s=>`<i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${s.color};margin-right:5px"></i>${s.name}: <b>${s.fmt(r[s.k]||0)}</b>`).join('<br>');
+    tip.style.display='block'; tip.style.left=Math.min(ev.pageX+14,window.scrollX+innerWidth-tip.offsetWidth-10)+'px'; tip.style.top=(ev.pageY-10)+'px';});
+  svg.addEventListener('mouseleave',()=>{hov.setAttribute('opacity',0);tip.style.display='none'});
+}
+</script>
+</body>
+</html>
