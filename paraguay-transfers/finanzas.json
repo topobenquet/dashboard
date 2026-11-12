@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T20:30:14.748Z",
+ "generated": "2026-11-12T22:00:27.753Z",
  "tc": 6180,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 5969.33,
-  "stripePendiente": 4327.29,
+  "stripePendiente": 4615.38,
   "pagoparPendienteUsd": 541.26,
   "relay": null,
   "binance": null,
@@ -159,15 +159,16 @@
   },
   {
    "fecha": "2026-11-12",
-   "in": 143,
-   "out": 372.17,
-   "n": 3,
+   "in": 232,
+   "out": 889.97,
+   "n": 5,
    "porFuente": {
     "Stripe": 143,
-    "WhatsApp · Pagos (Majo)": -372.17
+    "WhatsApp · Pagos (Majo)": -889.97,
+    "Transferencia": 89
    },
-   "neto": -229.17,
-   "acum": 3370.13
+   "neto": -657.97,
+   "acum": 2941.33
   }
  ],
  "movimientos": [
@@ -609,12 +610,34 @@
    }
   },
   {
+   "d": "2026-11-12",
+   "t": "out",
+   "usd": 517.8,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "comprobante @76051153715239",
+   "gs": 3200000,
+   "rub": {
+    "chofer": 517.8,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-11-02",
    "t": "in",
    "usd": 103.56,
    "fuente": "Transferencia",
    "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
    "gs": 640000
+  },
+  {
+   "d": "2026-11-12",
+   "t": "in",
+   "usd": 89,
+   "fuente": "Transferencia",
+   "det": "Dennis (pérdida 150mil gs) (comprobante en Pagos (Majo))",
+   "gs": 550000
   },
   {
    "d": "2026-11-02",
