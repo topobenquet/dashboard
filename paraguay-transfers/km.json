@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T15:10:16.032Z",
+ "generated": "2026-11-12T23:10:11.395Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1340,
-   "ultimoKm": 102368
+   "ultimoKm": 102400
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -75,10 +75,10 @@
  },
  "resumen": {
   "H1": {
-   "kmViajes": 206,
+   "kmViajes": 238,
    "kmFuera": 805,
-   "viajes": 5,
-   "costoComb": 1354740,
+   "viajes": 6,
+   "costoComb": 1397620,
    "pagado": 0
   },
   "Voxy": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 20,
-   "conFoto": 20
+   "lecturas": 21,
+   "conFoto": 21
   },
   {
    "chofer": "Gustavo",
@@ -110,12 +110,12 @@
    "fechaIni": "2026-11-12",
    "fechaFin": "2026-11-12",
    "horaIni": "10:50",
-   "horaFin": null,
+   "horaFin": "18:30",
    "kmIni": 102368,
-   "kmFin": null,
-   "km": null,
+   "kmFin": 102400,
+   "km": 32,
    "tanqueIni": 0.75,
-   "tanqueFin": null,
+   "tanqueFin": 0.6,
    "traslados": [
     "Vehículo a disposición"
    ],
@@ -123,11 +123,11 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": null,
+   "combustibleCorresponde": 42880,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
-   "abierto": true,
+   "abierto": false,
    "inferido": false
   },
   {
@@ -2324,8 +2324,16 @@
    "adelanto": null
   },
   {
-   "fecha": "2026-11-16",
+   "fecha": "2026-11-15",
    "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "FOZ-ASU",
+   "km": 690,
+   "adelanto": 1017000
+  },
+  {
+   "fecha": "2026-11-16",
+   "chofer": "Gustavo",
    "vehiculo": "H1",
    "ruta": "Vehículo a disposición",
    "km": null,
