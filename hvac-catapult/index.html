@@ -118,6 +118,13 @@ footer{color:var(--muted);font-size:12px;margin-top:18px}
   </section>
 
   <section class="card">
+    <div class="head"><div><h2>Auditoría nocturna (pop-up)</h2><div class="sub">El dueño deja el teléfono del negocio, Mike llama de noche haciéndose pasar por un cliente sin calefacción y le llega un informe con nota. Pruebas de Juan aparte.</div></div></div>
+    <div class="mini" id="auditKpi"></div>
+    <div class="fun" id="auditFun" style="margin-top:12px"></div>
+    <div class="tw" id="audits" style="margin-top:12px"></div>
+  </section>
+
+  <section class="card">
     <div class="head"><div><h2>Inversión y leads por día</h2><div class="sub">Pasá el mouse para ver el detalle de cada día.</div></div></div>
     <div class="grid two"><div class="chart" id="chSpend"></div><div class="chart" id="chLeads"></div></div>
   </section>
@@ -224,14 +231,15 @@ function metaAgg(a,b){
   return {t,ads:Object.values(ads),byDay};
 }
 function all(a,b){
-  const g=sumDays(D.ga4?.days,a,b,['demoSessions','demoUsers','demoEngaged','demoEngSecs','demoViews','demoScroll','demoFormStart','goSessions']);
+  const g=sumDays(D.ga4?.days,a,b,['demoSessions','demoUsers','demoEngaged','demoEngSecs','demoViews','demoScroll','demoFormStart','goSessions','demoPopupView','demoPopupRequest','demoSamplePlay','demoSampleComplete']);
+  const au=sumDays(D.audit?.days,a,b,['requests','done','failed','pending','opened','human','gradeA','gradeB','gradeC','gradeD','gradeF']);
   const pages=sumMap(D.ga4?.pages,a,b);
   const fbSessions=Object.entries(sumMap(D.ga4?.sources,a,b)).filter(([k])=>/^(fb|facebook|ig|instagram|meta)/i.test(k)).reduce((s,[,v])=>s+v,0);
   g.fbSessions=fbSessions;
   const c=sumDays(D.crm?.days,a,b,['leads','leadsMeta','callsBooked','callsShowed','onboardingBooked','sales','revenue']);
   const r=sumDays(D.retell?.days,a,b,['demoCalls','demoConnected','demoSuccess','demoVoicemail','demoSecs','inboundCalls','inboundConnected','inboundSecs','otherCalls','cost']);
   const m=metaAgg(a,b);
-  return {g,pages,c,r,m};
+  return {g,pages,c,r,m,au};
 }
 
 // ---------- render ----------
@@ -251,7 +259,7 @@ function render(){
   // estado de las fuentes
   const s=D.sources, chip=(n,ok,txt)=>`<span class="chip${ok?'':' warn'}">${n}: <b>${txt}</b></span>`;
   const metaTxt=s.meta==='api'?'en vivo':s.meta?`congelado al ${D.meta?.updated?new Date(D.meta.updated).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'último dato'}`:'sin conexión';
-  $('#chips').innerHTML=chip('Meta',s.meta==='api',metaTxt)+chip('GA4',s.ga4,s.ga4?'en vivo':'sin conexión')+chip('Clarity',s.clarity,s.clarity?'en vivo':'falta el token')+chip('Retell',s.retell,s.retell?'en vivo':'sin conexión')+chip('GoHighLevel',s.ghl,s.ghl?'en vivo':'sin conexión');
+  $('#chips').innerHTML=chip('Meta',s.meta==='api',metaTxt)+chip('GA4',s.ga4,s.ga4?'en vivo':'sin conexión')+chip('Clarity',s.clarity,s.clarity?'en vivo':'falta el token')+chip('Retell',s.retell,s.retell?'en vivo':'sin conexión')+chip('GoHighLevel',s.ghl,s.ghl?'en vivo':'sin conexión')+chip('Auditoría',s.audit,s.audit?'en vivo':'sin conexión');
 
   // KPIs
   const m=X.m.t, pm=P.m.t, leads=Math.max(X.c.leads,X.r.demoCalls), pleads=Math.max(P.c.leads,P.r.demoCalls);
@@ -295,6 +303,27 @@ function render(){
     fh+=`<div class="fstep"><div class="fname">${n}<small>${src}</small></div><div class="fbar" title="${esc(n)}: ${fm(v)}"><i style="width:${wd}%;background:${shade}"></i><span class="${wd<14?'out':''}" style="${wd<14?`left:calc(${wd}% + 8px)`:''}">${fm(v)}</span></div><div class="frate">${i?`<b>${pct(steps[0][2]?v/steps[0][2]:NaN,2)}</b> del total`:'<b>100%</b>'}</div></div>`;
   });
   $('#funnel').innerHTML=fh+`<div class="sub" style="margin-top:8px">El ancho de las barras usa escala de raíz cuadrada para que los pasos chicos se vean. Solo Estados Unidos, desde el relanzamiento del 10/11. Leads y ventas incluyen todas las fuentes, no solo Meta (de Meta: ${fm(X.c.leadsMeta)} leads).</div>`;
+
+  // auditoria nocturna (pop-up)
+  const au=X.au, pau=P.au, gg=X.g;
+  const notas=['A','B','C','D','F'].map(n=>au['grade'+n]?`${n}: ${au['grade'+n]}`:'').filter(Boolean).join(' · ');
+  $('#auditKpi').innerHTML=`
+    <div><div class="sub">Vieron el pop-up</div><div class="val">${fm(gg.demoPopupView)}</div><div class="sub">GA4${gg.demoSessions?', '+pct(gg.demoPopupView/gg.demoSessions,0)+' de las sesiones':''}</div></div>
+    <div><div class="sub">Pidieron la auditoría</div><div class="val">${fm(au.requests)}</div>${delta(au.requests,pau.requests)}</div>
+    <div><div class="sub">Conversión del pop-up</div><div class="val">${gg.demoPopupView?pct(au.requests/gg.demoPopupView,1):'–'}</div></div>
+    <div><div class="sub">Llamadas hechas</div><div class="val">${fm(au.done)}</div><div class="sub">${au.pending?fm(au.pending)+' pendientes':''}${au.failed?(au.pending?' · ':'')+fm(au.failed)+' fallidas':''}</div></div>
+    <div><div class="sub">Notas</div><div class="val" style="font-size:18px">${notas||'–'}</div><div class="sub">${au.human?fm(au.human)+' atendió una persona':''}</div></div>
+    <div><div class="sub">Abrieron el informe</div><div class="val">${fm(au.opened)}</div><div class="sub">${au.done?pct(au.opened/au.done,0)+' de los informes':''}</div></div>
+    <div><div class="sub">Costo por auditoría</div><div class="val">${au.requests?usd(X.m.t.spend/au.requests,2):'–'}</div><div class="sub">inversión total de Meta</div></div>`;
+  const ast=[['Vieron el pop-up',gg.demoPopupView],['Pidieron la auditoría',au.requests],['Mike llamó',au.done+au.failed],['Informe enviado',au.done],['Abrieron el informe',au.opened]];
+  const amax=Math.max(...ast.map(x=>x[1]),1);
+  $('#auditFun').innerHTML=ast.map(([n,v],i)=>{const wd=v?Math.max(3,Math.sqrt(v/amax)*100):0;const pv=i?ast[i-1][1]:0;return `<div class="fstep"><div class="fname">${n}</div><div class="fbar"><i style="width:${wd}%;background:var(--s1)"></i><span class="${wd<14?'out':''}" style="${wd<14?`left:calc(${wd}% + 8px)`:''}">${fm(v)}</span></div><div class="frate">${i&&pv?pct(v/pv,0)+' del paso anterior':''}</div></div>`}).join('');
+  const al=(D.audit?.list||[]).filter(x=>x.day>=rg.a&&x.day<=rg.b);
+  const est=(x)=>x.status==='done'?'<span class="tag ok">Informe enviado</span>':x.status==='failed'?'<span class="tag no">Falló</span>':x.status==='calling'?'<span class="tag">Llamando</span>':`<span class="tag">Programada ${x.dueAt?new Date(x.dueAt).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):''}</span>`;
+  const out={live_answer:'Atendió una persona',answering_service:'Servicio de mensajes',phone_menu:'Menú telefónico',voicemail:'Buzón de voz',no_answer:'No atendieron',busy:'Ocupado'};
+  $('#audits').innerHTML=al.length?`<table><thead><tr><th>Pedido</th><th style="text-align:left">Negocio</th><th>Anuncio</th><th>Estado</th><th>Qué pasó</th><th>Nota</th><th>Abrió el informe</th></tr></thead><tbody>${
+    al.map(x=>`<tr${x.test?' style="opacity:.55"':''}><td>${new Date(x.at).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td><td style="text-align:left">${esc(x.business)}${x.test?' <span class="tag">prueba</span>':''}</td><td>${esc(x.utm||'–')}</td><td>${est(x)}</td><td>${esc(out[x.outcome]||'–')}</td><td><b>${esc(x.grade||'–')}</b></td><td>${x.views?fm(x.views)+' vez'+(x.views>1?'es':''):'–'}</td></tr>`).join('')
+  }</tbody></table>`:'<div class="empty">Nadie pidió la auditoría en este rango.</div>';
 
   // series por dia
   const dias=daysBetween(rg.a,rg.b);
@@ -362,7 +391,7 @@ function render(){
   const cl=(D.retell?.list||[]).filter(c=>c.day>=rg.a&&c.day<=rg.b);
   const dur=(s)=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
   $('#calls').innerHTML=cl.length?`<table><thead><tr><th>Cuándo</th><th>Tipo</th><th>Lead</th><th>Duración</th><th>Resultado</th><th>Ánimo</th><th style="text-align:left">Resumen</th></tr></thead><tbody>${
-    cl.slice(0,80).map(c=>`<tr><td>${new Date(c.at).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td><td>${c.type==='demo'?'Demo':c.type==='inbound'?'Entrante':'Otra'}</td><td>${esc(c.name||'–')}</td><td>${dur(c.secs)}</td><td>${c.voicemail?'<span class="tag">Buzón</span>':c.secs<20?'<span class="tag no">No atendió</span>':c.success?'<span class="tag ok">Exitosa</span>':'<span class="tag">Incompleta</span>'}</td><td>${esc(c.sentiment||'–')}</td><td class="wrap">${esc(c.summary||'')}</td></tr>`).join('')
+    cl.slice(0,80).map(c=>`<tr><td>${new Date(c.at).toLocaleString('es-AR',{timeZone:TZ,day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}</td><td>${c.type==='demo'?'Demo':c.type==='inbound'?'Entrante':c.type==='audit'?'Auditoría':'Otra'}</td><td>${esc(c.name||'–')}</td><td>${dur(c.secs)}</td><td>${c.voicemail?'<span class="tag">Buzón</span>':c.secs<20?'<span class="tag no">No atendió</span>':c.success?'<span class="tag ok">Exitosa</span>':'<span class="tag">Incompleta</span>'}</td><td>${esc(c.sentiment||'–')}</td><td class="wrap">${esc(c.summary||'')}</td></tr>`).join('')
   }</tbody></table>`:'<div class="empty">Sin llamadas en este rango.</div>';
 
   $('#foot').innerHTML=`Datos desde el ${fdate(D.from)}, solo de Estados Unidos (se excluye Paraguay y el resto de los países). Fuentes: Meta Ads, GA4 (propiedad HVAC Catapult), Microsoft Clarity, Retell y GoHighLevel. Las compras de prueba de menos de $50 no cuentan como ventas.${D.errors?.length?`<br>Avisos de la última actualización: ${esc(D.errors.join(' · '))}`:''}`;
