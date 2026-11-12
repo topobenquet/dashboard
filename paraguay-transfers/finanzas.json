@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:13:45.659Z",
+ "generated": "2026-11-12T18:30:07.317Z",
  "tc": 6180,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -82,16 +82,16 @@
   },
   {
    "fecha": "2026-11-06",
-   "in": 3268.05,
+   "in": 2278.05,
    "out": 32.36,
-   "n": 7,
+   "n": 6,
    "porFuente": {
-    "Stripe": 1819,
+    "Stripe": 829,
     "WhatsApp · Pagos (Majo)": -32.36,
     "Transferencia": 1449.05
    },
-   "neto": 3235.69,
-   "acum": 3355.01
+   "neto": 2245.69,
+   "acum": 2365.01
   },
   {
    "fecha": "2026-11-07",
@@ -106,7 +106,7 @@
     "Transferencia": 469.09
    },
    "neto": 263.56,
-   "acum": 3618.57
+   "acum": 2628.57
   },
   {
    "fecha": "2026-11-08",
@@ -117,7 +117,7 @@
     "Stripe": 334
    },
    "neto": 334,
-   "acum": 3952.57
+   "acum": 2962.57
   },
   {
    "fecha": "2026-11-09",
@@ -129,7 +129,7 @@
     "WhatsApp · Alfredo": -139.16
    },
    "neto": -1308.25,
-   "acum": 2644.32
+   "acum": 1654.32
   },
   {
    "fecha": "2026-11-10",
@@ -144,7 +144,7 @@
     "WhatsApp · Gustavo": -48.54
    },
    "neto": 1101.98,
-   "acum": 3746.3
+   "acum": 2756.3
   },
   {
    "fecha": "2026-11-11",
@@ -155,7 +155,7 @@
     "Stripe": 843
    },
    "neto": 843,
-   "acum": 4589.3
+   "acum": 3599.3
   },
   {
    "fecha": "2026-11-12",
@@ -167,7 +167,7 @@
     "WhatsApp · Pagos (Majo)": -372.17
    },
    "neto": -229.17,
-   "acum": 4360.13
+   "acum": 3370.13
   }
  ],
  "movimientos": [
@@ -261,13 +261,6 @@
    "usd": 269,
    "fuente": "Stripe",
    "det": "Traslado privado Paraguay Transfers (link fijo USD 269)"
-  },
-  {
-   "d": "2026-11-06",
-   "t": "in",
-   "usd": 990,
-   "fuente": "Stripe",
-   "det": "Roland Reisinger "
   },
   {
    "d": "2026-11-06",
@@ -745,10 +738,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 20,
-   "bruto": 5280,
-   "comision": 227.55,
-   "pct": 4.31,
+   "cobros": 19,
+   "bruto": 4290,
+   "comision": 183.69,
+   "pct": 4.28,
    "nota": "medido cobro por cobro"
   },
   {
