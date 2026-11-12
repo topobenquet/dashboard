@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:32:48.752Z",
+ "generated": "2026-11-12T19:35:54.028Z",
  "hoy": "2026-11-12",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -33,7 +33,16 @@
    5400
   ],
   "diaDePago": 10,
-  "bonoDesde": "2026-11"
+  "bonoDesde": "2026-11",
+  "liquidacion": {
+   "_nota": "El 2% base se liquida cada 14 días, de lunes a domingo, por fecha de Reserva (regla de Juan, 12/11/2026). ancla = primer lunes de ciclo. cortes = días en que se liquidó antes de terminar el ciclo: lo que queda del ciclo pasa al siguiente. pagadas = fecha \"hasta\" de cada liquidación ya pagada. Los bonos siguen siendo mensuales.",
+   "ancla": "2026-11-02",
+   "dias": 14,
+   "cortes": [
+    "2026-11-12"
+   ],
+   "pagadas": []
+  }
  },
  "meses": [
   {
@@ -60,7 +69,7 @@
    "bonoAplica": true,
    "bonoTotal": 80,
    "total": 224.02,
-   "pendienteCobro": 4025,
+   "pendienteCobro": 3527,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -114,7 +123,7 @@
      "monto": 1659,
      "margen": null,
      "alto": true,
-     "saldo": 1659
+     "saldo": 1161
     },
     {
      "reserva": "2026-11-07",
@@ -678,6 +687,151 @@
      "margen": 0.32,
      "alto": true,
      "saldo": 0
+    }
+   ]
+  }
+ ],
+ "liquidaciones": [
+  {
+   "desde": "2026-11-02",
+   "hasta": "2026-11-12",
+   "corte": true,
+   "cerrada": true,
+   "pagada": false,
+   "ventas": 13,
+   "facturacion": 7201,
+   "comision": 144.02,
+   "pendienteCobro": 3527,
+   "detalle": [
+    {
+     "reserva": "2026-11-02",
+     "salida": "2026-11-09",
+     "cliente": "•:•",
+     "ruta": "ASU-FOZ",
+     "tipo": "Traslado",
+     "monto": 647,
+     "comision": 12.94,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-02",
+     "salida": "2026-12-26",
+     "cliente": "cheri",
+     "ruta": "ASU-PtoIguazu",
+     "tipo": "Traslado",
+     "monto": 467,
+     "comision": 9.34,
+     "saldo": 317
+    },
+    {
+     "reserva": "2026-11-04",
+     "salida": "2026-11-16",
+     "cliente": "roberto",
+     "ruta": "ASU-CDE",
+     "tipo": "Traslado",
+     "monto": 1099,
+     "comision": 21.98,
+     "saldo": 769
+    },
+    {
+     "reserva": "2026-11-04",
+     "salida": "2026-11-16",
+     "cliente": "roberto",
+     "ruta": "CDE",
+     "tipo": "A disposición",
+     "monto": 197,
+     "comision": 3.94,
+     "saldo": 197
+    },
+    {
+     "reserva": "2026-11-05",
+     "salida": "2026-12-28",
+     "cliente": "jacques",
+     "ruta": "Encarnacion-ASU",
+     "tipo": "Traslado",
+     "monto": 164,
+     "comision": 3.28,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-06",
+     "salida": "2026-11-06",
+     "cliente": "michael",
+     "ruta": "Home Palace Tower - Silvio Pettirossi Airport",
+     "tipo": "Traslado",
+     "monto": 89,
+     "comision": 1.78,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-07",
+     "salida": "2026-11-08",
+     "cliente": "cathy",
+     "ruta": "AERO-FOZ",
+     "tipo": "Traslado",
+     "monto": 477,
+     "comision": 9.54,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-07",
+     "salida": "2026-11-14",
+     "cliente": "cathy",
+     "ruta": "FOZ-AERO",
+     "tipo": "Traslado",
+     "monto": 477,
+     "comision": 9.54,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-07",
+     "salida": "2027-03-07",
+     "cliente": "diane",
+     "ruta": "Areguá → Foz do Iguaçu",
+     "tipo": "Traslado",
+     "monto": 447,
+     "comision": 8.94,
+     "saldo": 313
+    },
+    {
+     "reserva": "2026-11-10",
+     "salida": "2026-11-10",
+     "cliente": "petra",
+     "ruta": "Edificio San Gabriel, Ciudad del Este to the Brazilian site ",
+     "tipo": "Traslado",
+     "monto": 182,
+     "comision": 3.64,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-10",
+     "salida": "2026-11-20",
+     "cliente": "angela",
+     "ruta": "Terminal de Ómnibus de Asunción → destino no especificado",
+     "tipo": "Traslado",
+     "monto": 197,
+     "comision": 3.94,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-10",
+     "salida": null,
+     "cliente": "taryn",
+     "ruta": "ASU-FOZ-ASU",
+     "tipo": "Traslado",
+     "monto": 1659,
+     "comision": 33.18,
+     "saldo": 1161
+    },
+    {
+     "reserva": "2026-11-11",
+     "salida": "2026-11-16",
+     "cliente": "andreas",
+     "ruta": "ASU-CDE",
+     "tipo": "Traslado",
+     "monto": 1099,
+     "comision": 21.98,
+     "saldo": 770
     }
    ]
   }
