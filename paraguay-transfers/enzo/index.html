@@ -52,6 +52,15 @@ h1{font-size:22px;margin:0}
 .pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:var(--track);color:var(--tx)}
 .scroll{overflow-x:auto}
 ul.rules{margin:0;padding-left:18px}ul.rules li{margin:4px 0}
+.liq{margin-top:16px}
+details.per{border-top:1px solid var(--line)}
+details.per summary{list-style:none;cursor:pointer;display:flex;gap:10px;align-items:baseline;padding:10px 0;flex-wrap:wrap}
+details.per summary::-webkit-details-marker{display:none}
+details.per summary .p{font-weight:600;min-width:150px}
+details.per summary .f{color:var(--mut);font-size:13px;flex:1}
+details.per summary .c{font-weight:700;font-variant-numeric:tabular-nums}
+details.per[open] summary .p::after{content:" ▴"}details.per:not([open]) summary .p::after{content:" ▾";color:var(--mut)}
+.est{font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid currentColor}
 @media (max-width:640px){.grid{grid-template-columns:repeat(2,1fr)}.big{font-size:28px}.hide-m{display:none}}
 </style>
 </head>
@@ -59,6 +68,7 @@ ul.rules{margin:0;padding-left:18px}ul.rules li{margin:4px 0}
 <div class="wrap">
   <h1>Metas de Enzo</h1>
   <div class="sub" id="sub">Paraguay Transfers · cargando…</div>
+  <div id="liq"></div>
   <div class="tabs" id="tabs"></div>
   <div id="app"></div>
 </div>
@@ -74,6 +84,21 @@ fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;sel=d.meses[0].mes
 function render(){
   const g=new Date(D.generated);
   $('#sub').textContent='Paraguay Transfers · actualizado '+g.toLocaleString('es-PY',{timeZone:'America/Asuncion',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (hora PY)';
+  const LQ=D.liquidaciones||[];
+  const est=(l)=>l.pagada?'<span class="est ok">pagada</span>':l.cerrada?'<span class="est warn">a pagar</span>':'<span class="est">en curso</span>';
+  const per=(l)=>`${dm(l.desde)} al ${dm(l.hasta)}`;
+  const det=(l)=>`<div class="scroll"><table class="tbl">
+      <tr><th>Reserva</th><th>Cliente</th><th>Servicio</th><th class="hide-m">Salida</th><th class="r">Monto</th><th class="r">2%</th></tr>
+      ${l.detalle.map(v=>`<tr><td>${dm(v.reserva)}</td><td>${v.cliente}</td><td>${v.ruta||v.tipo||''}${v.saldo?` <span class="pill">saldo ${usd(v.saldo)}</span>`:''}</td><td class="hide-m">${dm(v.salida)}</td><td class="r">${usd(v.monto)}</td><td class="r">${usd2(v.comision)}</td></tr>`).join('')||'<tr><td colspan="6" class="note">Sin ventas en este período.</td></tr>'}
+    </table></div>`;
+  const L0=LQ.find(l=>l.cerrada&&!l.pagada)||LQ[0];
+  $('#liq').innerHTML=LQ.length?`<div class="card liq">
+    <h2>Liquidación quincenal del 2%</h2>
+    <div class="big">${usd2(L0.comision)} <small>· ${per(L0)} · ${L0.ventas} ventas por ${usd(L0.facturacion)}</small></div>
+    <div class="msg">${est(L0)}${L0.corte?' <span class="note">corte anticipado: los días que faltaban del ciclo pasan al siguiente</span>':''}</div>
+    ${LQ.map(l=>`<details class="per"${l===L0?' open':''}><summary><span class="p">${per(l)}</span><span class="f">${l.ventas} ventas · ${usd(l.facturacion)}${l.pendienteCobro?` · ${usd(l.pendienteCobro)} sin cobrar`:''}</span><span class="c">${usd2(l.comision)}</span> ${est(l)}</summary>${det(l)}</details>`).join('')}
+    <div class="note">2% de lo facturado (el total de cada venta, aunque tenga saldo pendiente), por fecha de reserva. Ciclos de 14 días de lunes a domingo. Los bonos son mensuales y van aparte.</div>
+  </div>`:'';
   $('#tabs').innerHTML=D.meses.map(m=>`<button class="${m.mes===sel?'on':''}" data-m="${m.mes}">${nomMes(m.mes)}</button>`).join('');
   document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{sel=b.dataset.m;render()});
   const R=D.reglas,m=D.meses.find(x=>x.mes===sel),E=R.escalones,top=E[E.length-1].facturacion*1.1;
@@ -101,7 +126,7 @@ function render(){
       <div class="kpi"><div class="l">Proyección fin de mes</div><div class="v">${usd(m.proyeccion)}</div><div class="n">${m.enCurso?`día ${m.diasPasados} de ${m.diasMes}`:'mes cerrado'}</div></div>
       <div class="kpi"><div class="l">Ventas de USD ${R.ticketAlto.minimo}+</div><div class="v">${m.ticketsAltos}</div><div class="n">+USD ${R.ticketAlto.bono} cada una</div></div>
       <div class="kpi"><div class="l">Margen bruto</div><div class="v ${margenCls}">${margenTxt}</div><div class="n">piso ${Math.round(R.margenMinimo*100)}%${m.sinCostos?` · ${m.sinCostos} sin costo cargado`:''}</div></div>
-      <div class="kpi"><div class="l">Comisión estimada</div><div class="v">${usd(m.total)}</div><div class="n">se paga el día ${R.diaDePago} del mes siguiente</div></div>
+      <div class="kpi"><div class="l">Comisión estimada</div><div class="v">${usd(m.total)}</div><div class="n">2% cada 2 semanas; bono el día ${R.diaDePago}</div></div>
     </div>
   </div>
   <div class="card">
@@ -136,7 +161,7 @@ function render(){
       <li>USD ${R.ticketAlto.bono} extra por cada venta de USD ${R.ticketAlto.minimo} o más.</li>
       <li>El bono se paga solo si el margen bruto de tus ventas del mes es ${Math.round(R.margenMinimo*100)}% o más.</li>
       <li>Una venta cuenta en el mes en que se reservó. Si se cancela o se reembolsa, se descuenta.</li>
-      <li>Se paga el día ${R.diaDePago} del mes siguiente, con el mes conciliado.</li>
+      <li>El ${Math.round(R.pctBase*100)}% base se liquida cada 2 semanas (ciclos de lunes a domingo, por fecha de reserva). El bono se paga el día ${R.diaDePago} del mes siguiente, con el mes conciliado.</li>
     </ul>
   </div>`;
 }
