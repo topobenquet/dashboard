@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T11:10:08.101Z",
+ "generated": "2026-11-12T15:10:16.032Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1340,
-   "ultimoKm": 102310
+   "ultimoKm": 102368
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -76,9 +76,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 206,
-   "kmFuera": 747,
+   "kmFuera": 805,
    "viajes": 5,
-   "costoComb": 1277020,
+   "costoComb": 1354740,
    "pagado": 0
   },
   "Voxy": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 19,
-   "conFoto": 19
+   "lecturas": 20,
+   "conFoto": 20
   },
   {
    "chofer": "Gustavo",
@@ -102,6 +102,34 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-11-12",
+   "fechaFin": "2026-11-12",
+   "horaIni": "10:50",
+   "horaFin": null,
+   "kmIni": 102368,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.75,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehículo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -1266,6 +1294,28 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 102353,
+   "hasta": 102368,
+   "km": 15,
+   "fechaDesde": "2026-11-11",
+   "fechaHasta": "2026-11-12",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
+   "desde": 102310,
+   "hasta": 102353,
+   "km": 43,
+   "fechaDesde": "2026-11-10",
+   "fechaHasta": "2026-11-11",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 101556,
    "hasta": 102237,
    "km": 681,
@@ -2316,9 +2366,9 @@
  ],
  "alertas": [
   {
-   "key": "salto:ACB71F6EEFB0C7173284847A04194DB3",
+   "key": "hueco:H1:102310:102353",
    "nivel": "juan",
-   "texto": "H1: el km 102.353 (Alfredo, 11/11) no encaja con los de antes y después. ¿Error de tipeo?",
+   "texto": "H1: 43 km sin traslado entre el 10/11 (km 102.310, Alfredo) y el 11/11 (km 102.353, Alfredo).",
    "ts": 1794424672,
    "fecha": "2026-11-11"
   },
