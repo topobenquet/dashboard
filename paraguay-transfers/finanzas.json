@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:30:07.317Z",
+ "generated": "2026-11-12T18:32:53.270Z",
  "tc": 6180,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -692,41 +692,41 @@
   {
    "mes": "2026-09",
    "mesLabel": "Septiembre",
-   "traslados": 71,
+   "traslados": 70,
    "ingresos": {
-    "planilla": 10629.35,
+    "planilla": 11148.01,
     "alohaSinFila": 0,
-    "total": 10629.35
+    "total": 11148.01
    },
    "directos": {
-    "chofer": 4106,
-    "combustible": 770,
-    "peajes": 123,
-    "viaticos": 60,
-    "otros": 85,
-    "total": 5144
+    "chofer": 4332,
+    "combustible": 901,
+    "peajes": 131,
+    "viaticos": 109,
+    "otros": 89,
+    "total": 5562
    },
-   "margenBruto": 5485.35,
+   "margenBruto": 5586.01,
    "cobro": {
-    "stripe": 128.85,
+    "stripe": 0,
     "aloha": null,
     "pagopar": null,
-    "total": 128.85
+    "total": 0
    },
    "estructura": {
-    "seguro": 106.02,
+    "seguro": 100.53,
     "multaBanco": 0,
     "interesPrestamo": null,
     "depreciacion": null,
-    "total": 106.02
+    "total": 100.53
    },
    "marketing": {
-    "google": 422.49,
-    "meta": 284.03,
-    "total": 706.52
+    "google": 425.14,
+    "meta": 286.07,
+    "total": 711.21
    },
    "impuestos": null,
-   "resultado": 4543.96,
+   "resultado": 4774.27,
    "estado": {
     "pagopar": "falta",
     "interesPrestamo": "falta",
