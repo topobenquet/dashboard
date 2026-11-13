@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-12T22:02:13.348Z",
- "today": "2026-11-12",
+ "generated": "2026-11-13T10:22:35.108Z",
+ "today": "2026-11-13",
  "launch": "2026-09-15",
- "daysLive": 59,
+ "daysLive": 60,
  "testDays": 30,
  "budget": {
   "monthly": 10000,
@@ -14,7 +14,9 @@
   "callrail": true,
   "pipedrive": true,
   "clarity": true,
-  "errors": []
+  "errors": [
+   "GA4: GA4 HTTP 502: <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 502 (Server Error)!!1</title>\n  <style>\n    *"
+  ]
  },
  "account": {
   "spend": 14613.99,
@@ -2928,8 +2930,8 @@
  ],
  "weekly": {
   "current": {
-   "from": "2026-11-05",
-   "to": "2026-11-11",
+   "from": "2026-11-06",
+   "to": "2026-11-12",
    "spend": 0,
    "clicks": 0,
    "impr": 0,
@@ -2937,8 +2939,8 @@
    "sessions": 0
   },
   "previous": {
-   "from": "2026-10-29",
-   "to": "2026-11-04",
+   "from": "2026-10-30",
+   "to": "2026-11-05",
    "spend": 0,
    "clicks": 0,
    "impr": 0,
@@ -2952,8 +2954,8 @@
   "month": "2026-11",
   "spentToDate": 0,
   "avgDaily": 328,
-  "daysLeft": 19,
-  "projected": 6232,
+  "daysLeft": 18,
+  "projected": 5904,
   "plan": 9840,
   "planDays": 30,
   "basedOnDays": 0
