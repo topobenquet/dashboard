@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T10:20:59.373Z",
+  "generated": "2026-11-13T22:01:41.384Z",
   "lastSyncLabel": "13 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -207,22 +207,22 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 117,
-      "reservas": 15,
-      "revenue": 7141.57,
+      "leads": 123,
+      "reservas": 16,
+      "revenue": 7265.45,
       "chofer": 3073.07,
       "comb": 0,
       "peajes": 46,
-      "comision": 411.51,
+      "comision": 458.13,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 103,
+      "gAds": 140,
       "meta": 0,
-      "costoSheet": 3554.52,
-      "gananciaSheet": 8284.44,
-      "leadsPy": 30,
+      "costoSheet": 3582.3,
+      "gananciaSheet": 9182.66,
+      "leadsPy": 34,
       "ventasPy": 1,
-      "ventasExt": 14,
+      "ventasExt": 15,
       "ventasSinCruce": 0,
       "base": "caja+costos-planilla"
     }
@@ -300,10 +300,10 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 103.04,
-      "clicks": 49,
-      "impr": 348,
-      "conv": 7
+      "spend": 140.46,
+      "clicks": 55,
+      "impr": 371,
+      "conv": 8
     }
   ],
   "trips": [
@@ -7567,7 +7567,7 @@
       "conductor": "Juan Vera CDE",
       "pago": 477,
       "sena": 143,
-      "restante": 477,
+      "restante": 0,
       "choferCost": 226,
       "neto": 236.88,
       "fechaReserva": "07/11/26",
@@ -7579,13 +7579,27 @@
       "cliente": "shei",
       "pais": "USA",
       "conductor": "Alfredo Sánchez PT",
-      "pago": 270,
+      "pago": 562,
       "sena": 270,
       "restante": 0,
       "choferCost": 0,
-      "neto": 261.9,
+      "neto": 545.14,
       "fechaReserva": "24/09/26",
       "fechaSalida": "15/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "City Tour Aregua",
+      "cliente": "shei",
+      "pais": "USA",
+      "conductor": "Alfredo Sánchez PT",
+      "pago": 237,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 229.89,
+      "fechaReserva": "24/09/26",
+      "fechaSalida": "16/11/26"
     },
     {
       "mes": "Noviembre",
@@ -7761,11 +7775,11 @@
       "cliente": "jose fernandez",
       "pais": "USA",
       "conductor": "",
-      "pago": 269,
+      "pago": 897,
       "sena": 269,
       "restante": 0,
       "choferCost": 0,
-      "neto": 260.93,
+      "neto": 870.09,
       "fechaReserva": "06/11/26",
       "fechaSalida": "07/12/26"
     },
@@ -7838,6 +7852,20 @@
       "neto": 1609.23,
       "fechaReserva": "10/11/26",
       "fechaSalida": ""
+    },
+    {
+      "mes": "Noviembre",
+      "route": "",
+      "cliente": "lara skincare",
+      "pais": "Australia",
+      "conductor": "Alfredo Jara",
+      "pago": 397,
+      "sena": 119,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 385.09,
+      "fechaReserva": "13/11/26",
+      "fechaSalida": "13/11/26"
     },
     {
       "mes": "Diciembre",
@@ -7954,7 +7982,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-13": 2,
+      "2026-11-13": 8,
       "2026-11-12": 8,
       "2026-11-11": 12,
       "2026-11-10": 16,
@@ -8003,7 +8031,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
-      "2026-11-13": 1,
+      "2026-11-13": 5,
       "2026-11-12": 3,
       "2026-11-11": 4,
       "2026-11-10": 3,
@@ -8026,7 +8054,8 @@
       "2026-11-10": 3,
       "2026-11-04": 1,
       "2026-11-11": 1,
-      "2026-11-05": 1
+      "2026-11-05": 1,
+      "2026-11-13": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -8331,13 +8360,14 @@
       "2026-11-09": 18.95,
       "2026-11-10": 1.62,
       "2026-11-11": 35.16,
-      "2026-11-12": 12.89
+      "2026-11-12": 12.89,
+      "2026-11-13": 37.42
     }
   },
   "resenas": {
-    "count": 87,
+    "count": 88,
     "rating": 5,
-    "actualizado": "2026-11-12T23:10:01.380Z",
+    "actualizado": "2026-11-13T20:10:05.161Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8618,6 +8648,11 @@
         "fecha": "2026-11-12",
         "count": 87,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-13",
+        "count": 88,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8745,10 +8780,10 @@
       "2026-11-09": 12,
       "2026-11-11": 6,
       "2026-11-12": 15,
-      "2026-11-13": 1
+      "2026-11-13": 9
     },
     "monthly": {
-      "Noviembre": 233,
+      "Noviembre": 241,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
