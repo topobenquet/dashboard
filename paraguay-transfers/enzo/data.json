@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T10:23:11.936Z",
+ "generated": "2026-11-13T12:30:03.694Z",
  "hoy": "2026-11-13",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -69,7 +69,7 @@
    "bonoAplica": true,
    "bonoTotal": 80,
    "total": 224.02,
-   "pendienteCobro": 3527,
+   "pendienteCobro": 3861,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -145,7 +145,7 @@
      "monto": 477,
      "margen": 0.5,
      "alto": true,
-     "saldo": 0
+     "saldo": 334
     },
     {
      "reserva": "2026-11-07",
@@ -713,7 +713,7 @@
    "ventas": 13,
    "facturacion": 7201,
    "comision": 144.02,
-   "pendienteCobro": 3527,
+   "pendienteCobro": 3861,
    "detalle": [
     {
      "reserva": "2026-11-02",
@@ -793,7 +793,7 @@
      "tipo": "Traslado",
      "monto": 477,
      "comision": 9.54,
-     "saldo": 0
+     "saldo": 334
     },
     {
      "reserva": "2026-11-07",
