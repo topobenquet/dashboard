@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T19:10:10.932Z",
+ "generated": "2026-11-13T23:10:29.693Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -117,7 +117,8 @@
    "tanqueIni": null,
    "tanqueFin": 0.35,
    "traslados": [
-    "Vehículo a disposición"
+    "Vehículo a disposición",
+    ""
    ],
    "kmEsperado": null,
    "desvio": null,
@@ -2396,12 +2397,28 @@
    "adelanto": null
   },
   {
+   "fecha": "2026-11-13",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "",
+   "km": null,
+   "adelanto": null
+  },
+  {
    "fecha": "2026-11-15",
    "chofer": "Alfredo",
    "vehiculo": "H1",
    "ruta": "FOZ-ASU",
    "km": 690,
    "adelanto": 942000
+  },
+  {
+   "fecha": "2026-11-16",
+   "chofer": "Alfredo",
+   "vehiculo": "H1",
+   "ruta": "City Tour Aregua",
+   "km": 60,
+   "adelanto": 82000
   },
   {
    "fecha": "2026-11-16",
