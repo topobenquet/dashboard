@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T12:30:03.694Z",
+ "generated": "2026-11-13T14:30:20.895Z",
  "hoy": "2026-11-13",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,26 +50,26 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 13,
-   "ventas": 13,
-   "facturacion": 7201,
-   "proyeccion": 16617.69,
-   "base": 144.02,
+   "ventas": 14,
+   "facturacion": 7598,
+   "proyeccion": 17533.85,
+   "base": 151.96,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 10799,
+    "falta": 10402,
     "bono": 100
    },
-   "ticketsAltos": 8,
-   "bonoTicket": 80,
+   "ticketsAltos": 9,
+   "bonoTicket": 90,
    "margen": 0.6175999999999999,
    "margenOk": true,
-   "sinCostos": 7,
+   "sinCostos": 8,
    "bonoAplica": true,
-   "bonoTotal": 80,
-   "total": 224.02,
-   "pendienteCobro": 3861,
+   "bonoTotal": 90,
+   "total": 241.96,
+   "pendienteCobro": 4139,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -77,10 +77,21 @@
     },
     {
      "lunes": "2026-11-09",
-     "monto": 3137
+     "monto": 3534
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-13",
+     "salida": "2026-11-13",
+     "cliente": "lara",
+     "ruta": "",
+     "tipo": "Traslado",
+     "monto": 397,
+     "margen": null,
+     "alto": true,
+     "saldo": 278
+    },
     {
      "reserva": "2026-11-11",
      "salida": "2026-11-16",
@@ -698,11 +709,22 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 0,
-   "facturacion": 0,
-   "comision": 0,
-   "pendienteCobro": 0,
-   "detalle": []
+   "ventas": 1,
+   "facturacion": 397,
+   "comision": 7.94,
+   "pendienteCobro": 278,
+   "detalle": [
+    {
+     "reserva": "2026-11-13",
+     "salida": "2026-11-13",
+     "cliente": "lara",
+     "ruta": "",
+     "tipo": "Traslado",
+     "monto": 397,
+     "comision": 7.94,
+     "saldo": 278
+    }
+   ]
   },
   {
    "desde": "2026-11-02",
