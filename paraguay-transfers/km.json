@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T11:10:07.939Z",
+ "generated": "2026-11-13T13:10:07.573Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1340,
-   "ultimoKm": 102400
+   "ultimoKm": 102413
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -76,9 +76,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 238,
-   "kmFuera": 805,
+   "kmFuera": 818,
    "viajes": 6,
-   "costoComb": 1397620,
+   "costoComb": 1415040,
    "pagado": 0
   },
   "Voxy": {
@@ -92,7 +92,7 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 21,
+   "lecturas": 22,
    "conFoto": 21
   },
   {
@@ -102,6 +102,36 @@
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Alfredo"
+   ],
+   "fechaIni": "2026-11-13",
+   "fechaFin": "2026-11-13",
+   "horaIni": "08:12",
+   "horaFin": null,
+   "kmIni": 102413,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehículo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [
+    102413
+   ],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": false
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -1294,6 +1324,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 102400,
+   "hasta": 102413,
+   "km": 13,
+   "fechaDesde": "2026-11-12",
+   "fechaHasta": "2026-11-13",
+   "choferes": [
+    "Alfredo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 102353,
    "hasta": 102368,
    "km": 15,
@@ -2365,6 +2406,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "foto:ACE302E2661D689F0B02B8E300E86410",
+   "nivel": "grupo",
+   "texto": "📸 Alfredo, falta la foto del tablero del km 102.413 (13/11 08:12). En la foto tienen que verse el número del odómetro y la aguja del combustible.",
+   "ts": 1794568376,
+   "fecha": "2026-11-13"
+  },
   {
    "key": "hueco:H1:102310:102353",
    "nivel": "juan",
