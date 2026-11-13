@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T10:20:07.659Z",
+ "generated": "2026-11-13T12:30:11.783Z",
  "tc": 6150,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -169,6 +169,17 @@
    },
    "neto": -661.88,
    "acum": 2934.74
+  },
+  {
+   "fecha": "2026-11-13",
+   "in": 0,
+   "out": 105.69,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -105.69
+   },
+   "neto": -105.69,
+   "acum": 2829.05
   }
  ],
  "movimientos": [
@@ -618,6 +629,20 @@
    "gs": 3200000,
    "rub": {
     "chofer": 520.33,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-13",
+   "t": "out",
+   "usd": 105.69,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago cambio de aceite a H1 a Luis",
+   "gs": 650000,
+   "rub": {
+    "chofer": 105.69,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -1144,6 +1169,14 @@
    "gs": 200000,
    "usd": 32.52,
    "concepto": "(Queda ₲ a favor para el próximo viaje)",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-13",
+   "grupo": "Alfredo",
+   "gs": 136000,
+   "usd": 22.11,
+   "concepto": "Peajes: ₲",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
