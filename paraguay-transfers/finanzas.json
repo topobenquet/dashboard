@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T14:30:27.625Z",
+ "generated": "2026-11-13T16:30:12.016Z",
  "tc": 6150,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -172,16 +172,17 @@
   },
   {
    "fecha": "2026-11-13",
-   "in": 119,
-   "out": 290.57,
-   "n": 3,
+   "in": 123.88,
+   "out": 583.25,
+   "n": 6,
    "porFuente": {
     "Stripe": 119,
-    "WhatsApp · Pagos (Majo)": -105.69,
-    "WhatsApp · Alfredo": -184.88
+    "WhatsApp · Pagos (Majo)": -398.37,
+    "WhatsApp · Alfredo": -184.88,
+    "Transferencia": 4.88
    },
-   "neto": -171.57,
-   "acum": 2763.17
+   "neto": -459.37,
+   "acum": 2475.37
   }
  ],
  "movimientos": [
@@ -672,6 +673,34 @@
    }
   },
   {
+   "d": "2026-11-13",
+   "t": "out",
+   "usd": 81.3,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "comprobante",
+   "gs": 500000,
+   "rub": {
+    "chofer": 81.3,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-13",
+   "t": "out",
+   "usd": 211.38,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago cde",
+   "gs": 1300000,
+   "rub": {
+    "chofer": 211.38,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-11-02",
    "t": "in",
    "usd": 104.07,
@@ -686,6 +715,14 @@
    "fuente": "Transferencia",
    "det": "Dennis (pérdida 150mil gs) (comprobante en Pagos (Majo))",
    "gs": 550000
+  },
+  {
+   "d": "2026-11-13",
+   "t": "in",
+   "usd": 4.88,
+   "fuente": "Transferencia",
+   "det": "Luis Milciades Vazquez Caceres (comprobante en Pagos (Majo))",
+   "gs": 30000
   },
   {
    "d": "2026-11-02",
