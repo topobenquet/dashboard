@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T22:00:38.344Z",
+ "generated": "2026-11-13T22:30:08.325Z",
  "tc": 6150,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 7777.91,
-  "stripePendiente": 2974.04,
+  "stripePendiente": 3239.51,
   "pagoparPendienteUsd": 543.9,
   "relay": null,
   "binance": null,
@@ -172,20 +172,27 @@
   },
   {
    "fecha": "2026-11-13",
-   "in": 123.88,
+   "in": 401.88,
    "out": 583.25,
-   "n": 6,
+   "n": 7,
    "porFuente": {
-    "Stripe": 119,
+    "Stripe": 397,
     "WhatsApp · Pagos (Majo)": -398.37,
     "WhatsApp · Alfredo": -184.88,
     "Transferencia": 4.88
    },
-   "neto": -459.37,
-   "acum": 2475.37
+   "neto": -181.37,
+   "acum": 2753.37
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-13",
+   "t": "in",
+   "usd": 278,
+   "fuente": "Stripe",
+   "det": "Lara Mente"
+  },
   {
    "d": "2026-11-13",
    "t": "in",
@@ -846,10 +853,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 20,
-   "bruto": 4409,
-   "comision": 189.23,
-   "pct": 4.29,
+   "cobros": 21,
+   "bruto": 4687,
+   "comision": 201.76,
+   "pct": 4.3,
    "nota": "medido cobro por cobro"
   },
   {
