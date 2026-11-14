@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T18:30:07.478Z",
+ "generated": "2026-11-14T22:00:12.618Z",
  "tc": 6150,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 7480.91,
-  "stripePendiente": 3441.89,
+  "stripePendiente": 3893.78,
   "pagoparPendienteUsd": 543.9,
   "relay": null,
   "binance": null,
@@ -186,17 +186,24 @@
   },
   {
    "fecha": "2026-11-14",
-   "in": 334,
+   "in": 807,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Stripe": 334
+    "Stripe": 807
    },
-   "neto": 334,
-   "acum": 3087.37
+   "neto": 807,
+   "acum": 3560.37
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-14",
+   "t": "in",
+   "usd": 473,
+   "fuente": "Stripe",
+   "det": "Andrew Kelly"
+  },
   {
    "d": "2026-11-14",
    "t": "in",
@@ -871,10 +878,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 22,
-   "bruto": 5021,
-   "comision": 216.76,
-   "pct": 4.32,
+   "cobros": 23,
+   "bruto": 5494,
+   "comision": 237.87,
+   "pct": 4.33,
    "nota": "medido cobro por cobro"
   },
   {

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T10:20:49.848Z",
+  "generated": "2026-11-14T22:01:07.438Z",
   "lastSyncLabel": "14 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -207,20 +207,20 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 126,
+      "leads": 132,
       "reservas": 16,
-      "revenue": 7543.45,
+      "revenue": 8350.45,
       "chofer": 3073.07,
       "comb": 0,
       "peajes": 46,
       "comision": 458.13,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 140,
+      "gAds": 147,
       "meta": 0,
       "costoSheet": 3582.3,
       "gananciaSheet": 9145.24,
-      "leadsPy": 34,
+      "leadsPy": 36,
       "ventasPy": 1,
       "ventasExt": 15,
       "ventasSinCruce": 0,
@@ -300,10 +300,10 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 140.46,
-      "clicks": 55,
-      "impr": 371,
-      "conv": 8
+      "spend": 147.33,
+      "clicks": 56,
+      "impr": 388,
+      "conv": 9
     }
   ],
   "trips": [
@@ -7676,7 +7676,7 @@
       "route": "ASU-PtoIguazu",
       "cliente": "Michael O’Regan",
       "pais": "Irlanda",
-      "conductor": "",
+      "conductor": "Alfredo Jara",
       "pago": 100,
       "sena": 100,
       "restante": 0,
@@ -7982,7 +7982,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-14": 3,
+      "2026-11-14": 9,
       "2026-11-13": 8,
       "2026-11-12": 8,
       "2026-11-11": 12,
@@ -8032,6 +8032,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
+      "2026-11-14": 2,
       "2026-11-13": 5,
       "2026-11-12": 3,
       "2026-11-11": 4,
@@ -8362,13 +8363,14 @@
       "2026-11-10": 1.62,
       "2026-11-11": 35.16,
       "2026-11-12": 12.89,
-      "2026-11-13": 37.42
+      "2026-11-13": 37.42,
+      "2026-11-14": 6.87
     }
   },
   "resenas": {
     "count": 88,
     "rating": 5,
-    "actualizado": "2026-11-13T23:10:29.477Z",
+    "actualizado": "2026-11-14T20:10:01.423Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8654,6 +8656,11 @@
         "fecha": "2026-11-13",
         "count": 88,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-14",
+        "count": 88,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8662,12 +8669,6 @@
         "rating": 5,
         "fecha": "2026-10-27T17:02:14.846492751Z",
         "texto": "Muy buen servicio puntual ,buen auto conductora me toco en este viaje excelente seguro lo voy a volvet a utilizar"
-      },
-      {
-        "autor": "Rodrigo Pereira",
-        "rating": 5,
-        "fecha": "2026-10-25T00:03:16.897856509Z",
-        "texto": "Súper recomendable !! Un éxito. Muy buen servicio"
       },
       {
         "autor": "Gemma Bernal",
@@ -8686,6 +8687,12 @@
         "rating": 5,
         "fecha": "2026-08-26T20:29:25.995642280Z",
         "texto": "Contratamos el servicio para el tour a las Cataratas de Iguazú y lo recomendamos al 100! Son muy accesibles en cuanto el sistema de pago y los precios nos parecieron acorde con el buen servicio que dan. El vehículo de traslado nos pareció muy cómodo a mi familia y a mi (somos 3) y el señor Alfredo fue muy profesional y es una persona muy agradable. Nos sugirió otros lugares interesantes para visit"
+      },
+      {
+        "autor": "daniela hernández",
+        "rating": 5,
+        "fecha": "2026-08-22T00:58:25.727763243Z",
+        "texto": "Excelente servicio de transfers. Siempre que viajo a Paraguay lo uso. Es seguro, los coches están perfectas condiciones de limpieza, los choferes son muy agradables y están a disposición absoluta.\n10/10!\nGracias !"
       }
     ]
   },
@@ -8781,10 +8788,11 @@
       "2026-11-09": 12,
       "2026-11-11": 6,
       "2026-11-12": 15,
-      "2026-11-13": 11
+      "2026-11-13": 11,
+      "2026-11-14": 10
     },
     "monthly": {
-      "Noviembre": 243,
+      "Noviembre": 253,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
