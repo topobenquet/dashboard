@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T20:30:47.299Z",
+ "generated": "2026-11-16T22:00:10.266Z",
  "tc": 6200,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 507.51,
-  "stripePendiente": 4325.65,
+  "stripePendiente": 4515.59,
   "pagoparPendienteUsd": 539.52,
   "relay": null,
   "binance": null,
@@ -208,19 +208,26 @@
   },
   {
    "fecha": "2026-11-16",
-   "in": 1706,
+   "in": 1905,
    "out": 510.64,
-   "n": 7,
+   "n": 8,
    "porFuente": {
-    "Stripe": 1706,
+    "Stripe": 1905,
     "WhatsApp · Alfredo": -16.13,
     "WhatsApp · Pagos (Majo)": -494.51
    },
-   "neto": 1195.36,
-   "acum": 5174.74
+   "neto": 1394.36,
+   "acum": 5373.74
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-16",
+   "t": "in",
+   "usd": 199,
+   "fuente": "Stripe",
+   "det": "Melissa Gutierrez Gonzales"
+  },
   {
    "d": "2026-11-16",
    "t": "in",
@@ -993,10 +1000,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 28,
-   "bruto": 7772,
-   "comision": 335.23,
-   "pct": 4.31,
+   "cobros": 29,
+   "bruto": 7971,
+   "comision": 344.29,
+   "pct": 4.32,
    "nota": "medido cobro por cobro"
   },
   {
