@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T10:22:12.199Z",
+ "generated": "2026-11-16T12:30:14.335Z",
  "hoy": "2026-11-16",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -63,13 +63,13 @@
    },
    "ticketsAltos": 9,
    "bonoTicket": 90,
-   "margen": 0.6175999999999999,
+   "margen": 0.38,
    "margenOk": true,
-   "sinCostos": 8,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 90,
    "total": 241.96,
-   "pendienteCobro": 4139,
+   "pendienteCobro": 3036,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -99,7 +99,7 @@
      "ruta": "ASU-CDE",
      "tipo": "Traslado",
      "monto": 1099,
-     "margen": null,
+     "margen": 0.12,
      "alto": true,
      "saldo": 770
     },
@@ -156,7 +156,7 @@
      "monto": 477,
      "margen": 0.5,
      "alto": true,
-     "saldo": 334
+     "saldo": 0
     },
     {
      "reserva": "2026-11-07",
@@ -198,9 +198,9 @@
      "ruta": "ASU-CDE",
      "tipo": "Traslado",
      "monto": 1099,
-     "margen": null,
+     "margen": 0.19,
      "alto": true,
-     "saldo": 769
+     "saldo": 197
     },
     {
      "reserva": "2026-11-04",
@@ -211,7 +211,7 @@
      "monto": 197,
      "margen": 0.48,
      "alto": false,
-     "saldo": 197
+     "saldo": 0
     },
     {
      "reserva": "2026-11-02",
@@ -735,7 +735,7 @@
    "ventas": 13,
    "facturacion": 7201,
    "comision": 144.02,
-   "pendienteCobro": 3861,
+   "pendienteCobro": 2758,
    "detalle": [
     {
      "reserva": "2026-11-02",
@@ -765,7 +765,7 @@
      "tipo": "Traslado",
      "monto": 1099,
      "comision": 21.98,
-     "saldo": 769
+     "saldo": 197
     },
     {
      "reserva": "2026-11-04",
@@ -775,7 +775,7 @@
      "tipo": "A disposición",
      "monto": 197,
      "comision": 3.94,
-     "saldo": 197
+     "saldo": 0
     },
     {
      "reserva": "2026-11-05",
@@ -815,7 +815,7 @@
      "tipo": "Traslado",
      "monto": 477,
      "comision": 9.54,
-     "saldo": 334
+     "saldo": 0
     },
     {
      "reserva": "2026-11-07",
