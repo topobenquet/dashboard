@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T16:30:15.404Z",
+ "generated": "2026-11-16T18:30:11.737Z",
  "tc": 6200,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 10007.51,
-  "stripePendiente": 3898.62,
+  "stripePendiente": 4325.65,
   "pagoparPendienteUsd": 539.52,
   "relay": null,
   "binance": null,
@@ -208,19 +208,26 @@
   },
   {
    "fecha": "2026-11-16",
-   "in": 1259,
+   "in": 1706,
    "out": 510.64,
-   "n": 6,
+   "n": 7,
    "porFuente": {
-    "Stripe": 1259,
+    "Stripe": 1706,
     "WhatsApp · Alfredo": -16.13,
     "WhatsApp · Pagos (Majo)": -494.51
    },
-   "neto": 748.36,
-   "acum": 4727.74
+   "neto": 1195.36,
+   "acum": 5174.74
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-16",
+   "t": "in",
+   "usd": 447,
+   "fuente": "Stripe",
+   "det": "Michael O’Regan"
+  },
   {
    "d": "2026-11-16",
    "t": "in",
@@ -986,10 +993,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 27,
-   "bruto": 7325,
-   "comision": 315.26,
-   "pct": 4.3,
+   "cobros": 28,
+   "bruto": 7772,
+   "comision": 335.23,
+   "pct": 4.31,
    "nota": "medido cobro por cobro"
   },
   {
