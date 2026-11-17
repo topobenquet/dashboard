@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T23:10:36.608Z",
+ "generated": "2026-11-17T00:40:02.988Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -2529,6 +2529,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "sinkm:Gustavo:2026-11-16:Vehículo a disposición",
+   "nivel": "grupo",
+   "texto": "🚐 Gustavo, no encontré las fotos del km de INICIO y FINAL del traslado Vehículo a disposición del 16/11. Mandalas con el número escrito, por favor.",
+   "ts": 1794884399,
+   "fecha": "2026-11-16"
+  },
   {
    "key": "hueco:H1:103300:103477",
    "nivel": "juan",
