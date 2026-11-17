@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T18:30:13.971Z",
+ "generated": "2026-11-17T20:30:17.664Z",
  "tc": 6270,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 923.42,
-  "stripePendiente": 4651.91,
+  "stripePendiente": 4955.53,
   "pagoparPendienteUsd": 533.49,
   "relay": null,
   "binance": null,
@@ -221,17 +221,24 @@
   },
   {
    "fecha": "2026-11-17",
-   "in": 97,
+   "in": 410,
    "out": 0,
-   "n": 1,
+   "n": 2,
    "porFuente": {
-    "Stripe": 97
+    "Stripe": 410
    },
-   "neto": 97,
-   "acum": 5613.08
+   "neto": 410,
+   "acum": 5926.08
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-17",
+   "t": "in",
+   "usd": 313,
+   "fuente": "Stripe",
+   "det": "Francisco deLucio"
+  },
   {
    "d": "2026-11-17",
    "t": "in",
@@ -1060,10 +1067,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 32,
-   "bruto": 8600,
-   "comision": 369.31,
-   "pct": 4.29,
+   "cobros": 33,
+   "bruto": 8913,
+   "comision": 378.69,
+   "pct": 4.25,
    "nota": "medido cobro por cobro"
   },
   {
@@ -1461,6 +1468,22 @@
    "gs": 200000,
    "usd": 31.9,
    "concepto": "combustible (Ahora estoy pasando al lado Paraguayo ... Mucho tráfico para)",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-17",
+   "grupo": "Alfredo",
+   "gs": 160000,
+   "usd": 25.52,
+   "concepto": "Son: + 80.000 de viatico por dos días",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-17",
+   "grupo": "Alfredo",
+   "gs": 460000,
+   "usd": 73.37,
+   "concepto": "Más devolución de combustible",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
