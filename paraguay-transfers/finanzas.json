@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-17T00:30:12.533Z",
+ "generated": "2026-11-17T10:20:09.777Z",
  "tc": 6180,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
  "saldos": {
-  "fecha": "2026-11-16",
+  "fecha": "2026-11-17",
   "itauGs": 43605,
   "uenoGs": 7124475,
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 923.42,
-  "stripePendiente": 4329.51,
+  "stripePendiente": 4659.48,
   "pagoparPendienteUsd": 541.26,
   "relay": null,
   "binance": null,
@@ -208,19 +208,26 @@
   },
   {
    "fecha": "2026-11-16",
-   "in": 2142,
+   "in": 2437,
    "out": 937.06,
-   "n": 11,
+   "n": 12,
    "porFuente": {
-    "Stripe": 2142,
+    "Stripe": 2437,
     "WhatsApp · Alfredo": -16.18,
     "WhatsApp · Pagos (Majo)": -920.88
    },
-   "neto": 1204.94,
-   "acum": 5177.6
+   "neto": 1499.94,
+   "acum": 5472.6
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-16",
+   "t": "in",
+   "usd": 295,
+   "fuente": "Stripe",
+   "det": "Andreas Baumgartner"
+  },
   {
    "d": "2026-11-16",
    "t": "in",
@@ -1035,10 +1042,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 30,
-   "bruto": 8208,
-   "comision": 351.46,
-   "pct": 4.28,
+   "cobros": 31,
+   "bruto": 8503,
+   "comision": 364.74,
+   "pct": 4.29,
    "nota": "medido cobro por cobro"
   },
   {
