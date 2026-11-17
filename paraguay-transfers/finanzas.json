@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-17T12:30:37.786Z",
- "tc": 6200,
+ "generated": "2026-11-17T14:30:13.102Z",
+ "tc": 6270,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
@@ -12,8 +12,8 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 923.42,
-  "stripePendiente": 4659.48,
-  "pagoparPendienteUsd": 539.52,
+  "stripePendiente": 4559.48,
+  "pagoparPendienteUsd": 533.49,
   "relay": null,
   "binance": null,
   "payoneer": null
@@ -21,92 +21,92 @@
  "caja": [
   {
    "fecha": "2026-11-01",
-   "in": 69.03,
-   "out": 161.29,
+   "in": 68.26,
+   "out": 159.49,
    "n": 2,
    "porFuente": {
-    "Pagopar": 69.03,
-    "WhatsApp · Alfredo": -161.29
+    "Pagopar": 68.26,
+    "WhatsApp · Alfredo": -159.49
    },
-   "neto": -92.26,
-   "acum": -92.26
+   "neto": -91.23,
+   "acum": -91.23
   },
   {
    "fecha": "2026-11-02",
-   "in": 758.87,
-   "out": 32.26,
+   "in": 750.39,
+   "out": 31.9,
    "n": 5,
    "porFuente": {
-    "Pagopar": 470.48,
-    "WhatsApp · Pagos (Majo)": -32.26,
-    "Transferencia": 288.39
+    "Pagopar": 465.23,
+    "WhatsApp · Pagos (Majo)": -31.9,
+    "Transferencia": 285.16
    },
-   "neto": 726.61,
-   "acum": 634.35
+   "neto": 718.49,
+   "acum": 627.26
   },
   {
    "fecha": "2026-11-03",
    "in": 69,
-   "out": 82.26,
+   "out": 81.34,
    "n": 2,
    "porFuente": {
     "Stripe": 69,
-    "WhatsApp · Luis": -82.26
+    "WhatsApp · Luis": -81.34
    },
-   "neto": -13.26,
-   "acum": 621.09
+   "neto": -12.34,
+   "acum": 614.92
   },
   {
    "fecha": "2026-11-04",
    "in": 330,
-   "out": 852.42,
+   "out": 842.9,
    "n": 2,
    "porFuente": {
     "Stripe": 330,
-    "WhatsApp · Pagos (Majo)": -852.42
+    "WhatsApp · Pagos (Majo)": -842.9
    },
-   "neto": -522.42,
-   "acum": 98.67
+   "neto": -512.9,
+   "acum": 102.02
   },
   {
    "fecha": "2026-11-05",
    "in": 164,
-   "out": 141.94,
+   "out": 140.35,
    "n": 2,
    "porFuente": {
     "Stripe": 164,
-    "WhatsApp · Pagos (Majo)": -141.94
+    "WhatsApp · Pagos (Majo)": -140.35
    },
-   "neto": 22.06,
-   "acum": 120.73
+   "neto": 23.65,
+   "acum": 125.67
   },
   {
    "fecha": "2026-11-06",
-   "in": 2273.38,
-   "out": 32.26,
+   "in": 2257.25,
+   "out": 31.9,
    "n": 6,
    "porFuente": {
     "Stripe": 829,
-    "WhatsApp · Pagos (Majo)": -32.26,
-    "Transferencia": 1444.38
+    "WhatsApp · Pagos (Majo)": -31.9,
+    "Transferencia": 1428.25
    },
-   "neto": 2241.12,
-   "acum": 2361.85
+   "neto": 2225.35,
+   "acum": 2351.02
   },
   {
    "fecha": "2026-11-07",
-   "in": 744.58,
-   "out": 480.97,
+   "in": 739.36,
+   "out": 475.6,
    "n": 6,
    "porFuente": {
     "Stripe": 277,
-    "WhatsApp · Gustavo": -131.61,
-    "WhatsApp · Alfredo": -123.55,
-    "WhatsApp · Pagos (Majo)": -225.81,
-    "Transferencia": 467.58
+    "WhatsApp · Gustavo": -130.14,
+    "WhatsApp · Alfredo": -122.17,
+    "WhatsApp · Pagos (Majo)": -223.29,
+    "Transferencia": 462.36
    },
-   "neto": 263.61,
-   "acum": 2625.46
+   "neto": 263.76,
+   "acum": 2614.78
   },
   {
    "fecha": "2026-11-08",
@@ -117,34 +117,34 @@
     "Stripe": 334
    },
    "neto": 334,
-   "acum": 2959.46
+   "acum": 2948.78
   },
   {
    "fecha": "2026-11-09",
    "in": 0,
-   "out": 1304.04,
+   "out": 1289.47,
    "n": 5,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -1165.33,
-    "WhatsApp · Alfredo": -138.71
+    "WhatsApp · Pagos (Majo)": -1152.31,
+    "WhatsApp · Alfredo": -137.16
    },
-   "neto": -1304.04,
-   "acum": 1655.42
+   "neto": -1289.47,
+   "acum": 1659.31
   },
   {
    "fecha": "2026-11-10",
    "in": 1301,
-   "out": 198.39,
+   "out": 196.18,
    "n": 9,
    "porFuente": {
     "Stripe": 1301,
-    "WhatsApp · Luis": -12.9,
-    "WhatsApp · Alfredo": -32.26,
-    "WhatsApp · Pagos (Majo)": -104.84,
-    "WhatsApp · Gustavo": -48.39
+    "WhatsApp · Luis": -12.76,
+    "WhatsApp · Alfredo": -31.9,
+    "WhatsApp · Pagos (Majo)": -103.67,
+    "WhatsApp · Gustavo": -47.85
    },
-   "neto": 1102.61,
-   "acum": 2758.03
+   "neto": 1104.82,
+   "acum": 2764.13
   },
   {
    "fecha": "2026-11-11",
@@ -155,34 +155,34 @@
     "Stripe": 843
    },
    "neto": 843,
-   "acum": 3601.03
+   "acum": 3607.13
   },
   {
    "fecha": "2026-11-12",
-   "in": 231.71,
-   "out": 887.09,
+   "in": 230.72,
+   "out": 877.19,
    "n": 5,
    "porFuente": {
     "Stripe": 143,
-    "WhatsApp · Pagos (Majo)": -887.09,
-    "Transferencia": 88.71
+    "WhatsApp · Pagos (Majo)": -877.19,
+    "Transferencia": 87.72
    },
-   "neto": -655.38,
-   "acum": 2945.65
+   "neto": -646.47,
+   "acum": 2960.66
   },
   {
    "fecha": "2026-11-13",
-   "in": 401.84,
-   "out": 747.11,
+   "in": 401.78,
+   "out": 738.76,
    "n": 8,
    "porFuente": {
     "Stripe": 397,
-    "WhatsApp · Pagos (Majo)": -563.72,
-    "WhatsApp · Alfredo": -183.39,
-    "Transferencia": 4.84
+    "WhatsApp · Pagos (Majo)": -557.42,
+    "WhatsApp · Alfredo": -181.34,
+    "Transferencia": 4.78
    },
-   "neto": -345.27,
-   "acum": 2600.38
+   "neto": -336.98,
+   "acum": 2623.68
   },
   {
    "fecha": "2026-11-14",
@@ -193,7 +193,7 @@
     "Stripe": 807
    },
    "neto": 807,
-   "acum": 3407.38
+   "acum": 3430.68
   },
   {
    "fecha": "2026-11-15",
@@ -204,20 +204,20 @@
     "Stripe": 572
    },
    "neto": 572,
-   "acum": 3979.38
+   "acum": 4002.68
   },
   {
    "fecha": "2026-11-16",
    "in": 2437,
-   "out": 934.02,
+   "out": 923.6,
    "n": 12,
    "porFuente": {
     "Stripe": 2437,
-    "WhatsApp · Alfredo": -16.13,
-    "WhatsApp · Pagos (Majo)": -917.89
+    "WhatsApp · Alfredo": -15.95,
+    "WhatsApp · Pagos (Majo)": -907.65
    },
-   "neto": 1502.98,
-   "acum": 5482.36
+   "neto": 1513.4,
+   "acum": 5516.08
   }
  ],
  "movimientos": [
@@ -441,7 +441,7 @@
   {
    "d": "2026-11-01",
    "t": "in",
-   "usd": 69.03,
+   "usd": 68.26,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Jimmy Nasopoulos",
    "gs": 428000
@@ -449,7 +449,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 318.06,
+   "usd": 314.51,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Laura Mazman",
    "gs": 1972000
@@ -457,7 +457,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 152.42,
+   "usd": 150.72,
    "fuente": "Pagopar",
    "det": "Tarjetas de crédito y débito · Cheri Cooper",
    "gs": 945000
@@ -465,12 +465,12 @@
   {
    "d": "2026-11-01",
    "t": "out",
-   "usd": 161.29,
+   "usd": 159.49,
    "fuente": "WhatsApp · Alfredo",
    "det": "Transferencia ueno a Alfredo David Sanchez Vargas",
    "gs": 1000000,
    "rub": {
-    "chofer": 161.29,
+    "chofer": 159.49,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -479,12 +479,12 @@
   {
    "d": "2026-11-02",
    "t": "out",
-   "usd": 32.26,
+   "usd": 31.9,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Transfer luque-aer",
    "gs": 200000,
    "rub": {
-    "chofer": 32.26,
+    "chofer": 31.9,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -493,7 +493,7 @@
   {
    "d": "2026-11-03",
    "t": "out",
-   "usd": 82.26,
+   "usd": 81.34,
    "fuente": "WhatsApp · Luis",
    "det": "Transferencia Itaú a Banco Familiar",
    "gs": 510000,
@@ -501,18 +501,18 @@
     "chofer": 0,
     "comb": 0,
     "peajes": 0,
-    "otros": 82.26
+    "otros": 81.34
    }
   },
   {
    "d": "2026-11-04",
    "t": "out",
-   "usd": 852.42,
+   "usd": 842.9,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago servicio aereo roberto 16/11",
    "gs": 5285000,
    "rub": {
-    "chofer": 852.42,
+    "chofer": 842.9,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -521,12 +521,12 @@
   {
    "d": "2026-11-05",
    "t": "out",
-   "usd": 141.94,
+   "usd": 140.35,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pueden confirmar recepción? Un saludo!",
    "gs": 880000,
    "rub": {
-    "chofer": 141.94,
+    "chofer": 140.35,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -535,12 +535,12 @@
   {
    "d": "2026-11-06",
    "t": "out",
-   "usd": 32.26,
+   "usd": 31.9,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago transfer AER",
    "gs": 200000,
    "rub": {
-    "chofer": 32.26,
+    "chofer": 31.9,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -549,12 +549,12 @@
   {
    "d": "2026-11-07",
    "t": "out",
-   "usd": 131.61,
+   "usd": 130.14,
    "fuente": "WhatsApp · Gustavo",
    "det": "Comprobante de pago por servicios del 8 y 9 noviembre! @47394980937921",
    "gs": 816000,
    "rub": {
-    "chofer": 131.61,
+    "chofer": 130.14,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -563,12 +563,12 @@
   {
    "d": "2026-11-07",
    "t": "out",
-   "usd": 123.55,
+   "usd": 122.17,
    "fuente": "WhatsApp · Alfredo",
    "det": "comprobante de pago por servicios del 9 de nov mas horas extras",
    "gs": 766000,
    "rub": {
-    "chofer": 123.55,
+    "chofer": 122.17,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -577,12 +577,12 @@
   {
    "d": "2026-11-07",
    "t": "out",
-   "usd": 225.81,
+   "usd": 223.29,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Foz",
    "gs": 1400000,
    "rub": {
-    "chofer": 225.81,
+    "chofer": 223.29,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -591,12 +591,12 @@
   {
    "d": "2026-11-09",
    "t": "out",
-   "usd": 241.94,
+   "usd": 239.23,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago CENTYNEG",
    "gs": 1500000,
    "rub": {
-    "chofer": 241.94,
+    "chofer": 239.23,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -605,12 +605,12 @@
   {
    "d": "2026-11-09",
    "t": "out",
-   "usd": 181.45,
+   "usd": 179.43,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Osmar Espinola",
    "gs": 1125000,
    "rub": {
-    "chofer": 181.45,
+    "chofer": 179.43,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -619,12 +619,12 @@
   {
    "d": "2026-11-09",
    "t": "out",
-   "usd": 138.71,
+   "usd": 137.16,
    "fuente": "WhatsApp · Alfredo",
    "det": "Pago de servicios",
    "gs": 860000,
    "rub": {
-    "chofer": 138.71,
+    "chofer": 137.16,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -633,12 +633,12 @@
   {
    "d": "2026-11-09",
    "t": "out",
-   "usd": 548.39,
+   "usd": 542.26,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "10/11 viaje samuel pruczanski Posadas-ASU () 1.700.000",
    "gs": 3400000,
    "rub": {
-    "chofer": 548.39,
+    "chofer": 542.26,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -647,12 +647,12 @@
   {
    "d": "2026-11-09",
    "t": "out",
-   "usd": 193.55,
+   "usd": 191.39,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago juan cde.",
    "gs": 1200000,
    "rub": {
-    "chofer": 193.55,
+    "chofer": 191.39,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -661,12 +661,12 @@
   {
    "d": "2026-11-10",
    "t": "out",
-   "usd": 12.9,
+   "usd": 12.76,
    "fuente": "WhatsApp · Luis",
    "det": "Comprobante de pago para el servicio de transfer hoy zona C",
    "gs": 80000,
    "rub": {
-    "chofer": 12.9,
+    "chofer": 12.76,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -675,13 +675,13 @@
   {
    "d": "2026-11-10",
    "t": "out",
-   "usd": 32.26,
+   "usd": 31.9,
    "fuente": "WhatsApp · Alfredo",
    "det": "Comprobante de pago, devolución pago de combustible @21672522477736",
    "gs": 200000,
    "rub": {
     "chofer": 0,
-    "comb": 32.26,
+    "comb": 31.9,
     "peajes": 0,
     "otros": 0
    }
@@ -689,12 +689,12 @@
   {
    "d": "2026-11-10",
    "t": "out",
-   "usd": 104.84,
+   "usd": 103.67,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Antonio, viaje foz (petra van der spoel)",
    "gs": 650000,
    "rub": {
-    "chofer": 104.84,
+    "chofer": 103.67,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -703,13 +703,13 @@
   {
    "d": "2026-11-10",
    "t": "out",
-   "usd": 48.39,
+   "usd": 47.85,
    "fuente": "WhatsApp · Gustavo",
    "det": "Pago Combustible",
    "gs": 300000,
    "rub": {
     "chofer": 0,
-    "comb": 48.39,
+    "comb": 47.85,
     "peajes": 0,
     "otros": 0
    }
@@ -717,12 +717,12 @@
   {
    "d": "2026-11-12",
    "t": "out",
-   "usd": 258.06,
+   "usd": 255.18,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Quincena Enzo Dotto",
    "gs": 1600000,
    "rub": {
-    "chofer": 258.06,
+    "chofer": 255.18,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -731,12 +731,12 @@
   {
    "d": "2026-11-12",
    "t": "out",
-   "usd": 112.9,
+   "usd": 111.64,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago Alfredo Jara viaje Dennis, 12/11",
    "gs": 700000,
    "rub": {
-    "chofer": 112.9,
+    "chofer": 111.64,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -745,12 +745,12 @@
   {
    "d": "2026-11-12",
    "t": "out",
-   "usd": 516.13,
+   "usd": 510.37,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "comprobante @76051153715239",
    "gs": 3200000,
    "rub": {
-    "chofer": 516.13,
+    "chofer": 510.37,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -759,12 +759,12 @@
   {
    "d": "2026-11-13",
    "t": "out",
-   "usd": 104.84,
+   "usd": 103.67,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago cambio de aceite a H1 a Luis",
    "gs": 650000,
    "rub": {
-    "chofer": 104.84,
+    "chofer": 103.67,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -773,12 +773,12 @@
   {
    "d": "2026-11-13",
    "t": "out",
-   "usd": 183.39,
+   "usd": 181.34,
    "fuente": "WhatsApp · Alfredo",
    "det": "Comprobante @21672522477736",
    "gs": 1137000,
    "rub": {
-    "chofer": 183.39,
+    "chofer": 181.34,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -787,12 +787,12 @@
   {
    "d": "2026-11-13",
    "t": "out",
-   "usd": 80.65,
+   "usd": 79.74,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "comprobante",
    "gs": 500000,
    "rub": {
-    "chofer": 80.65,
+    "chofer": 79.74,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -801,12 +801,12 @@
   {
    "d": "2026-11-13",
    "t": "out",
-   "usd": 209.68,
+   "usd": 207.34,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago cde",
    "gs": 1300000,
    "rub": {
-    "chofer": 209.68,
+    "chofer": 207.34,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -815,12 +815,12 @@
   {
    "d": "2026-11-16",
    "t": "out",
-   "usd": 16.13,
+   "usd": 15.95,
    "fuente": "WhatsApp · Alfredo",
    "det": "pago filtro de aire",
    "gs": 100000,
    "rub": {
-    "chofer": 16.13,
+    "chofer": 15.95,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -829,12 +829,12 @@
   {
    "d": "2026-11-16",
    "t": "out",
-   "usd": 274.19,
+   "usd": 271.13,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago a alfredo jara, viaje Michael 17/11 (asu-puerto)",
    "gs": 1700000,
    "rub": {
-    "chofer": 274.19,
+    "chofer": 271.13,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -843,7 +843,7 @@
   {
    "d": "2026-11-16",
    "t": "out",
-   "usd": 220.32,
+   "usd": 217.86,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "Pago a enzo dotto por comisiónes",
    "gs": 1366000,
@@ -851,18 +851,18 @@
     "chofer": 0,
     "comb": 0,
     "peajes": 0,
-    "otros": 220.32
+    "otros": 217.86
    }
   },
   {
    "d": "2026-11-13",
    "t": "out",
-   "usd": 168.55,
+   "usd": 166.67,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "@104260482130173 vuelo panorámico",
    "gs": 1045000,
    "rub": {
-    "chofer": 168.55,
+    "chofer": 166.67,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -871,12 +871,12 @@
   {
    "d": "2026-11-16",
    "t": "out",
-   "usd": 274.19,
+   "usd": 271.13,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago alfredo jara, viaje Samuel 19/11",
    "gs": 1700000,
    "rub": {
-    "chofer": 274.19,
+    "chofer": 271.13,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -885,12 +885,12 @@
   {
    "d": "2026-11-16",
    "t": "out",
-   "usd": 149.19,
+   "usd": 147.53,
    "fuente": "WhatsApp · Pagos (Majo)",
    "det": "pago vuelo panorámico",
    "gs": 925000,
    "rub": {
-    "chofer": 149.19,
+    "chofer": 147.53,
     "comb": 0,
     "peajes": 0,
     "otros": 0
@@ -899,7 +899,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 103.23,
+   "usd": 102.07,
    "fuente": "Transferencia",
    "det": "ALFREDO DAVID SANCHEZ VARGAS (comprobante en Alfredo)",
    "gs": 640000
@@ -907,7 +907,7 @@
   {
    "d": "2026-11-12",
    "t": "in",
-   "usd": 88.71,
+   "usd": 87.72,
    "fuente": "Transferencia",
    "det": "Dennis (pérdida 150mil gs) (comprobante en Pagos (Majo))",
    "gs": 550000
@@ -915,7 +915,7 @@
   {
    "d": "2026-11-13",
    "t": "in",
-   "usd": 4.84,
+   "usd": 4.78,
    "fuente": "Transferencia",
    "det": "Luis Milciades Vazquez Caceres (comprobante en Pagos (Majo))",
    "gs": 30000
@@ -923,7 +923,7 @@
   {
    "d": "2026-11-02",
    "t": "in",
-   "usd": 185.16,
+   "usd": 183.09,
    "fuente": "Transferencia",
    "det": "•:• Alelí •:• (comprobante en GHL)",
    "gs": 1148000
@@ -931,7 +931,7 @@
   {
    "d": "2026-11-07",
    "t": "in",
-   "usd": 467.58,
+   "usd": 462.36,
    "fuente": "Transferencia",
    "det": "•:• Alelí •:• (comprobante en GHL)",
    "gs": 2899000
@@ -939,7 +939,7 @@
   {
    "d": "2026-11-06",
    "t": "in",
-   "usd": 1444.38,
+   "usd": 1428.25,
    "fuente": "Transferencia",
    "det": "FRONTESUR E.A.S. (comprobante en GHL)",
    "gs": 8955131
@@ -1051,7 +1051,7 @@
   {
    "riel": "Pagopar",
    "cobros": 3,
-   "bruto": 539.51,
+   "bruto": 533.49,
    "comision": null,
    "pct": null,
    "nota": "se mide con la liquidación"
@@ -1067,19 +1067,19 @@
  ],
  "pagopar": {
   "cobradoGs": 3345000,
-  "cobradoUsd": 539.51,
+  "cobradoUsd": 533.49,
   "diario": [
    {
     "fecha": "2026-11-01",
     "cobros": 1,
     "gs": 428000,
-    "usd": 69.03
+    "usd": 68.26
    },
    {
     "fecha": "2026-11-02",
     "cobros": 2,
     "gs": 2917000,
-    "usd": 470.48
+    "usd": 465.23
    }
   ],
   "pruebasExcluidas": 0,
@@ -1088,7 +1088,7 @@
   "acreditaciones": [],
   "comision": null,
   "pendienteGs": 3345000,
-  "pendienteUsd": 539.52
+  "pendienteUsd": 533.49
  },
  "giros": [
   {
@@ -1233,7 +1233,7 @@
    "fecha": "2026-11-01",
    "grupo": "Pagos (Majo)",
    "gs": 1941000,
-   "usd": 313.06,
+   "usd": 309.57,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/kzmyba (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1241,7 +1241,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 300000,
-   "usd": 48.39,
+   "usd": 47.85,
    "concepto": ". Pago",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1249,7 +1249,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1257,7 +1257,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 136000,
-   "usd": 21.94,
+   "usd": 21.69,
    "concepto": ".peaje",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1265,7 +1265,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 60000,
-   "usd": 9.68,
+   "usd": 9.57,
    "concepto": ". lavadero",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1273,7 +1273,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 20000,
-   "usd": 3.23,
+   "usd": 3.19,
    "concepto": ". parking",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1281,7 +1281,7 @@
    "fecha": "2026-11-01",
    "grupo": "Alfredo",
    "gs": 154000,
-   "usd": 24.84,
+   "usd": 24.56,
    "concepto": "Sobran , podes usar para hotel si hace falta",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1289,7 +1289,7 @@
    "fecha": "2026-11-02",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "viático...",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1297,7 +1297,7 @@
    "fecha": "2026-11-02",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "Viático",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1305,7 +1305,7 @@
    "fecha": "2026-11-04",
    "grupo": "Pagos (Majo)",
    "gs": 449000,
-   "usd": 72.42,
+   "usd": 71.61,
    "concepto": "Link: https://paraguaytransfers.com/pagopar/4a7j7c (hoy Gs. ",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1313,7 +1313,7 @@
    "fecha": "2026-11-05",
    "grupo": "Juan CDE",
    "gs": 12000,
-   "usd": 1.94,
+   "usd": 1.91,
    "concepto": "el litro el combustible no entra",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1321,7 +1321,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 8000,
-   "usd": 1.29,
+   "usd": 1.28,
    "concepto": "Agrégale un GS por el parking delultimo Aero",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1329,7 +1329,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 50000,
-   "usd": 8.06,
+   "usd": 7.97,
    "concepto": "Estacionamiento mas o menos",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1337,7 +1337,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 350000,
-   "usd": 56.45,
+   "usd": 55.82,
    "concepto": "• Viaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1345,7 +1345,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "• Viático:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1353,7 +1353,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 136000,
-   "usd": 21.94,
+   "usd": 21.69,
    "concepto": "• Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1361,7 +1361,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 50000,
-   "usd": 8.06,
+   "usd": 7.97,
    "concepto": "• Estacionamiento:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1369,7 +1369,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 350000,
-   "usd": 56.45,
+   "usd": 55.82,
    "concepto": "• Viaje: + IVA 35.000 = 385.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1377,7 +1377,7 @@
    "fecha": "2026-11-06",
    "grupo": "Alfredo",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "• Viático: + IVA 8.000 = 88.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1385,7 +1385,7 @@
    "fecha": "2026-11-06",
    "grupo": "Gustavo",
    "gs": 250000,
-   "usd": 40.32,
+   "usd": 39.87,
    "concepto": "• Viaje a disposición (lunes):",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1393,7 +1393,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 350000,
-   "usd": 56.45,
+   "usd": 55.82,
    "concepto": "• Viaje09/11: + IVA 35.000 = 385.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1401,7 +1401,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 80000,
-   "usd": 12.9,
+   "usd": 12.76,
    "concepto": "• Viático: + IVA 8.000 = 88.000",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1409,7 +1409,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 136000,
-   "usd": 21.94,
+   "usd": 21.69,
    "concepto": "• Peaje:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1417,7 +1417,7 @@
    "fecha": "2026-11-07",
    "grupo": "Pagos (Majo)",
    "gs": 50000,
-   "usd": 8.06,
+   "usd": 7.97,
    "concepto": "• Estacionamiento:",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1425,7 +1425,7 @@
    "fecha": "2026-11-12",
    "grupo": "Juan CDE",
    "gs": 200000,
-   "usd": 32.26,
+   "usd": 31.9,
    "concepto": "(Queda ₲ a favor para el próximo viaje)",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1433,7 +1433,7 @@
    "fecha": "2026-11-13",
    "grupo": "Alfredo",
    "gs": 136000,
-   "usd": 21.94,
+   "usd": 21.69,
    "concepto": "Peajes: ₲",
    "motivo": "mencionado en el chat, sin comprobante"
   },
@@ -1441,7 +1441,7 @@
    "fecha": "2026-11-15",
    "grupo": "Alfredo",
    "gs": 200000,
-   "usd": 32.26,
+   "usd": 31.9,
    "concepto": "combustible (Ahora estoy pasando al lado Paraguayo ... Mucho tráfico para)",
    "motivo": "mencionado en el chat, sin comprobante"
   }
@@ -1452,14 +1452,14 @@
    "cuenta": "ueno",
    "momento": "actual",
    "gs": 33209646,
-   "usd": 5356.39
+   "usd": 5296.59
   },
   {
    "fecha": "2026-11-06",
    "cuenta": "ueno",
    "momento": "actual",
    "gs": 7124475,
-   "usd": 1149.11
+   "usd": 1136.28
   }
  ]
 }
