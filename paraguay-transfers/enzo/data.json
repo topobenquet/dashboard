@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T22:02:20.592Z",
+ "generated": "2026-11-17T00:30:03.376Z",
  "hoy": "2026-11-16",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -51,25 +51,25 @@
    "diasMes": 30,
    "diasPasados": 16,
    "ventas": 14,
-   "facturacion": 7598,
-   "proyeccion": 14246.25,
-   "base": 151.96,
+   "facturacion": 7893,
+   "proyeccion": 14799.38,
+   "base": 157.86,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 10402,
+    "falta": 10107,
     "bono": 100
    },
    "ticketsAltos": 9,
    "bonoTicket": 90,
-   "margen": 0.3749,
+   "margen": 0.41340000000000005,
    "margenOk": true,
    "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 90,
-   "total": 241.96,
-   "pendienteCobro": 2069,
+   "total": 247.86,
+   "pendienteCobro": 2364,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -77,7 +77,7 @@
     },
     {
      "lunes": "2026-11-09",
-     "monto": 3534
+     "monto": 3829
     }
    ],
    "detalle": [
@@ -98,10 +98,10 @@
      "cliente": "andreas",
      "ruta": "ASU-CDE",
      "tipo": "Traslado",
-     "monto": 1099,
-     "margen": 0.12,
+     "monto": 1394,
+     "margen": 0.3,
      "alto": true,
-     "saldo": 0
+     "saldo": 295
     },
     {
      "reserva": "2026-11-10",
@@ -733,9 +733,9 @@
    "cerrada": true,
    "pagada": false,
    "ventas": 13,
-   "facturacion": 7201,
-   "comision": 144.02,
-   "pendienteCobro": 1791,
+   "facturacion": 7496,
+   "comision": 149.92,
+   "pendienteCobro": 2086,
    "detalle": [
     {
      "reserva": "2026-11-02",
@@ -863,9 +863,9 @@
      "cliente": "andreas",
      "ruta": "ASU-CDE",
      "tipo": "Traslado",
-     "monto": 1099,
-     "comision": 21.98,
-     "saldo": 0
+     "monto": 1394,
+     "comision": 27.88,
+     "saldo": 295
     }
    ]
   }
