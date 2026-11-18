@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T18:30:19.706Z",
+ "generated": "2026-11-18T20:30:24.749Z",
  "tc": 6200,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -233,13 +233,14 @@
   {
    "fecha": "2026-11-18",
    "in": 128,
-   "out": 0,
-   "n": 2,
+   "out": 1064.84,
+   "n": 6,
    "porFuente": {
-    "Stripe": 128
+    "Stripe": 128,
+    "WhatsApp · Pagos (Majo)": -1064.84
    },
-   "neto": 128,
-   "acum": 6020.36
+   "neto": -936.84,
+   "acum": 4955.52
   }
  ],
  "movimientos": [
@@ -942,6 +943,62 @@
    "rub": {
     "chofer": 149.19,
     "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-18",
+   "t": "out",
+   "usd": 590.65,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Resumen de transferencias – Traslados en Argentina",
+   "gs": 3662000,
+   "rub": {
+    "chofer": 590.65,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-18",
+   "t": "out",
+   "usd": 319.35,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Resumen de transferencias – Traslado en Argentina",
+   "gs": 1980000,
+   "rub": {
+    "chofer": 319.35,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-18",
+   "t": "out",
+   "usd": 80.65,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago a gustavo por servicio de traslado de gustavo antezana 17 y 18 de noviembre",
+   "gs": 500000,
+   "rub": {
+    "chofer": 80.65,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-18",
+   "t": "out",
+   "usd": 74.19,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "devolución de combustible a alfredo",
+   "gs": 460000,
+   "rub": {
+    "chofer": 0,
+    "comb": 74.19,
     "peajes": 0,
     "otros": 0
    }
