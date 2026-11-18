@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T18:30:13.699Z",
+ "generated": "2026-11-18T20:30:03.578Z",
  "hoy": "2026-11-18",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -51,14 +51,14 @@
    "diasMes": 30,
    "diasPasados": 18,
    "ventas": 16,
-   "facturacion": 8139,
-   "proyeccion": 13565,
-   "base": 162.78,
+   "facturacion": 8021,
+   "proyeccion": 13368.33,
+   "base": 160.42,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9861,
+    "falta": 9979,
     "bono": 100
    },
    "ticketsAltos": 9,
@@ -68,8 +68,8 @@
    "sinCostos": 7,
    "bonoAplica": true,
    "bonoTotal": 90,
-   "total": 252.78,
-   "pendienteCobro": 2187,
+   "total": 250.42,
+   "pendienteCobro": 2069,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -81,7 +81,7 @@
     },
     {
      "lunes": "2026-11-16",
-     "monto": 246
+     "monto": 128
     }
    ],
    "detalle": [
@@ -91,10 +91,10 @@
      "cliente": "sean",
      "ruta": "AERO-ASU",
      "tipo": "Traslado",
-     "monto": 197,
+     "monto": 79,
      "margen": null,
      "alto": false,
-     "saldo": 118
+     "saldo": 0
     },
     {
      "reserva": "2026-11-18",
@@ -153,7 +153,7 @@
     },
     {
      "reserva": "2026-11-10",
-     "salida": null,
+     "salida": "2027-01-01",
      "cliente": "taryn",
      "ruta": "ASU-FOZ-ASU",
      "tipo": "Traslado",
@@ -736,9 +736,9 @@
    "cerrada": false,
    "pagada": false,
    "ventas": 3,
-   "facturacion": 643,
-   "comision": 12.86,
-   "pendienteCobro": 396,
+   "facturacion": 525,
+   "comision": 10.5,
+   "pendienteCobro": 278,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -756,9 +756,9 @@
      "cliente": "sean",
      "ruta": "AERO-ASU",
      "tipo": "Traslado",
-     "monto": 197,
-     "comision": 3.94,
-     "saldo": 118
+     "monto": 79,
+     "comision": 1.58,
+     "saldo": 0
     },
     {
      "reserva": "2026-11-18",
@@ -895,7 +895,7 @@
     },
     {
      "reserva": "2026-11-10",
-     "salida": null,
+     "salida": "2027-01-01",
      "cliente": "taryn",
      "ruta": "ASU-FOZ-ASU",
      "tipo": "Traslado",
