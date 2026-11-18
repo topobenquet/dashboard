@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T12:30:16.643Z",
+ "generated": "2026-11-18T14:30:03.982Z",
  "hoy": "2026-11-18",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -63,9 +63,9 @@
    },
    "ticketsAltos": 9,
    "bonoTicket": 90,
-   "margen": 0.41340000000000005,
+   "margen": 0.41950000000000004,
    "margenOk": true,
-   "sinCostos": 7,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 90,
    "total": 248.84,
@@ -136,7 +136,7 @@
      "ruta": "Terminal de Ómnibus de Asunción → destino no especificado",
      "tipo": "Traslado",
      "monto": 197,
-     "margen": null,
+     "margen": 0.56,
      "alto": false,
      "saldo": 0
     },
