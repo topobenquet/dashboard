@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T10:21:01.782Z",
+  "generated": "2026-11-18T22:01:32.735Z",
   "lastSyncLabel": "18 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -167,13 +167,13 @@
       "mes": "Septiembre",
       "leads": 315,
       "reservas": 61,
-      "revenue": 15088.66,
-      "chofer": 8943.22,
-      "comb": 773.91,
-      "peajes": 268.94,
+      "revenue": 15043.95,
+      "chofer": 8916.72,
+      "comb": 771.42,
+      "peajes": 268.08,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 969.8,
+      "otros": 966.66,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -188,13 +188,13 @@
       "mes": "Octubre",
       "leads": 362,
       "reservas": 77,
-      "revenue": 27355.88,
-      "chofer": 15123.34,
-      "comb": 648.87,
+      "revenue": 27268.91,
+      "chofer": 15074.54,
+      "comb": 646.77,
       "peajes": 0,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 2813.91,
+      "otros": 2804.83,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
@@ -207,22 +207,22 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 204,
-      "reservas": 18,
-      "revenue": 11755.57,
-      "chofer": 5361.32,
+      "leads": 231,
+      "reservas": 20,
+      "revenue": 11874.41,
+      "chofer": 5521.97,
       "comb": 0,
       "peajes": 89.94,
-      "comision": 486.27,
+      "comision": 490.11,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 195,
+      "gAds": 216,
       "meta": 0,
-      "costoSheet": 6000.44,
-      "gananciaSheet": 7325.01,
-      "leadsPy": 83,
+      "costoSheet": 6139.76,
+      "gananciaSheet": 7313.69,
+      "leadsPy": 101,
       "ventasPy": 2,
-      "ventasExt": 16,
+      "ventasExt": 18,
       "ventasSinCruce": 0,
       "base": "caja+costos-planilla"
     }
@@ -300,10 +300,10 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 194.7,
-      "clicks": 65,
-      "impr": 463,
-      "conv": 10
+      "spend": 216.11,
+      "clicks": 70,
+      "impr": 494,
+      "conv": 13
     }
   ],
   "trips": [
@@ -7561,6 +7561,20 @@
     },
     {
       "mes": "Noviembre",
+      "route": "",
+      "cliente": "lara skincare",
+      "pais": "Australia",
+      "conductor": "Alfredo Jara",
+      "pago": 397,
+      "sena": 119,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 385.09,
+      "fechaReserva": "13/11/26",
+      "fechaSalida": "13/11/26"
+    },
+    {
+      "mes": "Noviembre",
       "route": "FOZ-Hotel",
       "cliente": "cathy",
       "pais": "Taiwán",
@@ -7694,8 +7708,8 @@
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 184.1,
+      "choferCost": 40,
+      "neto": 156.68,
       "fechaReserva": "20/10/26",
       "fechaSalida": "17/11/26"
     },
@@ -7704,12 +7718,12 @@
       "route": "Vehículo a disposición",
       "cliente": "Carlos Antezana",
       "pais": "Japón",
-      "conductor": "Alfredo Sánchez PT",
+      "conductor": "Gustavo Pereira",
       "pago": 197,
       "sena": 0,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 184.1,
+      "choferCost": 40,
+      "neto": 156.68,
       "fechaReserva": "20/10/26",
       "fechaSalida": "18/11/26"
     },
@@ -7721,7 +7735,7 @@
       "conductor": "Alfredo Jara",
       "pago": 0,
       "sena": 0,
-      "restante": 554,
+      "restante": 0,
       "choferCost": 278.69,
       "neto": -278.69,
       "fechaReserva": "14/09/26",
@@ -7743,17 +7757,45 @@
     },
     {
       "mes": "Noviembre",
+      "route": "AERO-ASU",
+      "cliente": "sean",
+      "pais": "USA",
+      "conductor": "Luis Vásquez",
+      "pago": 79,
+      "sena": 79,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 76.63,
+      "fechaReserva": "18/11/26",
+      "fechaSalida": "19/11/26"
+    },
+    {
+      "mes": "Noviembre",
       "route": "Terminal de Ómnibus de Asunción → destino no especificado",
       "cliente": "angela",
       "pais": "Argentina",
-      "conductor": "",
+      "conductor": "Ingrid Domínguez",
       "pago": 197,
       "sena": 197,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 191.09,
+      "choferCost": 80.65,
+      "neto": 110.44,
       "fechaReserva": "10/11/26",
       "fechaSalida": "20/11/26"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "AERO-Hotel.Factoria",
+      "cliente": "leanne",
+      "pais": "UK",
+      "conductor": "Luis Vásquez",
+      "pago": 49,
+      "sena": 49,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 47.53,
+      "fechaReserva": "18/11/26",
+      "fechaSalida": "26/11/26"
     },
     {
       "mes": "Noviembre",
@@ -7865,21 +7907,7 @@
       "choferCost": 0,
       "neto": 1609.23,
       "fechaReserva": "10/11/26",
-      "fechaSalida": ""
-    },
-    {
-      "mes": "Noviembre",
-      "route": "",
-      "cliente": "lara skincare",
-      "pais": "Australia",
-      "conductor": "Alfredo Jara",
-      "pago": 397,
-      "sena": 119,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 385.09,
-      "fechaReserva": "13/11/26",
-      "fechaSalida": "13/11/26"
+      "fechaSalida": "01/01/27"
     },
     {
       "mes": "Noviembre",
@@ -8024,7 +8052,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-18": 22,
+      "2026-11-18": 49,
       "2026-11-17": 36,
       "2026-11-16": 8,
       "2026-11-15": 6,
@@ -8078,7 +8106,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
-      "2026-11-18": 16,
+      "2026-11-18": 34,
       "2026-11-17": 27,
       "2026-11-16": 3,
       "2026-11-15": 1,
@@ -8104,11 +8132,12 @@
       "2026-11-07": 2,
       "2026-11-02": 2,
       "2026-11-10": 3,
+      "2026-11-13": 1,
       "2026-11-04": 1,
       "2026-11-11": 1,
+      "2026-11-18": 2,
       "2026-11-16": 1,
       "2026-11-05": 1,
-      "2026-11-13": 1,
       "2026-11-17": 1
     },
     "gads": {
@@ -8420,13 +8449,13 @@
       "2026-11-15": 18.94,
       "2026-11-16": 10.61,
       "2026-11-17": 7.67,
-      "2026-11-18": 10.15
+      "2026-11-18": 31.56
     }
   },
   "resenas": {
     "count": 92,
     "rating": 5,
-    "actualizado": "2026-11-17T23:10:10.214Z",
+    "actualizado": "2026-11-18T20:10:01.741Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8732,6 +8761,11 @@
         "fecha": "2026-11-17",
         "count": 92,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-18",
+        "count": 92,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8864,10 +8898,10 @@
       "2026-11-15": 18,
       "2026-11-16": 23,
       "2026-11-17": 14,
-      "2026-11-18": 2
+      "2026-11-18": 15
     },
     "monthly": {
-      "Noviembre": 314,
+      "Noviembre": 327,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
