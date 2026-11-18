@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T11:10:01.532Z",
+ "generated": "2026-11-18T23:10:05.273Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -57,7 +57,7 @@
     }
    ],
    "gsKm": 1502,
-   "ultimoKm": 103541
+   "ultimoKm": 103585
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -76,9 +76,9 @@
  "resumen": {
   "H1": {
    "kmViajes": 1064,
-   "kmFuera": 1120,
+   "kmFuera": 1164,
    "viajes": 9,
-   "costoComb": 3280368,
+   "costoComb": 3346456,
    "pagado": 5222
   },
   "Voxy": {
@@ -97,11 +97,39 @@
   },
   {
    "chofer": "Gustavo",
-   "lecturas": 4,
-   "conFoto": 4
+   "lecturas": 5,
+   "conFoto": 5
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-11-18",
+   "fechaFin": "2026-11-18",
+   "horaIni": "18:37",
+   "horaFin": null,
+   "kmIni": 103585,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": null,
+   "tanqueFin": null,
+   "traslados": [
+    "Vehículo a disposición"
+   ],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": true
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -1398,6 +1426,17 @@
  "huecos": [
   {
    "vehiculo": "H1",
+   "desde": 103541,
+   "hasta": 103585,
+   "km": 44,
+   "fechaDesde": "2026-11-17",
+   "fechaHasta": "2026-11-18",
+   "choferes": [
+    "Gustavo"
+   ]
+  },
+  {
+   "vehiculo": "H1",
    "desde": 103477,
    "hasta": 103496,
    "km": 19,
@@ -2513,7 +2552,7 @@
  "proximos": [
   {
    "fecha": "2026-11-18",
-   "chofer": "Alfredo",
+   "chofer": "Gustavo",
    "vehiculo": "H1",
    "ruta": "Vehículo a disposición",
    "km": null,
@@ -2537,6 +2576,13 @@
   }
  ],
  "alertas": [
+  {
+   "key": "hueco:H1:103541:103585",
+   "nivel": "juan",
+   "texto": "H1: 44 km sin traslado entre el 17/11 (km 103.541, Gustavo) y el 18/11 (km 103.585, Gustavo).",
+   "ts": 1795037836,
+   "fecha": "2026-11-18"
+  },
   {
    "key": "sinkm:Alfredo:2026-11-17:ASU-PtoIguazu",
    "nivel": "grupo",
