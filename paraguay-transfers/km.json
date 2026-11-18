@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T21:10:06.225Z",
+ "generated": "2026-11-18T00:40:10.565Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -2551,6 +2551,20 @@
   }
  ],
  "alertas": [
+  {
+   "key": "sinkm:Alfredo:2026-11-17:ASU-PtoIguazu",
+   "nivel": "grupo",
+   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado ASU-PtoIguazu del 17/11. Mandalas con el número escrito, por favor.",
+   "ts": 1794970799,
+   "fecha": "2026-11-17"
+  },
+  {
+   "key": "sinkm:Alfredo:2026-11-17:Vehículo a disposición",
+   "nivel": "grupo",
+   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado Vehículo a disposición del 17/11. Mandalas con el número escrito, por favor.",
+   "ts": 1794970799,
+   "fecha": "2026-11-17"
+  },
   {
    "key": "sinkm:Gustavo:2026-11-16:Vehículo a disposición",
    "nivel": "grupo",
