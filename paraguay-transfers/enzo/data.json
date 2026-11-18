@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T10:21:34.169Z",
+ "generated": "2026-11-18T12:30:16.643Z",
  "hoy": "2026-11-18",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,25 +50,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 18,
-   "ventas": 14,
-   "facturacion": 7893,
-   "proyeccion": 13155,
-   "base": 157.86,
+   "ventas": 15,
+   "facturacion": 7942,
+   "proyeccion": 13236.67,
+   "base": 158.84,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 10107,
+    "falta": 10058,
     "bono": 100
    },
    "ticketsAltos": 9,
    "bonoTicket": 90,
    "margen": 0.41340000000000005,
    "margenOk": true,
-   "sinCostos": 6,
+   "sinCostos": 7,
    "bonoAplica": true,
    "bonoTotal": 90,
-   "total": 247.86,
+   "total": 248.84,
    "pendienteCobro": 2069,
    "semanas": [
     {
@@ -78,9 +78,24 @@
     {
      "lunes": "2026-11-09",
      "monto": 3829
+    },
+    {
+     "lunes": "2026-11-16",
+     "monto": 49
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-18",
+     "salida": "2026-11-26",
+     "cliente": "leanne",
+     "ruta": "AERO-Hotel.Factoria",
+     "tipo": "Traslado",
+     "monto": 49,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-13",
      "salida": "2026-11-13",
@@ -709,9 +724,9 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 1,
-   "facturacion": 397,
-   "comision": 7.94,
+   "ventas": 2,
+   "facturacion": 446,
+   "comision": 8.92,
    "pendienteCobro": 278,
    "detalle": [
     {
@@ -723,6 +738,16 @@
      "monto": 397,
      "comision": 7.94,
      "saldo": 278
+    },
+    {
+     "reserva": "2026-11-18",
+     "salida": "2026-11-26",
+     "cliente": "leanne",
+     "ruta": "AERO-Hotel.Factoria",
+     "tipo": "Traslado",
+     "monto": 49,
+     "comision": 0.98,
+     "saldo": 0
     }
    ]
   },
