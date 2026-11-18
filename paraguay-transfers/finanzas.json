@@ -1,17 +1,17 @@
 {
- "generated": "2026-11-18T00:30:16.498Z",
+ "generated": "2026-11-18T10:20:10.131Z",
  "tc": 6180,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
  "mesLabel": "Noviembre 2026",
  "saldos": {
-  "fecha": "2026-11-17",
+  "fecha": "2026-11-18",
   "itauGs": 43605,
   "uenoGs": 7124475,
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 5152.93,
+  "stripeDisponible": 4984.93,
   "stripePendiente": 1084.22,
   "pagoparPendienteUsd": 541.26,
   "relay": null,
@@ -1254,7 +1254,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "$5,153 disponibles en Stripe sin girar."
+   "texto": "$4,985 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
