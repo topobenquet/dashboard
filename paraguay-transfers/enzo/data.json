@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T10:21:49.570Z",
+ "generated": "2026-11-19T14:30:10.902Z",
  "hoy": "2026-11-19",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,25 +50,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 19,
-   "ventas": 16,
-   "facturacion": 8021,
-   "proyeccion": 12664.74,
-   "base": 160.42,
+   "ventas": 17,
+   "facturacion": 8358,
+   "proyeccion": 13196.84,
+   "base": 167.16,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9979,
+    "falta": 9642,
     "bono": 100
    },
-   "ticketsAltos": 9,
-   "bonoTicket": 90,
+   "ticketsAltos": 10,
+   "bonoTicket": 100,
    "margen": 0.41950000000000004,
    "margenOk": true,
-   "sinCostos": 7,
+   "sinCostos": 8,
    "bonoAplica": true,
-   "bonoTotal": 90,
-   "total": 250.42,
+   "bonoTotal": 100,
+   "total": 267.16,
    "pendienteCobro": 2069,
    "semanas": [
     {
@@ -81,10 +81,21 @@
     },
     {
      "lunes": "2026-11-16",
-     "monto": 128
+     "monto": 465
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-19",
+     "salida": null,
+     "cliente": "kate",
+     "ruta": "",
+     "tipo": "Traslado",
+     "monto": 337,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-18",
      "salida": "2026-11-19",
@@ -735,9 +746,9 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 3,
-   "facturacion": 525,
-   "comision": 10.5,
+   "ventas": 4,
+   "facturacion": 862,
+   "comision": 17.24,
    "pendienteCobro": 278,
    "detalle": [
     {
@@ -768,6 +779,16 @@
      "tipo": "Traslado",
      "monto": 49,
      "comision": 0.98,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-19",
+     "salida": null,
+     "cliente": "kate",
+     "ruta": "",
+     "tipo": "Traslado",
+     "monto": 337,
+     "comision": 6.74,
      "saldo": 0
     }
    ]
