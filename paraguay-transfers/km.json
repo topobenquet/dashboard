@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T23:10:05.273Z",
+ "generated": "2026-11-19T11:10:34.657Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 31,
-   "conFoto": 30
+   "lecturas": 32,
+   "conFoto": 31
   },
   {
    "chofer": "Gustavo",
@@ -105,18 +105,19 @@
   {
    "vehiculo": "H1",
    "choferes": [
-    "Gustavo"
+    "Alfredo"
    ],
-   "fechaIni": "2026-11-18",
-   "fechaFin": "2026-11-18",
-   "horaIni": "18:37",
+   "fechaIni": "2026-11-19",
+   "fechaFin": "2026-11-19",
+   "horaIni": "07:47",
    "horaFin": null,
    "kmIni": 103585,
    "kmFin": null,
    "km": null,
-   "tanqueIni": null,
+   "tanqueIni": 0.45,
    "tanqueFin": null,
    "traslados": [
+    "ASU - Posadas",
     "Vehículo a disposición"
    ],
    "kmEsperado": null,
@@ -128,7 +129,7 @@
    "faltanFotos": [],
    "sinFinal": false,
    "abierto": true,
-   "inferido": true
+   "inferido": false
   },
   {
    "vehiculo": "H1",
@@ -2551,14 +2552,6 @@
  ],
  "proximos": [
   {
-   "fecha": "2026-11-18",
-   "chofer": "Gustavo",
-   "vehiculo": "H1",
-   "ruta": "Vehículo a disposición",
-   "km": null,
-   "adelanto": null
-  },
-  {
    "fecha": "2026-11-19",
    "chofer": "Alfredo",
    "vehiculo": "H1",
@@ -2582,13 +2575,6 @@
    "texto": "H1: 44 km sin traslado entre el 17/11 (km 103.541, Gustavo) y el 18/11 (km 103.585, Gustavo).",
    "ts": 1795037836,
    "fecha": "2026-11-18"
-  },
-  {
-   "key": "sinkm:Alfredo:2026-11-17:ASU-PtoIguazu",
-   "nivel": "grupo",
-   "texto": "🚐 Alfredo, no encontré las fotos del km de INICIO y FINAL del traslado ASU-PtoIguazu del 17/11. Mandalas con el número escrito, por favor.",
-   "ts": 1794970799,
-   "fecha": "2026-11-17"
   },
   {
    "key": "hueco:H1:103300:103477",
