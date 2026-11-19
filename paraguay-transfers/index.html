@@ -171,9 +171,16 @@ const rClass = {"Norteamérica":"pill-na","Sudamérica":"pill-sa","Europa":"pill
 function enrich(months) {
   months.forEach(m => {
     m.costos = m.chofer + m.comb + m.peajes + m.comision + m.gAds + m.meta + m.otros + (m.reembolsos||0);
-    m.ganancia = m.revenue - m.costos;
-    m.margen = m.revenue>0 ? m.ganancia/m.revenue : 0;
-    m.perTrip = m.reservas>0 ? m.ganancia/m.reservas : 0;
+    // Ganancia (desde 19/11/2026) la calcula el updater: neto de los viajes ya realizados con costo
+    // de chofer, por fecha de salida, menos Google + Meta del mes. Es la misma cifra que el KPI.
+    if (m.ganancia != null && m.viajesRealizados != null) {
+      m.margen = m.revenueRealizado>0 ? m.ganancia/m.revenueRealizado : 0;
+      m.perTrip = m.viajesRealizados>0 ? m.ganancia/m.viajesRealizados : 0;
+    } else {
+      m.ganancia = m.revenue - m.costos;
+      m.margen = m.revenue>0 ? m.ganancia/m.revenue : 0;
+      m.perTrip = m.reservas>0 ? m.ganancia/m.reservas : 0;
+    }
     m.cierre = m.leads>0 ? m.reservas/m.leads : 0;
     m.ticket = m.reservas>0 ? m.revenue/m.reservas : 0;
     m.totalAds = m.gAds + m.meta;
@@ -194,10 +201,21 @@ function salidaDate(s){
   const d=new Date(yy,+m[2]-1,+m[1]);
   return isNaN(d) ? null : d;
 }
-function mtdTrips(monthNum, dayCut){ let rev=0,gan=0,ven=0; for(const t of DATA.trips){ const r=firstDMY(t.fechaReserva); if(!r||r.mo!==monthNum||r.d>dayCut) continue; rev+=t.pago||0; gan+=t.neto||0; ven++; } return {rev,gan,ven}; }
+// Revenue y ventas: por fecha de reserva. Ganancia: viajes REALIZADOS (estado del updater) por
+// fecha de salida, neto menos Google + Meta de los mismos días. Las reservas futuras no suman.
+function mtdTrips(monthNum, dayCut){
+  let rev=0,ven=0,neto=0,revR=0,viajes=0;
+  for(const t of DATA.trips){
+    const r=firstDMY(t.fechaReserva);
+    if(r&&r.mo===monthNum&&r.d<=dayCut){ rev+=t.pago||0; ven++; }
+    const s=firstDMY(t.fechaSalida);
+    if(t.estado==="realizado"&&s&&s.mo===monthNum&&s.d<=dayCut){ neto+=t.neto||0; revR+=t.pago||0; viajes++; }
+  }
+  return {rev,ven,neto,revR,viajes};
+}
 function sumDays(map, dayCut){ let s=0; for(const k in (map||{})){ if(+k.slice(8,10)<=dayCut) s+=map[k]; } return s; }
-function sumGads(monthNum, dayCut){ const g=DATA.daily?.gads||{}; let s=0; for(const k in g){ if(+k.slice(5,7)===monthNum && +k.slice(8,10)<=dayCut) s+=g[k]; } return s; }
-function deriveKPI(o){ o.margen=o.rev>0?o.gan/o.rev:0; o.ticket=o.ven>0?o.rev/o.ven:0; o.cierre=o.leads>0?o.ven/o.leads:0; o.cac=o.ven>0?o.ads/o.ven:0; o.roas=o.ads>0?o.rev/o.ads:0; return o; }
+function sumGads(monthNum, dayCut){ let s=0; for(const g of [DATA.daily?.gads||{}, DATA.daily?.meta||{}]) for(const k in g){ if(+k.slice(5,7)===monthNum && +k.slice(8,10)<=dayCut) s+=g[k]; } return s; }
+function deriveKPI(o){ o.margen=o.revR>0?o.gan/o.revR:0; o.ticket=o.ven>0?o.rev/o.ven:0; o.cierre=o.leads>0?o.ven/o.leads:0; o.cac=o.ven>0?o.ads/o.ven:0; o.roas=o.ads>0?o.rev/o.ads:0; return o; }
 
 /* ════ SECCIONES ════ */
 function renderCurrentKPIs(root) {
@@ -207,15 +225,18 @@ function renderCurrentKPIs(root) {
   const curNum = curIdx+1, prevNum = prevIdx+1;
   const dom = gen.getDate(), dim = DAYS_IN[curIdx];
   const c = mtdTrips(curNum, dom), p = mtdTrips(prevNum, dom);
-  const cm = deriveKPI({ rev:c.rev, gan:c.gan, ven:c.ven, leads:sumDays(DATA.daily?.leads,dom), ads:sumGads(curNum,dom) });
-  const pm = deriveKPI({ rev:p.rev, gan:p.gan, ven:p.ven, leads:sumDays(DATA.daily?.leadsPrev,dom), ads:sumGads(prevNum,dom) });
+  const ca = sumGads(curNum,dom), pa = sumGads(prevNum,dom);
+  const cm = deriveKPI({ rev:c.rev, gan:c.neto-ca, revR:c.revR, viajes:c.viajes, ven:c.ven, leads:sumDays(DATA.daily?.leads,dom), ads:ca });
+  const pm = deriveKPI({ rev:p.rev, gan:p.neto-pa, revR:p.revR, viajes:p.viajes, ven:p.ven, leads:sumDays(DATA.daily?.leadsPrev,dom), ads:pa });
+  const pr = DATA.porRealizar;
   const proj = dom>0 ? cm.rev/dom*dim : cm.rev;
   const per = `${prevM.mes} 1-${dom}`;
   root.innerHTML += `<div class="section">
     <div class="section-title">${curM.mes} 2026 — al día ${dom} vs ${prevM.mes} (mismos días)</div>
     <div class="kpi-grid">
       ${kpi(`Revenue 1-${dom}`, f$(cm.rev), badge(cm.rev,pm.rev)+" vs "+prevM.mes, `${per}: ${f$(pm.rev)}`, "kpi-blue")}
-      ${kpi(`Ganancia 1-${dom}`, f$(cm.gan), badge(cm.gan,pm.gan)+" vs "+prevM.mes, `${per}: ${f$(pm.gan)}`)}
+      ${kpi(`Ganancia 1-${dom}`, f$(cm.gan), badge(cm.gan,pm.gan)+" vs "+prevM.mes, `${cm.viajes} viajes realizados − ads · ${per}: ${f$(pm.gan)}`)}
+      ${pr ? kpi("Reservado por realizar", f$(pr.usd), `${pr.viajes} viajes`, `no es ganancia · ${pr.reservadosEsteMes.viajes} reservados en ${curM.mes} (${f$(pr.reservadosEsteMes.usd)})`) : ""}
       ${kpi(`Ventas 1-${dom}`, cm.ven, badge(cm.ven,pm.ven)+" vs "+prevM.mes, `${per}: ${pm.ven}`, "kpi-green")}
       ${kpi(`Margen 1-${dom}`, fp(cm.margen), badge(cm.margen,pm.margen)+" vs "+prevM.mes, `${per}: ${fp(pm.margen)}`)}
       ${kpi(`Ticket 1-${dom}`, cm.ven>0?f$(cm.ticket):"–", badge(cm.ticket,pm.ticket)+" vs "+prevM.mes, `${per}: ${pm.ven>0?f$(pm.ticket):"–"}`)}
@@ -243,12 +264,13 @@ function renderMonthly(root) {
   const y = DATA.months.reduce((a,m)=>({
     leads:a.leads+m.leads, reservas:a.reservas+m.reservas, revenue:a.revenue+m.revenue,
     comision:a.comision+m.comision, gAds:a.gAds+m.gAds, meta:a.meta+m.meta, ganancia:a.ganancia+m.ganancia,
-  }),{leads:0,reservas:0,revenue:0,comision:0,gAds:0,meta:0,ganancia:0});
+    revR:a.revR+(m.revenueRealizado??m.revenue), viajes:a.viajes+(m.viajesRealizados??m.reservas),
+  }),{leads:0,reservas:0,revenue:0,comision:0,gAds:0,meta:0,ganancia:0,revR:0,viajes:0});
   rows += `<tr class="hi">
     <td>YTD</td><td>${y.leads}</td><td>${y.reservas}</td><td>${f$(y.revenue)}</td>
     <td class="pos">${fp(y.reservas/y.leads)}</td>
     <td>${f$(y.gAds)}</td><td>${f$(y.meta)}</td>
-    <td class="pos">${f$(y.ganancia)}</td><td>${fp0(y.ganancia/y.revenue)}</td><td>${f$(y.ganancia/y.reservas)}</td>
+    <td class="pos">${f$(y.ganancia)}</td><td>${fp0(y.ganancia/y.revR)}</td><td>${f$(y.ganancia/y.viajes)}</td>
   </tr>`;
   root.innerHTML += `<div class="section"><div class="section-title">Operacional mensual 2026</div>
     ${chartMensual()}
@@ -258,8 +280,9 @@ function renderMonthly(root) {
       <thead><tr><th>Mes</th><th>Leads</th><th>Ventas</th><th>Revenue</th><th>%Cierre</th>
         <th>G.Ads</th><th>Meta</th><th>Ganancia</th><th>Margen</th><th>$/trip</th></tr></thead>
       <tbody>${rows}</tbody></table></div>
-    ${(()=>{ const cur=DATA.months[DATA.months.length-1]; return cur.base==="caja+costos-planilla"
-      ? `<div class="info-box info-gray" style="margin-top:8px;">${cur.mes} (mes en curso): revenue = lo cobrado en el mes (caja); costos = los de la planilla, porque los pagos con comprobante llegan después. Al cerrar el mes pasa a caja completa, como Septiembre y Octubre.</div>` : ""; })()}</div>`;
+    ${DATA.months.some(m=>m.viajesRealizados!=null)
+      ? `<div class="info-box info-gray" style="margin-top:8px;"><strong>Ganancia</strong> (la misma que el KPI de arriba) = neto de los viajes ya realizados (salida hasta hoy) con costo de chofer cargado, por mes de salida, menos Google Ads y Meta del mes. Las reservas futuras no cuentan: van en "Reservado por realizar". Margen y $/trip son sobre esos viajes realizados. Revenue es lo cobrado en el mes (caja) y Ventas, por fecha de reserva.${(()=>{ const c=DATA.months[DATA.months.length-1]; return c.sinCosto?.viajes ? ` En ${c.mes} hay ${c.sinCosto.viajes} viajes ya hechos sin costo de chofer (${f$(c.sinCosto.usd)}) que no suman hasta que se cargue el costo.` : ""; })()}</div>`
+      : ""}</div>`;
 }
 
 // Leads paraguayos (teléfono +595) contra extranjeros: los paraguayos cierran mucho menos y
