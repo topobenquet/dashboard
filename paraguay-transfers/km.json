@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T11:10:34.657Z",
+ "generated": "2026-11-19T15:10:39.246Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -15,8 +15,8 @@
    "combustible": "diésel",
    "precioDefault": 10400,
    "rendDefault": 10,
-   "precioL": 11490,
-   "precioFuente": "última carga con litros (15/11)",
+   "precioL": 17552,
+   "precioFuente": "última carga con litros (19/11)",
    "rend": 7.65,
    "rendFuente": "medido en 5 tanque(s) lleno a lleno",
    "tramos": [
@@ -56,8 +56,8 @@
      "rend": 6.32
     }
    ],
-   "gsKm": 1502,
-   "ultimoKm": 103585
+   "gsKm": 2294,
+   "ultimoKm": 103595
   },
   "Voxy": {
    "nombre": "Toyota Voxy (de Luis)",
@@ -78,7 +78,7 @@
    "kmViajes": 1064,
    "kmFuera": 1164,
    "viajes": 9,
-   "costoComb": 3346456,
+   "costoComb": 5111032,
    "pagado": 5222
   },
   "Voxy": {
@@ -92,8 +92,8 @@
  "cumplimiento": [
   {
    "chofer": "Alfredo",
-   "lecturas": 32,
-   "conFoto": 31
+   "lecturas": 33,
+   "conFoto": 32
   },
   {
    "chofer": "Gustavo",
@@ -123,9 +123,15 @@
    "kmEsperado": null,
    "desvio": null,
    "combustiblePagado": null,
-   "combustibleCargado": null,
+   "combustibleCargado": 200000,
    "combustibleCorresponde": null,
-   "cargas": [],
+   "cargas": [
+    {
+     "fecha": "2026-11-19",
+     "gs": 200000,
+     "litros": 11.39
+    }
+   ],
    "faltanFotos": [],
    "sinFinal": false,
    "abierto": true,
@@ -152,7 +158,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 67590,
+   "combustibleCorresponde": 103230,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -180,7 +186,7 @@
    "desvio": 0.072,
    "combustiblePagado": 5222,
    "combustibleCargado": 260000,
-   "combustibleCorresponde": 1111480,
+   "combustibleCorresponde": 1697560,
    "cargas": [
     {
      "fecha": "2026-11-15",
@@ -220,7 +226,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 524038,
-   "combustibleCorresponde": 61582,
+   "combustibleCorresponde": 94054,
    "cargas": [
     {
      "fecha": "2026-11-13",
@@ -256,7 +262,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 48064,
+   "combustibleCorresponde": 73408,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -285,7 +291,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 21028,
+   "combustibleCorresponde": 32116,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -317,7 +323,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 200000,
-   "combustibleCorresponde": 88618,
+   "combustibleCorresponde": 135346,
    "cargas": [
     {
      "fecha": "2026-11-09",
@@ -353,7 +359,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 84112,
+   "combustibleCorresponde": 128464,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -381,7 +387,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 666535,
-   "combustibleCorresponde": 33044,
+   "combustibleCorresponde": 50468,
    "cargas": [
     {
      "fecha": "2026-11-04",
@@ -415,7 +421,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 82610,
+   "combustibleCorresponde": 126170,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -444,7 +450,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 70594,
+   "combustibleCorresponde": 107818,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -474,7 +480,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 659997,
-   "combustibleCorresponde": 1085946,
+   "combustibleCorresponde": 1658562,
    "cargas": [
     {
      "fecha": "2026-10-29",
@@ -540,7 +546,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 341710,
-   "combustibleCorresponde": 100634,
+   "combustibleCorresponde": 153698,
    "cargas": [
     {
      "fecha": "2026-10-14",
@@ -575,7 +581,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 145694,
+   "combustibleCorresponde": 222518,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -606,7 +612,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 1131923,
-   "combustibleCorresponde": 136682,
+   "combustibleCorresponde": 208754,
    "cargas": [
     {
      "fecha": "2026-10-12",
@@ -646,7 +652,7 @@
    "desvio": null,
    "combustiblePagado": 730012,
    "combustibleCargado": null,
-   "combustibleCorresponde": 159212,
+   "combustibleCorresponde": 243164,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -675,7 +681,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 350000,
-   "combustibleCorresponde": 196762,
+   "combustibleCorresponde": 300514,
    "cargas": [
     {
      "fecha": "2026-10-09",
@@ -710,7 +716,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 208778,
+   "combustibleCorresponde": 318866,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -739,7 +745,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": 659400,
-   "combustibleCorresponde": 195260,
+   "combustibleCorresponde": 298220,
    "cargas": [
     {
      "fecha": "2026-10-07",
@@ -774,7 +780,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 106642,
+   "combustibleCorresponde": 162874,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -803,7 +809,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 331942,
+   "combustibleCorresponde": 506974,
    "cargas": [],
    "faltanFotos": [
     97922,
@@ -835,7 +841,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 211782,
+   "combustibleCorresponde": 323454,
    "cargas": [],
    "faltanFotos": [
     97907
@@ -867,7 +873,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 150200,
+   "combustibleCorresponde": 229400,
    "cargas": [],
    "faltanFotos": [
     97662
@@ -897,7 +903,7 @@
    "desvio": 0.095,
    "combustiblePagado": null,
    "combustibleCargado": 900400,
-   "combustibleCorresponde": 1216620,
+   "combustibleCorresponde": 1858140,
    "cargas": [
     {
      "fecha": "2026-09-28",
@@ -970,7 +976,7 @@
    "desvio": -0.225,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 46562,
+   "combustibleCorresponde": 71114,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1000,7 +1006,7 @@
    "desvio": 1,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 120160,
+   "combustibleCorresponde": 183520,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1029,7 +1035,7 @@
    "desvio": -0.575,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 25534,
+   "combustibleCorresponde": 38998,
    "cargas": [],
    "faltanFotos": [
     95828
@@ -1059,7 +1065,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 121662,
+   "combustibleCorresponde": 185814,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1087,7 +1093,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 66088,
+   "combustibleCorresponde": 100936,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1115,7 +1121,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 102136,
+   "combustibleCorresponde": 155992,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1143,7 +1149,7 @@
    "desvio": 0.009,
    "combustiblePagado": 800000,
    "combustibleCargado": 800000,
-   "combustibleCorresponde": 1137014,
+   "combustibleCorresponde": 1736558,
    "cargas": [
     {
      "fecha": "2026-09-13",
@@ -1182,7 +1188,7 @@
    "desvio": 0.175,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 70594,
+   "combustibleCorresponde": 107818,
    "cargas": [],
    "faltanFotos": [],
    "sinFinal": false,
@@ -1210,7 +1216,7 @@
    "desvio": 0.036,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 171228,
+   "combustibleCorresponde": 261516,
    "cargas": [],
    "faltanFotos": [
     94597
@@ -1240,7 +1246,7 @@
    "desvio": 0.001,
    "combustiblePagado": 728000,
    "combustibleCargado": 728008,
-   "combustibleCorresponde": 1037882,
+   "combustibleCorresponde": 1585154,
    "cargas": [
     {
      "fecha": "2026-09-07",
@@ -1284,7 +1290,7 @@
    "desvio": 0.148,
    "combustiblePagado": 800000,
    "combustibleCargado": 610000,
-   "combustibleCorresponde": 1293222,
+   "combustibleCorresponde": 1975134,
    "cargas": [
     {
      "fecha": "2026-09-04",
@@ -1320,7 +1326,7 @@
    "desvio": -0.012,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 1024364,
+   "combustibleCorresponde": 1564508,
    "cargas": [],
    "faltanFotos": [
     92230,
@@ -1351,7 +1357,7 @@
    "desvio": null,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 138184,
+   "combustibleCorresponde": 211048,
    "cargas": [],
    "faltanFotos": [
     92116
@@ -1381,7 +1387,7 @@
    "desvio": 0.1,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 66088,
+   "combustibleCorresponde": 100936,
    "cargas": [],
    "faltanFotos": [
     91960,
@@ -1412,7 +1418,7 @@
    "desvio": 0.112,
    "combustiblePagado": null,
    "combustibleCargado": null,
-   "combustibleCorresponde": 1152034,
+   "combustibleCorresponde": 1759498,
    "cargas": [],
    "faltanFotos": [
     91154,
@@ -2231,6 +2237,17 @@
  ],
  "cargas": [
   {
+   "fecha": "2026-11-19",
+   "grupo": "Alfredo",
+   "vehiculo": "H1",
+   "moneda": "PYG",
+   "extranjera": false,
+   "gs": 200000,
+   "litros": 11.39,
+   "precioL": 17552,
+   "odo": 103595
+  },
+  {
    "fecha": "2026-11-15",
    "grupo": "Alfredo",
    "vehiculo": "H1",
@@ -2557,7 +2574,7 @@
    "vehiculo": "H1",
    "ruta": "ASU - Posadas",
    "km": 760,
-   "adelanto": 1256000
+   "adelanto": 1918000
   },
   {
    "fecha": "2026-11-19",
@@ -2740,7 +2757,7 @@
   {
    "key": "comb:H1:98840",
    "nivel": "juan",
-   "texto": "H1, Alfredo, 10/10: se pagaron ₲730.012 de combustible y 106 km a ₲1.502/km dan ₲159.212 (+359%).",
+   "texto": "H1, Alfredo, 10/10: se pagaron ₲730.012 de combustible y 106 km a ₲2.294/km dan ₲243.164 (+200%).",
    "ts": 1791672330,
    "fecha": "2026-10-10"
   },
