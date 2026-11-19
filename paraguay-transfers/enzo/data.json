@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T14:30:10.902Z",
+ "generated": "2026-11-19T16:30:03.809Z",
  "hoy": "2026-11-19",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,25 +50,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 19,
-   "ventas": 17,
-   "facturacion": 8358,
-   "proyeccion": 13196.84,
-   "base": 167.16,
+   "ventas": 18,
+   "facturacion": 8834,
+   "proyeccion": 13948.42,
+   "base": 176.68,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9642,
+    "falta": 9166,
     "bono": 100
    },
-   "ticketsAltos": 10,
-   "bonoTicket": 100,
+   "ticketsAltos": 11,
+   "bonoTicket": 110,
    "margen": 0.41950000000000004,
    "margenOk": true,
-   "sinCostos": 8,
+   "sinCostos": 9,
    "bonoAplica": true,
-   "bonoTotal": 100,
-   "total": 267.16,
+   "bonoTotal": 110,
+   "total": 286.68,
    "pendienteCobro": 2069,
    "semanas": [
     {
@@ -81,10 +81,21 @@
     },
     {
      "lunes": "2026-11-16",
-     "monto": 465
+     "monto": 941
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-19",
+     "salida": "2026-11-19",
+     "cliente": "juanki",
+     "ruta": "AERO-FOZ",
+     "tipo": "Traslado",
+     "monto": 476,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-19",
      "salida": null,
@@ -746,9 +757,9 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 4,
-   "facturacion": 862,
-   "comision": 17.24,
+   "ventas": 5,
+   "facturacion": 1338,
+   "comision": 26.76,
    "pendienteCobro": 278,
    "detalle": [
     {
@@ -779,6 +790,16 @@
      "tipo": "Traslado",
      "monto": 49,
      "comision": 0.98,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-19",
+     "salida": "2026-11-19",
+     "cliente": "juanki",
+     "ruta": "AERO-FOZ",
+     "tipo": "Traslado",
+     "monto": 476,
+     "comision": 9.52,
      "saldo": 0
     },
     {
