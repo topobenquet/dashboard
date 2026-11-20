@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T16:30:18.071Z",
+ "generated": "2026-11-20T20:30:38.676Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 6192.1,
-  "stripePendiente": 904.57,
+  "stripePendiente": 989.35,
   "pagoparPendienteUsd": 522.66,
   "relay": null,
   "binance": null,
@@ -253,9 +253,27 @@
    },
    "neto": 58.86,
    "acum": 5142.03
+  },
+  {
+   "fecha": "2026-11-20",
+   "in": 89,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Stripe": 89
+   },
+   "neto": 89,
+   "acum": 5231.03
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-20",
+   "t": "in",
+   "usd": 89,
+   "fuente": "Stripe",
+   "det": "Sasha Ivan Daszko"
+  },
   {
    "d": "2026-11-19",
    "t": "in",
@@ -1224,9 +1242,9 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 36,
-   "bruto": 9378,
-   "comision": 393.81,
+   "cobros": 37,
+   "bruto": 9467,
+   "comision": 398.03,
    "pct": 4.2,
    "nota": "medido cobro por cobro"
   },
