@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-19T22:02:04.052Z",
-  "lastSyncLabel": "19 Nov 2026",
+  "generated": "2026-11-20T10:21:27.544Z",
+  "lastSyncLabel": "20 Nov 2026",
   "year": 2026,
   "currentMonth": "Noviembre",
   "account": {
@@ -263,7 +263,7 @@
       "actions": {
         "Calls from ads": 37,
         "Chat Lead": 344,
-        "Get a Callback": 422.1,
+        "Get a Callback": 423.1,
         "Local actions - Directions": 6,
         "Local actions - Website visits": 12,
         "Not Qualified/Not Interested": 5,
@@ -271,7 +271,7 @@
         "Local actions - Other engagements": 25,
         "Clicks to call": 3
       },
-      "contacto": 821,
+      "contacto": 822,
       "descartados": 5,
       "assessment": 0,
       "pipeline": 0,
@@ -304,20 +304,20 @@
     {
       "mes": "Noviembre",
       "ym": "2026-11",
-      "spend": 4003.31,
-      "clicks": 1310,
-      "impr": 9395,
+      "spend": 4059.31,
+      "clicks": 1334,
+      "impr": 9584,
       "actions": {
-        "Chat Lead": 350,
-        "Get a Callback": 392,
+        "Chat Lead": 359,
+        "Get a Callback": 400,
         "Calls from ads": 15,
         "Local actions - Other engagements": 6,
         "Local actions - Directions": 12,
         "Number Pool Calls": 18,
-        "Local actions - Website visits": 5,
+        "Local actions - Website visits": 6,
         "Clicks to call": 2
       },
-      "contacto": 777,
+      "contacto": 794,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -4879,11 +4879,11 @@
       "actions": {
         "Calls from ads": 3,
         "Chat Lead": 11,
-        "Get a Callback": 13,
+        "Get a Callback": 14.02,
         "Local actions - Website visits": 1,
         "Number Pool Calls": 2
       },
-      "contacto": 29,
+      "contacto": 30.02,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5937,7 +5937,8 @@
       "impr": 764,
       "actions": {
         "Chat Lead": 25,
-        "Get a Callback": 32.27
+        "Get a Callback": 32.27,
+        "Local actions - Website visits": 1
       },
       "contacto": 57.27,
       "descartados": 0,
@@ -5964,16 +5965,31 @@
       "leads": 0
     },
     "2026-11-19": {
-      "spend": 208.33,
-      "clicks": 74,
-      "impr": 581,
+      "spend": 261.85,
+      "clicks": 97,
+      "impr": 760,
       "actions": {
         "Calls from ads": 1,
-        "Chat Lead": 21,
-        "Get a Callback": 21,
+        "Chat Lead": 28,
+        "Get a Callback": 26.98,
         "Number Pool Calls": 1.98
       },
-      "contacto": 44.98,
+      "contacto": 57.96,
+      "descartados": 0,
+      "assessment": 0,
+      "pipeline": 0,
+      "admit": 0,
+      "leads": 0
+    },
+    "2026-11-20": {
+      "spend": 2.48,
+      "clicks": 1,
+      "impr": 10,
+      "actions": {
+        "Chat Lead": 2,
+        "Get a Callback": 2
+      },
+      "contacto": 4,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -5986,10 +6002,10 @@
       "name": "Search Campaign Maryland",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 2843.24,
-      "clicks": 805,
-      "impr": 5820,
-      "contacto": 487,
+      "spend": 2850.25,
+      "clicks": 807,
+      "impr": 5835,
+      "contacto": 492,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6000,10 +6016,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1160.07,
-      "clicks": 505,
-      "impr": 3575,
-      "contacto": 290,
+      "spend": 1209.06,
+      "clicks": 527,
+      "impr": 3749,
+      "contacto": 302,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6190,26 +6206,31 @@
       {
         "name": "Search Campaign Maryland",
         "status": "ENABLED",
-        "spend": 2843.24,
-        "clicks": 805,
-        "impr": 5820
+        "spend": 2850.25,
+        "clicks": 807,
+        "impr": 5835
       },
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1160.07,
-        "clicks": 505,
-        "impr": 3575
+        "spend": 1209.06,
+        "clicks": 527,
+        "impr": 3749
       }
     ]
   },
   "crm": {
     "source": "GHL",
     "daily": {
+      "2026-11-20": {
+        "contacts": 2,
+        "paid": 2,
+        "opps": 2
+      },
       "2026-11-19": {
-        "contacts": 21,
-        "paid": 20,
-        "opps": 20
+        "contacts": 22,
+        "paid": 21,
+        "opps": 21
       },
       "2026-11-18": {
         "contacts": 23,
@@ -7875,14 +7896,14 @@
       },
       {
         "ym": "2026-11",
-        "contacts": 250,
-        "paid": 233,
-        "opps": 233
+        "contacts": 253,
+        "paid": 236,
+        "opps": 236
       }
     ],
     "stages": {
       "2026-11": {
-        "New Leads": 233
+        "New Leads": 236
       },
       "2026-10": {
         "New Leads": 278
@@ -7959,7 +7980,7 @@
       "POS Developed",
       "Not Qualified/Not Interested"
     ],
-    "lastContact": "2026-11-19",
+    "lastContact": "2026-11-20",
     "totals": {
       "contactos": 2800,
       "opps": 2800,
@@ -8134,7 +8155,7 @@
       },
       {
         "ym": "2026-11",
-        "items": 243,
+        "items": 246,
         "assessments": 18,
         "cohortAssessed": 5
       }
@@ -8207,7 +8228,7 @@
         "Not qualified/not interested": 68,
         "Has assessment scheduled": 3,
         "Waiting EDD": 2,
-        "New Leads": 3
+        "New Leads": 6
       }
     },
     "passed": {
@@ -8295,7 +8316,7 @@
         "Not qualified/not interested": 68,
         "Has assessment scheduled": 5,
         "Waiting EDD": 2,
-        "New Leads": 3
+        "New Leads": 6
       }
     },
     "stageOrder": [
@@ -8309,8 +8330,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 2090,
-      "paid": 1768,
+      "items": 2093,
+      "paid": 1771,
       "logs": 4252
     }
   }
