@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T10:21:30.812Z",
+ "generated": "2026-11-20T14:30:05.098Z",
  "hoy": "2026-11-20",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -51,25 +51,25 @@
    "diasMes": 30,
    "diasPasados": 20,
    "ventas": 18,
-   "facturacion": 8834,
-   "proyeccion": 13251,
-   "base": 176.68,
+   "facturacion": 8866,
+   "proyeccion": 13299,
+   "base": 177.32,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9166,
+    "falta": 9134,
     "bono": 100
    },
-   "ticketsAltos": 11,
-   "bonoTicket": 110,
-   "margen": 0.41950000000000004,
+   "ticketsAltos": 10,
+   "bonoTicket": 100,
+   "margen": 0.4628,
    "margenOk": true,
-   "sinCostos": 9,
+   "sinCostos": 6,
    "bonoAplica": true,
-   "bonoTotal": 110,
-   "total": 286.68,
-   "pendienteCobro": 2069,
+   "bonoTotal": 100,
+   "total": 277.32,
+   "pendienteCobro": 1791,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -81,7 +81,7 @@
     },
     {
      "lunes": "2026-11-16",
-     "monto": 941
+     "monto": 973
     }
    ],
    "detalle": [
@@ -91,20 +91,20 @@
      "cliente": "juanki",
      "ruta": "AERO-FOZ",
      "tipo": "Traslado",
-     "monto": 476,
-     "margen": null,
+     "monto": 776,
+     "margen": 0.67,
      "alto": true,
      "saldo": 0
     },
     {
      "reserva": "2026-11-19",
-     "salida": null,
-     "cliente": "kate",
-     "ruta": "",
+     "salida": "2026-11-29",
+     "cliente": "Kate",
+     "ruta": "AERO-Sheraton",
      "tipo": "Traslado",
-     "monto": 337,
+     "monto": 69,
      "margen": null,
-     "alto": true,
+     "alto": false,
      "saldo": 0
     },
     {
@@ -114,7 +114,7 @@
      "ruta": "AERO-ASU",
      "tipo": "Traslado",
      "monto": 79,
-     "margen": null,
+     "margen": 0.82,
      "alto": false,
      "saldo": 0
     },
@@ -125,7 +125,7 @@
      "ruta": "AERO-Hotel.Factoria",
      "tipo": "Traslado",
      "monto": 49,
-     "margen": null,
+     "margen": 0.74,
      "alto": false,
      "saldo": 0
     },
@@ -138,7 +138,7 @@
      "monto": 397,
      "margen": null,
      "alto": true,
-     "saldo": 278
+     "saldo": 0
     },
     {
      "reserva": "2026-11-11",
@@ -758,9 +758,9 @@
    "cerrada": false,
    "pagada": false,
    "ventas": 5,
-   "facturacion": 1338,
-   "comision": 26.76,
-   "pendienteCobro": 278,
+   "facturacion": 1370,
+   "comision": 27.4,
+   "pendienteCobro": 0,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -770,7 +770,7 @@
      "tipo": "Traslado",
      "monto": 397,
      "comision": 7.94,
-     "saldo": 278
+     "saldo": 0
     },
     {
      "reserva": "2026-11-18",
@@ -798,18 +798,18 @@
      "cliente": "juanki",
      "ruta": "AERO-FOZ",
      "tipo": "Traslado",
-     "monto": 476,
-     "comision": 9.52,
+     "monto": 776,
+     "comision": 15.52,
      "saldo": 0
     },
     {
      "reserva": "2026-11-19",
-     "salida": null,
-     "cliente": "kate",
-     "ruta": "",
+     "salida": "2026-11-29",
+     "cliente": "Kate",
+     "ruta": "AERO-Sheraton",
      "tipo": "Traslado",
-     "monto": 337,
-     "comision": 6.74,
+     "monto": 69,
+     "comision": 1.38,
      "saldo": 0
     }
    ]
