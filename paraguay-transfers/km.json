@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T21:10:29.575Z",
+ "generated": "2026-11-20T11:10:02.864Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -97,11 +97,37 @@
   },
   {
    "chofer": "Gustavo",
-   "lecturas": 5,
-   "conFoto": 5
+   "lecturas": 6,
+   "conFoto": 6
   }
  ],
  "viajes": [
+  {
+   "vehiculo": "H1",
+   "choferes": [
+    "Gustavo"
+   ],
+   "fechaIni": "2026-11-20",
+   "fechaFin": "2026-11-20",
+   "horaIni": "07:23",
+   "horaFin": null,
+   "kmIni": 103632,
+   "kmFin": null,
+   "km": null,
+   "tanqueIni": 0.5,
+   "tanqueFin": null,
+   "traslados": [],
+   "kmEsperado": null,
+   "desvio": null,
+   "combustiblePagado": null,
+   "combustibleCargado": null,
+   "combustibleCorresponde": null,
+   "cargas": [],
+   "faltanFotos": [],
+   "sinFinal": false,
+   "abierto": true,
+   "inferido": true
+  },
   {
    "vehiculo": "H1",
    "choferes": [
@@ -2554,24 +2580,7 @@
    "odo": 93309
   }
  ],
- "proximos": [
-  {
-   "fecha": "2026-11-19",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "ASU - Posadas",
-   "km": 760,
-   "adelanto": 1918000
-  },
-  {
-   "fecha": "2026-11-19",
-   "chofer": "Alfredo",
-   "vehiculo": "H1",
-   "ruta": "Vehículo a disposición",
-   "km": null,
-   "adelanto": null
-  }
- ],
+ "proximos": [],
  "alertas": [
   {
    "key": "hueco:H1:103541:103585",
