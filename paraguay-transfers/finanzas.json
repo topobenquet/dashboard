@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T10:20:13.157Z",
+ "generated": "2026-11-21T14:30:08.459Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -264,6 +264,17 @@
    },
    "neto": 89,
    "acum": 5231.03
+  },
+  {
+   "fecha": "2026-11-21",
+   "in": 0,
+   "out": 39.06,
+   "n": 1,
+   "porFuente": {
+    "WhatsApp · Pagos (Majo)": -39.06
+   },
+   "neto": -39.06,
+   "acum": 5191.97
   }
  ],
  "movimientos": [
@@ -1091,6 +1102,20 @@
    "gs": 700000,
    "rub": {
     "chofer": 109.38,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-21",
+   "t": "out",
+   "usd": 39.06,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago servicio a Carlos antezana dia 20/11",
+   "gs": 250000,
+   "rub": {
+    "chofer": 39.06,
     "comb": 0,
     "peajes": 0,
     "otros": 0
