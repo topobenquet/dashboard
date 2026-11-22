@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T10:20:13.194Z",
+ "generated": "2026-11-22T20:30:10.034Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 6192.1,
-  "stripePendiente": 1235.7,
+  "stripePendiente": 1392.18,
   "pagoparPendienteUsd": 522.66,
   "relay": null,
   "binance": null,
@@ -275,9 +275,27 @@
    },
    "neto": -39.06,
    "acum": 5191.97
+  },
+  {
+   "fecha": "2026-11-22",
+   "in": 164,
+   "out": 0,
+   "n": 1,
+   "porFuente": {
+    "Stripe": 164
+   },
+   "neto": 164,
+   "acum": 5355.97
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-22",
+   "t": "in",
+   "usd": 164,
+   "fuente": "Stripe",
+   "det": "Traslado privado Paraguay Transfers (link fijo USD 164)"
+  },
   {
    "d": "2026-11-20",
    "t": "in",
@@ -1267,10 +1285,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 37,
-   "bruto": 9467,
-   "comision": 398.03,
-   "pct": 4.2,
+   "cobros": 38,
+   "bruto": 9631,
+   "comision": 405.55,
+   "pct": 4.21,
    "nota": "medido cobro por cobro"
   },
   {
