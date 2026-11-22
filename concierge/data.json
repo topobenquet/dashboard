@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22T10:21:29.622Z",
+  "generated": "2026-11-22T22:01:29.274Z",
   "lastSyncLabel": "22 Nov 2026",
   "year": 2026,
   "currentMonth": "Noviembre",
@@ -304,12 +304,12 @@
     {
       "mes": "Noviembre",
       "ym": "2026-11",
-      "spend": 4369.03,
-      "clicks": 1425,
-      "impr": 10344,
+      "spend": 4410.8,
+      "clicks": 1441,
+      "impr": 10461,
       "actions": {
-        "Chat Lead": 382,
-        "Get a Callback": 435,
+        "Chat Lead": 386,
+        "Get a Callback": 443,
         "Calls from ads": 17,
         "Local actions - Other engagements": 6,
         "Local actions - Directions": 14,
@@ -317,7 +317,7 @@
         "Local actions - Website visits": 6,
         "Clicks to call": 2
       },
-      "contacto": 857,
+      "contacto": 869,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6004,10 +6004,10 @@
       "clicks": 28,
       "impr": 191,
       "actions": {
-        "Chat Lead": 6,
-        "Get a Callback": 10
+        "Chat Lead": 7,
+        "Get a Callback": 12
       },
-      "contacto": 16,
+      "contacto": 19,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6015,11 +6015,14 @@
       "leads": 0
     },
     "2026-11-22": {
-      "spend": 3.33,
-      "clicks": 1,
-      "impr": 10,
-      "actions": {},
-      "contacto": 0,
+      "spend": 45.1,
+      "clicks": 17,
+      "impr": 127,
+      "actions": {
+        "Chat Lead": 3,
+        "Get a Callback": 6
+      },
+      "contacto": 9,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6046,10 +6049,10 @@
       "name": "Search Campaign Maryland (evenings/weekends)",
       "status": "ENABLED",
       "tipo": "SEARCH",
-      "spend": 1316.76,
-      "clicks": 570,
-      "impr": 4131,
-      "contacto": 327,
+      "spend": 1358.53,
+      "clicks": 586,
+      "impr": 4248,
+      "contacto": 339,
       "descartados": 0,
       "assessment": 0,
       "pipeline": 0,
@@ -6243,9 +6246,9 @@
       {
         "name": "Search Campaign Maryland (evenings/weekends)",
         "status": "ENABLED",
-        "spend": 1316.76,
-        "clicks": 570,
-        "impr": 4131
+        "spend": 1358.53,
+        "clicks": 586,
+        "impr": 4248
       }
     ]
   },
@@ -6253,9 +6256,9 @@
     "source": "GHL",
     "daily": {
       "2026-11-22": {
-        "contacts": 1,
-        "paid": 1,
-        "opps": 1
+        "contacts": 6,
+        "paid": 6,
+        "opps": 6
       },
       "2026-11-21": {
         "contacts": 6,
@@ -7936,14 +7939,14 @@
       },
       {
         "ym": "2026-11",
-        "contacts": 270,
-        "paid": 253,
-        "opps": 253
+        "contacts": 275,
+        "paid": 258,
+        "opps": 258
       }
     ],
     "stages": {
       "2026-11": {
-        "New Leads": 253
+        "New Leads": 258
       },
       "2026-10": {
         "New Leads": 278
@@ -8196,7 +8199,7 @@
       },
       {
         "ym": "2026-11",
-        "items": 264,
+        "items": 269,
         "assessments": 19,
         "cohortAssessed": 5
       }
@@ -8269,7 +8272,7 @@
         "Not qualified/not interested": 77,
         "Has assessment scheduled": 2,
         "Waiting EDD": 2,
-        "New Leads": 9
+        "New Leads": 14
       }
     },
     "passed": {
@@ -8357,7 +8360,7 @@
         "Not qualified/not interested": 77,
         "Has assessment scheduled": 5,
         "Waiting EDD": 2,
-        "New Leads": 9
+        "New Leads": 14
       }
     },
     "stageOrder": [
@@ -8371,8 +8374,8 @@
       "Not qualified/not interested"
     ],
     "totals": {
-      "items": 2112,
-      "paid": 1787,
+      "items": 2117,
+      "paid": 1792,
       "logs": 4284
     }
   }
