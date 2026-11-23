@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T10:21:27.581Z",
+  "generated": "2026-11-23T22:01:04.253Z",
   "lastSyncLabel": "23 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -287,28 +287,28 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 196,
-      "reservas": 25,
-      "revenue": 12375.89,
-      "chofer": 5856.21,
+      "leads": 200,
+      "reservas": 24,
+      "revenue": 12326.89,
+      "chofer": 6025.18,
       "comb": 0,
-      "peajes": 89.94,
-      "comision": 525.12,
+      "peajes": 111.94,
+      "comision": 535.05,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 288,
+      "gAds": 290,
       "meta": 0,
-      "costoSheet": 6486.45,
-      "gananciaSheet": 7936.2,
+      "costoSheet": 6689.08,
+      "gananciaSheet": 7681.57,
       "leadsPy": 58,
       "ventasPy": 3,
-      "ventasExt": 21,
+      "ventasExt": 20,
       "ventasSinCruce": 1,
       "base": "caja+costos-planilla",
       "viajesRealizados": 43,
-      "revenueRealizado": 14572,
-      "netoRealizado": 7674.94,
-      "ganancia": 7386.94,
+      "revenueRealizado": 14272,
+      "netoRealizado": 7383.94,
+      "ganancia": 7093.94,
       "sinCosto": {
         "viajes": 2,
         "usd": 497
@@ -388,19 +388,19 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 288.35,
-      "clicks": 83,
-      "impr": 661,
-      "conv": 14
+      "spend": 290.35,
+      "clicks": 84,
+      "impr": 676,
+      "conv": 15
     }
   ],
   "hoy": "2026-11-23",
   "porRealizar": {
-    "viajes": 24,
-    "usd": 8772,
+    "viajes": 23,
+    "usd": 9020,
     "reservadosEsteMes": {
-      "viajes": 12,
-      "usd": 4153
+      "viajes": 11,
+      "usd": 4401
     }
   },
   "trips": [
@@ -5209,12 +5209,12 @@
       "route": "FOZ-ASU",
       "cliente": "James B Simpson",
       "pais": "USA",
-      "conductor": "Antonio CDE",
+      "conductor": "Gustavo Pereira",
       "pago": 417,
       "sena": 417,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 404.49,
+      "choferCost": 48,
+      "neto": 321.26,
       "fechaReserva": "01/09/26",
       "fechaSalida": "27/11/26",
       "estado": "porRealizar"
@@ -7175,11 +7175,11 @@
       "cliente": "juanki olmedo",
       "pais": "Paraguay",
       "conductor": "Antonio CDE",
-      "pago": 776,
-      "sena": 776,
+      "pago": 476,
+      "sena": 476,
       "restante": 0,
       "choferCost": 229.51,
-      "neto": 523.21,
+      "neto": 232.21,
       "fechaReserva": "19/11/26",
       "fechaSalida": "19/11/26",
       "estado": "realizado"
@@ -7201,30 +7201,15 @@
     },
     {
       "mes": "Noviembre",
-      "route": "AERO-Hotel.Factoria",
-      "cliente": "leanne",
-      "pais": "UK",
-      "conductor": "Luis Vásquez",
-      "pago": 49,
-      "sena": 49,
-      "restante": 0,
-      "choferCost": 11.29,
-      "neto": 36.24,
-      "fechaReserva": "18/11/26",
-      "fechaSalida": "26/11/26",
-      "estado": "porRealizar"
-    },
-    {
-      "mes": "Noviembre",
       "route": "AERO-ASU-Hotel.Centro-AERO",
       "cliente": "karen barletta",
       "pais": "Argentina",
-      "conductor": "",
-      "pago": 0,
-      "sena": 0,
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 297,
+      "sena": 89,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 0,
+      "choferCost": 120.97,
+      "neto": 167.12,
       "fechaReserva": "20/11/26",
       "fechaSalida": "26/11/26",
       "estado": "porRealizar"
@@ -7234,12 +7219,12 @@
       "route": "AERO-Sheraton",
       "cliente": "Kate Apkhadze (Culmen)",
       "pais": "Georgia",
-      "conductor": "",
+      "conductor": "Luis Vásquez",
       "pago": 69,
       "sena": 69,
       "restante": 0,
-      "choferCost": 0,
-      "neto": 66.93,
+      "choferCost": 11.29,
+      "neto": 55.64,
       "fechaReserva": "19/11/26",
       "fechaSalida": "29/11/26",
       "estado": "porRealizar"
@@ -7382,6 +7367,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-11-23": 4,
       "2026-11-22": 4,
       "2026-11-21": 7,
       "2026-11-20": 8,
@@ -7472,7 +7458,7 @@
       "2026-11-13": 1,
       "2026-11-04": 1,
       "2026-11-11": 1,
-      "2026-11-18": 2,
+      "2026-11-18": 1,
       "2026-11-19": 2,
       "2026-11-20": 2,
       "2026-11-16": 1,
@@ -7794,7 +7780,7 @@
       "2026-11-20": 22.23,
       "2026-11-21": 18.05,
       "2026-11-22": 5.91,
-      "2026-11-23": 0
+      "2026-11-23": 2
     },
     "meta": {
       "2026-02-24": 1.93,
@@ -7910,7 +7896,7 @@
   "resenas": {
     "count": 93,
     "rating": 5,
-    "actualizado": "2026-11-22T23:10:08.290Z",
+    "actualizado": "2026-11-23T20:10:10.046Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8241,6 +8227,11 @@
         "fecha": "2026-11-22",
         "count": 93,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-23",
+        "count": 93,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8378,10 +8369,10 @@
       "2026-11-19": 18,
       "2026-11-21": 15,
       "2026-11-22": 14,
-      "2026-11-23": 2
+      "2026-11-23": 9
     },
     "monthly": {
-      "Noviembre": 404,
+      "Noviembre": 411,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
