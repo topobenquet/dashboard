@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T10:20:35.138Z",
+ "generated": "2026-11-23T12:30:10.262Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -11,7 +11,7 @@
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 6659.26,
+  "stripeDisponible": 6610.26,
   "stripePendiente": 925.02,
   "pagoparPendienteUsd": 522.66,
   "relay": null,
@@ -232,15 +232,15 @@
   },
   {
    "fecha": "2026-11-18",
-   "in": 128,
+   "in": 79,
    "out": 1031.58,
-   "n": 6,
+   "n": 5,
    "porFuente": {
-    "Stripe": 128,
+    "Stripe": 79,
     "WhatsApp · Pagos (Majo)": -1031.58
    },
-   "neto": -903.58,
-   "acum": 5083.17
+   "neto": -952.58,
+   "acum": 5034.17
   },
   {
    "fecha": "2026-11-19",
@@ -252,7 +252,7 @@
     "WhatsApp · Pagos (Majo)": -278.14
    },
    "neto": 58.86,
-   "acum": 5142.03
+   "acum": 5093.03
   },
   {
    "fecha": "2026-11-20",
@@ -263,7 +263,7 @@
     "Stripe": 89
    },
    "neto": 89,
-   "acum": 5231.03
+   "acum": 5182.03
   },
   {
    "fecha": "2026-11-21",
@@ -274,7 +274,7 @@
     "WhatsApp · Pagos (Majo)": -39.06
    },
    "neto": -39.06,
-   "acum": 5191.97
+   "acum": 5142.97
   },
   {
    "fecha": "2026-11-22",
@@ -285,7 +285,7 @@
     "Stripe": 164
    },
    "neto": 164,
-   "acum": 5355.97
+   "acum": 5306.97
   }
  ],
  "movimientos": [
@@ -316,13 +316,6 @@
    "usd": 79,
    "fuente": "Stripe",
    "det": "Sean McKeown"
-  },
-  {
-   "d": "2026-11-18",
-   "t": "in",
-   "usd": 49,
-   "fuente": "Stripe",
-   "det": "Traslado privado Paraguay Transfers (link fijo USD 49)"
   },
   {
    "d": "2026-11-17",
@@ -1285,9 +1278,9 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 38,
-   "bruto": 9631,
-   "comision": 405.55,
+   "cobros": 37,
+   "bruto": 9582,
+   "comision": 403.09,
    "pct": 4.21,
    "nota": "medido cobro por cobro"
   },
@@ -1472,7 +1465,7 @@
   },
   {
    "nivel": "warn",
-   "texto": "$6,659 disponibles en Stripe sin girar."
+   "texto": "$6,610 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
@@ -1714,6 +1707,14 @@
    "gs": 200000,
    "usd": 31.25,
    "concepto": "Recién me comunique con Luis y me dice que hoy no tenemos de",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-23",
+   "grupo": "Pagos (Majo)",
+   "gs": 750000,
+   "usd": 117.19,
+   "concepto": "• 2026-11-26 karen barletta AERO-ASU-Hotel.Centro-AERO: Gs",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
