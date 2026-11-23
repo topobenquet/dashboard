@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T12:30:10.262Z",
+ "generated": "2026-11-23T14:30:16.817Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -11,7 +11,7 @@
   "uenoFecha": "2026-11-06",
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
-  "stripeDisponible": 6610.26,
+  "stripeDisponible": 411.26,
   "stripePendiente": 925.02,
   "pagoparPendienteUsd": 522.66,
   "relay": null,
@@ -1442,6 +1442,12 @@
    "fee": 0
   },
   {
+   "fecha": "2026-11-23",
+   "monto": 6000,
+   "tipo": "standard",
+   "fee": 0
+  },
+  {
    "fecha": "2026-11-16",
    "monto": 9500,
    "tipo": "standard",
@@ -1462,10 +1468,6 @@
   {
    "nivel": "warn",
    "texto": "₲3.3 millones cobrados por Pagopar sin acreditar."
-  },
-  {
-   "nivel": "warn",
-   "texto": "$6,610 disponibles en Stripe sin girar."
   }
  ],
  "aDefinir": [
