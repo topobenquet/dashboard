@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T12:30:03.692Z",
+ "generated": "2026-11-23T14:30:03.266Z",
  "hoy": "2026-11-23",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -51,25 +51,25 @@
    "diasMes": 30,
    "diasPasados": 23,
    "ventas": 19,
-   "facturacion": 8566,
-   "proyeccion": 11173.04,
-   "base": 171.32,
+   "facturacion": 8863,
+   "proyeccion": 11560.43,
+   "base": 177.26,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9434,
+    "falta": 9137,
     "bono": 100
    },
    "ticketsAltos": 10,
    "bonoTicket": 100,
-   "margen": 0.43439999999999995,
+   "margen": 0.4412,
    "margenOk": true,
    "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 100,
-   "total": 271.32,
-   "pendienteCobro": 1791,
+   "total": 277.26,
+   "pendienteCobro": 1999,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -81,7 +81,7 @@
     },
     {
      "lunes": "2026-11-16",
-     "monto": 673
+     "monto": 970
     }
    ],
    "detalle": [
@@ -91,10 +91,10 @@
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
-     "monto": 0,
-     "margen": null,
+     "monto": 297,
+     "margen": 0.56,
      "alto": false,
-     "saldo": 0
+     "saldo": 208
     },
     {
      "reserva": "2026-11-19",
@@ -769,9 +769,9 @@
    "cerrada": false,
    "pagada": false,
    "ventas": 6,
-   "facturacion": 1070,
-   "comision": 21.4,
-   "pendienteCobro": 0,
+   "facturacion": 1367,
+   "comision": 27.34,
+   "pendienteCobro": 208,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -829,9 +829,9 @@
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
-     "monto": 0,
-     "comision": 0,
-     "saldo": 0
+     "monto": 297,
+     "comision": 5.94,
+     "saldo": 208
     }
    ]
   },
