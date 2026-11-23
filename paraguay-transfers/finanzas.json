@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T18:30:14.361Z",
+ "generated": "2026-11-23T20:30:35.484Z",
  "tc": 6400,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -290,14 +290,14 @@
   {
    "fecha": "2026-11-23",
    "in": 0,
-   "out": 459.38,
-   "n": 3,
+   "out": 1203.91,
+   "n": 4,
    "porFuente": {
-    "WhatsApp · Pagos (Majo)": -378.75,
+    "WhatsApp · Pagos (Majo)": -1123.28,
     "WhatsApp · Gustavo": -80.63
    },
-   "neto": -459.38,
-   "acum": 4847.59
+   "neto": -1203.91,
+   "acum": 4103.06
   }
  ],
  "movimientos": [
@@ -1184,6 +1184,20 @@
     "comb": 0,
     "peajes": 0,
     "otros": 261.56
+   }
+  },
+  {
+   "d": "2026-11-23",
+   "t": "out",
+   "usd": 744.53,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Resumen de transferencias – Traslados en Argentina",
+   "gs": 4765000,
+   "rub": {
+    "chofer": 744.53,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
    }
   },
   {
