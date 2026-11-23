@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T11:10:01.900Z",
+ "generated": "2026-11-23T23:10:29.579Z",
  "mes": "2026-11",
  "activacion": "2026-09-16T10:52:34.000Z",
  "reglas": {
@@ -2580,7 +2580,16 @@
    "odo": 93309
   }
  ],
- "proximos": [],
+ "proximos": [
+  {
+   "fecha": "2026-11-27",
+   "chofer": "Gustavo",
+   "vehiculo": "H1",
+   "ruta": "FOZ-ASU",
+   "km": 690,
+   "adelanto": 1741000
+  }
+ ],
  "alertas": [
   {
    "key": "hueco:H1:103541:103585",
