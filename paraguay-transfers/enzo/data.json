@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T10:21:31.261Z",
+ "generated": "2026-11-24T14:30:24.787Z",
  "hoy": "2026-11-24",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,25 +50,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 24,
-   "ventas": 18,
-   "facturacion": 8814,
-   "proyeccion": 11017.5,
-   "base": 176.28,
+   "ventas": 19,
+   "facturacion": 8883,
+   "proyeccion": 11103.75,
+   "base": 177.66,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9186,
+    "falta": 9117,
     "bono": 100
    },
    "ticketsAltos": 10,
    "bonoTicket": 100,
    "margen": 0.44299999999999995,
    "margenOk": true,
-   "sinCostos": 5,
+   "sinCostos": 6,
    "bonoAplica": true,
    "bonoTotal": 100,
-   "total": 276.28,
+   "total": 277.66,
    "pendienteCobro": 1999,
    "semanas": [
     {
@@ -82,9 +82,24 @@
     {
      "lunes": "2026-11-16",
      "monto": 921
+    },
+    {
+     "lunes": "2026-11-23",
+     "monto": 69
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-24",
+     "salida": "2026-11-25",
+     "cliente": "didier",
+     "ruta": "Aeropuerto de Asunción → Albor Apartments Felipe Molas López",
+     "tipo": "Traslado",
+     "monto": 69,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-20",
      "salida": "2026-11-26",
@@ -757,9 +772,9 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 5,
-   "facturacion": 1318,
-   "comision": 26.36,
+   "ventas": 6,
+   "facturacion": 1387,
+   "comision": 27.74,
    "pendienteCobro": 208,
    "detalle": [
     {
@@ -811,6 +826,16 @@
      "monto": 297,
      "comision": 5.94,
      "saldo": 208
+    },
+    {
+     "reserva": "2026-11-24",
+     "salida": "2026-11-25",
+     "cliente": "didier",
+     "ruta": "Aeropuerto de Asunción → Albor Apartments Felipe Molas López",
+     "tipo": "Traslado",
+     "monto": 69,
+     "comision": 1.38,
+     "saldo": 0
     }
    ]
   },
