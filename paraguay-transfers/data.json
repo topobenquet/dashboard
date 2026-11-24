@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T10:21:03.081Z",
+  "generated": "2026-11-24T22:01:30.831Z",
   "lastSyncLabel": "24 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -287,28 +287,28 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 206,
-      "reservas": 24,
-      "revenue": 12335.47,
+      "leads": 213,
+      "reservas": 26,
+      "revenue": 12500.47,
       "chofer": 6025.18,
       "comb": 0,
       "peajes": 111.94,
-      "comision": 535.05,
+      "comision": 538.56,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 300,
+      "gAds": 310,
       "meta": 0,
-      "costoSheet": 6689.08,
-      "gananciaSheet": 7669.97,
-      "leadsPy": 58,
+      "costoSheet": 6691.15,
+      "gananciaSheet": 7736.9,
+      "leadsPy": 61,
       "ventasPy": 3,
-      "ventasExt": 20,
+      "ventasExt": 22,
       "ventasSinCruce": 1,
       "base": "caja+costos-planilla",
       "viajesRealizados": 43,
       "revenueRealizado": 14272,
       "netoRealizado": 7383.94,
-      "ganancia": 7083.94,
+      "ganancia": 7073.94,
       "sinCosto": {
         "viajes": 2,
         "usd": 497
@@ -388,19 +388,19 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 299.95,
-      "clicks": 89,
-      "impr": 714,
-      "conv": 17
+      "spend": 309.92,
+      "clicks": 91,
+      "impr": 724,
+      "conv": 18
     }
   ],
   "hoy": "2026-11-24",
   "porRealizar": {
-    "viajes": 23,
-    "usd": 9020,
+    "viajes": 25,
+    "usd": 9137,
     "reservadosEsteMes": {
-      "viajes": 11,
-      "usd": 4401
+      "viajes": 13,
+      "usd": 4518
     }
   },
   "trips": [
@@ -7201,6 +7201,21 @@
     },
     {
       "mes": "Noviembre",
+      "route": "Aeropuerto de Asunción → Albor Apartments Felipe Molas López",
+      "cliente": "didier pare",
+      "pais": "Canadá",
+      "conductor": "",
+      "pago": 69,
+      "sena": 69,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 66.93,
+      "fechaReserva": "24/11/26",
+      "fechaSalida": "26/11/26",
+      "estado": "porRealizar"
+    },
+    {
+      "mes": "Noviembre",
       "route": "AERO-ASU-Hotel.Centro-AERO",
       "cliente": "karen barletta",
       "pais": "Argentina",
@@ -7227,6 +7242,21 @@
       "neto": 55.64,
       "fechaReserva": "19/11/26",
       "fechaSalida": "29/11/26",
+      "estado": "porRealizar"
+    },
+    {
+      "mes": "Diciembre",
+      "route": "AERO-Formosa",
+      "cliente": "gabrielle 🍉",
+      "pais": "Francia",
+      "conductor": "",
+      "pago": 48,
+      "sena": 48,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 46.56,
+      "fechaReserva": "24/11/26",
+      "fechaSalida": "03/12/26",
       "estado": "porRealizar"
     },
     {
@@ -7367,7 +7397,7 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-24": 2,
+      "2026-11-24": 9,
       "2026-11-23": 8,
       "2026-11-22": 4,
       "2026-11-21": 7,
@@ -7426,6 +7456,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
+      "2026-11-24": 3,
       "2026-11-22": 1,
       "2026-11-21": 1,
       "2026-11-20": 2,
@@ -7461,6 +7492,7 @@
       "2026-11-11": 1,
       "2026-11-18": 1,
       "2026-11-19": 2,
+      "2026-11-24": 2,
       "2026-11-20": 2,
       "2026-11-16": 1,
       "2026-11-22": 1,
@@ -7782,7 +7814,7 @@
       "2026-11-21": 18.05,
       "2026-11-22": 5.91,
       "2026-11-23": 11.6,
-      "2026-11-24": 0
+      "2026-11-24": 9.97
     },
     "meta": {
       "2026-02-24": 1.93,
@@ -7898,7 +7930,7 @@
   "resenas": {
     "count": 93,
     "rating": 5,
-    "actualizado": "2026-11-23T23:10:29.575Z",
+    "actualizado": "2026-11-24T20:10:30.634Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8234,6 +8266,11 @@
         "fecha": "2026-11-23",
         "count": 93,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-24",
+        "count": 93,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8372,10 +8409,10 @@
       "2026-11-21": 15,
       "2026-11-22": 14,
       "2026-11-23": 14,
-      "2026-11-24": 1
+      "2026-11-24": 22
     },
     "monthly": {
-      "Noviembre": 417,
+      "Noviembre": 438,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
