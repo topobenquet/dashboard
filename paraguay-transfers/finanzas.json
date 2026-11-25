@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T16:30:10.526Z",
+ "generated": "2026-11-25T18:30:29.067Z",
  "tc": 6360,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -313,13 +313,14 @@
   {
    "fecha": "2026-11-25",
    "in": 349,
-   "out": 0,
-   "n": 2,
+   "out": 1095.94,
+   "n": 3,
    "porFuente": {
-    "Stripe": 349
+    "Stripe": 349,
+    "WhatsApp · Pagos (Majo)": -1095.94
    },
-   "neto": 349,
-   "acum": 4582.66
+   "neto": -746.94,
+   "acum": 3486.72
   }
  ],
  "movimientos": [
@@ -1252,6 +1253,20 @@
    "gs": 4765000,
    "rub": {
     "chofer": 749.21,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-25",
+   "t": "out",
+   "usd": 1095.94,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Comprobante de pago!",
+   "gs": 6970150,
+   "rub": {
+    "chofer": 1095.94,
     "comb": 0,
     "peajes": 0,
     "otros": 0
