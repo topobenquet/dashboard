@@ -889,7 +889,7 @@ const EN_RE = [
   [/^Contra (\S+) en las 4 semanas previas\. Meta es el canal que más clientes nuevos trae\.$/, "Vs. $1 over the previous 4 weeks. Meta is the channel that brings the most new customers."],
   [/^Gastado (\S+) al (\S+); ritmo de los últimos 3 días (\S+)\/día\. Para llegar justo: (\S+)\/día\.$/, "Spent $1 through $2; last 3 days' pace $3/day. To land on budget: $4/day."],
   [/^Google reporta (\d+)% menos compras por pedido de lo habitual$/, "Google is reporting $1% fewer purchases per order than usual"],
-  [/^(Catálogo|Tienda|Plataformas?|Anuncios|Campañas|Tracking|Presupuesto|Ritmo|Clientes|Medición) · /, (_, c) => ({ "Catálogo": "Catalog", Tienda: "Store", Plataforma: "Platform", Plataformas: "Platforms", Anuncios: "Ads", "Campañas": "Campaigns", Presupuesto: "Budget", Ritmo: "Pacing", Clientes: "Customers", "Medición": "Measurement" })[c] + " · " || c],
+  [/^(Catálogo|Tienda|Plataformas?|Anuncios|Campañas|Tracking|Presupuesto|Ritmo|Clientes|Medición) · /, (_, c) => (({ "Catálogo": "Catalog", Tienda: "Store", Plataforma: "Platform", Plataformas: "Platforms", Anuncios: "Ads", "Campañas": "Campaigns", Presupuesto: "Budget", Ritmo: "Pacing", Clientes: "Customers", "Medición": "Measurement" })[c] || c) + " · "],
   [/(\d+\/\d+) al (\d+\/\d+)/g, "$1 to $2"],
   [/ · comparado con /, " · vs. "],
   [/^Total (.+)\.$/, "Total $1."],
