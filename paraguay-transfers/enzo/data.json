@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T14:30:03.673Z",
+ "generated": "2026-11-25T16:30:03.231Z",
  "hoy": "2026-11-25",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,26 +50,26 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 25,
-   "ventas": 19,
-   "facturacion": 8883,
-   "proyeccion": 10659.6,
-   "base": 177.66,
+   "ventas": 20,
+   "facturacion": 10382,
+   "proyeccion": 12458.4,
+   "base": 207.64,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 9117,
+    "falta": 7618,
     "bono": 100
    },
-   "ticketsAltos": 10,
-   "bonoTicket": 100,
+   "ticketsAltos": 11,
+   "bonoTicket": 110,
    "margen": 0.44299999999999995,
    "margenOk": true,
-   "sinCostos": 6,
+   "sinCostos": 7,
    "bonoAplica": true,
-   "bonoTotal": 100,
-   "total": 277.66,
-   "pendienteCobro": 1999,
+   "bonoTotal": 110,
+   "total": 317.64,
+   "pendienteCobro": 3198,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -85,10 +85,21 @@
     },
     {
      "lunes": "2026-11-23",
-     "monto": 69
+     "monto": 1568
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-25",
+     "salida": "2026-11-25",
+     "cliente": "ana",
+     "ruta": "Asunción → Pedro Juan Caballero",
+     "tipo": "Traslado",
+     "monto": 1499,
+     "margen": null,
+     "alto": true,
+     "saldo": 1199
+    },
     {
      "reserva": "2026-11-24",
      "salida": "2026-11-26",
@@ -772,10 +783,10 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 6,
-   "facturacion": 1387,
-   "comision": 27.74,
-   "pendienteCobro": 208,
+   "ventas": 7,
+   "facturacion": 2886,
+   "comision": 57.72,
+   "pendienteCobro": 1407,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -836,6 +847,16 @@
      "monto": 69,
      "comision": 1.38,
      "saldo": 0
+    },
+    {
+     "reserva": "2026-11-25",
+     "salida": "2026-11-25",
+     "cliente": "ana",
+     "ruta": "Asunción → Pedro Juan Caballero",
+     "tipo": "Traslado",
+     "monto": 1499,
+     "comision": 29.98,
+     "saldo": 1199
     }
    ]
   },
