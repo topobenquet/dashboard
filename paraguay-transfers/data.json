@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26T10:21:10.700Z",
+  "generated": "2026-11-26T22:01:08.865Z",
   "lastSyncLabel": "26 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -231,13 +231,13 @@
       "mes": "Septiembre",
       "leads": 314,
       "reservas": 61,
-      "revenue": 14717.47,
-      "chofer": 8722.59,
-      "comb": 753.18,
-      "peajes": 261.74,
+      "revenue": 14696.18,
+      "chofer": 8710.02,
+      "comb": 752.02,
+      "peajes": 261.31,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 943.83,
+      "otros": 942.35,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -260,13 +260,13 @@
       "mes": "Octubre",
       "leads": 362,
       "reservas": 77,
-      "revenue": 26634.23,
-      "chofer": 14718.48,
-      "comb": 631.49,
+      "revenue": 26592.92,
+      "chofer": 14695.39,
+      "comb": 630.51,
       "peajes": 0,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 2738.57,
+      "otros": 2734.28,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
@@ -287,20 +287,20 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 222,
+      "leads": 230,
       "reservas": 28,
-      "revenue": 12862.48,
+      "revenue": 13175.13,
       "chofer": 6038.18,
       "comb": 0,
       "peajes": 111.94,
       "comision": 583.53,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 326,
+      "gAds": 336,
       "meta": 0,
-      "costoSheet": 6749.03,
-      "gananciaSheet": 9151.59,
-      "leadsPy": 66,
+      "costoSheet": 6746.96,
+      "gananciaSheet": 9084.66,
+      "leadsPy": 68,
       "ventasPy": 3,
       "ventasExt": 24,
       "ventasSinCruce": 1,
@@ -308,10 +308,10 @@
       "viajesRealizados": 44,
       "revenueRealizado": 14569,
       "netoRealizado": 7551.06,
-      "ganancia": 7225.06,
+      "ganancia": 7215.06,
       "sinCosto": {
-        "viajes": 4,
-        "usd": 2065
+        "viajes": 3,
+        "usd": 1996
       }
     }
   ],
@@ -388,19 +388,19 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 326.38,
-      "clicks": 97,
-      "impr": 749,
+      "spend": 336.28,
+      "clicks": 99,
+      "impr": 764,
       "conv": 20
     }
   ],
   "hoy": "2026-11-26",
   "porRealizar": {
-    "viajes": 24,
-    "usd": 9669,
+    "viajes": 25,
+    "usd": 9738,
     "reservadosEsteMes": {
-      "viajes": 12,
-      "usd": 5050
+      "viajes": 13,
+      "usd": 5119
     }
   },
   "trips": [
@@ -5212,7 +5212,7 @@
       "conductor": "Gustavo Pereira",
       "pago": 417,
       "sena": 417,
-      "restante": 0,
+      "restante": 317,
       "choferCost": 48,
       "neto": 321.26,
       "fechaReserva": "01/09/26",
@@ -7215,7 +7215,7 @@
       "estado": "sinCosto"
     },
     {
-      "mes": "Noviembre",
+      "mes": "Diciembre",
       "route": "Aeropuerto de Asunción → Albor Apartments Felipe Molas López",
       "cliente": "didier pare",
       "pais": "Canadá",
@@ -7226,8 +7226,8 @@
       "choferCost": 0,
       "neto": 66.93,
       "fechaReserva": "24/11/26",
-      "fechaSalida": "26/11/26",
-      "estado": "sinCosto"
+      "fechaSalida": "08/12/26",
+      "estado": "porRealizar"
     },
     {
       "mes": "Noviembre",
@@ -7427,6 +7427,7 @@
   ],
   "daily": {
     "leads": {
+      "2026-11-26": 8,
       "2026-11-25": 9,
       "2026-11-24": 9,
       "2026-11-23": 8,
@@ -7487,6 +7488,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
+      "2026-11-26": 2,
       "2026-11-25": 5,
       "2026-11-24": 3,
       "2026-11-22": 1,
@@ -7848,7 +7850,8 @@
       "2026-11-22": 5.91,
       "2026-11-23": 11.6,
       "2026-11-24": 9.97,
-      "2026-11-25": 16.46
+      "2026-11-25": 16.46,
+      "2026-11-26": 9.9
     },
     "meta": {
       "2026-02-24": 1.93,
@@ -7964,7 +7967,7 @@
   "resenas": {
     "count": 93,
     "rating": 5,
-    "actualizado": "2026-11-25T23:10:11.840Z",
+    "actualizado": "2026-11-26T20:10:02.536Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8310,6 +8313,11 @@
         "fecha": "2026-11-25",
         "count": 93,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-26",
+        "count": 93,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8450,10 +8458,10 @@
       "2026-11-23": 14,
       "2026-11-24": 27,
       "2026-11-25": 11,
-      "2026-11-26": 1
+      "2026-11-26": 11
     },
     "monthly": {
-      "Noviembre": 455,
+      "Noviembre": 465,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
