@@ -78,14 +78,20 @@
 
   function tablaCaja() {
     const rows = F.caja.map((d) => {
-      const fuentes = Object.entries(d.porFuente || {}).map(([k, v]) => `${esc(k)} ${v >= 0 ? "+" : "−"}${Math.abs(Math.round(v))}`).join(" · ");
+      // Los pagos con comprobante de WhatsApp van uno por uno (a quién y por qué), no como un total del grupo.
+      const pagos = F.movimientos.filter((m) => m.d === d.fecha && m.t === "out" && /^WhatsApp · /.test(m.fuente));
+      const corto = (t) => { t = String(t || "").replace(/^resumen de transferencias\s*[–-]\s*/i, "").replace(/^(comprobante de )?pago( a)?\s+/i, ""); return t.length > 48 ? t.slice(0, 46) + "…" : t; };
+      const fuentes = Object.entries(d.porFuente || {}).filter(([k]) => !/^WhatsApp · /.test(k)).map(([k, v]) => `${esc(k)} ${v >= 0 ? "+" : "−"}${Math.abs(Math.round(v))}`)
+        .concat(pagos.map((m) => { const i = (m.det || "").indexOf(": "), quien = i > 0 ? m.det.slice(0, i) : "", que = i > 0 ? m.det.slice(i + 2) : m.det;
+          return `<span title="${esc(m.det || "")}${m.gs ? " · " + fGs(m.gs) : ""}"><strong style="color:#374151">${esc(quien || "Pago")}</strong> −${Math.round(m.usd)}${que ? " (" + esc(corto(que)) + ")" : ""}</span>`; }))
+        .join(" · ");
       return `<tr><td>${dLbl(d.fecha)}</td><td class="pos">${d.in ? f$(d.in) : "–"}</td><td class="neg">${d.out ? f$(d.out) : "–"}</td>
         <td class="${d.neto >= 0 ? "pos" : "neg"}">${f$(d.neto)}</td><td><strong>${f$(d.acum)}</strong></td><td>${d.n}</td><td class="tl" style="white-space:normal;font-size:10px;color:#6B7280">${fuentes}</td></tr>`;
     }).join("");
     const ti = F.caja.reduce((s, d) => s + d.in, 0), to = F.caja.reduce((s, d) => s + d.out, 0);
     return `<div class="ft-wrap"><table class="ft nowrap1" style="min-width:640px;">
       <colgroup><col style="width:9%"><col style="width:11%"><col style="width:11%"><col style="width:11%"><col style="width:12%"><col style="width:6%"><col style="width:40%"></colgroup>
-      <thead><tr><th>Día</th><th>Entradas</th><th>Salidas</th><th>Neto</th><th>Acumulado</th><th>Mov.</th><th class="tl">Por fuente</th></tr></thead>
+      <thead><tr><th>Día</th><th>Entradas</th><th>Salidas</th><th>Neto</th><th>Acumulado</th><th>Mov.</th><th class="tl">Por fuente · pagos: a quién y por qué</th></tr></thead>
       <tbody>${rows}<tr class="hi"><td>${esc(F.mesLabel)}</td><td class="pos">${f$(ti)}</td><td class="neg">${f$(to)}</td><td>${f$(ti - to)}</td><td>${f$(ti - to)}</td><td>${F.movimientos.length}</td><td></td></tr></tbody></table></div>`;
   }
 
@@ -219,15 +225,15 @@
   }
 
 
-  /* ── Saldo de ueno por día: capturas que Majo publica en ParaguayTransfers.Pagos ── */
+  /* ── Saldo de ueno por día: capturas que se publican en ParaguayTransfers.Pagos ── */
   function saldosHistorial() {
     const H = (F.saldosHistorial || []).filter((h) => h.cuenta === "ueno"); if (!H.length) return "";
     const rows = H.map((h, i) => { const prev = H[i - 1]; const d = prev ? h.gs - prev.gs : null;
       return `<tr><td>${dLbl(h.fecha)}</td><td class="tl">${esc(h.momento)}</td><td><strong>${fGs(h.gs)}</strong></td><td>${f$(h.usd)}</td><td class="${d == null ? "neu" : d >= 0 ? "pos" : "neg"}">${d == null ? "–" : (d >= 0 ? "+" : "−") + fGs(Math.abs(d))}</td></tr>`; }).join("");
-    return `<div class="section"><div class="section-title">Saldo de ueno · capturas diarias de Majo</div>
+    return `<div class="section"><div class="section-title">Saldo de ueno · capturas diarias del grupo de pagos</div>
       <div class="ft-wrap"><table class="ft nowrap1" style="min-width:520px"><colgroup><col style="width:14%"><col style="width:14%"><col style="width:26%"><col style="width:18%"><col style="width:28%"></colgroup>
       <thead><tr><th>Día</th><th class="tl">Momento</th><th>Saldo</th><th>USD</th><th>Variación</th></tr></thead><tbody>${rows}</tbody></table></div>
-      <div class="info-box info-gray" style="margin-top:8px">Es el saldo real de la cuenta según la app de ueno, leído de la captura que Majo publica en el grupo de pagos. El KPI de arriba usa la última. La variación entre capturas debería explicarse con el libro de caja del mismo día: si no cierra, falta un movimiento.</div></div>`;
+      <div class="info-box info-gray" style="margin-top:8px">Es el saldo real de la cuenta según la app de ueno, leído de la captura que se publica en el grupo de pagos. El KPI de arriba usa la última. La variación entre capturas debería explicarse con el libro de caja del mismo día: si no cierra, falta un movimiento.</div></div>`;
   }
 
   function alertas() {
