@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T12:30:39.297Z",
+ "generated": "2026-11-27T14:30:38.677Z",
  "tc": 6360,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura de Majo en ParaguayTransfers.Pagos",
   "stripeDisponible": 1480.77,
-  "stripePendiente": 1493.27,
+  "stripePendiente": 2107.38,
   "pagoparPendienteUsd": 525.94,
   "relay": null,
   "binance": null,
@@ -335,17 +335,32 @@
   },
   {
    "fecha": "2026-11-27",
-   "in": 305,
-   "out": 0,
-   "n": 2,
+   "in": 948,
+   "out": 405.67,
+   "n": 7,
    "porFuente": {
-    "Stripe": 305
+    "Stripe": 948,
+    "WhatsApp · Pagos (Majo)": -405.67
    },
-   "neto": 305,
-   "acum": 4167.72
+   "neto": 542.33,
+   "acum": 4405.05
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-27",
+   "t": "in",
+   "usd": 208,
+   "fuente": "Stripe",
+   "det": "Traslado privado Paraguay Transfers (link fijo USD 208)"
+  },
+  {
+   "d": "2026-11-27",
+   "t": "in",
+   "usd": 435,
+   "fuente": "Stripe",
+   "det": "Servio Castro Neves Lda"
+  },
   {
    "d": "2026-11-27",
    "t": "in",
@@ -1323,6 +1338,48 @@
    }
   },
   {
+   "d": "2026-11-27",
+   "t": "out",
+   "usd": 12.58,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "pago traslado aeropuerto, steve chash",
+   "gs": 80000,
+   "rub": {
+    "chofer": 12.58,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-27",
+   "t": "out",
+   "usd": 267.3,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "Pago a ingrid, traslado ituzaingo a Asu 28/11",
+   "gs": 1700000,
+   "rub": {
+    "chofer": 267.3,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
+   "d": "2026-11-27",
+   "t": "out",
+   "usd": 125.79,
+   "fuente": "WhatsApp · Pagos (Majo)",
+   "det": "pago a Antonio, traslado a puerto iguazu/ cde ida y vuelta 27/11",
+   "gs": 800000,
+   "rub": {
+    "chofer": 125.79,
+    "comb": 0,
+    "peajes": 0,
+    "otros": 0
+   }
+  },
+  {
    "d": "2026-11-02",
    "t": "in",
    "usd": 100.63,
@@ -1468,10 +1525,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 46,
-   "bruto": 10777,
-   "comision": 450.66,
-   "pct": 4.18,
+   "cobros": 48,
+   "bruto": 11420,
+   "comision": 479.55,
+   "pct": 4.2,
    "nota": "medido cobro por cobro"
   },
   {
