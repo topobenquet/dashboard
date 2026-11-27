@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T10:21:09.575Z",
+  "generated": "2026-11-27T22:01:02.962Z",
   "lastSyncLabel": "27 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
@@ -231,13 +231,13 @@
       "mes": "Septiembre",
       "leads": 314,
       "reservas": 61,
-      "revenue": 14717.47,
-      "chofer": 8722.59,
-      "comb": 753.18,
-      "peajes": 261.74,
+      "revenue": 14696.18,
+      "chofer": 8710.02,
+      "comb": 752.02,
+      "peajes": 261.31,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 943.83,
+      "otros": 942.35,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -260,13 +260,13 @@
       "mes": "Octubre",
       "leads": 362,
       "reservas": 77,
-      "revenue": 26634.23,
-      "chofer": 14718.48,
-      "comb": 631.49,
+      "revenue": 26592.92,
+      "chofer": 14695.39,
+      "comb": 630.51,
       "peajes": 0,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 2738.57,
+      "otros": 2734.28,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
@@ -287,31 +287,31 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 234,
-      "reservas": 29,
-      "revenue": 13238.48,
-      "chofer": 6280.12,
+      "leads": 244,
+      "reservas": 34,
+      "revenue": 15052.3,
+      "chofer": 7309.86,
       "comb": 0,
       "peajes": 111.94,
-      "comision": 589.44,
+      "comision": 693.9,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 344,
+      "gAds": 346,
       "meta": 0,
-      "costoSheet": 6988.89,
-      "gananciaSheet": 8832.83,
-      "leadsPy": 69,
+      "costoSheet": 8027.64,
+      "gananciaSheet": 8094.08,
+      "leadsPy": 72,
       "ventasPy": 3,
-      "ventasExt": 25,
+      "ventasExt": 30,
       "ventasSinCruce": 1,
       "base": "caja+costos-planilla",
-      "viajesRealizados": 46,
-      "revenueRealizado": 14986,
-      "netoRealizado": 7859.42,
-      "ganancia": 7515.42,
+      "viajesRealizados": 47,
+      "revenueRealizado": 16534,
+      "netoRealizado": 8218.33,
+      "ganancia": 7872.33,
       "sinCosto": {
-        "viajes": 3,
-        "usd": 1996
+        "viajes": 4,
+        "usd": 694
       }
     }
   ],
@@ -388,19 +388,19 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 344.11,
-      "clicks": 100,
-      "impr": 770,
-      "conv": 20
+      "spend": 346.22,
+      "clicks": 101,
+      "impr": 781,
+      "conv": 21
     }
   ],
   "hoy": "2026-11-27",
   "porRealizar": {
-    "viajes": 23,
-    "usd": 9321,
+    "viajes": 27,
+    "usd": 11811,
     "reservadosEsteMes": {
-      "viajes": 12,
-      "usd": 5119
+      "viajes": 16,
+      "usd": 7609
     }
   },
   "trips": [
@@ -851,6 +851,36 @@
       "choferCost": 0,
       "neto": 191.09,
       "fechaReserva": "26/11/26",
+      "fechaSalida": "",
+      "estado": "sinFecha"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "ASU-FOZ",
+      "cliente": "sérvio",
+      "pais": "Portugal",
+      "conductor": "",
+      "pago": 435,
+      "sena": 435,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 421.95,
+      "fechaReserva": "27/11/26",
+      "fechaSalida": "",
+      "estado": "sinFecha"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "",
+      "cliente": "sasha ivan daszko",
+      "pais": "Argentina",
+      "conductor": "",
+      "pago": 208,
+      "sena": 208,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 201.76,
+      "fechaReserva": "27/11/26",
       "fechaSalida": "",
       "estado": "sinFecha"
     },
@@ -5226,7 +5256,7 @@
       "pais": "USA",
       "conductor": "Gustavo Pereira",
       "pago": 417,
-      "sena": 417,
+      "sena": 100,
       "restante": 317,
       "choferCost": 48,
       "neto": 321.26,
@@ -7222,12 +7252,27 @@
       "conductor": "Gabriela Gutierrez",
       "pago": 1499,
       "sena": 300,
-      "restante": 0,
-      "choferCost": 0,
-      "neto": 1454.03,
+      "restante": 1199,
+      "choferCost": 1142.65,
+      "neto": 311.38,
       "fechaReserva": "25/11/26",
       "fechaSalida": "25/11/26",
-      "estado": "sinCosto"
+      "estado": "realizado"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "AERO-ASU",
+      "cliente": "tarika m.",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 54,
+      "sena": 54,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 52.38,
+      "fechaReserva": "27/11/26",
+      "fechaSalida": "29/11/26",
+      "estado": "porRealizar"
     },
     {
       "mes": "Diciembre",
@@ -7252,7 +7297,7 @@
       "conductor": "HUGO FERNANDEZ",
       "pago": 297,
       "sena": 89,
-      "restante": 0,
+      "restante": 208,
       "choferCost": 120.97,
       "neto": 167.12,
       "fechaReserva": "20/11/26",
@@ -7261,15 +7306,60 @@
     },
     {
       "mes": "Noviembre",
+      "route": "AERO-ASU-Hotel.Centro-AERO",
+      "cliente": "karen barletta",
+      "pais": "Argentina",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 0,
+      "fechaReserva": "20/11/26",
+      "fechaSalida": "27/11/26",
+      "estado": "sinCosto"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "PtoIguazu-CDE",
+      "cliente": "joe schurhammer",
+      "pais": "USA",
+      "conductor": "Antonio CDE",
+      "pago": 197,
+      "sena": 59,
+      "restante": 138,
+      "choferCost": 0,
+      "neto": 191.09,
+      "fechaReserva": "26/11/26",
+      "fechaSalida": "27/11/26",
+      "estado": "sinCosto"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "AERO-ASU-Hotel.Centro-AERO",
+      "cliente": "karen barletta",
+      "pais": "Argentina",
+      "conductor": "HUGO FERNANDEZ",
+      "pago": 0,
+      "sena": 0,
+      "restante": 0,
+      "choferCost": 129.03,
+      "neto": -129.03,
+      "fechaReserva": "20/11/26",
+      "fechaSalida": "29/11/26",
+      "estado": "porRealizar"
+    },
+    {
+      "mes": "Noviembre",
       "route": "AERO-ASU",
       "cliente": "steve cash",
       "pais": "UK",
       "conductor": "Osmar Espinola",
-      "pago": 0,
-      "sena": 0,
+      "pago": 49,
+      "sena": 49,
       "restante": 0,
       "choferCost": 13,
-      "neto": -12.9,
+      "neto": 34.63,
       "fechaReserva": "25/11/26",
       "fechaSalida": "27/11/26",
       "estado": "realizado"
@@ -7410,6 +7500,21 @@
       "estado": "porRealizar"
     },
     {
+      "mes": "Diciembre",
+      "route": "ASU-Encarnacion",
+      "cliente": "michael bravo",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 2269,
+      "sena": 681,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 2200.93,
+      "fechaReserva": "27/11/26",
+      "fechaSalida": "31/12/26",
+      "estado": "porRealizar"
+    },
+    {
       "mes": "Noviembre",
       "route": "Areguá → Foz do Iguaçu",
       "cliente": "diane huff schauer",
@@ -7438,11 +7543,26 @@
       "fechaReserva": "10/11/26",
       "fechaSalida": "01/01/27",
       "estado": "porRealizar"
+    },
+    {
+      "mes": "Diciembre",
+      "route": "Hotel.Holiday-AERO",
+      "cliente": "paulo passos",
+      "pais": "Brasil",
+      "conductor": "",
+      "pago": 167,
+      "sena": 167,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 161.99,
+      "fechaReserva": "27/11/26",
+      "fechaSalida": "03/12/26",
+      "estado": "porRealizar"
     }
   ],
   "daily": {
     "leads": {
-      "2026-11-27": 2,
+      "2026-11-27": 12,
       "2026-11-26": 10,
       "2026-11-25": 9,
       "2026-11-24": 9,
@@ -7504,6 +7624,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
+      "2026-11-27": 3,
       "2026-11-26": 3,
       "2026-11-25": 5,
       "2026-11-24": 3,
@@ -7543,13 +7664,14 @@
       "2026-11-18": 1,
       "2026-11-19": 2,
       "2026-11-25": 2,
+      "2026-11-27": 5,
       "2026-11-24": 2,
       "2026-11-20": 2,
+      "2026-11-26": 1,
       "2026-11-16": 1,
       "2026-11-22": 1,
       "2026-11-05": 1,
-      "2026-11-17": 1,
-      "2026-11-26": 1
+      "2026-11-17": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7869,7 +7991,7 @@
       "2026-11-24": 9.97,
       "2026-11-25": 16.46,
       "2026-11-26": 9.9,
-      "2026-11-27": 7.83
+      "2026-11-27": 9.94
     },
     "meta": {
       "2026-02-24": 1.93,
@@ -7985,7 +8107,7 @@
   "resenas": {
     "count": 94,
     "rating": 5,
-    "actualizado": "2026-11-26T23:10:02.779Z",
+    "actualizado": "2026-11-27T20:10:29.553Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8336,6 +8458,11 @@
         "fecha": "2026-11-26",
         "count": 94,
         "rating": 5
+      },
+      {
+        "fecha": "2026-11-27",
+        "count": 94,
+        "rating": 5
       }
     ],
     "ultimas": [
@@ -8374,6 +8501,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-11-27": 20,
       "2026-11-26": 17,
       "2026-11-20": 25,
       "2026-11-10": 25,
@@ -8476,11 +8604,10 @@
       "2026-11-22": 14,
       "2026-11-23": 14,
       "2026-11-24": 27,
-      "2026-11-25": 11,
-      "2026-11-27": 3
+      "2026-11-25": 11
     },
     "monthly": {
-      "Noviembre": 474,
+      "Noviembre": 491,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
