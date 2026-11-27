@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T14:30:03.828Z",
+ "generated": "2026-11-27T00:30:13.846Z",
  "hoy": "2026-11-26",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,26 +50,26 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 26,
-   "ventas": 19,
-   "facturacion": 10313,
-   "proyeccion": 11899.62,
-   "base": 206.26,
+   "ventas": 22,
+   "facturacion": 10510,
+   "proyeccion": 12126.92,
+   "base": 210.2,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 7687,
+    "falta": 7490,
     "bono": 100
    },
    "ticketsAltos": 11,
    "bonoTicket": 110,
    "margen": 0.44299999999999995,
    "margenOk": true,
-   "sinCostos": 6,
+   "sinCostos": 7,
    "bonoAplica": true,
    "bonoTotal": 110,
-   "total": 316.26,
-   "pendienteCobro": 3198,
+   "total": 320.2,
+   "pendienteCobro": 3336,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -85,10 +85,21 @@
     },
     {
      "lunes": "2026-11-23",
-     "monto": 1499
+     "monto": 1696
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-26",
+     "salida": null,
+     "cliente": "joe",
+     "ruta": "PtoIguazu-CDE",
+     "tipo": "Traslado",
+     "monto": 197,
+     "margen": null,
+     "alto": false,
+     "saldo": 138
+    },
     {
      "reserva": "2026-11-25",
      "salida": "2026-11-25",
@@ -110,6 +121,28 @@
      "margen": 0.56,
      "alto": false,
      "saldo": 208
+    },
+    {
+     "reserva": "2026-11-20",
+     "salida": "2026-11-26",
+     "cliente": "karen",
+     "ruta": "AERO-ASU-Hotel.Centro-AERO",
+     "tipo": "Traslado",
+     "monto": 0,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-20",
+     "salida": "2026-11-26",
+     "cliente": "karen",
+     "ruta": "AERO-ASU-Hotel.Centro-AERO",
+     "tipo": "Traslado",
+     "monto": 0,
+     "margen": null,
+     "alto": false,
+     "saldo": 0
     },
     {
      "reserva": "2026-11-19",
@@ -772,10 +805,10 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 6,
-   "facturacion": 2817,
-   "comision": 56.34,
-   "pendienteCobro": 1407,
+   "ventas": 9,
+   "facturacion": 3014,
+   "comision": 60.28,
+   "pendienteCobro": 1545,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -828,6 +861,26 @@
      "saldo": 208
     },
     {
+     "reserva": "2026-11-20",
+     "salida": "2026-11-26",
+     "cliente": "karen",
+     "ruta": "AERO-ASU-Hotel.Centro-AERO",
+     "tipo": "Traslado",
+     "monto": 0,
+     "comision": 0,
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-20",
+     "salida": "2026-11-26",
+     "cliente": "karen",
+     "ruta": "AERO-ASU-Hotel.Centro-AERO",
+     "tipo": "Traslado",
+     "monto": 0,
+     "comision": 0,
+     "saldo": 0
+    },
+    {
      "reserva": "2026-11-25",
      "salida": "2026-11-25",
      "cliente": "ana",
@@ -836,6 +889,16 @@
      "monto": 1499,
      "comision": 29.98,
      "saldo": 1199
+    },
+    {
+     "reserva": "2026-11-26",
+     "salida": null,
+     "cliente": "joe",
+     "ruta": "PtoIguazu-CDE",
+     "tipo": "Traslado",
+     "monto": 197,
+     "comision": 3.94,
+     "saldo": 138
     }
    ]
   },
