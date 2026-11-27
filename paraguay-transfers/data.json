@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T22:01:08.865Z",
-  "lastSyncLabel": "26 Nov 2026",
+  "generated": "2026-11-27T10:21:09.575Z",
+  "lastSyncLabel": "27 Nov 2026",
   "currentMonth": "Noviembre",
   "months": [
     {
@@ -231,13 +231,13 @@
       "mes": "Septiembre",
       "leads": 314,
       "reservas": 61,
-      "revenue": 14696.18,
-      "chofer": 8710.02,
-      "comb": 752.02,
-      "peajes": 261.31,
+      "revenue": 14717.47,
+      "chofer": 8722.59,
+      "comb": 753.18,
+      "peajes": 261.74,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 942.35,
+      "otros": 943.83,
       "gAds": 425,
       "meta": 286.07,
       "costoSheet": 9160,
@@ -260,13 +260,13 @@
       "mes": "Octubre",
       "leads": 362,
       "reservas": 77,
-      "revenue": 26592.92,
-      "chofer": 14695.39,
-      "comb": 630.51,
+      "revenue": 26634.23,
+      "chofer": 14718.48,
+      "comb": 631.49,
       "peajes": 0,
       "comision": 0,
       "reembolsos": 0,
-      "otros": 2734.28,
+      "otros": 2738.57,
       "gAds": 479,
       "meta": 91.45,
       "costoSheet": 14912,
@@ -287,28 +287,28 @@
     },
     {
       "mes": "Noviembre",
-      "leads": 230,
-      "reservas": 28,
-      "revenue": 13175.13,
-      "chofer": 6038.18,
+      "leads": 234,
+      "reservas": 29,
+      "revenue": 13238.48,
+      "chofer": 6280.12,
       "comb": 0,
       "peajes": 111.94,
-      "comision": 583.53,
+      "comision": 589.44,
       "reembolsos": 0,
       "otros": 0,
-      "gAds": 336,
+      "gAds": 344,
       "meta": 0,
-      "costoSheet": 6746.96,
-      "gananciaSheet": 9084.66,
-      "leadsPy": 68,
+      "costoSheet": 6988.89,
+      "gananciaSheet": 8832.83,
+      "leadsPy": 69,
       "ventasPy": 3,
-      "ventasExt": 24,
+      "ventasExt": 25,
       "ventasSinCruce": 1,
       "base": "caja+costos-planilla",
-      "viajesRealizados": 44,
-      "revenueRealizado": 14569,
-      "netoRealizado": 7551.06,
-      "ganancia": 7215.06,
+      "viajesRealizados": 46,
+      "revenueRealizado": 14986,
+      "netoRealizado": 7859.42,
+      "ganancia": 7515.42,
       "sinCosto": {
         "viajes": 3,
         "usd": 1996
@@ -388,18 +388,18 @@
     },
     {
       "mes": "Noviembre",
-      "spend": 336.28,
-      "clicks": 99,
-      "impr": 764,
+      "spend": 344.11,
+      "clicks": 100,
+      "impr": 770,
       "conv": 20
     }
   ],
-  "hoy": "2026-11-26",
+  "hoy": "2026-11-27",
   "porRealizar": {
-    "viajes": 25,
-    "usd": 9738,
+    "viajes": 23,
+    "usd": 9321,
     "reservadosEsteMes": {
-      "viajes": 13,
+      "viajes": 12,
       "usd": 5119
     }
   },
@@ -836,6 +836,21 @@
       "choferCost": 0,
       "neto": 86.33,
       "fechaReserva": "20/11/26",
+      "fechaSalida": "",
+      "estado": "sinFecha"
+    },
+    {
+      "mes": "Noviembre",
+      "route": "PtoIguazu-CDE",
+      "cliente": "joe schurhammer",
+      "pais": "USA",
+      "conductor": "",
+      "pago": 197,
+      "sena": 59,
+      "restante": 0,
+      "choferCost": 0,
+      "neto": 191.09,
+      "fechaReserva": "26/11/26",
       "fechaSalida": "",
       "estado": "sinFecha"
     },
@@ -5217,7 +5232,7 @@
       "neto": 321.26,
       "fechaReserva": "01/09/26",
       "fechaSalida": "27/11/26",
-      "estado": "porRealizar"
+      "estado": "realizado"
     },
     {
       "mes": "Septiembre",
@@ -7257,7 +7272,7 @@
       "neto": -12.9,
       "fechaReserva": "25/11/26",
       "fechaSalida": "27/11/26",
-      "estado": "porRealizar"
+      "estado": "realizado"
     },
     {
       "mes": "Noviembre",
@@ -7427,7 +7442,8 @@
   ],
   "daily": {
     "leads": {
-      "2026-11-26": 8,
+      "2026-11-27": 2,
+      "2026-11-26": 10,
       "2026-11-25": 9,
       "2026-11-24": 9,
       "2026-11-23": 8,
@@ -7488,7 +7504,7 @@
       "2026-10-01": 7
     },
     "leadsPy": {
-      "2026-11-26": 2,
+      "2026-11-26": 3,
       "2026-11-25": 5,
       "2026-11-24": 3,
       "2026-11-22": 1,
@@ -7532,7 +7548,8 @@
       "2026-11-16": 1,
       "2026-11-22": 1,
       "2026-11-05": 1,
-      "2026-11-17": 1
+      "2026-11-17": 1,
+      "2026-11-26": 1
     },
     "gads": {
       "2026-01-01": 19.99,
@@ -7851,7 +7868,8 @@
       "2026-11-23": 11.6,
       "2026-11-24": 9.97,
       "2026-11-25": 16.46,
-      "2026-11-26": 9.9
+      "2026-11-26": 9.9,
+      "2026-11-27": 7.83
     },
     "meta": {
       "2026-02-24": 1.93,
@@ -7965,9 +7983,9 @@
     }
   },
   "resenas": {
-    "count": 93,
+    "count": 94,
     "rating": 5,
-    "actualizado": "2026-11-26T20:10:02.536Z",
+    "actualizado": "2026-11-26T23:10:02.779Z",
     "historia": [
       {
         "fecha": "2026-09-18",
@@ -8316,7 +8334,7 @@
       },
       {
         "fecha": "2026-11-26",
-        "count": 93,
+        "count": 94,
         "rating": 5
       }
     ],
@@ -8356,6 +8374,7 @@
   "argentina": {
     "desde": "2026-08-01",
     "daily": {
+      "2026-11-26": 17,
       "2026-11-20": 25,
       "2026-11-10": 25,
       "2026-11-05": 22,
@@ -8458,10 +8477,10 @@
       "2026-11-23": 14,
       "2026-11-24": 27,
       "2026-11-25": 11,
-      "2026-11-26": 11
+      "2026-11-27": 3
     },
     "monthly": {
-      "Noviembre": 465,
+      "Noviembre": 474,
       "Octubre": 509,
       "Septiembre": 213,
       "Agosto": 27
