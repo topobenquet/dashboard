@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T12:30:31.389Z",
+ "generated": "2026-11-27T14:30:32.037Z",
  "hoy": "2026-11-27",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,26 +50,26 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 27,
-   "ventas": 22,
-   "facturacion": 10510,
-   "proyeccion": 11677.78,
-   "base": 210.2,
+   "ventas": 23,
+   "facturacion": 10945,
+   "proyeccion": 12161.11,
+   "base": 218.9,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 7490,
+    "falta": 7055,
     "bono": 100
    },
-   "ticketsAltos": 11,
-   "bonoTicket": 110,
+   "ticketsAltos": 12,
+   "bonoTicket": 120,
    "margen": 0.44299999999999995,
    "margenOk": true,
-   "sinCostos": 7,
+   "sinCostos": 8,
    "bonoAplica": true,
-   "bonoTotal": 110,
-   "total": 320.2,
-   "pendienteCobro": 2137,
+   "bonoTotal": 120,
+   "total": 338.9,
+   "pendienteCobro": 1999,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -85,10 +85,21 @@
     },
     {
      "lunes": "2026-11-23",
-     "monto": 1696
+     "monto": 2131
     }
    ],
    "detalle": [
+    {
+     "reserva": "2026-11-27",
+     "salida": null,
+     "cliente": "sérvio",
+     "ruta": "ASU-FOZ",
+     "tipo": "Traslado",
+     "monto": 435,
+     "margen": null,
+     "alto": true,
+     "saldo": 0
+    },
     {
      "reserva": "2026-11-26",
      "salida": null,
@@ -98,7 +109,7 @@
      "monto": 197,
      "margen": null,
      "alto": false,
-     "saldo": 138
+     "saldo": 0
     },
     {
      "reserva": "2026-11-25",
@@ -805,10 +816,10 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 9,
-   "facturacion": 3014,
-   "comision": 60.28,
-   "pendienteCobro": 346,
+   "ventas": 10,
+   "facturacion": 3449,
+   "comision": 68.98,
+   "pendienteCobro": 208,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -898,7 +909,17 @@
      "tipo": "Traslado",
      "monto": 197,
      "comision": 3.94,
-     "saldo": 138
+     "saldo": 0
+    },
+    {
+     "reserva": "2026-11-27",
+     "salida": null,
+     "cliente": "sérvio",
+     "ruta": "ASU-FOZ",
+     "tipo": "Traslado",
+     "monto": 435,
+     "comision": 8.7,
+     "saldo": 0
     }
    ]
   },
@@ -1048,7 +1069,7 @@
  ],
  "sinReserva": 0,
  "restoEquipo": {
-  "Bot": 442,
-  "Sin asignar": 2313
+  "Bot": 650,
+  "Sin asignar": 2480
  }
 }
