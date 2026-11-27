@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T10:21:39.201Z",
+ "generated": "2026-11-27T12:30:31.389Z",
  "hoy": "2026-11-27",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -69,7 +69,7 @@
    "bonoAplica": true,
    "bonoTotal": 110,
    "total": 320.2,
-   "pendienteCobro": 3336,
+   "pendienteCobro": 2137,
    "semanas": [
     {
      "lunes": "2026-11-02",
@@ -109,7 +109,7 @@
      "monto": 1499,
      "margen": null,
      "alto": true,
-     "saldo": 1199
+     "saldo": 0
     },
     {
      "reserva": "2026-11-20",
@@ -124,7 +124,7 @@
     },
     {
      "reserva": "2026-11-20",
-     "salida": "2026-11-26",
+     "salida": "2026-11-27",
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
@@ -135,7 +135,7 @@
     },
     {
      "reserva": "2026-11-20",
-     "salida": "2026-11-26",
+     "salida": "2026-11-28",
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
@@ -808,7 +808,7 @@
    "ventas": 9,
    "facturacion": 3014,
    "comision": 60.28,
-   "pendienteCobro": 1545,
+   "pendienteCobro": 346,
    "detalle": [
     {
      "reserva": "2026-11-13",
@@ -862,7 +862,7 @@
     },
     {
      "reserva": "2026-11-20",
-     "salida": "2026-11-26",
+     "salida": "2026-11-27",
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
@@ -872,7 +872,7 @@
     },
     {
      "reserva": "2026-11-20",
-     "salida": "2026-11-26",
+     "salida": "2026-11-28",
      "cliente": "karen",
      "ruta": "AERO-ASU-Hotel.Centro-AERO",
      "tipo": "Traslado",
@@ -888,7 +888,7 @@
      "tipo": "Traslado",
      "monto": 1499,
      "comision": 29.98,
-     "saldo": 1199
+     "saldo": 0
     },
     {
      "reserva": "2026-11-26",
@@ -1048,7 +1048,7 @@
  ],
  "sinReserva": 0,
  "restoEquipo": {
-  "Bot": 393,
+  "Bot": 442,
   "Sin asignar": 2313
  }
 }
