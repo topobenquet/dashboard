@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T17:54:28.126Z",
+ "generated": "2026-11-27T18:30:11.707Z",
  "tc": 6360,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura en ParaguayTransfers.Pagos",
   "stripeDisponible": 1480.77,
-  "stripePendiente": 2398.66,
+  "stripePendiente": 3061.65,
   "pagoparPendienteUsd": 525.94,
   "relay": null,
   "binance": null,
@@ -335,18 +335,25 @@
   },
   {
    "fecha": "2026-11-27",
-   "in": 948,
+   "in": 1629,
    "out": 405.67,
-   "n": 7,
+   "n": 8,
    "porFuente": {
-    "Stripe": 948,
+    "Stripe": 1629,
     "WhatsApp · Pagos": -405.67
    },
-   "neto": 542.33,
-   "acum": 4405.05
+   "neto": 1223.33,
+   "acum": 5086.05
   }
  ],
  "movimientos": [
+  {
+   "d": "2026-11-27",
+   "t": "in",
+   "usd": 681,
+   "fuente": "Stripe",
+   "det": "Traslado privado Paraguay Transfers (link fijo USD 681)"
+  },
   {
    "d": "2026-11-27",
    "t": "in",
@@ -1525,10 +1532,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 48,
-   "bruto": 11420,
+   "cobros": 49,
+   "bruto": 12101,
    "comision": 479.55,
-   "pct": 4.2,
+   "pct": 3.96,
    "nota": "medido cobro por cobro"
   },
   {
