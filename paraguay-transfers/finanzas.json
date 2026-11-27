@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T18:30:11.707Z",
+ "generated": "2026-11-27T20:30:16.956Z",
  "tc": 6360,
  "fuenteTc": "Cambios Chaco, venta del día",
  "mes": "2026-11",
@@ -12,7 +12,7 @@
   "uenoMomento": "actual",
   "uenoFuente": "captura en ParaguayTransfers.Pagos",
   "stripeDisponible": 1480.77,
-  "stripePendiente": 3061.65,
+  "stripePendiente": 2894.65,
   "pagoparPendienteUsd": 525.94,
   "relay": null,
   "binance": null,
@@ -335,15 +335,16 @@
   },
   {
    "fecha": "2026-11-27",
-   "in": 1629,
+   "in": 1764.17,
    "out": 405.67,
    "n": 8,
    "porFuente": {
-    "Stripe": 1629,
-    "WhatsApp · Pagos": -405.67
+    "Stripe": 1462,
+    "WhatsApp · Pagos": -405.67,
+    "Transferencia": 302.17
    },
-   "neto": 1223.33,
-   "acum": 5086.05
+   "neto": 1358.5,
+   "acum": 5221.22
   }
  ],
  "movimientos": [
@@ -367,13 +368,6 @@
    "usd": 435,
    "fuente": "Stripe",
    "det": "Servio Castro Neves Lda"
-  },
-  {
-   "d": "2026-11-27",
-   "t": "in",
-   "usd": 167,
-   "fuente": "Stripe",
-   "det": "Paulo Passos"
   },
   {
    "d": "2026-11-27",
@@ -1433,6 +1427,14 @@
    "fuente": "Transferencia",
    "det": "FRONTESUR E.A.S. (comprobante en GHL)",
    "gs": 8955131
+  },
+  {
+   "d": "2026-11-27",
+   "t": "in",
+   "usd": 302.17,
+   "fuente": "Transferencia",
+   "det": "Terminales Portuarias S.A. (comprobante en GHL)",
+   "gs": 1921798
   }
  ],
  "pnl": [
@@ -1532,10 +1534,10 @@
  "rieles": [
   {
    "riel": "Stripe",
-   "cobros": 49,
-   "bruto": 12101,
-   "comision": 479.55,
-   "pct": 3.96,
+   "cobros": 48,
+   "bruto": 11934,
+   "comision": 471.9,
+   "pct": 3.95,
    "nota": "medido cobro por cobro"
   },
   {
@@ -1971,6 +1973,14 @@
    "gs": 750000,
    "usd": 117.92,
    "concepto": "• 2026-11-26 karen barletta AERO-ASU-Hotel.Centro-AERO: Gs",
+   "motivo": "mencionado en el chat, sin comprobante"
+  },
+  {
+   "fecha": "2026-11-27",
+   "grupo": "Pagos",
+   "gs": 750000,
+   "usd": 117.92,
+   "concepto": "• 27/11 AERO-ASU-Hotel.Centro-AERO: propongo Gs",
    "motivo": "mencionado en el chat, sin comprobante"
   }
  ],
