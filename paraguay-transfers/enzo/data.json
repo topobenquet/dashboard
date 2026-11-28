@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T10:21:29.096Z",
+ "generated": "2026-11-28T14:30:03.505Z",
  "hoy": "2026-11-28",
  "reglas": {
   "_nota": "Reglas del plan de comisiones de Enzo. Las lee enzo-metas.mjs; al cambiarlas, la página se actualiza en la próxima corrida. Octubre es mes de entrada (empezó el 7/10): se muestra como referencia y el bono rige desde bonoDesde.",
@@ -50,25 +50,25 @@
    "enCurso": true,
    "diasMes": 30,
    "diasPasados": 28,
-   "ventas": 24,
-   "facturacion": 11142,
-   "proyeccion": 11937.86,
-   "base": 222.84,
+   "ventas": 23,
+   "facturacion": 10945,
+   "proyeccion": 11726.79,
+   "base": 218.9,
    "escalon": null,
    "bonoEscalon": 0,
    "siguiente": {
     "nombre": "Meta 1",
-    "falta": 6858,
+    "falta": 7055,
     "bono": 100
    },
    "ticketsAltos": 12,
    "bonoTicket": 120,
    "margen": 0.39390000000000003,
    "margenOk": true,
-   "sinCostos": 8,
+   "sinCostos": 7,
    "bonoAplica": true,
    "bonoTotal": 120,
-   "total": 342.84,
+   "total": 338.9,
    "pendienteCobro": 1791,
    "semanas": [
     {
@@ -85,7 +85,7 @@
     },
     {
      "lunes": "2026-11-23",
-     "monto": 2328
+     "monto": 2131
     }
    ],
    "detalle": [
@@ -103,17 +103,6 @@
     {
      "reserva": "2026-11-26",
      "salida": "2026-11-27",
-     "cliente": "joe",
-     "ruta": "PtoIguazu-CDE",
-     "tipo": "Traslado",
-     "monto": 197,
-     "margen": null,
-     "alto": false,
-     "saldo": 0
-    },
-    {
-     "reserva": "2026-11-26",
-     "salida": null,
      "cliente": "joe",
      "ruta": "PtoIguazu-CDE",
      "tipo": "Traslado",
@@ -827,9 +816,9 @@
    "corte": false,
    "cerrada": false,
    "pagada": false,
-   "ventas": 11,
-   "facturacion": 3646,
-   "comision": 72.92,
+   "ventas": 10,
+   "facturacion": 3449,
+   "comision": 68.98,
    "pendienteCobro": 0,
    "detalle": [
     {
@@ -915,16 +904,6 @@
     {
      "reserva": "2026-11-26",
      "salida": "2026-11-27",
-     "cliente": "joe",
-     "ruta": "PtoIguazu-CDE",
-     "tipo": "Traslado",
-     "monto": 197,
-     "comision": 3.94,
-     "saldo": 0
-    },
-    {
-     "reserva": "2026-11-26",
-     "salida": null,
      "cliente": "joe",
      "ruta": "PtoIguazu-CDE",
      "tipo": "Traslado",
@@ -1091,6 +1070,6 @@
  "sinReserva": 0,
  "restoEquipo": {
   "Bot": 704,
-  "Sin asignar": 4749
+  "Sin asignar": 4886
  }
 }
